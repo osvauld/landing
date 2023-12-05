@@ -1,63 +1,33 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/index.css';
-import { Icon } from 'astro-icon'
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "../components/Hero.jsx";
+import { Navbar } from "../components/Navbar.jsx";
+import { Features1 } from "../components/Features1.jsx";
+import { Features2 } from "../components/Features2.jsx";
+import { Testimonials } from "../components/Testimonials.jsx";
+import { FeaturesDiagonal } from "../components/FeaturesDiagonal.jsx";
+import { Pricing } from "../components/Pricing.jsx";
+import { FAQ } from "../components/FAQ.jsx";
+import { Brands } from "../components/Brands.jsx";
+import { Divider } from "../components/Divider";
+import { Footer } from "../components/Footer.jsx";
+import { ScrollUpButton } from "../components/ScrollUpButton";
+import "../styles/Theme.css";
+import "../styles/Diagonals.css";
+
 ---
 
 <Layout title="osvauld">
-	<section class="first-section">
-		<div class="background-container">
-		</div>
-		<div class="header">
-			<h1><span>os</span>vauld</h1>
-			<button class="primary-button">See Demo</button>
-		</div>
-		<div class="front-glow">
-		</div>
-		<div class="pink-glow"></div>
-		<div class="content">
-			<h3>Helping teams manage shared credentials.</h3>
-			<p>Safeguard your credentials, simplify your workflow.</p>
-			<button class="primary-button">Get an invite</button>
-		</div>
-	</section>
-	<section class="second-section">
-		<div class="content">
-			<p>Effortlessly capture and manage user credentials, transform testing and debugging into efficient and enjoyable tasks.</p>
-		</div>
-		<div class="cards">
-			<div class="card">
-				<span class="icon">
-					<Icon name="mdi:lock-outline" />
-				</span>
-				<h4>
-					Secure credentials management
-				</h4>
-				<p>Protect sensitive credentials, ensuring peace of mind for developers and DevOps teams.</p>
-				
-			</div>
-			<div class="card">
-				<span class="icon">
-					<Icon name="mdi:file-multiple" />
-				</span>
-				<h4>Effortless recording </h4>
-				<p>Easily record and manage credentials with applications, streamlining testing and debugging processes.</p>
-			</div>
-			<div class="card">
-				<span class="icon">
-					<Icon name="mdi:account-multiple" />
-				</span>
-			    <h4>Collaboration 
-					made easy</h4>
-				<p>Securely share credentials and interaction logs without compromising 
-					data security.</p>
-			</div>
-		</div>
-	</section>
-	<section class="first-section">
-	</section>
-	<section class="first-section">
-		<footer>
-		</footer>
-	</section>
+  <Navbar client:load />
+  <Hero client:load />
+  <Features1 client:load />
+  <Divider />
+  <Features2 client:load />
+  <FeaturesDiagonal client:load />
+  <Testimonials client:load />
+  <!-- <Pricing client:load /> -->
+  <!-- <Brands client:load /> -->
+  <FAQ client:load />
+  <Footer />
+  <ScrollUpButton client:load />
 </Layout>

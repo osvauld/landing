@@ -1,3 +1,4 @@
+export const OsvauldLogo = () => (
 <svg
     width="36"
     height="36"
@@ -12,3 +13,4 @@
       fill="#E4E6ED"
     />
   </svg>
+);
