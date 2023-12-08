@@ -37,6 +37,6 @@ jobs:
 
     - name: Deploy to AWS
       run: |
-        aws s3 copy ./dist/index.html s3://${{ vars.AWS_S3_BUCKET }}
-        aws s3 copy ./dist/favicon.svg s3://${{ vars.AWS_S3_BUCKET }}
+        aws s3 cp ./dist/index.html s3://${{ vars.AWS_S3_BUCKET }}
+        aws s3 cp ./dist/favicon.svg s3://${{ vars.AWS_S3_BUCKET }}
 
