@@ -29,7 +29,7 @@ export const Navbar = () => {
               <div className="text-white mr-2 text-6xl">
                 <OsvauldLogo />
               </div>
-              <div className="text-blue1 font-['Inter'] font-bold text-xl">
+              <div className="text-blue1 font-Jakartha font-semibold text-xl">
                 osvauld
               </div>
             </div>
@@ -60,7 +60,7 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className='flex justify-center items-center gap-1'>
+          <div className='flex justify-center items-center gap-2'>
           <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className="text-white rounded-lg
@@ -127,7 +127,7 @@ export const Navbar = () => {
                 target="_blank"
               >
                 <GithubIcon />
-                Source code
+                Contribute
               </a>
             </div>
           </motion.div>

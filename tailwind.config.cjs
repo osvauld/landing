@@ -28,7 +28,7 @@ module.exports = {
       },
       fontFamily: {
         Inter: "Inter",
-        Jakartha: "plus-jakarta-sans",
+        Jakartha: "Plus Jakarta Sans",
       },
       screens: {
         xs: "530px",
