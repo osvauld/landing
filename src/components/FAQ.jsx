@@ -30,7 +30,7 @@ const FAQData = [
 ];
 
 export const FAQ = () => (
-  <section className="relative pt-16 pb-16 bg-blueGray-50 overflow-hidden">
+  <section className="relative pt-16 pb-16 bg-pink-800 overflow-hidden">
     <div className="absolute -top-10" id="FAQ" />
     <motion.div
       initial={{ opacity: 0 }}
