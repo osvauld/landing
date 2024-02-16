@@ -5,6 +5,8 @@ import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
 import "@fontsource/inter/800.css";
 import "@fontsource/inter/900.css";
+import "@fontsource/plus-jakarta-sans";
+import "@fontsource/plus-jakarta-sans/400.css";
 
 export interface Props {
   title: string;
@@ -22,8 +24,8 @@ const { title } = Astro.props;
     <link rel="icon" href="/favicon.png" type="image/png">
     <meta name="generator" content={Astro.generator} />
     <meta
-      name="description"
-      content="Dark themed website template built on AstroJS, designed for technological startup business."
+      name="Shared credential manager for teams"
+      content="The best password manager for teams to share credentials securely"
     />
     <title>{title}</title>
   </head>
@@ -32,9 +34,10 @@ const { title } = Astro.props;
     <style is:global>
       html {
         font-family: Inter;
-        background-color: #26272b;
+        background-color: #010409;
         overflow-x: hidden;
         scroll-behavior: smooth;
+        box-sizing: border-box;
       }
     </style>
   </body>
