@@ -1,22 +1,21 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { OsvauldLogo } from "../assets/logos/OsvauldLogo";
 import { GithubIcon } from "../assets/icons/GithubIcon";
+import { BottomArrow } from "../assets/icons/BottomArrow";
 
 const navbarLinks = [
-  { label: "Why osvauld", href: "#why", ariaLabel: "why osvauld" },
+  { label: "Why Osvauld", href: "#why", ariaLabel: "why osvauld" },
+  { label: "Documentation", href: "#home", ariaLabel: "Documentation" },
   { label: "Community", href: "#community", ariaLabel: "Community" },
   { label: "About", href: "#about", ariaLabel: "About" },
-  { label: "Documentation", href: "#home", ariaLabel: "Documentation" },
-  { label: "Get started", href: "#getStarted", ariaLabel: "Get started" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full h-20 flex flex-col justify-center items-center fixed bg-dark1 lg:bg-dark1Transparent z-40 lg:backdrop-blur-xl">
+    <nav className="w-full h-20 xl:h-24 flex flex-col justify-center items-center fixed bg-dark1 lg:bg-dark1Transparent z-40 lg:backdrop-blur-xl">
       <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
         <motion.div
           initial={{ opacity: 0 }}
@@ -26,10 +25,7 @@ export const Navbar = () => {
         >
           <a className="navbar-link" href="#home" aria-label="Home">
             <div className="flex justify-start items-center grow basis-0">
-              <div className="text-white mr-2 text-6xl">
-                <OsvauldLogo />
-              </div>
-              <div className="text-blue1 font-Jakartha font-semibold text-xl">
+              <div className="text-blue1 font-Jakartha font-semibold text-4xl">
                 osvauld
               </div>
             </div>
@@ -40,6 +36,7 @@ export const Navbar = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
+          className='xl:ml-auto xl:mr-4'
         >
           <div className="hidden lg:flex h-full pl-12 pb-2">
             {navbarLinks.map(({ href, label, ariaLabel }) => (
@@ -64,7 +61,7 @@ export const Navbar = () => {
           <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className="text-white rounded-lg
-            bg-dark1 cursor-pointer flex whitespace-nowrap text-sm  border border-blue1  px-2.5 py-1.5 "
+            bg-dark1 cursor-pointer flex whitespace-nowrap text-sm  border border-blue1  px-3 py-1.5 "
                 href="https://github.com/osvauld"
                 target="_blank"
                 aria-label="book demo"
@@ -75,7 +72,7 @@ export const Navbar = () => {
               <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className="text-dark1
-            bg-blue1 cursor-pointer rounded-lg px-2.5 py-1.5 text-sm whitespace-nowrap  flex"
+            bg-blue1 cursor-pointer rounded-lg px-3 py-1.5 text-sm whitespace-nowrap  flex"
                 href="https://github.com/osvauld"
                 target="_blank"
                 aria-label="get started"
@@ -106,7 +103,7 @@ export const Navbar = () => {
           >
             <div
               className="flex flex-col mt-16 lg:hidden absolute top-4 left-0  bg-dark1 z-50 w-full 
-        items-center gap-10 pb-10 border-y border-solid border-customDarkBg3 pt-10 text-sm
+        items-center gap-10 pb-10  border-y border-solid border-customDarkBg3 pt-10 text-sm
         "
             >
               {navbarLinks.map(({ label, href, ariaLabel }) => (

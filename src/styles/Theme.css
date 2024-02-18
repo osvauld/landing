@@ -1,4 +1,4 @@
-/* Typography */
+
 
 .custom-block-title {
   @apply text-white text-3xl font-bold tracking-normal;
@@ -33,7 +33,7 @@
 
 body,
 html {
-  @apply bg-customDarkBg2;
+  @apply bg-dark1;
 }
 
 /* Borders */
@@ -54,7 +54,7 @@ html {
 /* Navbar */
 
 .navbar-link {
-  @apply text-white1 lg:text-base text-base leading-6 mr-4 ml-4   2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition duration-300 h-full pt-2 whitespace-nowrap;
+  @apply text-white1 lg:text-base xl:text-xs text-base leading-6 mr-4 ml-4   2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium  xl:font-thin xl:tracking-wide hover:scale-110 transition duration-300 h-full pt-2 whitespace-nowrap;
 }
 
 /* Preventing FOUC */
