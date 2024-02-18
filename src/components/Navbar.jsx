@@ -39,16 +39,16 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
           className='xl:ml-auto xl:mr-4'
         >
-          <div className="hidden lg:flex h-full pl-12 pb-2">
+          <div className="hidden lg:flex h-full gap-6 xl:mx-4">
             {navbarLinks.map(({ href, label, ariaLabel }, index) => (
                 <React.Fragment key={label}>
                 <a
-                  className={`navbar-link flex justify-center items-center mt-4 ${index === 0 ? '!pt-1' : ''}`}
+                  className="text-white1 font-thin text-xs flex justify-center items-center"
                   href={href}
                   aria-label={ariaLabel}
                 >
                   {label}
-                {index === 0 ? <BottomArrow /> : null}
+                {index === 0 ? <BottomArrow color={'#fff'} /> : null}
                 </a>
               </React.Fragment>
             ))}
