@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.png";
+import {GithubIcon} from "../assets/icons/GithubIcon"
+import { BottomArrow } from "../assets/icons/BottomArrow"
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,8 +20,12 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="text-customSecondary text-sm sm:text-base  mb-6 sm:mt-32 mt-16  font-bold">
-             Share Credentials the secure way 
+          <div className="text-blue1 text-sm sm:text-base  mb-6 sm:mt-32 mt-16  font-bold">
+             <aside className='flex justify-center items-center font-normal rounded-lg bg-blue2 h-7 px-3 py-1.5'>
+              <h6>We are open-source</h6>
+              <span className='h-full border-r-2 border-white4  mx-1.5'></span>
+              <h6 className='flex text-white4'> <span className='mr-2 flex justify-center items-center'><GithubIcon/></span>Star us on github <button className='transform -rotate-90 '><BottomArrow /></button></h6>
+             </aside>
           </div>
         </motion.div>
         <motion.div

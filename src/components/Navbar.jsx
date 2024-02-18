@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState} from "react";
+import React from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 
 import { GithubIcon } from "../assets/icons/GithubIcon";
@@ -39,15 +40,17 @@ export const Navbar = () => {
           className='xl:ml-auto xl:mr-4'
         >
           <div className="hidden lg:flex h-full pl-12 pb-2">
-            {navbarLinks.map(({ href, label, ariaLabel }) => (
-              <a
-                className="navbar-link"
-                href={href}
-                aria-label={ariaLabel}
-                key={label}
-              >
-                {label}
-              </a>
+            {navbarLinks.map(({ href, label, ariaLabel }, index) => (
+                <React.Fragment key={label}>
+                <a
+                  className={`navbar-link flex justify-center items-center mt-4 ${index === 0 ? '!pt-1' : ''}`}
+                  href={href}
+                  aria-label={ariaLabel}
+                >
+                  {label}
+                {index === 0 ? <BottomArrow /> : null}
+                </a>
+              </React.Fragment>
             ))}
           </div>
         </motion.div>

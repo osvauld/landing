@@ -25,6 +25,7 @@ module.exports = {
         white3: "#E8EFF6",
         white4: "#A6B0BB",
         blue1: "#89B4FA",
+        blue2: "#111926",
       },
       fontFamily: {
         Inter: "Inter",
