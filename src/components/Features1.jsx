@@ -13,7 +13,7 @@ export const Features1 = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className='w-full flex justify-center items-center'
       >
-        <div className="w-full min-h-[50vh] text-white3 xl:w-[1000px] xl:pt-20 text-center">
+        <div className="w-full min-h-[50vh] text-white3 xl:w-[1000px] xl:pt-20  text-center">
           <h2 className='text-4xl font-Jakartha font-light text-blue1  xl:tracking-[-0.2rem] '>Privacy By Design</h2>
           <div className='py-10 flex justify-between items-center'>
             <article className='bg-dark2 rounded-lg w-[30%] p-6'>

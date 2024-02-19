@@ -51,7 +51,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-white1 !font-thin text-sm lg:text-base xl:text-base xl:min-w-[30vw] xl:max-w-[50vw] sm:text-base mt-10 xl:mt-6 text-left">
+          <div className="text-white1 !font-thin text-sm lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[50vw] sm:text-base mt-10 xl:mt-6 text-left">
           Open source solution built for collaboration to share all your <span className='text-blue1'>sensitive account passwords or any other credentials.</span> No more struggles with Slack or Google Sheets. With osvauld, you are in full control of your data.
           </div>
         </motion.div>
