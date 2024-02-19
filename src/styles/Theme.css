@@ -33,7 +33,8 @@
 
 body,
 html {
-  @apply bg-dark1;
+  @apply bg-dark1 ;
+
 }
 
 /* Borders */

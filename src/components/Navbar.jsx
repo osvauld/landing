@@ -16,7 +16,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full h-20 xl:h-24 flex flex-col justify-center items-center fixed bg-dark1 lg:bg-dark1Transparent z-40 lg:backdrop-blur-xl">
+    <nav className="w-[95%] h-20 xl:h-24 flex flex-col justify-center items-center fixed bg-dark1 lg:bg-dark1Transparent z-40 lg:backdrop-blur-xl ">
       <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
         <motion.div
           initial={{ opacity: 0 }}
