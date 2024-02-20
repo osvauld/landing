@@ -22,7 +22,7 @@ export const Hero = () => {
           
         >
           <div className="text-blue1 h-8 text-sm sm:text-base w-full mb-6 sm:mt-32 mt-16  font-bold">
-             <aside className='flex w-full justify-center items-center font-normal text-sm rounded-lg bg-blue2 h-full px-4 py-2'>
+             <aside className='flex w-full justify-center items-center font-normal text-sm rounded-lg bg-blue2 h-full px-4 py-2 cursor-pointer'>
               <h6>We are open-source</h6>
                   <span className='h-full border-r-[1px] border-white4  mx-2'></span>
                   <h6 className='flex text-white4 justify-center items-center'> 
@@ -42,7 +42,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.3rem] tracking-wide  text-blue1 xl:font-normal xl:px-0 px-0 sm:px-8 md:px-20 lg:px-4 font-Jakartha">
+          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-wide  text-blue1 xl:font-normal xl:px-0 px-0 sm:px-8 md:px-20 lg:px-4 font-Jakartha">
             <h1>Share credentials <br/><span className='text-white1'>within your team,</span> Securely.</h1>
           </div>
         </motion.div>

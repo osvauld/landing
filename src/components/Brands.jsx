@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
-import { AmazonLogo } from "../assets/logos/AmazonLogo";
-import { DropboxLogo } from "../assets/logos/DropboxLogo";
-import { NetflixLogo } from "../assets/logos/NetflixLogo";
-import { SlackLogo } from "../assets/logos/SlackLogo";
-import { SpotifyLogo } from "../assets/logos/SpotifyLogo";
-import { StripeLogo } from "../assets/logos/StripeLogo";
+import { RustLogo } from "../assets/logos/RustLogo";
+import { WasmLogo } from "../assets/logos/WasmLogo";
+import { TypescriptLogo } from "../assets/logos/TypescriptLogo";
+import { SvelteLogo } from "../assets/logos/SvelteLogo";
+import { GolangLogo } from "../assets/logos/GolangLogo";
 
 export const Brands = () => (
-  <section className="py-12 sm:py-24 bg-dark1 w-full mt-16 mb-16">
+  <section className="py-12 bg-dark1 w-full">
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -15,39 +14,36 @@ export const Brands = () => (
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5">
-        <div className="flex lg:flex-row flex-col items-center -mx-4 justify-center lg:text-left text-center">
-          <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
-            <div className="flex flex-col">
-              <h2 className="mb-2  text-4xl sm:text-5xl 2xl:text-6xl font-bold tracking-normal text-white">
-                Trusted by brands
-              </h2>
-              <h2 className=" text-4xl  sm:text-5xl 2xl:text-6xl font-bold tracking-normal text-customSecondary">
-                all over the world
-              </h2>
-            </div>
+        <div className="text-center w-full h-full text-white3 flex flex-col gap-10 items-center">
+          <h2 className="text-5xl font-thin tracking-[-0.2rem]">
+            Proudly Open-Source
+          </h2>
+          <div className="w-[60%] flex justify-between items-center ">
+            <SvelteLogo />
+            <TypescriptLogo />
+            <RustLogo />
+            <WasmLogo />
+            <GolangLogo />
           </div>
-          <div className="w-2/3 sm:w-[620px] lg:w-1/2 mx-auto lg:mx-0 lg:pl-10">
-            <div className="flex flex-wrap -m-4">
-              <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
-                <AmazonLogo />
-              </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex  justify-center">
-                <DropboxLogo />
-              </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex  justify-center">
-                <NetflixLogo />
-              </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
-                <StripeLogo />
-              </div>
-
-              <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
-                <SpotifyLogo />
-              </div>
-              <div className="w-1/2 sm:w-1/3  py-6 flex  justify-center">
-                <SlackLogo />
-              </div>
-            </div>
+          <h6 className="max-w-[60vw] text-xl">
+            Osvauld is 100% Open-source,{" "}
+            <span className="text-blue1">
+              source code comes under under the AGPL-3.0 license and can be
+              easily self-hosted.
+            </span>
+            You are free to audit, contribute and redistribute it.
+          </h6>
+          <h6 className="max-w-[50vw] text-xl">
+            Osvauld’s Vulnerability Disclosure Program enlists the help of the
+            hacker community to make Osvauld more secure.
+          </h6>
+          <div className="flex gap-4 text-blue1">
+            <button className="border border-blue1 hover:bg-blue1 hover:text-dark1 rounded-md px-3 py-1.5">
+              Become a Contributor
+            </button>
+            <button className="border border-blue1 hover:bg-blue1 hover:text-dark1  rounded-md px-3 py-1.5">
+              Become a Sponsor
+            </button>
           </div>
         </div>
       </div>
