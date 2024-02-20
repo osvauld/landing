@@ -19,14 +19,14 @@ export const FeaturesDiagonal = () => {
         <h2 className='font-thin font-Jakartha  text-5xl text-blue1  xl:tracking-[-0.15rem]'>Setup in 5 minutes</h2>
         <h2 className=' text-white1  text-5xl font-Jakarthafont-light xl:tracking-[-0.15rem]'>Host on  &lt;your-domain&gt;.com </h2>
         </div>
-        <div className='flex justify-around items-center h-[60vh] mt-10'>
-          <article className='bg-dark2 h-[70%] rounded-lg xl:w-[45%] p-10'>
+        <div className='flex justify-around items-center h-[50vh] mt-10'>
+          <article className='bg-dark2 h-full rounded-lg xl:w-[45%] p-10'>
             <h3 className='text-4xl font-Jakartha text-blue1 font-light xl:tracking-[-0.15rem]'>On-Premise Solution</h3>
-            <p className='text-base text-white1 pt-4'>Store data locally on your trusted infrastructure, reducing the risk of data breaches associated with cloud-based centralized systems. </p>
+            <p className='text-base text-white1 pt-10'>Store data locally on your trusted infrastructure, reducing the risk of data breaches associated with cloud-based centralized systems. </p>
           </article>
-          <article className='bg-dark2 h-[70%] rounded-lg xl:w-[45%] p-10'>
+          <article className='bg-dark2 h-full rounded-lg xl:w-[45%] p-10'>
             <h3  className='text-4xl font-Jakartha  text-blue1 font-light xl:tracking-[-0.15rem]'>Easy Deployment </h3>
-            <p className='text-base text-white1 pt-4'>Pre-Built Deployment Scripts are designed to simplify the installation process, tailored to integrate seamlessly with your organization's existing and trusted infrastructure, ensuring compatibility and reliability. </p>
+            <p className='text-base text-white1 pt-10 '>Pre-Built Deployment Scripts are designed to simplify the installation process, tailored to integrate seamlessly with your organization's existing and trusted infrastructure, ensuring compatibility and reliability. </p>
           </article>
         </div>
         </div>
