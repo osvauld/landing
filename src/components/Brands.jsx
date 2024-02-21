@@ -18,12 +18,22 @@ export const Brands = () => (
           <h2 className="text-5xl font-light tracking-[-0.2rem]">
             Proudly Open-Source
           </h2>
-          <div className="w-[60%] grid grid-cols-3 gap-4 sm:grid-cols-5 sm:gap-0">
-            <SvelteLogo />
-            <TypescriptLogo />
-            <RustLogo />
-            <WasmLogo />
-            <GolangLogo />
+          <div className="w-[60%] grid grid-cols-2 gap-4 sm:grid-cols-5 sm:gap-0">
+            <span className="flex justify-center items-center">
+              <SvelteLogo />
+            </span>
+            <span className="hidden md:flex md:justify-center md:items-center">
+              <TypescriptLogo />
+            </span>
+            <span className="flex justify-center items-center -translate-x-3 md:-translate-x-0">
+              <GolangLogo />
+            </span>
+            <span className="flex justify-center items-center">
+              <WasmLogo />
+            </span>
+            <span className="flex justify-center items-center">
+              <RustLogo />
+            </span>
           </div>
           <h6 className="max-w-[95%] lg:max-w-[60vw] text-xl">
             Osvauld is 100% Open-source,{" "}

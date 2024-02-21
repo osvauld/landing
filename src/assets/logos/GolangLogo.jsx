@@ -1,7 +1,7 @@
 export const GolangLogo = () => (
   <svg
-    width="124"
-    height="46"
+    width="93"
+    height="34.5"
     viewBox="0 0 124 46"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
