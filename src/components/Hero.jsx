@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.png";
-import { GithubIcon } from "../assets/icons/GithubIcon"
-import { BottomArrow } from "../assets/icons/BottomArrow"
+import { GithubIcon } from "../assets/icons/GithubIcon";
+import { BottomArrow } from "../assets/icons/BottomArrow";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,22 +19,21 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          
         >
           <div className="text-blue1 h-8 text-sm sm:text-base w-full mb-6 sm:mt-32 mt-16  font-bold">
-             <aside className='flex w-full justify-center items-center font-normal text-sm rounded-lg bg-blue2 h-full px-4 py-2 cursor-pointer'>
+            <aside className="flex w-full justify-center items-center font-normal text-sm rounded-lg bg-blue2 h-full px-4 py-2 cursor-pointer">
               <h6>We are open-source</h6>
-                  <span className='h-full border-r-[1px] border-white4  mx-2'></span>
-                  <h6 className='flex text-white4 justify-center items-center'> 
-                  <span className='mr-2 flex justify-center items-center'>
-                    <GithubIcon/>
-                    </span>
-                    Star us on github 
-                    <button className='transform -rotate-90 xl:mt-1'>
-                      <BottomArrow color={'#A6B0BB'}/>
-                      </button>
-                  </h6>
-             </aside>
+              <span className="h-full border-r-[1px] border-white4  mx-2"></span>
+              <h6 className="flex text-white4 justify-center items-center">
+                <span className="mr-2 flex justify-center items-center">
+                  <GithubIcon />
+                </span>
+                Star us on github
+                <button className="transform -rotate-90 xl:mt-1">
+                  <BottomArrow color={"#A6B0BB"} />
+                </button>
+              </h6>
+            </aside>
           </div>
         </motion.div>
         <motion.div
@@ -43,7 +42,10 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.05 }}
         >
           <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-wide  text-blue1 xl:font-normal xl:px-0 px-0 sm:px-8 md:px-20 lg:px-4 font-Jakartha">
-            <h1>Share credentials <br/><span className='text-white1'>within your team,</span> Securely.</h1>
+            <h1>
+              Share credentials <br />
+              <span className="text-white1">within your team,</span> Securely.
+            </h1>
           </div>
         </motion.div>
         <motion.div
@@ -52,14 +54,19 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <div className="text-white1 !font-thin text-sm lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[50vw] sm:text-base mt-10 xl:mt-6 text-left">
-          Open source solution built for collaboration to share all your <span className='text-blue1'>sensitive account passwords or any other credentials.</span> No more struggles with Slack or Google Sheets. With osvauld, you are in full control of your data.
+            Open source solution built for collaboration to share all your{" "}
+            <span className="text-blue1">
+              sensitive account passwords or any other credentials.
+            </span>{" "}
+            No more struggles with Slack or Google Sheets. With osvauld, you are
+            in full control of your data.
           </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className='w-full'
+          className="w-full"
         >
           <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 mb-24 xl:my-6 ">
             <div

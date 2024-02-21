@@ -14,11 +14,11 @@ export const Brands = () => (
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5">
-        <div className="text-center w-full h-full text-white3 flex flex-col gap-10 items-center">
-          <h2 className="text-5xl font-thin tracking-[-0.2rem]">
+        <div className="text-center  font-light w-full h-full text-white3 flex flex-col gap-10 items-center">
+          <h2 className="text-5xl font-light tracking-[-0.2rem]">
             Proudly Open-Source
           </h2>
-          <div className="w-[60%] flex justify-between items-center ">
+          <div className="w-[60%] grid grid-cols-3 gap-4 sm:grid-cols-5 sm:gap-0">
             <SvelteLogo />
             <TypescriptLogo />
             <RustLogo />
