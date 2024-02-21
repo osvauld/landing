@@ -25,7 +25,7 @@ export const Brands = () => (
             <WasmLogo />
             <GolangLogo />
           </div>
-          <h6 className="max-w-[60vw] text-xl">
+          <h6 className="max-w-[95%] lg:max-w-[60vw] text-xl">
             Osvauld is 100% Open-source,{" "}
             <span className="text-blue1">
               source code comes under under the AGPL-3.0 license and can be
@@ -33,7 +33,7 @@ export const Brands = () => (
             </span>
             You are free to audit, contribute and redistribute it.
           </h6>
-          <h6 className="max-w-[50vw] text-xl">
+          <h6 className="max-w-[95%] lg:max-w-[50vw] text-xl">
             Osvauld’s Vulnerability Disclosure Program enlists the help of the
             hacker community to make Osvauld more secure.
           </h6>

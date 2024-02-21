@@ -22,8 +22,8 @@ export const FeaturesDiagonal = () => {
                 Host on &lt;your-domain&gt;.com{" "}
               </h2>
             </div>
-            <div className="flex justify-around items-center h-[40vh] mt-10">
-              <article className="bg-dark2 h-full rounded-lg xl:w-[45%] p-10 overflow-hidden">
+            <div className="flex flex-col lg:flex-row gap-4 justify-around items-center xl:h-[40vh] mt-10">
+              <article className="bg-dark2 h-full rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
                 <h3 className="text-4xl font-Jakartha text-blue1 font-light xl:tracking-[-0.15rem]">
                   On-Premise Solution
                 </h3>
@@ -33,7 +33,7 @@ export const FeaturesDiagonal = () => {
                   centralized systems.{" "}
                 </p>
               </article>
-              <article className="bg-dark2 h-full rounded-lg xl:w-[45%] p-10 overflow-hidden">
+              <article className="bg-dark2 h-full rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
                 <h3 className="text-4xl font-Jakartha  text-blue1 font-light xl:tracking-[-0.15rem]">
                   Easy Deployment{" "}
                 </h3>
