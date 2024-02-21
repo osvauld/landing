@@ -12,7 +12,7 @@ export const FAQ = () => (
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1100px] w-11/12 mx-auto">
-        <div className="w-full h-[50vh] bg-dark2 rounded-xl text-white px-6 lg:px-24 py-8 flex flex-col justify-around items-center">
+        <div className="w-full h-[50vh] bg-dark2 rounded-xl text-white px-6 lg:px-12 py-8 flex flex-col justify-around items-center">
           <h2 className="text-4xl font-Jakartha text-blue1 font-light xl:tracking-[-0.15rem]">
             Join us now
           </h2>
