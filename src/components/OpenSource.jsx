@@ -5,7 +5,7 @@ import { TypescriptLogo } from "../assets/logos/TypescriptLogo";
 import { SvelteLogo } from "../assets/logos/SvelteLogo";
 import { GolangLogo } from "../assets/logos/GolangLogo";
 
-export const Brands = () => (
+export const OpenSource = () => (
   <section className="py-12 bg-dark1 w-full">
     <motion.div
       initial={{ opacity: 0 }}
@@ -47,7 +47,7 @@ export const Brands = () => (
             Osvauld’s Vulnerability Disclosure Program enlists the help of the
             hacker community to make Osvauld more secure.
           </h6>
-          <div className="flex gap-4 text-blue1">
+          <div className="flex flex-col lg:flex-row gap-4 text-blue1">
             <button className="border border-blue1 hover:bg-blue1 hover:text-dark1 rounded-md px-3 py-1.5">
               Become a Contributor
             </button>

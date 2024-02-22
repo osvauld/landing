@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { DiscordIcon } from "../assets/icons/DiscordIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
-export const FAQ = () => (
+export const JoinUs = () => (
   <section className="relative pt-16 pb-16 bg-dark1 overflow-hidden">
     <div className="absolute -top-10" id="FAQ" />
     <motion.div

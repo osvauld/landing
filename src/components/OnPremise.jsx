@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 
-export const FeaturesDiagonal = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+export const OnPremise = () => {
   return (
     <section className="lg:mb-16 w-full flex flex-col justify-center items-center bg-dark1 xl:pt-28">
       <motion.div

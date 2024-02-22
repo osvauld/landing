@@ -2,13 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import { Hero } from "../components/Hero.jsx";
 import { Navbar } from "../components/Navbar.jsx";
-import { Features1 } from "../components/Features1.jsx";
-import { Features2 } from "../components/Features2.jsx";
+import { SecureByDesign } from "../components/SecureByDesign.jsx";
+import { IntutiveSharing } from "../components/IntutiveSharing.jsx";
 import { Testimonials } from "../components/Testimonials.jsx";
-import { FeaturesDiagonal } from "../components/FeaturesDiagonal.jsx";
-import { Pricing } from "../components/Pricing.jsx";
-import { FAQ } from "../components/FAQ.jsx";
-import { Brands } from "../components/Brands.jsx";
+import { OnPremise } from "../components/OnPremise.jsx";
+import { UseOsvauld } from "../components/UseOsvauld.jsx";
+import { JoinUs } from "../components/JoinUs.jsx";
+import { OpenSource } from "../components/OpenSource.jsx";
 import { Divider } from "../components/Divider";
 import { Footer } from "../components/Footer.jsx";
 import { ScrollUpButton } from "../components/ScrollUpButton";
@@ -20,15 +20,14 @@ import "../styles/Diagonals.css";
 <Layout title="osvauld">
   <Navbar client:load />
   <Hero client:load />
-  <Features1 client:load />
-  <Features2 client:load />
-  <FeaturesDiagonal client:load />
+  <SecureByDesign client:load />
+  <IntutiveSharing client:load />
+  <OnPremise client:load />
   <Divider client:load /> 
-  <Brands client:load /> 
+  <OpenSource client:load /> 
   <Divider client:load /> 
-  <FAQ client:load />
-
-  <Pricing client:load />  
+  <JoinUs client:load />
+  <UseOsvauld client:load />  
   <Footer />
   <ScrollUpButton client:load />
 </Layout>

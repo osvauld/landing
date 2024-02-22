@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export const Features1 = () => {
+export const SecureByDesign = () => {
   return (
     <section className="w-full" id="features">
       <motion.div

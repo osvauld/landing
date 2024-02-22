@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import sharing from "../assets/images/osvauldsharing.png";
 
-export const Features2 = () => (
+export const IntutiveSharing = () => (
   <section className="w-full bg-dark1 mt-12 sm:mt-20 mb-10 lg:my-20 pt-4">
     <motion.div
       initial={{ opacity: 0 }}
@@ -12,8 +12,8 @@ export const Features2 = () => (
     >
       <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1300px] w-11/12 mx-auto md:pl-4 xl:pr-16 xl:pl-32">
         <article className="text-white3 w-[95vw] text-center  lg:text-left lg:max-w-[80%] font-light pb-32 lg:pb-12">
-          <h3 className="text-4xl font-Jakartha font-light xl:tracking-[-0.1rem] xl:mb-10">
-            <span className="text-blue1 ">
+          <h3 className="text-4xl font-Jakartha font-light xl:tracking-[-0.1rem] mb-10">
+            <span className="text-blue1">
               Intutive sharing mechanism for seamless granular access
               distribution.
             </span>{" "}
