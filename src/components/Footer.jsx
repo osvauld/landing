@@ -83,16 +83,20 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="pt-10 w-full flex justify-between items-center text-white4 text-xs">
-            <span>© 2024 osvauld</span>
-            <div className="flex gap-6 ">
-              <LinktreeIcon color={"#A6B0BB"} />
-              <GithubIcon color={"#A6B0BB"} />
-              <DiscordIcon color={"#A6B0BB"} />
-              <LinkdinIcon color={"#A6B0BB"} />
-              <InstagramIcon color={"#A6B0BB"} />
-              <span>Terms of use</span>
-              <span>Privacy Policy</span>
+          <div className="pt-10 w-full flex flex-col lg:flex-row justify-between items-center text-white4 text-xs">
+            <span className="whitespace-nowrap">© 2024 osvauld</span>
+            <div className="w-full flex flex-col lg:flex-row gap-4 justify-center xl:justify-end items-center pb-10 lg:pb-0">
+              <div className="w-2/3 xl:w-auto flex gap-10 justify-center items-center my-2">
+                <LinktreeIcon color={"#A6B0BB"} />
+                <GithubIcon color={"#A6B0BB"} />
+                <DiscordIcon color={"#A6B0BB"} />
+                <LinkdinIcon color={"#A6B0BB"} />
+                <InstagramIcon color={"#A6B0BB"} />
+              </div>
+              <div className="w-2/3 xl:w-auto flex justify-between xl:justify-end xl:gap-4 items-center">
+                <span>Terms of use</span>
+                <span>Privacy Policy</span>
+              </div>
             </div>
           </div>
         </div>
