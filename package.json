@@ -11,10 +11,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "^3.1.1",
     "@fontsource/inter": "^4.5.15",
     "@fontsource/plus-jakarta-sans": "^5.0.18",
     "astro": "^2.2.0",
+    "astro-seo": "^0.8.2",
     "framer-motion": "^10.11.2",
     "npm-check-updates": "^16.10.7",
     "react-router-dom": "^6.20.1",
