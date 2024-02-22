@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.png";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 
 export const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <section
       className="w-screen flex justify-center items-center bg-dark1 mb-0 md:mb-[18vw] lg:mb-[10vw] xl:mb-[10vw] 2xl:mb-60 hero-bg-gradient pb-10  md:pb-44 lg:pb-0"
@@ -21,19 +18,22 @@ export const Hero = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="text-blue1 h-8 text-sm sm:text-base w-full mb-6 sm:mt-32 mt-16  font-bold">
-            <aside className="flex w-full justify-center items-center font-normal text-sm rounded-lg bg-blue2 h-full px-4 py-2 cursor-pointer">
+            <a
+              href="https://github.com/osvauld/web-client"
+              className="flex w-full justify-center items-center font-normal text-sm rounded-lg bg-blue2 h-full px-4 py-2 cursor-pointer"
+            >
               <h6>We are open-source</h6>
               <span className="h-full border-r-[1px] border-white4  mx-2"></span>
               <h6 className="flex text-white4 justify-center items-center">
                 <span className="mr-2 flex justify-center items-center">
-                  <GithubIcon />
+                  <GithubIcon color={"#A6B0BB"} />
                 </span>
                 Star us on github
-                <button className="transform -rotate-90 xl:mt-1">
+                <button className="transform -rotate-90 mt-1">
                   <BottomArrow color={"#A6B0BB"} />
                 </button>
               </h6>
-            </aside>
+            </a>
           </div>
         </motion.div>
         <motion.div
@@ -75,12 +75,12 @@ export const Hero = () => {
             >
               Get Started
             </div>
-            <div
+            <a
               className=" rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3"
-              onClick={() => setIsModalOpen(true)}
+              href="https://cal.com/abrahamgeorge/30min"
             >
               Book a demo
-            </div>
+            </a>
           </div>
         </motion.div>
         <motion.div
@@ -92,14 +92,11 @@ export const Hero = () => {
             <img
               src={dashboard}
               alt="dashboard of osvauld"
-              className="w-full xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl hero-dashboard-border-gradient lg:top-6 xl:top-0"
+              className="w-full lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl hero-dashboard-border-gradient lg:top-6 xl:top-0"
             />
           </div>
         </motion.div>
       </div>
-      {isModalOpen && (
-        <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
-      )}
     </section>
   );
 };
