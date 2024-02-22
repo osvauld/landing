@@ -1,5 +1,5 @@
-import { useState} from "react";
-import React from 'react';
+import { useState } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { GithubIcon } from "../assets/icons/GithubIcon";
@@ -37,18 +37,18 @@ export const Navbar = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
-          className='xl:ml-auto xl:mr-4'
+          className="xl:ml-auto xl:mr-4"
         >
           <div className="hidden lg:flex h-full gap-6 xl:mx-4">
             {navbarLinks.map(({ href, label, ariaLabel }, index) => (
-                <React.Fragment key={label}>
+              <React.Fragment key={label}>
                 <a
-                  className="text-white1 font-thin text-xs flex justify-center items-center"
+                  className="text-white1 font-light text-xs flex justify-center items-center"
                   href={href}
                   aria-label={ariaLabel}
                 >
                   {label}
-                {index === 0 ? <BottomArrow color={'#fff'} /> : null}
+                  {index === 0 ? <BottomArrow color={"#fff"} /> : null}
                 </a>
               </React.Fragment>
             ))}
@@ -60,8 +60,8 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className='flex justify-center items-center gap-2'>
-          <div className="grow basis-0 justify-end hidden lg:flex">
+          <div className="flex justify-center items-center gap-2">
+            <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className="text-white rounded-lg
             bg-dark1 cursor-pointer flex whitespace-nowrap text-sm  border border-blue1  px-3 py-1.5 "
@@ -72,7 +72,7 @@ export const Navbar = () => {
                 <span className="pt-px">Book a demo</span>
               </a>
             </div>
-              <div className="grow basis-0 justify-end hidden lg:flex">
+            <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className="text-dark1
             bg-blue1 cursor-pointer rounded-lg px-3 py-1.5 text-sm whitespace-nowrap  flex"
@@ -83,7 +83,6 @@ export const Navbar = () => {
                 <span className="pt-px">Get started</span>
               </a>
             </div>
-          
           </div>
         </motion.div>
         <div
@@ -121,13 +120,13 @@ export const Navbar = () => {
                 </a>
               ))}
               <a
-                className="text-dark1 custom-border-gray rounded-xl
+                className="text-dark1 custom-border-gray rounded-lg
            bg-blue1 cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap"
                 href="https://github.com/"
                 target="_blank"
               >
-                <GithubIcon />
-                Contribute
+                <GithubIcon color={"black"} />
+                <span className="ml-2">Contribute</span>
               </a>
             </div>
           </motion.div>

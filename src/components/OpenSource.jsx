@@ -14,8 +14,8 @@ export const OpenSource = () => (
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5">
-        <div className="text-center  font-light w-full h-full text-white3 flex flex-col gap-10 items-center">
-          <h2 className="text-5xl font-light tracking-[-0.2rem]">
+        <div className="text-center font-light w-full h-full text-white3 flex flex-col gap-10 items-center">
+          <h2 className="text-3xl lg:text-5xl font-light tracking-[-0.1rem]">
             Proudly Open-Source
           </h2>
           <div className="w-[60%] grid grid-cols-2 gap-4 sm:grid-cols-5 sm:gap-0">
@@ -35,7 +35,7 @@ export const OpenSource = () => (
               <RustLogo />
             </span>
           </div>
-          <h6 className="max-w-[95%] lg:max-w-[60vw] text-xl">
+          <h6 className="max-w-[95%] lg:max-w-[60vw] text-base lg:text-xl">
             Osvauld is 100% Open-source,{" "}
             <span className="text-blue1">
               source code comes under under the AGPL-3.0 license and can be
@@ -43,15 +43,15 @@ export const OpenSource = () => (
             </span>
             You are free to audit, contribute and redistribute it.
           </h6>
-          <h6 className="max-w-[95%] lg:max-w-[50vw] text-xl">
+          <h6 className="max-w-[95%] lg:max-w-[50vw]  text-base lg:text-xl">
             Osvauld’s Vulnerability Disclosure Program enlists the help of the
             hacker community to make Osvauld more secure.
           </h6>
-          <div className="flex flex-col lg:flex-row gap-4 text-blue1">
-            <button className="border border-blue1 hover:bg-blue1 hover:text-dark1 rounded-md px-3 py-1.5">
+          <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4 text-blue1">
+            <button className="w-full lg:w-1/4 border border-blue1 hover:bg-blue1 hover:text-dark1 rounded-md px-3 py-1.5">
               Become a Contributor
             </button>
-            <button className="border border-blue1 hover:bg-blue1 hover:text-dark1  rounded-md px-3 py-1.5">
+            <button className="w-full lg:w-1/4 border border-blue1 hover:bg-blue1 hover:text-dark1  rounded-md px-3 py-1.5">
               Become a Sponsor
             </button>
           </div>
