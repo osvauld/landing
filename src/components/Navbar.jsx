@@ -65,7 +65,7 @@ export const Navbar = () => {
               <a
                 className="text-white rounded-lg
             bg-dark1 cursor-pointer flex whitespace-nowrap text-sm  border border-blue1  px-3 py-1.5 "
-                href="https://github.com/osvauld"
+                href="https://cal.com/abrahamgeorge/30min"
                 target="_blank"
                 aria-label="book demo"
               >
@@ -122,7 +122,7 @@ export const Navbar = () => {
               <a
                 className="text-dark1 custom-border-gray rounded-lg
            bg-blue1 cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap"
-                href="https://github.com/"
+                href="https://github.com/osvauld"
                 target="_blank"
               >
                 <GithubIcon color={"black"} />
