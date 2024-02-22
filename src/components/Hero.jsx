@@ -3,23 +3,37 @@ import { motion } from "framer-motion";
 
 import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.png";
+import { GithubIcon } from "../assets/icons/GithubIcon";
+import { BottomArrow } from "../assets/icons/BottomArrow";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section
-      className="w-screen  flex justify-center items-center bg-customDarkBg1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
+      className="w-screen flex justify-center items-center bg-dark1 mb-0 md:mb-[18vw] lg:mb-[10vw] xl:mb-[10vw] 2xl:mb-60 hero-bg-gradient pb-10  md:pb-44 lg:pb-0"
       id="home"
     >
-      <div className="w-full md:w-[800px] xl:w-[900px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
+      <div className="w-[95%] md:w-[800px] xl:w-[1000px] flex flex-col justify-center items-start pt-16 xl:pt-10 md:pt-16 lg:pt-20 text-left">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="text-customSecondary text-sm sm:text-base  mb-6 sm:mt-32 mt-16  font-bold">
-             Share Credentials the secure way 
+          <div className="text-blue1 h-8 text-sm sm:text-base w-full mb-6 sm:mt-32 mt-16  font-bold">
+            <aside className="flex w-full justify-center items-center font-normal text-sm rounded-lg bg-blue2 h-full px-4 py-2 cursor-pointer">
+              <h6>We are open-source</h6>
+              <span className="h-full border-r-[1px] border-white4  mx-2"></span>
+              <h6 className="flex text-white4 justify-center items-center">
+                <span className="mr-2 flex justify-center items-center">
+                  <GithubIcon />
+                </span>
+                Star us on github
+                <button className="transform -rotate-90 xl:mt-1">
+                  <BottomArrow color={"#A6B0BB"} />
+                </button>
+              </h6>
+            </aside>
           </div>
         </motion.div>
         <motion.div
@@ -27,12 +41,11 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-8 md:px-20 lg:px-4">
-            <span className="inline md:hidden">Shared credentials</span>
-            <span className="hidden md:inline">Shared credential manager</span>
-          </div>
-          <div className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-20 md:px-24 lg:px-24">
-            for teams
+          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-wide  text-blue1 xl:font-normal xl:px-0 px-0 sm:px-8 md:px-20 lg:px-4 font-Jakartha">
+            <h1>
+              Share credentials <br />
+              <span className="text-white1">within your team,</span> Securely.
+            </h1>
           </div>
         </motion.div>
         <motion.div
@@ -40,27 +53,33 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
-            Incorporate the open-source, on-premise, end-to-end encrypted shared credential manager for your team 
+          <div className="text-white1 font-light text-sm lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[50vw] sm:text-base mt-10 xl:mt-6 text-left">
+            Open source solution built for collaboration to share all your{" "}
+            <span className="text-blue1">
+              sensitive account passwords or any other credentials.
+            </span>{" "}
+            No more struggles with Slack or Google Sheets. With osvauld, you are
+            in full control of your data.
           </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
+          className="w-full"
         >
-          <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
+          <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 mb-24 xl:my-6 ">
             <div
-              className="custom-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
+              className="bg-blue1 rounded-lg flex justify-center items-center text-black font-normal px-3 !py-1.5 sm:mr-4 xl:mr-0 lg:mr-6 mb-2 sm:mb-0 whitespace-nowrap"
               onClick={() => setIsModalOpen(true)}
             >
               Get Started
             </div>
             <div
-              className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
+              className=" rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3"
               onClick={() => setIsModalOpen(true)}
             >
-              Live demo
+              Book a demo
             </div>
           </div>
         </motion.div>
@@ -69,30 +88,14 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen flex justify-center mb-40 ">
+          <div className="relative w-screen top-10 xl:top-0 right-0 xl:right-20 flex justify-center md:justify-start items-center mb-40 xl:mb-[40vw]">
             <img
               src={dashboard}
-              alt="123"
-              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+              alt="dashboard of osvauld"
+              className="w-full xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl hero-dashboard-border-gradient lg:top-6 xl:top-0"
             />
           </div>
         </motion.div>
-        <div className="relative w-screen flex justify-center ">
-          <div className="custom-shape-divider-bottom-1665343298 mt-4 sm:mt-16 md:mt-52 hidden lg:block">
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-              className=" bg-customDarkBg2"
-            >
-              <path
-                d="M1200 0L0 0 598.97 114.72 1200 0z"
-                className="shape-fill custom-bg-dark1"
-              ></path>
-            </svg>
-          </div>
-        </div>
       </div>
       {isModalOpen && (
         <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />

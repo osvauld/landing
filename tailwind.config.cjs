@@ -15,10 +15,21 @@ module.exports = {
         customGrayText: "rgb(174, 178, 183)",
         customDarkBgTransparent: "rgb(31, 32, 35, 0.7)",
         customDarkBgTransparentDarker: "rgb(0,0,0,0.5)",
-        customDarkBgTransparentLighter: "rgb(48, 49, 54, 0.7)"  
+        customDarkBgTransparentLighter: "rgb(48, 49, 54, 0.7)",
+        dark1: "#010409",
+        dark1Transparent: "#B3010409",
+        dark2: "#0D1117",
+        dark3: "#161B22",
+        white1: "#FFFFFF",
+        white2: "#F4F2F0",
+        white3: "#E8EFF6",
+        white4: "#A6B0BB",
+        blue1: "#89B4FA",
+        blue2: "#111926",
       },
       fontFamily: {
         Inter: "Inter",
+        Jakartha: "Plus Jakarta Sans",
       },
       screens: {
         xs: "530px",
@@ -32,4 +43,3 @@ module.exports = {
     },
   },
 };
-

@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "osvauld",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^3.1.1",
     "@fontsource/inter": "^4.5.15",
+    "@fontsource/plus-jakarta-sans": "^5.0.18",
     "astro": "^2.2.0",
     "framer-motion": "^10.11.2",
     "npm-check-updates": "^16.10.7",

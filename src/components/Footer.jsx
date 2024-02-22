@@ -1,124 +1,104 @@
+import { DiscordIcon } from "../assets/icons/DiscordIcon";
 import { LinktreeIcon } from "../assets/icons/LinktreeIcon";
-import { InstagramIcon } from "../assets/icons/InstagramIcon";
-import { OsvauldLogo } from "../assets/logos/OsvauldLogo";
 import { LinkdinIcon } from "../assets/icons/LinkdinIcon";
-import { DiscordIcon } from '../assets/icons/DiscordIcon';
-
-const footerData = [
-  {
-    title: "Products",
-    items: ["Services", "About Us", "News and Stories", "Roadmap"],
-  },
-  {
-    title: "Important Links",
-    items: [
-      "Organization Team",
-      "Our Journeys",
-      "Pricing Plans",
-      "Roadmap",
-      "Terms & Conditions",
-      "Privacy Policy",
-    ],
-  },
-  {
-    title: "Company",
-    items: ["About Us", "Jobs", "Press", "Contact Us"],
-  },
-];
+import { InstagramIcon } from "../assets/icons/InstagramIcon";
+import { GithubIcon } from "../assets/icons/GithubIcon";
 
 export const Footer = () => {
   return (
     <footer>
-      <div className="pt-10  lg:pt-20 lg:pb-12 bg-customDarkBg1 radius-for-skewed ">
-        <div className="container mx-auto px-4 w-4/5 md:w-11/12 lg:w-10/12 xl:w-4/5 2xl:w-2/3">
-          <div className="flex flex-wrap">
-            <div className="w-full lg:w-1/3 mb-16 lg:mb-0">
-              <div className="flex justify-center lg:justify-start items-center grow basis-0">
-                <div className="text-white mr-2 text-6xl">
-                  <OsvauldLogo />
-                </div>
-                <div className="text-white font-['Inter'] font-bold text-xl">
-                  <span className='font-normal'>os</span>vauld
-                </div>
-              </div>
-              <p className="mb-10 mt-4 sm:w-[22rem] lg:w-[20rem] xl:w-[24rem] text-gray-400 leading-loose text-center lg:text-left mx-auto lg:mx-0">
-                We help companies manage their shared credentials
-              </p>
-              <div className="w-36 mx-auto lg:mx-0">
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="#"
-                >
+      <div className="pt-10  lg:pt-20 lg:pb-12 bg-dark1 radius-for-skewed ">
+        <div className="container mx-auto px-4 w-full md:w-11/12 lg:w-10/12 xl:w-4/5 2xl:w-2/3">
+          <div className=" w-full lg:w-[95vw] h-[40vh  flex flex-col lg:flex-row justify-center items-center">
+            <div className="w-full lg:w-1/2 mb-10">
+              <div className="bg-dark2 w-[90vw] lg:w-1/2 rounded-lg px-3 py-8 text-lg text-white1 flex flex-col justify-center items-center">
+                <h6>Any questions or feedbacks?</h6>
+                <button className="flex bg-blue1 text-dark1 justify-center items-center px-3 py-1.5 rounded whitespace-nowrap mt-4 text-base">
+                  {" "}
                   <DiscordIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="#"
-                >
-                  <LinkdinIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="https://www.instagram.com/osvauld"
-                >
-                  <InstagramIcon />
-                </a>
+                  <span className="ml-2">Chat with us on Discord</span>
+                </button>
               </div>
             </div>
-            <div className="w-full lg:w-2/3  lg:pl-16 hidden lg:flex flex-wrap justify-between">
-              <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
-                <h3 className="mb-6 text-2xl font-bold text-white">Products</h3>
-                <ul>
-                  {footerData[0].items.map((item, i) => (
-                    <li key={i} className="mb-4">
-                      <a
-                        className="text-gray-400 hover:text-gray-300"
-                        href="#"
-                        aria-label=""
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+            <div className=" w-full lg:w-1/2 flex text-white1 gap-12 text-xs font-light">
+              <ul className="flex flex-col justify-start items-start gap-4">
+                <h6 className="font-medium">Product</h6>
+                <a href="" className="text-white4 lg:text-white1">
+                  Features
+                </a>
+                <a href="" className="text-white4 lg:text-white1">
+                  Integrations
+                </a>
+                <a href="" className="text-white4 lg:text-white1">
+                  Pricing
+                </a>
+                <a href="" className="text-white4 lg:text-white1">
+                  Roadmap
+                </a>
+                <a href="" className="text-white4 lg:text-white1">
+                  Docs
+                </a>
+              </ul>
+              <ul className="flex flex-col justify-start items-start gap-4">
+                <h6 className="font-medium">Company</h6>
+                <a href="" className="text-white4 lg:text-white1">
+                  About
+                </a>
+                <a href="" className="text-white4 lg:text-white1">
+                  Our Team
+                </a>
+                <a
+                  href=""
+                  className="text-white4 lg:text-white1 whitespace-nowrap"
+                >
+                  Our Values
+                </a>
+                <a href="" className="text-white4 lg:text-white1">
+                  Blog
+                </a>
+              </ul>
+              <ul className="flex flex-col justify-start items-start gap-4">
+                <h6 className="font-medium">Community</h6>
+                <a href="" className="text-white4 lg:text-white1">
+                  Discord
+                </a>
+                <a href="" className="text-white4 lg:text-white1">
+                  Github
+                </a>
+                <a href="" className="text-white4 lg:text-white1">
+                  Linkdin
+                </a>
+                <a href="" className="text-white4 lg:text-white1">
+                  Instagram
+                </a>
+              </ul>
+              <ul className="flex flex-col justify-start items-start gap-4">
+                <h6 className="font-medium">Resources</h6>
+                <a href="" className="text-white4 lg:text-white1">
+                  Downloads
+                </a>
+                <a href="" className="text-white4 lg:text-white1">
+                  Documentation
+                </a>
+              </ul>
+            </div>
+          </div>
+          <div className="pt-10 w-full flex flex-col lg:flex-row justify-between items-center text-white4 text-xs">
+            <span className="whitespace-nowrap">© 2024 osvauld</span>
+            <div className="w-full flex flex-col lg:flex-row gap-4 justify-center xl:justify-end items-center pb-10 lg:pb-0">
+              <div className="w-2/3 xl:w-auto flex gap-10 justify-center items-center my-2">
+                <LinktreeIcon color={"#A6B0BB"} />
+                <GithubIcon color={"#A6B0BB"} />
+                <DiscordIcon color={"#A6B0BB"} />
+                <LinkdinIcon color={"#A6B0BB"} />
+                <InstagramIcon color={"#A6B0BB"} />
               </div>
-              <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
-                <h3 className="mb-6 text-2xl font-bold text-white">
-                  Important Links
-                </h3>
-                <ul>
-                  {footerData[1].items.map((item, i) => (
-                    <li key={i} className="mb-4">
-                      <a
-                        className="text-gray-400 hover:text-gray-300"
-                        href="#"
-                        aria-label=""
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="w-full md:w-1/3 lg:w-auto">
-                <h3 className="mb-6 text-2xl font-bold text-white">Company</h3>
-                <ul>
-                  {footerData[2].items.map((item, i) => (
-                    <li key={i} className="mb-4">
-                      <a
-                        className="text-gray-400 hover:text-gray-300"
-                        href="#"
-                        aria-label=""
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+              <div className="w-2/3 xl:w-auto flex justify-between xl:justify-end xl:gap-4 items-center">
+                <span>Terms of use</span>
+                <span>Privacy Policy</span>
               </div>
             </div>
           </div>
-        
         </div>
       </div>
     </footer>
