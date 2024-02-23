@@ -69,7 +69,7 @@ const makeTitle = title ? title : "osvauld - password manager for teams";
     <slot />
     <script type="module">
       import mixpanel from "mixpanel-browser";
-      mixpanel.init(import.meta.env.PUBLIC_PROJECT_KEY, {
+      mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
         track_pageview: true,
         persistence: "localStorage",
       });
