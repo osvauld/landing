@@ -16,6 +16,7 @@ import "@fontsource/plus-jakarta-sans/400.css";
 import "@fontsource/plus-jakarta-sans/500.css";
 
 import { SEO } from "astro-seo";
+
 const { title } = Astro.props;
 
 export interface Props {
@@ -28,7 +29,6 @@ const description =
 const makeTitle = title ? title : "osvauld - password manager for teams";
 ---
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -51,7 +51,7 @@ const makeTitle = title ? title : "osvauld - password manager for teams";
           title: "osvauld - open source credential manager for teams",
           type: "Website",
           image:
-            "https://drive.google.com/file/d/1Ll6j2TXXrvmdKJJR9KMLdCHuUS27m_KZ/view?usp=share_link",
+            "https://raw.githubusercontent.com/osvauld/landing/major/src/assets/images/dashboard.png",
         },
         optional: {
           description: description,
@@ -67,6 +67,16 @@ const makeTitle = title ? title : "osvauld - password manager for teams";
   </head>
   <body>
     <slot />
+    <script type="module">
+      import mixpanel from "mixpanel-browser";
+      mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
+        track_pageview: true,
+        persistence: "localStorage",
+      });
+      mixpanel.track("Page Viewed", {
+        page: window.location.pathname,
+      });
+    </script>
     <style is:global>
       @font-face {
         font-family: "Inter";
