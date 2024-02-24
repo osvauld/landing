@@ -20,7 +20,7 @@ export const OnPremise = () => {
               </h2>
             </div>
             <div className="flex flex-col lg:flex-row gap-4 justify-around items-center xl:h-[40vh] mt-10">
-              <article className="bg-dark2 h-[90%] rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
+              <article className="bg-dark2 h-[95%] rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
                 <h3 className="text-2xl lg:text-4xl  font-Jakartha text-blue1 font-light xl:tracking-[-0.1rem]">
                   On-Premise Solution
                 </h3>
@@ -30,7 +30,7 @@ export const OnPremise = () => {
                   centralized systems.{" "}
                 </p>
               </article>
-              <article className="bg-dark2 h-[90%] rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
+              <article className="bg-dark2 h-[95%] rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
                 <h3 className="text-2xl lg:text-4xl  font-Jakartha  text-blue1 font-light xl:tracking-[-0.1rem]">
                   Easy Deployment{" "}
                 </h3>

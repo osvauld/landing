@@ -98,7 +98,7 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen top-10 sm:top-0 right-0 xl:right-20 flex justify-center md:justify-start items-center mb-40 sm:mb-[40vw] xl:mb-[40vw]">
+          <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40 sm:mb-[40vw] xl:mb-[40vw]">
             <img
               src={dashboard}
               alt="dashboard of osvauld"
