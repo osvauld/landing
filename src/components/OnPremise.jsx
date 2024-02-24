@@ -20,21 +20,21 @@ export const OnPremise = () => {
               </h2>
             </div>
             <div className="flex flex-col lg:flex-row gap-4 justify-around items-center xl:h-[40vh] mt-10">
-              <article className="bg-dark2 h-full rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
-                <h3 className="text-2xl lg:text-4xl  font-Jakartha text-blue1 font-light xl:tracking-[-0.15rem]">
+              <article className="bg-dark2 h-[90%] rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
+                <h3 className="text-2xl lg:text-4xl  font-Jakartha text-blue1 font-light xl:tracking-[-0.1rem]">
                   On-Premise Solution
                 </h3>
-                <p className="text-base text-white1 pt-4 lg:pt-10">
+                <p className="text-lg font-extralight text-white1 pt-4 lg:pt-10">
                   Store data locally on your trusted infrastructure, reducing
                   the risk of data breaches associated with cloud-based
                   centralized systems.{" "}
                 </p>
               </article>
-              <article className="bg-dark2 h-full rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
-                <h3 className="text-2xl lg:text-4xl  font-Jakartha  text-blue1 font-light xl:tracking-[-0.15rem]">
+              <article className="bg-dark2 h-[90%] rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
+                <h3 className="text-2xl lg:text-4xl  font-Jakartha  text-blue1 font-light xl:tracking-[-0.1rem]">
                   Easy Deployment{" "}
                 </h3>
-                <p className="text-base text-white1 pt-4 lg:pt-10">
+                <p className="text-lg font-extralight text-white1 pt-4 lg:pt-10">
                   Pre-Built Deployment Scripts are designed to simplify the
                   installation process, tailored to integrate seamlessly with
                   your organization's existing and trusted infrastructure,

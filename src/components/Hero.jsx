@@ -32,9 +32,9 @@ export const Hero = React.memo(() => {
                 location.assign("https://github.com/osvauld/web-client");
               }}
             >
-              <h6>We are open-source</h6>
+              <h6 className="whitespace-nowrap">We are open-source</h6>
               <span className="h-full border-r-[1px] border-white4  mx-2"></span>
-              <h6 className="flex text-white4 justify-center items-center">
+              <h6 className="flex text-white4 justify-center items-center whitespace-nowrap">
                 <span className="mr-2 flex justify-center items-center">
                   <GithubIcon color={"#A6B0BB"} />
                 </span>
@@ -51,7 +51,7 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-wide  text-blue1 xl:font-normal xl:px-0 px-0 sm:px-8 md:px-20 lg:px-4 font-Jakartha">
+          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-wide  text-blue1 xl:font-normal px-0 font-Jakartha">
             <h1>
               Share credentials <br />
               <span className="text-white1">within your team,</span> Securely.
@@ -78,7 +78,7 @@ export const Hero = React.memo(() => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="w-full"
         >
-          <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 mb-24 xl:my-6 ">
+          <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 mb-24 md:my-10 lg:my-4 xl:my-6 ">
             <div
               className="bg-blue1 rounded-lg flex justify-center items-center text-black font-normal px-3 !py-1.5 sm:mr-4 xl:mr-0 lg:mr-6 mb-2 sm:mb-0 whitespace-nowrap"
               onClick={() => setIsModalOpen(true)}
@@ -98,11 +98,11 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen top-10 xl:top-0 right-0 xl:right-20 flex justify-center md:justify-start items-center mb-40 xl:mb-[40vw]">
+          <div className="relative w-screen top-10 sm:top-0 right-0 xl:right-20 flex justify-center md:justify-start items-center mb-40 sm:mb-[40vw] xl:mb-[40vw]">
             <img
               src={dashboard}
               alt="dashboard of osvauld"
-              className="w-full lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl hero-dashboard-border-gradient lg:top-6 xl:top-0"
+              className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl hero-dashboard-border-gradient sm:top-0 md:top-2 lg:top-0 xl:top-0"
             />
           </div>
         </motion.div>

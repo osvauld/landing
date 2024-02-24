@@ -16,11 +16,11 @@ export const JoinUs = () => (
           <h2 className="text-4xl font-Jakartha text-blue1 font-light xl:tracking-[-0.15rem]">
             Join us now
           </h2>
-          <p className="text-center  text-base lg:text-xl max-w-full lg:max-w-[80%] font-extralight lg:tracking-[-0.08rem] ">
+          <p className="text-center  text-base lg:text-xl max-w-full lg:max-w-[80%] font-extralight lg:tracking-[-0.02rem] ">
             Join the conversation, pitch your ideas, discover savvy solutions,
             and tap into the wisdom of a{" "}
             <span className="text-blue1">vibrant community of developers </span>{" "}
-            and osvauld enthusiasts
+            and security enthusiasts
           </p>
           <div className=" w-full lg:w-7/12 flex flex-col lg:flex-row lg:justify-around gap-2">
             <button className="flex bg-blue1 text-dark1 justify-center items-center px-3 py-1.5 rounded whitespace-nowrap">
