@@ -31,11 +31,11 @@ export const IntutiveSharing = () => (
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen top-10 xl:top-0 right-2 lg:right-0 xl:right-20 flex justify-center md:justify-start items-center mb-40 xl:mb-[40vw]">
+          <div className="relative w-screen top-10 sm:top-0 right-4 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40 sm:mb-[50vw] xl:mb-[40vw]">
             <img
               src={sharing}
               alt="sharing functionality of osvauld"
-              className="w-full xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl hero-dashboard-border-gradient lg:top-6 xl:top-10 xl:left-10"
+              className="w-[95%] sm:w-[90%] md:w-[84%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl hero-dashboard-border-gradient sm:top-0 md:top-2 lg:top-0 xl:top-0"
             />
           </div>
         </motion.div>
