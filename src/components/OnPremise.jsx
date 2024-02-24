@@ -9,7 +9,7 @@ export const OnPremise = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className=" 2xl:w-[1150px] xl:w-[1050px]  md:w-4/5 flex justify-center bg-dark1  lg:pb-10 mx-auto lg:flex-row flex-col">
+        <div className=" 2xl:w-[1150px] xl:w-[1050px] lg:w-[980px]  md:w-4/5 flex justify-center bg-dark1  lg:pb-10 mx-auto xl:flex-row flex-col">
           <div>
             <div className="pl-0 lg:pl-10 text-left">
               <h2 className="font-normal font-Jakartha  text-3xl lg:text-5xl  text-blue1  xl:tracking-[-0.15rem]">
