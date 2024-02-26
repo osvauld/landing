@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import React from "react";
 import mixpanel from "mixpanel-browser";
-import dashboard from "../assets/images/dashboard.png";
+import dashboard from "../assets/images/dashboard.webp";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 
