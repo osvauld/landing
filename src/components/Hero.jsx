@@ -7,13 +7,13 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 
 export const Hero = React.memo(() => {
-  // useEffect(() => {
-  //   mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
-  //     track_pageview: true,
-  //     persistence: "localStorage",
-  //   });
-  //   mixpanel.track_pageview();
-  // }, []);
+  useEffect(() => {
+    mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
+      track_pageview: true,
+      persistence: "localStorage",
+    });
+    mixpanel.track_pageview();
+  }, []);
   return (
     <section
       className="w-screen flex justify-center items-center bg-dark1 mb-0 md:mb-[18vw] lg:mb-[10vw] xl:mb-[10vw] 2xl:mb-60 hero-bg-gradient pb-10  md:pb-44 lg:pb-0"
