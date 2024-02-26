@@ -35,18 +35,18 @@ export const OpenSource = () => (
               <RustLogo />
             </span>
           </div>
-          <h6 className="max-w-[95%] lg:max-w-[60vw] text-base lg:text-xl">
+          <span className="max-w-[95%] lg:max-w-[60vw] text-base lg:text-xl">
             Osvauld is 100% Open-source,{" "}
             <span className="text-blue1">
               source code comes under under the AGPL-3.0 license and can be
               easily self-hosted.
             </span>
             You are free to audit, contribute and redistribute it.
-          </h6>
-          <h6 className="max-w-[95%] lg:max-w-[50vw]  text-base lg:text-xl">
+          </span>
+          <span className="max-w-[95%] lg:max-w-[50vw]  text-base lg:text-xl">
             Osvauld’s Vulnerability Disclosure Program enlists the help of the
             hacker community to make Osvauld more secure.
-          </h6>
+          </span>
           <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4 text-blue1">
             <button className="w-full lg:w-1/4 border border-blue1 hover:bg-blue1 hover:text-dark1 rounded-md px-3 py-1.5">
               Become a Contributor

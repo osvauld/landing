@@ -12,9 +12,10 @@ export const Footer = () => {
           <div className=" w-full lg:w-[95vw] h-[40vh  flex flex-col lg:flex-row justify-center items-center">
             <div className="w-full lg:w-1/2 flex justify-start items-center lg:justify-center xl:justify-start mb-10 lg:mb-0">
               <div className="bg-dark2 w-[90vw] lg:w-1/2 rounded-lg px-6 py-6 text-lg text-white1 flex flex-col justify-center items-center whitespace-nowrap">
-                <h6>Any questions or feedbacks?</h6>
+                <span>Any questions or feedbacks?</span>
                 <a
                   className="flex bg-blue1 text-dark1 justify-center items-center px-3 py-1.5 rounded whitespace-nowrap mt-4 text-base"
+                  aria-label="Chat with us on Discord"
                   href="https://discord.gg/umffkNPd"
                 >
                   {" "}
@@ -25,73 +26,150 @@ export const Footer = () => {
             </div>
             <div className=" w-[95%] lg:w-1/2 flex justify-center xl:justify-start items-start text-white1 gap-3 md:gap-6 lg:gap-12 text-xs font-light">
               <ul className="flex flex-col justify-start items-start gap-4">
-                <h6 className="font-medium">Product</h6>
-                <a href="#" className="text-white4 lg:text-white1">
-                  Features
-                </a>
-                <a href="#" className="text-white4 lg:text-white1">
-                  Integrations
-                </a>
-                <a href="#" className="text-white4 lg:text-white1">
-                  Pricing
-                </a>
-                <a href="#" className="text-white4 lg:text-white1">
-                  Roadmap
-                </a>
+                <li>
+                  <span className="font-medium">Product</span>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white4 lg:text-white1"
+                    aria-label="Features"
+                  >
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white4 lg:text-white1"
+                    aria-label="Integrations"
+                  >
+                    Integrations
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white4 lg:text-white1"
+                    aria-label="Pricing"
+                  >
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white4 lg:text-white1"
+                    aria-label="Roadmap"
+                  >
+                    Roadmap
+                  </a>
+                </li>
               </ul>
               <ul className="flex flex-col justify-start items-start gap-4">
-                <h6 className="font-medium">Company</h6>
-                <a href="#" className="text-white4 lg:text-white1">
-                  About
-                </a>
-                <a href="#" className="text-white4 lg:text-white1">
-                  Our Team
-                </a>
-                <a
-                  href="#"
-                  className="text-white4 lg:text-white1 whitespace-nowrap"
-                >
-                  Our Values
-                </a>
-                <a href="#" className="text-white4 lg:text-white1">
-                  Blog
-                </a>
+                <li>
+                  <span className="font-medium">Company</span>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white4 lg:text-white1"
+                    aria-label="About"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white4 lg:text-white1"
+                    aria-label="Our team"
+                  >
+                    Our Team
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white4 lg:text-white1 whitespace-nowrap"
+                    aria-label="Our Values"
+                  >
+                    Our Values
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white4 lg:text-white1"
+                    aria-label="Blog"
+                  >
+                    Blog
+                  </a>
+                </li>
               </ul>
               <ul className="flex flex-col justify-start items-start gap-4">
-                <h6 className="font-medium">Community</h6>
-                <a
-                  href="https://discord.gg/umffkNPd"
-                  className="text-white4 lg:text-white1"
-                >
-                  Discord
-                </a>
-                <a
-                  href="https://github.com/osvauld"
-                  className="text-white4 lg:text-white1"
-                >
-                  Github
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/osvauld"
-                  className="text-white4 lg:text-white1"
-                >
-                  Linkdin
-                </a>
-                <a
-                  href="https://www.instagram.com/osvauld/"
-                  className="text-white4 lg:text-white1"
-                >
-                  Instagram
-                </a>
+                <li>
+                  <span className="font-medium">Community</span>
+                </li>
+                <li>
+                  <a
+                    href="https://discord.gg/umffkNPd"
+                    className="text-white4 lg:text-white1"
+                    aria-label="Discord"
+                  >
+                    Discord
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/osvauld"
+                    className="text-white4 lg:text-white1"
+                    aria-label="Github"
+                  >
+                    Github
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/osvauld"
+                    className="text-white4 lg:text-white1"
+                    aria-label="Linkdin"
+                  >
+                    Linkdin
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/osvauld/"
+                    className="text-white4 lg:text-white1"
+                    aria-label="Instagram"
+                  >
+                    Instagram
+                  </a>
+                </li>
               </ul>
               <ul className="flex flex-col justify-start items-start gap-4">
-                <h6 className="font-medium">Resources</h6>
-                <a href="" className="text-white4 lg:text-white1">
-                  Downloads
-                </a>
-                <a href="" className="text-white4 lg:text-white1">
-                  Docs
-                </a>
+                <li>
+                  <span className="font-medium">Resources</span>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    className="text-white4 lg:text-white1"
+                    aria-label="Downloads"
+                  >
+                    Downloads
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    className="text-white4 lg:text-white1"
+                    aria-label="Docs"
+                  >
+                    Docs
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -99,19 +177,25 @@ export const Footer = () => {
             <span className="whitespace-nowrap">© 2024 osvauld</span>
             <div className="w-full flex flex-col lg:flex-row gap-4 justify-center xl:justify-end items-center pb-10 lg:pb-0">
               <div className="w-2/3 xl:w-auto mt-6 xl:mt-3 flex gap-10 justify-center items-center my-2">
-                <a href="https://linktr.ee/osvauld">
+                <a href="https://linktr.ee/osvauld" aria-label="Linktree Icon">
                   <LinktreeIcon color={"#A6B0BB"} />
                 </a>
-                <a href="https://github.com/osvauld">
+                <a href="https://github.com/osvauld" aria-label="Github Icon">
                   <GithubIcon color={"#A6B0BB"} />
                 </a>
-                <a href="https://discord.gg/umffkNPd">
+                <a href="https://discord.gg/umffkNPd" aria-label="Discord Icon">
                   <DiscordIcon color={"#A6B0BB"} />
                 </a>
-                <a href="https://www.linkedin.com/company/osvauld">
+                <a
+                  href="https://www.linkedin.com/company/osvauld"
+                  aria-label="LinkdinIcon"
+                >
                   <LinkdinIcon color={"#A6B0BB"} />
                 </a>
-                <a href="https://www.instagram.com/osvauld/">
+                <a
+                  href="https://www.instagram.com/osvauld/"
+                  aria-label="Instagram Icon"
+                >
                   <InstagramIcon color={"#A6B0BB"} />
                 </a>
               </div>
