@@ -24,7 +24,7 @@ export const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className=" w-[95%] lg:w-1/2 flex justify-center xl:justify-start items-start text-white1 gap-3 md:gap-6 lg:gap-12 text-xs font-light">
+            <div className=" w-[95%] lg:w-1/2 flex justify-center xl:justify-start items-start text-white1 gap-8 lg:gap-12 text-xs font-light">
               <ul className="flex flex-col justify-start items-start gap-4">
                 <li>
                   <span className="font-medium">Product</span>
@@ -175,8 +175,8 @@ export const Footer = () => {
           </div>
           <div className="pt-10 w-full flex flex-col lg:flex-row justify-between items-center text-white4 text-xs">
             <span className="whitespace-nowrap">© 2024 osvauld</span>
-            <div className="w-full flex flex-col lg:flex-row gap-4 justify-center xl:justify-end items-center pb-10 lg:pb-0">
-              <div className="w-2/3 xl:w-auto mt-6 xl:mt-3 flex gap-10 justify-center items-center my-2">
+            <div className="w-full flex flex-col lg:flex-row gap-4 justify-center xl:justify-end items-center pb-10 lg:pb-0 ">
+              <div className="w-2/3 xl:w-auto mt-6 xl:mt-3 flex gap-10 justify-center items-center my-2 xl:pr-12">
                 <a href="https://linktr.ee/osvauld" aria-label="Linktree Icon">
                   <LinktreeIcon color={"#A6B0BB"} />
                 </a>
@@ -199,7 +199,7 @@ export const Footer = () => {
                   <InstagramIcon color={"#A6B0BB"} />
                 </a>
               </div>
-              <div className="w-2/3 xl:w-auto flex justify-between xl:justify-end xl:gap-4 items-center">
+              <div className="w-2/3 xl:w-auto flex justify-between xl:justify-end xl:gap-4 items-center xl:pt-1">
                 <span>Terms of use</span>
                 <span>Privacy Policy</span>
               </div>
