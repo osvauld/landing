@@ -24,13 +24,11 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <a className="navbar-link" href="#home" aria-label="Home">
-            <div className="flex justify-start items-center grow basis-0">
-              <div className="text-blue1 font-Jakartha font-semibold text-4xl">
-                osvauld
-              </div>
-            </div>
-          </a>
+          <div className="flex justify-start items-center grow basis-0">
+            <h3 className="text-blue1 font-Jakartha font-semibold text-4xl">
+              osvauld
+            </h3>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -67,7 +65,8 @@ export const Navbar = () => {
             bg-dark1 cursor-pointer flex whitespace-nowrap text-sm  border border-blue1  px-3 py-1.5 "
                 href="https://cal.com/abrahamgeorge/30min"
                 target="_blank"
-                aria-label="book demo"
+                aria-label="Book a demo"
+                aria-labelledby="Book a demo"
               >
                 <span className="pt-px">Book a demo</span>
               </a>

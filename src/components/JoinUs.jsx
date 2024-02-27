@@ -22,7 +22,7 @@ export const JoinUs = () => (
             <span className="text-blue1">vibrant community of developers </span>{" "}
             and security enthusiasts
           </p>
-          <div className=" w-full lg:w-7/12 flex flex-col lg:flex-row lg:justify-around gap-2">
+          <div className=" w-full lg:w-7/12 flex flex-col lg:flex-row lg:justify-around gap-2 font-light">
             <button className="flex bg-blue1 text-dark1 justify-center items-center px-3 py-1.5 rounded whitespace-nowrap">
               {" "}
               <DiscordIcon />

@@ -10,9 +10,7 @@ export const Hero = React.memo(() => {
   useEffect(() => {
     mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
       track_pageview: true,
-      persistence: "localStorage",
     });
-    mixpanel.track_pageview();
   }, []);
   return (
     <section
@@ -25,24 +23,24 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="text-blue1 h-8 text-sm sm:text-base w-full mb-6 sm:mt-32 mt-16  font-bold">
+          <div className="text-blue1 h-8 text-sm sm:text-base w-full mb-6 sm:mt-32 mt-16 font-bold">
             <button
               className="flex w-full justify-center items-center font-normal text-sm rounded-lg bg-blue2 h-full px-4 py-2 cursor-pointer"
               onClick={() => {
                 location.assign("https://github.com/osvauld/web-client");
               }}
             >
-              <h6 className="whitespace-nowrap">We are open-source</h6>
-              <span className="h-full border-r-[1px] border-white4  mx-2"></span>
-              <h6 className="flex text-white4 justify-center items-center whitespace-nowrap">
+              <span className="whitespace-nowrap">We are open-source</span>
+              <span className="h-full border-r-[1px] border-white4 mx-2"></span>
+              <span className="flex text-white4 justify-center items-center whitespace-nowrap">
                 <span className="mr-2 flex justify-center items-center">
                   <GithubIcon color={"#A6B0BB"} />
                 </span>
-                Star us on github
+                Star us on GitHub
                 <span className="transform -rotate-90 mt-1">
                   <BottomArrow color={"#A6B0BB"} />
                 </span>
-              </h6>
+              </span>
             </button>
           </div>
         </motion.div>
