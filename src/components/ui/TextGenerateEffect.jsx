@@ -12,7 +12,7 @@ export const TextGenerateEffect = ({ words, className }) => {
         opacity: 1,
       },
       {
-        duration: 4,
+        duration: 2,
         delay: stagger(0.2),
       }
     );
@@ -35,7 +35,7 @@ export const TextGenerateEffect = ({ words, className }) => {
   return (
     <div className={cn("", className)}>
       <div className="mt-4">
-        <div className="  text-3xl  sm:text-6xl lg:text-6xl xl:text-6xl xl:tracking-[-0.2rem] tracking-wide xl:font-normal leading-snug ">
+        <div className="xl:tracking-[-0.2rem] tracking-wide xl:font-normal">
           {renderWords()}
         </div>
       </div>

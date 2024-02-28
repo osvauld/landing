@@ -5,6 +5,7 @@ import mixpanel from "mixpanel-browser";
 import dashboard from "../assets/images/dashboard.webp";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 export const Hero = React.memo(() => {
   useEffect(() => {
@@ -54,7 +55,11 @@ export const Hero = React.memo(() => {
           <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-wide  text-blue1 xl:font-normal px-0 font-Jakartha">
             <h1>
               Share credentials <br />
-              <span className="text-white1">within your team,</span> Securely.
+              <span className="text-white1">within your team,</span>{" "}
+              <TextGenerateEffect
+                words={"Securely"}
+                className={"inline-block "}
+              />
             </h1>
           </div>
         </motion.div>
