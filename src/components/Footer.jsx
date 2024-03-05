@@ -201,7 +201,7 @@ export const Footer = () => {
               </div>
               <div className="w-2/3 xl:w-auto flex justify-between xl:justify-end xl:gap-4 items-center xl:pt-1">
                 <span>Terms of use</span>
-                <span>Privacy Policy</span>
+                <a href="/privacy">Privacy Policy</a>
               </div>
             </div>
           </div>
