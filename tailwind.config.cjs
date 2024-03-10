@@ -14,7 +14,7 @@ module.exports = {
         customGrayBorder: "rgb(255,255,255,0.1)",
         customGrayText: "rgb(174, 178, 183)",
         customDarkBgTransparent: "rgb(31, 32, 35, 0.7)",
-        customDarkBgTransparentDarker: "rgb(0,0,0,0.5)",
+        customDarkBgTransparentDarker: "rgb(0,0,0,0.8)",
         customDarkBgTransparentLighter: "rgb(48, 49, 54, 0.7)",
         dark1: "#010409",
         dark1Transparent: "#B3010409",

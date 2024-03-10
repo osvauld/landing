@@ -17,10 +17,12 @@
     "@fontsource/plus-jakarta-sans": "^5.0.18",
     "astro": "^2.2.0",
     "astro-seo": "^0.8.2",
+    "clsx": "^2.1.0",
     "framer-motion": "^10.11.2",
     "mixpanel-browser": "^2.49.0",
     "npm-check-updates": "^16.10.7",
     "react-router-dom": "^6.20.1",
+    "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.3.1"
   },
   "devDependencies": {
