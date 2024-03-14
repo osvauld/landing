@@ -7,7 +7,11 @@ import { BottomArrow } from "../assets/icons/BottomArrow";
 
 const navbarLinks = [
   { label: "Why Osvauld", href: "#why", ariaLabel: "why osvauld" },
-  { label: "Documentation", href: "#home", ariaLabel: "Documentation" },
+  {
+    label: "Documentation",
+    href: "https://docs.osvauld.com",
+    ariaLabel: "Documentation",
+  },
   { label: "Community", href: "#community", ariaLabel: "Community" },
   { label: "About", href: "#about", ariaLabel: "About" },
 ];
@@ -41,7 +45,7 @@ export const Navbar = () => {
             {navbarLinks.map(({ href, label, ariaLabel }, index) => (
               <React.Fragment key={label}>
                 <a
-                  className="text-white1 font-light text-xs flex justify-center items-center"
+                  className="text-white1 font-normal text-xs flex justify-center items-center"
                   href={href}
                   aria-label={ariaLabel}
                 >
