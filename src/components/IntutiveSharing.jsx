@@ -22,7 +22,7 @@ export const IntutiveSharing = () => (
               </span>{" "}
               Enables you to share credentials with designated groups or users.
             </h3>
-            <p className="w-[95vw] lg:max-w-[70%] text-sm">
+            <p className="w-[95vw] lg:max-w-[70%] text-lg font-extralight">
               Manage credentials access by assigning and revoking permissions as
               per your needs. Track the frequency and manner in which
               credentials are accessed with audit logs that offers insights into
