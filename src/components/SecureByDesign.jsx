@@ -11,29 +11,29 @@ export const SecureByDesign = () => {
         className="w-full flex justify-center items-center"
       >
         <div className="w-full min-h-[50vh] text-white3 xl:w-[1000px] xl:pt-20  text-center">
-          <h2 className="text-4xl font-Jakartha font-light text-blue1  xl:tracking-[-0.1rem] ">
-            Secure By Design
+          <h2 className="text-5xl font-Jakartha font-light text-blue1 ">
+            Fast and Secure
           </h2>
           <div className="py-10 flex flex-col lg:flex-row justify-between items-center gap-4">
-            <article className="bg-dark2 rounded-lg w-[95vw] lg:w-[30%] p-6 min-h-[20vh] flex justify-center items-center">
-              <p className="text-base font-extralight">
-                Your data remains encrypted end to end with your individual
-                email and master password. We cannot see your private
-                credentials.
+            <article className="bg-dark2 rounded-lg w-[95vw] lg:w-[30%] p-6 min-h-[20vh] flex flex-col justify-center items-center">
+              <h4 className="text-blue1">Robust Security</h4>
+              <p className="text-base font-extralight mt-2">
+                Powered by Sequoia-PGP and WebAssembly, ensuring strong
+                encryption and secure operations directly in your browser.
               </p>
             </article>
-            <article className="bg-dark2 rounded-lg  w-[95vw] lg:w-[30%]  p-6 min-h-[20vh] flex justify-center items-center">
-              <p className="text-base font-extralight">
-                Private key is generated on the browser when user signs up. It
-                will never be transferred over network and will stay exclusively
-                in client browser.
+            <article className="bg-dark2 rounded-lg  w-[95vw] lg:w-[30%]  p-6 min-h-[20vh] flex flex-col justify-center items-center">
+              <h4 className="text-blue1">Modern Cryptography</h4>
+              <p className="text-base font-extralight mt-2">
+                ECC-Curve25519 for asymmetric encryption and AES-256 for
+                symmetric encryption, providing state-of-the-art security.
               </p>
             </article>
-            <article className="bg-dark2 rounded-lg  w-[95vw] lg:w-[30%]  p-6 min-h-[20vh] flex justify-center items-center">
-              <p className="text-base font-extralight">
-                All your data is fully sealed with RSA 2048-bit encryption
-                before it leaves your device, only the holder of private key can
-                access the data.
+            <article className="bg-dark2 rounded-lg  w-[95vw] lg:w-[30%]  p-6 min-h-[20vh] flex flex-col justify-center items-center">
+              <h4 className="text-blue1">Lightning Batch Crypto</h4>
+              <p className="text-base font-extralight mt-2">
+                Optimized Rust implementation enables lightning-fast batch
+                encryption and decryption, ensuring swift secure sharing.{" "}
               </p>
             </article>
           </div>
