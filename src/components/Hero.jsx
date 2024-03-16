@@ -53,7 +53,7 @@ export const Hero = React.memo(() => {
           <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-wide  text-blue1 xl:font-normal px-0 font-Jakartha">
             <h1>
               Share credentials <br />
-              <span className="text-white1">within your team,</span>{" "}
+              <span className="text-white1">with your team,</span>{" "}
               <TextGenerateEffect
                 words={"Securely"}
                 className={"inline-block "}
@@ -67,12 +67,11 @@ export const Hero = React.memo(() => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <div className="text-white1 font-light text-sm sm:text-base  lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[50vw] mt-10 xl:mt-6 text-left">
-            Open source solution built for collaboration to share all your{" "}
-            <span className="text-blue1">
-              sensitive account passwords or any other credentials.
-            </span>{" "}
-            No more struggles with Slack or Google Sheets. With osvauld, you are
-            in full control of your data.
+            Open-source, Purpose-built and user-friendly platform tailored to
+            safeguard your organization's{" "}
+            <span className="text-blue1">shared sensitive information.</span>{" "}
+            Embrace the future of collaborative credential management with
+            osvauld.
           </div>
         </motion.div>
         <motion.div
