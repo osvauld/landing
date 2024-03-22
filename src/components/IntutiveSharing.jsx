@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import sharing from "../assets/images/osvauldsharing.webp";
+import sharing from "../assets/images/osvauldsharing.jpg";
 const MotionDiv = lazy(() =>
   import("framer-motion").then((pkg) => ({ default: pkg.motion.div }))
 );
@@ -22,7 +22,7 @@ export const IntutiveSharing = () => (
               </span>{" "}
               Enables you to share credentials with designated groups or users.
             </h3>
-            <p className="w-[95vw] lg:max-w-[70%] text-lg font-extralight">
+            <p className="w-[95vw] lg:max-w-[70%] text-lg text-left font-extralight">
               Manage credentials access by assigning and revoking permissions as
               per your needs. Track the frequency and manner in which
               credentials are accessed with audit logs that offers insights into
@@ -38,7 +38,7 @@ export const IntutiveSharing = () => (
               <img
                 src={sharing}
                 alt="sharing functionality of osvauld"
-                className="w-[95%] sm:w-[90%] md:w-[84%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl hero-dashboard-border-gradient sm:top-0 md:top-2 lg:top-0 xl:top-0"
+                className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl lg:rounded-3xl hero-dashboard-border-gradient sm:top-0 md:top-2 lg:top-0 xl:top-0 shadow-[0_0_10px_rgba(137,180,250,0.7)]"
               />
             </div>
           </MotionDiv>

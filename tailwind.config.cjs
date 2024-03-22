@@ -40,6 +40,10 @@ module.exports = {
         xll: "1400px",
         "2xl": "1536px",
       },
+      boxShadow: {
+        glass:
+          "0 0 12px rgba(255, 255, 255, 0.1), inset 0 0 12px rgba(255, 255, 255, 0.1), 0 4px 30px rgba(0, 0, 0, 0.2)",
+      },
     },
   },
 };

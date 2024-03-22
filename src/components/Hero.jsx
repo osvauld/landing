@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import React from "react";
 import mixpanel from "mixpanel-browser";
-import dashboard from "../assets/images/dashboard.webp";
+import dashboard from "../assets/images/dashboard.jpg";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -66,7 +66,7 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-white1 font-light text-sm sm:text-base  lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[50vw] mt-10 xl:mt-6 text-left">
+          <div className="text-white1 font-light text-sm sm:text-base lg:max-w-[80%] lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[50vw] mt-10 xl:mt-6 text-left">
             Open-source, Purpose-built and user-friendly platform tailored to
             safeguard your organization's{" "}
             <span className="text-blue1">shared sensitive information.</span>{" "}
@@ -100,11 +100,11 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40 sm:mb-[40vw] xl:mb-[40vw]">
+          <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40 sm:mb-[40vw] xl:mb-[40vw] xl:mt-[5vw]">
             <img
               src={dashboard}
               alt="dashboard of osvauld"
-              className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl hero-dashboard-border-gradient sm:top-0 md:top-2 lg:top-0 xl:top-0"
+              className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl lg:rounded-3xl hero-dashboard-border-gradient sm:top-0 md:top-2 lg:top-0 xl:top-0 shadow-[0_0_10px_rgba(137,180,250,0.7)] "
             />
           </div>
         </motion.div>
