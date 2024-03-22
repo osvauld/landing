@@ -16,12 +16,19 @@ const navbarLinks = [
   { label: "About", href: "#about", ariaLabel: "About" },
 ];
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-[95%] h-20 xl:h-24 flex flex-col justify-center items-center fixed bg-dark1 lg:bg-dark1Transparent z-40 lg:backdrop-blur-xl ">
-      <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
+    <nav className="w-full h-20 xl:h-24 flex flex-col justify-center items-center fixed  z-40 backdrop-blur-xl ">
+      <div className="2xl:w-[1280px] xl:w-10/12 w-[88%] flex justify-between items-center relative">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -29,9 +36,12 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
         >
           <div className="flex justify-start items-center grow basis-0">
-            <h3 className="text-blue1 font-Jakartha font-semibold text-4xl">
+            <button
+              className="text-blue1 font-Jakartha font-semibold text-4xl"
+              onClick={scrollToTop}
+            >
               osvauld
-            </h3>
+            </button>
           </div>
         </motion.div>
         <motion.div
@@ -89,7 +99,7 @@ export const Navbar = () => {
           </div>
         </motion.div>
         <div
-          className="lg:hidden flex flex-col  px-2 py-3  bg-dark1 border-solid border border-gray-600 rounded-md cursor-pointer"
+          className="lg:hidden flex flex-col  px-2 py-3  border-solid border border-gray-600 rounded-md cursor-pointer backdrop-blur-xl"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>

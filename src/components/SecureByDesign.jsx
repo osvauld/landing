@@ -11,7 +11,7 @@ export const SecureByDesign = () => {
         className="w-full flex justify-center items-center"
       >
         <div className="w-full min-h-[50vh] text-white3 xl:w-[1000px] xl:pt-20  text-center">
-          <h2 className="text-5xl font-Jakartha font-light text-blue1 ">
+          <h2 className="text-3xl xl:text-5xl font-Jakartha font-light text-blue1 ">
             Fast and Secure
           </h2>
           <div className="py-10 flex flex-col lg:flex-row justify-between items-center gap-4">
