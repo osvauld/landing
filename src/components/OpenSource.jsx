@@ -1,9 +1,4 @@
 import { motion } from "framer-motion";
-import { RustLogo } from "../assets/logos/RustLogo";
-import { WasmLogo } from "../assets/logos/WasmLogo";
-import { TypescriptLogo } from "../assets/logos/TypescriptLogo";
-import { SvelteLogo } from "../assets/logos/SvelteLogo";
-import { GolangLogo } from "../assets/logos/GolangLogo";
 
 export const OpenSource = () => (
   <section className="py-12 bg-dark1 w-full">
