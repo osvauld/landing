@@ -11,16 +11,15 @@ export const Footer = () => {
         <div className="container mx-auto px-4 w-full md:w-11/12 lg:w-10/12 xl:w-4/5 2xl:w-2/3">
           <div className=" w-full lg:w-[95vw] h-[40vh  flex flex-col lg:flex-row justify-center items-center">
             <div className="w-full lg:w-1/2 flex justify-start items-center lg:justify-center xl:justify-start mb-10 lg:mb-0">
-              <div className="bg-dark2 w-[90vw] lg:w-1/2 rounded-lg px-6 py-6 text-lg text-white1 flex flex-col justify-center items-center whitespace-nowrap">
-                <span>Any questions or feedbacks?</span>
+              <div className="bg-dark2 w-[90vw] lg:w-1/2 rounded-lg px-6 py-6 text-lg text-white1 flex flex-col justify-center items-start whitespace-nowrap">
+                <span>We are rolling out our private beta</span>
                 <a
                   className="flex bg-blue1 text-dark1 justify-center items-center px-3 py-1.5 rounded whitespace-nowrap mt-4 text-base"
-                  aria-label="Chat with us on Discord"
-                  href="https://discord.gg/umffkNPd"
+                  aria-label="Join waitlist"
+                  href="https://getwaitlist.com/waitlist/14960"
                 >
                   {" "}
-                  <DiscordIcon />
-                  <span className="ml-2">Chat with us on Discord</span>
+                  <span className="ml-2">Join waitlist</span>
                 </a>
               </div>
             </div>
@@ -174,7 +173,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className="pt-10 w-full flex flex-col lg:flex-row justify-between items-center text-white4 text-xs">
-            <span className="whitespace-nowrap">© 2024 osvauld</span>
+            <span className="whitespace-nowrap">© osvauld 2024 </span>
             <div className="w-full flex flex-col lg:flex-row gap-4 justify-center xl:justify-end items-center pb-10 lg:pb-0 ">
               <div className="w-2/3 xl:w-auto mt-6 xl:mt-3 flex gap-10 justify-center items-center my-2 xl:pr-12">
                 <a href="https://linktr.ee/osvauld" aria-label="Linktree Icon">

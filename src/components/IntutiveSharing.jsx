@@ -16,11 +16,10 @@ export const IntutiveSharing = () => (
         <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1300px] w-11/12 mx-auto md:pl-4 xl:pr-16 xl:pl-32">
           <article className="text-white3 w-[95vw] text-center  lg:text-left lg:max-w-[80%] font-light pb-32 lg:pb-12">
             <h3 className="text-2xl lg:text-4xl font-Jakartha font-light xl:tracking-[-0.1rem] mb-10">
-              <span className="text-blue1">
-                Intutive sharing mechanism for seamless granular access
-                distribution.
+              <span className="text-blue1 tracking-normal">
+                Seamless granular access distribution <br /> enables you to
+                share credentials with <br /> designated groups or users.
               </span>{" "}
-              Enables you to share credentials with designated groups or users.
             </h3>
             <p className="w-[95vw] lg:max-w-[70%] text-lg text-left font-extralight">
               Manage credentials access by assigning and revoking permissions as

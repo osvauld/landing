@@ -15,10 +15,21 @@ export const Hero = React.memo(() => {
   }, []);
   return (
     <section
-      className="w-screen flex justify-center items-center bg-dark1 mb-0 md:mb-[18vw] lg:mb-[10vw] xl:mb-[10vw] 2xl:mb-60 hero-bg-gradient pb-10  md:pb-44 lg:pb-0"
+      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[18vw] lg:mb-[10vw] xl:mb-[10vw] 2xl:mb-60 hero-bg-gradient pb-10  md:pb-44 lg:pb-0"
       id="home"
     >
-      <div className="w-[95%] md:w-[800px] xl:w-[1000px] flex flex-col justify-center items-start pt-16 xl:pt-10 md:pt-16 lg:pt-20 text-left">
+      <div className="w-full h-[60px] bg-[#111926] text-dark mt-24 flex justify-start items-center ">
+        <div className="pl-[15.5vw] text-blue1 tracking-wide font-normal font-Inter">
+          We are rolling out our private Beta. &ensp;
+          <a
+            href="https://getwaitlist.com/waitlist/14960"
+            className="text-white2 underline underline-offset-4 decoration-from-font"
+          >
+            Join waitlist now!
+          </a>
+        </div>
+      </div>
+      <div className="w-[95%] md:w-[800px] xl:w-[1000px] mt-[-5.625rem] flex flex-col justify-center items-start pt-16 xl:pt-10 md:pt-16 lg:pt-20 text-left">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,9 +64,9 @@ export const Hero = React.memo(() => {
           <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-wide  text-blue1 xl:font-normal px-0 font-Jakartha">
             <h1>
               Share credentials <br />
-              <span className="text-white1">with your team,</span>{" "}
+              <span className="text-white1">within your team,</span>{" "}
               <TextGenerateEffect
-                words={"Securely"}
+                words={"Securely."}
                 className={"inline-block "}
               />
             </h1>
@@ -66,12 +77,12 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-white1 font-light text-sm sm:text-base lg:max-w-[80%] lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[50vw] mt-10 xl:mt-6 text-left">
-            Open-source, Purpose-built and user-friendly platform tailored to
-            safeguard your organization's{" "}
-            <span className="text-blue1">shared sensitive information.</span>{" "}
-            Embrace the future of collaborative credential management with
-            osvauld.
+          <div className="text-white1 font-light text-sm sm:text-base lg:max-w-[80%] lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[55vw] mt-10 xl:mt-6 mb-4 text-left">
+            Open source solution built for collaboration to share all your{" "}
+            <span className="text-blue1">
+              sensitive account <br /> passwords or any other credentials.
+            </span>{" "}
+            No more scrounging over Slack or Google Sheets.
           </div>
         </motion.div>
         <motion.div
@@ -80,12 +91,12 @@ export const Hero = React.memo(() => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="w-full"
         >
-          <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 mb-24 md:my-10 lg:my-4 xl:my-6 ">
+          <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 mb-24 md:my-10 lg:my-4 xl:my-2 ">
             <div
               className="bg-blue1 rounded-lg flex justify-center items-center text-black font-normal px-3 !py-1.5 sm:mr-4 xl:mr-0 lg:mr-6 mb-2 sm:mb-0 whitespace-nowrap"
               onClick={() => setIsModalOpen(true)}
             >
-              Get Started
+              <a href="https://getwaitlist.com/waitlist/14960">Join waitlist</a>
             </div>
             <a
               className=" rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3"

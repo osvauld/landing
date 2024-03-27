@@ -14,24 +14,28 @@ export const JoinUs = () => (
       <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1100px] w-11/12 mx-auto">
         <div className="w-full h-[40vh] bg-dark2 rounded-xl text-white px-6 lg:px-12 py-8 flex flex-col justify-around items-center">
           <h2 className="text-4xl font-Jakartha text-blue1 font-light xl:tracking-[-0.15rem]">
-            Join us now
+            Any questions or feedbacks?
           </h2>
           <p className="text-center  text-base lg:text-xl max-w-full lg:max-w-[80%] font-extralight lg:tracking-[-0.02rem] ">
-            Join the conversation, pitch your ideas, discover savvy solutions,
-            and tap into the wisdom of a{" "}
-            <span className="text-blue1">vibrant community of developers </span>{" "}
-            and security enthusiasts
+            Get access to our updates, contribute to our <br /> roadmap and
+            converse with us!
           </p>
           <div className=" w-full lg:w-7/12 flex flex-col lg:flex-row lg:justify-around gap-2 font-light">
-            <button className="flex bg-blue1 text-dark1 justify-center items-center px-3 py-1.5 rounded whitespace-nowrap">
-              {" "}
-              <DiscordIcon />
-              <span className="ml-2">Join our Discord Community</span>
-            </button>
-            <button className="flex border border-blue1 rounded text-white1 justify-center items-center px-3 py-1.5 whitespace-nowrap">
-              <GithubIcon color={"#A6B0BB"} />
-              <span className="ml-2">Star us on Github</span>
-            </button>
+            <a href="https://discord.gg/u43atWCS">
+              <button className="flex bg-blue1 text-dark1 justify-center items-center px-3 py-1.5 rounded whitespace-nowrap">
+                {" "}
+                <DiscordIcon />
+                <span className="ml-2 font-normal">
+                  Join our Discord Community
+                </span>
+              </button>
+            </a>
+            <a href="https://github.com/osvauld/web-client">
+              <button className="flex border border-blue1 rounded text-white1 justify-center items-center px-3 py-1.5 whitespace-nowrap">
+                <GithubIcon color={"#89B4FA"} />
+                <span className="ml-2">Star us on Github</span>
+              </button>
+            </a>
           </div>
         </div>
       </div>

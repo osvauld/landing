@@ -18,23 +18,7 @@ export const OpenSource = () => (
           <h2 className="text-2xl lg:text-4xl font-Jakartha font-light xl:tracking-[-0.1rem]">
             Proudly Open-Source
           </h2>
-          <div className="w-[60%] grid grid-cols-2 gap-4 sm:grid-cols-5 sm:gap-0">
-            <span className="flex justify-center items-center">
-              <SvelteLogo />
-            </span>
-            <span className="hidden md:flex md:justify-center md:items-center">
-              <TypescriptLogo />
-            </span>
-            <span className="flex justify-center items-center -translate-x-3 md:-translate-x-0">
-              <GolangLogo />
-            </span>
-            <span className="flex justify-center items-center">
-              <WasmLogo />
-            </span>
-            <span className="flex justify-center items-center">
-              <RustLogo />
-            </span>
-          </div>
+
           <span className="max-w-[95%] lg:max-w-[60vw] text-lg font-extralight lg:text-xl">
             Osvauld is 100% Open-source,{" "}
             <span className="text-blue1">
@@ -49,10 +33,12 @@ export const OpenSource = () => (
           </span>
           <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4 text-blue1">
             <button className="w-full lg:w-1/4 border border-blue1 hover:bg-blue1 hover:text-dark1 rounded-md px-3 py-1.5">
-              Become a Contributor
+              <a href="https://github.com/osvauld">Become a Contributor</a>
             </button>
             <button className="w-full lg:w-1/4 border border-blue1 hover:bg-blue1 hover:text-dark1  rounded-md px-3 py-1.5">
-              Become a Sponsor
+              <a href="https://www.buymeacoffee.com/osvauld">
+                Become a Sponsor
+              </a>
             </button>
           </div>
         </div>

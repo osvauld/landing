@@ -3,17 +3,13 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { GithubIcon } from "../assets/icons/GithubIcon";
-import { BottomArrow } from "../assets/icons/BottomArrow";
 
 const navbarLinks = [
-  { label: "Why Osvauld", href: "#why", ariaLabel: "why osvauld" },
   {
     label: "Documentation",
     href: "https://docs.osvauld.com",
     ariaLabel: "Documentation",
   },
-  { label: "Community", href: "#community", ariaLabel: "Community" },
-  { label: "About", href: "#about", ariaLabel: "About" },
 ];
 
 const scrollToTop = () => {
@@ -35,7 +31,7 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className="flex justify-start items-center grow basis-0">
+          <div className="flex justify-start items-center grow basis-0 pl-[7vw]">
             <button
               className="text-blue1 font-Jakartha font-semibold text-4xl"
               onClick={scrollToTop}
@@ -60,7 +56,6 @@ export const Navbar = () => {
                   aria-label={ariaLabel}
                 >
                   {label}
-                  {index === 0 ? <BottomArrow color={"#fff"} /> : null}
                 </a>
               </React.Fragment>
             ))}
@@ -75,25 +70,13 @@ export const Navbar = () => {
           <div className="flex justify-center items-center gap-2">
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
-                className="text-white rounded-lg
-            bg-dark1 cursor-pointer flex whitespace-nowrap text-sm  border border-blue1  px-3 py-1.5 "
-                href="https://cal.com/abrahamgeorge/30min"
-                target="_blank"
-                aria-label="Book a demo"
-                aria-labelledby="Book a demo"
-              >
-                <span className="pt-px">Book a demo</span>
-              </a>
-            </div>
-            <div className="grow basis-0 justify-end hidden lg:flex">
-              <a
                 className="text-dark1
             bg-blue1 cursor-pointer rounded-lg px-3 py-1.5 text-sm whitespace-nowrap  flex"
-                href="https://github.com/osvauld"
+                href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 aria-label="get started"
               >
-                <span className="pt-px">Get started</span>
+                <span className="pt-px">Join waitlist</span>
               </a>
             </div>
           </div>
