@@ -10,13 +10,13 @@ export const SecureByDesign = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-full flex justify-center items-center"
       >
-        <div className="w-full min-h-[50vh] text-white3  2xl:w-[1150px] xl:w-[1050px] lg:w-[980px]  md:w-4/5 bg-dark1  mx-auto xl:pt-20  text-center">
+        <div className="w-full min-h-[50vh] text-white3  2xl:w-[1150px] xl:w-[1050px] lg:w-[980px]  md:w-4/5 bg-dark1  mx-auto xl:pt-14 mt-10 xl:mt-0 text-center">
           <h2 className="text-3xl xl:text-5xl font-Jakartha font-light text-blue1 xl:tracking-[-0.15rem]">
             Advanced security and privacy features
           </h2>
-          <div className="py-10 w-full flex flex-col justify-between items-center gap-6 mt-4">
-            <div className="flex items-center justify-center gap-6 w-full">
-              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[15rem]  p-6 flex flex-col justify-start items-center">
+          <div className="py-10 w-full flex flex-col  justify-between items-center gap-6 mt-4">
+            <div className="flex flex-col xl:flex-row items-center justify-center gap-6 w-full">
+              <article className="bg-dark2 text-left rounded-lg xl:w-[46%] min-h-[15rem]  p-6 flex flex-col justify-start items-center w-[95%]">
                 <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   OpenPGP with ECC
                 </h4>
@@ -28,7 +28,7 @@ export const SecureByDesign = () => {
                   vulnerabilities.
                 </p>
               </article>
-              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[15rem]  p-6  flex flex-col justify-start items-center">
+              <article className="bg-dark2 text-left rounded-lg xl:w-[46%] min-h-[15rem]  p-6  flex flex-col justify-start items-center w-[95%]">
                 <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   Zero-knowledge Architecture
                 </h4>
@@ -41,8 +41,8 @@ export const SecureByDesign = () => {
                 </p>
               </article>
             </div>
-            <div className="flex items-center justify-center gap-6">
-              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[15rem]  p-6 flex flex-col justify-start items-center">
+            <div className="flex flex-col  xl:flex-row items-center justify-center gap-6">
+              <article className="bg-dark2 text-left rounded-lg xl:w-[46%] min-h-[15rem]  p-6 flex flex-col justify-start items-center w-[95%]">
                 <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   State-of-the-Art Protection
                 </h4>
@@ -54,7 +54,7 @@ export const SecureByDesign = () => {
                   manager of major Linux distributions.{" "}
                 </p>
               </article>
-              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[15rem] p-6 flex flex-col justify-start items-center">
+              <article className="bg-dark2 text-left rounded-lg xl:w-[46%] min-h-[15rem] p-6 flex flex-col justify-start items-center w-[95%]">
                 <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   Lightning Batch Crypto
                 </h4>

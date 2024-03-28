@@ -13,7 +13,7 @@ export const JoinUs = () => (
     >
       <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1100px] w-11/12 mx-auto">
         <div className="w-full h-[40vh] bg-dark2 rounded-xl text-white px-6 lg:px-12 py-8 flex flex-col justify-around items-center">
-          <h2 className="text-4xl font-Jakartha text-blue1 font-light xl:tracking-[-0.15rem] mt-6">
+          <h2 className="text-4xl font-Jakartha text-center  text-blue1 font-light xl:tracking-[-0.15rem] mt-6">
             Any questions or feedbacks?
           </h2>
           <p className="text-center  text-base lg:text-xl max-w-full lg:max-w-[80%] xl:my-6 font-extralight lg:tracking-[-0.02rem] ">
@@ -22,7 +22,7 @@ export const JoinUs = () => (
           </p>
           <div className=" w-full lg:w-7/12 flex flex-col lg:flex-row lg:justify-center gap-4 font-light mb-6">
             <a href="https://discord.gg/u43atWCS">
-              <button className="flex bg-blue1 text-dark1 justify-center items-center px-3 py-1.5 rounded whitespace-nowrap">
+              <button className="flex bg-blue1 text-dark1 justify-center items-center px-3 py-1.5 rounded whitespace-nowrap w-full xl:w-auto">
                 {" "}
                 <DiscordIcon />
                 <span className="ml-2 font-normal">
@@ -31,7 +31,7 @@ export const JoinUs = () => (
               </button>
             </a>
             <a href="https://github.com/osvauld/web-client">
-              <button className="flex border border-blue1 rounded text-white1 justify-center items-center px-3 py-1.5 whitespace-nowrap">
+              <button className="flex border border-blue1 rounded text-white1 justify-center items-center px-3 py-1.5 whitespace-nowrap w-full xl:w-auto">
                 <GithubIcon color={"#89B4FA"} />
                 <span className="ml-2">Star us on Github</span>
               </button>
