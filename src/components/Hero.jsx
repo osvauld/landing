@@ -29,7 +29,7 @@ export const Hero = React.memo(() => {
           </a>
         </div>
       </div>
-      <div className="w-[95%] md:w-[800px] xl:w-[1000px] mt-[-5.625rem] flex flex-col justify-center items-start pt-16 xl:pt-10 md:pt-16 lg:pt-20 text-left">
+      <div className="w-[95%] md:w-[800px] xl:w-[1200px] mt-[-5.625rem] flex flex-col justify-center items-start pt-16 xl:pt-10 md:pt-16 lg:pt-20 text-left ">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -111,7 +111,7 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40 sm:mb-[40vw] xl:mb-[40vw] xl:mt-[5vw]">
+          <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40 sm:mb-[40vw] xl:ml-[80px] xl:mb-[40vw] xl:mt-[5vw]">
             <img
               src={dashboard}
               alt="dashboard of osvauld"

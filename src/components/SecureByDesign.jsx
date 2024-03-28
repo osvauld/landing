@@ -16,7 +16,7 @@ export const SecureByDesign = () => {
           </h2>
           <div className="py-10 w-full flex flex-col justify-between items-center gap-6 mt-4">
             <div className="flex items-center justify-center gap-6 w-full">
-              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[16rem]  p-6 flex flex-col justify-center items-center">
+              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[15rem]  p-6 flex flex-col justify-start items-center">
                 <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   OpenPGP with ECC
                 </h4>
@@ -28,7 +28,7 @@ export const SecureByDesign = () => {
                   vulnerabilities.
                 </p>
               </article>
-              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[16rem]  p-6  flex flex-col justify-center items-center">
+              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[15rem]  p-6  flex flex-col justify-start items-center">
                 <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   Zero-knowledge Architecture
                 </h4>
@@ -42,7 +42,7 @@ export const SecureByDesign = () => {
               </article>
             </div>
             <div className="flex items-center justify-center gap-6">
-              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[16rem]  p-6 flex flex-col justify-center items-center">
+              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[15rem]  p-6 flex flex-col justify-start items-center">
                 <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   State-of-the-Art Protection
                 </h4>
@@ -54,7 +54,7 @@ export const SecureByDesign = () => {
                   manager of major Linux distributions.{" "}
                 </p>
               </article>
-              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[16rem] p-6 flex flex-col justify-center items-center">
+              <article className="bg-dark2 text-left rounded-lg w-[46%] min-h-[15rem] p-6 flex flex-col justify-start items-center">
                 <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   Lightning Batch Crypto
                 </h4>
