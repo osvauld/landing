@@ -132,9 +132,9 @@ export const Footer = () => {
                   <a
                     href="https://www.linkedin.com/company/osvauld"
                     className="text-white4 lg:text-white1"
-                    aria-label="Linkdin"
+                    aria-label="LinkedIn"
                   >
-                    Linkdin
+                    LinkedIn
                   </a>
                 </li>
                 <li>
@@ -182,7 +182,7 @@ export const Footer = () => {
                 <a href="https://github.com/osvauld" aria-label="Github Icon">
                   <GithubIcon color={"#A6B0BB"} />
                 </a>
-                <a href="https://discord.gg/umffkNPd" aria-label="Discord Icon">
+                <a href="https://discord.gg/u43atWCS" aria-label="Discord Icon">
                   <DiscordIcon color={"#A6B0BB"} />
                 </a>
                 <a

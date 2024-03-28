@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import React from "react";
 import mixpanel from "mixpanel-browser";
-import dashboard from "../assets/images/dashboard.jpg";
+import dashboard from "../assets/images/dashboard.jpeg";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -19,7 +19,7 @@ export const Hero = React.memo(() => {
       id="home"
     >
       <div className="w-full h-[60px] bg-[#111926] text-dark mt-24 flex justify-start items-center ">
-        <div className="pl-[15.5vw] text-blue1 tracking-wide font-normal font-Inter">
+        <div className="pl-[8.5vw] text-blue1 tracking-wide font-normal font-Inter">
           We are rolling out our private Beta. &ensp;
           <a
             href="https://getwaitlist.com/waitlist/14960"

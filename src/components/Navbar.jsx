@@ -31,9 +31,9 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className="flex justify-start items-center grow basis-0 pl-[7vw]">
+          <div className="flex justify-start items-center grow basis-0">
             <button
-              className="text-blue1 font-Jakartha font-semibold text-4xl"
+              className="text-white3 font-Jakartha font-semibold text-4xl"
               onClick={scrollToTop}
             >
               osvauld
