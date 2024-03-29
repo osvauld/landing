@@ -19,18 +19,19 @@ export const OnPremise = () => {
                 Host on &lt;your-domain&gt;.com{" "}
               </h2>
             </div>
-            <div className="flex flex-col lg:flex-row gap-4 justify-around items-center xl:h-[40vh] mt-10">
-              <article className="bg-dark2 h-[95%] rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
+            <div className="flex flex-col lg:flex-row gap-4 justify-center items-center xl:h-[20rem] mt-10">
+              <article className="bg-dark2 h-[90%] rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
                 <h3 className="text-xl lg:text-3xl font-Jakartha font-light xl:tracking-[-0.1rem] text-blue1 ">
                   On-Premise Solution
                 </h3>
                 <p className="text-lg font-extralight text-white1 pt-4 lg:pt-10">
-                  Store data locally on your trusted infrastructure, reducing
-                  the risk of data breaches associated with cloud-based
-                  centralized systems.{" "}
+                  Minimize the risk of external threats by limiting exposure to
+                  public networks and potential vulnerabilities associated with
+                  shared cloud environments, ensuring compliance with internal
+                  policies and regional regulations.{" "}
                 </p>
               </article>
-              <article className="bg-dark2 h-[95%] rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
+              <article className="bg-dark2 h-[90%] rounded-lg w-[95vw] xl:w-[45%] p-10 overflow-hidden">
                 <h3 className="text-xl lg:text-3xl font-Jakartha font-light xl:tracking-[-0.1rem] text-blue1 ">
                   Easy Deployment{" "}
                 </h3>

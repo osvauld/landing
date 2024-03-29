@@ -1,12 +1,7 @@
 import { motion } from "framer-motion";
-import { RustLogo } from "../assets/logos/RustLogo";
-import { WasmLogo } from "../assets/logos/WasmLogo";
-import { TypescriptLogo } from "../assets/logos/TypescriptLogo";
-import { SvelteLogo } from "../assets/logos/SvelteLogo";
-import { GolangLogo } from "../assets/logos/GolangLogo";
 
 export const OpenSource = () => (
-  <section className="py-12 bg-dark1 w-full">
+  <section className="py-12 xl:pt-0 bg-dark1 w-full">
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -15,44 +10,30 @@ export const OpenSource = () => (
     >
       <div className="container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5">
         <div className="text-center font-light w-full h-full text-white3 flex flex-col gap-10 items-center">
-          <h2 className="text-2xl lg:text-4xl font-Jakartha font-light xl:tracking-[-0.1rem]">
+          <h2 className="text-3xl lg:text-4xl font-Jakartha font-light xl:tracking-[-0.1rem]">
             Proudly Open-Source
           </h2>
-          <div className="w-[60%] grid grid-cols-2 gap-4 sm:grid-cols-5 sm:gap-0">
-            <span className="flex justify-center items-center">
-              <SvelteLogo />
-            </span>
-            <span className="hidden md:flex md:justify-center md:items-center">
-              <TypescriptLogo />
-            </span>
-            <span className="flex justify-center items-center -translate-x-3 md:-translate-x-0">
-              <GolangLogo />
-            </span>
-            <span className="flex justify-center items-center">
-              <WasmLogo />
-            </span>
-            <span className="flex justify-center items-center">
-              <RustLogo />
-            </span>
-          </div>
-          <span className="max-w-[95%] lg:max-w-[60vw] text-lg font-extralight lg:text-xl">
-            Osvauld is 100% Open-source,{" "}
+
+          <span className="max-w-[95%] lg:max-w-[50vw] text-lg font-extralight lg:text-xl">
             <span className="text-blue1">
-              source code comes under under the AGPL-3.0 license and can be
-              easily self-hosted.
+              Osvauld is 100% Open-source, source code comes under under the
+              AGPL-3.0 license and can be easily self-hosted.
             </span>
             You are free to audit, contribute and redistribute it.
           </span>
-          <span className="max-w-[95%] lg:max-w-[50vw] text-lg font-extralight ">
-            Osvauld’s Vulnerability Disclosure Program enlists the help of the
+          <span className="max-w-[95%] lg:max-w-[60vw] text-lg font-extralight ">
+            Osvauld’s Vulnerability Disclosure Program enlists the help of the{" "}
+            <br />
             hacker community to make Osvauld more secure.
           </span>
           <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4 text-blue1">
             <button className="w-full lg:w-1/4 border border-blue1 hover:bg-blue1 hover:text-dark1 rounded-md px-3 py-1.5">
-              Become a Contributor
+              <a href="https://github.com/osvauld">Become a Contributor</a>
             </button>
             <button className="w-full lg:w-1/4 border border-blue1 hover:bg-blue1 hover:text-dark1  rounded-md px-3 py-1.5">
-              Become a Sponsor
+              <a href="https://www.buymeacoffee.com/osvauld">
+                Become a Sponsor
+              </a>
             </button>
           </div>
         </div>
