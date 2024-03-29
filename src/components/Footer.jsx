@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="pt-10  lg:pt-20 lg:pb-12 bg-dark1 radius-for-skewed ">
         <div className="container mx-auto px-4 w-full md:w-11/12 lg:w-10/12 xl:w-4/5 2xl:w-2/3">
           <div className=" w-full lg:w-[95vw] flex flex-col lg:flex-row justify-start items-center">
-            <div className="w-full lg:w-1/2 flex justify-start items-center lg:justify-center xl:justify-start mb-10 lg:mb-0">
+            <div className="w-full lg:w-1/2 flex justify-start items-center lg:justify-center xl:justify-start lg:mb-0">
               <div className=" w-full flex flex-col gap-4 font-light mb-6">
                 <a href="https://getwaitlist.com/waitlist/14960">
                   <button className="flex bg-blue1 text-dark1  cursor-pointer justify-center items-center px-3 py-1.5 rounded whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
@@ -173,36 +173,36 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="pt-0 xl:pt-10  w-full flex flex-col lg:flex-row justify-between items-center text-white4 text-xs">
-            <span className="whitespace-nowrap">© osvauld 2024 </span>
-            <div className="w-full flex flex-col lg:flex-row gap-4 justify-center xl:justify-end items-center pb-10 lg:pb-0 ">
-              <div className="w-2/3 xl:w-auto mt-6 xl:mt-3 flex gap-10 justify-center items-center my-2 xl:pr-12">
-                <a href="https://linktr.ee/osvauld" aria-label="Linktree Icon">
-                  <LinktreeIcon color={"#A6B0BB"} />
-                </a>
-                <a href="https://github.com/osvauld" aria-label="Github Icon">
-                  <GithubIcon color={"#A6B0BB"} />
-                </a>
-                <a href="https://discord.gg/u43atWCS" aria-label="Discord Icon">
-                  <DiscordIcon color={"#A6B0BB"} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/osvauld"
-                  aria-label="LinkdinIcon"
-                >
-                  <LinkdinIcon color={"#A6B0BB"} />
-                </a>
-                <a
-                  href="https://www.instagram.com/osvauld/"
-                  aria-label="Instagram Icon"
-                >
-                  <InstagramIcon color={"#A6B0BB"} />
-                </a>
-              </div>
-              <div className="w-2/3 xl:w-auto flex justify-between xl:justify-end xl:gap-4 items-center xl:pt-1">
-                <span>Terms of use</span>
+          <div className="flex flex-col xl:flex-row justify-between items-center w-[95%] ">
+            <div className="flex gap-10 xl:gap-14 ">
+              <a href="https://linktr.ee/osvauld" aria-label="Linktree Icon">
+                <LinktreeIcon color={"#A6B0BB"} />
+              </a>
+              <a href="https://github.com/osvauld" aria-label="Github Icon">
+                <GithubIcon color={"#A6B0BB"} />
+              </a>
+              <a href="https://discord.gg/u43atWCS" aria-label="Discord Icon">
+                <DiscordIcon color={"#A6B0BB"} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/osvauld"
+                aria-label="LinkdinIcon"
+              >
+                <LinkdinIcon color={"#A6B0BB"} />
+              </a>
+              <a
+                href="https://www.instagram.com/osvauld/"
+                aria-label="Instagram Icon"
+              >
+                <InstagramIcon color={"#A6B0BB"} />
+              </a>
+            </div>
+            <div className="w-[95%] xl:w-1/3 flex justify-between items-center text-white4 text-xs my-4 xl:mt-0">
+              <div className="">
+                <span className="mr-6">Terms of use</span>
                 <a href="/privacy">Privacy Policy</a>
               </div>
+              <span className="whitespace-nowrap">osvauld © 2024 </span>
             </div>
           </div>
         </div>
