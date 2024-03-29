@@ -3,7 +3,7 @@ import { DiscordIcon } from "../assets/icons/DiscordIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
 export const JoinUs = () => (
-  <section className="relative pt-16 pb-16 bg-dark1 overflow-hidden h-[30rem]">
+  <section className="relative pt-0 xl:pt-16 pb-16 bg-dark1 overflow-hidden h-[25rem]">
     <div className="absolute -top-10" id="FAQ" />
     <motion.div
       initial={{ opacity: 0 }}

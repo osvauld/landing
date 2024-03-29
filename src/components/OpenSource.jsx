@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 export const OpenSource = () => (
-  <section className="py-12 bg-dark1 w-full">
+  <section className="py-12 xl:pt-0 bg-dark1 w-full">
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

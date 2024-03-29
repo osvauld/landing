@@ -35,7 +35,7 @@ export const TextGenerateEffect = ({ words, className }) => {
   return (
     <div className={cn("", className)}>
       <div className="">
-        <div className="xl:tracking-[-0.2rem] tracking-wide xl:font-normal">
+        <div className="xl:tracking-[-0.1rem] tracking-wide xl:font-normal">
           {renderWords()}
         </div>
       </div>
