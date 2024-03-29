@@ -16,7 +16,7 @@ export const JoinUs = () => (
           <h2 className="text-4xl font-Jakartha text-center  text-blue1 font-light xl:tracking-[-0.15rem] mt-6">
             Any questions or feedbacks?
           </h2>
-          <p className="text-center  text-base lg:text-xl max-w-full lg:max-w-[80%] xl:my-6 font-extralight lg:tracking-[-0.02rem] ">
+          <p className="text-center  text-base lg:text-xl max-w-full lg:max-w-[80%] my-6 font-extralight lg:tracking-[-0.02rem] ">
             Get access to our updates, contribute to our <br /> roadmap and
             converse with us!
           </p>
