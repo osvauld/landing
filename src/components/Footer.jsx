@@ -12,13 +12,13 @@ export const Footer = () => {
           <div className=" w-full lg:w-[95vw] flex flex-col lg:flex-row justify-start items-center">
             <div className="w-full lg:w-1/2 flex justify-start items-center lg:justify-center xl:justify-start mb-10 lg:mb-0">
               <div className=" w-full flex flex-col gap-4 font-light mb-6">
-                <a href="https://discord.gg/u43atWCS">
-                  <button className="flex bg-blue1 text-dark1 justify-center items-center px-3 py-1.5 rounded whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
+                <a href="https://getwaitlist.com/waitlist/14960">
+                  <button className="flex bg-blue1 text-dark1  cursor-pointer justify-center items-center px-3 py-1.5 rounded whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
                     <span className="ml-2 font-normal">Join waitlist</span>
                   </button>
                 </a>
-                <a href="https://github.com/osvauld/web-client">
-                  <button className="flex border border-blue1 rounded text-white1 justify-center items-center px-3 py-1.5 whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
+                <a href="https://cal.com/abrahamgeorge/30min">
+                  <button className="flex border border-blue1 cursor-pointer rounded text-white1 justify-center items-center px-3 py-1.5 whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
                     <span className="ml-2">Book a demo</span>
                   </button>
                 </a>

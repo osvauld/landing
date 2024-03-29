@@ -18,17 +18,24 @@ export const Hero = React.memo(() => {
       className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[18vw] lg:mb-[10vw] xl:mb-[10vw] 2xl:mb-60 hero-bg-gradient pb-10  md:pb-44 lg:pb-0"
       id="home"
     >
-      <div className="w-full h-[60px] bg-[#111926] text-dark mt-24 flex justify-start items-center ">
-        <div className="pl-[8.5vw] text-blue1 tracking-wide font-normal font-Inter">
-          We are rolling out our private Beta. &ensp;
-          <a
-            href="https://getwaitlist.com/waitlist/14960"
-            className="text-white2 underline underline-offset-4 decoration-from-font"
-          >
-            Join waitlist now!
-          </a>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="w-full"
+      >
+        <div className="w-full h-[60px] bg-[#111926] text-dark mt-24 flex justify-start items-center ">
+          <div className="pl-[8.5vw] text-blue1 tracking-wide text-sm xl:text-base font-normal font-Inter">
+            We are rolling out our private Beta.{" "}
+            <a
+              href="https://getwaitlist.com/waitlist/14960"
+              className="text-white2 underline underline-offset-4 decoration-from-font"
+            >
+              Join waitlist now!
+            </a>
+          </div>
         </div>
-      </div>
+      </motion.div>
       <div className="w-[95%] md:w-[800px] xl:w-[1200px] mt-[-5.625rem] flex flex-col justify-center items-start pt-16 xl:pt-10 md:pt-16 lg:pt-20 text-left ">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
