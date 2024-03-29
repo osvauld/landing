@@ -3,7 +3,7 @@ import { DiscordIcon } from "../assets/icons/DiscordIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
 export const JoinUs = () => (
-  <section className="relative pt-0 xl:pt-16 pb-16 bg-dark1 overflow-hidden h-[25rem]">
+  <section className="relative pt-0 xl:pt-16 pb-0 bg-dark1 overflow-hidden h-[22rem]">
     <div className="absolute -top-10" id="FAQ" />
     <motion.div
       initial={{ opacity: 0 }}
@@ -11,12 +11,12 @@ export const JoinUs = () => (
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1100px] w-11/12 mx-auto">
-        <div className="w-full h-[40vh] bg-dark2 rounded-xl text-white px-6 lg:px-12 py-8 flex flex-col justify-around items-center">
-          <h2 className="text-4xl font-Jakartha text-center  text-blue1 font-light xl:tracking-[-0.15rem] mt-6">
+      <div className="flex flex-wrap items-center 2xl:w-[1150px] xl:w-[1100px] w-11/12 mx-auto">
+        <div className="w-full h-[20rem] bg-dark2 rounded-xl text-white p-8  flex flex-col justify-center items-center">
+          <h2 className="text-3xl font-Jakartha text-center  text-blue1 font-light ">
             Any questions or feedbacks?
           </h2>
-          <p className="text-center  text-base lg:text-xl max-w-full lg:max-w-[80%] my-6 font-extralight lg:tracking-[-0.02rem] ">
+          <p className="text-center  text-sm lg:text-xl max-w-full lg:max-w-[80%] my-6 font-extralight lg:tracking-[-0.02rem] ">
             Get access to our updates, contribute to our <br /> roadmap and
             converse with us!
           </p>

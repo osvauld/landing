@@ -15,7 +15,7 @@ export const Hero = React.memo(() => {
   }, []);
   return (
     <section
-      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[18vw] lg:mb-[10vw] xl:mb-[10vw] 2xl:mb-60 hero-bg-gradient pb-10  md:pb-44 lg:pb-0"
+      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[18vw] lg:mb-[10vw] xl:mb-[10vw] 2xl:mb-0 hero-bg-gradient pb-10  md:pb-44 lg:pb-0"
       id="home"
     >
       <motion.div
@@ -24,8 +24,8 @@ export const Hero = React.memo(() => {
         transition={{ duration: 0.5 }}
         className="w-full"
       >
-        <div className="w-full h-[60px] bg-[#111926] text-dark mt-24 flex justify-start items-center ">
-          <div className="pl-[8.5vw] text-blue1 tracking-wide text-sm xl:text-base font-normal font-Inter">
+        <div className="w-full h-[40px] xl:h-[60px] bg-[#111926] text-dark mt-24 flex justify-start items-center ">
+          <div className="pl-[5vw] xl:pl-[8.5vw] 2xl:pl-[300px] text-blue1 tracking-wide text-xs xl:text-base font-normal font-Inter">
             We are rolling out our private Beta.{" "}
             <a
               href="https://getwaitlist.com/waitlist/14960"
