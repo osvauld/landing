@@ -24,8 +24,8 @@ export const Hero = React.memo(() => {
         transition={{ duration: 0.5 }}
         className="w-full"
       >
-        <div className="w-full h-[40px] xl:h-[60px] bg-[#111926] text-dark mt-24 flex justify-start items-center ">
-          <div className="pl-[5vw] xl:pl-[8.5vw] 2xl:pl-[300px] text-blue1 tracking-wide text-xs xl:text-base font-normal font-Inter">
+        <div className="w-full h-[40px] xl:h-[60px] bg-[#111926] text-dark mt-24 flex justify-center items-center ">
+          <div className="md:w-[800px] xl:w-[1200px]  text-blue1 tracking-wide text-xs xl:text-base font-normal font-Inter">
             We are rolling out our private Beta.{" "}
             <a
               href="https://getwaitlist.com/waitlist/14960"
