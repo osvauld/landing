@@ -28,10 +28,20 @@ export const OpenSource = () => (
           </span>
           <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4 text-blue1">
             <button className="w-full lg:w-1/4 border border-blue1 hover:bg-blue1 hover:text-dark1 rounded-md px-3 py-1.5">
-              <a href="https://github.com/osvauld">Become a Contributor</a>
+              <a
+                href="https://github.com/osvauld"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Become a Contributor
+              </a>
             </button>
             <button className="w-full lg:w-1/4 border border-blue1 hover:bg-blue1 hover:text-dark1  rounded-md px-3 py-1.5">
-              <a href="https://www.buymeacoffee.com/osvauld">
+              <a
+                href="https://www.buymeacoffee.com/osvauld"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Become a Sponsor
               </a>
             </button>

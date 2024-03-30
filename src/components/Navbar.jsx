@@ -47,7 +47,7 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
           className="xl:ml-auto xl:mr-4"
         >
-          <div className="hidden lg:flex h-full gap-6 xl:mx-4">
+          <div className="hidden lg:flex h-full gap-6 xl:mx-4  py-2 cursor-pointer">
             {navbarLinks.map(({ href, label, ariaLabel }, index) => (
               <React.Fragment key={label}>
                 <a
@@ -71,7 +71,7 @@ export const Navbar = () => {
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className="text-dark1
-            bg-blue1 cursor-pointer rounded-lg px-3 py-1.5 text-sm whitespace-nowrap  flex"
+            bg-blue1 rounded-lg px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 aria-label="get started"
@@ -120,6 +120,7 @@ export const Navbar = () => {
            bg-blue1 cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap"
                 href="https://github.com/osvauld"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <GithubIcon color={"black"} />
                 <span className="ml-2">Contribute</span>

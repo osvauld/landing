@@ -12,12 +12,20 @@ export const Footer = () => {
           <div className=" w-full lg:w-[95vw] flex flex-col lg:flex-row justify-start items-center">
             <div className="w-full lg:w-1/2 flex justify-start items-center lg:justify-center xl:justify-start lg:mb-0">
               <div className=" w-full flex flex-col gap-4 font-light mb-6">
-                <a href="https://getwaitlist.com/waitlist/14960">
+                <a
+                  href="https://getwaitlist.com/waitlist/14960"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="flex bg-blue1 text-dark1  cursor-pointer justify-center items-center px-3 py-1.5 rounded whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
                     <span className="ml-2 font-normal">Join waitlist</span>
                   </button>
                 </a>
-                <a href="https://cal.com/abrahamgeorge/30min">
+                <a
+                  href="https://cal.com/abrahamgeorge/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="flex border border-blue1 cursor-pointer rounded text-white1 justify-center items-center px-3 py-1.5 whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
                     <span className="ml-2">Book a demo</span>
                   </button>
@@ -173,36 +181,55 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col xl:flex-row justify-between items-center w-[95%] ">
-            <div className="flex gap-10 xl:gap-14 ">
-              <a href="https://linktr.ee/osvauld" aria-label="Linktree Icon">
+          <div className="flex flex-col xl:flex-row justify-between items-center w-[95%] xl:mt-6 ">
+            <div className="w-[95%] xl:w-[55%] flex justify-between items-center text-white4 text-xs xl:mt-0">
+              <div className="">
+                <span className="mr-6">Terms of use</span>
+                <a href="/privacy">Privacy Policy</a>
+              </div>
+              <span className="whitespace-nowrap">osvauld © 2024 </span>
+            </div>
+            <div className="flex gap-10 my-4 xl:my-0">
+              <a
+                href="https://linktr.ee/osvauld"
+                aria-label="Linktree Icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <LinktreeIcon color={"#A6B0BB"} />
               </a>
-              <a href="https://github.com/osvauld" aria-label="Github Icon">
+              <a
+                href="https://github.com/osvauld"
+                aria-label="Github Icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GithubIcon color={"#A6B0BB"} />
               </a>
-              <a href="https://discord.gg/u43atWCS" aria-label="Discord Icon">
+              <a
+                href="https://discord.gg/u43atWCS"
+                aria-label="Discord Icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <DiscordIcon color={"#A6B0BB"} />
               </a>
               <a
                 href="https://www.linkedin.com/company/osvauld"
                 aria-label="LinkdinIcon"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <LinkdinIcon color={"#A6B0BB"} />
               </a>
               <a
                 href="https://www.instagram.com/osvauld/"
                 aria-label="Instagram Icon"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <InstagramIcon color={"#A6B0BB"} />
               </a>
-            </div>
-            <div className="w-[95%] xl:w-1/3 flex justify-between items-center text-white4 text-xs my-4 xl:mt-0">
-              <div className="">
-                <span className="mr-6">Terms of use</span>
-                <a href="/privacy">Privacy Policy</a>
-              </div>
-              <span className="whitespace-nowrap">osvauld © 2024 </span>
             </div>
           </div>
         </div>

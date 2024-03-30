@@ -24,10 +24,12 @@ export const Hero = React.memo(() => {
         transition={{ duration: 0.5 }}
         className="w-full"
       >
-        <div className="w-full h-[40px] xl:h-[60px] bg-[#111926] text-dark mt-24 flex justify-center items-center ">
+        <div className="w-full h-[40px] xl:h-[60px] bg-[#111926] text-dark mt-24 flex justify-start lg:justify-center pl-4 xl:pl-0 items-center ">
           <div className="md:w-[800px] xl:w-[1200px]  text-blue1 tracking-wide text-xs xl:text-base font-normal font-Inter">
             We are rolling out our private Beta.{" "}
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://getwaitlist.com/waitlist/14960"
               className="text-white2 underline underline-offset-4 decoration-from-font"
             >
@@ -43,11 +45,11 @@ export const Hero = React.memo(() => {
           transition={{ duration: 0.5 }}
         >
           <div className="text-blue1 h-8 text-sm sm:text-base w-full mb-6 sm:mt-32 mt-16 font-bold">
-            <button
+            <a
               className="flex w-full justify-center items-center font-normal text-sm rounded-lg bg-blue2 h-full px-4 py-2 cursor-pointer"
-              onClick={() => {
-                location.assign("https://github.com/osvauld/web-client");
-              }}
+              href="https://github.com/osvauld/web-client"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="whitespace-nowrap">We are open-source</span>
               <span className="h-full border-r-[1px] border-white4 mx-2"></span>
@@ -60,7 +62,7 @@ export const Hero = React.memo(() => {
                   <BottomArrow color={"#A6B0BB"} />
                 </span>
               </span>
-            </button>
+            </a>
           </div>
         </motion.div>
         <motion.div
@@ -84,10 +86,11 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-white1 font-light text-sm sm:text-base lg:max-w-[80%] lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[55vw] mt-10 xl:mt-6 mb-4 text-left">
+          <div className="text-white1 font-light text-sm sm:text-base max-w-full lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[55vw] mt-10 xl:mt-6 mb-4 text-left ">
             Open source solution built for collaboration to share all your{" "}
             <span className="text-blue1">
-              sensitive account <br /> passwords or any other credentials.
+              sensitive account <br className="hidden xl:inline" /> passwords or
+              any other credentials.
             </span>{" "}
             No more scrounging over Slack or Google Sheets.
           </div>
@@ -103,11 +106,19 @@ export const Hero = React.memo(() => {
               className="bg-blue1 rounded-lg flex justify-center items-center text-black font-normal px-3 !py-1.5 sm:mr-4 xl:mr-0 lg:mr-6 mb-2 sm:mb-0 whitespace-nowrap"
               onClick={() => setIsModalOpen(true)}
             >
-              <a href="https://getwaitlist.com/waitlist/14960">Join waitlist</a>
+              <a
+                href="https://getwaitlist.com/waitlist/14960"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join waitlist
+              </a>
             </div>
             <a
               className=" rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3"
               href="https://cal.com/abrahamgeorge/30min"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Book a demo
             </a>
