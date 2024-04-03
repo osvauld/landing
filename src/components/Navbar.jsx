@@ -7,7 +7,7 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 const navbarLinks = [
   {
     label: "Documentation",
-    href: "https://docs.osvauld.com",
+    href: "https://docs.osvauld.com/introduction/overview/",
     ariaLabel: "Documentation",
   },
 ];

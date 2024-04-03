@@ -39,6 +39,7 @@ module.exports = {
         xl: "1280px",
         xll: "1400px",
         "2xl": "1536px",
+        "3xl": "1600px",
       },
       boxShadow: {
         glass:

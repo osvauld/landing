@@ -181,7 +181,7 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col xl:flex-row justify-between items-center w-[95%] xl:mt-6 ">
+          <div className="flex flex-col xl:flex-row justify-between items-center w-full xl:mt-6 ">
             <div className="w-[95%] xl:w-[55%] flex justify-between items-center text-white4 text-xs xl:mt-0">
               <div className="">
                 <span className="mr-6">Terms of use</span>
@@ -189,7 +189,7 @@ export const Footer = () => {
               </div>
               <span className="whitespace-nowrap">osvauld © 2024 </span>
             </div>
-            <div className="flex gap-10 my-4 xl:my-0">
+            <div className="flex gap-16 lg:gap-10 my-4 xl:my-0">
               <a
                 href="https://linktr.ee/osvauld"
                 aria-label="Linktree Icon"
