@@ -5,7 +5,7 @@ import { SvelteLogo } from "../assets/logos/SvelteLogo";
 import { GolangLogo } from "../assets/logos/GolangLogo";
 
 export const TechStack = () => (
-  <div className=" 2xl:w-[1150px] xl:w-[1050px] lg:w-[980px]  md:w-4/5 flex justify-center bg-dark1  mx-auto 3xl:mt-24 ">
+  <div className=" 2xl:w-[1400px] xl:w-[1200px] md:w-[800px]  flex justify-center bg-dark1  mx-auto 3xl:mt-24 ">
     <div className="w-full h-[15vh] grid grid-cols-2 gap-4 sm:grid-cols-5 sm:gap-0">
       <span className="flex justify-center items-center">
         <SvelteLogo />
