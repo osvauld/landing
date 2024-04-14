@@ -122,6 +122,28 @@ export interface Props {
         scroll-behavior: smooth;
         box-sizing: border-box;
       }
+
+      html::-webkit-scrollbar {
+        width: 4px;
+        height: 130px;
+      }
+
+      html::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      html::-webkit-scrollbar-thumb {
+        background-color: #2f303e;
+        border-radius: 4px;
+      }
+
+      .active.html::-webkit-scrollbar-thumb {
+        background-color: #2f303e; /* color of the thumb */
+      }
+
+      html::-webkit-scrollbar-thumb:hover {
+        background-color: #2f303e; /* color of the thumb on hover */
+      }
     </style>
   </body>
 </html>
