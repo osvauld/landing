@@ -71,7 +71,7 @@ export const Navbar = () => {
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className="text-dark1
-            bg-blue1 rounded-lg px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
+            bg-blue1 rounded-md px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 aria-label="get started"

@@ -6,6 +6,8 @@ import dashboard from "../assets/images/dashboard.jpeg";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { Redirect } from "../assets/icons/Redirect";
+import { PlayButton } from "../assets/icons/PlayButton";
 
 export const Hero = React.memo(() => {
   useEffect(() => {
@@ -46,13 +48,13 @@ export const Hero = React.memo(() => {
         >
           <div className="text-blue1 h-8 text-sm sm:text-base w-full mb-6 sm:mt-32 mt-16 font-bold">
             <a
-              className="flex w-full justify-center items-center font-normal text-sm rounded-lg bg-blue2 h-full px-4 py-2 cursor-pointer"
+              className="flex w-full justify-center items-center font-normal text-sm rounded-md bg-blue2 h-full px-4 py-2 cursor-pointer"
               href="https://github.com/osvauld/web-client"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="whitespace-nowrap">We are open-source</span>
-              <span className="h-full border-r-[1px] border-white4 mx-2"></span>
+              <span className="h-full border-r-[1px] border-[#1C2A40] mx-2"></span>
               <span className="flex text-white4 justify-center items-center whitespace-nowrap">
                 <span className="mr-2 flex justify-center items-center">
                   <GithubIcon color={"#A6B0BB"} />
@@ -88,11 +90,9 @@ export const Hero = React.memo(() => {
         >
           <div className="text-white1 font-light text-sm sm:text-base max-w-full lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[55vw] mt-10 xl:mt-6 mb-4 text-left ">
             Open source solution built for collaboration to share all your{" "}
-            <span className="text-blue1">
-              sensitive account <br className="hidden xl:inline" /> passwords or
-              any other credentials.
-            </span>{" "}
-            No more scrounging over Slack or Google Sheets.
+            sensitive account <br className="hidden xl:inline" /> passwords or
+            any other credentials. No more scrounging over Slack or Google
+            Sheets.
           </div>
         </motion.div>
         <motion.div
@@ -101,27 +101,30 @@ export const Hero = React.memo(() => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="w-full"
         >
-          <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 mb-24 md:my-10 lg:my-4 xl:my-2 ">
-            <div
-              className="bg-blue1 rounded-lg flex justify-center items-center text-black font-normal px-3 !py-1.5 sm:mr-4 xl:mr-0 lg:mr-6 mb-2 sm:mb-0 whitespace-nowrap"
-              onClick={() => setIsModalOpen(true)}
-            >
-              <a
-                href="https://getwaitlist.com/waitlist/14960"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Join waitlist
-              </a>
-            </div>
+          <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 mb-24 md:my-10 lg:my-4 xl:my-2 text-sm">
             <a
-              className=" rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3"
-              href="https://cal.com/abrahamgeorge/30min"
+              className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
+              href="https://youtu.be/1esLbYmdHQY"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book a demo
+              <PlayButton />
+              <span className="ml-1"> Watch Demo</span>
             </a>
+            <div
+              className="bg-blue1 rounded-md flex justify-center items-center text-black font-normal px-3 py-2 sm:mr-4 xl:mr-0 lg:mr-6 mb-2 sm:mb-0 whitespace-nowrap"
+              onClick={() => setIsModalOpen(true)}
+            >
+              <a
+                href="https://chromewebstore.google.com/detail/osvauld/jjlmehbdndojkfglfimhldnbpdhjphfi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-around items-center"
+              >
+                <Redirect color={"black"} />
+                <span className="ml-1">Download osvauld</span>
+              </a>
+            </div>
           </div>
         </motion.div>
         <motion.div

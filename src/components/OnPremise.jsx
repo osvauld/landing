@@ -24,7 +24,7 @@ export const OnPremise = () => {
                 <h3 className="text-xl lg:text-3xl font-Jakartha font-light xl:tracking-[-0.1rem] text-blue1 ">
                   On-Premise Solution
                 </h3>
-                <p className="text-lg font-extralight text-white1 pt-4 lg:pt-10">
+                <p className="text-lg font-extralight text-white1 pt-4 lg:pt-7">
                   Minimize the risk of external threats by limiting exposure to
                   public networks and potential vulnerabilities associated with
                   shared cloud environments, ensuring compliance with internal
@@ -35,7 +35,7 @@ export const OnPremise = () => {
                 <h3 className="text-xl lg:text-3xl font-Jakartha font-light xl:tracking-[-0.1rem] text-blue1 ">
                   Easy Deployment{" "}
                 </h3>
-                <p className="text-lg font-extralight text-white1 pt-4 lg:pt-10">
+                <p className="text-lg font-extralight text-white1 pt-4 lg:pt-7">
                   Pre-Built Deployment Scripts are designed to simplify the
                   installation process, tailored to integrate seamlessly with
                   your organization's existing and trusted infrastructure,
