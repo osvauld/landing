@@ -8,7 +8,7 @@ import { Redirect } from "../assets/icons/Redirect";
 import { Copy } from "../assets/icons/Copy";
 import { Eye } from "../assets/icons/Eye";
 import { EyeOff } from "../assets/icons/EyeOff";
-
+import { Tick } from "../assets/icons/Tick";
 const navbarLinks = [
   {
     label: "Documentation",
@@ -28,6 +28,22 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [trialModal, setTrialModal] = useState(false);
   const [fetchCreds, setfetchCreds] = useState(false);
+  const [copiedIndex, setCopiedIndex] = useState(null);
+
+  const copyToClipboard = async (text, index) => {
+    console.log("Triggering copy to clipboard", text, index);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedIndex(index);
+      setTimeout(() => {
+        setCopiedIndex(() => {
+          return null;
+        });
+      }, 2000);
+    } catch (error) {
+      console.error("Failed to copy:", error);
+    }
+  };
 
   return (
     <nav className="w-full h-20 xl:h-24 flex flex-col justify-center items-center fixed  z-40 backdrop-blur-xl ">
@@ -87,7 +103,7 @@ export const Navbar = () => {
                       fetchCreds ? "h-[31.8rem]" : "h-[17.2rem]"
                     } w-[26.25rem] bg-dark2 border border-trialBorder text-trialText flex flex-col justify-start items-center gap-6 p-4 rounded-2xl`}
                   >
-                    <div className="flex justify-between items-center w-full ">
+                    <div className="flex justify-between items-center w-full mt-3">
                       <span className="text-xl font-medium">
                         You are invited to try osvauld
                       </span>
@@ -122,24 +138,40 @@ export const Navbar = () => {
                       </div>
                     </div>
                     {fetchCreds && (
-                      <div className="w-full flex flex-col gap-3 ">
-                        <div className="w-[90%] flex flex-col justify-center items-start ">
+                      <div
+                        className="w-full flex flex-col gap-3 "
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText  ">
                           <span>Base URL</span>
-                          <div className="flex justify-between items-center bg-trialField text-trialFieldText rounded-md text-sm w-full px-2 py-1.5 mt-1">
+                          <div className="flex justify-between items-center bg-trialField rounded-md text-sm w-full px-2 py-1.5 mt-1">
                             <span>https://demo.osvauld.com</span>
-                            <Copy />
+                            <button
+                              onClick={async () =>
+                                await copyToClipboard(
+                                  "https://demo.osvauld.com",
+                                  0
+                                )
+                              }
+                            >
+                              {copiedIndex !== null && copiedIndex === 0 ? (
+                                <Tick />
+                              ) : (
+                                <Copy />
+                              )}
+                            </button>
                           </div>
                         </div>
-                        <div className="w-[90%] flex flex-col justify-center items-start ">
+                        <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText ">
                           <span>Username</span>
-                          <div className="flex justify-between items-center bg-trialField text-trialFieldText rounded-md text-sm w-full px-2 py-1.5 mt-1">
+                          <div className="flex justify-between items-center bg-trialField rounded-md text-sm w-full px-2 py-1.5 mt-1">
                             <span>tonyantony300</span>
                             <Copy />
                           </div>
                         </div>
-                        <div className="w-[90%] flex flex-col justify-center items-start ">
+                        <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText">
                           <span>Password</span>
-                          <div className="flex justify-between items-center bg-trialField text-trialFieldText rounded-md text-sm w-full px-2 py-1.5 mt-1">
+                          <div className="flex justify-between items-center bg-trialField  rounded-md text-sm w-full px-2 py-1.5 mt-1">
                             <span>test@1234</span>
                             <span className="flex justify-center items-center gap-2">
                               <Eye />
