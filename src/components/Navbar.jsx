@@ -173,7 +173,7 @@ export const Navbar = () => {
                               await copyToClipboard(username, 1);
                             }}
                           >
-                            <span id="username">tonyantony300</span>
+                            <span id="username">TrialUser1</span>
                             {copiedIndex !== null && copiedIndex === 1 ? (
                               <Tick />
                             ) : (
