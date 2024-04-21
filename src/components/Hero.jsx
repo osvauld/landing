@@ -112,7 +112,7 @@ export const Hero = React.memo(() => {
               <span className="ml-1"> Watch Demo</span>
             </a>
             <div
-              className="bg-blue1 rounded-md flex justify-center items-center text-black font-normal px-3 py-2 sm:mr-4 xl:mr-0 lg:mr-6 mb-2 sm:mb-0 whitespace-nowrap"
+              className="bg-blue1 rounded-md flex justify-center items-center text-black font-normal px-3 py-2 sm:mr-4 xl:mr-0 lg:mr-6 sm:mb-0 whitespace-nowrap"
               onClick={() => setIsModalOpen(true)}
             >
               <a
