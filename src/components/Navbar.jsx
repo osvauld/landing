@@ -29,9 +29,9 @@ export const Navbar = () => {
   const [trialModal, setTrialModal] = useState(false);
   const [fetchCreds, setfetchCreds] = useState(false);
   const [copiedIndex, setCopiedIndex] = useState(null);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const copyToClipboard = async (text, index) => {
-    console.log("Triggering copy to clipboard", text, index);
     try {
       await navigator.clipboard.writeText(text);
       setCopiedIndex(index);
@@ -39,7 +39,7 @@ export const Navbar = () => {
         setCopiedIndex(() => {
           return null;
         });
-      }, 2000);
+      }, 1500);
     } catch (error) {
       console.error("Failed to copy:", error);
     }
@@ -101,9 +101,9 @@ export const Navbar = () => {
                   <div
                     className={`absolute top-[140%] right-0 ${
                       fetchCreds ? "h-[31.8rem]" : "h-[17.2rem]"
-                    } w-[26.25rem] bg-dark2 border border-trialBorder text-trialText flex flex-col justify-start items-center gap-6 p-4 rounded-2xl`}
+                    } w-[28.25rem] bg-dark2 border border-trialBorder text-trialText flex flex-col justify-start items-center gap-6 p-4 pl-9 rounded-2xl`}
                   >
-                    <div className="flex justify-between items-center w-full mt-3">
+                    <div className="flex justify-between items-center w-full mt-3 pr-6">
                       <span className="text-xl font-medium">
                         You are invited to try osvauld
                       </span>
@@ -132,6 +132,7 @@ export const Navbar = () => {
                         <button
                           className="flex justify-center items-center border border-trialBorder rounded-md px-3 py-2 text-base"
                           onClick={() => setfetchCreds(true)}
+                          disabled={fetchCreds}
                         >
                           <span>Generate temporary credentials </span>
                         </button>
@@ -164,18 +165,53 @@ export const Navbar = () => {
                         </div>
                         <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText ">
                           <span>Username</span>
-                          <div className="flex justify-between items-center bg-trialField rounded-md text-sm w-full px-2 py-1.5 mt-1">
-                            <span>tonyantony300</span>
-                            <Copy />
+                          <div
+                            className="flex justify-between items-center bg-trialField rounded-md text-sm w-full px-2 py-1.5 mt-1"
+                            onClick={async () => {
+                              const username =
+                                document.getElementById("username").textContent;
+                              await copyToClipboard(username, 1);
+                            }}
+                          >
+                            <span id="username">tonyantony300</span>
+                            {copiedIndex !== null && copiedIndex === 1 ? (
+                              <Tick />
+                            ) : (
+                              <Copy />
+                            )}
                           </div>
                         </div>
                         <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText">
                           <span>Password</span>
                           <div className="flex justify-between items-center bg-trialField  rounded-md text-sm w-full px-2 py-1.5 mt-1">
-                            <span>test@1234</span>
+                            <input
+                              id="password"
+                              type={isPasswordVisible ? "text" : "password"}
+                              defaultValue="test@1234"
+                              className="bg-transparent w-full"
+                              disabled
+                            />
                             <span className="flex justify-center items-center gap-2">
-                              <Eye />
-                              <Copy />
+                              <button
+                                onClick={() => {
+                                  setIsPasswordVisible(!isPasswordVisible);
+                                }}
+                              >
+                                {isPasswordVisible ? <EyeOff /> : <Eye />}
+                              </button>
+                              {copiedIndex !== null && copiedIndex === 2 ? (
+                                <Tick />
+                              ) : (
+                                <button
+                                  onClick={async () => {
+                                    const password =
+                                      document.getElementById("password").value;
+                                    await copyToClipboard(password, 2);
+                                  }}
+                                >
+                                  <Copy />
+                                </button>
+                              )}
                             </span>
                           </div>
                         </div>
