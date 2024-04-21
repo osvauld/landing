@@ -15,7 +15,7 @@ export const Hero = React.memo(() => {
   }, []);
   return (
     <section
-      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[18vw] lg:mb-[10vw] xl:mb-[10vw] hero-bg-gradient pb-10  lg:pb-0"
+      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[15vw] lg:mb-[6vw] xl:mb-[5vw] hero-bg-gradient pb-10  lg:pb-0"
       id="home"
     >
       <motion.div

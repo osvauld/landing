@@ -184,10 +184,14 @@ export const Footer = () => {
           <div className="flex flex-col xl:flex-row justify-between items-center w-full xl:mt-6 ">
             <div className="w-[95%] xl:w-[55%] flex justify-between items-center text-white4 text-xs xl:mt-0">
               <div className="">
-                <span className="mr-6">Terms of use</span>
+                <a className="mr-6" href="/terms">
+                  Terms and Conditions
+                </a>
                 <a href="/privacy">Privacy Policy</a>
               </div>
-              <span className="whitespace-nowrap">osvauld © 2024 </span>
+              <span className="whitespace-nowrap">
+                ©2024 osvauld. All rights reserved.
+              </span>
             </div>
             <div className="flex gap-16 lg:gap-10 my-4 xl:my-0">
               <a
