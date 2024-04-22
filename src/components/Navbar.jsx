@@ -92,7 +92,7 @@ export const Navbar = () => {
         >
           <div className="flex justify-center items-center gap-4">
             <div className="grow basis-0 justify-end hidden lg:flex">
-              <span
+              {/* <span
                 className="rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-1.5 text-sm border border-blue1 relative"
                 onClick={() => setTrialModal(!trialModal)}
               >
@@ -227,7 +227,7 @@ export const Navbar = () => {
                     </div>
                   </div>
                 )}
-              </span>
+              </span> */}
             </div>
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
