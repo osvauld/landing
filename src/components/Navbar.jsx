@@ -3,7 +3,12 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { GithubIcon } from "../assets/icons/GithubIcon";
-
+import { CloseIcon } from "../assets/icons/CloseIcon";
+import { Redirect } from "../assets/icons/Redirect";
+import { Copy } from "../assets/icons/Copy";
+import { Eye } from "../assets/icons/Eye";
+import { EyeOff } from "../assets/icons/EyeOff";
+import { Tick } from "../assets/icons/Tick";
 const navbarLinks = [
   {
     label: "Documentation",
@@ -21,6 +26,24 @@ const scrollToTop = () => {
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [trialModal, setTrialModal] = useState(false);
+  const [fetchCreds, setfetchCreds] = useState(false);
+  const [copiedIndex, setCopiedIndex] = useState(null);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
+  const copyToClipboard = async (text, index) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedIndex(index);
+      setTimeout(() => {
+        setCopiedIndex(() => {
+          return null;
+        });
+      }, 1500);
+    } catch (error) {
+      console.error("Failed to copy:", error);
+    }
+  };
 
   return (
     <nav className="w-full h-20 xl:h-24 flex flex-col justify-center items-center fixed  z-40 backdrop-blur-xl ">
@@ -67,11 +90,149 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className="flex justify-center items-center gap-2">
+          <div className="flex justify-center items-center gap-4">
+            <div className="grow basis-0 justify-end hidden lg:flex">
+              {/* <span
+                className="rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-1.5 text-sm border border-blue1 relative"
+                onClick={() => setTrialModal(!trialModal)}
+              >
+                Try now
+                {trialModal && (
+                  <div
+                    className={`absolute top-[140%] right-0 ${
+                      fetchCreds ? "h-[31.8rem]" : "h-[17.2rem]"
+                    } w-[28.25rem] bg-dark2 border border-trialBorder text-trialText flex flex-col justify-start items-center gap-6 p-4 pl-9 rounded-2xl`}
+                  >
+                    <div className="flex justify-between items-center w-full mt-3 pr-6">
+                      <span className="text-xl font-medium">
+                        You are invited to try osvauld
+                      </span>
+                      <CloseIcon />
+                    </div>
+                    <div
+                      className="w-full flex flex-col gap-4 justify-center items-center"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <div className="w-full flex justify-start gap-6 items-center">
+                        <span className="text-base text-white1">Step 1:</span>
+                        <a
+                          href="https://chromewebstore.google.com/detail/osvauld/jjlmehbdndojkfglfimhldnbpdhjphfi"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex justify-around items-center text-blue1 text-base"
+                        >
+                          <span className="mr-1">
+                            Download osvauld browser extension{" "}
+                          </span>
+                          <Redirect color={"#89B4FA"} />
+                        </a>
+                      </div>
+                      <div className="w-full flex justify-start gap-6 items-center">
+                        <span className="text-base text-white1">Step 2:</span>
+                        <button
+                          className="flex justify-center items-center border border-trialBorder rounded-md px-3 py-2 text-base"
+                          onClick={() => setfetchCreds(true)}
+                          disabled={fetchCreds}
+                        >
+                          <span>Generate temporary credentials </span>
+                        </button>
+                      </div>
+                    </div>
+                    {fetchCreds && (
+                      <div
+                        className="w-full flex flex-col gap-3 "
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText  ">
+                          <span>Base URL</span>
+                          <div className="flex justify-between items-center bg-trialField rounded-md text-sm w-full px-2 py-1.5 mt-1">
+                            <span>https://demo.osvauld.com</span>
+                            <button
+                              onClick={async () =>
+                                await copyToClipboard(
+                                  "https://demo.osvauld.com",
+                                  0
+                                )
+                              }
+                            >
+                              {copiedIndex !== null && copiedIndex === 0 ? (
+                                <Tick />
+                              ) : (
+                                <Copy />
+                              )}
+                            </button>
+                          </div>
+                        </div>
+                        <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText ">
+                          <span>Username</span>
+                          <div
+                            className="flex justify-between items-center bg-trialField rounded-md text-sm w-full px-2 py-1.5 mt-1"
+                            onClick={async () => {
+                              const username =
+                                document.getElementById("username").textContent;
+                              await copyToClipboard(username, 1);
+                            }}
+                          >
+                            <span id="username">TrialUser1</span>
+                            {copiedIndex !== null && copiedIndex === 1 ? (
+                              <Tick />
+                            ) : (
+                              <Copy />
+                            )}
+                          </div>
+                        </div>
+                        <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText">
+                          <span>Password</span>
+                          <div className="flex justify-between items-center bg-trialField  rounded-md text-sm w-full px-2 py-1.5 mt-1">
+                            <input
+                              id="password"
+                              type={isPasswordVisible ? "text" : "password"}
+                              defaultValue="test@1234"
+                              className="bg-transparent w-full"
+                              disabled
+                            />
+                            <span className="flex justify-center items-center gap-2">
+                              <button
+                                onClick={() => {
+                                  setIsPasswordVisible(!isPasswordVisible);
+                                }}
+                              >
+                                {isPasswordVisible ? <EyeOff /> : <Eye />}
+                              </button>
+                              {copiedIndex !== null && copiedIndex === 2 ? (
+                                <Tick />
+                              ) : (
+                                <button
+                                  onClick={async () => {
+                                    const password =
+                                      document.getElementById("password").value;
+                                    await copyToClipboard(password, 2);
+                                  }}
+                                >
+                                  <Copy />
+                                </button>
+                              )}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    <div className="w-full">
+                      <span className="w-full text-sm">
+                        Disclaimer : This is a shared trial environment to
+                        experience <br /> osvauld. Please refrain from sharing
+                        original credentials. <br />
+                        We are not liable for any damages caused.
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </span> */}
+            </div>
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className="text-dark1
-            bg-blue1 rounded-lg px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
+            bg-blue1 rounded-md px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 aria-label="get started"
@@ -116,7 +277,7 @@ export const Navbar = () => {
                 </a>
               ))}
               <a
-                className="text-dark1 custom-border-gray rounded-lg
+                className="text-dark1 custom-border-gray rounded-md
            bg-blue1 cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap"
                 href="https://github.com/osvauld"
                 target="_blank"

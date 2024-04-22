@@ -26,6 +26,10 @@ module.exports = {
         white4: "#A6B0BB",
         blue1: "#89B4FA",
         blue2: "#111926",
+        trialText: "#A3A4B5",
+        trialBorder: "#2F303E",
+        trialField: "#191D22",
+        trialFieldText: "#85889C",
       },
       fontFamily: {
         Inter: "Inter",

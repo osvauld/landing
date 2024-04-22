@@ -181,15 +181,21 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col xl:flex-row justify-between items-center w-full xl:mt-6 ">
-            <div className="w-[95%] xl:w-[55%] flex justify-between items-center text-white4 text-xs xl:mt-0">
+          <div className="flex flex-col-reverse xl:flex-row justify-center md:justify-between items-center w-full xl:mt-6 h-[50vw]  md:h-auto gap-10 md:gap-0">
+            <div className="w-[95%] xl:w-[64%] flex flex-col md:flex-row justify-between items-center text-white4 text-xs xl:mt-0 gap-6 md:gap-0">
               <div className="">
-                <span className="mr-6">Terms of use</span>
-                <a href="/privacy">Privacy Policy</a>
+                <a className="mr-6 whitespace-nowrap" href="/terms">
+                  Terms and Conditions
+                </a>
+                <a href="/privacy" className="whitespace-nowrap">
+                  Privacy Policy
+                </a>
               </div>
-              <span className="whitespace-nowrap">osvauld © 2024 </span>
+              <span className="whitespace-nowrap">
+                ©2024 osvauld. All rights reserved.
+              </span>
             </div>
-            <div className="flex gap-16 lg:gap-10 my-4 xl:my-0">
+            <div className="flex gap-12 my-4 xl:my-0">
               <a
                 href="https://linktr.ee/osvauld"
                 aria-label="Linktree Icon"
