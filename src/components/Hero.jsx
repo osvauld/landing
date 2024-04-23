@@ -30,10 +30,10 @@ export const Hero = React.memo(() => {
           <div className="md:w-[800px] xl:w-[1200px]  text-blue1 tracking-wide text-xs xl:text-base font-normal font-Inter">
             We are rolling out our private Beta.{" "}
             <a
+              className="text-white2 underline underline-offset-4 decoration-from-font cursor-pointer"
+              href="https://getwaitlist.com/waitlist/14960"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://getwaitlist.com/waitlist/14960"
-              className="text-white2 underline underline-offset-4 decoration-from-font"
             >
               Join waitlist now!
             </a>
