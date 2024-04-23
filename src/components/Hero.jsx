@@ -24,23 +24,23 @@ export const Hero = React.memo(() => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full"
+        className="w-full z-10"
       >
         <div className="w-full h-[40px] xl:h-[60px] bg-[#111926] text-dark mt-24 flex justify-start lg:justify-center pl-4 xl:pl-0 items-center ">
           <div className="md:w-[800px] xl:w-[1200px]  text-blue1 tracking-wide text-xs xl:text-base font-normal font-Inter">
             We are rolling out our private Beta.{" "}
             <a
+              className="text-white2 underline underline-offset-4 decoration-from-font cursor-pointer"
+              href="https://getwaitlist.com/waitlist/14960"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://getwaitlist.com/waitlist/14960"
-              className="text-white2 underline underline-offset-4 decoration-from-font"
             >
-              Join waitlist now!
+              Drop your contact!
             </a>
           </div>
         </div>
       </motion.div>
-      <div className="w-[95%] md:w-[800px] xl:w-[1200px] mt-[-5.625rem] flex flex-col justify-center items-start pt-16 xl:pt-10 md:pt-16 lg:pt-20 text-left ">
+      <div className="z-0 w-[95%] md:w-[800px] xl:w-[1200px] mt-[-5.625rem] flex flex-col justify-center items-start pt-16 xl:pt-10 md:pt-16 lg:pt-20 text-left ">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-wide  text-blue1 xl:font-normal px-0 font-Jakartha">
+          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-[-0.15rem]  text-blue1 xl:font-normal font-normal px-0 font-Jakartha">
             <h1>
               Share credentials <br />
               <span className="text-white1">within your team,</span>{" "}
@@ -121,8 +121,8 @@ export const Hero = React.memo(() => {
                 rel="noopener noreferrer"
                 className="flex justify-around items-center"
               >
+                <span className="mr-1">Download osvauld</span>
                 <Redirect color={"black"} />
-                <span className="ml-1">Download osvauld</span>
               </a>
             </div>
           </div>
