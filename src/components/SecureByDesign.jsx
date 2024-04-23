@@ -30,14 +30,14 @@ export const SecureByDesign = () => {
               </article>
               <article className="bg-dark2 text-left rounded-lg xl:w-[46%] min-h-[15rem]  p-6  flex flex-col justify-start items-center w-[95%]">
                 <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
-                  Zero-knowledge Architecture
+                  End-to-end Encryption
                 </h4>
                 <p className="text-base font-extralight mt-2">
-                  With end-to-end encryption, all your credentials including
-                  meta data never leaves your browser unencrypted and only you
-                  and to whom you shared can decrypt it using corresponding
-                  secret password. No one, not even osvauld can access this
-                  data.
+                  With Zero-knowledge Architecture, all your credentials
+                  including meta data never leaves your browser unencrypted and
+                  only you and to whom you shared can decrypt it using
+                  corresponding secret password. No one, not even osvauld can
+                  access this data.
                 </p>
               </article>
             </div>

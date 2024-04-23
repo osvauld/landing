@@ -39,7 +39,7 @@ export const JoinUs = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="flex border border-blue1 rounded text-white1 justify-center items-center px-3 py-1.5 whitespace-nowrap w-full xl:w-auto">
+              <button className="flex border border-blue1 rounded text-blue1 justify-center items-center px-3 py-1.5 whitespace-nowrap w-full xl:w-auto">
                 <GithubIcon color={"#89B4FA"} />
                 <span className="ml-2">Star us on Github</span>
               </button>

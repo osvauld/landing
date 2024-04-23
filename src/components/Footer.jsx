@@ -26,7 +26,7 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="flex border border-blue1 cursor-pointer rounded text-white1 justify-center items-center px-3 py-1.5 whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
+                  <button className="flex border border-blue1 cursor-pointer rounded text-blue1 justify-center items-center px-3 py-1.5 whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
                     <span className="ml-2">Book a demo</span>
                   </button>
                 </a>
