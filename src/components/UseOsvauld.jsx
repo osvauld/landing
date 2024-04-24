@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
-const firstPhrase = "More Transparency, More Control.";
+const firstPhrase = "More transparency, more control.";
 const secondPhrase = "Handle your credentials with osvauld.";
 
 export const UseOsvauld = () => {
