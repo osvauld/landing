@@ -20,7 +20,7 @@ const description =
 
 import { SEO } from "astro-seo";
 const { title } = Astro.props;
-const makeTitle = title ? title : "osvauld - password manager for teams";
+const makeTitle = title ? title : "osvauld";
 
 export interface Props {
   title: string;
@@ -76,30 +76,18 @@ export interface Props {
     <meta name="theme-color" content="#ffffff" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
-    <meta
-      property="og:title"
-      content="osvauld - open source credential manager for teams"
-    />
-    <meta
-      property="og:image"
-      content="https://raw.githubusercontent.com/osvauld/Docs/master/assets/thumbnail.jpg"
-    />
-    <meta property="og:description" content="shared credential manager" />
-    <meta property="og:url" content="https://www.osvauld.com" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="627" />
-    <meta property="og:type" content="website" />
+
     <SEO
       title={makeTitle}
       description={description}
-      canonical="https://osvauld.com"
+      canonical="https://www.osvauld.com"
       openGraph={{
         basic: {
-          url: "https://osvauld.com",
+          url: "https://www.osvauld.com",
           title: "osvauld - open source credential manager for teams",
           type: "Website",
           image:
-            "https://raw.githubusercontent.com/osvauld/landing/major/src/assets/images/dashboard.png",
+            "https://raw.githubusercontent.com/osvauld/Docs/master/assets/thumbnail.jpg",
         },
         optional: {
           description: description,
@@ -112,6 +100,20 @@ export interface Props {
         creator: "@tony_antny",
       }}
     />
+
+    <meta property="og:title" content="osvauld" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/osvauld/Docs/master/assets/thumbnail.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Meet osvauld. An open-source credential management tool intended to solve password problem teams face. Osvauld is On-premise, security-first credential manager powered by Svelte, Go and WebAssembly"
+    />
+    <meta property="og:url" content="https://www.osvauld.com" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:type" content="website" />
   </head>
 
   <body>
