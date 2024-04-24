@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import sharing from "../assets/images/osvauldsharing.jpg";
+import sharing from "../assets/images/sharing.mp4";
 const MotionDiv = lazy(() =>
   import("framer-motion").then((pkg) => ({ default: pkg.motion.div }))
 );
@@ -34,10 +34,13 @@ export const IntutiveSharing = () => (
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <div className="relative w-screen top-10 sm:top-0 right-4 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40 sm:mb-[50vw] xl:mb-[40vw]">
-              <img
+              <video
                 src={sharing}
                 alt="sharing functionality of osvauld"
                 className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl lg:rounded-3xl hero-dashboard-border-gradient sm:top-0 md:top-2 lg:top-0 xl:top-0 shadow-[0_0_10px_rgba(137,180,250,0.7)]"
+                autoPlay
+                loop
+                muted
               />
             </div>
           </MotionDiv>
