@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import sharing from "../assets/images/sharing.mp4";
+import sharing from "../assets/images/sharing.webm";
 const MotionDiv = lazy(() =>
   import("framer-motion").then((pkg) => ({ default: pkg.motion.div }))
 );
