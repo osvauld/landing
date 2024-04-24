@@ -18,7 +18,7 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                 >
                   <button className="flex bg-blue1 text-dark1  cursor-pointer justify-center items-center px-3 py-1.5 rounded whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
-                    <span className="ml-2 font-normal">Join waitlist</span>
+                    <span className="ml-2 font-normal">Request Beta</span>
                   </button>
                 </a>
                 <a

@@ -237,7 +237,7 @@ export const Navbar = () => {
                 target="_blank"
                 aria-label="get started"
               >
-                <span className="pt-px">Join waitlist</span>
+                <span className="pt-px">Request Beta</span>
               </a>
             </div>
           </div>
