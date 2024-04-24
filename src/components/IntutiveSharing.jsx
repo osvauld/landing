@@ -41,6 +41,7 @@ export const IntutiveSharing = () => (
                 autoPlay
                 loop
                 muted
+                playsInline
               />
             </div>
           </MotionDiv>
