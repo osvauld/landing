@@ -17,7 +17,7 @@ export const Hero = React.memo(() => {
   }, []);
   return (
     <section
-      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[15vw] lg:mb-[6vw] xl:mb-[5vw] hero-bg-gradient pb-10"
+      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[15vw] lg:mb-[6vw] xl:mb-[4rem] hero-bg-gradient pb-10"
       id="home"
     >
       <motion.div
@@ -132,7 +132,7 @@ export const Hero = React.memo(() => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40  sm:mb-[40vw] xl:ml-[80px] xl:mb-[46vw] xl:mt-[5vw]">
+          <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40  sm:mb-[40vw] xl:ml-[80px] xl:mb-[40rem] 2xl:[30rem]  xl:mt-[4.5rem]">
             <img
               src={dashboard}
               alt="dashboard of osvauld"
