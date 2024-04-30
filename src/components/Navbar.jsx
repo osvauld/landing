@@ -56,9 +56,7 @@ export const Navbar = () => {
       setPassword(data.tempPassword);
     } catch (error) {
       console.error("Failed to fetch credentials:", error);
-    } finally {
-      setFetchCreds(false); // Re-enable button or hide loader
-    }
+    } 
   };
 
   return (
