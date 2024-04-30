@@ -27,9 +27,11 @@ const scrollToTop = () => {
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [trialModal, setTrialModal] = useState(false);
-  const [fetchCreds, setfetchCreds] = useState(false);
+  const [fetchCreds, setFetchCreds] = useState(false);
   const [copiedIndex, setCopiedIndex] = useState(null);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const copyToClipboard = async (text, index) => {
     try {
@@ -43,6 +45,18 @@ export const Navbar = () => {
     } catch (error) {
       console.error("Failed to copy:", error);
     }
+  };
+
+  const generateCredentials = async () => {
+    setFetchCreds(true); // To show loader or disable button
+    try {
+      const response = await fetch("https://demo.osvauld.com/createDemoUser");
+      const data = await response.json();
+      setUsername(data.username);
+      setPassword(data.tempPassword);
+    } catch (error) {
+      console.error("Failed to fetch credentials:", error);
+    } 
   };
 
   return (
@@ -92,7 +106,7 @@ export const Navbar = () => {
         >
           <div className="flex justify-center items-center gap-4">
             <div className="grow basis-0 justify-end hidden lg:flex">
-              {/* <span
+              <span
                 className="rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-1.5 text-sm border border-blue1 relative"
                 onClick={() => setTrialModal(!trialModal)}
               >
@@ -131,7 +145,7 @@ export const Navbar = () => {
                         <span className="text-base text-white1">Step 2:</span>
                         <button
                           className="flex justify-center items-center border border-trialBorder rounded-md px-3 py-2 text-base"
-                          onClick={() => setfetchCreds(true)}
+                          onClick={generateCredentials}
                           disabled={fetchCreds}
                         >
                           <span>Generate temporary credentials </span>
@@ -173,7 +187,7 @@ export const Navbar = () => {
                               await copyToClipboard(username, 1);
                             }}
                           >
-                            <span id="username">TrialUser1</span>
+                            <span id="username">{username}</span>
                             {copiedIndex !== null && copiedIndex === 1 ? (
                               <Tick />
                             ) : (
@@ -187,7 +201,7 @@ export const Navbar = () => {
                             <input
                               id="password"
                               type={isPasswordVisible ? "text" : "password"}
-                              defaultValue="test@1234"
+                              defaultValue={password}
                               className="bg-transparent w-full"
                               disabled
                             />
@@ -227,7 +241,7 @@ export const Navbar = () => {
                     </div>
                   </div>
                 )}
-              </span> */}
+              </span>
             </div>
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a

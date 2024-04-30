@@ -10,7 +10,7 @@ export const SecureByDesign = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-full flex justify-center items-center"
       >
-        <div className="w-full min-h-[50vh] text-white3  2xl:w-[1150px] xl:w-[1050px] lg:w-[980px]  md:w-4/5 bg-dark1  mx-auto xl:pt-14 mt-10 xl:mt-0 text-center">
+        <div className="w-full min-h-[50vh] 2xl:min-h-[30vh] text-white3  2xl:w-[1150px] xl:w-[1050px] lg:w-[980px]  md:w-4/5 bg-dark1  mx-auto xl:pt-14 mt-10 xl:mt-0 text-center">
           <h2 className="text-3xl xl:text-5xl font-Jakartha font-light text-blue1 xl:tracking-[-0.15rem]">
             Advanced security and privacy features
           </h2>

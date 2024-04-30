@@ -33,7 +33,7 @@ export const IntutiveSharing = () => (
             animate={{ opacity: 1, y: 0, zIndex: 20 }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            <div className="relative w-screen top-10 sm:top-0 right-4 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40 sm:mb-[50vw] xl:mb-[40vw]">
+            <div className="relative w-screen top-10 sm:top-0 right-4 md:right-20 xl:right-40 flex justify-center md:justify-start items-center mb-40  sm:mb-[40vw] xl:ml-[80px] xl:mb-[40rem] 2xl:[30rem]  xl:mt-[4.5rem]">
               <video
                 src={sharing}
                 alt="sharing functionality of osvauld"
