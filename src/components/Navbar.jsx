@@ -70,7 +70,7 @@ export const Navbar = () => {
         >
           <div className="flex justify-start items-center grow basis-0">
             <button
-              className="text-white3 font-Jakartha font-semibold text-4xl"
+              className="text-white3 font-Jakartha font-semibold text-4xl pl-2"
               onClick={scrollToTop}
             >
               osvauld
@@ -257,7 +257,7 @@ export const Navbar = () => {
           </div>
         </motion.div>
         <div
-          className="lg:hidden flex flex-col  px-2 py-3  border-solid border border-gray-600 rounded-md cursor-pointer backdrop-blur-xl"
+          className="lg:hidden flex flex-col  px-2 py-3  border-solid border border-gray-600 rounded-md cursor-pointer backdrop-blur-xl mr-2"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
