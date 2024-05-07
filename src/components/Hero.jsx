@@ -24,18 +24,18 @@ export const Hero = React.memo(() => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full z-10"
+        className="mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5"
       >
-        <div className="w-full h-[40px] xl:h-[60px] bg-[#111926] text-dark mt-24 flex justify-start lg:justify-center pl-4 xl:pl-0 items-center ">
-          <div className="md:w-[800px] xl:w-[1200px]  text-blue1 tracking-wide text-xs xl:text-base font-normal font-Inter">
-            We are rolling out our private Beta.{" "}
+        <div className="w-full h-[40px] xl:h-[60px] bg-[#111926] text-dark mt-24 flex justify-start  pl-4 xl:pl-0 items-center ">
+          <div className="md:w-[800px] xl:w-[1200px]  text-blue1 tracking-wide text-xs xl:text-base font-normal font-Inter pl-2">
+            Want help setting up?{" "}
             <a
               className="text-white2 underline underline-offset-4 decoration-from-font cursor-pointer"
               href="https://getwaitlist.com/waitlist/14960"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Drop your contact!
+              Connect with us!
             </a>
           </div>
         </div>
@@ -131,6 +131,7 @@ export const Hero = React.memo(() => {
           initial={{ opacity: 0, y: 10, zIndex: 20 }}
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
+          className="w-1/2"
         >
           <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40  sm:mb-[40vw] xl:ml-[80px] xl:mb-[40rem] 2xl:[30rem]  xl:mt-[4.5rem]">
             <img

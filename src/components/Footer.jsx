@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer>
       <div className="pt-10  lg:pt-20 lg:pb-12 bg-dark1 radius-for-skewed ">
         <div className="w-full container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5">
-          <div className=" w-full lg:w-[95vw] flex flex-col lg:flex-row justify-start items-center">
+          <div className=" flex flex-col lg:flex-row justify-start items-center">
             <div className="w-full lg:w-1/2 flex justify-start items-center lg:justify-center xl:justify-start lg:mb-0">
               <div className=" w-full flex flex-col gap-4 font-light mb-6">
                 <a
