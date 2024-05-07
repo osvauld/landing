@@ -9,7 +9,7 @@ export const OpenSource = () => (
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5">
-        <div className="text-center font-light w-full h-full text-white3 flex flex-col gap-10 items-center">
+        <div className="text-center text-lg font-extralight w-full h-full text-white3 flex flex-col gap-10 items-center">
           <h2 className="text-3xl lg:text-4xl font-Jakartha font-light xl:tracking-[-0.1rem]">
             Proudly Open-Source
           </h2>

@@ -8,6 +8,7 @@ import { BottomArrow } from "../assets/icons/BottomArrow";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { Redirect } from "../assets/icons/Redirect";
 import { PlayButton } from "../assets/icons/PlayButton";
+import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 
 export const Hero = React.memo(() => {
   useEffect(() => {
@@ -17,25 +18,25 @@ export const Hero = React.memo(() => {
   }, []);
   return (
     <section
-      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[15vw] lg:mb-[6vw] xl:mb-[4rem] hero-bg-gradient pb-10"
+      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[15vw] lg:mb-0 xl:mb-[4rem] hero-bg-gradient pb-10 lg:pb-0"
       id="home"
     >
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full z-10"
+        className="w-full"
       >
-        <div className="w-full h-[40px] xl:h-[60px] bg-[#111926] text-dark mt-24 flex justify-start lg:justify-center pl-4 xl:pl-0 items-center ">
-          <div className="md:w-[800px] xl:w-[1200px]  text-blue1 tracking-wide text-xs xl:text-base font-normal font-Inter">
-            We are rolling out our private Beta.{" "}
+        <div className="w-full h-[40px] xl:h-[60px] bg-[#111926] text-dark mt-24 flex justify-start lg:justify-center  items-center ">
+          <div className="md:w-[800px] xl:w-[1200px]  text-blue1 tracking-wide text-xs xl:text-base font-normal font-Inter pl-2">
+            Want help setting up?{" "}
             <a
               className="text-white2 underline underline-offset-4 decoration-from-font cursor-pointer"
               href="https://getwaitlist.com/waitlist/14960"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Drop your contact!
+              Connect with us!
             </a>
           </div>
         </div>
@@ -101,7 +102,7 @@ export const Hero = React.memo(() => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="w-full"
         >
-          <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 mb-24 md:my-10 lg:my-4 xl:my-2 text-sm">
+          <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 md:mb-12 md:my-6 lg:my-4 xl:my-2 text-sm flex-wrap">
             <a
               className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
               href="https://youtu.be/1esLbYmdHQY"
@@ -110,6 +111,15 @@ export const Hero = React.memo(() => {
             >
               <PlayButton />
               <span className="ml-1"> Watch Demo</span>
+            </a>
+            <a
+              className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
+              href="https://www.buymeacoffee.com/osvauld"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BuyMeCoffee />
+              <span className="ml-1"> Buy me a coffee</span>
             </a>
             <div
               className="bg-blue1 rounded-md flex justify-center items-center text-black font-normal px-3 py-2 sm:mr-4 xl:mr-0 lg:mr-6 sm:mb-0 whitespace-nowrap"
@@ -131,12 +141,13 @@ export const Hero = React.memo(() => {
           initial={{ opacity: 0, y: 10, zIndex: 20 }}
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
+          className="w-1/2"
         >
-          <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-40  sm:mb-[40vw] xl:ml-[80px] xl:mb-[40rem] 2xl:[30rem]  xl:mt-[4.5rem]">
+          <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-[60vw]  sm:mb-[50vw] xl:ml-[80px] xl:mb-[40rem] 2xl:[30rem]  xl:mt-[4.5rem]">
             <img
               src={dashboard}
               alt="dashboard of osvauld"
-              className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl lg:rounded-3xl hero-dashboard-border-gradient sm:top-0 md:top-2 lg:top-0 xl:top-0 shadow-[0_0_10px_rgba(137,180,250,0.7)] "
+              className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl lg:rounded-3xl hero-dashboard-border-gradient top-2 md:top-4 lg:top-0 xl:top-0 shadow-[0_0_10px_rgba(137,180,250,0.7)] "
             />
           </div>
         </motion.div>

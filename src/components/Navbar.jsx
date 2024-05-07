@@ -56,12 +56,12 @@ export const Navbar = () => {
       setPassword(data.tempPassword);
     } catch (error) {
       console.error("Failed to fetch credentials:", error);
-    } 
+    }
   };
 
   return (
-    <nav className="w-full h-20 xl:h-24 flex flex-col justify-center items-center fixed  z-40 backdrop-blur-xl ">
-      <div className="2xl:w-[1200px] xl:w-10/12 w-[88%] flex justify-between items-center relative">
+    <nav className="w-screen h-20 xl:h-24 flex justify-center items-center fixed  z-40 backdrop-blur-xl">
+      <div className="w-full  mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5 flex justify-between items-center relative">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -70,7 +70,7 @@ export const Navbar = () => {
         >
           <div className="flex justify-start items-center grow basis-0">
             <button
-              className="text-white3 font-Jakartha font-semibold text-4xl"
+              className="text-white3 font-Jakartha font-semibold text-4xl pl-2"
               onClick={scrollToTop}
             >
               osvauld
@@ -257,7 +257,7 @@ export const Navbar = () => {
           </div>
         </motion.div>
         <div
-          className="lg:hidden flex flex-col  px-2 py-3  border-solid border border-gray-600 rounded-md cursor-pointer backdrop-blur-xl"
+          className="lg:hidden flex flex-col  px-2 py-3  border-solid border border-gray-600 rounded-md cursor-pointer backdrop-blur-xl mr-2"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
