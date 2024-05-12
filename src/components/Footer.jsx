@@ -121,7 +121,7 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/umffkNPd"
+                    href="https://discord.com/invite/kV6gBeM6Fm"
                     className="text-white4 lg:text-white1"
                     aria-label="Discord"
                   >

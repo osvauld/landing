@@ -22,7 +22,7 @@ export const JoinUs = () => (
           </p>
           <div className=" w-full lg:w-7/12 flex flex-col lg:flex-row lg:justify-center gap-4 font-light mb-6">
             <a
-              href="https://discord.gg/u43atWCS"
+              href="https://discord.com/invite/kV6gBeM6Fm"
               target="_blank"
               rel="noopener noreferrer"
             >
