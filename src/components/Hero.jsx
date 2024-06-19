@@ -18,7 +18,7 @@ export const Hero = React.memo(() => {
   }, []);
   return (
     <section
-      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[15vw] lg:mb-0 xl:mb-[4rem] hero-bg-gradient pb-10 lg:pb-0"
+      className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[15vw] lg:mb-0 xl:mb-[6rem] hero-bg-gradient pb-10 lg:pb-0"
       id="home"
     >
       <motion.div
@@ -121,7 +121,7 @@ export const Hero = React.memo(() => {
               <BuyMeCoffee />
               <span className="ml-1"> Buy me a coffee</span>
             </a>
-            <div
+            {/* <div
               className="bg-blue1 rounded-md flex justify-center items-center text-black font-normal px-3 py-2 sm:mr-4 xl:mr-0 lg:mr-6 sm:mb-0 whitespace-nowrap"
               onClick={() => setIsModalOpen(true)}
             >
@@ -134,7 +134,7 @@ export const Hero = React.memo(() => {
                 <span className="mr-1">Download osvauld</span>
                 <Redirect color={"black"} />
               </a>
-            </div>
+            </div> */}
           </div>
         </motion.div>
         <motion.div
