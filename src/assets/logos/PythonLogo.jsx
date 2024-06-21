@@ -1,3 +1,4 @@
+import React from "react";
 export const PythonLogo = () => (
   <svg
     width="93"

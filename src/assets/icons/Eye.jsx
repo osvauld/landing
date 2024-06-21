@@ -1,3 +1,4 @@
+import React from "react";
 export const Eye = () => (
   <svg
     width="24"

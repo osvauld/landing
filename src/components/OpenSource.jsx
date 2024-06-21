@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import React from "react";
 
 export const OpenSource = () => (
   <section className="py-12 xl:pt-0 bg-dark1 w-full">

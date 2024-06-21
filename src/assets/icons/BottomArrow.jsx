@@ -1,3 +1,4 @@
+import React from "react";
 export const BottomArrow = (props) => {
   return (
     <div className="bg-transparent flex justify-center items-center ">

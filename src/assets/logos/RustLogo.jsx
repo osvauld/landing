@@ -1,3 +1,4 @@
+import React from "react";
 export const RustLogo = () => (
   <svg
     width="48"

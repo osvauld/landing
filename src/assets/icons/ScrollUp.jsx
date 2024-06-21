@@ -1,3 +1,4 @@
+import React from "react";
 export const ScrollUp = (props) => {
   return (
     <svg

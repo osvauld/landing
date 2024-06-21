@@ -3,6 +3,7 @@ import { LinktreeIcon } from "../assets/icons/LinktreeIcon";
 import { LinkdinIcon } from "../assets/icons/LinkdinIcon";
 import { InstagramIcon } from "../assets/icons/InstagramIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
+import React from "react";
 
 export const Footer = () => {
   return (

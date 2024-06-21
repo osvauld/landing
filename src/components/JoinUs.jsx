@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { DiscordIcon } from "../assets/icons/DiscordIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
+import React from "react";
 
 export const JoinUs = () => (
   <section className="relative pt-0 xl:pt-16 pb-0 bg-dark1 overflow-hidden h-[22rem]">

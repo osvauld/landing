@@ -1,3 +1,4 @@
+import React from "react";
 export const EyeOff = () => (
   <svg
     width="24"

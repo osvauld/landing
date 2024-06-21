@@ -1,6 +1,5 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
-import { cn } from "../../utils/cn";
 
 export const TextGenerateEffect = ({ words, className }) => {
   const [scope, animate] = useAnimate();
@@ -33,7 +32,7 @@ export const TextGenerateEffect = ({ words, className }) => {
   };
 
   return (
-    <div className={cn("", className)}>
+    <div className={className}>
       <div className="">
         <div className="xl:tracking-[-0.1rem] tracking-[-0.15rem] font-normal xl:font-normal">
           {renderWords()}

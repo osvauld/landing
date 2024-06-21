@@ -1,3 +1,4 @@
+import React from "react";
 export const BuyMeCoffee = () => (
   <svg
     width="16"

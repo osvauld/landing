@@ -1,3 +1,4 @@
+import React from "react";
 export const CheckArrowIcon = () => (
   <div className="rounded-full bg-transparent w-5 h-5 flex justify-center items-center mr-4">
     <svg

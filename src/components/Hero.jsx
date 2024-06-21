@@ -2,13 +2,15 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import React from "react";
 import mixpanel from "mixpanel-browser";
-import dashboard from "../assets/images/dashboard.jpeg";
+import dashboard from "/src/assets/images/dashboard.jpeg";
+
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { Redirect } from "../assets/icons/Redirect";
 import { PlayButton } from "../assets/icons/PlayButton";
 import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
+import { Image } from "astro:assets";
 
 export const Hero = React.memo(() => {
   useEffect(() => {
@@ -144,10 +146,13 @@ export const Hero = React.memo(() => {
           className="w-1/2"
         >
           <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-[60vw]  sm:mb-[50vw] xl:ml-[80px] xl:mb-[40rem] 2xl:[30rem]  xl:mt-[4.5rem]">
+            {/* <Image src={Dashboardnew} alt="A bird sitting on a nest of eggs." /> */}
             <img
               src={dashboard}
               alt="dashboard of osvauld"
-              className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl lg:rounded-3xl hero-dashboard-border-gradient top-2 md:top-4 lg:top-0 xl:top-0 shadow-[0_0_10px_rgba(137,180,250,0.7)] "
+              className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl lg:rounded-3xl hero-dashboard-border-gradient top-2 md:top-4 lg:top-0 xl:top-0 shadow-[0_0_10px_rgba(137,180,250,0.7)]"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </motion.div>

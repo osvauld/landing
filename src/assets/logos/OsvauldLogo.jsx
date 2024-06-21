@@ -1,5 +1,6 @@
+import React from "react";
 export const OsvauldLogo = () => (
-<svg
+  <svg
     width="36"
     height="36"
     viewBox="0 0 48 48"
