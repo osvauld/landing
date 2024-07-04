@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Navbar } from "../components/Navbar.jsx";
+import { FaqComponent } from "../components/additional/FaqComponent";
+import "../styles/Theme.css";
+import "../styles/Diagonals.css";
+---
+
+<Layout title="faq">
+  <Navbar client:load />
+  <FaqComponent client:load />
+</Layout>

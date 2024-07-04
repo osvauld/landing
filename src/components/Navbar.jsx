@@ -11,6 +11,26 @@ import { EyeOff } from "../assets/icons/EyeOff";
 import { Tick } from "../assets/icons/Tick";
 const navbarLinks = [
   {
+    label: "How it works",
+    href: "https://docs.osvauld.com/introduction/overview/",
+    ariaLabel: "How it works",
+  },
+  {
+    label: "FAQ",
+    href: "/Faq",
+    ariaLabel: "FAQ",
+  },
+  {
+    label: "Pricing",
+    href: "https://docs.osvauld.com/introduction/overview/",
+    ariaLabel: "Pricing",
+  },
+  {
+    label: "About us",
+    href: "https://docs.osvauld.com/introduction/overview/",
+    ariaLabel: "About Us",
+  },
+  {
     label: "Documentation",
     href: "https://docs.osvauld.com/introduction/overview/",
     ariaLabel: "Documentation",
@@ -65,7 +85,7 @@ export const Navbar = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           exit={{ opacity: 0 }}
         >
           <div className="flex justify-start items-center grow basis-0">
@@ -73,14 +93,14 @@ export const Navbar = () => {
               className="text-white3 font-Jakartha font-semibold text-4xl pl-2"
               onClick={scrollToTop}
             >
-              osvauld
+              <a href="/">osvauld</a>
             </button>
           </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           exit={{ opacity: 0 }}
           className="xl:ml-auto xl:mr-4"
         >
