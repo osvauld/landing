@@ -11,11 +11,11 @@ import { PlayButton } from "../assets/icons/PlayButton";
 import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 
 export const Hero = React.memo(() => {
-  useEffect(() => {
-    mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
-      track_pageview: true,
-    });
-  }, []);
+  // useEffect(() => {
+  //   mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
+  //     track_pageview: true,
+  //   });
+  // }, []);
   return (
     <section
       className="w-screen flex flex-col justify-center items-center bg-dark1 mb-0 md:mb-[15vw] lg:mb-0 xl:mb-[6rem] hero-bg-gradient pb-10 lg:pb-0"
