@@ -1,5 +1,3 @@
-
-
 .custom-block-title {
   @apply text-white text-3xl font-bold tracking-normal;
 }
@@ -33,8 +31,7 @@
 
 body,
 html {
-  @apply bg-dark1 ;
-
+  @apply bg-dark1;
 }
 
 /* Borders */
@@ -61,4 +58,15 @@ html {
 /* Preventing FOUC */
 @font-face {
   font-display: var(--fontsource-Inter-font-display, optional);
+}
+
+/* global.css */
+.gradient-text {
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(128, 128, 128, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
