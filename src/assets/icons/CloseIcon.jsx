@@ -1,14 +1,14 @@
-export const CloseIcon = () => (
+export const CloseIcon = (props) => (
   <svg
-    width="18"
-    height="18"
+    width="14"
+    height="14"
     viewBox="0 0 18 18"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M17.2807 1.77997L16.2207 0.719971L9.0007 7.93997L1.7807 0.719971L0.720703 1.77997L7.9407 8.99997L0.720703 16.22L1.7807 17.28L9.0007 10.06L16.2207 17.28L17.2807 16.22L10.0607 8.99997L17.2807 1.77997Z"
-      fill="#85889C"
+      fill={props.color || "#85889C"}
     />
   </svg>
 );

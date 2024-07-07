@@ -28,7 +28,8 @@ module.exports = {
         white4: "#A6B0BB",
         blue1: "#89B4FA",
         blue2: "#111926",
-
+        faqAnswer: "#BFC0CC",
+        faqBorder: "#2F303E",
         trialText: "#A3A4B5",
         trialBorder: "#2F303E",
         trialField: "#191D22",

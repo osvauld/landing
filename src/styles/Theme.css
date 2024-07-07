@@ -70,3 +70,29 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Fix Safari issue related to <summary> / <details> arrow */
+details > summary.list-none::-webkit-details-marker,
+details > summary.list-none::marker {
+  display: none;
+}
+
+@keyframes animate {
+  from {
+    grid-template-rows: 0fr;
+  }
+  to {
+    grid-template-rows: 1fr;
+  }
+}
+details > div {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all ease-in-out 0.5s;
+}
+details > div > p {
+  overflow: hidden;
+}
+details[open] > div {
+  animation: animate 0.15s 0s 1 normal forwards;
+}
