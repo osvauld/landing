@@ -17,7 +17,7 @@ import "../styles/Diagonals.css";
 ---
 
 <Layout title="osvauld">
-  <Navbar client:load />
+  <Navbar client:load faq={false} />
   <Hero client:load />
   <TechStack client:load />
   <SecureByDesign client:load />
@@ -26,6 +26,6 @@ import "../styles/Diagonals.css";
   <OpenSource client:load />
   <JoinUs client:load />
   <UseOsvauld client:load />
-  <Footer client:load />
-  <ScrollUpButton client:load />
+  <Footer client:load faq={false} />
+  <ScrollUpButton client:load faq={false} />
 </Layout>

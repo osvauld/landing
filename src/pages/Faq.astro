@@ -2,14 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import { Navbar } from "../components/Navbar.jsx";
 import { FaqComponent } from "../components/additional/FaqComponent";
+import { Footer } from "../components/Footer.jsx";
+import { ScrollUpButton } from "../components/ScrollUpButton";
 import "../styles/Theme.css";
 import "../styles/Diagonals.css";
 ---
 
 <Layout title="faq">
-  <Navbar client:load />
+  <Navbar client:load faq={true} />
   <FaqComponent client:load />
-
+  <Footer client:load faq={true} />
+  <ScrollUpButton client:load faq={true} />
   <style is:global>
     body {
       background-color: #111218;

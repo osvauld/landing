@@ -4,13 +4,21 @@ import { LinkdinIcon } from "../assets/icons/LinkdinIcon";
 import { InstagramIcon } from "../assets/icons/InstagramIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
-export const Footer = () => {
+export const Footer = ({ faq }) => {
   return (
     <footer>
-      <div className="pt-10  lg:pt-20 lg:pb-12 bg-dark1 radius-for-skewed ">
+      <div
+        className={`pt-10 lg:pt-20 lg:pb-12 ${
+          faq ? " bg-faqDark" : "bg-dark1"
+        } radius-for-skewed`}
+      >
         <div className="w-full container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5">
           <div className=" flex flex-col lg:flex-row justify-start items-center">
-            <div className="w-full lg:w-1/2 flex justify-start items-center lg:justify-center xl:justify-start lg:mb-0">
+            <div
+              className={`${
+                faq ? "hidden" : ""
+              } w-full lg:w-1/2 flex justify-start items-center lg:justify-center xl:justify-start lg:mb-0`}
+            >
               <div className=" w-full flex flex-col gap-4 font-light mb-6">
                 <a
                   href="https://getwaitlist.com/waitlist/14960"
@@ -192,7 +200,7 @@ export const Footer = () => {
                 </a>
               </div>
               <span className="whitespace-nowrap">
-                ©2024 osvauld. All rights reserved.
+                ©2024 Osvauld. All rights reserved.
               </span>
             </div>
             <div className="flex gap-12 my-4 xl:my-0">
