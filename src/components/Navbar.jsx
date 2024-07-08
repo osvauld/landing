@@ -10,6 +10,26 @@ import { Eye } from "../assets/icons/Eye";
 import { EyeOff } from "../assets/icons/EyeOff";
 import { Tick } from "../assets/icons/Tick";
 const navbarLinks = [
+  // {
+  //   label: "How it works",
+  //   href: "https://docs.osvauld.com/introduction/overview/",
+  //   ariaLabel: "How it works",
+  // },
+  {
+    label: "FAQ",
+    href: "/faq",
+    ariaLabel: "FAQ",
+  },
+  // {
+  //   label: "Pricing",
+  //   href: "https://docs.osvauld.com/introduction/overview/",
+  //   ariaLabel: "Pricing",
+  // },
+  // {
+  //   label: "About us",
+  //   href: "https://docs.osvauld.com/introduction/overview/",
+  //   ariaLabel: "About Us",
+  // },
   {
     label: "Documentation",
     href: "https://docs.osvauld.com/introduction/overview/",
@@ -24,7 +44,7 @@ const scrollToTop = () => {
   });
 };
 
-export const Navbar = () => {
+export const Navbar = ({ faq }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [trialModal, setTrialModal] = useState(false);
   const [fetchCreds, setFetchCreds] = useState(false);
@@ -65,7 +85,7 @@ export const Navbar = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           exit={{ opacity: 0 }}
         >
           <div className="flex justify-start items-center grow basis-0">
@@ -73,14 +93,14 @@ export const Navbar = () => {
               className="text-white3 font-Jakartha font-semibold text-4xl pl-2"
               onClick={scrollToTop}
             >
-              osvauld
+              <a href="/">osvauld</a>
             </button>
           </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           exit={{ opacity: 0 }}
           className="xl:ml-auto xl:mr-4"
         >
@@ -107,7 +127,9 @@ export const Navbar = () => {
           <div className="flex justify-center items-center gap-4">
             <div className="grow basis-0 justify-end hidden lg:flex">
               <span
-                className="rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-1.5 text-sm border border-blue1 relative"
+                className={`${
+                  faq ? "bg-faqDark" : "bg-dark1"
+                } rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap hover:bg-blue2 px-3 py-1.5 text-sm border border-blue1 relative`}
                 onClick={() => setTrialModal(!trialModal)}
               >
                 Try now
@@ -275,9 +297,11 @@ export const Navbar = () => {
             exit={{ opacity: 0 }}
           >
             <div
-              className="flex flex-col mt-16 lg:hidden absolute top-4 left-0  bg-dark1 z-50 w-full 
+              className={`${
+                faq ? "bg-faqDark" : "bg-dark1"
+              } flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
         items-center gap-10 pb-10  border-y border-solid border-customDarkBg3 pt-10 text-sm
-        "
+            `}
             >
               {navbarLinks.map(({ label, href, ariaLabel }) => (
                 <a

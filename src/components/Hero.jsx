@@ -6,7 +6,6 @@ import dashboard from "../assets/images/dashboard.jpeg";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { Redirect } from "../assets/icons/Redirect";
 import { PlayButton } from "../assets/icons/PlayButton";
 import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 

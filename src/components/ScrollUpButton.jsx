@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ScrollUp } from "../assets/icons/ScrollUp";
 
-export const ScrollUpButton = () => {
+export const ScrollUpButton = ({ faq }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isBeingHovered, setisBeingHovered] = useState(false);
 
@@ -40,7 +40,9 @@ export const ScrollUpButton = () => {
     <>
       {isVisible && (
         <div
-          className="w-12 h-12 fixed bottom-6 right-6 border border-blue1 rounded-lg  bg-dark1 hover:bg-blue1 cursor-pointer flex justify-center items-center transition z-50"
+          className={`${
+            faq ? "bg-faqDark" : "bg-dark1"
+          } w-12 h-12 fixed bottom-6 right-6 border border-blue1 rounded-lg   hover:bg-blue1 cursor-pointer flex justify-center items-center transition z-50`}
           onClick={scrollToTop}
           onMouseEnter={curserEntered}
           onMouseLeave={curserRemoved}
