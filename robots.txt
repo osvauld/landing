@@ -1,1 +1,4 @@
 User-agent: *
+Allow: /
+
+Sitemap: https://osvauld.com/sitemap-index.xml
