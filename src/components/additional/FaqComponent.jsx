@@ -15,14 +15,14 @@ export const FaqComponent = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.2 }}
-        className="w-full pt-28 pb-10 text-white"
+        className="w-full pt-28 md:pb-10  text-white"
       >
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-2">
           <div className="flex flex-col justify-start items-center md:items-start">
-            <h1 className="text-[36px] mt-[2rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px] relative gradient-text text-center md:text-left md:ml-[1.5rem]">
+            <h1 className="md:sticky md:top-24 text-[36px] mt-[2rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px] relative gradient-text text-center md:text-left md:ml-[1.5rem]">
               Frequently Asked Questions
             </h1>
-            <div className="hidden md:visible px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-8 text-center md:text-left">
+            <div className=" md:sticky md:top-[23.5rem]  hidden md:visible px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-8 text-center md:text-left">
               <span className="font-light text-xl">
                 Still have a question? <br />
               </span>
@@ -32,11 +32,13 @@ export const FaqComponent = () => {
               <div className="flex flex-col md:flex-row justify-between items-center text-sm mt-4 md:mt-0">
                 <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold mb-2 md:mb-0 md:mr-4">
                   <Calender color={"#0D1117"} />
-                  Get a Demo
+                  <a href="https://cal.com/abrahamgeorge/30min">Get a Demo</a>
                 </button>
                 <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold">
                   <DiscordIcon color={"#0D1117"} />
-                  Chat with us
+                  <a href="https://discord.com/invite/kV6gBeM6Fm">
+                    Chat with us
+                  </a>
                 </button>
               </div>
             </div>
@@ -67,21 +69,21 @@ export const FaqComponent = () => {
             ))}
           </div>
 
-          <div className="cta md:hidden px-6 py-4 h-[200px] md:h-[156px]  flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-8 text-center md:text-left">
+          <div className="cta md:hidden px-6 py-4 h-[170px]  flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-8 text-center md:text-left">
             <span className="font-light text-xl">
               Still have a question? <br />
             </span>
             <span className="text-base font-extralight whitespace-nowrap">
               Contact us. We will be happy to help you! <br />
             </span>
-            <div className="flex flex-col md:flex-row justify-between items-center text-sm mt-4 md:mt-0">
-              <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold mb-2 md:mb-0 md:mr-4">
+            <div className="flex justify-center gap-3 items-center text-sm mt-4 md:mt-0">
+              <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold ">
                 <Calender color={"#0D1117"} />
-                Get a Demo
+                <a href="https://cal.com/abrahamgeorge/30min">Get a Demo</a>
               </button>
               <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold">
                 <DiscordIcon color={"#0D1117"} />
-                Chat with us
+                <a href="https://discord.com/invite/kV6gBeM6Fm">Chat with us</a>
               </button>
             </div>
           </div>
