@@ -16,15 +16,15 @@ const navbarLinks = [
   //   ariaLabel: "How it works",
   // },
   {
+    label: "Pricing",
+    href: "/pricing",
+    ariaLabel: "Pricing",
+  },
+  {
     label: "FAQ",
     href: "/faq",
     ariaLabel: "FAQ",
   },
-  // {
-  //   label: "Pricing",
-  //   href: "https://docs.osvauld.com/introduction/overview/",
-  //   ariaLabel: "Pricing",
-  // },
   // {
   //   label: "About us",
   //   href: "https://docs.osvauld.com/introduction/overview/",
