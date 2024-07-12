@@ -13,7 +13,7 @@ export const Footer = ({ faq }) => {
         } radius-for-skewed`}
       >
         <div className="w-full container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5">
-          <div className=" flex flex-col lg:flex-row justify-start items-center">
+          <div className=" flex flex-col sm:flex-row justify-start items-center">
             <div
               className={`${
                 faq ? "hidden" : ""
@@ -189,62 +189,66 @@ export const Footer = ({ faq }) => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col-reverse xl:flex-row justify-center md:justify-between items-center w-full xl:mt-6 h-[50vw]  md:h-auto gap-10 md:gap-0">
-            <div className="w-[95%] xl:w-[64%] flex flex-col md:flex-row justify-between items-center text-white4 text-xs xl:mt-0 gap-6 md:gap-0">
-              <div className="">
-                <a className="mr-6 whitespace-nowrap" href="/terms">
+          <div className="flex flex-col-reverse lg:flex-row justify-between items-center w-full my-6 gap-4 lg:gap-20 xl:gap-0">
+            <div className="w-full xl:w-2/3 flex flex-col lg:flex-row justify-between lg:pr-14 items-center text-white4 text-xs gap-4">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                <a
+                  href="/terms"
+                  className="whitespace-nowrap hover:text-white1"
+                >
                   Terms and Conditions
                 </a>
-                <a href="/privacy" className="whitespace-nowrap">
+                <a
+                  href="/privacy"
+                  className="whitespace-nowrap hover:text-white1"
+                >
                   Privacy Policy
                 </a>
               </div>
-              <span className="whitespace-nowrap">
+              <span className="whitespace-nowrap text-center lg:text-left">
                 ©2024 Osvauld. All rights reserved.
               </span>
             </div>
-            <div className="flex gap-12 my-4 xl:my-0">
-              <a
-                href="https://linktr.ee/osvauld"
-                aria-label="Linktree Icon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinktreeIcon color={"#A6B0BB"} />
-              </a>
-              <a
-                href="https://github.com/osvauld"
-                aria-label="Github Icon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GithubIcon color={"#A6B0BB"} />
-              </a>
-              <a
-                href="https://discord.gg/u43atWCS"
-                aria-label="Discord Icon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <DiscordIcon color={"#A6B0BB"} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/osvauld"
-                aria-label="LinkdinIcon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkdinIcon color={"#A6B0BB"} />
-              </a>
-              <a
-                href="https://www.instagram.com/osvauld/"
-                aria-label="Instagram Icon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <InstagramIcon color={"#A6B0BB"} />
-              </a>
-            </div>
+            <nav className="flex gap-8 my-4 xl:my-0">
+              {[
+                {
+                  href: "https://linktr.ee/osvauld",
+                  Icon: LinktreeIcon,
+                  label: "Linktree",
+                },
+                {
+                  href: "https://github.com/osvauld",
+                  Icon: GithubIcon,
+                  label: "Github",
+                },
+                {
+                  href: "https://discord.gg/BVQtV6gS2c",
+                  Icon: DiscordIcon,
+                  label: "Discord",
+                },
+                {
+                  href: "https://www.linkedin.com/company/osvauld",
+                  Icon: LinkdinIcon,
+                  label: "LinkedIn",
+                },
+                {
+                  href: "https://www.instagram.com/osvauld/",
+                  Icon: InstagramIcon,
+                  label: "Instagram",
+                },
+              ].map(({ href, Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={`${label} Icon`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-80 transition-opacity"
+                >
+                  <Icon color="#A6B0BB" />
+                </a>
+              ))}
+            </nav>
           </div>
         </div>
       </div>

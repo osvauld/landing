@@ -81,7 +81,7 @@ export const Navbar = ({ faq }) => {
 
   return (
     <nav className="w-screen h-20 xl:h-24 flex justify-center items-center fixed  z-40 backdrop-blur-xl">
-      <div className="w-full  mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5 flex justify-between items-center relative">
+      <div className="w-full  mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5 flex items-center relative">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -102,9 +102,9 @@ export const Navbar = ({ faq }) => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.1 }}
           exit={{ opacity: 0 }}
-          className="xl:ml-auto xl:mr-4"
+          className="xl:ml-auto mr-4 ml-auto"
         >
-          <div className="hidden lg:flex h-full gap-6 xl:mx-4  py-2 cursor-pointer">
+          <div className="hidden lg:flex h-full gap-6 xl:mx-4 py-2 cursor-pointer ">
             {navbarLinks.map(({ href, label, ariaLabel }, index) => (
               <React.Fragment key={label}>
                 <a

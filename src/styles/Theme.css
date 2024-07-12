@@ -71,6 +71,17 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
+/* global.css */
+.gradient-text-bottom {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(128, 128, 128, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Fix Safari issue related to <summary> / <details> arrow */
 details > summary.list-none::-webkit-details-marker,
 details > summary.list-none::marker {
