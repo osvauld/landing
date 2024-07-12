@@ -13,6 +13,11 @@ export const PricingCompoent = () => {
         <h1>Affordable Pricing</h1>
         <h1>for teams of all sizes</h1>
       </span>
+      <div className="cards grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6">
+        <div className="border border-red-500 h-[300px] min-w-[200px]"></div>
+        <div className="border border-white1 h-[300px]"></div>
+        <div className="border border-yellow-300 h-[300px] md:col-span-2"></div>
+      </div>
     </motion.section>
   );
 };
