@@ -193,13 +193,13 @@ export const Footer = ({ faq }) => {
             <div className="w-full xl:w-2/3 flex flex-col lg:flex-row justify-between lg:pr-14 items-center text-white4 text-xs gap-4">
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                 <a
-                  href="/terms"
+                  href="/Terms"
                   className="whitespace-nowrap hover:text-white1"
                 >
                   Terms and Conditions
                 </a>
                 <a
-                  href="/privacy"
+                  href="/Privacy"
                   className="whitespace-nowrap hover:text-white1"
                 >
                   Privacy Policy
