@@ -60,6 +60,9 @@ html {
   font-display: var(--fontsource-Inter-font-display, optional);
 }
 
+.pricing-content {
+  @apply font-Inter font-light tracking-wide text-faqAnswer;
+}
 /* global.css */
 .gradient-text {
   background: linear-gradient(
@@ -112,7 +115,7 @@ details[open] > div {
   position: relative;
   border-radius: 16px;
   background: #0d0e13;
-  box-shadow: 0px 0px 60px 16px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.8);
 }
 
 .pricing-card::before {
@@ -135,4 +138,16 @@ details[open] > div {
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor; /*5'*/
   mask-composite: exclude; /*5*/
+}
+
+@media (min-width: 768px) {
+  .pricing-card-none {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .pricing-card-none::before,
+  .pricing-card-none::after {
+    content: none;
+  }
 }
