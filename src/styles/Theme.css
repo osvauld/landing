@@ -74,7 +74,6 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
-/* global.css */
 .gradient-text-bottom {
   background: linear-gradient(
     180deg,
@@ -83,6 +82,12 @@ html {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .gradient-text-bottom {
+    color: #fff;
+  }
 }
 
 /* Fix Safari issue related to <summary> / <details> arrow */
