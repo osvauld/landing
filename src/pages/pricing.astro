@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Navbar } from "../components/Navbar.jsx";
+import { PricingCompoent } from "../components/additional/PricingCompoent";
+import { Footer } from "../components/Footer.jsx";
+import { ScrollUpButton } from "../components/ScrollUpButton";
+import "../styles/Theme.css";
+import "../styles/Diagonals.css";
+import { UseOsvauld } from "../components/UseOsvauld";
+---
+
+<Layout title="faq">
+  <Navbar client:load faq={true} />
+  <PricingCompoent client:load />
+  <Footer client:load faq={true} />
+  <ScrollUpButton client:load faq={true} />
+  <style is:global>
+    body {
+      background-color: #111218;
+    }
+  </style>
+</Layout>

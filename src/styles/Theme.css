@@ -60,6 +60,9 @@ html {
   font-display: var(--fontsource-Inter-font-display, optional);
 }
 
+.pricing-content {
+  @apply font-Inter font-light tracking-wide text-faqAnswer;
+}
 /* global.css */
 .gradient-text {
   background: linear-gradient(
@@ -69,6 +72,22 @@ html {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-bottom {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(128, 128, 128, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .gradient-text-bottom {
+    color: #fff;
+  }
 }
 
 /* Fix Safari issue related to <summary> / <details> arrow */
@@ -95,4 +114,45 @@ details > div > p {
 }
 details[open] > div {
   animation: animate 0.15s 0s 1 normal forwards;
+}
+
+.pricing-card {
+  position: relative;
+  border-radius: 16px;
+  background: #0d0e13;
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.8);
+}
+
+.pricing-card::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 16px;
+  z-index: 1;
+  border: 1px solid transparent; /*2*/
+  background: linear-gradient(
+      to left,
+      #16171f 0%,
+      rgba(137, 132, 250, 0.48) 100%
+    )
+    border-box; /*3*/
+  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; /*5'*/
+  mask-composite: exclude; /*5*/
+}
+
+@media (min-width: 768px) {
+  .pricing-card-none {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .pricing-card-none::before,
+  .pricing-card-none::after {
+    content: none;
+  }
 }
