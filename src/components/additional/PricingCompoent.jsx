@@ -10,9 +10,18 @@ export const PricingCompoent = () => {
       transition={{ duration: 0.2 }}
       className="w-full flex-grow flex flex-col items-center max-w-[1200px] mx-auto bg-faqDark px-4 pt-28 text-white"
     >
-      <span className="flex flex-col items-center mb-20 text-[40px] md:text-[48px] lg:text-[56px] font-semibold tracking-tight text-balance gradient-text-bottom ">
+      <span className="text-xs bg-labelBackground py-2 px-4 my-2 rounded-md text-blue1">
+        Helping teams manage shared credentials
+      </span>
+      <span className="flex flex-col items-center mb-10 mt-6 text-[40px] md:text-[48px] lg:text-[56px] font-semibold tracking-tight text-balance gradient-text-bottom leading-10 md:leading-[54px]">
         <h1 className="text-center lg:text-left ">Affordable Pricing</h1>
         <h1 className="text-center lg:text-left ">for teams of all sizes</h1>
+      </span>
+
+      <span className="pricing-content mb-10 text-left md:text-center">
+        Use Osvauld for free with your whole team. Upgrade to enable unlimited
+        users, <br className="hidden md:inline-block" />
+        enhanced security controls, and additional features.
       </span>
 
       <div className="cards grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 md:gap-x-10 w-full min-w-[300px] max-w-[331px] md:max-w-[800px] ">
@@ -31,9 +40,12 @@ export const PricingCompoent = () => {
             Free forever
           </span>
 
-          <button className="bg-blue1 md:text-sm text-lg font-medium text-black font-Jakartha rounded-[4px] py-2 my-2 md:py-1 md:max-w-[55%]">
+          <a
+            className="bg-blue1 md:text-sm text-lg font-medium text-black font-Jakartha rounded-[4px] py-2 my-2 md:py-1 md:max-w-[55%] cursor-pointer z-20 flex items-center justify-center"
+            href="https://docs.osvauld.com/installation/setting-up-osvauld/"
+          >
             Get Started
-          </button>
+          </a>
           <div className="border-b border-[#2F303E] my-2 "></div>
           <ul className="text-white3">
             <li className="flex mt-1.5">
@@ -73,9 +85,12 @@ export const PricingCompoent = () => {
             3 months and 12 months package
           </span>
 
-          <button className="bg-blue1 md:text-sm text-lg font-medium text-black font-Jakartha rounded-[4px] py-2 my-2 md:py-1 md:max-w-[55%]">
+          <a
+            className="bg-blue1 md:text-sm text-lg font-medium text-black font-Jakartha rounded-[4px] py-2 my-2 md:py-1 md:px-16 md:max-w-[55%] z-30 flex justify-center items-center whitespace-nowrap"
+            href="https://cal.com/abrahamgeorge/30min"
+          >
             Book a Call
-          </button>
+          </a>
           <div className="border-b border-[#2F303E] my-2 "></div>
           <span className="my-2 text-xs text-white3">
             Everything in community Edition Plus:
@@ -119,9 +134,12 @@ export const PricingCompoent = () => {
             3 months package
           </span>
 
-          <button className="bg-blue1 md:text-sm text-lg font-medium text-black font-Jakartha rounded-[4px] py-2 my-2 md:py-1 md:px-16 md:max-w-[55%]">
+          <a
+            className="bg-blue1 md:text-sm text-lg font-medium text-black font-Jakartha rounded-[4px] py-2 my-2 md:py-1 md:px-16 md:max-w-[55%] flex justify-center items-center whitespace-nowrap z-30"
+            href="https://cal.com/abrahamgeorge/30min"
+          >
             Book a Call
-          </button>
+          </a>
           <div className="border-b border-[#2F303E] my-2 md:w-full"></div>
           <ul className="text-white3">
             <li className="flex mt-1.5">
