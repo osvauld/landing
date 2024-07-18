@@ -39,18 +39,20 @@ export const DemoBanner = ({ faq }) => {
           onMouseEnter={curserEntered}
           onMouseLeave={curserRemoved}
         >
-          <div className="flex flex-col">
-            <h6 className="font-Inter text-blue1 font-semibold">
-              Schedule a 1:1 demo
-            </h6>
-            <span className="pricing-content ">Meet our team</span>
+          <div className="w-full max-w-[1200px] flex justify-between items-center mx-auto">
+            <div className="flex flex-col">
+              <h6 className="font-Inter text-blue1 font-semibold">
+                Schedule a 1:1 demo
+              </h6>
+              <span className="pricing-content ">Meet our team</span>
+            </div>
+            <a
+              className="rounded-md px-10 py-1.5 bg-labelBackground text-blue1"
+              href="/demo"
+            >
+              Get a Demo
+            </a>
           </div>
-          <a
-            className="rounded-md px-10 py-1.5 bg-labelBackground text-blue1"
-            href="/demo"
-          >
-            Get a Demo
-          </a>
         </div>
       )}
     </>
