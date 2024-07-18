@@ -9,11 +9,13 @@ import { UseOsvauld } from "../components/UseOsvauld.jsx";
 import { JoinUs } from "../components/JoinUs.jsx";
 import { OpenSource } from "../components/OpenSource.jsx";
 import { TechStack } from "../components/TechStack.jsx";
-import { Divider } from "../components/Divider";
 import { Footer } from "../components/Footer.jsx";
 import { ScrollUpButton } from "../components/ScrollUpButton";
+import { DemoBanner } from "../components/DemoBanner";
+import { DemoButton } from "../components/DemoButton";
 import "../styles/Theme.css";
 import "../styles/Diagonals.css";
+import { DemoComponent } from "../components/additional/DemoComponent";
 ---
 
 <Layout title="osvauld">
@@ -28,4 +30,6 @@ import "../styles/Diagonals.css";
   <UseOsvauld client:load />
   <Footer client:load faq={false} />
   <ScrollUpButton client:load faq={false} />
+  <DemoBanner client:load faq={false} />
+  <DemoButton client:load faq={false} />
 </Layout>

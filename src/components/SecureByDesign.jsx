@@ -21,7 +21,7 @@ export const SecureByDesign = () => {
                   OpenPGP with ECC
                 </h4>
                 <p className="text-base font-extralight mt-2">
-                  In order to protect your vault key and facilitate the sharing
+                  In order to protect your secrets and facilitate the sharing
                   functionality, osvauld uses the OpenPGP RFC 4880 standard with
                   ECC Curve25519. OpenPGP is open source, has been audited and
                   battle-tested for nearly 30 years, and has no known
@@ -35,9 +35,8 @@ export const SecureByDesign = () => {
                 <p className="text-base font-extralight mt-2">
                   With Zero-knowledge Architecture, all your credentials
                   including meta data never leaves your browser unencrypted and
-                  only you and to whom you shared can decrypt it using
-                  corresponding secret password. No one, not even osvauld can
-                  access this data.
+                  only you and to whom you shared can decrypt it. No one, not
+                  even osvauld can access this data.
                 </p>
               </article>
             </div>

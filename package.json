@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.1.1",
+    "@calcom/embed-react": "^1.5.0",
     "@fontsource/inter": "^4.5.15",
     "@fontsource/plus-jakarta-sans": "^5.0.18",
     "astro": "^2.2.0",
