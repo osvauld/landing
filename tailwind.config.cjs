@@ -35,6 +35,7 @@ module.exports = {
         trialField: "#191D22",
         trialFieldText: "#85889C",
         labelBackground: "#20212B",
+        calBorder: "#16171F",
       },
       fontFamily: {
         Inter: "Inter",

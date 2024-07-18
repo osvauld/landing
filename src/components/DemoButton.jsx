@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { ScrollUp } from "../assets/icons/ScrollUp";
+import { CalenderDates } from "../assets/icons/CalenderDates";
 
-export const ScrollUpButton = ({ faq }) => {
+export const DemoButton = ({ faq }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isBeingHovered, setisBeingHovered] = useState(false);
 
@@ -18,14 +19,8 @@ export const ScrollUpButton = ({ faq }) => {
     }
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-    setTimeout(() => {
-      setisBeingHovered(false);
-    }, 600);
+  const redirectToDemo = () => {
+    window.location.href = "/demo";
   };
 
   const curserEntered = () => {
@@ -42,12 +37,15 @@ export const ScrollUpButton = ({ faq }) => {
         <div
           className={`${
             faq ? "bg-faqDark" : "bg-dark1"
-          } w-12 h-12 fixed bottom-6 right-6 border border-blue1 rounded-lg hover:bg-blue1 cursor-pointer flex justify-center items-center transition z-50`}
-          onClick={scrollToTop}
+          } w-12 h-12 fixed bottom-6 left-6 border border-blue1 rounded-full hover:bg-blue1 cursor-pointer flex justify-center items-center transition z-50 group`}
+          onClick={redirectToDemo}
           onMouseEnter={curserEntered}
           onMouseLeave={curserRemoved}
         >
-          <ScrollUp color={isBeingHovered ? "#000" : "#89B4FA"} />
+          <CalenderDates color={isBeingHovered ? "#000" : "#89B4FA"} />
+          <span className="absolute right-0 transform translate-x-[110%] mb-2 w-max px-3 py-1 text-sm text-blue1 bg-labelBackground rounded opacity-0 group-hover:opacity-100 transition duration-300">
+            Book a Demo
+          </span>
         </div>
       )}
     </>
