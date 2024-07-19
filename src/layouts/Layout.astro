@@ -1,20 +1,37 @@
 ---
+import "@fontsource/inter/100.css";
 import "@fontsource/inter/200.css";
 import "@fontsource/inter/300.css";
 import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
+import "@fontsource/inter/900.css";
+import "@fontsource/plus-jakarta-sans/200.css";
 import "@fontsource/plus-jakarta-sans/300.css";
 import "@fontsource/plus-jakarta-sans/400.css";
 import "@fontsource/plus-jakarta-sans/500.css";
+import "@fontsource/plus-jakarta-sans/600.css";
+import "@fontsource/plus-jakarta-sans/700.css";
+import "@fontsource/plus-jakarta-sans/800.css";
+import { SEO } from "astro-seo";
 import thumbnail from "../assets/images/thumbnail.webp";
 
-const { title } = Astro.props;
-
-export interface Props {
+interface Props {
   title: string;
+  description?: string;
 }
+
+const {
+  title,
+  description = "On-premise, open-source credential manager for teams",
+} = Astro.props;
+
+import "../styles/Global.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -62,64 +79,21 @@ export interface Props {
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title: "osvauld",
+          type: "website",
+          image: new URL(thumbnail.src, Astro.site).toString(),
+        },
+      }}
+    />
     <meta name="generator" content={Astro.generator} />
-    <meta property="og:title" content="osvauld" />
-    <meta
-      name="description"
-      content="On-premise, open-source credential manager for shared credentials"
-    />
-    <meta
-      property="og:description"
-      content="On-premise, open-source credential manager for shared credentials"
-    />
-    <meta property="og:url" content="https://osvauld.com/" />
-    <meta property="image" content=`https://osvauld.com${thumbnail.src}` />
-    <meta property="og:image" content=`https://osvauld.com${thumbnail.src}` />
-    <meta property="og:type" content="website" />
   </head>
 
   <body>
     <slot />
-
-    <style is:global>
-      @font-face {
-        font-family: "Inter";
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Plus Jakarta Sans";
-        font-display: swap;
-      }
-      html {
-        font-family: "Inter", "Plus Jakarta Sans";
-        background-color: #010409;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-        box-sizing: border-box;
-      }
-
-      html::-webkit-scrollbar {
-        width: 4px;
-        height: 130px;
-      }
-
-      html::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-      html::-webkit-scrollbar-thumb {
-        background-color: #2f303e;
-        border-radius: 4px;
-      }
-
-      .active.html::-webkit-scrollbar-thumb {
-        background-color: #2f303e; /* color of the thumb */
-      }
-
-      html::-webkit-scrollbar-thumb:hover {
-        background-color: #2f303e; /* color of the thumb on hover */
-      }
-    </style>
   </body>
 </html>

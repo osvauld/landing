@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-display: swap;
+}
+
+html {
+  font-family: "Inter", "Plus Jakarta Sans";
+  background-color: #010409;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 130px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #2f303e;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #2f303e;
+    }
+  }
+}
+
+.active.html::-webkit-scrollbar-thumb {
+  background-color: #2f303e;
+}
