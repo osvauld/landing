@@ -34,7 +34,7 @@ export const DemoBanner = ({ faq }) => {
         <div
           className={`${
             faq ? "bg-faqDark" : "bg-transparent"
-          } w-full h-20 backdrop-blur-xl fixed bottom-0 cursor-pointer flex justify-between items-center transition z-50 px-10`}
+          } w-full h-20 backdrop-blur-xl fixed bottom-0 cursor-pointer flex justify-between items-center transition z-50 px-4 md:px-10`}
           onClick={redirectToDemo}
           onMouseEnter={curserEntered}
           onMouseLeave={curserRemoved}
