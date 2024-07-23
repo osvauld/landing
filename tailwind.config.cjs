@@ -58,12 +58,18 @@ module.exports = {
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        blink: "blink 2s steps(2, start) infinite",
       },
+
       keyframes: {
         scroll: {
           to: {
             transform: "translate(calc(-50% - 0.5rem))",
           },
+        },
+        blink: {
+          "0%, 100%": { visibility: "hidden" },
+          "50%": { visibility: "visible" },
         },
       },
     },

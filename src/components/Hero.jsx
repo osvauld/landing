@@ -19,107 +19,10 @@ export const Hero = React.memo(() => {
   // }, []);
   return (
     <section
-      className="pt-20 md:pt-32 flex flex-col justify-center items-center bg-faqDark "
+      className="pt-20 md:pt-32 flex flex-col justify-center items-center bg-faqDark min-h-screen"
       id="home"
     >
-      <h1 className="text-white text-4xl font-Inter font-[200] md:font-[900]">
-        Hello
-      </h1>
-      {/* <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="z-0 w-[95%] md:w-[800px] xl:w-[1200px] mt-[-5.625rem] flex flex-col justify-center items-start pt-16 xl:pt-10 md:pt-16 lg:pt-20 text-left "
-      >
-        <div className="text-blue1 h-8 text-sm sm:text-base w-full mb-6 sm:mt-32 mt-16 font-bold">
-          <a
-            className="flex w-full justify-center items-center font-normal text-sm rounded-md bg-blue2 h-full px-4 py-2 cursor-pointer"
-            href="https://github.com/osvauld/web-client"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="whitespace-nowrap">We are open-source</span>
-            <span className="h-full border-r-[1px] border-[#1C2A40] mx-2"></span>
-            <span className="flex text-white4 justify-center items-center whitespace-nowrap">
-              <span className="mr-2 flex justify-center items-center">
-                <GithubIcon color={"#A6B0BB"} />
-              </span>
-              Star us on GitHub
-              <span className="transform -rotate-90 mt-1">
-                <BottomArrow color={"#A6B0BB"} />
-              </span>
-            </span>
-          </a>
-        </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.05 }}
-      >
-        <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl xl:tracking-[-0.2rem] tracking-[-0.15rem]  text-blue1 xl:font-normal font-black px-0 font-Jakartha">
-          <h1>
-            Share credentials <br />
-            <span className="text-white1">within your team,</span>{" "}
-            <TextGenerateEffect
-              words={"Securely."}
-              className={"inline-block "}
-            />
-          </h1>
-        </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-      >
-        <div className="text-white1 font-light text-sm sm:text-base max-w-full lg:text-base xl:text-lg xl:min-w-[30vw] xl:max-w-[55vw] mt-10 xl:mt-6 mb-4 text-left ">
-          Open source solution built for collaboration to share all your{" "}
-          sensitive account <br className="hidden xl:inline" /> passwords or any
-          other credentials. No more scrounging over Slack or Google Sheets.
-        </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.15 }}
-        className="w-full"
-      >
-        <div className="flex justify-start  gap-2 md:flex-row mt-6 sm:mt-14 md:mb-12 md:my-6 lg:my-4 xl:my-2 text-sm flex-wrap">
-          <a
-            className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
-            href="https://youtu.be/1esLbYmdHQY"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <PlayButton />
-            <span className="ml-1"> Watch Demo</span>
-          </a>
-          <a
-            className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
-            href="https://www.buymeacoffee.com/osvauld"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <BuyMeCoffee />
-            <span className="ml-1"> Buy me a coffee</span>
-          </a>
-        </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 10, zIndex: 20 }}
-        animate={{ opacity: 1, y: 0, zIndex: 20 }}
-        transition={{ duration: 0.5, delay: 0.15 }}
-        className=""
-      >
-        <img
-          src={dashboard.src}
-          alt="dashboard of osvauld"
-          className=""
-          loading="lazy"
-          decoding="async"
-        />
-      </motion.div> */}
+      <div className="max-w-[1200px] bg-red-400 w-full">Content</div>
     </section>
   );
 });

@@ -10,6 +10,31 @@ import { Eye } from "../assets/icons/Eye";
 import { EyeOff } from "../assets/icons/EyeOff";
 import { Tick } from "../assets/icons/Tick";
 const navbarLinks = [
+  // {
+  //   label: "How it works",
+  //   href: "https://docs.osvauld.com/introduction/overview/",
+  //   ariaLabel: "How it works",
+  // },
+  {
+    label: "Book a Demo",
+    href: "/demo",
+    ariaLabel: "Book a Demo",
+  },
+  {
+    label: "Pricing",
+    href: "/pricing",
+    ariaLabel: "Pricing",
+  },
+  {
+    label: "FAQ",
+    href: "/faq",
+    ariaLabel: "FAQ",
+  },
+  // {
+  //   label: "About us",
+  //   href: "https://docs.osvauld.com/introduction/overview/",
+  //   ariaLabel: "About Us",
+  // },
   {
     label: "Documentation",
     href: "https://docs.osvauld.com/introduction/overview/",
@@ -60,35 +85,35 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="w-screen h-20 xl:h-24 flex justify-center items-center fixed  z-40 backdrop-blur-xl">
-      <div className="w-full  mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5 flex justify-between items-center relative">
+    <nav className="w-screen h-24 flex justify-center items-center fixed z-40 backdrop-blur-xl">
+      <div className="w-full mx-auto px-4 flex items-center relative max-w-[1200px]">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           exit={{ opacity: 0 }}
         >
           <div className="flex justify-start items-center grow basis-0">
             <button
-              className="text-white3 font-Jakartha font-semibold text-4xl pl-2"
+              className="text-white3 font-Jakartha font-medium text-4xl pl-2"
               onClick={scrollToTop}
             >
-              osvauld
+              <a href="/">osvauld</a>
             </button>
           </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           exit={{ opacity: 0 }}
-          className="xl:ml-auto xl:mr-4"
+          className="xl:ml-auto mr-4 ml-auto"
         >
-          <div className="hidden lg:flex h-full gap-6 xl:mx-4  py-2 cursor-pointer">
-            {navbarLinks.map(({ href, label, ariaLabel }, index) => (
+          <div className="hidden lg:flex h-full gap-10 xl:mx-4 py-2 cursor-pointer ">
+            {navbarLinks.map(({ href, label, ariaLabel }) => (
               <React.Fragment key={label}>
                 <a
-                  className="text-white1 font-normal text-xs flex justify-center items-center"
+                  className="text-white1 font-extralight font-Jakartha text-sm flex justify-center items-center"
                   href={href}
                   aria-label={ariaLabel}
                 >
@@ -104,13 +129,16 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex justify-center items-center gap-8">
             <div className="grow basis-0 justify-end hidden lg:flex">
               <span
-                className="rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-1.5 text-sm border border-blue1 relative"
+                className={`bg-labelBackground rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap  px-3 py-3 text-sm relative`}
                 onClick={() => setTrialModal(!trialModal)}
               >
                 Try now
+                <span className="text-[10px] font-semibold text-red-600 absolute right-2 top-0 animate-blink ">
+                  New
+                </span>
                 {trialModal && (
                   <div
                     className={`absolute top-[140%] right-0 ${
@@ -245,13 +273,13 @@ export const Navbar = () => {
             </div>
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
-                className="text-dark1
-            bg-blue1 rounded-md px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
+                className="text-blue1
+            bg-faqDark border border-blue1 rounded-md px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 aria-label="get started"
               >
-                <span className="pt-px">Request Beta</span>
+                <span className="pt-px">Get started for free</span>
               </a>
             </div>
           </div>
@@ -275,14 +303,14 @@ export const Navbar = () => {
             exit={{ opacity: 0 }}
           >
             <div
-              className="flex flex-col mt-16 lg:hidden absolute top-4 left-0  bg-dark1 z-50 w-full 
+              className={`bg-faqDark flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
         items-center gap-10 pb-10  border-y border-solid border-customDarkBg3 pt-10 text-sm
-        "
+            `}
             >
               {navbarLinks.map(({ label, href, ariaLabel }) => (
                 <a
                   key={href}
-                  className="navbar-link"
+                  className=" text-white1 font-extralight font-Jakartha text-sm "
                   href={href}
                   onClick={() => setIsOpen(false)}
                   aria-label={ariaLabel}
