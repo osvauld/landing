@@ -88,7 +88,7 @@ export const Navbar = () => {
 
   return (
     <nav className="w-screen h-24 flex justify-center items-center fixed z-40 backdrop-blur-xl">
-      <div className="w-full mx-auto px-4 flex items-center relative max-w-[1200px]">
+      <div className="w-full mx-auto px-4 flex items-center relative max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -138,7 +138,7 @@ export const Navbar = () => {
                 onClick={() => setTrialModal(!trialModal)}
               >
                 Try now
-                <span className="text-[10px] font-semibold text-red-600 absolute -right-5 -top-4 animate-blink ">
+                <span className="text-[10px] font-semibold text-red-600 absolute right-2 top-0 animate-blink ">
                   New
                 </span>
                 {trialModal && (

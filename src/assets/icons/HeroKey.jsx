@@ -1,7 +1,7 @@
 import React from "react";
 export const HeroKey = () => {
   return (
-    <div className="bg-transparent flex justify-center items-center scale-75 lg:scale-100">
+    <div className="bg-transparent flex justify-center items-center scale-75 lg:scale-110">
       <svg
         width="430"
         height="778"
