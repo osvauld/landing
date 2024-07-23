@@ -9,6 +9,8 @@ import { Copy } from "../assets/icons/Copy";
 import { Eye } from "../assets/icons/Eye";
 import { EyeOff } from "../assets/icons/EyeOff";
 import { Tick } from "../assets/icons/Tick";
+import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
+
 const navbarLinks = [
   // {
   //   label: "How it works",
@@ -136,7 +138,7 @@ export const Navbar = () => {
                 onClick={() => setTrialModal(!trialModal)}
               >
                 Try now
-                <span className="text-[10px] font-semibold text-red-600 absolute right-2 top-0 animate-blink ">
+                <span className="text-[10px] font-semibold text-red-600 absolute -right-5 -top-4 animate-blink ">
                   New
                 </span>
                 {trialModal && (
@@ -273,13 +275,13 @@ export const Navbar = () => {
             </div>
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
-                className="text-blue1
-            bg-faqDark border border-blue1 rounded-md px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
-                href="https://getwaitlist.com/waitlist/14960"
+                className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-faqDark transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
+                href="https://www.buymeacoffee.com/osvauld"
                 target="_blank"
-                aria-label="get started"
+                rel="noopener noreferrer"
               >
-                <span className="pt-px">Get started for free</span>
+                <BuyMeCoffee />
+                <span className="ml-1"> Buy me a coffee</span>
               </a>
             </div>
           </div>
