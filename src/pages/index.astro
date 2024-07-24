@@ -12,19 +12,23 @@ import { TechStack } from "../components/TechStack.jsx";
 import { Divider } from "../components/Divider";
 import { Footer } from "../components/Footer.jsx";
 import { ScrollUpButton } from "../components/ScrollUpButton";
+import { DemoBanner } from "../components/DemoBanner";
+import { DemoButton } from "../components/DemoButton";
 import "../styles/Theme.css";
 ---
 
 <Layout title="osvauld">
   <Navbar client:load />
   <Hero client:load />
-  <!-- <TechStack client:load /> -->
+  <TechStack client:load />
   <SecureByDesign client:load />
-  <!-- <IntutiveSharing client:load /> -->
+  <IntutiveSharing client:load />
   <OnPremise client:load />
   <OpenSource client:load />
   <JoinUs client:load />
   <UseOsvauld client:load />
-  <!-- <Footer />
-  <ScrollUpButton client:load /> -->
+  <Footer />
+  <ScrollUpButton client:load />
+  <DemoBanner client:load faq={false} />
+  <DemoButton client:load faq={false} />
 </Layout>

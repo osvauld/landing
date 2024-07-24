@@ -4,7 +4,7 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 import React from "react";
 
 export const JoinUs = () => (
-  <section className="relative pt-0 xl:pt-16 pb-0 bg-dark1 overflow-hidden h-[22rem]">
+  <section className="relative pt-0 xl:pt-16 pb-0 bg-faqDark overflow-hidden h-[22rem]">
     <div className="absolute -top-10" id="FAQ" />
     <motion.div
       initial={{ opacity: 0 }}
@@ -13,7 +13,7 @@ export const JoinUs = () => (
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="flex flex-wrap items-center 2xl:w-[1150px] xl:w-[1100px] w-11/12 mx-auto">
-        <div className="w-full h-[20rem] bg-dark2 rounded-xl text-white p-8  flex flex-col justify-center items-center">
+        <div className="w-full h-[20rem] bg-calBorder rounded-xl text-white p-8  flex flex-col justify-center items-center">
           <h2 className="text-3xl font-Jakartha text-center  text-blue1 font-light ">
             Any questions or feedbacks?
           </h2>
