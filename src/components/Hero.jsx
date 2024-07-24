@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import mixpanel from "mixpanel-browser";
 import dashboard from "/src/assets/images/dashboard.png";
 import { GithubIcon } from "../assets/icons/GithubIcon";
