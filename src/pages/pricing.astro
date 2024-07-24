@@ -5,17 +5,17 @@ import { PricingCompoent } from "../components/additional/PricingCompoent";
 import { Footer } from "../components/Footer.jsx";
 import { ScrollUpButton } from "../components/ScrollUpButton";
 import "../styles/Theme.css";
+import { DemoBanner } from "../components/DemoBanner";
+import { DemoButton } from "../components/DemoButton";
 import { UseOsvauld } from "../components/UseOsvauld";
 ---
 
 <Layout title="pricing">
   <Navbar client:load />
   <PricingCompoent client:load />
-  <!-- <Footer client:load />
-  <ScrollUpButton client:load /> -->
-  <style is:global>
-    body {
-      background-color: #111218;
-    }
-  </style>
+  <UseOsvauld client:load />
+  <Footer client:load />
+  <ScrollUpButton client:load />
+  <!-- <DemoBanner client:load />
+  <DemoButton client:load /> -->
 </Layout>

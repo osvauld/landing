@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ScrollUp } from "../assets/icons/ScrollUp";
 
-export const DemoBanner = ({ faq }) => {
+export const DemoBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isBeingHovered, setisBeingHovered] = useState(false);
 
@@ -32,9 +32,7 @@ export const DemoBanner = ({ faq }) => {
     <>
       {isVisible && (
         <div
-          className={`${
-            faq ? "bg-faqDark" : "bg-transparent"
-          } w-full h-20 backdrop-blur-xl fixed bottom-0 cursor-pointer flex justify-between items-center transition z-50 px-4 md:px-10`}
+          className={`bg-faqDark w-full h-20 backdrop-blur-xl fixed bottom-0 cursor-pointer flex justify-between items-center transition z-50 px-4 md:px-10`}
           onClick={redirectToDemo}
           onMouseEnter={curserEntered}
           onMouseLeave={curserRemoved}

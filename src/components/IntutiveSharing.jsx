@@ -38,7 +38,7 @@ export const IntutiveSharing = () => (
               <video
                 src={sharing}
                 alt="sharing functionality of osvauld"
-                className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl lg:rounded-3xl hero-dashboard-border-gradient sm:top-0 md:top-2 lg:top-0 xl:top-0 shadow-[0_0_10px_rgba(137,180,250,0.7)]"
+                className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl lg:rounded-3xl hero-dashboard-border-gradient sm:top-0 md:top-2 lg:top-0 xl:top-0 border-[10px] border-calBorder shadow-[rgba(0,_0,_0,_0.8)_0px_0px_40px_16px]"
                 autoPlay
                 loop
                 muted

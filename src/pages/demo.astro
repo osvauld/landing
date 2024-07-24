@@ -5,16 +5,13 @@ import { DemoComponent } from "../components/additional/DemoComponent";
 import { Footer } from "../components/Footer.jsx";
 import { ScrollUpButton } from "../components/ScrollUpButton";
 import "../styles/Theme.css";
+import { UseOsvauld } from "../components/UseOsvauld";
 ---
 
 <Layout title="demo">
   <Navbar client:load />
   <DemoComponent client:load />
-  <!-- <Footer client:load />
-  <ScrollUpButton client:load /> -->
-  <style is:global>
-    body {
-      background-color: #111218;
-    }
-  </style>
+  <UseOsvauld client:load />
+  <Footer client:load />
+  <ScrollUpButton client:load />
 </Layout>

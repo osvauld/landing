@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ScrollUp } from "../assets/icons/ScrollUp";
 import { CalenderDates } from "../assets/icons/CalenderDates";
 
-export const DemoButton = ({ faq }) => {
+export const DemoButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isBeingHovered, setisBeingHovered] = useState(false);
 

@@ -60,6 +60,10 @@ html {
   font-display: var(--fontsource-Inter-font-display, optional);
 }
 
+.pricing-content {
+  @apply font-Inter font-light tracking-wide text-faqAnswer;
+}
+
 .gradient-text {
   background: linear-gradient(
     150deg,

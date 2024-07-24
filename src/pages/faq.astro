@@ -5,16 +5,15 @@ import { FaqComponent } from "../components/additional/FaqComponent";
 import { Footer } from "../components/Footer.jsx";
 import { ScrollUpButton } from "../components/ScrollUpButton";
 import "../styles/Theme.css";
+import { DemoBanner } from "../components/DemoBanner";
+import { DemoButton } from "../components/DemoButton";
 ---
 
 <Layout title="faq">
   <Navbar client:load />
   <FaqComponent client:load />
-  <!-- <Footer client:load />
-  <ScrollUpButton client:load /> -->
-  <style is:global>
-    body {
-      background-color: #111218;
-    }
-  </style>
+  <Footer client:load />
+  <ScrollUpButton client:load />
+  <!-- <DemoBanner client:load />
+  <DemoButton client:load /> -->
 </Layout>

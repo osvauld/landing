@@ -21,7 +21,7 @@ export const DemoComponent = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.2 }}
-      className="w-full min-h-screen flex-grow flex flex-col items-center max-w-[1200px] mx-auto bg-faqDark px-4 pt-28 text-white"
+      className="w-full mb-[6rem] md:mb-[16rem] flex-grow flex flex-col items-center max-w-[1200px] mx-auto bg-faqDark px-4 pt-28 text-white"
     >
       <span className="text-xs bg-labelBackground py-2 px-4 my-2 rounded-md text-blue1">
         Helping teams manage shared credentials
