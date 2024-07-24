@@ -158,3 +158,26 @@ details[open] > div {
     content: none;
   }
 }
+
+#cc-main {
+  /** Change font **/
+  --cc-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --cc-bg: #16171f;
+  --cc-primary-color: #ffffff;
+  --cc-secondary-color: #bfc0cc;
+
+  --cc-separator-border-color: #222a30;
+
+  --cc-btn-primary-bg: #20212b;
+  --cc-btn-primary-border-color: transparent;
+  --cc-btn-primary-hover-bg: #444444;
+  --cc-btn-primary-hover-border-color: #444444;
+
+  /** Also make toggles the same color as the button **/
+  --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+
+  /** Make the buttons a bit rounder **/
+  --cc-btn-border-radius: 10px;
+}
