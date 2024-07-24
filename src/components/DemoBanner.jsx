@@ -32,7 +32,7 @@ export const DemoBanner = () => {
     <>
       {isVisible && (
         <div
-          className={`bg-faqDark w-full h-20 backdrop-blur-xl fixed bottom-0 cursor-pointer flex justify-between items-center transition z-50 px-4 md:px-10`}
+          className={`bg-transparent w-full h-20 backdrop-blur-xl fixed bottom-0 cursor-pointer flex justify-between items-center transition z-50 px-4 md:px-10`}
           onClick={redirectToDemo}
           onMouseEnter={curserEntered}
           onMouseLeave={curserRemoved}
@@ -48,7 +48,7 @@ export const DemoBanner = () => {
               className="rounded-md px-10 py-1.5 bg-labelBackground text-blue1"
               href="/demo"
             >
-              Get a Demo
+              Book a Demo
             </a>
           </div>
         </div>

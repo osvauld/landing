@@ -117,6 +117,7 @@ export const Navbar = () => {
                 <a
                   className="text-white1 font-extralight font-Jakartha text-sm flex justify-center items-center"
                   href={href}
+                  rel="noopener noreferrer"
                   aria-label={ariaLabel}
                 >
                   {label}
@@ -314,6 +315,7 @@ export const Navbar = () => {
                   key={href}
                   className=" text-white1 font-extralight font-Jakartha text-sm "
                   href={href}
+                  rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                   aria-label={ariaLabel}
                 >

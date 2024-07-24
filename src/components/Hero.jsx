@@ -8,11 +8,11 @@ import { HeroLock } from "../assets/icons/HeroLock";
 import { HeroKey } from "../assets/icons/HeroKey";
 
 export const Hero = React.memo(() => {
-  // useEffect(() => {
-  //   mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
-  //     track_pageview: true,
-  //   });
-  // }, []);
+  useEffect(() => {
+    mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
+      track_pageview: true,
+    });
+  }, []);
   return (
     <section
       className="pt-24  px-2 flex flex-col justify-start items-center bg-faqDark min-h-screen overflow-x-hidden"
@@ -28,7 +28,7 @@ export const Hero = React.memo(() => {
             <HeroKey />
           </span>
 
-          <div className="absolute top-[35%] md:top-[44%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 ">
+          <div className="absolute top-[44%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 ">
             <div className="text-blue1 h-8 text-sm font-bold ">
               <a
                 className="flex w-[80%] md:w-1/2 mx-auto justify-center items-center font-normal text-sm rounded-md bg-labelBackground h-full px-4 py-2 cursor-pointer"
@@ -50,9 +50,10 @@ export const Hero = React.memo(() => {
               </a>
             </div>
             <h1 className="text-6xl text-white1 font-semibold font-Jakartha text-center lg:text-7xl gradient-text pt-16 px-4">
-              Credential management for teams <br className="" /> redefined
+              Credential management for teams <br className="" />{" "}
+              <span className="tracking-wide">redefined</span>
             </h1>
-            <div className="text-faqAnswer font-Inter font-light text-base md:text-xl text-left md:text-center pt-12 tracking-wide">
+            <div className="text-faqAnswer font-Inter font-light text-base md:text-xl text-left md:text-center pt-12 px-4 tracking-wide">
               Open-source, self-hosted tool designed to securely{" "}
               <br className="hidden" /> manage, audit, and share credentials
               within your team.
@@ -65,6 +66,7 @@ export const Hero = React.memo(() => {
                 href="https://youtu.be/1esLbYmdHQY"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="watch demo"
               >
                 <PlayButton />
                 <span className="ml-1"> Watch Demo</span>
@@ -73,8 +75,9 @@ export const Hero = React.memo(() => {
               <a
                 className="text-blue1
             bg-faqDark border border-blue1 rounded-lg px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
-                href="https://getwaitlist.com/waitlist/14960"
+                href="https://docs.osvauld.com/installation/setting-up-osvauld/"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="get started"
               >
                 <span className="pt-px">Get started for free</span>
@@ -82,7 +85,7 @@ export const Hero = React.memo(() => {
             </div>
           </div>
         </div>
-        <div className="transform -translate-y-[12rem] md:-translate-y-[8rem]  flex justify-center items-center">
+        <div className="transform -translate-y-[8rem]  flex justify-center items-center">
           <img
             src={dashboard.src}
             alt="dashboard of osvauld"

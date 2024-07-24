@@ -49,16 +49,17 @@ export const PricingCompoent = () => {
           <div className="border-b border-[#2F303E] my-2 "></div>
           <ul className="text-white3">
             <li className="flex mt-1.5">
+              <CheckCircle />
+              <span className="ml-2">Unlimited Users</span>
+            </li>
+            <li className="flex mt-1.5">
               <CheckCircle /> <span className="ml-2">Unlimited Folders</span>
             </li>
             <li className="flex mt-1.5">
               <CheckCircle />
               <span className="ml-2">Unlimited Credentials</span>
             </li>
-            <li className="flex mt-1.5">
-              <CheckCircle />
-              <span className="ml-2"> Max 20 users</span>
-            </li>
+
             <li className="flex mt-1.5">
               <CheckCircle />
               <span className="ml-2">Limited Secret Ops</span>
