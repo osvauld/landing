@@ -13,11 +13,11 @@ export const PricingCompoent = () => {
       className="w-full flex-grow flex flex-col items-center max-w-[1200px] mx-auto bg-faqDark px-4 pt-28 mb-20 text-white"
     >
       <div className="flex flex-col justify-between items-center relative min-h-[90vh] w-full">
-        <span className="absolute -top-48  left-0 transform  z-10">
+        <span className="absolute transform z-10 -top-48 -left-48 lg:-top-12 lg:-left-32">
           <LeftBankNote />
         </span>
         <span className="w-0 md:w-[600px] "></span>
-        <span className="absolute -top-48 right-0 transform  z-10">
+        <span className="absolute transform z-10 -top-32 -right-48 lg:-top-18 lg:-right-32">
           <RightBankNote />
         </span>
         <div className="flex-grow w-full max-w-[1200px] px-4 pt-6 flex flex-col items-center z-20">
