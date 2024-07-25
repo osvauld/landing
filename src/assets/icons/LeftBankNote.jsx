@@ -75,7 +75,7 @@ export const LeftBankNote = () => {
             y2="-101.885"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#4D4F60" stopCpacity="0" />
+            <stop stopColor="#4D4F60" stopOpacity="0" />
             <stop offset="1" stopColor="#89B4FA" />
           </linearGradient>
         </defs>

@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Navbar } from "../components/Navbar.jsx";
-import { PricingCompoent } from "../components/additional/PricingCompoent";
+import { PricingComponent } from "../components/additional/PricingComponent.jsx";
 import { Footer } from "../components/Footer.jsx";
 import { ScrollUpButton } from "../components/ScrollUpButton";
 import "../styles/Theme.css";
@@ -10,9 +10,9 @@ import { DemoButton } from "../components/DemoButton";
 import { UseOsvauld } from "../components/UseOsvauld";
 ---
 
-<Layout title="pricing">
+<Layout title="Osvauld Pricing">
   <Navbar client:load />
-  <PricingCompoent client:load />
+  <PricingComponent client:load />
   <UseOsvauld client:load />
   <Footer client:load />
   <ScrollUpButton client:load />

@@ -3,7 +3,7 @@ import { CheckCircle } from "../../assets/icons/CheckCircle";
 import { RightBankNote } from "../../assets/icons/RightBankNote";
 import { LeftBankNote } from "../../assets/icons/LeftBankNote";
 
-export const PricingCompoent = () => {
+export const PricingComponent = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
