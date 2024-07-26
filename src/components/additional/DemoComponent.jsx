@@ -23,18 +23,18 @@ export const DemoComponent = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.2 }}
-      className="w-full mb-[6rem] md:mb-[16rem] max-w-[1200px] mx-auto bg-faqDark px-4 pt-28 text-white"
+      className="w-full mb-[6rem] max-w-[1200px] mx-auto bg-faqDark px-4 pt-28 text-white"
     >
       <div className="relative flex">
         <img
           src={calendarLeft.src}
           alt="left asset"
-          className="absolute left-image z-10 top-0 -left-40"
+          className="absolute left-image z-10 top-0 -left-12 md:-top-4 md:-left-32 w-3/5 md:w-1/2"
         />
         <img
           src={calendarRight.src}
           alt="right asset"
-          className="absolute left-image z-10 top-0 -right-40"
+          className="absolute left-image z-10 top-0 -right-16 md:top-18 md:-right-24 w-2/3  md:w-2/3"
         />
 
         <div className="z-30 flex flex-col items-center">

@@ -135,13 +135,13 @@ export const Navbar = () => {
           <div className="flex justify-center items-center gap-8">
             <div className="grow basis-0 justify-end hidden lg:flex">
               <span
-                className={`bg-labelBackground rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap  px-3 py-3 text-sm relative`}
+                className={`bg-labelBackground rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap  px-3 py-3 text-sm relative animate-blink`}
                 onClick={() => setTrialModal(!trialModal)}
               >
                 Try now
-                <span className="text-[10px] font-semibold text-red-600 absolute right-2 top-0 animate-blink ">
+                {/* <span className="text-[10px] font-semibold text-red-600 absolute right-2 top-0 animate-blink ">
                   New
-                </span>
+                </span> */}
                 {trialModal && (
                   <div
                     className={`absolute top-[140%] right-0 ${
