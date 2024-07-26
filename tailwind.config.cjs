@@ -59,7 +59,7 @@ module.exports = {
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-        blink: "blink 2s steps(2, start) infinite",
+        blink: "blink 2s ease-in infinite",
       },
 
       keyframes: {
@@ -69,8 +69,10 @@ module.exports = {
           },
         },
         blink: {
-          "0%, 100%": { visibility: "hidden" },
-          "50%": { visibility: "visible" },
+          "0% ": { backgroundColor: "transparent" },
+          "20%": { background: "#20212B" },
+          "80%": { background: "#20212B" },
+          "100%": { backgroundColor: "transparent" },
         },
       },
     },
