@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import mixpanel from "mixpanel-browser";
-import dashboard from "/src/assets/images/dashboard.png";
+import dashboardMobile from "/src/assets/images/dashboardMobile.png";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { PlayButton } from "../assets/icons/PlayButton";
@@ -114,10 +114,10 @@ export const Hero = React.memo(() => {
             </div>
           </div>
         </div>
-        <div className="transform -translate-y-[8rem]  flex justify-center items-center">
+        <div className="transform -translate-y-[8rem] flex justify-center items-center">
           <img
-            src={dashboard.src}
             alt="dashboard of osvauld"
+            src={dashboardMobile.src}
             className="w-[95vw] lg:w-full"
           />
         </div>

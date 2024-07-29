@@ -39,8 +39,8 @@ module.exports = {
         labelSperator: "#4D4F60",
       },
       fontFamily: {
-        Inter: "Inter",
-        Jakartha: "Plus Jakarta Sans",
+        Inter: ["Inter", "Helvetica", "Arial", "sans-serif"],
+        Jakartha: ["Plus Jakarta Sans", "Arial", "sans-serif"],
       },
       screens: {
         xs: "530px",
