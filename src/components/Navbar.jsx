@@ -45,6 +45,7 @@ const navbarLinks = [
 ];
 
 const scrollToTop = () => {
+  window.location.href = "/";
   window.scrollTo({
     top: 0,
     behavior: "smooth",
@@ -87,7 +88,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="w-screen h-24 flex justify-center items-center fixed z-40 backdrop-blur-xl">
+    <nav className="w-screen h-20 flex justify-center items-center fixed z-40 backdrop-blur-xl">
       <div className="w-full mx-auto px-4 flex items-center relative max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0 }}
@@ -97,10 +98,10 @@ export const Navbar = () => {
         >
           <div className="flex justify-start items-center grow basis-0">
             <button
-              className="text-white3 font-Jakartha font-medium text-4xl pl-2"
+              className="text-white3 font-Jakartha font-medium text-4xl pl-2 p-3"
               onClick={scrollToTop}
             >
-              <a href="/">osvauld</a>
+              <span>osvauld</span>
             </button>
           </div>
         </motion.div>

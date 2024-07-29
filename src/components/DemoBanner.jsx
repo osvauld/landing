@@ -39,7 +39,7 @@ export const DemoBanner = () => {
         >
           <div className="w-full max-w-[1200px] flex justify-between items-center mx-auto">
             <div className="flex flex-col">
-              <h6 className="font-Inter text-blue1 font-semibold">
+              <h6 className="font-Inter text-blue1 font-medium">
                 Schedule a 1:1 demo
               </h6>
               <span className="pricing-content ">Meet our team</span>

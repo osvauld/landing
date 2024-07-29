@@ -17,6 +17,7 @@ import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/800.css";
 import { SEO } from "astro-seo";
 import thumbnail from "../assets/images/thumbnail.webp";
+import Common from "./Common.astro";
 
 interface Props {
   title: string;
@@ -92,6 +93,7 @@ const {
   </head>
 
   <body>
+    <Common />
     <slot />
     <style is:global>
       @font-face {
