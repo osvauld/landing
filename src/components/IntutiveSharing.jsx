@@ -42,6 +42,8 @@ export const IntutiveSharing = () => (
                 autoPlay
                 loop
                 muted
+                loading="lazy"
+                decoding="async"
                 playsInline
               />
             </div>
