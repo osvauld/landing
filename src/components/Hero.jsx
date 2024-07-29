@@ -44,7 +44,7 @@ export const Hero = React.memo(() => {
 
   return (
     <section
-      className="pt-24  px-2 flex flex-col justify-start items-center bg-faqDark min-h-screen overflow-x-hidden"
+      className="pt-20  px-2 flex flex-col justify-start items-center bg-faqDark min-h-screen overflow-x-hidden"
       id="home"
     >
       <div className="max-w-[1400px] overflow-x-hidden">

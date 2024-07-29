@@ -18,9 +18,9 @@ export const SecureByDesign = () => {
           <div className="py-10 w-full flex flex-col  justify-between items-center gap-6 mt-4">
             <div className="flex flex-col xl:flex-row items-center justify-center gap-6 w-full">
               <article className="bg-calBorder text-left rounded-lg xl:w-[46%] min-h-[15rem]  p-6 flex flex-col justify-start items-center w-[95%]">
-                <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
+                <h3 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   OpenPGP with ECC
-                </h4>
+                </h3>
                 <p className="text-base font-extralight mt-2">
                   In order to protect your vault key and facilitate the sharing
                   functionality, osvauld uses the OpenPGP RFC 4880 standard with
@@ -30,9 +30,9 @@ export const SecureByDesign = () => {
                 </p>
               </article>
               <article className="bg-calBorder text-left rounded-lg xl:w-[46%] min-h-[15rem]  p-6  flex flex-col justify-start items-center w-[95%]">
-                <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
+                <h3 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   End-to-end Encryption
-                </h4>
+                </h3>
                 <p className="text-base font-extralight mt-2">
                   With Zero-knowledge Architecture, all your credentials
                   including meta data never leaves your browser unencrypted and
@@ -44,9 +44,9 @@ export const SecureByDesign = () => {
             </div>
             <div className="flex flex-col  xl:flex-row items-center justify-center gap-6">
               <article className="bg-calBorder text-left rounded-lg xl:w-[46%] min-h-[15rem]  p-6 flex flex-col justify-start items-center w-[95%]">
-                <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
+                <h3 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   State-of-the-Art Protection
-                </h4>
+                </h3>
                 <p className="text-base font-extralight mt-2">
                   Powered by Sequoia-PGP and WebAssembly, Our implementation
                   provides Additional isolation and type safety to cryptographic
@@ -56,9 +56,9 @@ export const SecureByDesign = () => {
                 </p>
               </article>
               <article className="bg-calBorder text-left rounded-lg xl:w-[46%] min-h-[15rem] p-6 flex flex-col justify-start items-center w-[95%]">
-                <h4 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
+                <h3 className="text-blue1 w-full text-2xl font-Jakartha font-light xl:tracking-[0.015rem]">
                   Lightning Batch Crypto
-                </h4>
+                </h3>
                 <p className="text-base font-extralight mt-2">
                   Optimized Rust implementation in WASM enables near-native
                   speeds for batch operations, ensuring quick secure sharing.

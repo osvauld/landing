@@ -18,18 +18,18 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="flex bg-blue1 text-dark1  cursor-pointer justify-center items-center px-3 py-1.5 rounded whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
+                  <span className="flex bg-blue1 text-dark1  cursor-pointer justify-center items-center px-3 py-1.5 rounded whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
                     <span className="ml-2 font-normal">Drop your contact</span>
-                  </button>
+                  </span>
                 </a>
                 <a
                   href="https://cal.com/abrahamgeorge/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="flex border border-blue1 cursor-pointer rounded text-blue1 justify-center items-center px-3 py-1.5 whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
+                  <span className="flex border border-blue1 cursor-pointer rounded text-blue1 justify-center items-center px-3 py-1.5 whitespace-nowrap min-w-[20rem] w-full xl:w-auto">
                     <span className="ml-2">Book a demo</span>
-                  </button>
+                  </span>
                 </a>
               </div>
             </div>
@@ -41,7 +41,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Features"
                   >
                     Features
@@ -50,7 +50,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Integrations"
                   >
                     Integrations
@@ -59,7 +59,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Pricing"
                   >
                     Pricing
@@ -68,7 +68,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Roadmap"
                   >
                     Roadmap
@@ -82,7 +82,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="About"
                   >
                     About
@@ -91,7 +91,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Our team"
                   >
                     Our Team
@@ -100,7 +100,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-white4 lg:text-white1 whitespace-nowrap"
+                    className="text-white4 lg:text-white1 whitespace-nowrap p-3"
                     aria-label="Our Values"
                   >
                     Our Values
@@ -109,7 +109,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Blog"
                   >
                     Blog
@@ -123,7 +123,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="https://discord.com/invite/kV6gBeM6Fm"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Discord"
                   >
                     Discord
@@ -132,7 +132,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="https://github.com/osvauld"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Github"
                   >
                     Github
@@ -141,7 +141,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="https://www.linkedin.com/company/osvauld"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="LinkedIn"
                   >
                     LinkedIn
@@ -150,7 +150,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="https://www.instagram.com/osvauld/"
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Instagram"
                   >
                     Instagram
@@ -164,7 +164,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href=""
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Downloads"
                   >
                     Downloads
@@ -173,7 +173,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href=""
-                    className="text-white4 lg:text-white1"
+                    className="text-white4 lg:text-white1 p-3"
                     aria-label="Docs"
                   >
                     Docs
@@ -192,7 +192,7 @@ export const Footer = () => {
                   Privacy Policy
                 </a>
               </div>
-              <span className="whitespace-nowrap">
+              <span className="whitespace-nowrap xl:-ml-10">
                 ©2024 osvauld. All rights reserved.
               </span>
             </div>
@@ -202,6 +202,7 @@ export const Footer = () => {
                 aria-label="Linktree Icon"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-3"
               >
                 <LinktreeIcon color={"#A6B0BB"} />
               </a>
@@ -210,6 +211,7 @@ export const Footer = () => {
                 aria-label="Github Icon"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-3"
               >
                 <GithubIcon color={"#A6B0BB"} />
               </a>
@@ -218,6 +220,7 @@ export const Footer = () => {
                 aria-label="Discord Icon"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-3"
               >
                 <DiscordIcon color={"#A6B0BB"} />
               </a>
@@ -226,6 +229,7 @@ export const Footer = () => {
                 aria-label="LinkdinIcon"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-3"
               >
                 <LinkdinIcon color={"#A6B0BB"} />
               </a>
@@ -234,6 +238,7 @@ export const Footer = () => {
                 aria-label="Instagram Icon"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-3"
               >
                 <InstagramIcon color={"#A6B0BB"} />
               </a>
