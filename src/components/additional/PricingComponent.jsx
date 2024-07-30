@@ -89,7 +89,7 @@ export const PricingComponent = () => {
                 Enterprise Edition
               </h2>
               <p className="pricing-content mb-4">
-                Built with scalability, security, and enterprice grade feature
+                Built with scalability, security, and enterprise grade feature
                 set in mind
               </p>
               <strong className="text-[46px] text-blue1 font-semibold font-Jakartha">
