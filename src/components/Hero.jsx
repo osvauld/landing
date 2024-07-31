@@ -22,9 +22,9 @@ export const Hero = React.memo(() => {
         translations: {
           en: {
             consentModal: {
-              title: "We use cookies",
+              title: "We use analytics",
               description:
-                "We use cookies to understand how many users visit our site and where they come from, which helps us enhance our services. By continuing to browse, you agree to our use of cookies.",
+                "We use analytics to collect visitor insights, which helps us enhance our services. By continuing to browse, you agree to our use of analytics.",
               acceptAllBtn: "Accept",
               acceptNecessaryBtn: "Reject",
             },
@@ -34,9 +34,9 @@ export const Hero = React.memo(() => {
 
       onConsent: ({ cookie }) => {
         if (cookie.categories.length !== 0) {
-          mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
-            track_pageview: true,
-          });
+          // mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
+          //   track_pageview: true,
+          // });
         }
       },
     });
