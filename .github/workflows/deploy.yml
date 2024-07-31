@@ -22,11 +22,16 @@ jobs:
       with:
         node-version: 18
 
+
+    - name: Install yarn
+      run: npm install --global yarn
+
+
     - name: Install dependencies
-      run: npm install
+      run: yarn install
 
     - name: build astro js
-      run: npm run build
+      run: yarn run build
 
     - name: Set up AWS CLI
       uses: aws-actions/configure-aws-credentials@v1
