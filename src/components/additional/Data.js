@@ -100,8 +100,8 @@ const Data = [
   },
   {
     Question:
-      "What is the difference between Osvauld Community Edition (CE) and Enterprise Edition (EE)?",
-    Answer: `The main differences between the Osvauld Community Edition (CE) and the Enterprise Edition (EE) are focused on the added functionalities tailored for larger organizations that require more robust security and management features. The Enterprise Edition includes: \n
+      "What is the difference between Osvauld Community Edition (CE) and Pro Edition (PE)?",
+    Answer: `The main differences between the Osvauld Community Edition (CE) and the Pro Edition (EE) are focused on the added functionalities tailored for larger organizations that require more robust security and management features. The Pro Edition includes: \n
   
       1) Audit Logs: Comprehensive logging of all actions and changes within the system crucial for compliance and security audits.\n
       2) Multi-Factor Authentication (MFA): An additional layer of security that requires users to verify their identity using more than one authentication method, thus significantly reducing the risk of unauthorized access.`,
