@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Navbar } from "../components/Navbar.jsx";
 import { FaqComponent } from "../components/additional/FaqComponent";
 import { Footer } from "../components/Footer.jsx";
 import { ScrollUpButton } from "../components/ScrollUpButton";
@@ -9,11 +8,7 @@ import "../styles/Theme.css";
 ---
 
 <Layout title="FAQ's">
-  <Navbar client:load />
   <FaqComponent client:load />
   <UseOsvauld client:load />
-  <Footer client:load />
   <ScrollUpButton client:load />
-  <!-- <DemoBanner client:load />
-  <DemoButton client:load /> -->
 </Layout>

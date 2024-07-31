@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Hero } from "../components/Hero.jsx";
-import { Navbar } from "../components/Navbar.jsx";
 import { SecureByDesign } from "../components/SecureByDesign.jsx";
 import { IntutiveSharing } from "../components/IntutiveSharing.jsx";
 import { OnPremise } from "../components/OnPremise.jsx";
@@ -9,8 +8,6 @@ import { UseOsvauld } from "../components/UseOsvauld.jsx";
 import { JoinUs } from "../components/JoinUs.jsx";
 import { OpenSource } from "../components/OpenSource.jsx";
 import { TechStack } from "../components/TechStack.jsx";
-import { Divider } from "../components/Divider";
-import { Footer } from "../components/Footer.jsx";
 import { ScrollUpButton } from "../components/ScrollUpButton";
 import { DemoBanner } from "../components/DemoBanner";
 import { DemoButton } from "../components/DemoButton";
@@ -18,7 +15,6 @@ import "../styles/Theme.css";
 ---
 
 <Layout title="Osvauld">
-  <Navbar client:load />
   <Hero client:load />
   <TechStack client:load />
   <SecureByDesign client:load />
@@ -27,7 +23,6 @@ import "../styles/Theme.css";
   <OpenSource client:load />
   <JoinUs client:load />
   <UseOsvauld client:load />
-  <Footer />
   <ScrollUpButton client:load />
   <DemoBanner client:load />
   <DemoButton client:load />

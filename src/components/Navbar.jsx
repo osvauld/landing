@@ -1,6 +1,9 @@
-import { useState } from "react";
 import React from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import mixpanel from "mixpanel-browser";
+import "vanilla-cookieconsent/dist/cookieconsent.css";
+import * as CookieConsent from "vanilla-cookieconsent";
 
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { CloseIcon } from "../assets/icons/CloseIcon";
@@ -12,11 +15,6 @@ import { Tick } from "../assets/icons/Tick";
 import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 
 const navbarLinks = [
-  // {
-  //   label: "How it works",
-  //   href: "https://docs.osvauld.com/introduction/overview/",
-  //   ariaLabel: "How it works",
-  // },
   {
     label: "Book a Demo",
     href: "/demo",
@@ -60,6 +58,37 @@ export const Navbar = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    CookieConsent.run({
+      categories: {
+        analytics: {},
+      },
+
+      language: {
+        default: "en",
+        translations: {
+          en: {
+            consentModal: {
+              title: "We use analytics",
+              description:
+                "We use analytics to collect visitor insights, which helps us enhance our services. By continuing to browse, you agree to our use of analytics.",
+              acceptAllBtn: "Accept",
+              acceptNecessaryBtn: "Reject",
+            },
+          },
+        },
+      },
+
+      onConsent: ({ cookie }) => {
+        if (cookie.categories.length !== 0) {
+          mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
+            track_pageview: true,
+          });
+        }
+      },
+    });
+  }, []);
 
   const copyToClipboard = async (text, index) => {
     try {
@@ -119,6 +148,7 @@ export const Navbar = () => {
                   className="text-white1 font-extralight font-Jakartha text-sm flex justify-center items-center"
                   href={href}
                   rel="noopener noreferrer"
+                  target="_blank"
                   aria-label={ariaLabel}
                 >
                   {label}
@@ -317,6 +347,7 @@ export const Navbar = () => {
                   className=" text-white1 font-extralight font-Jakartha text-sm "
                   href={href}
                   rel="noopener noreferrer"
+                  target="_blank"
                   onClick={() => setIsOpen(false)}
                   aria-label={ariaLabel}
                 >

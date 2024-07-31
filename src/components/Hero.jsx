@@ -1,47 +1,17 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import mixpanel from "mixpanel-browser";
+import "vanilla-cookieconsent/dist/cookieconsent.css";
+import * as CookieConsent from "vanilla-cookieconsent";
+
 import dashboardMobile from "/src/assets/images/dashboardMobile.png";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { PlayButton } from "../assets/icons/PlayButton";
 import { HeroLock } from "../assets/icons/HeroLock";
 import { HeroKey } from "../assets/icons/HeroKey";
-import "vanilla-cookieconsent/dist/cookieconsent.css";
-import * as CookieConsent from "vanilla-cookieconsent";
 
 export const Hero = React.memo(() => {
-  useEffect(() => {
-    CookieConsent.run({
-      categories: {
-        analytics: {},
-      },
-
-      language: {
-        default: "en",
-        translations: {
-          en: {
-            consentModal: {
-              title: "We use analytics",
-              description:
-                "We use analytics to collect visitor insights, which helps us enhance our services. By continuing to browse, you agree to our use of analytics.",
-              acceptAllBtn: "Accept",
-              acceptNecessaryBtn: "Reject",
-            },
-          },
-        },
-      },
-
-      onConsent: ({ cookie }) => {
-        if (cookie.categories.length !== 0) {
-          // mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
-          //   track_pageview: true,
-          // });
-        }
-      },
-    });
-  }, []);
-
   return (
     <section
       className="pt-20  px-2 flex flex-col justify-start items-center bg-faqDark min-h-screen overflow-x-hidden"
