@@ -86,7 +86,7 @@ export const PricingComponent = () => {
             </div>
             <div className="pricing-card h-[600px] w-full flex flex-col p-4">
               <h2 className="font-Jakartha font-medium tracking-tight text-[32px] mb-4">
-                Enterprise Edition
+                Pro Edition
               </h2>
               <p className="pricing-content mb-4">
                 Built with scalability, security, and enterprise grade feature
@@ -138,8 +138,8 @@ export const PricingComponent = () => {
               </h2>
               <p className="pricing-content mb-4 text-left md:text-center">
                 Built to ensure quicker issue resolution, dedicated live support
-                for all users. Available for both Community and Enterprise
-                Edition users.
+                for all users. Available for both Community and Pro Edition
+                users.
               </p>
               <strong className="text-[46px] text-blue1 font-semibold font-Jakartha">
                 $50
