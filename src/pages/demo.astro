@@ -1,17 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Navbar } from "../components/Navbar.jsx";
 import { DemoComponent } from "../components/additional/DemoComponent";
-import { Footer } from "../components/Footer.jsx";
 import { ScrollUpButton } from "../components/ScrollUpButton";
 import "../styles/Theme.css";
 import { UseOsvauld } from "../components/UseOsvauld";
 ---
 
 <Layout title="Demo">
-  <Navbar client:load />
+  <!-- <Navbar client:load /> -->
   <DemoComponent client:load />
   <UseOsvauld client:load />
-  <Footer client:load />
   <ScrollUpButton client:load />
 </Layout>

@@ -17,7 +17,9 @@ import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/800.css";
 import { SEO } from "astro-seo";
 import thumbnail from "../assets/images/thumbnail.webp";
-import Common from "./Common.astro";
+
+import Navbar from "./mainNavbar.astro";
+import Footer from "./mainFooter.astro";
 
 interface Props {
   title: string;
@@ -92,9 +94,10 @@ const {
     <meta name="generator" content={Astro.generator} />
   </head>
 
-  <body>
-    <Common />
+  <>
+    <Navbar />
     <slot />
+    <Footer />
     <style is:global>
       @font-face {
         font-family: "Inter";
@@ -141,5 +144,5 @@ const {
         background-color: #2f303e; /* color of the thumb on hover */
       }
     </style>
-  </body>
+  </>
 </html>
