@@ -9,6 +9,7 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { PlayButton } from "../assets/icons/PlayButton";
 import { HeroLock } from "../assets/icons/HeroLock";
+import { HeroShield } from "../assets/icons/HeroShield";
 import { HeroKey } from "../assets/icons/HeroKey";
 
 export const Hero = React.memo(() => {
@@ -19,18 +20,18 @@ export const Hero = React.memo(() => {
     >
       <div className="max-w-[1400px] overflow-x-hidden">
         <div className="flex justify-between relative">
-          <span className="items-start trasform -translate-y-10  translate-x-0 lg:translate-x-16">
-            <HeroLock />
+          <span className="items-start trasform translate-x-48 lg:translate-x-0 -translate-y-4 lg:-translate-y-10 ">
+            <HeroShield />
           </span>
           <span className="w-0 md:w-[400px] "></span>
-          <span className="transform -translate-y-24 md:translate-y-0 md:-translate-x-20">
+          <span className="transform  md:translate-y-8 lg:-translate-y-12 -translate-x-36 lg:translate-x-20 ">
             <HeroKey />
           </span>
 
-          <div className="absolute top-[44%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 ">
-            <div className="text-blue1 h-8 text-sm font-bold ">
+          <div className="absolute top-[34%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 ">
+            <div className="text-blue1 h-8 text-sm font-bold flex justify-center">
               <a
-                className="flex w-[80%] md:w-1/2 mx-auto justify-center items-center font-normal text-sm rounded-md bg-labelBackground h-full px-4 py-2 cursor-pointer"
+                className="flex  mx-auto justify-center items-center font-normal text-sm rounded-md bg-labelBackground h-full px-4 py-2 cursor-pointer"
                 href="https://github.com/osvauld/web-client"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,46 +50,52 @@ export const Hero = React.memo(() => {
               </a>
             </div>
             <h1 className="text-6xl text-white1 font-semibold font-Jakartha text-center lg:text-7xl gradient-text pt-16 px-4">
-              Credential management for teams <br className="" />{" "}
-              <span className="tracking-wide">redefined</span>
+              <span className="whitespace-normal lg:whitespace-nowrap">
+                Credential
+                <br className="block lg:hidden" /> management,
+              </span>{" "}
+              <br className="block lg:hidden" />{" "}
+              <span className="whitespace-normal lg:whitespace-nowrap">
+                for teams, <br className="block lg:hidden" />{" "}
+                <span className="tracking-wide">Redefined</span>
+              </span>
             </h1>
-            <div className="text-faqAnswer font-Inter font-light text-base md:text-xl text-left md:text-center pt-12 px-4 tracking-wide">
+            <div className="text-faqAnswer font-Inter font-light text-base md:text-lg text-center pt-12 px-4 tracking-wide max-w-[99vw]">
               Open-source, self-hosted tool designed to securely{" "}
               <br className="hidden" /> manage, audit, and share credentials
               within your team.
               <br className="hidden" /> No more scrounging over Slack or Google
               Sheets
             </div>
-            <div className="flex justify-center  gap-4 md:flex-row  text-sm flex-wrap pt-12">
+            <div className="flex justify-center gap-4 md:flex-row  text-sm flex-wrap pt-12">
               <a
-                className=" rounded-lg font-normal text-black flex justify-center items-center cursor-pointer bg-blue1 transition whitespace-nowrap  px-3 py-2 "
+                className="rounded-lg font-medium text-black bg-blue1  px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
+                href="https://docs.osvauld.com/installation/setting-up-osvauld/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="get started"
+              >
+                <span className="pt-px ">Get started for free</span>
+              </a>
+              <a
+                className="text-blue1
+                bg-faqDark border rounded-lg border-blue1  flex justify-center items-center cursor-pointer transition whitespace-nowrap  px-3 py-2 "
                 href="https://youtu.be/1esLbYmdHQY"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="watch demo"
               >
                 <PlayButton />
-                <span className="ml-1"> Watch Demo</span>
-              </a>
-
-              <a
-                className="text-blue1
-            bg-faqDark border border-blue1 rounded-lg px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
-                href="https://docs.osvauld.com/installation/setting-up-osvauld/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="get started"
-              >
-                <span className="pt-px">Get started for free</span>
+                <span className="ml-1 font-medium"> Watch Demo</span>
               </a>
             </div>
           </div>
         </div>
-        <div className="transform -translate-y-[8rem] flex justify-center items-center">
+        <div className="transform -translate-y-[20rem] lg:-translate-y-[24rem] flex justify-center items-center">
           <img
             alt="dashboard of osvauld"
             src={dashboardMobile.src}
-            className="w-[95vw] lg:w-full"
+            className="w-[95vw] "
           />
         </div>
       </div>

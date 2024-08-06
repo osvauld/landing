@@ -82,9 +82,9 @@ export const Navbar = () => {
 
       onConsent: ({ cookie }) => {
         if (cookie.categories.length !== 0) {
-          mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
-            track_pageview: true,
-          });
+          // mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
+          //   track_pageview: true,
+          // });
         }
       },
     });

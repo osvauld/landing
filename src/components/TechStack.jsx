@@ -16,7 +16,7 @@ export function TechStack() {
   ];
 
   return (
-    <div className="h-auto -mt-32 rounded-md flex flex-col antialiased  dark:bg-faqDark dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div className="h-auto -mt-[19rem] lg:-mt-[24rem] rounded-md flex flex-col antialiased  dark:bg-faqDark dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards items={logos} direction="left" speed="fast" />
     </div>
   );
