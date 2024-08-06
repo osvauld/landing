@@ -15,23 +15,23 @@ import { HeroKey } from "../assets/icons/HeroKey";
 export const Hero = React.memo(() => {
   return (
     <section
-      className="pt-20  px-2 flex flex-col justify-start items-center bg-faqDark min-h-screen overflow-x-hidden"
+      className="pt-20  px-2 flex flex-col justify-start items-center bg-faqDark overflow-x-hidden min-h-screen"
       id="home"
     >
-      <div className="max-w-[1400px] overflow-x-hidden">
+      <div className="max-w-[1440px] overflow-x-hidden">
         <div className="flex justify-between relative">
-          <span className="items-start trasform translate-x-48 lg:translate-x-0 -translate-y-4 lg:-translate-y-10 ">
+          <span className="items-start trasform translate-x-48 lg:translate-x-0 xl:-translate-x-16 -translate-y-4 lg:-translate-y-10 ">
             <HeroShield />
           </span>
-          <span className="w-0 md:w-[400px] "></span>
-          <span className="transform  md:translate-y-8 lg:-translate-y-12 -translate-x-36 lg:translate-x-20 ">
+          <span className="w-[400px]"></span>
+          <span className="transform  md:translate-y-8 lg:translate-y-[10rem] -translate-x-36 lg:translate-x-[8rem] ">
             <HeroKey />
           </span>
 
-          <div className="absolute top-[34%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 ">
+          <div className="absolute top-[48%] left-1/2  transform -translate-x-1/2 -translate-y-1/2 ">
             <div className="text-blue1 h-8 text-sm font-bold flex justify-center">
               <a
-                className="flex  mx-auto justify-center items-center font-normal text-sm rounded-md bg-labelBackground h-full px-4 py-2 cursor-pointer"
+                className="flex  mx-auto justify-center items-center font-normal text-sm xl:text-base rounded-md bg-labelBackground h-full px-4 py-2 cursor-pointer"
                 href="https://github.com/osvauld/web-client"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,7 +49,7 @@ export const Hero = React.memo(() => {
                 </span>
               </a>
             </div>
-            <h1 className="text-6xl text-white1 font-semibold font-Jakartha text-center lg:text-7xl gradient-text pt-16 px-4">
+            <h1 className="text-6xl text-white1 font-semibold font-Jakartha text-center lg:text-7xl xl:text-8xl gradient-text pt-16 px-4">
               <span className="whitespace-normal lg:whitespace-nowrap">
                 Credential
                 <br className="block lg:hidden" /> management,
@@ -60,16 +60,17 @@ export const Hero = React.memo(() => {
                 <span className="tracking-wide">Redefined</span>
               </span>
             </h1>
-            <div className="text-faqAnswer font-Inter font-light text-base md:text-lg text-center pt-12 px-4 tracking-wide max-w-[99vw]">
+            <div className="text-faqAnswer font-Inter font-light text-base md:text-lg xl:text-xl text-center pt-12 px-4 tracking-wide max-w-[99vw]">
               Open-source, self-hosted tool designed to securely{" "}
-              <br className="hidden" /> manage, audit, and share credentials
-              within your team.
-              <br className="hidden" /> No more scrounging over Slack or Google
-              Sheets
+              <br className="hidden" /> manage, audit,{" "}
+              <br className=" hidden xl:block" /> and share credentials within
+              your team.
+              <br className=" hidden xl:block" /> No more scrounging over Slack
+              or Google Sheets
             </div>
-            <div className="flex justify-center gap-4 md:flex-row  text-sm flex-wrap pt-12">
+            <div className="flex  items-center justify-center gap-4 md:flex-row  text-sm flex-wrap pt-12">
               <a
-                className="rounded-lg font-medium text-black bg-blue1  px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
+                className="rounded-lg font-medium text-black bg-blue1  px-3 py-2 text-sm whitespace-nowrap  flex cursor-pointer"
                 href="https://docs.osvauld.com/installation/setting-up-osvauld/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -91,7 +92,7 @@ export const Hero = React.memo(() => {
             </div>
           </div>
         </div>
-        <div className="transform -translate-y-[20rem] lg:-translate-y-[24rem] flex justify-center items-center">
+        <div className="transform  flex justify-center items-center">
           <img
             alt="dashboard of osvauld"
             src={dashboardMobile.src}
