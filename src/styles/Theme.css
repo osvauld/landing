@@ -210,3 +210,13 @@ details[open] > div {
   /** Make the buttons a bit rounder **/
   --cc-btn-border-radius: 10px;
 }
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
