@@ -1,45 +1,66 @@
 "use client";
-import thumbnail from "/src/assets/images/thumbnail.webp";
-import sharing from "/src/assets/images/sharing.webm";
-import meet from "/src/assets/images/meetOsvauld.png";
-import dashboard from "/src/assets/images/Dashboardnew.png";
+
 import { Tabs } from "../components/ui/tabs";
+import CredentialCreation from "/src/assets/videos/CredentialCreation.webm";
+import CredentialToEnv from "/src/assets/videos/CredentialToEnv.webm";
+import CredentialToGroup from "/src/assets/videos/CredentialToGroup.webm";
+import Environment from "/src/assets/videos/Environment.webm";
+import FolderToUsers from "/src/assets/videos/FolderToUsers.webm";
+import PrivateCredentials from "/src/assets/videos/PrivateCredentials.webm";
 
 export function AnimatedTabs() {
   const tabs = [
     {
-      title: "Product",
-      value: "product",
+      title: "Credential Creation",
+      value: "Credential Creation",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-red-500">
-          <DummyContent />
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-white">
+          <CredentialCreationComponent />
         </div>
       ),
     },
     {
-      title: "Services",
-      value: "services",
+      title: "Private Credentials",
+      value: "Private Credentials",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-green-400">
-          <DummyContent2 />
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-white">
+          <PrivateCredentialsComponent />
         </div>
       ),
     },
     {
-      title: "Playground",
-      value: "playground",
+      title: "Credential To Group",
+      value: "Credential To Group",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-blue-400">
-          <DummyContent3 />
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-white">
+          <CredentialToGroupComponent />
         </div>
       ),
     },
     {
-      title: "Content",
-      value: "content",
+      title: "Folder To Users",
+      value: "Folder To Users",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-yellow-300">
-          <DummyContent4 />
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-white">
+          <FolderToUsersComponent />
+        </div>
+      ),
+    },
+    {
+      title: "Environment",
+      value: "Environment",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-white">
+          <EnvironmentComponent />
+        </div>
+      ),
+    },
+    {
+      title: "Credential To Environment",
+      value: "Credential To Env",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-white">
+          <CredentialToEnvComponent />
         </div>
       ),
     },
@@ -52,54 +73,96 @@ export function AnimatedTabs() {
   );
 }
 
-const DummyContent = () => {
+const CredentialCreationComponent = () => {
   return (
-    <img
-      src={thumbnail.src}
-      alt="dummy image"
+    <video
+      src={CredentialCreation}
+      alt="Credential Creation video"
+      autoPlay
+      loop
+      muted
+      playsInline
       width="1000"
       height="1000"
-      className="object-cover object-left-top h-full absolute  inset-x-0 w-full rounded-xl mx-auto"
+      className="object-contain object-center h-full absolute  inset-x-0 w-full rounded-xl mx-auto"
     />
   );
 };
 
-const DummyContent2 = () => {
+const PrivateCredentialsComponent = () => {
   return (
     <video
-      src={sharing}
-      alt="sharing functionality of osvauld"
-      className="object-cover object-left-top h-full absolute  inset-x-0 w-full rounded-xl mx-auto"
+      src={PrivateCredentials}
+      alt="Private Credentials creation video"
+      className="object-contain object-center h-full absolute  inset-x-0 w-full rounded-xl mx-auto"
       autoPlay
       loop
       muted
-      loading="lazy"
-      decoding="async"
       playsInline
     />
   );
 };
 
-const DummyContent3 = () => {
+const CredentialToGroupComponent = () => {
   return (
-    <img
-      src={meet.src}
-      alt="dummy image"
+    <video
+      src={CredentialToGroup}
+      alt="Credential To Group"
+      autoPlay
+      loop
+      muted
+      playsInline
       width="1000"
       height="1000"
-      className="object-cover object-left-top h-full absolute  inset-x-0 w-full rounded-xl mx-auto"
+      className="object-contain object-center h-full absolute  inset-x-0 w-full rounded-xl mx-auto"
     />
   );
 };
 
-const DummyContent4 = () => {
+const FolderToUsersComponent = () => {
   return (
-    <img
-      src={dashboard.src}
-      alt="dummy image"
+    <video
+      src={FolderToUsers}
+      alt="Folder To Users"
+      autoPlay
+      loop
+      muted
+      playsInline
       width="1000"
       height="1000"
-      className="object-cover object-left-top h-full absolute  inset-x-0 w-full rounded-xl mx-auto"
+      className="object-contain object-center h-full absolute  inset-x-0 w-full rounded-xl mx-auto"
+    />
+  );
+};
+
+const EnvironmentComponent = () => {
+  return (
+    <video
+      src={Environment}
+      alt="Folder To Users"
+      autoPlay
+      loop
+      muted
+      playsInline
+      width="1000"
+      height="1000"
+      className="object-contain object-center h-full absolute  inset-x-0 w-full rounded-xl mx-auto"
+    />
+  );
+};
+
+const CredentialToEnvComponent = () => {
+  return (
+    <video
+      src={CredentialToEnv}
+      alt="Folder To Users"
+      autoPlay
+      loop
+      muted
+      playsInline
+      width="1000"
+      height="1000"
+      className="object-contain object-center h-full absolute  inset-x-0 w-full rounded-xl mx-auto"
     />
   );
 };
