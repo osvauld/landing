@@ -41,7 +41,7 @@ export const ProtectWhatMatters = () => {
 
           <div className="cards grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 md:gap-x-10 w-full min-w-[360px] max-w-[331px] md:max-w-[900px] ">
             <div className="feature-card  h-[600px] w-full flex flex-col p-6">
-              <h2 className="font-Jakartha font-normal tracking-tight text-4xl mb-4 gradient-text-bottom ">
+              <h2 className="font-Jakartha font-normal tracking-tight text-4xl mb-4 gradient-text-bottom leading-tight">
                 Unbreakable Security with OpenPGP and ECC
               </h2>
               <p className="pricing-content mb-4">
@@ -51,7 +51,7 @@ export const ProtectWhatMatters = () => {
               </p>
             </div>
             <div className="feature-card h-[600px] w-full flex flex-col p-6">
-              <h2 className="font-Jakartha font-normal tracking-tight text-4xl mb-4 gradient-text-bottom ">
+              <h2 className="font-Jakartha font-normal tracking-tight text-4xl mb-4 gradient-text-bottom leading-tight ">
                 Absolute End-to-End Encryption with Zero-Knowledge Security
               </h2>
               <p className="pricing-content mb-4">
@@ -65,7 +65,7 @@ export const ProtectWhatMatters = () => {
             </div>
             <div className="feature-card  h-[600px] w-full md:h-[452px] md:col-span-2  p-6 grid grid-col-1 lg:grid-cols-2 text-left">
               <div>
-                <h2 className="font-Jakartha font-normal tracking-tight text-4xl mb-4 gradient-text-bottom">
+                <h2 className="font-Jakartha font-normal leading-tight tracking-tight text-4xl mb-4 gradient-text-bottom">
                   Blazing Fast, Secure and State-of-the-Art Cryptography
                 </h2>
                 <p className="pricing-content mb-4 text-left ">

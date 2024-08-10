@@ -45,7 +45,7 @@ export const Hero = () => (
             <span className="h-full border-r-[1px] border-labelSperator mx-2"></span>
             <span className="flex text-white4 justify-center items-center whitespace-nowrap">
               <span className="mr-2 flex justify-center items-center">
-                <GithubIcon color={"#A6B0BB"} />
+                <GithubIcon color={"#A6B0BB"} size={18} />
               </span>
               Star us on GitHub
               <span className="transform -rotate-90 mt-1">
