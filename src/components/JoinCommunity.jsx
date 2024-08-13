@@ -1,7 +1,7 @@
 import { DiscordIcon } from "../assets/icons/DiscordIcon";
 
 export const JoinCommunity = () => (
-  <section className="max-w-[1200px] mx-auto w-full overflow-x-hidden overflow-y-hidden h-[50rem] px-8 ">
+  <section className="max-w-[1200px] mx-auto w-full overflow-x-hidden overflow-y-hidden h-[42rem] lg:h-[30rem] px-8 ">
     <div className="feature-card mr-auto  h-[600px] max-w-[900px] md:h-[452px]  p-6 flex flex-col justify-start items-start  text-left overflow-hidden">
       <h2 className="font-Jakartha font-normal leading-tight tracking-tight text-5xl mb-4 gradient-text-bottom ">
         Built for Developers,

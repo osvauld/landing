@@ -159,38 +159,38 @@ const tabs = [
       </div>
     ),
   },
-  {
-    title: "Folder To Users",
-    value: "Folder To Users",
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
-        <FolderToUsersComponent />
-      </div>
-    ),
-  },
-  {
-    title: "Environment",
-    value: "Environment",
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
-        <EnvironmentComponent />
-      </div>
-    ),
-  },
-  {
-    title: "Credential To Environment",
-    value: "Credential To Env",
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
-        <CredentialToEnvComponent />
-      </div>
-    ),
-  },
+  // {
+  //   title: "Folder To Users",
+  //   value: "Folder To Users",
+  //   content: (
+  //     <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
+  //       <FolderToUsersComponent />
+  //     </div>
+  //   ),
+  // },
+  // {
+  //   title: "Environment",
+  //   value: "Environment",
+  //   content: (
+  //     <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
+  //       <EnvironmentComponent />
+  //     </div>
+  //   ),
+  // },
+  // {
+  //   title: "Credential To Environment",
+  //   value: "Credential To Env",
+  //   content: (
+  //     <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
+  //       <CredentialToEnvComponent />
+  //     </div>
+  //   ),
+  // },
 ];
 
 export const AnimatedTabs = React.memo(() => {
   return (
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative gree flex flex-col max-w-5xl mx-auto  w-full  items-start justify-start my-40">
+    <div className="h-[30rem] md:h-[60rem] [perspective:1000px] relative gree flex flex-col max-w-5xl mx-auto  w-full  items-start justify-start my-40">
       <Tabs propTabs={tabs} />
     </div>
   );

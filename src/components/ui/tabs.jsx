@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../utils/cn";
+import env from "/src/assets/images/env.png";
+import extension from "/src/assets/images/extension.png";
+import vault from "/src/assets/images/vault.png";
 
 export const FadeInDiv = ({ className, tabs, hovering }) => {
   const isActive = (tab) => {
@@ -50,13 +53,23 @@ export const Tabs = ({
     setActive(newTabs[0]);
   };
 
+  const setImgPathToSelected = () => {};
+
   const [hovering, setHovering] = useState(false);
 
   return (
     <>
+      <div className="h-[15rem]  w-full mb-4  text-white text-5xl lg:text-6xl  font-normal font-Jakartha flex items-start justify-between">
+        <span className="gradient-text-bottom">{active.title}</span>
+        <img
+          alt="vault image"
+          src={active.title === "Private Credentials" ? vault.src : env.src}
+          className="h-60 w-60 md:h-[24rem] md:w-[24rem]"
+        />
+      </div>
       <div
         className={cn(
-          "flex flex-row items-center justify-between [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar w-full  p-1 border border-faqBorder rounded-xl",
+          "flex flex-row items-center justify-between [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar w-full md:w-1/2  p-1 border border-faqBorder rounded-xl bg-gray-500",
           containerClassName
         )}
       >

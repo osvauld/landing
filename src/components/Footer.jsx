@@ -197,7 +197,7 @@ export const Footer = () => {
               </span>
             </div>
             <div className="flex gap-12 my-4 xl:my-0">
-              <a
+              {/* <a
                 href="https://linktr.ee/osvauld"
                 aria-label="Linktree Icon"
                 target="_blank"
@@ -205,7 +205,7 @@ export const Footer = () => {
                 className="p-3"
               >
                 <LinktreeIcon color={"#A6B0BB"} />
-              </a>
+              </a> */}
               <a
                 href="https://github.com/osvauld"
                 aria-label="Github Icon"

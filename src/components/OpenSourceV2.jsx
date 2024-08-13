@@ -8,7 +8,7 @@ export const OpenSourceV2 = () => (
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay: 0.2 }}
-    className="h-[62rem] xs:h-[42rem] w-full max-w-[1200px] mx-auto px-8"
+    className="h-[56rem] xs:h-[42rem] w-full max-w-[1200px] mx-auto px-8"
   >
     <h2 className="text-5xl lg:text-6xl  font-light font-Jakartha text-center lg:text-left gradient-text-bottom  leading-tight lg:leading-[1.15] mb-6">
       Audit, contribute, <br /> and redistribute. <br />
