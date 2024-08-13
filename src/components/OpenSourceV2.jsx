@@ -35,7 +35,7 @@ export const OpenSourceV2 = () => (
         href="https://github.com/osvauld/osvauld/issues"
       >
         <GithubIcon color={"#A6B0BB"} size={32} />
-        <span>Become a Contributor</span>
+        <span className="whitespace-nowrap">Become a Contributor</span>
       </a>
       <a
         className="bg-labelBackground max-w-[16rem] max-h-[10rem] rounded-md flex flex-col justify-center items-center text-faqAnswer gap-2 lg:gap-4 cursor-pointer"

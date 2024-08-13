@@ -59,17 +59,23 @@ export const Tabs = ({
 
   return (
     <>
-      <div className="h-[15rem]  w-full mb-4  text-white text-5xl lg:text-6xl  font-normal font-Jakartha flex items-start justify-between">
-        <span className="gradient-text-bottom">{active.title}</span>
+      <div className="h-[15rem]  w-full mb-4  text-white text-5xl lg:text-7xl  font-normal font-Jakartha flex items-start justify-between">
+        <span className="gradient-text-bottom">{active.value}</span>
         <img
           alt="vault image"
-          src={active.title === "Private Credentials" ? vault.src : env.src}
+          src={
+            active.id === 2
+              ? vault.src
+              : active.id === 1
+              ? env.src
+              : extension.src
+          }
           className="h-60 w-60 md:h-[24rem] md:w-[24rem]"
         />
       </div>
       <div
         className={cn(
-          "flex flex-row items-center justify-between [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar w-full md:w-1/2  p-1 border border-faqBorder rounded-xl bg-gray-500",
+          "flex flex-row items-center justify-between [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar h-[7rem] md:h-auto w-full md:w-1/2  p-1 border border-faqBorder rounded-xl ",
           containerClassName
         )}
       >
@@ -106,7 +112,7 @@ export const Tabs = ({
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-14", contentClassName)}
+        className={cn("mt-24", contentClassName)}
       />
     </>
   );

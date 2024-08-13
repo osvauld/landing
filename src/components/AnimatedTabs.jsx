@@ -133,8 +133,9 @@ const CredentialToEnvComponent = () => {
 
 const tabs = [
   {
-    title: "Credential Creation",
+    title: "Creation",
     value: "Credential Creation",
+    id: 1,
     content: (
       <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
         <CredentialCreationComponent />
@@ -142,8 +143,9 @@ const tabs = [
     ),
   },
   {
-    title: "Private Credentials",
+    title: "Private",
     value: "Private Credentials",
+    id: 2,
     content: (
       <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
         <PrivateCredentialsComponent />
@@ -151,8 +153,9 @@ const tabs = [
     ),
   },
   {
-    title: "Credential To Group",
+    title: "Sharing",
     value: "Credential To Group",
+    id: 3,
     content: (
       <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
         <CredentialToGroupComponent />
