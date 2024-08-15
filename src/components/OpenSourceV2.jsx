@@ -9,7 +9,7 @@ export const OpenSourceV2 = () => (
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay: 0.2 }}
-    className="h-[56rem] xs:h-[32rem] w-full max-w-[1200px] flex flex-col justify-start gap-4 md:flex-row md:justify-around  mx-auto mt-0 lg:mt-20 px-8"
+    className="h-[47rem]  md:h-[35rem]  w-full max-w-[1200px] flex flex-col justify-start gap-4 md:flex-row md:justify-around  mx-auto mt-0 lg:mt-20 px-8"
   >
     <div>
       <h2 className="text-5xl lg:text-6xl  font-light font-Jakartha text-center lg:text-left gradient-text-bottom  leading-tight lg:leading-[1.15] mb-6">
