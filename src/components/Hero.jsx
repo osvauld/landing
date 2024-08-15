@@ -16,7 +16,7 @@ export const Hero = () => (
     id="home"
   >
     <div
-      className="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden relative min-h-screen md:min-h-[80vh] xl:min-h-[95vh]
+      className="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden relative min-h-[55rem] xs:min-h-[60rem] sm:min-h-[65rem] lg:min-h-[80rem] xl:min-h-[95rem]
   "
     >
       <div className="flex justify-between relative">

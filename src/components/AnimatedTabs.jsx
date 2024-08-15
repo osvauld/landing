@@ -189,7 +189,7 @@ const tabs = [
 
 export const AnimatedTabs = React.memo(() => {
   return (
-    <div className="h-[60rem] [perspective:1000px] relative gree flex flex-col max-w-5xl mx-auto  w-full  items-start justify-start mt-40 md:my-0 ">
+    <div className="h-[60rem] [perspective:1000px] relative gree flex flex-col max-w-5xl mx-auto  w-full  items-start justify-start mt-40 md:my-0 px-4">
       <Tabs propTabs={tabs} />
     </div>
   );

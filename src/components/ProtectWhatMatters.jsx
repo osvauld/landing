@@ -9,10 +9,10 @@ export const ProtectWhatMatters = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.2 }}
-      className="w-full flex-grow flex flex-col items-center max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white"
+      className="w-full flex-grow flex flex-col items-center max-w-[1200px] mx-auto bg-dark4 px-4 pt-12 text-white"
     >
       <div className="flex flex-col justify-between items-center relative min-h-[90vh] w-full">
-        <span className="absolute transform z-10 -top-48 -left-48 lg:top-12 lg:left-0">
+        <span className="absolute transform z-10 scale-50 -left-24  sm:scale-75 sm:-left-0 -top-12  md:-top-12 md:-left-0 lg:top-12 lg:left-0">
           <img
             alt="dashboard of osvauld"
             src={HomeStars.src}
@@ -20,7 +20,7 @@ export const ProtectWhatMatters = () => {
           />
         </span>
         <span className="w-0 md:w-[600px] "></span>
-        <span className="absolute transform z-10 -top-32 -right-48 lg:-top-16 lg:right-6">
+        <span className="absolute transform z-10 scale-50 -right-24 sm:scale-75 -top-16 sm:-right-6 md:-top-16 md:-right-6 lg:-top-16 lg:right-6">
           <img
             alt="dashboard of osvauld"
             src={HomeLock.src}

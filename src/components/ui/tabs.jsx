@@ -60,8 +60,15 @@ export const Tabs = ({
 
   return (
     <>
-      <div className="h-[15rem]  w-full mb-4  text-white text-5xl lg:text-7xl  font-normal font-Jakartha flex items-start justify-between">
-        <span className="gradient-text-bottom">{active.value}</span>
+      <div className="h-[15rem]  w-full mb-6 lg:mb-16  text-white text-5xl lg:text-7xl  font-normal font-Jakartha flex items-start justify-between">
+        <span className="gradient-text-bottom">
+          {active.id === 2
+            ? "Seamless Granular Access Control"
+            : active.id === 1
+            ? `All your keys. 
+In your own { trusted shareable } space.`
+            : `Extention <Chrome/ firefox>`}
+        </span>
         <img
           alt="vault image"
           src={
