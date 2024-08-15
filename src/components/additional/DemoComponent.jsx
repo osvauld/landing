@@ -23,7 +23,7 @@ export const DemoComponent = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.2 }}
-      className="w-full mb-[6rem] max-w-[1200px] mx-auto bg-faqDark px-4 pt-28 text-white"
+      className="w-full mb-[6rem] max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white"
     >
       <div className="relative flex">
         <img

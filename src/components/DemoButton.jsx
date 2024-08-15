@@ -35,7 +35,7 @@ export const DemoButton = () => {
     <>
       {isVisible && (
         <div
-          className={`bg-faqDark
+          className={`bg-dark4
           w-12 h-12 fixed bottom-24 left-6 border border-blue1 rounded-full hover:bg-blue1 cursor-pointer flex justify-center items-center transition z-50 group`}
           onClick={redirectToDemo}
           onMouseEnter={curserEntered}

@@ -3,14 +3,14 @@ import React from "react";
 
 export const OnPremise = () => {
   return (
-    <section className="lg:mb-16 w-full flex flex-col justify-center items-center bg-faqDark xl:pt-28 2xl:pt-0">
+    <section className="lg:mb-16 w-full flex flex-col justify-center items-center bg-dark4 xl:pt-28 2xl:pt-0">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className=" 2xl:w-[1150px] xl:w-[1050px] lg:w-[980px]  md:w-4/5 flex justify-center bg-faqDark  lg:pb-10 mx-auto xl:flex-row flex-col">
+        <div className=" 2xl:w-[1150px] xl:w-[1050px] lg:w-[980px]  md:w-4/5 flex justify-center bg-dark4  lg:pb-10 mx-auto xl:flex-row flex-col">
           <div>
             <div className="pl-0 lg:pl-10 text-left">
               <h2 className="text-3xl lg:text-4xl font-Jakartha font-light xl:tracking-[-0.1rem] text-blue1  ">

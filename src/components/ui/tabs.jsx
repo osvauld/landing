@@ -6,6 +6,7 @@ import { cn } from "../../utils/cn";
 import env from "/src/assets/images/env.png";
 import extension from "/src/assets/images/extension.png";
 import vault from "/src/assets/images/vault.png";
+import { BuyMeCoffee } from "../../assets/icons/BuyMeCoffee";
 
 export const FadeInDiv = ({ className, tabs, hovering }) => {
   const isActive = (tab) => {
@@ -75,7 +76,7 @@ export const Tabs = ({
       </div>
       <div
         className={cn(
-          "flex flex-row items-center justify-between [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar h-[7rem] md:h-auto w-full md:w-1/2  p-1 border border-faqBorder rounded-xl ",
+          "flex flex-row items-center justify-between [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar  md:h-auto w-3/4 md:w-1/2  mx-auto sm:mx-0 p-1  border border-faqBorder rounded-xl ",
           containerClassName
         )}
       >
@@ -103,7 +104,12 @@ export const Tabs = ({
               />
             )}
 
-            <span className="relative block text-faqAnswer">{tab.title}</span>
+            <span className="relative  text-faqAnswer flex gap-1.5 items-center">
+              <BuyMeCoffee
+                color={active.value === tab.value ? "#BFC0CC" : "#67697C"}
+              />{" "}
+              {tab.title}
+            </span>
           </button>
         ))}
       </div>

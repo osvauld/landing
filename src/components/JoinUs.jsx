@@ -4,7 +4,7 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 import React from "react";
 
 export const JoinUs = () => (
-  <section className="relative pt-0 xl:pt-16 pb-0 bg-faqDark overflow-hidden h-[22rem]">
+  <section className="relative pt-0 xl:pt-16 pb-0 bg-dark4 overflow-hidden h-[22rem]">
     <div className="absolute -top-10" id="FAQ" />
     <motion.div
       initial={{ opacity: 0 }}

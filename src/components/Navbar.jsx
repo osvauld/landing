@@ -306,7 +306,7 @@ export const Navbar = () => {
             </div>
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
-                className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-faqDark transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
+                className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
                 href="https://www.buymeacoffee.com/osvauld"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -336,7 +336,7 @@ export const Navbar = () => {
             exit={{ opacity: 0 }}
           >
             <div
-              className={`bg-faqDark flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
+              className={`bg-dark4 flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
         items-center gap-10 pb-10  border-y border-solid border-customDarkBg3 pt-10 text-sm
             `}
             >

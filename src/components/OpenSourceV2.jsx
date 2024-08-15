@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { GithubIcon } from "../assets/icons/GithubIcon";
+import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 
 export const OpenSourceV2 = () => (
   <motion.section
@@ -22,7 +23,7 @@ export const OpenSourceV2 = () => (
 
     <div className="w-full h-[15rem] grid grid-rows-2 grid-cols-2 md:grid-rows-1 md:grid-cols-4 gap-4 mt-12 text-base lg:text-xl">
       <a
-        className="bg-labelBackground max-w-[16rem] max-h-[10rem] rounded-md flex flex-col justify-center items-center text-faqAnswer gap-2 lg:gap-4 cursor-pointer"
+        className="bg-dark5 max-w-[16rem] max-h-[10rem] rounded-md flex flex-col justify-center items-center text-faqAnswer gap-2 lg:gap-4 cursor-pointer"
         target="_blank"
         href="https://github.com/osvauld/osvauld"
       >
@@ -30,7 +31,7 @@ export const OpenSourceV2 = () => (
         <span>Star us on Github</span>
       </a>
       <a
-        className="bg-labelBackground max-w-[16rem] max-h-[10rem] rounded-md flex flex-col justify-center items-center text-faqAnswer gap-2 lg:gap-4 cursor-pointer"
+        className="bg-dark5 max-w-[16rem] max-h-[10rem] rounded-md flex flex-col justify-center items-center text-faqAnswer gap-2 lg:gap-4 cursor-pointer"
         target="_blank"
         href="https://github.com/osvauld/osvauld/issues"
       >
@@ -38,20 +39,12 @@ export const OpenSourceV2 = () => (
         <span className="whitespace-nowrap">Become a Contributor</span>
       </a>
       <a
-        className="bg-labelBackground max-w-[16rem] max-h-[10rem] rounded-md flex flex-col justify-center items-center text-faqAnswer gap-2 lg:gap-4 cursor-pointer"
+        className="bg-dark5 max-w-[16rem] max-h-[10rem] rounded-md flex flex-col justify-center items-center text-faqAnswer gap-2 lg:gap-4 cursor-pointer"
         target="_blank"
         href="https://buymeacoffee.com/osvauld"
       >
-        <GithubIcon color={"#A6B0BB"} size={32} />
+        <BuyMeCoffee color={"#A6B0BB"} size={32} />
         <span>Become a Sponsor</span>
-      </a>
-      <a
-        className="bg-labelBackground max-w-[16rem] max-h-[10rem] rounded-md flex flex-col justify-center items-center text-faqAnswer gap-2 lg:gap-4 cursor-pointer"
-        target="_blank"
-        href="https://buymeacoffee.com/osvauld"
-      >
-        <GithubIcon color={"#A6B0BB"} size={32} />
-        <span>Buy me a Coffee</span>
       </a>
     </div>
   </motion.section>

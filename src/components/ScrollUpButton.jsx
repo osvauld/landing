@@ -41,7 +41,7 @@ export const ScrollUpButton = () => {
     <>
       {isVisible && (
         <div
-          className="w-12 h-12 fixed bottom-24 right-6 border border-blue1 rounded-lg  bg-faqDark hover:bg-blue1 cursor-pointer flex justify-center items-center transition z-[999]"
+          className="w-12 h-12 fixed bottom-24 right-6 border border-blue1 rounded-lg  bg-dark4 hover:bg-blue1 cursor-pointer flex justify-center items-center transition z-[999]"
           onClick={scrollToTop}
           onMouseEnter={curserEntered}
           onMouseLeave={curserRemoved}

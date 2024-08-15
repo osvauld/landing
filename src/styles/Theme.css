@@ -31,7 +31,7 @@
 
 body,
 html {
-  @apply bg-faqDark overflow-x-hidden;
+  @apply bg-dark4 overflow-x-hidden;
 }
 
 /* Borders */

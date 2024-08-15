@@ -12,7 +12,7 @@ import { PlayButton } from "../assets/icons/PlayButton";
 
 export const Hero = () => (
   <section
-    className="pt-20 px-2 flex flex-col justify-start items-center bg-faqDark overflow-x-hidden "
+    className="pt-20 px-2 flex flex-col justify-start items-center bg-dark4 overflow-x-hidden "
     id="home"
   >
     <div
@@ -84,7 +84,7 @@ export const Hero = () => (
             <span className="pt-px">Get started for free</span>
           </a>
           <a
-            className="text-blue1 bg-faqDark border rounded-lg border-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap px-3 py-2"
+            className="text-blue1 bg-dark4 border rounded-lg border-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap px-3 py-2"
             href="https://youtu.be/1esLbYmdHQY"
             target="_blank"
             rel="noopener noreferrer"
