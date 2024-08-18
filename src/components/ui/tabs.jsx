@@ -83,7 +83,7 @@ In your own { trusted shareable } space.`
       </div>
       <div
         className={cn(
-          "flex flex-row items-center justify-between [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar  md:h-auto w-3/4 md:w-1/2  mx-auto sm:mx-0 p-1  border border-faqBorder rounded-xl ",
+          "flex flex-row items-center justify-between [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar  md:h-auto w-full md:w-1/2  mx-auto sm:mx-0 p-1  border border-faqBorder rounded-xl ",
           containerClassName
         )}
       >
