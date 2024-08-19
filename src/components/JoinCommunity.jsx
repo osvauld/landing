@@ -14,7 +14,9 @@ export const JoinCommunity = () => (
       </p>
       <button className="bg-blue1 rounded-md text-black flex gap-3 py-2 px-4 items-center mt-4 lg:mt-auto ">
         <span>Join Osvauld’s Discord Community</span>
-        <DiscordIcon />
+        <span className="hidden md:block">
+          <DiscordIcon />
+        </span>
       </button>
     </div>
   </section>
