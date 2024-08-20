@@ -9,7 +9,7 @@ export const ProtectWhatMatters = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.2 }}
-      className="w-full flex-grow flex flex-col items-center max-w-[1200px] mx-auto bg-dark4 px-4 pt-12 text-white"
+      className="w-full flex-grow flex flex-col items-center max-w-[1200px] mx-auto bg-dark4 px-4 pt-0 sm:pt-12 text-white"
     >
       <div className="flex flex-col justify-between items-center relative min-h-[90vh] w-full">
         <span className="absolute transform z-10 scale-50 -left-24  sm:scale-75 sm:-left-0 -top-12  md:-top-12 md:-left-0 lg:top-12 lg:left-0">
@@ -33,7 +33,7 @@ export const ProtectWhatMatters = () => {
             <h1 className="text-center lg:text-left ">matters the most</h1>
           </span>
 
-          <span className="pricing-content text-sm px-4 md:text-lg mb-16 text-left md:text-center">
+          <span className="pricing-content text-sm px-4 md:text-lg mb-16 text-center">
             Secure your organization's critical digital assets, thereby{" "}
             <br className="hidden md:inline-block" />
             upholding and reinforcing the trust of your clients and partners

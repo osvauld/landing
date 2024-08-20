@@ -21,7 +21,7 @@ const CredentialCreationComponent = () => {
       loop
       muted
       controls
-      className=" p-4 absolute  inset-x-0  rounded-[3.5rem] mx-auto "
+      className="absolute  inset-x-0   mx-auto border-[7px] md:border-[14px] xl:border-[20px] border-calBorder "
     />
   );
 };
@@ -35,7 +35,7 @@ const PrivateCredentialsComponent = () => {
       src={PrivateCredentials}
       key={PrivateCredentials}
       alt="Private Credentials creation video"
-      className=" absolute  p-4 inset-x-0 w-full rounded-[3.5rem] mx-auto "
+      className=" absolute inset-x-0 w-full  mx-auto border-[7px] md:border-[14px] xl:border-[20px] border-calBorder "
       autoPlay
       loop
       muted
@@ -59,7 +59,7 @@ const CredentialToGroupComponent = () => {
       muted
       controls
       playsInline
-      className="  absolute p-4 inset-x-0 w-full rounded-[3.5rem] mx-auto "
+      className="  absolute inset-x-0 w-full  mx-auto border-[7px] md:border-[14px] xl:border-[20px] border-calBorder"
     />
   );
 };
@@ -80,7 +80,7 @@ const FolderToUsersComponent = () => {
       playsInline
       width="1000"
       height="1000"
-      className="object-contain object-center h-full absolute  inset-x-0 w-full rounded-xl mx-auto "
+      className="object-contain object-center h-full absolute  inset-x-0 w-full  mx-auto "
     />
   );
 };
@@ -133,7 +133,7 @@ const tabs = [
     value: "Credential Creation",
     id: 1,
     content: (
-      <div className="w-full max-w-[95vw] mx-auto overflow-hidden relative  rounded-[3.5rem] flex justify-center items-center h-[320px]  md:h-[490px] bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
+      <div className="w-full max-w-[95vw] mx-auto overflow-hidden relative   flex justify-center items-center h-[320px]  md:h-[490px] ">
         <CredentialCreationComponent />
       </div>
     ),
@@ -143,7 +143,7 @@ const tabs = [
     value: "Private Credentials",
     id: 2,
     content: (
-      <div className="w-full max-w-[95vw] mx-auto  overflow-hidden relative  rounded-[3.5rem] flex justify-center items-center h-[320px] md:h-[490px] bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
+      <div className="w-full max-w-[95vw] mx-auto  overflow-hidden relative   flex justify-center items-center h-[320px] md:h-[490px] ">
         <PrivateCredentialsComponent />
       </div>
     ),
@@ -153,7 +153,7 @@ const tabs = [
     value: "Credential To Group",
     id: 3,
     content: (
-      <div className="w-full max-w-[95vw] mx-auto  overflow-hidden relative  rounded-[3.5rem] flex justify-center items-center  h-[320px] md:h-[490px] bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
+      <div className="w-full max-w-[95vw] mx-auto  overflow-hidden relative   flex justify-center items-center  h-[320px] md:h-[490px] ">
         <CredentialToGroupComponent />
       </div>
     ),
@@ -162,7 +162,7 @@ const tabs = [
   //   title: "Folder To Users",
   //   value: "Folder To Users",
   //   content: (
-  //     <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 bg-calBorder shadow-[0px_20px_56px_13px_#00000090]">
+  //     <div className="w-full overflow-hidden relative h-full rounded-2xl p-2 ">
   //       <FolderToUsersComponent />
   //     </div>
   //   ),
@@ -189,7 +189,7 @@ const tabs = [
 
 export const AnimatedTabs = React.memo(() => {
   return (
-    <div className="h-[50rem] md:h-[60rem] [perspective:1000px] relative gree flex flex-col max-w-5xl mx-auto  w-full  items-start justify-start mt-40 md:my-0 px-4">
+    <div className="h-[44rem] xs:h-[50rem] md:h-[60rem] [perspective:1000px] relative gree flex flex-col max-w-5xl mx-auto  w-full  items-start justify-start mt-24 sm:mt-40 md:my-0 px-4">
       <Tabs propTabs={tabs} />
     </div>
   );

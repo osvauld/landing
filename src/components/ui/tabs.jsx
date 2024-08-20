@@ -13,7 +13,7 @@ export const FadeInDiv = ({ className, tabs, hovering }) => {
     return tab.value === tabs[0].value;
   };
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-[50%] sm:h-full">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
@@ -60,7 +60,7 @@ export const Tabs = ({
 
   return (
     <>
-      <div className="h-[15rem]  w-full mb-6 lg:mb-16  text-white text-5xl lg:text-7xl  font-normal font-Jakartha flex items-start justify-between">
+      <div className="h-[18rem] sm:h-[15rem]  w-full mb-6 lg:mb-16  text-white text-5xl lg:text-7xl  font-normal font-Jakartha flex items-center sm:items-start justify-between">
         <span className="gradient-text-bottom">
           {active.id === 2
             ? "Seamless Granular Access Control"
@@ -125,7 +125,7 @@ In your own { trusted shareable } space.`
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-24", contentClassName)}
+        className={cn("mt-4 xs:mt-24", contentClassName)}
       />
     </>
   );
