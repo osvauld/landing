@@ -4,6 +4,10 @@ import { LinkdinIcon } from "../assets/icons/LinkdinIcon";
 import { InstagramIcon } from "../assets/icons/InstagramIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { FooterOsvauld } from "../assets/logos/FooterOsvauld";
+import Matrix from "../assets/logos/Matrix";
+import Docker from "../assets/logos/Docker";
+import Twitter from "../assets/logos/Twitter";
+import Mastodon from "../assets/logos/Mastodon";
 
 export const Footer = () => {
   return (
@@ -12,11 +16,14 @@ export const Footer = () => {
         <div className="flex h-full flex-col gap-32">
           <div className="flex flex-col gap-24">
             <div className="icons flex items-center flex-wrap gap-10 mx-auto">
+              <GithubIcon color={"black"} size={"45px"} />
               <DiscordIcon width={"45px"} height={"45px"} />{" "}
-              <LinktreeIcon color={"black"} size={"45px"} />
+              <Matrix width={"45px"} height={"45px"} />
+              <Docker width={"45px"} height={"45px"} />
+              <Twitter width={"45px"} height={"45px"} />
+              <Mastodon width={"45px"} height={"45px"} />
               <LinkdinIcon color={"black"} size={"45px"} />
               <InstagramIcon color={"black"} size={"45px"} />
-              <GithubIcon color={"black"} size={"45px"} />
             </div>
             <h6 className="mx-auto text-[54px] xl:text-[64px] tracking-[-4px] font-Jakartha font-semibold">
               Protecting what matters the most.
