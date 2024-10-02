@@ -144,7 +144,7 @@ export const Hero = React.memo(() => {
         >
           <div className="relative w-screen top-10 sm:top-0 right-3 md:right-8 xl:right-20 flex justify-center md:justify-start items-center mb-[60vw]  sm:mb-[50vw] xl:ml-[80px] xl:mb-[40rem] 2xl:[30rem]  xl:mt-[4.5rem]">
             <img
-              src={dashboard}
+              src={dashboard.src}
               alt="dashboard of osvauld"
               className="w-[95%] lg:w-3/4 xl:w-5/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl lg:rounded-3xl hero-dashboard-border-gradient top-2 md:top-4 lg:top-0 xl:top-0 shadow-[0_0_10px_rgba(137,180,250,0.7)] "
             />
