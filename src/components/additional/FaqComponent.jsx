@@ -42,7 +42,7 @@ export const FaqComponent = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-2">
           <div className="flex flex-col justify-start items-center md:items-start ">
-            <h1 className="z-50  md:sticky md:top-36 text-[36px] mt-[2rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px] relative gradient-text text-center md:text-left md:ml-[1.5rem]">
+            <h1 className=" md:sticky md:top-36 text-[36px] mt-[2rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px] relative gradient-text text-center md:text-left md:ml-[1.5rem]">
               Frequently Asked Questions
             </h1>
             <div
