@@ -1,10 +1,33 @@
 import { motion } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 import { Calender } from "../../assets/icons/Calender";
 import { DiscordIcon } from "../../assets/icons/DiscordIcon";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
 import data from "./Data";
 
 export const FaqComponent = () => {
+  const stickyRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "-560px 0px 0px 0px",
+      threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIsVisible(entry.isIntersecting);
+    }, options);
+
+    if (stickyRef.current) {
+      observer.observe(stickyRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       className="w-full min-h-screen max-w-[1200px] mx-auto bg-faqDark px-4"
@@ -18,11 +41,19 @@ export const FaqComponent = () => {
         className="w-full pt-28 md:pb-10  text-white"
       >
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-2">
-          <div className="flex flex-col justify-start items-center md:items-start">
-            <h1 className="md:sticky md:top-24 text-[36px] mt-[2rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px] relative gradient-text text-center md:text-left md:ml-[1.5rem]">
+          <div className="flex flex-col justify-start items-center md:items-start ">
+            <h1 className="z-50  md:sticky md:top-36 text-[36px] mt-[2rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px] relative gradient-text text-center md:text-left md:ml-[1.5rem]">
               Frequently Asked Questions
             </h1>
-            <div className=" md:sticky md:top-[23.5rem]  hidden md:visible px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-8 text-center md:text-left">
+            <div
+              className={[
+                "md:sticky md:top-[26.5rem] hidden  px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-8 text-center md:text-left",
+                isVisible ? "visible" : "invisible",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              ref={stickyRef}
+            >
               <span className="font-light text-xl">
                 Still have a question? <br />
               </span>
@@ -69,7 +100,7 @@ export const FaqComponent = () => {
             ))}
           </div>
 
-          <div className="cta md:hidden px-6 py-4 h-[170px]  flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-8 text-center md:text-left">
+          <div className="cta md:hidden px-6 py-4 h-[170px]  mb-[3rem] flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-8 text-center md:text-left">
             <span className="font-light text-xl">
               Still have a question? <br />
             </span>

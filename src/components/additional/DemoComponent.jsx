@@ -38,7 +38,7 @@ export const DemoComponent = () => {
         our product, security features, and its capabilities.
       </span>
 
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-20 w-full md:pt-[6rem] ">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-20 w-full md:pt-[6rem] pb-[6rem]">
         <div className="md:col-span-2 flex flex-col gap-12 mt-12  ">
           <span>
             <h2 className="font-Jakartha font-medium tracking-tighter text-[26px] md:text-[34px]">

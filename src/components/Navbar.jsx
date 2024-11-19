@@ -80,6 +80,8 @@ export const Navbar = ({ faq }) => {
       setUsername(data.username);
       setPassword(data.tempPassword);
     } catch (error) {
+      setUsername("Try again Later");
+      setPassword("Try again Later");
       console.error("Failed to fetch credentials:", error);
     }
   };
