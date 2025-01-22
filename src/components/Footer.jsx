@@ -1,5 +1,6 @@
 import { DiscordIcon } from "../assets/icons/DiscordIcon";
 import { LinkdinIcon } from "../assets/icons/LinkdinIcon";
+import { CloseIcon } from "../assets/icons/CloseIcon";
 import { InstagramIcon } from "../assets/icons/InstagramIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { FooterOsvauld } from "../assets/logos/FooterOsvauld";
@@ -29,17 +30,18 @@ export const Footer = () => {
             </h6>
             <div className="flex flex-col xs:flex-row justify-center items-center gap-4">
               <button className="px-6 py-3 bg-black rounded-lg text-blue1 text-xl font-semibold flex items-center gap-4 min-w-[270px]">
-                <span className="ml-auto">Get Started</span>
+                <span className="ml-auto">Join Waitlist</span>
                 <span className="mr-auto">
-                  <DiscordIcon color="#89B4FA" width={"45px"} height={"45px"} />
+                  {/* <DiscordIcon color="#89B4FA" width={"45px"} height={"45px"} />
+                   */}
                 </span>
               </button>
-              <button className=" px-6 py-3 bg-black rounded-lg text-blue1 text-xl font-semibold flex items-center justify-between min-w-[270px]">
+              {/* <button className=" px-6 py-3 bg-black rounded-lg text-blue1 text-xl font-semibold flex items-center justify-between min-w-[270px]">
                 Request a Demo
                 <span>
                   <DiscordIcon color="#89B4FA" width={"45px"} height={"45px"} />
                 </span>
-              </button>
+              </button> */}
             </div>
             <div className="hidden sm:flex text-center flex-col gap-4">
               <div className="flex items-center gap-4">

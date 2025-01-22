@@ -20,26 +20,26 @@ const navbarLinks = [
     href: "/demo",
     ariaLabel: "Book a Demo",
   },
-  {
-    label: "Pricing",
-    href: "/pricing",
-    ariaLabel: "Pricing",
-  },
+  // {
+  //   label: "Pricing",
+  //   href: "/pricing",
+  //   ariaLabel: "Pricing",
+  // },
   {
     label: "FAQ",
     href: "/faq",
     ariaLabel: "FAQ",
   },
-  // {
-  //   label: "About us",
-  //   href: "https://docs.osvauld.com/introduction/overview/",
-  //   ariaLabel: "About Us",
-  // },
   {
-    label: "Documentation",
-    href: "https://docs.osvauld.com/introduction/overview/",
-    ariaLabel: "Documentation",
+    label: "Our story",
+    href: "/faq",
+    ariaLabel: "Our story",
   },
+  // {
+  //   label: "Documentation",
+  //   href: "https://docs.osvauld.com/introduction/overview/",
+  //   ariaLabel: "Documentation",
+  // },
 ];
 
 const scrollToTop = () => {
@@ -88,7 +88,7 @@ export const Navbar = ({ faq }) => {
 
   return (
     <nav className="w-screen h-20 xl:h-24 flex justify-center items-center fixed  z-40 backdrop-blur-xl">
-      <div className="w-full  mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5 flex items-center relative">
+      <div className="w-full  mx-auto xl:w-[1200px] lg:w-[1000px] md:w-4/5 flex items-center relative">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -132,7 +132,7 @@ export const Navbar = ({ faq }) => {
           exit={{ opacity: 0 }}
         >
           <div className="flex justify-center items-center gap-4">
-            <div className="grow basis-0 justify-end hidden lg:flex">
+            {/* <div className="grow basis-0 justify-end hidden lg:flex">
               <span
                 className={`${
                   faq ? "bg-faqDark" : "bg-dark1"
@@ -271,16 +271,16 @@ export const Navbar = ({ faq }) => {
                   </div>
                 )}
               </span>
-            </div>
+            </div> */}
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className="text-dark1
             bg-blue1 rounded-md px-3 py-1.5 text-sm whitespace-nowrap  flex cursor-pointer"
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
-                aria-label="get started"
+                aria-label="Join waitlist"
               >
-                <span className="pt-px">Request Beta</span>
+                <span className="pt-px">Join waitlist</span>
               </a>
             </div>
           </div>
