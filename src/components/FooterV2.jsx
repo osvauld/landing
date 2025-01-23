@@ -23,9 +23,9 @@ export const Footer = () => {
               {/* <LinkdinIcon color={"black"} size={"45px"} />
               <InstagramIcon color={"black"} size={"45px"} /> */}
             </div>
-            <h6 className="mx-auto text-[54px] xl:text-[64px] tracking-[-4px] font-Jakartha font-semibold">
+            <span className="mx-auto text-[54px] xl:text-[64px] tracking-[-4px] font-Jakartha font-semibold">
               Protecting what matters the most.
-            </h6>
+            </span>
             <div className="flex flex-col xs:flex-row justify-center items-center gap-4">
               <button className="px-6 py-3 bg-black rounded-lg text-blue1 text-xl font-semibold flex justify-center items-center gap-4 min-w-[270px]">
                 <span className="">Join Waitlist</span>
