@@ -27,12 +27,12 @@ export const UseOsvauld = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex justify-start items-center bg-faqDark w-[90%]  xl:pl-4 xl:mt-16  first-letter:container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5 "
+      className="flex justify-start items-center bg-dark4 w-[90%]  xl:pl-4 xl:mt-16  first-letter:container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5 "
     >
       <div className="text-3xl sm:text-6xl lg:text-6xl xl:text-6xl xl:tracking-[-0.2rem] tracking-wide text-blue1 xl:font-normal xl:px-0 px-0 sm:px-8 md:px-20 lg:px-4 font-Jakartha">
         <h1 className="">
           {isVisible && (
-            <TextGenerateEffect words={firstPhrase} className={"text-blue1"} />
+            <TextGenerateEffect words={firstPhrase} className={"text-white1"} />
           )}
           <span className="">
             {isVisible && (

@@ -9,7 +9,7 @@ import data from "./Data";
 export const FaqComponent = () => {
   return (
     <section
-      className="w-full min-h-screen max-w-[1400px] mx-auto bg-faqDark px-4"
+      className="w-full min-h-screen max-w-[1400px] mx-auto bg-dark4 px-4"
       id="faqs"
     >
       <motion.div
@@ -58,7 +58,7 @@ export const FaqComponent = () => {
           <div className="z-30 questions px-0 md:px-10 w-full md:w-auto mt-8 md:mt-10">
             {data.map((item, index) => (
               <details
-                className="mb-4 bg-dark4 rounded-lg px-6 py-4 border border-transparent group open:border-faqBorder"
+                className="mb-4 bg-dark5 rounded-lg px-6 py-4 border border-transparent group open:border-faqBorder"
                 key={index}
               >
                 <summary className="cursor-pointer flex justify-between items-center text-xl list-none font-Jakarta font-light">

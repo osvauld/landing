@@ -5,8 +5,8 @@ const MotionDiv = lazy(() =>
 );
 
 export const IntutiveSharing = () => (
-  <Suspense fallback={null}>
-    <section className="w-full bg-faqDark mt-12 sm:mt-20 mb-10 lg:my-20 xl:mt-10 pt-4">
+  <Suspense fallback={<div>Failed</div>}>
+    <section className="w-full bg-dark4 mt-12 sm:mt-20 mb-10 lg:my-20 xl:mt-10 pt-4">
       <MotionDiv
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

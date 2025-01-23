@@ -31,7 +31,7 @@
 
 body,
 html {
-  @apply bg-faqDark overflow-x-hidden;
+  @apply bg-dark4 overflow-x-hidden;
 }
 
 /* Borders */
@@ -159,6 +159,35 @@ details[open] > div {
   }
 }
 
+.feature-card {
+  position: relative;
+  border-radius: 24px;
+  background: #0d0e13;
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.8);
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 24px;
+  z-index: 1;
+  border: 1px solid transparent; /*2*/
+  background: linear-gradient(
+      to left,
+      #16171f 0%,
+      rgba(137, 180, 250, 0.48) 100%
+    )
+    border-box; /*3*/
+  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; /*5'*/
+  mask-composite: exclude; /*5*/
+}
+
 #cc-main {
   /** Change font **/
   --cc-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -180,4 +209,14 @@ details[open] > div {
 
   /** Make the buttons a bit rounder **/
   --cc-btn-border-radius: 10px;
+}
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
 }

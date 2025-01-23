@@ -8,7 +8,7 @@ import React from "react";
 export const Footer = () => {
   return (
     <footer>
-      <div className="pt-10  lg:pt-20 lg:pb-12 bg-faqDark radius-for-skewed ">
+      <div className="pt-10  lg:pt-20 lg:pb-12 bg-dark4 radius-for-skewed ">
         <div className="w-full container px-4 mx-auto 2xl:w-[1200px] xl:w-[1100px] lg:w-[1000px] md:w-4/5">
           <div className=" flex flex-col lg:flex-row justify-start items-center">
             <div className="w-full lg:w-1/2 flex justify-start items-center lg:justify-center xl:justify-start lg:mb-0">
@@ -197,7 +197,7 @@ export const Footer = () => {
               </span>
             </div>
             <div className="flex gap-12 my-4 xl:my-0">
-              <a
+              {/* <a
                 href="https://linktr.ee/osvauld"
                 aria-label="Linktree Icon"
                 target="_blank"
@@ -205,7 +205,7 @@ export const Footer = () => {
                 className="p-3"
               >
                 <LinktreeIcon color={"#A6B0BB"} />
-              </a>
+              </a> */}
               <a
                 href="https://github.com/osvauld"
                 aria-label="Github Icon"

@@ -15,31 +15,36 @@ import { Tick } from "../assets/icons/Tick";
 import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 
 const navbarLinks = [
-  {
-    label: "Book a Demo",
-    href: "/demo",
-    ariaLabel: "Book a Demo",
-  },
-  {
-    label: "Pricing",
-    href: "/pricing",
-    ariaLabel: "Pricing",
-  },
+  // {
+  //   label: "Book a Demo",
+  //   href: "/demo",
+  //   ariaLabel: "Book a Demo",
+  // },
+  // {
+  //   label: "Pricing",
+  //   href: "/pricing",
+  //   ariaLabel: "Pricing",
+  // },
   {
     label: "FAQ",
     href: "/faq",
     ariaLabel: "FAQ",
+  },
+  {
+    label: "Our Story",
+    href: "/",
+    ariaLabel: "our story",
   },
   // {
   //   label: "About us",
   //   href: "https://docs.osvauld.com/introduction/overview/",
   //   ariaLabel: "About Us",
   // },
-  {
-    label: "Documentation",
-    href: "https://docs.osvauld.com/introduction/overview/",
-    ariaLabel: "Documentation",
-  },
+  // {
+  //   label: "Documentation",
+  //   href: "https://docs.osvauld.com/introduction/overview/",
+  //   ariaLabel: "Documentation",
+  // },
 ];
 
 const scrollToTop = () => {
@@ -82,9 +87,9 @@ export const Navbar = () => {
 
       onConsent: ({ cookie }) => {
         if (cookie.categories.length !== 0) {
-          mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
-            track_pageview: true,
-          });
+          // mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
+          //   track_pageview: true,
+          // });
         }
       },
     });
@@ -163,16 +168,16 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
         >
           <div className="flex justify-center items-center gap-8">
-            <div className="grow basis-0 justify-end hidden lg:flex">
+            {/* <div className="grow basis-0 justify-end hidden lg:flex">
               <span
                 className={`bg-labelBackground rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap  px-3 py-3 text-sm relative animate-blink`}
                 onClick={() => setTrialModal(!trialModal)}
               >
-                Try now
-                {/* <span className="text-[10px] font-semibold text-red-600 absolute right-2 top-0 animate-blink ">
+                Try now */}
+            {/* <span className="text-[10px] font-semibold text-red-600 absolute right-2 top-0 animate-blink ">
                   New
                 </span> */}
-                {trialModal && (
+            {/* {trialModal && (
                   <div
                     className={`absolute top-[140%] right-0 ${
                       fetchCreds ? "h-[31.8rem]" : "h-[17.2rem]"
@@ -301,18 +306,18 @@ export const Navbar = () => {
                       </span>
                     </div>
                   </div>
-                )}
-              </span>
-            </div>
+                )} */}
+            {/* </span>
+            </div> */}
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
-                className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-faqDark transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
+                className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
                 href="https://www.buymeacoffee.com/osvauld"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <BuyMeCoffee />
-                <span className="ml-1"> Buy me a coffee</span>
+                <span className="ml-1">Join the Waitlist</span>
               </a>
             </div>
           </div>
@@ -336,7 +341,7 @@ export const Navbar = () => {
             exit={{ opacity: 0 }}
           >
             <div
-              className={`bg-faqDark flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
+              className={`bg-dark4 flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
         items-center gap-10 pb-10  border-y border-solid border-customDarkBg3 pt-10 text-sm
             `}
             >
