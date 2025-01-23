@@ -91,7 +91,7 @@ export const Hero = () => (
             aria-label="watch demo"
           >
             <PlayButton />
-            <span className="ml-1 font-medium"> Watch Demo</span>
+            <span className="ml-1 font-medium"> Watch Demo 2</span>
           </a>
         </div>
         <div className="flex justify-center items-center pt-12">
