@@ -56,22 +56,25 @@ export const Hero = () => (
         </div>
         <h1 className="text-5xl text-white1 font-semibold font-Jakartha text-center lg:text-7xl xl:text-8xl gradient-text pt-16 px-4">
           <span className="whitespace-normal lg:whitespace-nowrap">
-            Credential
-            <br className="block md:hidden" /> management,
+            Your Data,
+            <br className="block md:hidden" />
+            Your Rules.
           </span>{" "}
           <br className="block md:hidden" />{" "}
           <span className="whitespace-normal md:whitespace-nowrap">
-            for teams, <br className="block md:hidden" />{" "}
-            <span className="tracking-wide">Redefined</span>
+            Offline, Secure and <br className="block md:hidden" />{" "}
+            <span className="tracking-wide">Direct!</span>
           </span>
         </h1>
         <div className="text-faqAnswer font-Inter font-light text-base md:text-lg xl:text-xl text-center pt-12 px-4 tracking-wide max-w-[99vw]">
-          Open-source, self-hosted tool designed to securely{" "}
-          <br className="hidden" /> manage, audit,{" "}
+          Our Peer-to-peer approach make sure you can sync data{" "}
+          <br className="hidden md:block" /> end-to-end encrypted, directly
+          between devices desktop or mobile — without a middleman.{" "}
+          {/* <br className="hidden" /> manage, audit,{" "}
           <br className=" hidden xl:block" /> and share credentials within your
           team.
           <br className=" hidden xl:block" /> No more scrounging over Slack or
-          Google Sheets
+          Google Sheets */}
         </div>
         <div className="flex items-center justify-center gap-4 md:flex-row text-sm flex-wrap pt-12">
           <a
@@ -81,17 +84,17 @@ export const Hero = () => (
             rel="noopener noreferrer"
             aria-label="get started"
           >
-            <span className="pt-px">Get started for free</span>
+            <span className="pt-px">Join waitlist</span>
           </a>
           <a
             className="text-blue1 bg-dark4 border rounded-lg border-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap px-3 py-2"
-            href="https://youtu.be/1esLbYmdHQY"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="watch demo"
           >
             <PlayButton />
-            <span className="ml-1 font-medium"> Watch Demo 2</span>
+            <span className="ml-1 font-medium"> Watch Demo</span>
           </a>
         </div>
         <div className="flex justify-center items-center pt-12">
