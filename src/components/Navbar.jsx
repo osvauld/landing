@@ -32,7 +32,7 @@ const navbarLinks = [
   },
   {
     label: "Our Story",
-    href: "/story",
+    href: "/",
     ariaLabel: "our story",
   },
   // {

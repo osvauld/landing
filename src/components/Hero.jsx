@@ -88,7 +88,7 @@ export const Hero = () => (
           </a>
           <a
             className="text-blue1 bg-dark4 border rounded-lg border-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap px-3 py-2"
-            href="https://youtu.be/1esLbYmdHQY"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="watch demo"
