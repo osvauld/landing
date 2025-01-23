@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import HomeStars from "/src/assets/images/HomeStars.png";
 import HomeLock from "/src/assets/images/HomeLock.png";
+import End2end from "/src/assets/images/end2end.png";
+import Offline from "/src/assets/images/offline.png";
+import { Iroh } from "../assets/icons/Iroh";
 
 export const ProtectWhatMatters = () => {
   return (
@@ -29,56 +32,80 @@ export const ProtectWhatMatters = () => {
         </span>
         <div className="flex-grow w-full max-w-[1200px] px-4 pt-2 flex flex-col items-center z-20">
           <span className="flex flex-col items-center mb-14 mt-6 text-[40px] md:text-[48px] lg:text-7xl font-Jakartha font-medium tracking-tight text-balance gradient-text-bottom leading-10 md:leading-[54px]">
-            <h1 className="text-center lg:text-left ">Protect what</h1>
-            <h1 className="text-center lg:text-left ">matters the most</h1>
+            <h1 className="text-center lg:text-left ">Why Use</h1>
+            <h1 className="text-center lg:text-left ">Osvauld</h1>
           </span>
 
           <span className="pricing-content text-sm px-4 md:text-lg mb-16 text-center">
-            Secure your organization's critical digital assets, thereby{" "}
+            Osvauld brings privacy-respecting and secure local-first
+            applications to the masses.
             <br className="hidden md:inline-block" />
-            upholding and reinforcing the trust of your clients and partners
+            Incase need syncing with a secondary device, It happens through a
+            direct connection.
           </span>
 
           <div className="cards grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 md:gap-x-10 w-full min-w-[360px] max-w-[331px] md:max-w-[900px] ">
             <div className="feature-card  h-[600px] w-full flex flex-col p-6">
               <h2 className="font-Jakartha font-normal tracking-tight text-4xl mb-4 gradient-text-bottom leading-tight">
-                Unbreakable Security with OpenPGP and ECC
+                Offline-First Implementation
               </h2>
               <p className="pricing-content mb-4">
-                Experience unparalleled protection for your credentials, protect
-                your vault keys with Osvauld's robust OpenPGP RFC 4880 standard
-                coupled with ECC Curve25519.
+                Allows users to create and edit data offline, syncing changes
+                when the internet is available.This approach giving users direct
+                control and reduces risk by limiting server data transmission,
+                enables strong local encryption, and simplifies authentication
+                through local credential management rather than remote servers.
               </p>
+              <div className="grow flex justify-center items-center">
+                <img
+                  alt="image representing end-to-end Offline-First Implementation"
+                  src={Offline.src}
+                  className="w-full"
+                />
+              </div>
             </div>
             <div className="feature-card h-[600px] w-full flex flex-col p-6">
               <h2 className="font-Jakartha font-normal tracking-tight text-4xl mb-4 gradient-text-bottom leading-tight ">
-                Absolute End-to-End Encryption with Zero-Knowledge Security
+                End-to-End Encryption
               </h2>
               <p className="pricing-content mb-4">
-                Your data stays safe with industry-leading encryption.
-                Credentials and metadata are never exposed or unencrypted. Only
-                you and your designated recipients can decrypt the data. <br />{" "}
-                <br />
+                Powered by OpenPGP and ECC, Our implementation provides best in
+                industry cryptographic operations ensuring strong encryption and
+                secure operations directly in your application. <br /> <br />
                 Ensures that your sensitive information remains secure and
                 inaccessible to anyone else, including us.
               </p>
+              <img
+                alt="image representing end-to-end encryption"
+                src={End2end.src}
+                className="w-full"
+              />
             </div>
             <div className="feature-card  h-[600px] w-full md:h-[452px] md:col-span-2  p-6 grid grid-col-1 lg:grid-cols-2 text-left">
               <div>
                 <h2 className="font-Jakartha font-normal leading-tight tracking-tight text-4xl mb-4 gradient-text-bottom">
-                  Blazing Fast, Secure and State-of-the-Art Cryptography
+                  Connect any two devices on the planet
                 </h2>
                 <p className="pricing-content mb-4 text-left ">
-                  Sequoia-PGP, trusted by RPM package managers for its
-                  reliability and security, is combined with WebAssembly for
-                  high-speed, secure and fast operations directly in your
-                  browser. <br /> <br /> Rust-based WASM implementation delivers
-                  near-native speeds for batch operations, providing quick,
-                  secure sharing without compromising security, even in
-                  resource-limited environments.
+                  Enabled by{" "}
+                  <a
+                    href="https://www.iroh.computer/"
+                    className="underline-offset-2 underline italic"
+                  >
+                    Iroh,
+                  </a>{" "}
+                  lets you establish direct peer-to-peer connections whenever
+                  possible, falling back to relay servers if necessary. This
+                  gives you fast, reliable connections that are authenticated
+                  and encrypted end-to-end using QUIC. <br />
+                  <br />
+                  Connect your devices using a simple QR code scan. Sync with
+                  ease.
                 </p>
               </div>
-              <div></div>
+              <div className="flex justify-center items-center overflow-hidden">
+                <Iroh />
+              </div>
             </div>
           </div>
         </div>
