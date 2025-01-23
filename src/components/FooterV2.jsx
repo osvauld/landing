@@ -19,27 +19,16 @@ export const Footer = () => {
               <GithubIcon color={"black"} size={"45px"} />
               <DiscordIcon width={"45px"} height={"45px"} />{" "}
               <Matrix width={"45px"} height={"45px"} />
-              <Docker width={"45px"} height={"45px"} />
-              <Twitter width={"45px"} height={"45px"} />
               <Mastodon width={"45px"} height={"45px"} />
-              <LinkdinIcon color={"black"} size={"45px"} />
-              <InstagramIcon color={"black"} size={"45px"} />
+              {/* <LinkdinIcon color={"black"} size={"45px"} />
+              <InstagramIcon color={"black"} size={"45px"} /> */}
             </div>
             <h6 className="mx-auto text-[54px] xl:text-[64px] tracking-[-4px] font-Jakartha font-semibold">
               Protecting what matters the most.
             </h6>
             <div className="flex flex-col xs:flex-row justify-center items-center gap-4">
-              <button className="px-6 py-3 bg-black rounded-lg text-blue1 text-xl font-semibold flex items-center gap-4 min-w-[270px]">
-                <span className="ml-auto">Get Started</span>
-                <span className="mr-auto">
-                  <DiscordIcon color="#89B4FA" width={"45px"} height={"45px"} />
-                </span>
-              </button>
-              <button className=" px-6 py-3 bg-black rounded-lg text-blue1 text-xl font-semibold flex items-center justify-between min-w-[270px]">
-                Request a Demo
-                <span>
-                  <DiscordIcon color="#89B4FA" width={"45px"} height={"45px"} />
-                </span>
+              <button className="px-6 py-3 bg-black rounded-lg text-blue1 text-xl font-semibold flex justify-center items-center gap-4 min-w-[270px]">
+                <span className="">Join Waitlist</span>
               </button>
             </div>
             <div className="text-center flex flex-col gap-4">

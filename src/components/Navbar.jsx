@@ -15,31 +15,36 @@ import { Tick } from "../assets/icons/Tick";
 import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 
 const navbarLinks = [
-  {
-    label: "Book a Demo",
-    href: "/demo",
-    ariaLabel: "Book a Demo",
-  },
-  {
-    label: "Pricing",
-    href: "/pricing",
-    ariaLabel: "Pricing",
-  },
+  // {
+  //   label: "Book a Demo",
+  //   href: "/demo",
+  //   ariaLabel: "Book a Demo",
+  // },
+  // {
+  //   label: "Pricing",
+  //   href: "/pricing",
+  //   ariaLabel: "Pricing",
+  // },
   {
     label: "FAQ",
     href: "/faq",
     ariaLabel: "FAQ",
+  },
+  {
+    label: "Our Story",
+    href: "/story",
+    ariaLabel: "our story",
   },
   // {
   //   label: "About us",
   //   href: "https://docs.osvauld.com/introduction/overview/",
   //   ariaLabel: "About Us",
   // },
-  {
-    label: "Documentation",
-    href: "https://docs.osvauld.com/introduction/overview/",
-    ariaLabel: "Documentation",
-  },
+  // {
+  //   label: "Documentation",
+  //   href: "https://docs.osvauld.com/introduction/overview/",
+  //   ariaLabel: "Documentation",
+  // },
 ];
 
 const scrollToTop = () => {
@@ -163,16 +168,16 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
         >
           <div className="flex justify-center items-center gap-8">
-            <div className="grow basis-0 justify-end hidden lg:flex">
+            {/* <div className="grow basis-0 justify-end hidden lg:flex">
               <span
                 className={`bg-labelBackground rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap  px-3 py-3 text-sm relative animate-blink`}
                 onClick={() => setTrialModal(!trialModal)}
               >
-                Try now
-                {/* <span className="text-[10px] font-semibold text-red-600 absolute right-2 top-0 animate-blink ">
+                Try now */}
+            {/* <span className="text-[10px] font-semibold text-red-600 absolute right-2 top-0 animate-blink ">
                   New
                 </span> */}
-                {trialModal && (
+            {/* {trialModal && (
                   <div
                     className={`absolute top-[140%] right-0 ${
                       fetchCreds ? "h-[31.8rem]" : "h-[17.2rem]"
@@ -301,9 +306,9 @@ export const Navbar = () => {
                       </span>
                     </div>
                   </div>
-                )}
-              </span>
-            </div>
+                )} */}
+            {/* </span>
+            </div> */}
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
@@ -312,7 +317,7 @@ export const Navbar = () => {
                 rel="noopener noreferrer"
               >
                 <BuyMeCoffee />
-                <span className="ml-1"> Buy me a coffee</span>
+                <span className="ml-1">Join the Waitlist</span>
               </a>
             </div>
           </div>

@@ -32,8 +32,7 @@ export const ProtectWhatMatters = () => {
         </span>
         <div className="flex-grow w-full max-w-[1200px] px-4 pt-2 flex flex-col items-center z-20">
           <span className="flex flex-col items-center mb-14 mt-6 text-[40px] md:text-[48px] lg:text-7xl font-Jakartha font-medium tracking-tight text-balance gradient-text-bottom leading-10 md:leading-[54px]">
-            <h1 className="text-center lg:text-left ">Why Use</h1>
-            <h1 className="text-center lg:text-left ">Osvauld</h1>
+            <h1 className="text-center lg:text-left ">Why Use Osvauld?</h1>
           </span>
 
           <span className="pricing-content text-sm px-4 md:text-lg mb-16 text-center">
