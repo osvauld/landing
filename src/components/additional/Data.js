@@ -2,7 +2,7 @@ const Data = [
   {
     question: "Do I need internet to access my passwords?",
     answer:
-      "No! You can access all your passwords anytime, even without internet. Changes automatically sync across your devices when you're back online.",
+      "No! You can access all your passwords anytime, even without internet. Changes sync across your devices on demand.",
   },
   {
     question: "How is this different from other password managers?",
@@ -12,7 +12,7 @@ const Data = [
   {
     question: "What if my laptop crashes or gets stolen?",
     answer:
-      "Don't worry! Your passwords are automatically backed up across your connected devices. You can recover everything by logging in from any of your other devices.",
+      "Don't worry! Your passwords are backed up across your connected devices. You can recover everything by logging in from any of your other devices.",
   },
   {
     question: "Is it safe to store all passwords in one place?",
@@ -38,6 +38,17 @@ const Data = [
     question: "How does syncing work between my devices?",
     answer:
       "Your devices connect directly to each other from anywhere, ensuring fast and secure syncing. No data goes through external servers - everything transfers directly between your devices.",
+  },
+  {
+    question:
+      "Why use this instead of my browser's password autofill or other password managers?",
+    answer:
+      "Browser password managers limit you to one browser and lack proper backup. With Osvauld, like other password managers, you get secure password generation, encrypted storage and multi-device access. But most importently unlike subscription-based cloud password managers, your data syncs directly between your devices without going through servers - giving you the same features with better privacy and no monthly fees.",
+  },
+  {
+    question: "why is osvauld free?",
+    answer:
+      "Osvauld is a free and open-source solution. Osvauld  just needs your device to make it work. We believe in privacy and decentralized solutions, and we want to make it accessible to everyone.",
   },
 ];
 
