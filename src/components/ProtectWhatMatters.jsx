@@ -36,11 +36,10 @@ export const ProtectWhatMatters = () => {
           </span>
 
           <span className="pricing-content text-sm px-4 md:text-lg mb-16 text-center">
-            Osvauld brings privacy-respecting and secure local-first
-            applications to the masses.
+            Osvauld brings privacy-respecting and secure local-first password
+            manager to the masses.
             <br className="hidden md:inline-block" />
-            Incase need syncing with a secondary device, It happens through a
-            direct connection.
+            Syncing between your devices happens through direct connections.
           </span>
 
           <div className="cards grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 md:gap-x-10 w-full min-w-[360px] max-w-[331px] md:max-w-[900px] ">

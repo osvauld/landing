@@ -66,7 +66,7 @@ export const Hero = () => (
           </span>
         </h1>
         <div className="text-faqAnswer font-Inter font-light text-base md:text-lg xl:text-xl text-center pt-12 px-4 tracking-wide max-w-[99vw]">
-          Keep your passwords offline, but synced{" "}
+          Keep your passwords offline, but synced.{" "}
           <br className="hidden md:block" /> Password manager that syncs
           directly between your devices.{" "}
           {/* <br className="hidden" /> manage, audit,{" "}
