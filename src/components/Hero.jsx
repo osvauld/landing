@@ -54,22 +54,21 @@ export const Hero = () => (
             </span>
           </a>
         </div>
-        <h1 className="text-5xl text-white1 font-semibold font-Jakartha text-center lg:text-7xl xl:text-8xl gradient-text pt-16 px-4">
+        <h1 className="text-5xl text-white1 font-semibold font-Jakartha text-center lg:text-7xl xl:text-8xl gradient-text py-10 px-4">
           <span className="whitespace-normal lg:whitespace-nowrap">
-            Your Data,
-            <br className="block md:hidden" />
-            Your Rules.
+            One app <br className="block md:hidden" />
+            for
           </span>{" "}
           <br className="block md:hidden" />{" "}
           <span className="whitespace-normal md:whitespace-nowrap">
-            Offline, Secure and <br className="block md:hidden" />{" "}
-            <span className="tracking-wide">Direct!</span>
+            All your <br className="block md:hidden" />{" "}
+            <span className="tracking-wide">Secrets</span>
           </span>
         </h1>
         <div className="text-faqAnswer font-Inter font-light text-base md:text-lg xl:text-xl text-center pt-12 px-4 tracking-wide max-w-[99vw]">
-          Our Peer-to-peer approach make sure you can sync data{" "}
-          <br className="hidden md:block" /> end-to-end encrypted, directly
-          between devices desktop or mobile — without a middleman.{" "}
+          Keep your passwords offline, but synced{" "}
+          <br className="hidden md:block" /> Password manager that syncs
+          directly between your devices.{" "}
           {/* <br className="hidden" /> manage, audit,{" "}
           <br className=" hidden xl:block" /> and share credentials within your
           team.

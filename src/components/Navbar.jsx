@@ -15,11 +15,6 @@ import { Tick } from "../assets/icons/Tick";
 import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 
 const navbarLinks = [
-  {
-    label: "Book a Demo",
-    href: "/demo",
-    ariaLabel: "Book a Demo",
-  },
   // {
   //   label: "Pricing",
   //   href: "/pricing",
@@ -29,6 +24,11 @@ const navbarLinks = [
     label: "FAQ",
     href: "/faq",
     ariaLabel: "FAQ",
+  },
+  {
+    label: "Book a Demo",
+    href: "/demo",
+    ariaLabel: "Book a Demo",
   },
   {
     label: "Our story",
