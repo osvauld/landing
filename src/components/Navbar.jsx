@@ -15,11 +15,11 @@ import { Tick } from "../assets/icons/Tick";
 import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 
 const navbarLinks = [
-  // {
-  //   label: "Book a Demo",
-  //   href: "/demo",
-  //   ariaLabel: "Book a Demo",
-  // },
+  {
+    label: "Book a Demo",
+    href: "/demo",
+    ariaLabel: "Book a Demo",
+  },
   // {
   //   label: "Pricing",
   //   href: "/pricing",
@@ -31,8 +31,8 @@ const navbarLinks = [
     ariaLabel: "FAQ",
   },
   {
-    label: "Our Story",
-    href: "/",
+    label: "Our story",
+    href: "/story",
     ariaLabel: "our story",
   },
   // {
@@ -316,8 +316,7 @@ export const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <BuyMeCoffee />
-                <span className="ml-1">Join the Waitlist</span>
+                <span className="ml-1">Join Waitlist</span>
               </a>
             </div>
           </div>
