@@ -78,15 +78,6 @@ export const Hero = () => (
         </div>
         <div className="flex items-center justify-center gap-4 md:flex-row text-sm flex-wrap pt-12">
           <a
-            className="rounded-lg font-medium text-black bg-blue1 px-3 py-2 text-sm whitespace-nowrap flex cursor-pointer"
-            href="https://docs.osvauld.com/installation/setting-up-osvauld/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="get started"
-          >
-            <span className="pt-px">Join waitlist</span>
-          </a>
-          <a
             className="text-blue1 bg-dark4 border rounded-lg border-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap px-3 py-2"
             href="/"
             target="_blank"
@@ -95,6 +86,15 @@ export const Hero = () => (
           >
             <PlayButton />
             <span className="ml-1 font-medium"> Watch Demo</span>
+          </a>
+          <a
+            className="rounded-lg font-medium text-black bg-blue1 px-3 py-2 text-sm whitespace-nowrap flex cursor-pointer"
+            href="https://docs.osvauld.com/installation/setting-up-osvauld/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="get started"
+          >
+            <span className="pt-px">Join waitlist</span>
           </a>
         </div>
         <div className="flex justify-center items-center pt-12">
