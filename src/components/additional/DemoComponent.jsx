@@ -23,7 +23,7 @@ export const DemoComponent = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.2 }}
-      className="w-full mb-[8rem] max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white"
+      className="w-full mb-[10rem] max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white"
     >
       <div className="relative flex">
         <img
@@ -38,9 +38,9 @@ export const DemoComponent = () => {
         />
 
         <div className="z-30 flex flex-col items-center">
-          <span className="text-xs bg-labelBackground py-2 px-4 my-2 rounded-md text-blue1">
+          {/* <span className="text-xs bg-labelBackground py-2 px-4 my-2 rounded-md text-blue1">
             Helping teams manage shared credentials
-          </span>
+          </span> */}
           <span className="flex flex-col items-center mt-4 mb-8 md:mt-10 md:mb-14  text-[40px] md:text-[48px] lg:text-[62px] font-semibold tracking-normal text-balance leading-10 md:leading-[54px]">
             <h1 className="text-center lg:text-left font-Jakartha ">
               Request a live Demo
