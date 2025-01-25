@@ -28,7 +28,9 @@ export const Footer = () => {
             </span>
             <div className="flex flex-col xs:flex-row justify-center items-center gap-4">
               <button className="px-6 py-3 bg-black rounded-lg text-blue1 text-xl font-semibold flex justify-center items-center gap-4 min-w-[270px]">
-                <span className="">Join Waitlist</span>
+                <a href="https://getwaitlist.com/waitlist/14960">
+                  Join Waitlist
+                </a>
               </button>
             </div>
             <div className="text-center flex flex-col gap-4">

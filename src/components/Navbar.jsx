@@ -312,7 +312,7 @@ export const Navbar = () => {
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
                 className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
-                href="https://www.buymeacoffee.com/osvauld"
+                href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 rel="noopener noreferrer"
               >
