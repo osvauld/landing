@@ -1,20 +1,6 @@
 ---
-import "@fontsource/inter/100.css";
-import "@fontsource/inter/200.css";
-import "@fontsource/inter/300.css";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/inter/800.css";
-import "@fontsource/inter/900.css";
-import "@fontsource/plus-jakarta-sans/200.css";
-import "@fontsource/plus-jakarta-sans/300.css";
-import "@fontsource/plus-jakarta-sans/400.css";
-import "@fontsource/plus-jakarta-sans/500.css";
-import "@fontsource/plus-jakarta-sans/600.css";
-import "@fontsource/plus-jakarta-sans/700.css";
-import "@fontsource/plus-jakarta-sans/800.css";
+import "@fontsource/inter";
+import "@fontsource/plus-jakarta-sans";
 import { SEO } from "astro-seo";
 import thumbnail from "../assets/images/thumbnail.webp";
 
@@ -27,8 +13,8 @@ interface Props {
 }
 
 const {
-  title,
-  description = "On-premise, open-source credential manager for teams",
+  title = "Osvauld - Private & Secure Offline Password Manager",
+  description = "Keep your passwords truly offline with Osvauld, a privacy-first password manager that syncs securely through peer-to-peer connections. Free forever, open source, and designed to keep your secrets completely under your control.",
 } = Astro.props;
 ---
 
@@ -85,16 +71,26 @@ const {
       description={description}
       openGraph={{
         basic: {
-          title: "osvauld",
+          title: "Osvauld - Private & Secure Offline Password Manager",
           type: "website",
           image: new URL(thumbnail.src, Astro.site).toString(),
         },
       }}
     />
     <meta name="generator" content={Astro.generator} />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Osvauld",
+        "applicationCategory": "Credential Management Software",
+        "operatingSystem": "Cross-platform",
+        "description": "Offline, peer-to-peer credential manager"
+      }
+    </script>
   </head>
 
-  <>
+  <div>
     <Navbar />
     <slot />
     <Footer />
@@ -144,5 +140,5 @@ const {
         background-color: #2f303e; /* color of the thumb on hover */
       }
     </style>
-  </>
+  </div>
 </html>

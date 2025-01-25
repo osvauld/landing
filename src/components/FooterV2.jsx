@@ -23,7 +23,7 @@ export const Footer = () => {
               {/* <LinkdinIcon color={"black"} size={"45px"} />
               <InstagramIcon color={"black"} size={"45px"} /> */}
             </div>
-            <span className="mx-auto text-[54px] xl:text-[64px] tracking-[-4px] font-Jakartha font-semibold">
+            <span className="mx-auto text-[54px] xl:text-[64px] tracking-[-2px] font-Jakartha font-semibold">
               Protecting what matters the most.
             </span>
             <div className="flex flex-col xs:flex-row justify-center items-center gap-4">

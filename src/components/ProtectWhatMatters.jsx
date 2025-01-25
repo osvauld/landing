@@ -52,9 +52,12 @@ export const ProtectWhatMatters = () => {
                 passwords, notes, or other essentials, you can view, create, and
                 update everything without an internet connection. Once you're
                 back online, your data automatically syncs across all your
-                devices. It’s like having a personal notebook that’s always with
-                you and keeps everything up-to-date seamlessly. Simple Yet
-                Powerful Security
+                devices.
+                <br />
+                <br />
+                It’s like having a personal notebook that’s always with you and
+                keeps everything up-to-date seamlessly. Simple Yet Powerful
+                Security.
               </p>
               <div className="grow flex justify-center items-center">
                 <img
@@ -86,7 +89,7 @@ export const ProtectWhatMatters = () => {
                   Connect any two devices on the planet
                 </h2>
                 <p className="pricing-content mb-4 text-left ">
-                  lets you establish direct peer-to-peer connections whenever
+                  Lets you establish direct peer-to-peer connections whenever
                   possible, falling back to relay servers if necessary. This
                   gives you fast, reliable connections that are authenticated
                   and encrypted end-to-end using QUIC.
