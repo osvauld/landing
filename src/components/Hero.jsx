@@ -88,7 +88,7 @@ export const Hero = () => (
           </a>
           <a
             className="rounded-lg font-medium text-black bg-blue1 px-3 py-2 text-sm whitespace-nowrap flex cursor-pointer"
-            href="https://docs.osvauld.com/installation/setting-up-osvauld/"
+            href="https://getwaitlist.com/waitlist/14960"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="get started"

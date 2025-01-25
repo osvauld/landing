@@ -46,7 +46,7 @@ const Data = [
       "Browser password managers limit you to one browser and lack proper backup. With Osvauld, like other password managers, you get secure password generation, encrypted storage and multi-device access. But most importently unlike subscription-based cloud password managers, your data syncs directly between your devices without going through servers - giving you the same features with better privacy and no monthly fees.",
   },
   {
-    question: "why is osvauld free?",
+    question: "Why is osvauld free?",
     answer:
       "Osvauld is a free and open-source solution. Osvauld  just needs your device to make it work. We believe in privacy and decentralized solutions, and we want to make it accessible to everyone.",
   },

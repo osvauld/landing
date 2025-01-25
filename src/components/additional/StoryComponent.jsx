@@ -49,7 +49,7 @@ export const StoryComponent = () => {
           <h2 className="text-white  text-xl  mb-2">The Breakthrough</h2>{" "}
           <p className="text-lg text-faqAnswer">
             While developing our peer-to-peer synchronization solution using
-            iroh, we had an epiphany. What if users had a dedicated device for
+            Iroh, we had an epiphany. What if users had a dedicated device for
             managing their digital identity and credentials? This thought
             evolved into something even more powerful: a platform where
             individuals could host their data and selectively share it with
@@ -58,7 +58,7 @@ export const StoryComponent = () => {
           <br />
           <h2 className="text-white  text-xl  mb-2">Looking Forward</h2>
           <p className="text-lg text-faqAnswer">
-            Today, osvauld is growing beyond its origins as a password manager.
+            Today, Osvauld is growing beyond its origins as a password manager.
             We're building a privacy-first platform that enables secure data
             hosting and sharing, with user control at its core. Our vision
             extends to creating applications and porting open-source projects to
