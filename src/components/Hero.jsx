@@ -11,10 +11,11 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { PlayButton } from "../assets/icons/PlayButton";
 import { motion, AnimatePresence } from "framer-motion";
+import DecryptedText from "./ui/DecryptedText";
 
 export const Hero = () => {
-  const words = ["Secrets", "Notes", "PINs", "Credentials"];
-  const [currentWord, setCurrentWord] = useState("Secrets");
+  const words = ["secrets", "notes", "pins", "credentials"];
+  const [currentWord, setCurrentWord] = useState("secrets");
   const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
@@ -77,35 +78,22 @@ export const Hero = () => {
             </span>{" "}
             <br className="block md:hidden" />{" "}
             <span className="whitespace-normal md:whitespace-nowrap">
-              All your <br className="block md:hidden" />{" "}
-              <div className="inline-block w-[28rem] text-left">
-                {currentWord.split("").map((letter, index) => (
-                  <motion.span
-                    key={`${letter}-${index}-${wordIndex}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{
-                      duration: 0.3,
-                      delay: index * 0.1,
-                      ease: "easeOut",
-                    }}
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
+              all your <br className="block" />
+              <div className="inline-block mt-4">
+                <DecryptedText
+                  text={currentWord}
+                  animateOn="view"
+                  revealDirection="center"
+                  className="font-semibold italic"
+                />
               </div>
             </span>
           </h1>
           <div className="text-faqAnswer font-Inter font-light text-base md:text-lg xl:text-xl text-center pt-12 px-4 tracking-wide max-w-[99vw]">
-            Keep your passwords offline, but synced.{" "}
-            <br className="hidden md:block" /> Password manager that syncs
-            directly between your devices.{" "}
-            {/* <br className="hidden" /> manage, audit,{" "}
-          <br className=" hidden xl:block" /> and share credentials within your
-          team.
-          <br className=" hidden xl:block" /> No more scrounging over Slack or
-          Google Sheets */}
+            Simplify how you manage sensitive data. <br /> Keep your passwords
+            offline, but synced. With Osvauld,
+            <br className="hidden md:block" /> your secrets are safe,
+            accessible, and only yours.
           </div>
           <div className="flex items-center justify-center gap-4 md:flex-row text-sm flex-wrap pt-12">
             <a
