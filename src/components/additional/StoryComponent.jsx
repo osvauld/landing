@@ -1,24 +1,11 @@
-import { motion } from "framer-motion";
-import meetOsvauld from "../../assets/images/meetOsvauld.png";
-import calendarLeft from "../../assets/images/calendarLeft.png";
-import calendarRight from "../../assets/images/calendarRight.png";
-import Cal, { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
-
 export const StoryComponent = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.2 }}
-      className="w-full mb-[6rem] max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white"
-    >
+    <div className="w-full min-h-screen mb-[6rem] max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white">
       <div className="">
         <span className="flex flex-col items-center mb-14 mt-6 text-[40px] md:text-[48px] lg:text-7xl font-Jakartha font-medium tracking-tight text-balance gradient-text-bottom ">
           <h1 className="text-center lg:text-left py-2">Our story</h1>
         </span>
-        <p className="text-lg text-faqAnswer">
+        <div className="text-lg text-faqAnswer">
           {" "}
           Every great project starts with a challenge, and ours began when we
           saw a gap in the way organizations handle shared credentials. As
@@ -68,8 +55,8 @@ export const StoryComponent = () => {
             isn't just a feature, it's the foundation. Join us as we continue to
             evolve and shape the future of personal data management and privacy.
           </p>
-        </p>
+        </div>
       </div>
-    </motion.section>
+    </div>
   );
 };

@@ -18,13 +18,7 @@ export const DemoComponent = () => {
     })();
   }, []);
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.2 }}
-      className="w-full mb-[10rem] max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white"
-    >
+    <div className="w-full min-h-screen mb-[10rem] max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white">
       <div className="relative flex">
         <img
           src={calendarLeft.src}
@@ -101,6 +95,6 @@ export const DemoComponent = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </div>
   );
 };

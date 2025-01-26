@@ -71,7 +71,7 @@ export const Hero = () => {
               </span>
             </a>
           </div>
-          <h1 className="text-5xl text-white1 font-semibold font-Jakartha text-center lg:text-7xl xl:text-8xl gradient-text py-10 px-4">
+          <h1 className="text-5xl text-white1 font-medium font-Jakartha text-center lg:text-7xl xl:text-8xl gradient-text py-10 px-4">
             <span className="whitespace-normal lg:whitespace-nowrap">
               One app <br className="block md:hidden" />
               for
@@ -79,10 +79,11 @@ export const Hero = () => {
             <br className="block md:hidden" />{" "}
             <span className="whitespace-normal md:whitespace-nowrap">
               all your <br className="block" />
-              <div className="inline-block mt-4">
+              <div className="inline-block mt-5">
                 <DecryptedText
                   text={currentWord}
                   animateOn="view"
+                  speed={75}
                   revealDirection="center"
                   className="font-semibold italic"
                 />
