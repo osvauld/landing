@@ -12,19 +12,13 @@ export const FaqComponent = () => {
       className="w-full min-h-screen max-w-[1400px] mx-auto bg-dark4 px-4"
       id="faqs"
     >
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.2 }}
-        className="w-full pt-28 md:pb-10  text-white"
-      >
+      <div className="w-full pt-28 md:pb-10  text-white">
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-2">
           <div className="flex flex-col justify-start items-center md:items-start ">
             <h1 className="z-10 md:fixed md:top-24 text-[36px] mb-6 mt-[4rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px]  gradient-text text-center md:text-left md:ml-[1.5rem]">
               Frequently Asked Questions
             </h1>
-            <div className="z-10 md:fixed md:top-[23.5rem]  hidden md:visible px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-24 text-center md:text-left">
+            {/* <div className="z-10 md:fixed md:top-[23.5rem]  hidden md:visible px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-24 text-center md:text-left">
               <span className="font-light text-xl">
                 Still have a question? <br />
               </span>
@@ -43,7 +37,7 @@ export const FaqComponent = () => {
                   </a>
                 </button>
               </div>
-            </div>
+            </div> */}
             <img
               src={questionLeft.src}
               alt="questionLeft"
@@ -100,7 +94,7 @@ export const FaqComponent = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
