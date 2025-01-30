@@ -88,7 +88,7 @@ export const Hero = () => {
             <div className="flex items-center justify-center gap-4 md:flex-row text-sm flex-wrap pt-12">
               <a
                 className="text-blue1 font-Jakartha  text-lg bg-dark4 border-2 rounded-xl border-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap px-4 py-3"
-                href="/"
+                href="https://discord.com/invite/kV6gBeM6Fm"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="watch demo"
@@ -97,7 +97,7 @@ export const Hero = () => {
                 <span className="ml-2 font-bold "> Connect with us</span>
               </a>
               <a
-                className="rounded-xl text-black bg-blue1 px-4 py-3 text-lg whitespace-nowrap flex cursor-pointer"
+                className="w-[12.5rem] xs:w-auto flex justify-center items-center rounded-xl text-black bg-blue1 px-4 py-3 text-lg whitespace-nowrap  cursor-pointer"
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 rel="noopener noreferrer"

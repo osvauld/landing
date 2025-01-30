@@ -43,6 +43,7 @@ module.exports = {
       fontFamily: {
         Inter: ["Inter", "Helvetica", "Arial", "sans-serif"],
         Jakartha: ["Plus Jakarta Sans", "Arial", "sans-serif"],
+        Mono: ["JetBrains Mono", "monospace"],
       },
       screens: {
         xs: "530px",

@@ -5,6 +5,8 @@ import mixpanel from "mixpanel-browser";
 import "vanilla-cookieconsent/dist/cookieconsent.css";
 import * as CookieConsent from "vanilla-cookieconsent";
 
+import { HoverBorderGradient } from "./ui/utils/hover-border-gradient";
+
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 
@@ -95,11 +97,19 @@ export const Navbar = () => {
         >
           <div className="flex justify-start items-center grow basis-0">
             <button
-              className="text-white3 font-Jakartha font-bold text-4xl pl-2 p-3"
+              className="text-white font-Jakartha font-bold text-4xl pl-2 p-3"
               onClick={scrollToTop}
             >
               <span>osvauld</span>
             </button>
+
+            <HoverBorderGradient
+              containerClassName="rounded-lg border-[#16171F] "
+              as="button"
+              className="bg-gradient-to-r from-[#373946] to-[#16171F] flex items-center space-x-2 px-2 py-1"
+            >
+              <span className="font-mono font-medium text-sm"> BETA</span>
+            </HoverBorderGradient>
           </div>
         </motion.div>
         <motion.div
@@ -109,7 +119,7 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
           className="xl:ml-auto mr-4 ml-auto"
         >
-          <div className="hidden lg:flex h-full gap-10 xl:mx-4 py-2 cursor-pointer ">
+          <div className="hidden lg:flex h-full gap-10 xl:mx-2 py-2 cursor-pointer ">
             {navbarLinks.map(({ href, label, ariaLabel }) => (
               <React.Fragment key={label}>
                 <a
@@ -131,9 +141,18 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
         >
           <div className="flex justify-center items-center gap-8">
-            <div className="grow basis-0 justify-end hidden lg:flex">
+            <div className="grow basis-0 justify-end hidden lg:flex gap-5">
               <a
-                className=" rounded-xl font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border-2 border-blue1"
+                className="font-Jakartha rounded-xl text-sm font-medium text-white2 flex justify-center items-center cursor-pointer bg-calBorder transition whitespace-nowrap hover:bg-blue2 px-3 py-2 "
+                href="https://github.com/osvauld/osvauld"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GithubIcon size="16" color="#F4F2F0" />
+                <span className="ml-1">Star us on Github</span>
+              </a>
+              <a
+                className=" rounded-xl text-sm font-medium  text-blue1 flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border-2 border-blue1"
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -158,11 +177,11 @@ export const Navbar = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
+            transition={{ duration: 0.1 }}
           >
             <div
-              className={`bg-dark4 flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
+              className={`bg-dark4 flex flex-col mt-16 lg:hidden absolute top-12 left-0   z-50 w-full 
         items-center gap-10 pb-10  border-y border-solid border-customDarkBg3 pt-10 text-sm
             `}
             >
@@ -186,7 +205,7 @@ export const Navbar = () => {
                 rel="noopener noreferrer"
               >
                 <GithubIcon color={"black"} />
-                <span className="ml-2">Contribute</span>
+                <span className="ml-2 font-medium ">Star us on Github</span>
               </a>
             </div>
           </motion.div>
