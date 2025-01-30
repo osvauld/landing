@@ -20,7 +20,7 @@ module.exports = {
         dark1Transparent: "#B3010409",
         dark2: "#0D1117",
         dark3: "#161B22",
-        dark4: "#0D0E13",
+        dark4: "#010109",
         dark5: "#101117",
         faqDark: "#111218",
         white1: "#FFFFFF",

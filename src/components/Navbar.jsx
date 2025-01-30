@@ -15,6 +15,11 @@ const navbarLinks = [
   //   ariaLabel: "Pricing",
   // },
   {
+    label: "Our story",
+    href: "/story",
+    ariaLabel: "our story",
+  },
+  {
     label: "FAQ",
     href: "/faq",
     ariaLabel: "FAQ",
@@ -24,11 +29,7 @@ const navbarLinks = [
     href: "/demo",
     ariaLabel: "Book a Demo",
   },
-  {
-    label: "Our story",
-    href: "/story",
-    ariaLabel: "our story",
-  },
+
   // {
   //   label: "About us",
   //   href: "https://docs.osvauld.com/introduction/overview/",
@@ -84,7 +85,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-screen h-20 flex justify-center items-center fixed z-40 backdrop-blur-xl">
+    <nav className="w-screen h-28 flex justify-center items-center fixed z-40 backdrop-blur-xl">
       <div className="w-full mx-auto px-4 flex items-center relative max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0 }}
@@ -94,7 +95,7 @@ export const Navbar = () => {
         >
           <div className="flex justify-start items-center grow basis-0">
             <button
-              className="text-white3 font-Jakartha font-medium text-4xl pl-2 p-3"
+              className="text-white3 font-Jakartha font-bold text-4xl pl-2 p-3"
               onClick={scrollToTop}
             >
               <span>osvauld</span>
@@ -112,7 +113,7 @@ export const Navbar = () => {
             {navbarLinks.map(({ href, label, ariaLabel }) => (
               <React.Fragment key={label}>
                 <a
-                  className="text-white1 font-extralight font-Jakartha text-sm flex justify-center items-center"
+                  className="text-white1 font-medium font-Jakartha text-sm flex justify-center items-center"
                   href={href}
                   rel="noopener noreferrer"
                   aria-label={ariaLabel}
@@ -132,7 +133,7 @@ export const Navbar = () => {
           <div className="flex justify-center items-center gap-8">
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
-                className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
+                className=" rounded-xl font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border-2 border-blue1"
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 rel="noopener noreferrer"
