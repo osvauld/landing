@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-display: swap;
+}
+html {
+  font-family: "Inter", "Plus Jakarta Sans";
+  background-color: #010409;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html::-webkit-scrollbar {
+  width: 4px;
+  height: 130px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #2f303e;
+  border-radius: 4px;
+}
+
+.active.html::-webkit-scrollbar-thumb {
+  background-color: #2f303e; /* color of the thumb */
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #2f303e; /* color of the thumb on hover */
+}
