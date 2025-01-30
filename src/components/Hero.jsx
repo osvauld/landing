@@ -28,15 +28,15 @@ export const Hero = () => {
   }, [wordIndex]);
 
   return (
-    <section
-      className="pt-20 px-2 flex flex-col justify-start items-center bg-dark4 overflow-x-hidden "
-      id="home"
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.2 }}
     >
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.2 }}
+      <section
+        className="pt-20 px-2 flex flex-col justify-start items-center bg-dark4 overflow-x-hidden "
+        id="home"
       >
         <div className="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden relative min-h-[55rem] xs:min-h-[60rem] sm:min-h-[65rem] lg:min-h-[80rem] xl:min-h-[95rem]">
           <div className="flex justify-between relative">
@@ -134,7 +134,7 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-      </motion.div>
-    </section>
+      </section>
+    </motion.div>
   );
 };
