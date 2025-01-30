@@ -8,9 +8,10 @@ import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/800.css";
 
 import Head from "../components/Head.astro";
-import Navbar from "./mainNavbar.astro";
-import Footer from "./mainFooter.astro";
+import { Navbar } from "../components/Navbar.jsx";
+import { Footer } from "../components/FooterV2.jsx";
 import "../styles/tailwind.css";
+import "../styles/Theme.css";
 ---
 
 <!doctype html>
@@ -21,7 +22,7 @@ import "../styles/tailwind.css";
     <Head />
   </head>
 
-  <Navbar />
+  <Navbar client:load />
   <slot />
-  <Footer />
+  <Footer client:load />
 </html>
