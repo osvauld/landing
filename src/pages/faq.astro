@@ -1,14 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { FaqComponent } from "../components/additional/FaqComponent";
-import { Footer } from "../components/Footer.jsx";
-import { ScrollUpButton } from "../components/ScrollUpButton";
-import { UseOsvauld } from "../components/UseOsvauld";
 import "../styles/Theme.css";
 ---
 
 <Layout title="FAQ's">
   <FaqComponent client:load />
-  <!-- <UseOsvauld client:load /> -->
-  <ScrollUpButton client:load />
 </Layout>
