@@ -11,7 +11,7 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { PlayButton } from "../assets/icons/PlayButton";
 import { motion, AnimatePresence } from "framer-motion";
-import DecryptedText from "./ui/DecryptedText";
+import DecryptedText from "./ui/utils/DecryptedText";
 
 export const Hero = () => {
   const words = ["secrets", "notes", "pins", "credentials"];
