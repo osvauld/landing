@@ -18,13 +18,13 @@ export const DemoComponent = () => {
     })();
   }, []);
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-    >
-      <div className="w-full min-h-screen mb-[10rem] max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white">
+    <div className="w-full min-h-screen mb-[10rem] max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.2 }}
+      >
         <div className="relative flex">
           <img
             src={calendarLeft.src}
@@ -101,7 +101,7 @@ export const DemoComponent = () => {
             </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };

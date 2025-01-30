@@ -1,13 +1,9 @@
 import { motion } from "framer-motion";
 import { DiscordIcon } from "../assets/icons/DiscordIcon";
-import { LinktreeIcon } from "../assets/icons/LinktreeIcon";
-import { LinkdinIcon } from "../assets/icons/LinkdinIcon";
-import { InstagramIcon } from "../assets/icons/InstagramIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { FooterOsvauld } from "../assets/logos/FooterOsvauld";
 import Matrix from "../assets/logos/Matrix";
-import Docker from "../assets/logos/Docker";
-import Twitter from "../assets/logos/Twitter";
+
 import Mastodon from "../assets/logos/Mastodon";
 
 export const Footer = () => {
@@ -16,7 +12,7 @@ export const Footer = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.2 }}
+      transition={{ duration: 0.5 }}
     >
       <section className="w-full bg-blue1 z-50">
         <footer className="relative mx-auto h-[56rem] px-[24px] pt-[32px]  max-w-[1312px]  min-h-[545px] lg:px-[60px] lg:pt-[60px]">
