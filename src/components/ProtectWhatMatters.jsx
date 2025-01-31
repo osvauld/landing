@@ -5,6 +5,8 @@ import End2end from "/src/assets/images/end2end.png";
 import Offline from "/src/assets/images/offline.png";
 import { Iroh } from "../assets/icons/Iroh";
 
+import SpotlightCard from "./ui/SpotlightCard";
+
 export const ProtectWhatMatters = () => {
   return (
     <motion.section
@@ -12,99 +14,79 @@ export const ProtectWhatMatters = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.2, delay: 0.2 }}
-      className="w-full flex-grow flex flex-col items-center max-w-[1200px] mx-auto bg-dark4 px-4 pt-0 sm:pt-12 text-white"
+      className="min-h-[75rem] sm:min-h-[60rem] w-full flex-grow flex flex-col items-center max-w-[1400px] mx-auto bg-dark4 px-4 pt-0 sm:pt-12 text-white relative"
     >
-      <div className="flex flex-col justify-between items-center relative min-h-[90vh] w-full">
-        <span className="absolute transform z-10 scale-50 -left-24  sm:scale-75 sm:-left-0 -top-12  md:-top-12 md:-left-0 lg:top-12 lg:left-0">
+      <div className="flex justify-center gap-20 relative">
+        <div className="flex items-start min-w-[300px]">
           <img
-            alt="dashboard of osvauld"
+            alt="Conceptual image"
             src={HomeStars.src}
-            className="max-w-[350px]"
+            className=" xl:-translate-y-28 xl:-translate-x-32"
           />
-        </span>
-        <span className="w-0 md:w-[600px] "></span>
-        <span className="absolute transform z-10 scale-50 -right-24 sm:scale-75 -top-16 sm:-right-6 md:-top-16 md:-right-6 lg:-top-16 lg:right-6">
-          <img
-            alt="dashboard of osvauld"
-            src={HomeLock.src}
-            className="max-w-[350px]"
-          />
-        </span>
-        <div className="flex-grow w-full max-w-[1200px] px-4 pt-2 flex flex-col items-center z-20">
-          <span className="flex flex-col items-center mb-14 mt-6 text-[40px] md:text-[48px] lg:text-7xl font-Jakartha font-medium tracking-tight text-balance gradient-text-bottom py-4 leading-10 md:leading-[54px]">
-            <h1 className="text-center lg:text-left ">Why Use Osvauld?</h1>
-          </span>
+        </div>
 
-          <span className="pricing-content text-sm px-4 md:text-lg mb-16 text-center">
-            Osvauld brings privacy-respecting and secure local-first password
-            manager to the masses.
-            <br className="hidden md:inline-block" />
-            Syncing between your devices happens through direct connections.
-          </span>
+        <div className="transform  min-w-[200px]">
+          <img alt="Conceptual image" src={HomeLock.src} className="" />
+        </div>
+      </div>
 
-          <div className="cards grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 md:gap-x-10 w-full min-w-[360px] max-w-[331px] md:max-w-[900px] ">
-            <div className="feature-card  h-[600px] w-full flex flex-col p-6">
-              <h2 className="font-Jakartha font-normal tracking-tight text-4xl mb-4 gradient-text-bottom leading-tight">
-                Always Accessible, Even Offline
-              </h2>
-              <p className="pricing-content mb-4">
-                Never be stuck without your important information. Whether it's
-                passwords, notes, or other essentials, you can view, create, and
-                update everything without an internet connection. Once you're
-                back online, your data automatically syncs across all your
-                devices.
-                <br />
-                <br />
-                It’s like having a personal notebook that’s always with you and
-                keeps everything up-to-date seamlessly. Simple Yet Powerful
-                Security.
-              </p>
-              <div className="grow flex justify-center items-center">
-                <img
-                  alt="image representing end-to-end Offline-First Implementation"
-                  src={Offline.src}
-                  className="w-full"
-                />
-              </div>
-            </div>
-            <div className="feature-card h-[600px] w-full flex flex-col p-6">
-              <h2 className="font-Jakartha font-normal tracking-tight text-4xl mb-4 gradient-text-bottom leading-tight ">
-                Simple yet powerful security
-              </h2>
-              <p className="pricing-content mb-4">
-                Your data is safeguarded with top-tier encryption, ensuring
-                everything stays secure and private. Imagine having a digital
-                vault that only you can open—we make sure your information
-                remains protected and inaccessible to anyone else, including us.
-              </p>
-              <img
-                alt="image representing end-to-end encryption"
-                src={End2end.src}
-                className="w-full"
-              />
-            </div>
-            <div className="feature-card  h-[600px] w-full md:h-[452px] md:col-span-2  p-6 grid grid-col-1 lg:grid-cols-2 text-left">
-              <div>
-                <h2 className="font-Jakartha font-normal leading-tight tracking-tight text-4xl mb-4 gradient-text-bottom">
-                  Connect any two devices on the planet
-                </h2>
-                <p className="pricing-content mb-4 text-left ">
-                  Lets you establish direct peer-to-peer connections whenever
-                  possible, falling back to relay servers if necessary. This
-                  gives you fast, reliable connections that are authenticated
-                  and encrypted end-to-end using QUIC.
-                  <br />
-                  <br />
-                  All your data management happens only on your device,
-                  eliminating the need to send sensitive information to external
-                  servers.
-                </p>
-              </div>
-              <div className="flex justify-center items-center overflow-hidden">
-                <Iroh />
-              </div>
-            </div>
-          </div>
+      <div className="absolute top-12 lg:top-32 left-1/2 transform -translate-x-1/2 z-10  w-full max-w-[1400px] px-4 pt-2 flex flex-col items-center ">
+        <span className="gradient-text-bottom font-Mono font-medium text-2xl">
+          WHY OSVAULD?
+        </span>
+        <span className="flex flex-col items-center mb-14 mt-6 text-[40px] md:text-[48px] lg:text-7xl font-Jakartha font-medium tracking-tight text-balance gradient-text-bottom py-4 leading-10 md:leading-[54px]">
+          <h2 className="text-center lg:text-left ">
+            Protecting what <br /> matters the most.
+          </h2>
+        </span>
+
+        <span className="pricing-content text-sm px-4 md:text-lg mb-16 text-center">
+          Managing your digital life doesn’t have to be a headache.
+          <br /> Forget the stress of remembering countless passwords <br /> or
+          worrying about your data’s security.
+        </span>
+
+        <span className="gradient-text-bottom font-Mono font-medium text-2xl">
+          OSVAULD IS HERE TO:
+        </span>
+
+        <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
+          <SpotlightCard className=" feature-card">
+            <span className="gradient-text-bottom font-Jakartha font-semibold text-2xl tracking-tighter ">
+              Keep everything safe{" "}
+            </span>
+            <p className="font-Inter text-base font-normal text-faqAnswer mt-6">
+              Your private details are <br />
+              encrypted and stored securely.
+            </p>
+          </SpotlightCard>
+
+          <SpotlightCard className="feature-card">
+            <span className="gradient-text-bottom font-Jakartha font-semibold text-2xl tracking-tighter ">
+              Work without internet{" "}
+            </span>
+            <p className="font-Inter text-base font-normal text-faqAnswer mt-6">
+              Stay in control even offline – <br /> access anytime, anywhere.
+            </p>
+          </SpotlightCard>
+
+          <SpotlightCard className="feature-card">
+            <span className="gradient-text-bottom font-Jakartha font-semibold text-2xl tracking-tighter ">
+              Sync across devices{" "}
+            </span>
+            <p className="font-Inter text-base font-normal text-faqAnswer mt-6">
+              Get seamless access to your <br /> data on all your devices.
+            </p>
+          </SpotlightCard>
+          <SpotlightCard className="feature-card">
+            <span className="gradient-text-bottom font-Jakartha font-semibold text-2xl tracking-tighter ">
+              Put you in charge{" "}
+            </span>
+            <p className="font-Inter text-base font-normal text-faqAnswer mt-6">
+              No third parties, no trackers – <br /> only you can access your
+              data.
+            </p>
+          </SpotlightCard>
         </div>
       </div>
     </motion.section>

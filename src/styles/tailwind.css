@@ -11,6 +11,12 @@
   font-family: "Plus Jakarta Sans";
   font-display: swap;
 }
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-display: swap;
+}
+
 html {
   font-family: "Inter", "Plus Jakarta Sans";
   background-color: #010409;

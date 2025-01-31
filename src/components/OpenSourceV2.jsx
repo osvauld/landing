@@ -8,7 +8,7 @@ export const OpenSourceV2 = () => (
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: 0.2 }}
+    transition={{ duration: 0.2 }}
     className=" w-full max-w-[1200px] flex flex-col justify-start gap-4 md:flex-row md:justify-around  mx-auto mt-20 px-8"
   >
     <div>
