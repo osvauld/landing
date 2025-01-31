@@ -108,7 +108,7 @@ export const Navbar = () => {
               as="button"
               className="bg-gradient-to-r from-[#373946] to-[#16171F] flex items-center space-x-2 px-2 py-1"
             >
-              <span className="font-mono font-medium text-sm"> BETA</span>
+              <span className="font-Mono font-medium text-sm"> BETA</span>
             </HoverBorderGradient>
           </div>
         </motion.div>

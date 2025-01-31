@@ -39,11 +39,11 @@ export const Hero = () => {
         className="pt-20 px-2 flex flex-col justify-start items-center bg-dark4 overflow-x-hidden "
         id="home"
       >
-        <div className="max-w-[1640px] w-full overflow-x-hidden overflow-y-hidden relative min-h-[55rem] xs:min-h-[60rem] sm:min-h-[65rem] lg:min-h-[80rem] xl:min-h-[95rem]">
+        <div className="max-w-[1640px] w-full overflow-x-hidden overflow-y-hidden relative min-h-[55rem] md:min-h-[70rem] lg:min-h-[80rem] xl:min-h-[95rem]">
           <div className="flex justify-center gap-20 relative">
             <div className="flex items-start min-w-[300px]">
               <img
-                alt="dashboard of osvauld"
+                alt="representation image"
                 src={HeroShield.src}
                 className="max-h-[620px] xl:-translate-y-28 xl:-translate-x-32"
               />
@@ -51,7 +51,7 @@ export const Hero = () => {
 
             <div className="transform translate-y-20 min-w-[300px]">
               <img
-                alt="dashboard of osvauld"
+                alt="representation image"
                 src={HeroKey.src}
                 className="max-h-[660px]"
               />

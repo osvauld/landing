@@ -39,6 +39,7 @@ module.exports = {
         calBorder: "#16171F",
         labelSperator: "#4D4F60",
         tabBg: "#292A36",
+        cardBg: "#0D0E13",
       },
       fontFamily: {
         Inter: ["Inter", "Helvetica", "Arial", "sans-serif"],
