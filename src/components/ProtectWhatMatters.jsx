@@ -51,7 +51,7 @@ export const ProtectWhatMatters = () => {
         </span>
 
         <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
-          <SpotlightCard className="custom-spotlight-card">
+          <SpotlightCard className=" feature-card">
             <span className="gradient-text-bottom font-Jakartha font-semibold text-2xl tracking-tighter ">
               Keep everything safe{" "}
             </span>
@@ -61,7 +61,7 @@ export const ProtectWhatMatters = () => {
             </p>
           </SpotlightCard>
 
-          <SpotlightCard className="custom-spotlight-card">
+          <SpotlightCard className="feature-card">
             <span className="gradient-text-bottom font-Jakartha font-semibold text-2xl tracking-tighter ">
               Work without internet{" "}
             </span>
@@ -70,7 +70,7 @@ export const ProtectWhatMatters = () => {
             </p>
           </SpotlightCard>
 
-          <SpotlightCard className="custom-spotlight-card">
+          <SpotlightCard className="feature-card">
             <span className="gradient-text-bottom font-Jakartha font-semibold text-2xl tracking-tighter ">
               Sync across devices{" "}
             </span>
@@ -78,7 +78,7 @@ export const ProtectWhatMatters = () => {
               Get seamless access to your <br /> data on all your devices.
             </p>
           </SpotlightCard>
-          <SpotlightCard className="custom-spotlight-card">
+          <SpotlightCard className="feature-card">
             <span className="gradient-text-bottom font-Jakartha font-semibold text-2xl tracking-tighter ">
               Put you in charge{" "}
             </span>
