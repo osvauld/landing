@@ -20,7 +20,7 @@ export const Footer = () => {
             <div className="flex flex-col gap-24">
               <div className="icons flex items-center flex-wrap gap-10 mx-auto">
                 <GithubIcon color={"black"} size={"45px"} />
-                <DiscordIcon width={"45px"} height={"45px"} />{" "}
+                <DiscordIcon size={"45px"} />{" "}
                 <Matrix width={"45px"} height={"45px"} />
                 <Mastodon width={"45px"} height={"45px"} />
                 {/* <LinkdinIcon color={"black"} size={"45px"} />

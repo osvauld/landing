@@ -5,8 +5,8 @@ import rize from "../assets/images/rize.png";
 
 export const SupportedBy = () => (
   <motion.section
-    initial={{ opacity: 0, x: -200 }}
-    whileInView={{ opacity: 1, x: 0 }}
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.3, delay: 0.4 }}
     className=" w-full max-w-[1200px] mx-auto my-10 px-8 flex flex-col items-center gap-16"
