@@ -37,9 +37,10 @@ module.exports = {
         trialFieldText: "#85889C",
         labelBackground: "#20212B",
         calBorder: "#16171F",
-        labelSperator: "#4D4F60",
+        labelSperator: "#4D4F6f0",
         tabBg: "#292A36",
         cardBg: "#0D0E13",
+        text2: "#BFBFBF",
       },
       fontFamily: {
         Inter: ["Inter", "Helvetica", "Arial", "sans-serif"],

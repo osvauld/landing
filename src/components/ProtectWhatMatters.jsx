@@ -51,7 +51,7 @@ export const ProtectWhatMatters = () => {
         </span>
 
         <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
-          <SpotlightCard className=" feature-card">
+          <SpotlightCard className=" feature-card ">
             <span className="gradient-text-bottom font-Jakartha font-semibold text-2xl tracking-tighter ">
               Keep everything safe{" "}
             </span>
@@ -61,7 +61,7 @@ export const ProtectWhatMatters = () => {
             </p>
           </SpotlightCard>
 
-          <SpotlightCard className="feature-card">
+          <SpotlightCard className="feature-card ">
             <span className="gradient-text-bottom font-Jakartha font-semibold text-2xl tracking-tighter ">
               Work without internet{" "}
             </span>
