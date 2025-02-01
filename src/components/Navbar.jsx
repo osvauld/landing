@@ -104,7 +104,7 @@ export const Navbar = () => {
             </button>
 
             <HoverBorderGradient
-              containerClassName="rounded-lg border-[#16171F] "
+              containerClassName="rounded-lg "
               as="button"
               className="bg-gradient-to-r from-[#373946] to-[#16171F] flex items-center space-x-2 px-2 py-1"
             >

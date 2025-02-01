@@ -38,15 +38,15 @@ export const Footer = () => {
               </div>
               <div className="text-center flex flex-col gap-4">
                 <div className="flex items-center gap-4">
-                  <a href="" className="ml-auto tracking-tight">
+                  <a href="/terms" className="ml-auto tracking-tight">
                     Terms of Use
                   </a>
-                  <a href="" className="mr-auto tracking-tight">
+                  <a href="/privacy" className="mr-auto tracking-tight">
                     Privacy Policy
                   </a>
                 </div>
                 <p className="font-medium">
-                  Osvauld Security Solutions Pvt Limited @ 2024
+                  Osvauld Security Solutions Pvt Limited @ 2025
                 </p>
               </div>
             </div>
