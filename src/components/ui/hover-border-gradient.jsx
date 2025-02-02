@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
-import { cn } from "./helper";
+import { cn } from "./utils/helper";
 
 export function HoverBorderGradient({
   children,

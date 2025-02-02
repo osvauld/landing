@@ -11,7 +11,7 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { PlayButton } from "../assets/icons/PlayButton";
 import { motion, AnimatePresence } from "framer-motion";
-import DecryptedText from "./ui/utils/DecryptedText";
+import DecryptedText from "./ui/DecryptedText";
 import { DiscordIcon } from "../assets/icons/DiscordIcon";
 
 export const Hero = () => {
@@ -114,6 +114,11 @@ export const Hero = () => {
               src={dashboardMobile.src}
               className=" z-10"
             />
+            {/* <div
+              style={{ position: "relative", width: "300px", height: "300px" }}
+            >
+              <BorderBeam size={300} duration={10} />
+            </div> */}
           </div>
         </div>
       </div>
