@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import mixpanel from "mixpanel-browser";
 import "vanilla-cookieconsent/dist/cookieconsent.css";
 import * as CookieConsent from "vanilla-cookieconsent";
+import { BorderBeam } from "./ui/magic-beams";
 
 import dashboardMobile from "/src/assets/images/dashboardMobile.png";
 import HeroKey from "/src/assets/images/HeroKey.png";
@@ -39,7 +40,7 @@ export const Hero = () => {
       className="pt-20 px-2 flex flex-col justify-start items-center bg-dark4 overflow-x-hidden "
       id="home"
     >
-      <div className="max-w-[1640px] w-full overflow-x-hidden overflow-y-hidden relative min-h-[55rem] md:min-h-[70rem] lg:min-h-[80rem] xl:min-h-[95rem]">
+      <div className="max-w-[1640px] w-full overflow-x-hidden overflow-y-hidden relative min-h-[55rem] md:min-h-[70rem] lg:min-h-[80rem] xl:min-h-[98rem]">
         <div className="flex justify-center gap-20 relative">
           <div className="flex items-start min-w-[300px]">
             <img
@@ -108,17 +109,23 @@ export const Hero = () => {
               </span>
             </a>
           </div>
-          <div className="flex justify-center items-center pt-12">
-            <img
-              alt="dashboard of osvauld"
-              src={dashboardMobile.src}
-              className=" z-10"
-            />
-            {/* <div
-              style={{ position: "relative", width: "300px", height: "300px" }}
-            >
-              <BorderBeam size={300} duration={10} />
-            </div> */}
+          <div className="flex justify-center items-center pt-12 ">
+            <span className=" rounded-3xl relative">
+              <img
+                alt="dashboard of osvauld"
+                src={dashboardMobile.src}
+                className=" z-10"
+              />
+              <BorderBeam
+                size={450}
+                duration={15}
+                borderWidth="2.5"
+                colorFrom="#89B4FA"
+                colorTo="#89B4FA"
+              />
+            </span>
+            {/* 
+            <div className="relative h-[200px] w-[200px] rounded-xl"></div> */}
           </div>
         </div>
       </div>
