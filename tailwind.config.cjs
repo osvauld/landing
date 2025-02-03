@@ -41,6 +41,7 @@ module.exports = {
         tabBg: "#292A36",
         cardBg: "#0D0E13",
         text2: "#BFBFBF",
+        text3: "#75778B",
       },
       fontFamily: {
         Inter: ["Inter", "Helvetica", "Arial", "sans-serif"],

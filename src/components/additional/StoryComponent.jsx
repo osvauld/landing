@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Team } from "../Team.jsx";
 
 export const StoryComponent = () => {
   return (
@@ -12,7 +13,7 @@ export const StoryComponent = () => {
         <span className="flex flex-col items-center mb-14 mt-6 text-[40px] md:text-[48px] lg:text-7xl font-Jakartha font-medium tracking-tight text-balance gradient-text-bottom ">
           <h1 className="text-center lg:text-left py-2">Our story</h1>
         </span>
-        <div className="text-lg text-faqAnswer">
+        <div className="text-lg text-faqAnswer mb-20">
           {" "}
           Every great project starts with a challenge, and ours began when we
           saw a gap in the way organizations handle shared credentials. As
@@ -63,6 +64,7 @@ export const StoryComponent = () => {
             evolve and shape the future of personal data management and privacy.
           </p>
         </div>
+        <Team client:load />
       </motion.div>
     </div>
   );

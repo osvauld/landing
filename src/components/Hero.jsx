@@ -6,6 +6,7 @@ import * as CookieConsent from "vanilla-cookieconsent";
 import { BorderBeam } from "./ui/magic-beams";
 
 import dashboardMobile from "/src/assets/images/dashboardMobile.png";
+import dashboardTest from "/src/assets/images/dashboardTest.png";
 import HeroKey from "/src/assets/images/HeroKey.png";
 import HeroShield from "/src/assets/images/HeroShield.png";
 import { GithubIcon } from "../assets/icons/GithubIcon";
@@ -113,7 +114,7 @@ export const Hero = () => {
             <span className=" rounded-3xl relative">
               <img
                 alt="dashboard of osvauld"
-                src={dashboardMobile.src}
+                src={dashboardTest.src}
                 className=" z-10"
               />
               <BorderBeam
