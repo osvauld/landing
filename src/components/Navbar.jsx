@@ -17,7 +17,7 @@ const navbarLinks = [
   //   ariaLabel: "Pricing",
   // },
   {
-    label: "Our story",
+    label: "Our Story",
     href: "/story",
     ariaLabel: "our story",
   },

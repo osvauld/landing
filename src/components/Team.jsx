@@ -181,7 +181,7 @@ export const Team = () => {
       image: bijoy.src,
       name: "BIJOY JOSEH",
       role: "Engineer",
-      description: "Full-stack developer with expertise in scalable solutions.",
+      description: "SDET with expertise in enterprise solutions.",
     },
     {
       image: shravan.src,
@@ -197,7 +197,7 @@ export const Team = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3, delay: 0.4 }}
-      className="w-full max-w-[1200px] mx-auto my-10 px-8 flex flex-col items-center gap-16"
+      className="w-full max-w-[1200px] mx-auto my-16 xl:my-32 px-8 flex flex-col items-center gap-16"
     >
       <div className="w-full  p-10">
         <span className="text-3xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-white2 to-neutral-500 text-center font-Jakartha font-semibold block mb-10 py-2">

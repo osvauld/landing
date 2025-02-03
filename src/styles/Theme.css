@@ -220,3 +220,7 @@ details[open] > div {
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-b from-white2 to-neutral-500;
+}
