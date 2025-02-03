@@ -24,7 +24,7 @@ export const FaqComponent = () => {
               <h1 className="z-10 md:fixed md:top-24 text-[36px] mb-6 mt-[4rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px]  gradient-text text-center md:text-left md:ml-[1.5rem]">
                 Frequently Asked Questions
               </h1>
-              <div className="z-10 md:fixed md:top-[23.5rem]  hidden md:visible px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-24 text-center md:text-left border-faqBorder border">
+              <div className="z-10 md:fixed md:top-[23.5rem]  hidden md:visible px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark5 rounded-2xl font-Jakartha mt-4 md:mt-24 text-center md:text-left border-faqBorder border">
                 <span className="font-light text-xl">
                   Still have a question? <br />
                 </span>
