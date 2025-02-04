@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import meetOsvauld from "../../assets/images/meetOsvauld.webp";
 import calendarLeft from "../../assets/images/calendarLeft.webp";
 import calendarRight from "../../assets/images/calendarRight.webp";
-import Cal, { getCalApi } from "@calcom/embed-react";
+import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 
 export const DemoComponent = () => {
