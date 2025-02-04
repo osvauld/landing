@@ -1,17 +1,15 @@
 ---
-import "@fontsource/inter";
 import "@fontsource/jetbrains-mono/500.css";
 import "@fontsource/inter/300.css";
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
-import "@fontsource/plus-jakarta-sans";
 import "@fontsource/plus-jakarta-sans/300.css";
 import "@fontsource/plus-jakarta-sans/400.css";
-import "@fontsource/plus-jakarta-sans/500.css";
 import "@fontsource/plus-jakarta-sans/600.css";
 import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/800.css";
+import plusJakarthaWoff2 from "@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-500-normal.woff2?url";
 
 import Head from "../components/Head.astro";
 import { Navbar } from "../components/Navbar.jsx";
@@ -25,6 +23,13 @@ import "../styles/Theme.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={plusJakarthaWoff2}
+      crossorigin="anonymous"
+    />
     <Head />
   </head>
 

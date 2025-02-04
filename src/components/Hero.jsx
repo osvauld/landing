@@ -114,7 +114,7 @@ export const Hero = () => {
             <span className=" rounded-3xl relative">
               <img
                 alt="dashboard of osvauld"
-                src={dashboardTest.src}
+                src={dashboardMobile.src}
                 className=" z-10"
               />
               <BorderBeam
