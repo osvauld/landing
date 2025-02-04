@@ -1,10 +1,6 @@
 import { motion } from "framer-motion";
 import HomeStars from "/src/assets/images/HomeStars.png";
 import HomeLock from "/src/assets/images/HomeLock.png";
-import End2end from "/src/assets/images/end2end.png";
-import Offline from "/src/assets/images/offline.png";
-import { Iroh } from "../assets/icons/Iroh";
-
 import SpotlightCard from "./ui/SpotlightCard";
 
 export const ProtectWhatMatters = () => {

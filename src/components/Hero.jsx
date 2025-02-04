@@ -1,18 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import mixpanel from "mixpanel-browser";
+// import mixpanel from "mixpanel-browser";
 import "vanilla-cookieconsent/dist/cookieconsent.css";
-import * as CookieConsent from "vanilla-cookieconsent";
+// import * as CookieConsent from "vanilla-cookieconsent";
 import { BorderBeam } from "./ui/magic-beams";
 
 import dashboardMobile from "/src/assets/images/dashboardMobile.png";
-import dashboardTest from "/src/assets/images/dashboardTest.png";
 import HeroKey from "/src/assets/images/HeroKey.png";
 import HeroShield from "/src/assets/images/HeroShield.png";
-import { GithubIcon } from "../assets/icons/GithubIcon";
-import { BottomArrow } from "../assets/icons/BottomArrow";
-import { PlayButton } from "../assets/icons/PlayButton";
-import { motion, AnimatePresence } from "framer-motion";
 import DecryptedText from "./ui/DecryptedText";
 import { DiscordIcon } from "../assets/icons/DiscordIcon";
 

@@ -1,14 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import mixpanel from "mixpanel-browser";
+// import mixpanel from "mixpanel-browser";
 import "vanilla-cookieconsent/dist/cookieconsent.css";
 import * as CookieConsent from "vanilla-cookieconsent";
 
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 import { GithubIcon } from "../assets/icons/GithubIcon";
-import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
 
 const navbarLinks = [
   // {

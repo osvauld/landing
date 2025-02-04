@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { ScrollUp } from "../assets/icons/ScrollUp";
 import { CalenderDates } from "../assets/icons/CalenderDates";
 
 export const DemoButton = () => {
