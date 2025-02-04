@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import aic from "../assets/images/aic.png";
-import ksum from "../assets/images/ksum.png";
-import rize from "../assets/images/rize.png";
+import aic from "../assets/images/aic.webp";
+import ksum from "../assets/images/ksum.webp";
+import rize from "../assets/images/rize.webp";
 
 export const SupportedBy = () => (
   <motion.section

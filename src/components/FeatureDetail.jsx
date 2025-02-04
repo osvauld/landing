@@ -10,7 +10,7 @@ export const FeatureDetail = () => (
     className=" w-full max-w-[1200px] mx-auto my-10 px-8 "
   >
     <TracingBeam>
-      <div className="bg-cardBg my-8 feature-card  w-full p-10 flex flex-col md:flex-row justify-between gap-10">
+      <div className="bg-cardBg my-8 feature-card  w-full p-10 flex flex-col md:flex-row justify-between gap-10 ">
         <div className="flex-1">
           <h3 className="gradient-text-bottom text-3xl lg:text-5xl font-Jakartha font-medium lg:leading-tight mb-8">
             Always accessible,

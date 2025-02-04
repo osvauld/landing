@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import meetOsvauld from "../../assets/images/meetOsvauld.png";
-import calendarLeft from "../../assets/images/calendarLeft.png";
-import calendarRight from "../../assets/images/calendarRight.png";
+import meetOsvauld from "../../assets/images/meetOsvauld.webp";
+import calendarLeft from "../../assets/images/calendarLeft.webp";
+import calendarRight from "../../assets/images/calendarRight.webp";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 

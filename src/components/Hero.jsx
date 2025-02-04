@@ -5,9 +5,9 @@ import "vanilla-cookieconsent/dist/cookieconsent.css";
 // import * as CookieConsent from "vanilla-cookieconsent";
 import { BorderBeam } from "./ui/magic-beams";
 
-import dashboardMobile from "/src/assets/images/dashboardMobile.png";
-import HeroKey from "/src/assets/images/HeroKey.png";
-import HeroShield from "/src/assets/images/HeroShield.png";
+import dashboardMobile from "/src/assets/images/dashboardMobile.webp";
+import HeroKey from "/src/assets/images/HeroKey.webp";
+import HeroShield from "/src/assets/images/HeroShield.webp";
 import DecryptedText from "./ui/DecryptedText";
 import { DiscordIcon } from "../assets/icons/DiscordIcon";
 

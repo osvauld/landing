@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import abe from "../assets/images/team/abe.png";
-import anoop from "../assets/images/team/anoop.png";
-import tony from "../assets/images/team/tony.png";
-import bijoy from "../assets/images/team/bijoy.png";
-import shravan from "../assets/images/team/shravan.png";
+import abe from "../assets/images/team/abe.webp";
+import anoop from "../assets/images/team/anoop.webp";
+import tony from "../assets/images/team/tony.webp";
+import bijoy from "../assets/images/team/bijoy.webp";
+import shravan from "../assets/images/team/shravan.webp";
 import { LinkdinIcon } from "../assets/icons/LinkdinIcon";
 
 // export const Team = () => (

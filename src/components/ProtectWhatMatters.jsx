@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import HomeStars from "/src/assets/images/HomeStars.png";
-import HomeLock from "/src/assets/images/HomeLock.png";
+import HomeStars from "/src/assets/images/HomeStars.webp";
+import HomeLock from "/src/assets/images/HomeLock.webp";
 import SpotlightCard from "./ui/SpotlightCard";
 
 export const ProtectWhatMatters = () => {
