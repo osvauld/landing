@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Calender } from "../../assets/icons/Calender";
 import { DiscordIcon } from "../../assets/icons/DiscordIcon";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
-import questionLeft from "../../assets/images/questionLeft.png";
-// import { questionRight } from "../../assets/images/questionRight.png";
+import questionLeft from "../../assets/images/questionLeft.webp";
+// import { questionRight } from "../../assets/images/questionRight.webp";
 import data from "./Data";
 
 export const FaqComponent = () => {
@@ -24,26 +24,34 @@ export const FaqComponent = () => {
               <h1 className="z-10 md:fixed md:top-24 text-[36px] mb-6 mt-[4rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px]  gradient-text text-center md:text-left md:ml-[1.5rem]">
                 Frequently Asked Questions
               </h1>
-              {/* <div className="z-10 md:fixed md:top-[23.5rem]  hidden md:visible px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-24 text-center md:text-left">
-              <span className="font-light text-xl">
-                Still have a question? <br />
-              </span>
-              <span className="text-base font-extralight whitespace-nowrap">
-                Contact us. We will be happy to help you! <br />
-              </span>
-              <div className="flex flex-col md:flex-row justify-between items-center text-sm mt-4 md:mt-0">
-                <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold mb-2 md:mb-0 md:mr-4">
-                  <Calender color={"#0D1117"} />
-                  <a href="https://cal.com/abrahamgeorge/30min">Get a Demo</a>
-                </button>
-                <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold">
-                  <DiscordIcon color={"#0D1117"} />
-                  <a href="https://discord.com/invite/kV6gBeM6Fm">
-                    Chat with us
-                  </a>
-                </button>
+              <div className="z-10 md:fixed md:top-[23.5rem]  hidden md:visible px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark5 rounded-2xl font-Jakartha mt-4 md:mt-24 text-center md:text-left border-faqBorder border">
+                <span className="font-light text-xl">
+                  Still have a question? <br />
+                </span>
+                <span className="text-base font-extralight whitespace-nowrap">
+                  Contact us. We will be happy to help you! <br />
+                </span>
+                <div className="flex flex-col md:flex-row justify-between items-center text-sm mt-4 md:mt-0">
+                  <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold mb-2 md:mb-0 md:mr-4">
+                    <Calender color={"#0D1117"} />
+                    <a
+                      href="https://cal.com/abrahamgeorge/30min"
+                      target="_blank"
+                    >
+                      Get a Demo
+                    </a>
+                  </button>
+                  <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold">
+                    <DiscordIcon color={"#0D1117"} />
+                    <a
+                      href="https://discord.com/invite/kV6gBeM6Fm"
+                      target="_blank"
+                    >
+                      Chat with us
+                    </a>
+                  </button>
+                </div>
               </div>
-            </div> */}
               <img
                 src={questionLeft.src}
                 alt="questionLeft"
@@ -58,7 +66,7 @@ export const FaqComponent = () => {
             <div className="z-30 questions px-0 md:px-10 w-full md:w-auto mt-8 md:mt-10">
               {data.map((item, index) => (
                 <details
-                  className="mb-4 bg-dark5 rounded-lg px-6 py-4 border border-transparent group open:border-faqBorder"
+                  className="mb-4 bg-dark5 rounded-lg px-6 py-4 border  group border-faqBorder"
                   key={index}
                 >
                   <summary className="cursor-pointer flex justify-between items-center text-xl list-none font-Jakarta font-light">
@@ -81,7 +89,7 @@ export const FaqComponent = () => {
               ))}
             </div>
 
-            <div className=" cta md:hidden px-6 py-4 h-[170px]  flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha my-16 md:mt-8 text-center md:text-left">
+            <div className="border border-faqBorder cta md:hidden px-6 py-4 h-[170px]  flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha my-16 md:mt-8 text-center md:text-left">
               <span className="font-light text-xl">
                 Still have a question? <br />
               </span>
@@ -91,11 +99,16 @@ export const FaqComponent = () => {
               <div className="flex justify-center gap-3 items-center text-sm mt-4 md:mt-0">
                 <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold ">
                   <Calender color={"#0D1117"} />
-                  <a href="https://cal.com/abrahamgeorge/30min">Get a Demo</a>
+                  <a href="https://cal.com/abrahamgeorge/30min" target="_blank">
+                    Get a Demo
+                  </a>
                 </button>
-                <button className="bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold">
+                <button className=" bg-blue1 text-dark2 rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold">
                   <DiscordIcon color={"#0D1117"} />
-                  <a href="https://discord.com/invite/kV6gBeM6Fm">
+                  <a
+                    href="https://discord.com/invite/kV6gBeM6Fm"
+                    target="_blank"
+                  >
                     Chat with us
                   </a>
                 </button>

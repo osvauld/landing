@@ -41,6 +41,7 @@ module.exports = {
         tabBg: "#292A36",
         cardBg: "#0D0E13",
         text2: "#BFBFBF",
+        text3: "#75778B",
       },
       fontFamily: {
         Inter: ["Inter", "Helvetica", "Arial", "sans-serif"],
@@ -65,6 +66,7 @@ module.exports = {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         blink: "blink 2s ease-in infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
 
       keyframes: {
@@ -78,6 +80,11 @@ module.exports = {
           "20%": { background: "#20212B" },
           "80%": { background: "#20212B" },
           "100%": { backgroundColor: "transparent" },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
         },
       },
     },

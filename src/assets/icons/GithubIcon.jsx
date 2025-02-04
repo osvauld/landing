@@ -3,7 +3,7 @@ export const GithubIcon = (props) => (
   <svg
     width={props.size || 18}
     height={props.size || 18}
-    fill={props.color || "none"}
+    fill={props.color || "#DCDDE4"}
     viewBox="0 0 21 20"
     xmlns="http://www.w3.org/2000/svg"
   >
