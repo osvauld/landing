@@ -110,7 +110,7 @@ export const Hero = () => {
               <img
                 alt="dashboard of osvauld"
                 src={dashboardMobile.src}
-                className=" z-10"
+                className="z-10"
               />
               <BorderBeam
                 size={450}
@@ -118,6 +118,7 @@ export const Hero = () => {
                 borderWidth="2.5"
                 colorFrom="#89B4FA"
                 colorTo="#89B4FA"
+                className="hidden lg:block"
               />
             </span>
             {/* 
