@@ -52,3 +52,25 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-thumb:hover {
   background-color: #2f303e; /* color of the thumb on hover */
 }
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 130px; /* width of the scrollbar */
+  height: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent; /* color of the track */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #2f303e; /* color of the thumb */
+  border-radius: 4px; /* roundness of the scrollbar thumb */
+}
+
+.active.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #2f303e; /* color of the thumb */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #2f303e; /* color of the thumb on hover */
+}
