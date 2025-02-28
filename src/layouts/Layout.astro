@@ -76,7 +76,7 @@ const {
       description={description}
       openGraph={{
         basic: {
-          title: "Osvauld - Private & Secure Offline Password Manager",
+          title: "Osvauld - Open-source, offline-first, peer-to-peer solutions",
           type: "website",
           image: new URL(thumbnail.src, Astro.site).toString(),
         },
@@ -86,11 +86,136 @@ const {
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
+        "@type": "Organization",
+        "@id": "https://osvauld.com/#organization",
+        "url": "https://osvauld.com",
         "name": "Osvauld",
-        "applicationCategory": "Credential Management Software",
-        "operatingSystem": "Cross-platform",
-        "description": "Offline, peer-to-peer credential manager"
+        "legalName": "OSVAULD SECURITY SOLUTIONS PRIVATE LIMITED",
+        "description": "Own Your Data, Leave No Footprint with Osvauld - secure, cross-platform, open source, encrypted and entirely p2p. Direct connections only, no intermediary, avoid cloud and big tech, use internet as you wish, end-to-end encryption, collaborative tools, free forever, human support, locked data, live note editing, descriptions, private sharing, search and more.",
+        "slogan": "Your Data, Your Rules",
+        "logo": "https://www.osvauld.com/assets/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "name": "OSVAULD SECURITY SOLUTIONS (OPC) PRIVATE LIMITED",
+          "addressCountry": "India",
+          "addressLocality": "Idukki",
+          "addressRegion": "Kerala",
+          "streetAddress": "Puthumanakudiyil House, Painavu PO, Thannikandam",
+          "postalCode": "685602"
+        },
+        "email": "abe@osvauld.com",
+        "foundingDate": "2024-04-26",
+        "keywords": "offline first, peer-to-peer, direct connectivity, portal on the internet, end-to-end encrypted, privacy by design, open-source, wormhole on internet, move away from big tech, absolute privacy",
+        "sameAs": [
+          "https://github.com/osvauld",
+          "https://in.linkedin.com/company/osvauld",
+          "https://buymeacoffee.com/osvauld",
+          "https://osvauld.com/#corporation"
+        ],
+        "owns": [
+          {
+            "@context": "http://schema.org",
+            "@id": "https://osvauld.com/#software",
+            "@type": "SoftwareApplication",
+            "name": "Osvauld Password Manager",
+            "applicationCategory": "UtilitiesApplication",
+            "applicationSubCategory": "Credential Management Software",
+            "operatingSystem": "Windows, macOS, Linux, Android, iOS",
+            "description": "A peer-to-peer credential manager with end-to-end encryption, allowing you to securely store and share passwords without relying on cloud services or intermediaries.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/ComingSoon"
+            },
+            "softwareRequirements": "Any modern operating system",
+            "storageRequirements": "Minimal local storage",
+            "featureList": "End-to-End Encryption, Peer-to-Peer Sharing, Offline-First Design, Open-PGP, Sequoia-PGP, ECC and AES Algorithms, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
+            "license": "https://opensource.org/licenses/MIT",
+            "about": {
+              "description": "Osvauld Password Manager allows you to securely store and share passwords directly between your devices, keeping your credentials completely private without ever exposing them to third-party services."
+            },
+            "publisher": {
+              "@context": "http://schema.org/",
+              "@id": "https://osvauld.com/#corporation",
+              "@type": "Corporation",
+              "name": "Osvauld",
+              "url": "https://osvauld.com",
+              "logo": "https://www.osvauld.com/assets/logo.png"
+            }
+          },
+          {
+            "@context": "http://schema.org",
+            "@id": "https://osvauld.com/#livnote",
+            "@type": "SoftwareApplication",
+            "name": "LivNote",
+            "applicationCategory": "ProductivityApplication",
+            "applicationSubCategory": "Collaborative Document Editor",
+            "operatingSystem": "Windows, macOS, Linux, Android, iOS",
+            "description": "A collaborative document editor with peer-to-peer synchronization and end-to-end encryption, allowing real-time collaboration without storing your data on third-party servers.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/ComingSoon"
+            },
+            "softwareRequirements": "Any modern operating system",
+            "storageRequirements": "Minimal local storage",
+            "featureList": "Live Editing, Real-Time Collaboration, End-to-End Encryption, Peer-to-Peer Connectivity, Offline-First Design, No Cloud Storage, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
+            "license": "https://opensource.org/licenses/MIT",
+            "about": {
+              "description": "LivNote provides collaborative document editing with complete privacy, connecting directly to your collaborators without exposing your data to third-party services or cloud providers."
+            },
+            "publisher": {
+              "@context": "http://schema.org/",
+              "@id": "https://osvauld.com/#corporation",
+              "@type": "Corporation",
+              "name": "Osvauld",
+              "url": "https://osvauld.com",
+              "logo": "https://www.osvauld.com/assets/logo.png"
+            }
+          },
+          {
+            "@context": "http://schema.org",
+            "@id": "https://osvauld.com/#filesharing",
+            "@type": "SoftwareApplication",
+            "name": "Osvauld File Sharing",
+            "applicationCategory": "UtilitiesApplication",
+            "applicationSubCategory": "File Transfer Software",
+            "operatingSystem": "Windows, macOS, Linux, Android, iOS",
+            "description": "A secure file sharing solution that allows direct peer-to-peer transfer between devices with end-to-end encryption, eliminating the need for cloud storage services.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/ComingSoon"
+            },
+            "softwareRequirements": "Any modern operating system",
+            "storageRequirements": "Varies based on shared file sizes",
+            "featureList": "Direct File Transfer, End-to-End Encryption, Peer-to-Peer Connectivity, No Intermediaries, No Size Limits, Privacy-Focused, Open Source, MIT Licensed, Cross-Platform",
+            "license": "https://opensource.org/licenses/MIT",
+            "about": {
+              "description": "Osvauld File Sharing creates direct connections between devices for secure file transfers, ensuring your data never passes through or is stored on third-party servers."
+            },
+            "publisher": {
+              "@context": "http://schema.org/",
+              "@id": "https://osvauld.com/#corporation",
+              "@type": "Corporation",
+              "name": "Osvauld",
+              "url": "https://osvauld.com",
+              "logo": "https://www.osvauld.com/assets/logo.png"
+            }
+          }
+        ],
+        "potentialAction": {
+          "@type": "DownloadAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://osvauld.com/download",
+            "description": "Download Osvauld applications"
+          },
+          "description": "Download secure, peer-to-peer applications from Osvauld"
+        }
       }
     </script>
   </head>

@@ -50,7 +50,7 @@ export const Footer = () => {
                   </a>
                 </div>
                 <p className="font-medium">
-                  Osvauld Security Solutions Pvt Limited @ 2024
+                  Osvauld Security Solutions Pvt Limited @ 2025
                 </p>
               </div>
             </div>
