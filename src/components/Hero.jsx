@@ -14,7 +14,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import DecryptedText from "./ui/DecryptedText";
 
 export const Hero = () => {
-  const words = ["secrets", "notes", "pins", "credentials"];
+  const words = ["secrets", "notes", "pins", "data"];
   const [currentWord, setCurrentWord] = useState("secrets");
   const [wordIndex, setWordIndex] = useState(0);
 
@@ -102,10 +102,9 @@ export const Hero = () => {
               </span>
             </h1>
             <div className="text-faqAnswer font-Inter font-light text-base md:text-lg xl:text-xl text-center pt-12 px-4 tracking-wide max-w-[99vw]">
-              Simplify how you manage sensitive data. <br /> Keep your passwords
+              Simplify how you manage data over internet. <br /> Keep your data
               offline, but synced. With Osvauld,
-              <br className="hidden md:block" /> your secrets are safe,
-              accessible, and only yours.
+              <br className="hidden md:block" /> data exists only at you and your destination.
             </div>
             <div className="flex items-center justify-center gap-4 md:flex-row text-sm flex-wrap pt-12">
               <a

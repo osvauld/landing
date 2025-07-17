@@ -1,54 +1,53 @@
 const Data = [
   {
-    question: "Do I need internet to access my passwords?",
+    question: "Is Osvauld free to use? What's the licensing model?",
     answer:
-      "No! You can access all your passwords anytime, even without internet. Changes sync across your devices on demand.",
+      "Yes, Osvauld is completely free and open source. It's released under the MIT license, which means you can use it freely for both personal and commercial projects without any restrictions or licensing fees. You can modify, distribute, and use Osvauld in any way you choose.",
   },
   {
-    question: "How is this different from other password managers?",
+    question: "How do users discover and connect to each other without servers?",
     answer:
-      "You don't rely on any external servers or cloud services. Everything stays on your personal devices, giving you complete control over your data.",
+      "Osvauld uses modern P2P networking protocols (powered by Iroh) that enable devices to find and connect to each other directly. This includes techniques like NAT traversal, relay nodes for initial connection establishment, and distributed hash tables for peer discovery. Once connected, devices communicate directly without any intermediary servers.",
   },
   {
-    question: "What if my laptop crashes or gets stolen?",
+    question: "What happens if a user is offline? How does synchronization work?",
     answer:
-      "Don't worry! Your passwords are backed up across your connected devices. You can recover everything by logging in from any of your other devices.",
+      "Osvauld follows an offline-first philosophy. Applications work fully offline, storing data locally using SQLite. When connectivity returns, the framework automatically synchronizes changes using Conflict-free Replicated Data Types (CRDTs), ensuring all peers eventually have consistent data without conflicts.",
   },
   {
-    question: "Is it safe to store all passwords in one place?",
+    question: "How secure is the data encryption? What cryptographic standards does Osvauld use?",
     answer:
-      "Absolutely. Your passwords are strongly encrypted and only accessible to you. Even if one device is compromised, your passwords stay safe.",
+      "Osvauld implements end-to-end encryption using industry-standard cryptography through Sequoia-PGP. All data is encrypted both in transit and at rest following a zero-knowledge architecture. The framework also provides self-sovereign identity management with digital signatures and certificate-based authentication.",
   },
   {
-    question: "How do I add a new device?",
+    question: "Can Osvauld applications scale to handle many users collaborating simultaneously?",
     answer:
-      "Just install the app and scan a QR code to connect your new device. No accounts or complex setup needed!",
+      "Yes, Osvauld is designed to handle collaborative scenarios efficiently. The CRDT integration ensures that multiple users can edit shared data simultaneously without conflicts. The P2P architecture means that performance scales with the number of participants rather than being bottlenecked by a central server.",
   },
   {
-    question: "Can I organize my passwords?",
+    question: "What platforms and devices does Osvauld support?",
     answer:
-      "Yes! Create different vaults to organize passwords by category - like work, personal, or finance. Access them easily across all your devices.",
+      "Osvauld applications can run on Android, iOS, Linux, Windows, and macOS. Since it's built in Rust, you get native performance across all these platforms while maintaining a consistent codebase and user experience.",
   },
   {
-    question: "What if I'm offline for a long time?",
+    question: "How do I handle user authentication and identity management?",
     answer:
-      "No problem! You can still view and update passwords. All changes will sync across your devices when you're back online.",
+      "Osvauld provides self-sovereign identity management, meaning users control their own digital identities without relying on external authentication providers. The framework handles digital signatures, certificate-based identity verification, and secure key management automatically.",
   },
   {
-    question: "How does syncing work between my devices?",
+    question: "Are there any limitations or trade-offs compared to traditional server-based applications?",
     answer:
-      "Your devices connect directly to each other from anywhere, ensuring fast and secure syncing. No data goes through external servers - everything transfers directly between your devices.",
+      "The main considerations are: initial peer discovery can take slightly longer than server connections, real-time collaboration requires at least one peer to be online, and some complex queries that would typically use server-side databases need to be handled differently in a P2P context. However, you gain complete user privacy, no server costs, and applications that work offline.",
   },
   {
-    question:
-      "Why use this instead of my browser's password autofill or other password managers?",
+    question: "How does Osvauld handle data backup and recovery without servers?",
     answer:
-      "Browser password managers limit you to one browser and lack proper backup. With Osvauld, like other password managers, you get secure password generation, encrypted storage and multi-device access. But most importently unlike subscription-based cloud password managers, your data syncs directly between your devices without going through servers - giving you the same features with better privacy and no monthly fees.",
+      "Since Osvauld applications work without central servers, data backup and recovery is handled through the peer-to-peer network itself. Each device stores data locally, and the distributed nature of the network means that data is naturally replicated across multiple devices. Users can backup their data locally or to their preferred storage solutions, and recovery happens through synchronization with other peers who have the shared data.",
   },
   {
-    question: "Why is osvauld free?",
+    question: "What kind of support and community resources are available for developers?",
     answer:
-      "Osvauld is a free and open-source solution. Osvauld  just needs your device to make it work. We believe in privacy and decentralized solutions, and we want to make it accessible to everyone.",
+      "We have active Discord and WhatsApp communities where developers can get help, share ideas, and collaborate. For more detailed technical support or business inquiries, you can reach out directly to abe@osvauld.com. We also maintain GitHub Discussions for longer-form questions and project sharing.",
   },
 ];
 

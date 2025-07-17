@@ -18,8 +18,8 @@ interface Props {
 }
 
 const {
-  title = "Osvauld - Private & Secure Offline Password Manager",
-  description = "Keep your passwords truly offline with Osvauld, a privacy-first password manager that syncs securely through peer-to-peer connections. Free forever, open source, and designed to keep your secrets completely under your control.",
+  title = "Osvauld - Privacy-First P2P Application Framework",
+  description = "Build peer-to-peer applications with Osvauld, a Rust framework for privacy-first, offline-capable apps. No servers, no data collection, complete user control. MIT licensed and open source.",
 } = Astro.props;
 ---
 
@@ -76,7 +76,7 @@ const {
       description={description}
       openGraph={{
         basic: {
-          title: "Osvauld - Open-source, offline-first, peer-to-peer solutions",
+          title: "Osvauld - Rust Framework for Privacy-First P2P Applications",
           type: "website",
           image: new URL(thumbnail.src, Astro.site).toString(),
         },
@@ -91,8 +91,8 @@ const {
         "url": "https://osvauld.com",
         "name": "Osvauld",
         "legalName": "OSVAULD SECURITY SOLUTIONS PRIVATE LIMITED",
-        "description": "Own Your Data, Leave No Footprint with Osvauld - secure, cross-platform, open source, encrypted and entirely p2p. Direct connections only, no intermediary, avoid cloud and big tech, use internet as you wish, end-to-end encryption, collaborative tools, free forever, human support, locked data, live note editing, descriptions, private sharing, search and more.",
-        "slogan": "Your Data, Your Rules",
+        "description": "Own Your Data, Leave No Footprint with Osvauld - a Rust framework for building peer-to-peer applications with privacy, security, and user control. Build collaborative tools, secure messaging, and privacy-first apps without servers or data collection.",
+        "slogan": "Own Your Data, Leave No Footprint",
         "logo": "https://www.osvauld.com/assets/logo.png",
         "address": {
           "@type": "PostalAddress",
@@ -105,7 +105,7 @@ const {
         },
         "email": "abe@osvauld.com",
         "foundingDate": "2024-04-26",
-        "keywords": "offline first, peer-to-peer, direct connectivity, portal on the internet, end-to-end encrypted, privacy by design, open-source, wormhole on internet, move away from big tech, absolute privacy",
+        "keywords": "peer-to-peer framework, Rust framework, privacy-first applications, offline-first, end-to-end encryption, CRDT, P2P networking, decentralized apps, open-source framework, MIT licensed, collaborative tools, secure messaging",
         "sameAs": [
           "https://github.com/osvauld",
           "https://in.linkedin.com/company/osvauld",
@@ -115,25 +115,25 @@ const {
         "owns": [
           {
             "@context": "http://schema.org",
-            "@id": "https://osvauld.com/#software",
+            "@id": "https://osvauld.com/#framework",
             "@type": "SoftwareApplication",
-            "name": "Osvauld Password Manager",
-            "applicationCategory": "UtilitiesApplication",
-            "applicationSubCategory": "Credential Management Software",
+            "name": "Osvauld Framework",
+            "applicationCategory": "DeveloperApplication",
+            "applicationSubCategory": "Software Development Framework",
             "operatingSystem": "Windows, macOS, Linux, Android, iOS",
-            "description": "A peer-to-peer credential manager with end-to-end encryption, allowing you to securely store and share passwords without relying on cloud services or intermediaries.",
+            "description": "A Rust framework for building peer-to-peer applications with built-in privacy, security, and user control. Enables developers to create offline-first apps without servers or data collection.",
             "offers": {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "USD",
-              "availability": "https://schema.org/ComingSoon"
+              "availability": "https://schema.org/InStock"
             },
-            "softwareRequirements": "Any modern operating system",
+            "softwareRequirements": "Rust programming language",
             "storageRequirements": "Minimal local storage",
-            "featureList": "End-to-End Encryption, Peer-to-Peer Sharing, Offline-First Design, Open-PGP, Sequoia-PGP, ECC and AES Algorithms, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
+            "featureList": "P2P Networking, End-to-End Encryption, CRDT Integration, Offline-First Architecture, QUIC Protocol, Self-Sovereign Identity, Cross-Platform Support, MIT Licensed, Open Source",
             "license": "https://opensource.org/licenses/MIT",
             "about": {
-              "description": "Osvauld Password Manager allows you to securely store and share passwords directly between your devices, keeping your credentials completely private without ever exposing them to third-party services."
+              "description": "Osvauld Framework provides all the tools needed to build privacy-first, peer-to-peer applications in Rust, handling complex networking, encryption, and synchronization so developers can focus on their app's unique features."
             },
             "publisher": {
               "@context": "http://schema.org/",
@@ -152,19 +152,19 @@ const {
             "applicationCategory": "ProductivityApplication",
             "applicationSubCategory": "Collaborative Document Editor",
             "operatingSystem": "Windows, macOS, Linux, Android, iOS",
-            "description": "A collaborative document editor with peer-to-peer synchronization and end-to-end encryption, allowing real-time collaboration without storing your data on third-party servers.",
+            "description": "A collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design.",
             "offers": {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "USD",
-              "availability": "https://schema.org/ComingSoon"
+              "availability": "https://schema.org/InStock"
             },
             "softwareRequirements": "Any modern operating system",
             "storageRequirements": "Minimal local storage",
-            "featureList": "Live Editing, Real-Time Collaboration, End-to-End Encryption, Peer-to-Peer Connectivity, Offline-First Design, No Cloud Storage, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
+            "featureList": "Real-Time Collaboration, End-to-End Encryption, Peer-to-Peer Connectivity, Offline-First Design, No Cloud Storage, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
             "license": "https://opensource.org/licenses/MIT",
             "about": {
-              "description": "LivNote provides collaborative document editing with complete privacy, connecting directly to your collaborators without exposing your data to third-party services or cloud providers."
+              "description": "LivNote demonstrates the power of Osvauld framework with real-time collaborative document editing that works entirely peer-to-peer without any servers or data collection."
             },
             "publisher": {
               "@context": "http://schema.org/",
@@ -177,13 +177,13 @@ const {
           },
           {
             "@context": "http://schema.org",
-            "@id": "https://osvauld.com/#filesharing",
+            "@id": "https://osvauld.com/#passwordmanager",
             "@type": "SoftwareApplication",
-            "name": "Osvauld File Sharing",
+            "name": "Osvauld Password Manager",
             "applicationCategory": "UtilitiesApplication",
-            "applicationSubCategory": "File Transfer Software",
+            "applicationSubCategory": "Credential Management Software",
             "operatingSystem": "Windows, macOS, Linux, Android, iOS",
-            "description": "A secure file sharing solution that allows direct peer-to-peer transfer between devices with end-to-end encryption, eliminating the need for cloud storage services.",
+            "description": "A secure password manager built with Osvauld framework, featuring peer-to-peer synchronization and team sharing capabilities without relying on cloud services.",
             "offers": {
               "@type": "Offer",
               "price": "0",
@@ -191,11 +191,11 @@ const {
               "availability": "https://schema.org/ComingSoon"
             },
             "softwareRequirements": "Any modern operating system",
-            "storageRequirements": "Varies based on shared file sizes",
-            "featureList": "Direct File Transfer, End-to-End Encryption, Peer-to-Peer Connectivity, No Intermediaries, No Size Limits, Privacy-Focused, Open Source, MIT Licensed, Cross-Platform",
+            "storageRequirements": "Minimal local storage",
+            "featureList": "End-to-End Encryption, Peer-to-Peer Sharing, Team Collaboration, Offline-First Design, No Cloud Storage, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
             "license": "https://opensource.org/licenses/MIT",
             "about": {
-              "description": "Osvauld File Sharing creates direct connections between devices for secure file transfers, ensuring your data never passes through or is stored on third-party servers."
+              "description": "A password manager that showcases Osvauld framework's capabilities for secure credential management with team sharing, all without exposing data to third-party services."
             },
             "publisher": {
               "@context": "http://schema.org/",
@@ -212,9 +212,9 @@ const {
           "target": {
             "@type": "EntryPoint",
             "urlTemplate": "https://osvauld.com/download",
-            "description": "Download Osvauld applications"
+            "description": "Download Osvauld framework and applications"
           },
-          "description": "Download secure, peer-to-peer applications from Osvauld"
+          "description": "Get started with Osvauld framework for building privacy-first P2P applications"
         }
       }
     </script>
