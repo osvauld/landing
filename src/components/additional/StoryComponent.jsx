@@ -8,68 +8,63 @@ export const StoryComponent = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.2, delay: 0.2 }}
     >
-      <div className="w-full min-h-screen mb-[6rem] max-w-[1200px] mx-auto bg-dark4 px-4 pt-28 text-white">
-        <div className="">
-          <span className="flex flex-col items-center mb-14 mt-6 text-[40px] md:text-[48px] lg:text-7xl font-Jakartha font-medium tracking-tight text-balance gradient-text-bottom ">
-            <h1 className="text-center lg:text-left py-2">Our story</h1>
-          </span>
-          <div className="text-lg text-faqAnswer">
-            {" "}
-            Every great project starts with a challenge, and ours began when we
-            saw a gap in the way organizations handle shared credentials. As
-            backend engineers venturing into new territories, we were driven by
-            a deep commitment to data privacy. The spark came from a
-            conversation with a CTO friend who highlighted the need for a better
-            shared credentials management solution. This insight, combined with
-            our acceptance into the buildspace program, set us on an exciting
-            path of creation and discovery. <br /> <br />
-            <h2 className="text-white  text-xl mb-2">
-              {" "}
-              Evolution of Our Vision
-            </h2>
-            <p className="text-lg text-faqAnswer">
-              Our initial approach was building an open-source, self-hosted
-              credentials manager. We chose Go for the backend, transitioned
-              from a web app to a browser extension for enhanced security, and
-              learned valuable lessons along the way. However, we soon
-              discovered that while organizations needed such a solution, the
-              complexities of self-hosting and compliance created significant
-              barriers. This realization led us to pivot towards a personal
-              password manager, but with an ambitious twist. We wanted to create
-              something that would work seamlessly across desktop and mobile
-              platforms. We built our core encryption and identity protocols in
-              Rust, compiled to WebAssembly for maximum performance and
-              security. Using Tauri for our desktop applications, we began
-              addressing one of the most frustrating aspects of existing offline
-              password managers like KeePass: synchronization.
-            </p>
-            <br />
-            <h2 className="text-white  text-xl  mb-2">The Breakthrough</h2>{" "}
-            <p className="text-lg text-faqAnswer">
-              While developing our peer-to-peer synchronization solution using
-              Iroh, we had an epiphany. What if users had a dedicated device for
-              managing their digital identity and credentials? This thought
-              evolved into something even more powerful: a platform where
-              individuals could host their data and selectively share it with
-              fine-grained access control.{" "}
-            </p>
-            <br />
-            <h2 className="text-white  text-xl  mb-2">Looking Forward</h2>
-            <p className="text-lg text-faqAnswer">
-              Today, Osvauld is growing beyond its origins as a password
-              manager. We're building a privacy-first platform that enables
-              secure data hosting and sharing, with user control at its core.
-              Our vision extends to creating applications and porting
-              open-source projects to our platform, all while maintaining our
-              commitment to privacy and security. We're not just building
-              another password manager – we're creating a new paradigm for
-              personal data management where privacy isn't just a feature, it's
-              the foundation. Join us as we continue to evolve and shape the
-              future of personal data management and privacy.
-            </p>
-          </div>
+      <div className="w-full min-h-screen mb-24 max-w-[1200px] mx-auto px-4 pt-28">
+        <div className="flex flex-col items-center mb-14 mt-6">
+            <h1 className="text-center text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight py-2 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">
+                Our Story
+            </h1>
         </div>
-      </div>
+        
+        <div className="text-lg text-faqAnswer max-w-4xl mx-auto leading-relaxed">
+            <div className="mb-12">
+                <p className="mb-6">
+                    Osvauld was founded on the principle that <span className="text-white font-medium">data privacy should be a fundamental right, not a luxury</span>. As experienced backend engineers, we recognized a critical gap in how organizations and individuals manage their most sensitive information. The catalyst came through industry conversations that revealed widespread frustration with existing credential management solutions—systems that were either too complex for practical deployment or too simplistic to meet enterprise security requirements.
+                </p>
+            </div>
+            
+            <div className="mb-12">
+                <h2 className="text-white text-2xl font-semibold mb-6 tracking-tight">
+                    Strategic Evolution
+                </h2>
+                <p className="mb-6">
+                    Our initial focus centered on developing an enterprise-grade, open-source credentials management platform. We architected our solution using Go for robust backend performance and evolved from traditional web applications to browser extensions to enhance security posture. However, comprehensive market research revealed that while organizations desperately needed such solutions, the operational complexity of self-hosting and compliance requirements created significant adoption barriers.
+                </p>
+                <p className="mb-6">
+                    This insight drove our strategic pivot toward personal credential management, but with an ambitious technical foundation. We developed our core encryption and identity protocols in Rust, compiled to WebAssembly for optimal performance and security. Leveraging Tauri for cross-platform desktop applications, we addressed one of the most persistent challenges in offline password management: seamless synchronization across devices.
+                </p>
+            </div>
+            
+            <div className="mb-12">
+                <h2 className="text-white text-2xl font-semibold mb-6 tracking-tight">
+                    Innovation Breakthrough
+                </h2>
+                <p className="mb-6">
+                    During our development of peer-to-peer synchronization using Iroh, we identified a transformative opportunity. Rather than simply improving existing paradigms, we envisioned a fundamental shift: <span className="text-white font-medium">empowering individuals with dedicated infrastructure for managing their digital identity and credentials</span>. This evolved into a more comprehensive platform where users maintain sovereign control over their data while enabling selective sharing with granular access controls.
+                </p>
+            </div>
+            
+            <div className="mb-12">
+                <h2 className="text-white text-2xl font-semibold mb-6 tracking-tight">
+                    The Platform Vision
+                </h2>
+                <p className="mb-6">
+                    Today, Osvauld represents the next generation of privacy-first data management. We're building a comprehensive platform that enables secure data hosting and sharing, with user sovereignty as the cornerstone. Our roadmap includes expanding beyond credential management to support diverse applications and open-source integrations, all while maintaining our unwavering commitment to privacy and security.
+                </p>
+                <p className="mb-6">
+                    We're not merely iterating on existing password managers—we're establishing a new paradigm for personal data management where privacy isn't an afterthought but the architectural foundation. Our mission extends to creating an ecosystem where individuals regain control over their digital lives while maintaining the convenience and functionality they expect from modern applications.
+                </p>
+            </div>
+            
+            <div className="mb-12">
+                <h2 className="text-white text-2xl font-semibold mb-6 tracking-tight">
+                    Looking Ahead
+                </h2>
+                <p className="mb-6">
+                    As we continue to scale and evolve, Osvauld remains committed to our founding principles: <span class="text-white font-medium">technical excellence, user sovereignty, and privacy by design</span>. We're building not just for today's needs, but for a future where personal data management is secure, intuitive, and entirely under user control. Join us as we shape the future of digital privacy and personal data sovereignty.
+                </p>
+            </div>
+        </div>
+    </div>
     </motion.section>
   );
 };
