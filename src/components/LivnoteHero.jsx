@@ -18,7 +18,7 @@ export const LivnoteHero = () => {
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <section
-        className="pt-20 px-2 flex flex-col justify-start items-center bg-dark4 overflow-x-hidden "
+        className="pt-20 px-2 flex flex-col justify-start items-center bg-livnoteBg overflow-x-hidden "
         id="home"
       >
         <div

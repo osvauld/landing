@@ -39,6 +39,7 @@ module.exports = {
         calBorder: "#16171F",
         labelSperator: "#4D4F60",
         tabBg: "#292A36",
+        livnoteBg: "#000",
       },
       fontFamily: {
         Inter: ["Inter", "Helvetica", "Arial", "sans-serif"],

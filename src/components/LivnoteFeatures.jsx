@@ -23,15 +23,15 @@ export const LivnoteFeatures = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.2, delay: 0.2 }}
-            classNameName="w-full flex-grow flex flex-col items-center max-w-[1200px] mx-auto bg-dark4 px-4 pt-0 sm:pt-12 text-white "
+            className="w-full flex flex-col items-center mx-auto bg-livnoteBg px-4 pt-0 sm:pt-12 text-white "
         >
-            <section className="py-20 px-5 max-w-6xl mx-auto">
+            <section className="py-20 px-5 max-w-6xl mx-auto  ">
                 <div className="text-center mb-15">
                     <h2 className="text-5xl md:text-6xl  text-left mb-4 gradient-text font-JetBrainsMono"> Features</h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 bg-livnoteBg">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Rich Text Editor</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono leading-relaxed relative z-10 ">
@@ -40,7 +40,7 @@ export const LivnoteFeatures = () => {
                     </div>
 
 
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Real-time Collaboration</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
@@ -49,7 +49,7 @@ export const LivnoteFeatures = () => {
                     </div>
 
 
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Offline-First</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
@@ -58,7 +58,7 @@ export const LivnoteFeatures = () => {
                     </div>
 
 
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Peer-to-Peer</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
@@ -67,7 +67,7 @@ export const LivnoteFeatures = () => {
                     </div>
 
 
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Cryptographic Identity</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
@@ -76,7 +76,7 @@ export const LivnoteFeatures = () => {
                     </div>
 
 
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">End-to-End Encrypted</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
@@ -85,7 +85,7 @@ export const LivnoteFeatures = () => {
                     </div>
 
 
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Encrypted at Rest</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
@@ -94,7 +94,7 @@ export const LivnoteFeatures = () => {
                     </div>
 
 
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">No Cloud Signups</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
@@ -103,7 +103,7 @@ export const LivnoteFeatures = () => {
                     </div>
 
 
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Lightweight Desktop App</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
@@ -113,7 +113,7 @@ export const LivnoteFeatures = () => {
 
 
 
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Absolutely Free</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
@@ -122,7 +122,7 @@ export const LivnoteFeatures = () => {
                     </div>
 
 
-                    <div className="feature-card-hover bg-dark4 border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
+                    <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FeatureSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Open Source</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">

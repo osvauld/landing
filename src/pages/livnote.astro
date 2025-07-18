@@ -6,11 +6,13 @@ import { ScrollUpButton } from "../components/ScrollUpButton";
 import { LivnoteHero } from "../components/LivnoteHero";
 import { FaqComponent } from "../components/additional/FaqComponent";
 import { LivnoteFeatures } from "../components/LivnoteFeatures";
+import { LivnotePhilosophy } from "../components/LivnotePhilosophy";
 ---
 
-<Layout title="Livnote" description="Livnote is a collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design.">
+<Layout title="Livnote" description="Livnote is a collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design." >
   <LivnoteHero client:load />
   <LivnoteFeatures client:load />
+  <LivnotePhilosophy client:load />
   <FaqComponent client:load data={LivnoteData} />
   <ScrollUpButton client:load />
 </Layout>
