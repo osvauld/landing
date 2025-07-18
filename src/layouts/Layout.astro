@@ -9,8 +9,9 @@ import "@fontsource/plus-jakarta-sans/800.css";
 import { SEO } from "astro-seo";
 import thumbnail from "../assets/images/thumbnail.webp";
 
-import Navbar from "./mainNavbar.astro";
-import Footer from "./mainFooter.astro";
+
+import { Footer } from "../components/FooterV2.jsx";
+import { Navbar } from "../components/Navbar.jsx";
 
 interface Props {
   title: string;
@@ -221,9 +222,9 @@ const {
   </head>
 
   <div>
-    <Navbar />
+    <Navbar client:load />
     <slot />
-    <Footer />
+    <Footer client:load />
     <style is:global>
       @font-face {
         font-family: "Inter";

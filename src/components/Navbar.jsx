@@ -1,18 +1,9 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import mixpanel from "mixpanel-browser";
-import "vanilla-cookieconsent/dist/cookieconsent.css";
-import * as CookieConsent from "vanilla-cookieconsent";
 
 import { GithubIcon } from "../assets/icons/GithubIcon";
-import { CloseIcon } from "../assets/icons/CloseIcon";
-import { Redirect } from "../assets/icons/Redirect";
-import { Copy } from "../assets/icons/Copy";
-import { Eye } from "../assets/icons/Eye";
-import { EyeOff } from "../assets/icons/EyeOff";
-import { Tick } from "../assets/icons/Tick";
-import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
+
 
 const navbarLinks = [
   // {
@@ -20,6 +11,11 @@ const navbarLinks = [
   //   href: "/pricing",
   //   ariaLabel: "Pricing",
   // },
+  {
+    label: "Livnote",
+    href: "/livnote",
+    ariaLabel: "Livnote",
+  },
   {
     label: "FAQ",
     href: "/faq",
@@ -57,69 +53,37 @@ const scrollToTop = () => {
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [trialModal, setTrialModal] = useState(false);
-  const [fetchCreds, setFetchCreds] = useState(false);
-  const [copiedIndex, setCopiedIndex] = useState(null);
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
 
-  useEffect(() => {
-    CookieConsent.run({
-      categories: {
-        analytics: {},
-      },
+  // useEffect(() => {
+  //   CookieConsent.run({
+  //     categories: {
+  //       analytics: {},
+  //     },
 
-      language: {
-        default: "en",
-        translations: {
-          en: {
-            consentModal: {
-              title: "We use analytics",
-              description:
-                "We use analytics to collect visitor insights, which helps us enhance our services. By continuing to browse, you agree to our use of analytics.",
-              acceptAllBtn: "Accept",
-              acceptNecessaryBtn: "Reject",
-            },
-          },
-        },
-      },
+  //     language: {
+  //       default: "en",
+  //       translations: {
+  //         en: {
+  //           consentModal: {
+  //             title: "We use analytics",
+  //             description:
+  //               "We use analytics to collect visitor insights, which helps us enhance our services. By continuing to browse, you agree to our use of analytics.",
+  //             acceptAllBtn: "Accept",
+  //             acceptNecessaryBtn: "Reject",
+  //           },
+  //         },
+  //       },
+  //     },
 
-      onConsent: ({ cookie }) => {
-        if (cookie.categories.length !== 0) {
-          // mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
-          //   track_pageview: true,
-          // });
-        }
-      },
-    });
-  }, []);
-
-  const copyToClipboard = async (text, index) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedIndex(index);
-      setTimeout(() => {
-        setCopiedIndex(() => {
-          return null;
-        });
-      }, 1500);
-    } catch (error) {
-      console.error("Failed to copy:", error);
-    }
-  };
-
-  const generateCredentials = async () => {
-    setFetchCreds(true); // To show loader or disable button
-    try {
-      const response = await fetch("https://demo.osvauld.com/createDemoUser");
-      const data = await response.json();
-      setUsername(data.username);
-      setPassword(data.tempPassword);
-    } catch (error) {
-      console.error("Failed to fetch credentials:", error);
-    }
-  };
+  //     onConsent: ({ cookie }) => {
+  //       if (cookie.categories.length !== 0) {
+  //         // mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
+  //         //   track_pageview: true,
+  //         // });
+  //       }
+  //     },
+  //   });
+  // }, []);
 
   return (
     <nav className="w-screen h-20 flex justify-center items-center fixed z-40 backdrop-blur-xl">

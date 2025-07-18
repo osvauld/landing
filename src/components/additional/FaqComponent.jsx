@@ -4,18 +4,18 @@ import { DiscordIcon } from "../../assets/icons/DiscordIcon";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
 import questionLeft from "../../assets/images/questionLeft.png";
 // import { questionRight } from "../../assets/images/questionRight.png";
-import data from "./Data";
 
-export const FaqComponent = () => {
+
+export const FaqComponent = ({ data }) => {
   return (
     <section
-      className="w-full min-h-screen max-w-[1400px] mx-auto bg-dark4 px-4"
+      className="w-full min-h-[70vh] max-w-[1400px] mx-auto bg-dark4 px-4 relative"
       id="faqs"
     >
       <div className="w-full pt-28 md:pb-10  text-white">
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-2">
           <div className="flex flex-col justify-start items-center md:items-start ">
-            <h1 className="z-10 md:fixed md:top-24 text-[36px] mb-6 mt-[4rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px]  gradient-text text-center md:text-left md:ml-[1.5rem]">
+            <h1 className="z-10 md:absolute md:top-24 text-[36px] mb-6 mt-[4rem] md:text-[68px] font-Jakartha font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px]  gradient-text text-center md:text-left md:ml-[1.5rem]">
               Frequently Asked Questions
             </h1>
             {/* <div className="z-10 md:fixed md:top-[23.5rem]  hidden md:visible px-6 py-4 h-[200px] md:h-[156px] md:flex flex-col justify-between bg-dark4 rounded-2xl font-Jakartha mt-4 md:mt-24 text-center md:text-left">
@@ -43,11 +43,11 @@ export const FaqComponent = () => {
               alt="questionLeft"
               className="hidden md:block  md:mt-[10rem] "
             />
-            <img
+            {/* <img
               src={questionLeft.src}
               alt="questionLeft"
               className="hidden md:block  "
-            />
+            /> */}
           </div>
           <div className="z-30 questions px-0 md:px-10 w-full md:w-auto mt-8 md:mt-10">
             {data.map((item, index) => (
