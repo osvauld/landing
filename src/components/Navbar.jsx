@@ -51,7 +51,7 @@ const scrollToTop = () => {
   });
 };
 
-export const Navbar = () => {
+export const Navbar = ({ isLivnote }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // useEffect(() => {
@@ -99,7 +99,11 @@ export const Navbar = () => {
               className="text-white3 font-Jakartha font-medium text-4xl pl-2 p-3"
               onClick={scrollToTop}
             >
-              <span>osvauld</span>
+              {isLivnote ? (  
+                <span className="text-livnotePrimary">Livnote</span>
+              ) : (
+                <span>osvauld</span>
+              )}
             </button>
           </div>
         </motion.div>
@@ -275,7 +279,7 @@ export const Navbar = () => {
             </div> */}
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
-                className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
+                className={`rounded-md font-normal  flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border ${isLivnote ? " text-livnotePrimary border-livnotePrimary bg-livnoteBg" : " text-blue1 border-blue1 bg-dark4"}`}
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 rel="noopener noreferrer"

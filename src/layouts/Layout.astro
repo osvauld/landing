@@ -23,6 +23,8 @@ const {
   title = "Osvauld - Privacy-First P2P Application Framework",
   description = "Build peer-to-peer applications with Osvauld, a Rust framework for privacy-first, offline-capable apps. No servers, no data collection, complete user control. MIT licensed and open source.",
 } = Astro.props;
+
+const isLivnote = Astro.url.pathname.includes("/livnote");
 ---
 
 <!doctype html>
@@ -223,9 +225,9 @@ const {
   </head>
 
   <div>
-    <Navbar client:load />
+    <Navbar client:load isLivnote={isLivnote}/>
     <slot />
-    <Footer client:load />
+    <Footer client:load isLivnote={isLivnote} />
     <style is:global>
       @font-face {
         font-family: "Inter";
