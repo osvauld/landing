@@ -13,6 +13,6 @@ import { LivnotePhilosophy } from "../components/LivnotePhilosophy";
   <LivnoteHero client:load />
   <LivnoteFeatures client:load />
   <LivnotePhilosophy client:load />
-  <FaqComponent client:load data={LivnoteData} />
-  <ScrollUpButton client:load />
+  <FaqComponent client:load data={LivnoteData} parent={"livnote"} />
+  <ScrollUpButton client:load parent={"livnote"} />
 </Layout>
