@@ -18,7 +18,7 @@ export const Footer = ({ isLivnote }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <section className={`w-full ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"} z-50`}>
+      <section id="page-footer" className={`w-full ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"} z-50`}>
         <footer className="relative mx-auto h-[56rem] px-[24px] pt-[32px]  max-w-[1312px]  min-h-[545px] lg:px-[60px] lg:pt-[60px]">
           <div className="flex h-full flex-col gap-32">
             <div className="flex flex-col gap-24">
@@ -34,7 +34,7 @@ export const Footer = ({ isLivnote }) => {
                 {heading}
               </span>
               <div className="flex flex-col xs:flex-row justify-center items-center gap-4">
-                <button className={`px-6 py-3 ${isLivnote ? "bg-black text-livnotePrimary" : "bg-blue1 text-black"} rounded-lg text-xl font-semibold flex justify-center items-center gap-4 min-w-[270px]`}>
+                <button className={`px-6 py-3 ${isLivnote ? "bg-black text-livnotePrimary" : "text-blue1 bg-black"} rounded-lg text-xl font-semibold flex justify-center items-center gap-4 min-w-[270px]`}>
                   <a href={buttonLink}>{buttonText}</a>
                 </button>
               </div>

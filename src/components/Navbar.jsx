@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { GithubIcon } from "../assets/icons/GithubIcon";
@@ -53,6 +53,36 @@ const scrollToTop = () => {
 
 export const Navbar = ({ isLivnote }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFooterInContact, setIsFooterInContact] = useState(false);
+
+  useEffect(() => {
+    const footer = document.getElementById("page-footer");
+    if (!footer) return;
+
+    let timeoutId;
+
+    const handleScroll = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        const footerRect = footer.getBoundingClientRect();
+        const footerTop = footerRect.top;
+        
+        // Check if footer top is at or above 80px from viewport top
+        setIsFooterInContact(footerTop <= 80);
+      }, 10); // 10ms debounce
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Check initial position
+    const footerRect = footer.getBoundingClientRect();
+    setIsFooterInContact(footerRect.top <= 80);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   // useEffect(() => {
   //   CookieConsent.run({
@@ -96,13 +126,13 @@ export const Navbar = ({ isLivnote }) => {
         >
           <div className="flex justify-start items-center grow basis-0">
             <button
-              className="text-white3 font-Jakartha font-medium text-4xl pl-2 p-3"
+              className="font-Jakartha font-medium text-4xl pl-2 p-3"
               onClick={scrollToTop}
             >
               {isLivnote ? (  
-                <span className="text-livnotePrimary">Livnote</span>
+                <span className={`${isFooterInContact ? "text-black" : "text-livnotePrimary"}`}>Livnote</span>
               ) : (
-                <span>osvauld</span>
+                <span className={`${isFooterInContact ? "text-black" : "text-white3"}`}>osvauld</span>
               )}
             </button>
           </div>
@@ -293,9 +323,9 @@ export const Navbar = ({ isLivnote }) => {
           className="lg:hidden flex flex-col  px-2 py-3  border-solid border border-gray-600 rounded-md cursor-pointer backdrop-blur-xl mr-2"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-          <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-          <div className="w-5 h-0.5 bg-gray-500 "></div>
+          <div className={`w-5 h-0.5   mb-1 ${isFooterInContact ? "bg-black" : "bg-gray-500"}`}></div>
+          <div className={`w-5 h-0.5   mb-1 ${isFooterInContact ? "bg-black" : "bg-gray-500"}`}></div>
+          <div className={`w-5 h-0.5 ${isFooterInContact ? "bg-black" : "bg-gray-500"}`}></div>
         </div>
       </div>
       {/* Mobile navbar */}
@@ -308,7 +338,7 @@ export const Navbar = ({ isLivnote }) => {
             exit={{ opacity: 0 }}
           >
             <div
-              className={`bg-dark4 flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
+              className={`${isLivnote ? "bg-livnoteBg" : "bg-dark4"} flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
         items-center gap-10 pb-10  border-y border-solid border-customDarkBg3 pt-10 text-sm
             `}
             >
@@ -325,8 +355,8 @@ export const Navbar = ({ isLivnote }) => {
                 </a>
               ))}
               <a
-                className="text-dark1 custom-border-gray rounded-md
-           bg-blue1 cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap"
+                className={`text-dark1 custom-border-gray rounded-md
+            cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"}`}
                 href="https://github.com/osvauld"
                 target="_blank"
                 rel="noopener noreferrer"
