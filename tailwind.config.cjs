@@ -39,10 +39,13 @@ module.exports = {
         calBorder: "#16171F",
         labelSperator: "#4D4F60",
         tabBg: "#292A36",
+        livnoteBg: "#000",
+        livnotePrimary: "#8A86E5",
       },
       fontFamily: {
         Inter: ["Inter", "Helvetica", "Arial", "sans-serif"],
         Jakartha: ["Plus Jakarta Sans", "Arial", "sans-serif"],
+        JetBrainsMono: ["JetBrains Mono", "monospace"],
       },
       screens: {
         xs: "530px",

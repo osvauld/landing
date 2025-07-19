@@ -6,11 +6,14 @@ import "@fontsource/plus-jakarta-sans/500.css";
 import "@fontsource/plus-jakarta-sans/600.css";
 import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/800.css";
+import '@fontsource/jetbrains-mono';
 import { SEO } from "astro-seo";
-import thumbnail from "../assets/images/thumbnail.webp";
+import osvauldThumbnail from "../assets/images/osvauldthumb.webp";
+import livnoteThumbnail from "../assets/images/livnotethumb.png";
 
-import Navbar from "./mainNavbar.astro";
-import Footer from "./mainFooter.astro";
+
+import { Footer } from "../components/FooterV2.jsx";
+import { Navbar } from "../components/Navbar.jsx";
 
 interface Props {
   title: string;
@@ -21,6 +24,11 @@ const {
   title = "Osvauld - Privacy-First P2P Application Framework",
   description = "Build peer-to-peer applications with Osvauld, a Rust framework for privacy-first, offline-capable apps. No servers, no data collection, complete user control. MIT licensed and open source.",
 } = Astro.props;
+
+const isLivnote = Astro.url.pathname.includes("/livnote");
+
+// Choose the appropriate thumbnail based on the page
+const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
 ---
 
 <!doctype html>
@@ -76,9 +84,9 @@ const {
       description={description}
       openGraph={{
         basic: {
-          title: "Osvauld - Rust Framework for Privacy-First P2P Applications",
+          title: isLivnote ? "Livnote - Peer-to-peer Collaborative Document Editor" : "Osvauld - Rust Framework for Privacy-First P2P Applications",
           type: "website",
-          image: new URL(thumbnail.src, Astro.site).toString(),
+          image: new URL(pageThumbnail.src, Astro.site).toString(),
         },
       }}
     />
@@ -221,9 +229,9 @@ const {
   </head>
 
   <div>
-    <Navbar />
+    <Navbar client:load isLivnote={isLivnote}/>
     <slot />
-    <Footer />
+    <Footer client:load isLivnote={isLivnote} />
     <style is:global>
       @font-face {
         font-family: "Inter";

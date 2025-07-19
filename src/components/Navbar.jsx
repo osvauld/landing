@@ -1,18 +1,9 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import mixpanel from "mixpanel-browser";
-import "vanilla-cookieconsent/dist/cookieconsent.css";
-import * as CookieConsent from "vanilla-cookieconsent";
 
 import { GithubIcon } from "../assets/icons/GithubIcon";
-import { CloseIcon } from "../assets/icons/CloseIcon";
-import { Redirect } from "../assets/icons/Redirect";
-import { Copy } from "../assets/icons/Copy";
-import { Eye } from "../assets/icons/Eye";
-import { EyeOff } from "../assets/icons/EyeOff";
-import { Tick } from "../assets/icons/Tick";
-import { BuyMeCoffee } from "../assets/icons/BuyMeCoffee";
+
 
 const navbarLinks = [
   // {
@@ -20,6 +11,11 @@ const navbarLinks = [
   //   href: "/pricing",
   //   ariaLabel: "Pricing",
   // },
+  {
+    label: "Livnote",
+    href: "/livnote",
+    ariaLabel: "Livnote",
+  },
   {
     label: "FAQ",
     href: "/faq",
@@ -55,71 +51,69 @@ const scrollToTop = () => {
   });
 };
 
-export const Navbar = () => {
+export const Navbar = ({ isLivnote }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [trialModal, setTrialModal] = useState(false);
-  const [fetchCreds, setFetchCreds] = useState(false);
-  const [copiedIndex, setCopiedIndex] = useState(null);
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [isFooterInContact, setIsFooterInContact] = useState(false);
 
   useEffect(() => {
-    CookieConsent.run({
-      categories: {
-        analytics: {},
-      },
+    const footer = document.getElementById("page-footer");
+    if (!footer) return;
 
-      language: {
-        default: "en",
-        translations: {
-          en: {
-            consentModal: {
-              title: "We use analytics",
-              description:
-                "We use analytics to collect visitor insights, which helps us enhance our services. By continuing to browse, you agree to our use of analytics.",
-              acceptAllBtn: "Accept",
-              acceptNecessaryBtn: "Reject",
-            },
-          },
-        },
-      },
+    let timeoutId;
 
-      onConsent: ({ cookie }) => {
-        if (cookie.categories.length !== 0) {
-          // mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
-          //   track_pageview: true,
-          // });
-        }
-      },
-    });
+    const handleScroll = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        const footerRect = footer.getBoundingClientRect();
+        const footerTop = footerRect.top;
+        
+        // Check if footer top is at or above 80px from viewport top
+        setIsFooterInContact(footerTop <= 80);
+      }, 10); // 10ms debounce
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Check initial position
+    const footerRect = footer.getBoundingClientRect();
+    setIsFooterInContact(footerRect.top <= 80);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
-  const copyToClipboard = async (text, index) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedIndex(index);
-      setTimeout(() => {
-        setCopiedIndex(() => {
-          return null;
-        });
-      }, 1500);
-    } catch (error) {
-      console.error("Failed to copy:", error);
-    }
-  };
+  // useEffect(() => {
+  //   CookieConsent.run({
+  //     categories: {
+  //       analytics: {},
+  //     },
 
-  const generateCredentials = async () => {
-    setFetchCreds(true); // To show loader or disable button
-    try {
-      const response = await fetch("https://demo.osvauld.com/createDemoUser");
-      const data = await response.json();
-      setUsername(data.username);
-      setPassword(data.tempPassword);
-    } catch (error) {
-      console.error("Failed to fetch credentials:", error);
-    }
-  };
+  //     language: {
+  //       default: "en",
+  //       translations: {
+  //         en: {
+  //           consentModal: {
+  //             title: "We use analytics",
+  //             description:
+  //               "We use analytics to collect visitor insights, which helps us enhance our services. By continuing to browse, you agree to our use of analytics.",
+  //             acceptAllBtn: "Accept",
+  //             acceptNecessaryBtn: "Reject",
+  //           },
+  //         },
+  //       },
+  //     },
+
+  //     onConsent: ({ cookie }) => {
+  //       if (cookie.categories.length !== 0) {
+  //         // mixpanel.init("7c45196567d67468f4f47b3b1d63f931", {
+  //         //   track_pageview: true,
+  //         // });
+  //       }
+  //     },
+  //   });
+  // }, []);
 
   return (
     <nav className="w-screen h-20 flex justify-center items-center fixed z-40 backdrop-blur-xl">
@@ -132,10 +126,14 @@ export const Navbar = () => {
         >
           <div className="flex justify-start items-center grow basis-0">
             <button
-              className="text-white3 font-Jakartha font-medium text-4xl pl-2 p-3"
+              className="font-Jakartha font-medium text-4xl pl-2 p-3"
               onClick={scrollToTop}
             >
-              <span>osvauld</span>
+              {isLivnote ? (  
+                <span className={`${isFooterInContact ? "text-black" : "text-livnotePrimary"}`}>Livnote</span>
+              ) : (
+                <span className={`${isFooterInContact ? "text-black" : "text-white3"}`}>osvauld</span>
+              )}
             </button>
           </div>
         </motion.div>
@@ -311,7 +309,7 @@ export const Navbar = () => {
             </div> */}
             <div className="grow basis-0 justify-end hidden lg:flex">
               <a
-                className=" rounded-md font-normal text-blue1 flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border border-blue1"
+                className={`rounded-md font-normal  flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border ${isLivnote ? " text-livnotePrimary border-livnotePrimary bg-livnoteBg" : " text-blue1 border-blue1 bg-dark4"}`}
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -325,9 +323,9 @@ export const Navbar = () => {
           className="lg:hidden flex flex-col  px-2 py-3  border-solid border border-gray-600 rounded-md cursor-pointer backdrop-blur-xl mr-2"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-          <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-          <div className="w-5 h-0.5 bg-gray-500 "></div>
+          <div className={`w-5 h-0.5   mb-1 ${isFooterInContact ? "bg-black" : "bg-gray-500"}`}></div>
+          <div className={`w-5 h-0.5   mb-1 ${isFooterInContact ? "bg-black" : "bg-gray-500"}`}></div>
+          <div className={`w-5 h-0.5 ${isFooterInContact ? "bg-black" : "bg-gray-500"}`}></div>
         </div>
       </div>
       {/* Mobile navbar */}
@@ -340,7 +338,7 @@ export const Navbar = () => {
             exit={{ opacity: 0 }}
           >
             <div
-              className={`bg-dark4 flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
+              className={`${isLivnote ? "bg-livnoteBg" : "bg-dark4"} flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
         items-center gap-10 pb-10  border-y border-solid border-customDarkBg3 pt-10 text-sm
             `}
             >
@@ -357,8 +355,8 @@ export const Navbar = () => {
                 </a>
               ))}
               <a
-                className="text-dark1 custom-border-gray rounded-md
-           bg-blue1 cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap"
+                className={`text-dark1 custom-border-gray rounded-md
+            cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"}`}
                 href="https://github.com/osvauld"
                 target="_blank"
                 rel="noopener noreferrer"

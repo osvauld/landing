@@ -51,4 +51,40 @@ const Data = [
   },
 ];
 
+
+const LivnoteData = [
+  {
+    question: "How does LivNote work without servers?",
+    answer:
+      "LivNote uses peer-to-peer technology to connect your devices directly to each other. When you collaborate on a document, changes are shared instantly between connected devices without going through any servers. All your documents stay completely private and under your control.",
+  },
+  {
+    question: "Can I work on documents offline?",
+    answer:
+      "Yes! LivNote is designed to work offline-first. You can create, edit, and modify documents even without an internet connection. When you reconnect, all changes automatically sync with your collaborators without any conflicts.",
+  },
+  {
+    question: "How secure are my documents in LivNote?",
+    answer:
+      "Your documents are protected with end-to-end encryption both when sharing and when stored locally on your device. Even if someone intercepts the data, they can't read your documents without your encryption keys. No one except you and your chosen collaborators can access your content.",
+  },
+  {
+    question: "What happens if multiple people edit the same part of a document?",
+    answer:
+      "LivNote uses advanced conflict-free technology (Yjs CRDT) that automatically merges changes from multiple editors without creating conflicts. Everyone sees the same final result, and no one's work gets lost - even if you're editing the exact same sentence simultaneously.",
+  },
+  {
+    question: "Do I need to create an account to use LivNote?",
+    answer:
+      "No account needed! LivNote works immediately after installation. Your identity is managed locally on your device using cryptographic keys. You can start collaborating by simply sharing a cryptographic identification with others.",
+  },
+  {
+    question: "What file formats does LivNote support?",
+    answer:
+      "LivNote is a Rich-Text Editor that supports markdown also for writing and formatting, giving you a clean, distraction-free writing experience. You can use all standard Markdown syntax for headers, lists, links, and formatting. The editor also supports rich text editing with a smooth, responsive interface powered by ProseMirror.",
+  },
+];
+
 export default Data;
+
+export { Data, LivnoteData };
