@@ -41,12 +41,12 @@ export const ScrollUpButton = ({ parent }) => {
     <>
       {isVisible && (
         <div
-          className={`w-12 h-12 fixed bottom-24 right-6 border border-blue1 rounded-lg  hover:bg-blue1 cursor-pointer flex justify-center items-center transition z-[999] ${parent === "livnote" ? "bg-livnoteBg" : "bg-dark4"}`}
+          className={`w-12 h-12 fixed bottom-24 right-6 border  rounded-lg  cursor-pointer flex justify-center items-center transition z-[999] ${parent === "livnote" ? "bg-livnoteBg border-livnotePrimary hover:bg-livnotePrimary/80" : "bg-dark4 border-blue1 hover:bg-blue1 "}`}
           onClick={scrollToTop}
           onMouseEnter={curserEntered}
           onMouseLeave={curserRemoved}
         >
-          <ScrollUp color={isBeingHovered ? "#000" : "#89B4FA"} />
+          <ScrollUp color={isBeingHovered ? "#000" : parent === "livnote" ? "#8A86E5" : "#89B4FA"} />
         </div>
       )}
     </>

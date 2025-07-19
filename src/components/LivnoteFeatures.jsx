@@ -1,18 +1,109 @@
 import { motion } from "framer-motion";
 
 
-
-const FeatureSvg = () => {
+const RichTextSvg = () => {
     return (
-        <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 27.3789C25.6569 27.3789 27 26.0358 27 24.3789C27 22.7221 25.6569 21.3789 24 21.3789C22.3431 21.3789 21 22.7221 21 24.3789C21 26.0358 22.3431 27.3789 24 27.3789Z" stroke="#FCFDFF" strokeOpacity="0.937" />
-            <path fillRule="evenodd" clipRule="evenodd" d="M24.0029 4.37891C25.6467 4.37891 27.2439 4.57719 28.7725 4.95115C28.4881 5.54971 28.2761 6.18919 28.1473 6.85833C26.8167 6.54479 25.4293 6.37891 24.0029 6.37891C16.8573 6.37891 10.6841 10.5427 7.77738 16.5764C7.20666 16.4471 6.6128 16.3789 6.003 16.3789C5.88944 16.3789 5.77646 16.3813 5.66406 16.386C8.74868 9.31857 15.799 4.37891 24.0029 4.37891ZM5.66406 32.3719C8.74866 39.4393 15.799 44.3789 24.0029 44.3789C35.0487 44.3789 44.0029 35.4245 44.0029 24.3789C44.0029 20.7281 43.0247 17.3058 41.3161 14.3598C40.8167 14.8038 40.2611 15.1863 39.6615 15.4952C41.1519 18.1163 42.0029 21.1481 42.0029 24.3789C42.0029 34.3201 33.9441 42.3789 24.0029 42.3789C16.8573 42.3789 10.6841 38.2151 7.77736 32.1815C7.20666 32.3107 6.6128 32.3789 6.003 32.3789C5.88946 32.3789 5.77644 32.3765 5.66406 32.3719Z" fill="#FCFDFF" fillOpacity="0.937" />
-            <path fillRule="evenodd" clipRule="evenodd" d="M24.1996 34.3769C24.1332 34.3783 24.0668 34.3789 24 34.3789C18.4772 34.3789 14 29.9017 14 24.3789C14 18.8561 18.4772 14.3789 24 14.3789C28.8386 14.3789 32.8746 17.8154 33.8004 22.3809C33.8668 22.3795 33.9332 22.3789 34 22.3789C34.6362 22.3789 35.2586 22.4383 35.8618 22.5519C34.9818 16.7916 30.0062 12.3789 24 12.3789C17.3726 12.3789 12 17.7515 12 24.3789C12 31.0063 17.3726 36.3789 24 36.3789C24.2756 36.3789 24.549 36.3697 24.82 36.3513C24.5482 35.7239 24.3388 35.0631 24.1996 34.3769Z" fill="#FCFDFF" fillOpacity="0.937" />
-            <path d="M33 33.3789C34.6569 33.3789 36 32.0358 36 30.3789C36 28.7221 34.6569 27.3789 33 27.3789C31.3431 27.3789 30 28.7221 30 30.3789C30 32.0358 31.3431 33.3789 33 33.3789Z" fill="#FCFDFF" fillOpacity="0.937" />
-            <path d="M5 27.3789C6.65685 27.3789 8 26.0358 8 24.3789C8 22.7221 6.65685 21.3789 5 21.3789C3.34315 21.3789 2 22.7221 2 24.3789C2 26.0358 3.34315 27.3789 5 27.3789Z" fill="#FCFDFF" fillOpacity="0.937" />
-            <path d="M36 11.3789C37.6569 11.3789 39 10.0358 39 8.37891C39 6.72205 37.6569 5.37891 36 5.37891C34.3431 5.37891 33 6.72205 33 8.37891C33 10.0358 34.3431 11.3789 36 11.3789Z" fill="#FCFDFF" fillOpacity="0.937" />
-            <path d="M23 21.3789V5.37891M25 27.3789V43.3789" stroke="#FCFDFF" strokeOpacity="0.937" />
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.56 2H4V22H20V8.44L13.56 2ZM14 4.56L17.44 8H14V4.56ZM5.5 20.5V3.5H12.5V8.25C12.5 8.94 13.06 9.5 13.75 9.5H18.5V20.5H5.5ZM13 16H7.5V17.5H13V16ZM7.5 12.5H16.5V14H7.5V12.5Z" fill="#FCFDFF"/>
+</svg>
+
+    )
+}
+
+const CollaborationSvg = () => {
+    return (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 9C5.07 9 3.5 7.43 3.5 5.5C3.5 3.57 5.07 2 7 2C8.93 2 10.5 3.57 10.5 5.5C10.5 7.43 8.93 9 7 9ZM7 3.5C5.895 3.5 5 4.395 5 5.5C5 6.605 5.895 7.5 7 7.5C8.105 7.5 9 6.605 9 5.5C9 4.395 8.105 3.5 7 3.5ZM13.5 5.5C13.5 7.43 15.07 9 17 9C18.93 9 20.5 7.43 20.5 5.5C20.5 3.57 18.93 2 17 2C15.07 2 13.5 3.57 13.5 5.5ZM15 5.5C15 4.395 15.895 3.5 17 3.5C18.105 3.5 19 4.395 19 5.5C19 6.605 18.105 7.5 17 7.5C15.895 7.5 15 6.605 15 5.5ZM8.5 12.5C8.5 14.43 10.07 16 12 16C13.93 16 15.5 14.43 15.5 12.5C15.5 10.57 13.93 9 12 9C10.07 9 8.5 10.57 8.5 12.5ZM10 12.5C10 11.395 10.895 10.5 12 10.5C13.105 10.5 14 11.395 14 12.5C14 13.605 13.105 14.5 12 14.5C10.895 14.5 10 13.605 10 12.5ZM15.92 19.925L16.53 22.195V22.19L17.98 21.8L17.37 19.535C17.05 18.335 15.96 17.495 14.715 17.495H9.28502C8.04502 17.495 6.95002 18.335 6.63002 19.535L6.02002 21.805L7.47002 22.195L8.08002 19.925C8.22502 19.38 8.72002 19 9.28502 19H14.715C15.28 19 15.775 19.38 15.92 19.925ZM20.4249 12.925L21.1649 15.695L22.6149 15.305L21.8749 12.54C21.5549 11.34 20.4649 10.5 19.2199 10.5H17.0049V12H19.2199C19.7849 12 20.2799 12.38 20.4249 12.925ZM1.38477 15.305L2.83477 15.695V15.69L3.57477 12.92C3.71977 12.375 4.21477 11.995 4.77977 11.995H6.99477V10.495H4.77977C3.53977 10.495 2.44477 11.335 2.12477 12.535L1.38477 15.305Z" fill="#FCFDFF"/>
+</svg>
+
+
+    )
+}
+
+const OfflineSvg = () => {
+    return (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.8448 7.34009C21.1348 6.86009 21.0748 6.23009 20.6598 5.81509L18.1848 3.34009C17.7698 2.92509 17.1398 2.87009 16.6598 3.15509C13.7398 1.61009 10.2598 1.61009 7.33984 3.15509C6.85984 2.86509 6.22984 2.92509 5.81484 3.34009L3.33984 5.81509C2.92484 6.23009 2.86984 6.86009 3.15484 7.34009C1.60984 10.2601 1.60984 13.7401 3.15484 16.6601C2.86484 17.1401 2.92484 17.7701 3.33984 18.1851L5.81484 20.6601C6.05984 20.9051 6.37984 21.0251 6.69984 21.0251C6.92484 21.0251 7.14484 20.9601 7.33984 20.8451C8.79984 21.6151 10.3998 22.0051 11.9998 22.0051C13.5998 22.0051 15.1998 21.6151 16.6598 20.8451C16.8548 20.9651 17.0798 21.0251 17.2998 21.0251C17.6198 21.0251 17.9398 20.9051 18.1848 20.6601L20.6598 18.1851C21.0748 17.7701 21.1298 17.1401 20.8448 16.6601C22.3898 13.7401 22.3898 10.2601 20.8448 7.34009ZM17.3748 13.1351C17.5298 12.3851 17.5298 11.6151 17.3748 10.8651L19.7398 8.50009C20.7498 10.7301 20.7498 13.2751 19.7398 15.5051L17.3748 13.1401V13.1351ZM19.4248 6.70009L16.7998 9.32509C16.5598 8.89009 16.2598 8.48009 15.8898 8.11509C15.5198 7.75009 15.1098 7.44509 14.6798 7.20509L17.3048 4.58009L19.4248 6.70009ZM9.16984 14.8301C7.60984 13.2701 7.60984 10.7301 9.16984 9.17509C9.94984 8.39509 10.9748 8.00509 11.9998 8.00509C13.0248 8.00509 14.0498 8.39509 14.8298 9.17509C16.3898 10.7351 16.3898 13.2751 14.8298 14.8301C13.2698 16.3851 10.7298 16.3901 9.17484 14.8301H9.16984ZM15.4998 4.25509L13.1298 6.62509C12.3798 6.47009 11.6098 6.47009 10.8598 6.62509L8.49484 4.26009C10.7248 3.25009 13.2698 3.25009 15.4998 4.26009V4.25509ZM6.69484 4.57509L9.31984 7.20009C8.88484 7.44009 8.47484 7.74009 8.10984 8.11009C7.74484 8.48009 7.43984 8.89009 7.19984 9.32009L4.57484 6.69509L6.69484 4.57509ZM4.25484 15.5001C3.24484 13.2701 3.24484 10.7251 4.25484 8.49509L6.62484 10.8651C6.46984 11.6151 6.46984 12.3851 6.62484 13.1351L4.25484 15.5051V15.5001ZM4.57484 17.3001L7.19984 14.6751C7.43984 15.1101 7.73984 15.5201 8.10984 15.8851C8.47984 16.2501 8.88984 16.5551 9.31984 16.7951L6.69484 19.4201L4.57484 17.3001ZM8.49984 19.7401L10.8698 17.3701C11.2448 17.4501 11.6248 17.4901 12.0048 17.4901C12.3848 17.4901 12.7648 17.4451 13.1398 17.3701L15.5098 19.7401C13.2798 20.7501 10.7348 20.7501 8.50484 19.7401H8.49984ZM17.3048 19.4201L14.6798 16.7951C15.1148 16.5551 15.5248 16.2551 15.8898 15.8851C16.2548 15.5151 16.5598 15.1051 16.7998 14.6751L19.4248 17.3001L17.3048 19.4201Z" fill="#FCFDFF"/>
+</svg>
+    )
+}
+
+const PeerToPeerSvg = () => {
+    return (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.04 2.96C20.69 2.61 20.185 2.5 19.725 2.67L2.82504 8.895C2.35504 9.065 2.03504 9.5 2.01004 10C1.98004 10.5 2.25504 10.965 2.70004 11.185L9.44504 14.555L12.815 21.3C13.03 21.725 13.46 21.99 13.935 21.99C13.96 21.99 13.98 21.99 14.005 21.99C14.505 21.965 14.935 21.64 15.11 21.175L21.33 4.275C21.5 3.81 21.39 3.31 21.04 2.96ZM3.88504 10.105L18.055 4.885L9.85004 13.085L3.88504 10.1V10.105ZM13.895 20.115L10.91 14.15L19.115 5.945L13.895 20.115Z" fill="#FCFDFF"/>
         </svg>
+        
+
+    )
+}
+
+const CryptographicIdentitySvg = () => {
+    return (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.72501L20.075 3.88501C20.62 4.03501 21 4.53001 21 5.09501V13.275C21 15.68 19.705 17.92 17.625 19.12L12 22.37L6.375 19.12C4.295 17.92 3 15.68 3 13.275V5.09501C3 4.53001 3.38 4.03001 3.925 3.88501L12 1.72501ZM16.875 17.815C18.495 16.88 19.5 15.14 19.5 13.27V5.28501L12 3.27501L4.5 5.28501V13.27C4.5 15.14 5.505 16.88 7.125 17.815L12 20.63L16.875 17.815ZM9 10.525V9.5C9 7.845 10.345 6.5 12 6.5C13.655 6.5 15 7.845 15 9.5V10.525C15.57 10.64 16 11.145 16 11.75V14.75C16 15.44 15.44 16 14.75 16H9.25C8.56 16 8 15.44 8 14.75V11.75C8 11.145 8.43 10.64 9 10.525ZM9.5 12V14.5H14.5V12H9.5ZM13.5 10.5V9.5C13.5 8.675 12.825 8 12 8C11.175 8 10.5 8.675 10.5 9.5V10.5H13.5Z" fill="#FCFDFF"/>
+</svg>
+
+
+    )
+}
+
+const EndToEndEncryptionSvg = () => {
+    return (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.25481 20.805L7.7448 22.305L11.3048 18.745L9.8048 17.245L12.2598 14.79C13.1848 15.255 14.2098 15.495 15.2448 15.495C18.9648 15.495 21.9948 12.465 21.9948 8.745C21.9948 5.025 18.9648 1.995 15.2448 1.995C11.5248 1.995 8.4948 5.025 8.4948 8.745C8.4948 9.77999 8.7398 10.8 9.1998 11.73L2.0698 18.86C1.5848 19.35 1.5848 20.145 2.0698 20.63L3.3648 21.925C3.8548 22.41 4.64981 22.41 5.1348 21.925L6.25481 20.805ZM4.2498 20.69L3.3148 19.755L11.0848 11.985L10.7748 11.48C10.2698 10.65 10.0048 9.71 10.0048 8.75C10.0048 5.855 12.3598 3.5 15.2548 3.5C18.1498 3.5 20.5048 5.855 20.5048 8.75C20.5048 11.645 18.1498 14 15.2548 14C14.2948 14 13.3498 13.735 12.5248 13.23L12.0198 12.92L7.68981 17.25L9.1898 18.75L7.7498 20.19L6.25481 18.685L4.2498 20.69ZM11.5 8.75C11.5 10.82 13.18 12.5 15.25 12.5C17.32 12.5 19 10.82 19 8.75C19 6.68 17.32 5 15.25 5C13.18 5 11.5 6.68 11.5 8.75ZM13 8.75C13 7.51 14.01 6.5 15.25 6.5C16.49 6.5 17.5 7.51 17.5 8.75C17.5 9.99 16.49 11 15.25 11C14.01 11 13 9.99 13 8.75Z" fill="#FCFDFF"/>
+</svg>
+
+
+    )
+}
+
+
+const EncryptionRestSvg = () => {
+    return (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2494 3.5C15.2544 3.5 18.0794 4.67 20.2044 6.795L21.2644 5.735C18.8544 3.325 15.6544 2 12.2494 2C8.84438 2 5.64438 3.325 3.23438 5.735L4.29438 6.795C6.41938 4.67 9.24438 3.5 12.2494 3.5ZM2.5 14.75C2.5 9.375 6.875 5 12.25 5L12.255 4.995C17.63 4.995 22.005 9.37 22.005 14.745C22.005 16.815 20.325 18.495 18.255 18.495C16.185 18.495 14.505 16.815 14.505 14.745C14.505 13.505 13.495 12.495 12.255 12.495C11.015 12.495 10.005 13.505 10.005 14.745C10.005 16.95 10.86 19.02 12.42 20.58L11.36 21.64C9.52 19.8 8.505 17.35 8.505 14.745C8.505 12.675 10.185 10.995 12.255 10.995C14.325 10.995 16.005 12.675 16.005 14.745C16.005 15.985 17.015 16.995 18.255 16.995C19.495 16.995 20.505 15.985 20.505 14.745C20.505 10.195 16.805 6.495 12.255 6.495C7.705 6.495 4.005 10.195 4.005 14.745C4.005 15.995 4.165 17.24 4.485 18.435L3.035 18.825C2.68 17.505 2.5 16.13 2.5 14.75ZM17.5 14.75C17.5 11.855 15.145 9.5 12.25 9.5C9.355 9.5 7 11.855 7 14.75C7 16.73 7.52 18.675 8.505 20.375L7.205 21.125C6.09 19.195 5.5 16.99 5.5 14.75C5.5 11.03 8.53 8 12.25 8C15.97 8 19 11.03 19 14.75H17.5ZM18.25 21.5C14.53 21.5 11.5 18.47 11.5 14.75H13C13 17.645 15.355 20 18.25 20V21.5Z" fill="#FCFDFF"/>
+        </svg>
+        
+    )
+}
+
+
+const NoCloudSvg = () => {  
+    return (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.485 2 2 6.485 2 12C2 17.515 6.485 22 12 22C17.515 22 22 17.515 22 12C22 6.485 17.515 2 12 2ZM12 20.245C11.455 19.72 10.53 18.695 9.76 17.2C10.455 17.08 11.195 17 12 17C12.805 17 13.545 17.075 14.24 17.2C13.47 18.695 12.545 19.72 12 20.245ZM12 15.5C10.97 15.5 10.025 15.615 9.155 15.79C8.835 14.895 8.605 13.875 8.535 12.75H15.47C15.395 13.875 15.17 14.895 14.85 15.79C13.98 15.615 13.035 15.5 12.005 15.5H12ZM8.535 11.25C8.61 10.125 8.835 9.105 9.155 8.21C10.025 8.385 10.97 8.5 12 8.5C13.03 8.5 13.975 8.385 14.845 8.21C15.165 9.105 15.395 10.125 15.465 11.25H8.53H8.535ZM12 7C11.195 7 10.455 6.925 9.76 6.8C10.53 5.305 11.455 4.28 12 3.755C12.545 4.28 13.47 5.305 14.24 6.8C13.545 6.92 12.805 7 12 7ZM14.045 3.76C15.41 4.1 16.645 4.77 17.665 5.68C17.115 5.955 16.475 6.22 15.75 6.445C15.225 5.34 14.61 4.44 14.05 3.76H14.045ZM8.255 6.445C7.525 6.22 6.89 5.955 6.34 5.68C7.355 4.77 8.59 4.1 9.96 3.76C9.4 4.44 8.785 5.34 8.26 6.445H8.255ZM7.68 7.84C7.34 8.845 7.105 9.99 7.035 11.25H3.54C3.685 9.59 4.31 8.07 5.275 6.82C5.94 7.18 6.745 7.54 7.68 7.84ZM7.035 12.75C7.105 14.01 7.34 15.155 7.68 16.16C6.745 16.455 5.94 16.82 5.275 17.18C4.31 15.93 3.685 14.41 3.54 12.75H7.035ZM8.255 17.555C8.78 18.66 9.395 19.56 9.955 20.24C8.59 19.9 7.355 19.23 6.335 18.32C6.885 18.045 7.525 17.78 8.25 17.555H8.255ZM15.745 17.555C16.475 17.78 17.11 18.045 17.66 18.32C16.645 19.23 15.41 19.9 14.04 20.24C14.6 19.56 15.215 18.66 15.74 17.555H15.745ZM16.32 16.16C16.66 15.155 16.895 14.01 16.965 12.75H20.46C20.315 14.41 19.69 15.93 18.725 17.18C18.06 16.82 17.255 16.46 16.32 16.16ZM16.965 11.25C16.895 9.99 16.66 8.845 16.32 7.84C17.255 7.545 18.06 7.18 18.725 6.82C19.69 8.07 20.315 9.59 20.46 11.25H16.965Z" fill="#FCFDFF"/>
+</svg>
+
+        
+    )
+}
+
+
+const LightWeightSvg = () => {
+    return (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 17.515 6.485 22 12 22C17.515 22 22 17.515 22 12C22 6.485 17.515 2 12 2C6.485 2 2 6.485 2 12ZM3.5 12C3.5 7.315 7.315 3.5 12 3.5C16.685 3.5 20.5 7.315 20.5 12C20.5 16.685 16.685 20.5 12 20.5C7.315 20.5 3.5 16.685 3.5 12ZM17 9.5C17 10.3284 16.3284 11 15.5 11C14.6716 11 14 10.3284 14 9.5C14 8.67157 14.6716 8 15.5 8C16.3284 8 17 8.67157 17 9.5ZM8.5 11C9.32843 11 10 10.3284 10 9.5C10 8.67157 9.32843 8 8.5 8C7.67157 8 7 8.67157 7 9.5C7 10.3284 7.67157 11 8.5 11ZM8.01508 13.805C8.17508 15.88 9.92508 17.5 12.0001 17.5H12.0051C14.0801 17.5 15.8301 15.875 15.9901 13.805L16.0501 13H7.95508L8.01508 13.805ZM12.0001 16C10.9851 16 10.1001 15.385 9.71008 14.5H9.71508H14.2901C13.9001 15.385 13.0151 16 12.0001 16Z" fill="#FCFDFF"/>
+        </svg>
+        
+    )
+}
+
+const OpenSourceSvg = () => {
+    return (
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 3.51501C14.675 3.51501 13.01 4.41501 12 5.85501C10.99 4.41501 9.325 3.51501 7.5 3.51501C4.465 3.51501 2 5.98001 2 9.01501C2 10.485 2.57 11.865 3.61 12.905L12 21.295L20.39 12.905C21.43 11.865 22 10.485 22 9.01501C22 5.98001 19.535 3.51501 16.5 3.51501ZM19.33 11.845L12 19.175L4.67 11.845C3.915 11.09 3.5 10.085 3.5 9.01501C3.5 6.81001 5.295 5.01501 7.5 5.01501C9.22 5.01501 10.74 6.11001 11.29 7.74001C11.395 8.04501 11.68 8.25001 12 8.25001C12.32 8.25001 12.61 8.04501 12.71 7.74001C13.26 6.11001 14.78 5.01501 16.5 5.01501C18.705 5.01501 20.5 6.81001 20.5 9.01501C20.5 10.085 20.085 11.09 19.33 11.845Z" fill="#FCFDFF"/>
+</svg>
+
+    )
+}
+
+const FreeForeverSvg = () => {
+    return (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.5 22H4V2H9.68C10.415 2 11.105 2.285 11.625 2.805L12.455 3.635C12.69 3.87 13.01 4 13.34 4H20.005V15.5H14.34C13.605 15.5 12.915 15.215 12.395 14.695L11.565 13.865C11.33 13.63 11.01 13.5 10.68 13.5H5.5V22ZM5.5 12H10.68C11.415 12 12.105 12.285 12.625 12.805L13.455 13.635C13.69 13.87 14.01 14 14.34 14H18.505V5.5H13.34C12.605 5.5 11.915 5.215 11.395 4.695L10.565 3.865C10.33 3.63 10.01 3.5 9.68 3.5H5.5V12Z" fill="#FCFDFF"/>
+        </svg>
+        
     )
 }
 
@@ -32,7 +123,7 @@ export const LivnoteFeatures = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 bg-livnoteBg">
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <RichTextSvg/>
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Rich Text Editor</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono leading-relaxed relative z-10 ">
                             Write with style using our powerful editor that supports <span className="text-purple-300 font-medium">markdown syntax</span>, formatting, and seamless content creation.
@@ -41,7 +132,7 @@ export const LivnoteFeatures = () => {
 
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <CollaborationSvg/>
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Real-time Collaboration</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Work together seamlessly with <span className="text-purple-300 font-medium">live editing</span> and instant commenting. See changes as they happen.
@@ -50,7 +141,7 @@ export const LivnoteFeatures = () => {
 
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <OfflineSvg/>
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Offline-First</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Work anywhere, anytime. Your notes <span className="text-purple-300 font-medium">sync automatically</span> when you're back online.
@@ -59,7 +150,7 @@ export const LivnoteFeatures = () => {
 
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <PeerToPeerSvg/>
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Peer-to-Peer</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Connect directly with collaborators. <span className="text-purple-300 font-medium">No central servers</span> means faster syncing and better privacy.
@@ -68,7 +159,7 @@ export const LivnoteFeatures = () => {
 
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <CryptographicIdentitySvg/>
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Cryptographic Identity</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Secure identity management with <span className="text-purple-300 font-medium">cryptographic keys</span>. No passwords, no accounts.
@@ -77,7 +168,7 @@ export const LivnoteFeatures = () => {
 
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <EndToEndEncryptionSvg/>
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">End-to-End Encrypted</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Military-grade encryption ensures only you and your collaborators can read your content. <span className="text-purple-300 font-medium">Zero-knowledge architecture</span>.
@@ -86,7 +177,7 @@ export const LivnoteFeatures = () => {
 
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <EncryptionRestSvg/>
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Encrypted at Rest</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Your data is protected even when stored locally. <span className="text-purple-300 font-medium">Multi-layer encryption</span> keeps your notes safe.
@@ -95,7 +186,7 @@ export const LivnoteFeatures = () => {
 
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <NoCloudSvg/>
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">No Cloud Signups</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Start using immediately. <span className="text-purple-300 font-medium">No registration required</span>, no email verification, no data collection.
@@ -104,7 +195,7 @@ export const LivnoteFeatures = () => {
 
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <LightWeightSvg/>
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Lightweight Desktop App</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             <span className="text-purple-300 font-medium">Extremely small binary</span> with native performance. Fast startup, minimal resource usage.
@@ -114,7 +205,7 @@ export const LivnoteFeatures = () => {
 
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <FreeForeverSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Absolutely Free</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             No premium tiers, no hidden costs. <span className="text-purple-300 font-medium">100% free forever</span> with all features included.
@@ -123,7 +214,7 @@ export const LivnoteFeatures = () => {
 
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
-                        <FeatureSvg />
+                        <OpenSourceSvg />
                         <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Open Source</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Complete transparency with <span className="text-purple-300 font-medium">open source code</span>. Audit, contribute, and trust in community-driven development.
