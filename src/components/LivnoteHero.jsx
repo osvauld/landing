@@ -16,14 +16,14 @@ export const LivnoteHero = () => {
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <section
-        className="pt-40 px-2 flex flex-col justify-start items-center bg-livnoteBg overflow-x-hidden "
+        className="pt-10 lg:pt-40 px-2 flex flex-col justify-start items-center bg-livnoteBg overflow-x-hidden "
         id="home"
       >
         <div
           className="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden  pt-24 xll:px-12
   "
         >
-            <div className="text-livnotePrimary h-8 text-sm font-bold flex justify-start text-left">
+            <div className="text-livnotePrimary h-8 text-sm font-bold flex justify-start text-left px-4">
               <a
                 className="flex justify-center items-center font-normal text-sm xl:text-base rounded-md bg-labelBackground h-full px-4 py-2 cursor-pointer"
                 href="https://github.com/osvauld/web-client"
@@ -43,16 +43,16 @@ export const LivnoteHero = () => {
                 </span>
               </a>
             </div>
-            <h1 className=" text-white1 font-medium font-Jakartha text-left  text-5xl md:text-6xl lg:text-7xl xl:text-8xl  py-10">
+            <h1 className=" text-white1 font-medium font-Jakartha text-left  text-5xl md:text-6xl lg:text-7xl xl:text-8xl  py-10 px-4">
               <span className=" whitespace-normal lg:whitespace-nowrap text-livnotePrimary font-JetBrainsMono tracking-tighter">
               Write together, <br /> stay private
               </span>
             </h1>
-            <div className="text-faqAnswer font-light text-base md:text-lg xl:text-xl pt-12 tracking-wide max-w-[99vw] text-left font-JetBrainsMono">
+            <div className="text-faqAnswer font-light text-base md:text-lg xl:text-xl pt-12 tracking-wide max-w-[99vw] text-left font-JetBrainsMono px-4">
             Livnote lets you create and edit notes with others. <br className="hidden md:block" />  live, offline-first, and end to end encrypted.
               <br className="hidden md:block" />  - without anything ever touching a cloud server. 
             </div>
-            <div className="flex items-center justify-start gap-4 md:flex-row text-sm flex-wrap pt-12">
+            <div className="flex items-center justify-start gap-4 md:flex-row text-sm flex-wrap pt-12 px-4">
               <a
                 className="text-livnotePrimary bg-dark4 border rounded-lg border-livnotePrimary flex justify-center items-center cursor-pointer transition whitespace-nowrap px-3 py-2"
                 href="/"
@@ -60,7 +60,7 @@ export const LivnoteHero = () => {
                 rel="noopener noreferrer"
                 aria-label="watch demo"
               >
-                <PlayButton />
+                <PlayButton color={"#8986e5"} />
                 <span className="ml-1 font-medium"> Watch Demo</span>
               </a>
               <a

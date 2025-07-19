@@ -8,10 +8,10 @@ export const LivnotePhilosophy = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.2, delay: 0.2 }}
-            className="w-screen xll:h-screen 3xl:h-[110vh] flex  flex-col justify-start items-center mx-auto px-auto bg-livnoteBg px-4 pt-0 sm:pt-12 text-white"
+            className="w-screen flex  flex-col justify-start items-center mx-auto px-auto bg-livnoteBg px-4 pt-0 sm:pt-12 text-white"
         >
 
-           <div className="relative w-full  mx-auto">
+           <div className="w-full  mx-auto">
               <img
                 alt="Concept art on digital sovereignty"
                 src={conceptImage.src}
