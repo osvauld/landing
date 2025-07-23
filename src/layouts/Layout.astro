@@ -1,12 +1,4 @@
 ---
-import "@fontsource/inter";
-import "@fontsource/inter/600.css";
-import "@fontsource/plus-jakarta-sans";
-import "@fontsource/plus-jakarta-sans/500.css";
-import "@fontsource/plus-jakarta-sans/600.css";
-import "@fontsource/plus-jakarta-sans/700.css";
-import "@fontsource/plus-jakarta-sans/800.css";
-import '@fontsource/jetbrains-mono';
 import { SEO } from "astro-seo";
 import osvauldThumbnail from "../assets/images/osvauldthumb.png";
 import livnoteThumbnail from "../assets/images/livnotethumb.png";
@@ -36,6 +28,12 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />

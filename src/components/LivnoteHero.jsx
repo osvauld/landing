@@ -1,5 +1,5 @@
 import React from "react";
-import livnote from "/src/assets/images/livnote.png";
+import livnote from "/src/assets/images/livnote.webp";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { PlayButton } from "../assets/icons/PlayButton";
@@ -13,7 +13,7 @@ export const LivnoteHero = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.2 }}
+      transition={{ duration: 0.5, delay: 0 }}
     >
       <section
         className="pt-10 lg:pt-40 px-2 flex flex-col justify-start items-center bg-livnoteBg overflow-x-hidden "
@@ -23,7 +23,7 @@ export const LivnoteHero = () => {
           className="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden  pt-24 xll:px-12
   "
         >
-            <div className="text-livnotePrimary h-8 text-sm font-bold flex justify-start text-left px-4">
+            <div className="text-livnotePrimary  text-xs sm:text-sm font-bold flex justify-start text-left px-4">
               <a
                 className="flex justify-center items-center font-normal text-sm xl:text-base rounded-md bg-labelBackground h-full px-4 py-2 cursor-pointer"
                 href="https://github.com/osvauld/web-client"
@@ -75,7 +75,7 @@ export const LivnoteHero = () => {
             </div>
             <div className="flex justify-center items-center mt-12 border-[10px] border-calBorder rounded-xl">
               <img
-                alt="dashboard of osvauld"
+                alt="dashboard of livnote"
                 src={livnote.src}
                 className=" z-10"
               />

@@ -55,10 +55,7 @@ html {
   @apply text-white1 lg:text-base xl:text-xs text-base leading-6 mr-4 ml-4   2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium  xl:font-thin xl:tracking-wide hover:scale-110 transition duration-300 h-full pt-2 whitespace-nowrap;
 }
 
-/* Preventing FOUC */
-@font-face {
-  font-display: var(--fontsource-Inter-font-display, optional);
-}
+
 
 .pricing-content {
   @apply font-Inter font-light tracking-wide text-faqAnswer;
