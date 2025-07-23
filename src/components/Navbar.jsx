@@ -118,12 +118,7 @@ export const Navbar = ({ isLivnote }) => {
   return (
     <nav className="w-screen h-20 flex justify-center items-center fixed z-40 backdrop-blur-xl">
       <div className="w-full mx-auto px-4 flex items-center relative max-w-[1400px]">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.1 }}
-          exit={{ opacity: 0 }}
-        >
+
           <div className="flex justify-start items-center grow basis-0">
             <button
               className="font-Jakartha font-medium text-4xl pl-2 p-3"
@@ -136,7 +131,6 @@ export const Navbar = ({ isLivnote }) => {
               )}
             </button>
           </div>
-        </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

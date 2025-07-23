@@ -1,4 +1,4 @@
-import conceptImage from "/src/assets/images/art.png";
+import conceptImage from "/src/assets/images/art.webp";
 import { motion } from "framer-motion";
 
 export const LivnotePhilosophy = () => {
