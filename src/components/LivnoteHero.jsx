@@ -3,7 +3,9 @@ import livnote from "/src/assets/images/livnote.webp";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { PlayButton } from "../assets/icons/PlayButton";
+import { Download } from "../assets/icons/Download";
 import { motion } from "framer-motion";
+import DownloadButton from "./DownloadButton";
 
 export const LivnoteHero = () => {
 
@@ -25,13 +27,13 @@ export const LivnoteHero = () => {
         >
             <div className="text-livnotePrimary  text-xs sm:text-sm font-bold flex justify-start text-left px-4">
               <a
-                className="flex justify-center items-center font-normal text-sm xl:text-base rounded-md bg-labelBackground h-full px-4 py-2 cursor-pointer"
+                className="flex justify-center items-center font-normal text-sm xl:text-base rounded-md border border-livnotePrimary h-full px-4 py-2 cursor-pointer"
                 href="https://github.com/osvauld/web-client"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="whitespace-nowrap">We are open-source</span>
-                <span className="h-full border-r-[1px] border-labelSperator mx-2"></span>
+                <span className="h-5 w-px bg-livnotePrimary mx-2"></span>
                 <span className="flex text-white4 justify-center items-center whitespace-nowrap">
                   <span className="mr-2 flex justify-center items-center">
                     <GithubIcon color={"#A6B0BB"} size={18} />
@@ -53,17 +55,8 @@ export const LivnoteHero = () => {
               <br className="hidden md:block" />  - without anything ever touching a cloud server. 
             </div>
             <div className="flex items-center justify-start gap-4 md:flex-row text-sm flex-wrap pt-12 px-4">
-              <a
-                className="text-livnotePrimary bg-dark4 border rounded-lg border-livnotePrimary flex justify-center items-center cursor-pointer transition whitespace-nowrap px-3 py-2"
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="watch demo"
-              >
-                <PlayButton color={"#8986e5"} />
-                <span className="ml-1 font-medium"> Watch Demo</span>
-              </a>
-              <a
+              <DownloadButton />
+              {/* <a
                 className="rounded-lg font-medium text-black bg-livnotePrimary px-3 py-2 text-sm whitespace-nowrap flex cursor-pointer"
                 href="https://getwaitlist.com/waitlist/14960"
                 target="_blank"
@@ -71,7 +64,7 @@ export const LivnoteHero = () => {
                 aria-label="get started"
               >
                 <span className="pt-px">Join waitlist</span>
-              </a>
+              </a> */}
             </div>
             <div className="flex justify-center items-center mt-12 border-[10px] border-calBorder rounded-xl">
               <img
