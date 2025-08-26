@@ -109,11 +109,7 @@ const FreeForeverSvg = () => {
 
 export const LivnoteFeatures = () => {
     return (
-        <motion.section
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.2, delay: 0.2 }}
+        <div
             className="w-full flex flex-col items-center mx-auto bg-livnoteBg px-4 pt-0 sm:pt-12 text-white "
         >
             <section className="py-20 px-5 max-w-6xl mx-auto  ">
@@ -222,6 +218,6 @@ export const LivnoteFeatures = () => {
                     </div>
                 </div>
             </section>
-        </motion.section>
+        </div>
     );
 };
