@@ -10,7 +10,7 @@ import { LivnotePhilosophy } from "../components/LivnotePhilosophy";
 
 <Layout title="Livnote" description="Livnote is a collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design." >
   <LivnoteHero />
-  <LivnoteFeatures client:visible/>
+  <LivnoteFeatures  client:visible/>
   <LivnotePhilosophy client:visible />
   <FaqComponent client:visible data={LivnoteData} parent={"livnote"} />
   <ScrollUpButton client:visible parent={"livnote"} />
