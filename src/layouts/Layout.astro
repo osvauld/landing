@@ -98,6 +98,13 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
       }}
     />
     <meta name="generator" content={Astro.generator} />
+    <!-- Defer main stylesheet; inline minimal critical CSS for nav + hero -->
+    <link rel="preload" as="style" href={new URL("../styles/Theme.css", import.meta.url).pathname} onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href={new URL("../styles/Theme.css", import.meta.url).pathname} /></noscript>
+    <style>
+      nav{position:fixed;top:0;left:0;right:0;height:5rem;width:100vw;z-index:40;-webkit-backdrop-filter:saturate(180%) blur(10px);backdrop-filter:saturate(180%) blur(10px)}
+      #home{padding-top:10rem}
+    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
