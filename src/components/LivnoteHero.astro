@@ -1,5 +1,6 @@
 ---
 import livnote from "../assets/images/livnote.webp";
+import { Image } from "astro:assets";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { Download } from "../assets/icons/Download";
@@ -73,14 +74,19 @@ import { Download } from "../assets/icons/Download";
       <div id="download-backdrop" class="hidden fixed inset-0 z-40"></div>
     </div>
 
-    <div class="flex justify-center items-center mt-12 border-[10px] border-calBorder rounded-xl">
-      <img
+    <div class="flex justify-center items-center mt-12 border-[10px] border-calBorder rounded-xl overflow-hidden">
+      <Image
+        src={livnote}
         alt="dashboard of livnote"
-        src={livnote.src}
+        width={1200}
+        height={800}
+        class="z-10 w-full max-w-4xl h-auto object-cover"
         loading="eager"
         decoding="async"
         fetchpriority="high"
-        class=" z-10"
+        densities={[1, 2]}
+        format="webp"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
       />
     </div>
   </div>
