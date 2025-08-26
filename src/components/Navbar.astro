@@ -1,0 +1,185 @@
+---
+// Navbar.astro - Static, no React, optimized for CRP
+export interface Props {
+  isLivnote?: boolean;
+}
+
+const { isLivnote = false } = Astro.props;
+
+const navbarLinks = [
+  {
+    label: "Livnote",
+    href: "/livnote",
+    ariaLabel: "Livnote",
+  },
+  {
+    label: "FAQ",
+    href: "/faq",
+    ariaLabel: "FAQ",
+  },
+  {
+    label: "Book a Demo",
+    href: "/demo",
+    ariaLabel: "Book a Demo",
+  },
+  {
+    label: "Our story",
+    href: "/story",
+    ariaLabel: "our story",
+  },
+];
+---
+
+<nav class="w-screen h-20 flex justify-center items-center fixed z-40 backdrop-blur-xl">
+  <div class="w-full mx-auto px-4 flex items-center relative max-w-[1400px]">
+    <div class="flex justify-start items-center grow basis-0">
+      <a
+        href="/"
+        class="font-Jakartha font-medium text-4xl pl-2 p-3 hover:opacity-80 transition-opacity"
+      >
+        {isLivnote ? (
+          <span class="text-livnotePrimary footer-contact:text-black">
+            Livnote
+          </span>
+        ) : (
+          <span class="text-white3 footer-contact:text-black">
+            osvauld
+          </span>
+        )}
+      </a>
+    </div>
+    
+    <div class="xl:ml-auto mr-4 ml-auto">
+      <div class="hidden lg:flex h-full gap-10 xl:mx-4 py-2 cursor-pointer">
+        {navbarLinks.map(({ href, label, ariaLabel }) => (
+          <a
+            class="text-white1 font-extralight font-Jakartha text-sm flex justify-center items-center hover:text-blue1 transition-colors"
+            href={href}
+            rel="noopener noreferrer"
+            aria-label={ariaLabel}
+          >
+            {label}
+          </a>
+        ))}
+      </div>
+    </div>
+    
+    <div class="flex justify-center items-center gap-8">
+      <div class="grow basis-0 justify-end hidden lg:flex">
+        <a
+          class={`rounded-md font-normal flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border ${
+            isLivnote
+              ? "text-livnotePrimary border-livnotePrimary bg-livnoteBg"
+              : "text-blue1 border-blue1 bg-dark4"
+          }`}
+          href="https://getwaitlist.com/waitlist/14960"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="ml-1">Join Waitlist</span>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Mobile menu toggle - Pure CSS -->
+    <label for="mobile-menu-toggle" class="lg:hidden flex flex-col px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer backdrop-blur-xl mr-2 hover:border-gray-400 transition-colors">
+      <div class="w-5 h-0.5 mb-1 bg-gray-500 footer-contact:bg-black transition-colors"></div>
+      <div class="w-5 h-0.5 mb-1 bg-gray-500 footer-contact:bg-black transition-colors"></div>
+      <div class="w-5 h-0.5 bg-gray-500 footer-contact:bg-black transition-colors"></div>
+    </label>
+  </div>
+  
+  <!-- Mobile navbar - Pure CSS toggle with smooth animations -->
+  <input type="checkbox" id="mobile-menu-toggle" class="hidden peer" />
+  <div class={`${
+    isLivnote ? "bg-livnoteBg" : "bg-dark4"
+  } mobile-menu flex flex-col mt-16 lg:hidden absolute top-4 left-0 z-50 w-full 
+  items-center gap-10 pb-10 border-y border-solid border-customDarkBg3 pt-10 text-sm
+   opacity-0 invisible peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:visible
+  transition-all duration-300 ease-out`}>
+    {navbarLinks.map(({ label, href, ariaLabel }) => (
+      <a
+        class="text-white1 font-extralight font-Jakartha text-sm hover:text-blue1 transition-colors"
+        href={href}
+        rel="noopener noreferrer"
+        aria-label={ariaLabel}
+      >
+        {label}
+      </a>
+    ))}
+    <a
+      class={`text-dark1 custom-border-gray rounded-md
+      cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap hover:opacity-90 transition-opacity ${
+        isLivnote ? "bg-livnotePrimary" : "bg-blue1"
+      }`}
+      href="https://github.com/osvauld"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+      </svg>
+      <span class="ml-2">Contribute</span>
+    </a>
+  </div>
+</nav>
+
+<!-- CSS-only footer contact detection using Intersection Observer -->
+<script>
+  // Use Intersection Observer for better performance than scroll events
+  if ('IntersectionObserver' in window) {
+    const footer = document.getElementById('page-footer');
+    if (footer) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              document.documentElement.classList.add('footer-contact');
+            } else {
+              document.documentElement.classList.remove('footer-contact');
+            }
+          });
+        },
+        {
+          rootMargin: '0px 0px -90% 0px',
+          threshold: 0
+        }
+      );
+      
+      observer.observe(footer);
+    }
+  }
+</script>
+
+<style>
+  
+  /* Footer contact state styles using CSS custom properties */
+  :global(.footer-contact) .footer-contact\:text-black {
+    color: black;
+  }
+  
+  :global(.footer-contact) .footer-contact\:bg-black {
+    background-color: black;
+  }
+  
+  /* Smooth transitions for all interactive elements */
+
+  
+  /* Optimize backdrop blur performance */
+  nav {
+    will-change: backdrop-filter;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+
+ 
+  /* Ensure mobile menu is properly hidden by default */
+  .mobile-menu {
+    pointer-events: none;
+  }
+  
+  .mobile-menu:has(~ input:checked),
+  input:checked ~ .mobile-menu {
+    pointer-events: auto;
+  }
+</style> 

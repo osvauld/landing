@@ -1,16 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
-
 const navbarLinks = [
-  // {
-  //   label: "Pricing",
-  //   href: "/pricing",
-  //   ariaLabel: "Pricing",
-  // },
   {
     label: "Livnote",
     href: "/livnote",
@@ -31,16 +24,6 @@ const navbarLinks = [
     href: "/story",
     ariaLabel: "our story",
   },
-  // {
-  //   label: "About us",
-  //   href: "https://docs.osvauld.com/introduction/overview/",
-  //   ariaLabel: "About Us",
-  // },
-  // {
-  //   label: "Documentation",
-  //   href: "https://docs.osvauld.com/introduction/overview/",
-  //   ariaLabel: "Documentation",
-  // },
 ];
 
 const scrollToTop = () => {
@@ -66,20 +49,20 @@ export const Navbar = ({ isLivnote }) => {
       timeoutId = setTimeout(() => {
         const footerRect = footer.getBoundingClientRect();
         const footerTop = footerRect.top;
-        
+
         // Check if footer top is at or above 80px from viewport top
         setIsFooterInContact(footerTop <= 80);
       }, 10); // 10ms debounce
     };
 
-    window.addEventListener('scroll', handleScroll);
-    
+    window.addEventListener("scroll", handleScroll);
+
     // Check initial position
     const footerRect = footer.getBoundingClientRect();
     setIsFooterInContact(footerRect.top <= 80);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       clearTimeout(timeoutId);
     };
   }, []);
@@ -118,24 +101,31 @@ export const Navbar = ({ isLivnote }) => {
   return (
     <nav className="w-screen h-20 flex justify-center items-center fixed z-40 backdrop-blur-xl">
       <div className="w-full mx-auto px-4 flex items-center relative max-w-[1400px]">
-
-          <div className="flex justify-start items-center grow basis-0">
-            <button
-              className="font-Jakartha font-medium text-4xl pl-2 p-3"
-              onClick={scrollToTop}
-            >
-              {isLivnote ? (  
-                <span className={`${isFooterInContact ? "text-black" : "text-livnotePrimary"}`}>Livnote</span>
-              ) : (
-                <span className={`${isFooterInContact ? "text-black" : "text-white3"}`}>osvauld</span>
-              )}
-            </button>
-          </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.1 }}
-          exit={{ opacity: 0 }}
+        <div className="flex justify-start items-center grow basis-0">
+          <button
+            className="font-Jakartha font-medium text-4xl pl-2 p-3"
+            onClick={scrollToTop}
+          >
+            {isLivnote ? (
+              <span
+                className={`${
+                  isFooterInContact ? "text-black" : "text-livnotePrimary"
+                }`}
+              >
+                Livnote
+              </span>
+            ) : (
+              <span
+                className={`${
+                  isFooterInContact ? "text-black" : "text-white3"
+                }`}
+              >
+                osvauld
+              </span>
+            )}
+          </button>
+        </div>
+        <div
           className="xl:ml-auto mr-4 ml-auto"
         >
           <div className="hidden lg:flex h-full gap-10 xl:mx-4 py-2 cursor-pointer ">
@@ -152,216 +142,79 @@ export const Navbar = ({ isLivnote }) => {
               </React.Fragment>
             ))}
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          exit={{ opacity: 0 }}
-        >
-          <div className="flex justify-center items-center gap-8">
-            {/* <div className="grow basis-0 justify-end hidden lg:flex">
-              <span
-                className={`bg-labelBackground rounded-lg font-normal text-blue1 flex justify-center items-center cursor-pointer transition whitespace-nowrap  px-3 py-3 text-sm relative animate-blink`}
-                onClick={() => setTrialModal(!trialModal)}
-              >
-                Try now */}
-            {/* <span className="text-[10px] font-semibold text-red-600 absolute right-2 top-0 animate-blink ">
-                  New
-                </span> */}
-            {/* {trialModal && (
-                  <div
-                    className={`absolute top-[140%] right-0 ${
-                      fetchCreds ? "h-[31.8rem]" : "h-[17.2rem]"
-                    } w-[28.25rem] bg-dark2 border border-trialBorder text-trialText flex flex-col justify-start items-center gap-6 p-4 pl-9 rounded-2xl`}
-                  >
-                    <div className="flex justify-between items-center w-full mt-3 pr-6">
-                      <span className="text-xl font-medium">
-                        You are invited to try osvauld
-                      </span>
-                      <CloseIcon />
-                    </div>
-                    <div
-                      className="w-full flex flex-col gap-4 justify-center items-center"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <div className="w-full flex justify-start gap-6 items-center">
-                        <span className="text-base text-white1">Step 1:</span>
-                        <a
-                          href="https://chromewebstore.google.com/detail/osvauld/jjlmehbdndojkfglfimhldnbpdhjphfi"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex justify-around items-center text-blue1 text-base"
-                        >
-                          <span className="mr-1">
-                            Download osvauld browser extension{" "}
-                          </span>
-                          <Redirect color={"#89B4FA"} />
-                        </a>
-                      </div>
-                      <div className="w-full flex justify-start gap-6 items-center">
-                        <span className="text-base text-white1">Step 2:</span>
-                        <button
-                          className="flex justify-center items-center border border-trialBorder rounded-md px-3 py-2 text-base"
-                          onClick={generateCredentials}
-                          disabled={fetchCreds}
-                        >
-                          <span>Generate temporary credentials </span>
-                        </button>
-                      </div>
-                    </div>
-                    {fetchCreds && (
-                      <div
-                        className="w-full flex flex-col gap-3 "
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText  ">
-                          <span>Base URL</span>
-                          <div className="flex justify-between items-center bg-trialField rounded-md text-sm w-full px-2 py-1.5 mt-1">
-                            <span>https://demo.osvauld.com</span>
-                            <button
-                              onClick={async () =>
-                                await copyToClipboard(
-                                  "https://demo.osvauld.com",
-                                  0
-                                )
-                              }
-                            >
-                              {copiedIndex !== null && copiedIndex === 0 ? (
-                                <Tick />
-                              ) : (
-                                <Copy />
-                              )}
-                            </button>
-                          </div>
-                        </div>
-                        <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText ">
-                          <span>Username</span>
-                          <div
-                            className="flex justify-between items-center bg-trialField rounded-md text-sm w-full px-2 py-1.5 mt-1"
-                            onClick={async () => {
-                              const username =
-                                document.getElementById("username").textContent;
-                              await copyToClipboard(username, 1);
-                            }}
-                          >
-                            <span id="username">{username}</span>
-                            {copiedIndex !== null && copiedIndex === 1 ? (
-                              <Tick />
-                            ) : (
-                              <Copy />
-                            )}
-                          </div>
-                        </div>
-                        <div className="w-[95%] flex flex-col justify-center items-start text-trialFieldText">
-                          <span>Password</span>
-                          <div className="flex justify-between items-center bg-trialField  rounded-md text-sm w-full px-2 py-1.5 mt-1">
-                            <input
-                              id="password"
-                              type={isPasswordVisible ? "text" : "password"}
-                              defaultValue={password}
-                              className="bg-transparent w-full"
-                              disabled
-                            />
-                            <span className="flex justify-center items-center gap-2">
-                              <button
-                                onClick={() => {
-                                  setIsPasswordVisible(!isPasswordVisible);
-                                }}
-                              >
-                                {isPasswordVisible ? <EyeOff /> : <Eye />}
-                              </button>
-                              {copiedIndex !== null && copiedIndex === 2 ? (
-                                <Tick />
-                              ) : (
-                                <button
-                                  onClick={async () => {
-                                    const password =
-                                      document.getElementById("password").value;
-                                    await copyToClipboard(password, 2);
-                                  }}
-                                >
-                                  <Copy />
-                                </button>
-                              )}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    <div className="w-full">
-                      <span className="w-full text-sm">
-                        Disclaimer : This is a shared trial environment to
-                        experience <br /> osvauld. Please refrain from sharing
-                        original credentials. <br />
-                        We are not liable for any damages caused.
-                      </span>
-                    </div>
-                  </div>
-                )} */}
-            {/* </span>
-            </div> */}
-            <div className="grow basis-0 justify-end hidden lg:flex">
-              <a
-                className={`rounded-md font-normal  flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border ${isLivnote ? " text-livnotePrimary border-livnotePrimary bg-livnoteBg" : " text-blue1 border-blue1 bg-dark4"}`}
-                href="https://getwaitlist.com/waitlist/14960"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="ml-1">Join Waitlist</span>
-              </a>
-            </div>
+        </div>
+        <div className="flex justify-center items-center gap-8">
+          <div className="grow basis-0 justify-end hidden lg:flex">
+            <a
+              className={`rounded-md font-normal  flex justify-center items-center cursor-pointer bg-dark4 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border ${
+                isLivnote
+                  ? " text-livnotePrimary border-livnotePrimary bg-livnoteBg"
+                  : " text-blue1 border-blue1 bg-dark4"
+              }`}
+              href="https://getwaitlist.com/waitlist/14960"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="ml-1">Join Waitlist</span>
+            </a>
           </div>
-        </motion.div>
+        </div>
         <div
           className="lg:hidden flex flex-col  px-2 py-3  border-solid border border-gray-600 rounded-md cursor-pointer backdrop-blur-xl mr-2"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <div className={`w-5 h-0.5   mb-1 ${isFooterInContact ? "bg-black" : "bg-gray-500"}`}></div>
-          <div className={`w-5 h-0.5   mb-1 ${isFooterInContact ? "bg-black" : "bg-gray-500"}`}></div>
-          <div className={`w-5 h-0.5 ${isFooterInContact ? "bg-black" : "bg-gray-500"}`}></div>
+          <div
+            className={`w-5 h-0.5   mb-1 ${
+              isFooterInContact ? "bg-black" : "bg-gray-500"
+            }`}
+          ></div>
+          <div
+            className={`w-5 h-0.5   mb-1 ${
+              isFooterInContact ? "bg-black" : "bg-gray-500"
+            }`}
+          ></div>
+          <div
+            className={`w-5 h-0.5 ${
+              isFooterInContact ? "bg-black" : "bg-gray-500"
+            }`}
+          ></div>
         </div>
       </div>
       {/* Mobile navbar */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            exit={{ opacity: 0 }}
-          >
-            <div
-              className={`${isLivnote ? "bg-livnoteBg" : "bg-dark4"} flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
+      {isOpen && (
+        <div
+          className={`${
+            isLivnote ? "bg-livnoteBg" : "bg-dark4"
+          } flex flex-col mt-16 lg:hidden absolute top-4 left-0   z-50 w-full 
         items-center gap-10 pb-10  border-y border-solid border-customDarkBg3 pt-10 text-sm
             `}
+        >
+          {navbarLinks.map(({ label, href, ariaLabel }) => (
+            <a
+              key={href}
+              className=" text-white1 font-extralight font-Jakartha text-sm "
+              href={href}
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              aria-label={ariaLabel}
             >
-              {navbarLinks.map(({ label, href, ariaLabel }) => (
-                <a
-                  key={href}
-                  className=" text-white1 font-extralight font-Jakartha text-sm "
-                  href={href}
-                  rel="noopener noreferrer"
-                  onClick={() => setIsOpen(false)}
-                  aria-label={ariaLabel}
-                >
-                  {label}
-                </a>
-              ))}
-              <a
-                className={`text-dark1 custom-border-gray rounded-md
-            cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"}`}
-                href="https://github.com/osvauld"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GithubIcon color={"black"} />
-                <span className="ml-2">Contribute</span>
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              {label}
+            </a>
+          ))}
+          <a
+            className={`text-dark1 custom-border-gray rounded-md
+            cursor-pointer pl-6 pr-8 pt-2 pb-2 text-sm flex justify-center items-center whitespace-nowrap ${
+              isLivnote ? "bg-livnotePrimary" : "bg-blue1"
+            }`}
+            href="https://github.com/osvauld"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubIcon color={"black"} />
+            <span className="ml-2">Contribute</span>
+          </a>
+        </div>
+      )}
     </nav>
   );
 };

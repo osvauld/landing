@@ -3,8 +3,10 @@ import { SEO } from "astro-seo";
 import osvauldThumbnail from "../assets/images/osvauldthumb.png";
 import livnoteThumbnail from "../assets/images/livnotethumb.png";
 
+
 import { Footer } from "../components/FooterV2.jsx";
-import { Navbar } from "../components/Navbar.jsx";
+import  Navbar from "../components/Navbar.astro";
+
 
 interface Props {
   title: string;
@@ -30,17 +32,9 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
-      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'"
+      rel="stylesheet"
     />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -89,22 +83,13 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
       description={description}
       openGraph={{
         basic: {
-          title: isLivnote
-            ? "Livnote - Peer-to-peer Collaborative Document Editor"
-            : "Osvauld - Rust Framework for Privacy-First P2P Applications",
+          title: isLivnote ? "Livnote - Peer-to-peer Collaborative Document Editor" : "Osvauld - Rust Framework for Privacy-First P2P Applications",
           type: "website",
           image: new URL(pageThumbnail.src, Astro.site).toString(),
         },
       }}
     />
     <meta name="generator" content={Astro.generator} />
-    <!-- Defer main stylesheet; inline minimal critical CSS for nav + hero -->
-    <link rel="preload" as="style" href={new URL("../styles/Theme.css", import.meta.url).pathname} onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href={new URL("../styles/Theme.css", import.meta.url).pathname} /></noscript>
-    <style>
-      nav{position:fixed;top:0;left:0;right:0;height:5rem;width:100vw;z-index:40;-webkit-backdrop-filter:saturate(180%) blur(10px);backdrop-filter:saturate(180%) blur(10px)}
-      #home{padding-top:10rem}
-    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -243,7 +228,7 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
   </head>
 
   <div>
-    <Navbar client:load isLivnote={isLivnote} />
+    <Navbar isLivnote={isLivnote}/>
     <slot />
     <Footer client:load isLivnote={isLivnote} />
     <style is:global>

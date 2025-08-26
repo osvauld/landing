@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { DiscordIcon } from "../assets/icons/DiscordIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { FooterOsvauld } from "../assets/logos/FooterOsvauld";
@@ -12,12 +11,6 @@ export const Footer = ({ isLivnote }) => {
     ? "https://github.com/osvauld/osvauld"
     : "https://getwaitlist.com/waitlist/14960";
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-    >
       <section id="page-footer" className={`w-full ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"} z-50`}>
         <footer className="relative mx-auto h-[56rem] px-[24px] pt-[32px]  max-w-[1312px]  min-h-[545px] lg:px-[60px] lg:pt-[60px]">
           <div className="flex h-full flex-col gap-32">
@@ -68,6 +61,5 @@ export const Footer = ({ isLivnote }) => {
           </div>
         </footer>
       </section>
-    </motion.div>
   );
 };
