@@ -1,0 +1,119 @@
+---
+import livnote from "../assets/images/livnote.webp";
+import { GithubIcon } from "../assets/icons/GithubIcon";
+import { BottomArrow } from "../assets/icons/BottomArrow";
+import { Download } from "../assets/icons/Download";
+---
+
+<section
+  class="pt-10 lg:pt-40 px-2 flex flex-col justify-start items-center bg-livnoteBg overflow-x-hidden "
+  id="home"
+>
+  <div
+    class="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden  pt-24 xll:px-12"
+  >
+    <div class="text-livnotePrimary  text-xs sm:text-sm font-bold flex justify-start text-left px-4">
+      <a
+        class="flex justify-center items-center font-normal text-sm xl:text-base rounded-md border border-livnotePrimary h-full px-4 py-2 cursor-pointer"
+        href="https://github.com/osvauld/web-client"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="whitespace-nowrap">We are open-source</span>
+        <span class="h-5 w-px bg-livnotePrimary mx-2"></span>
+        <span class="flex text-white4 justify-center items-center whitespace-nowrap">
+          <span class="mr-2 flex justify-center items-center">
+            <GithubIcon color={"#A6B0BB"} size={18} />
+          </span>
+          Star us on GitHub
+          <span class="transform -rotate-90 mt-1">
+            <BottomArrow color={"#A6B0BB"} />
+          </span>
+        </span>
+      </a>
+    </div>
+    <h1 class=" text-white1 font-medium font-Jakartha text-left  text-5xl md:text-6xl lg:text-7xl xl:text-8xl  py-10 px-4">
+      <span class=" whitespace-normal lg:whitespace-nowrap text-livnotePrimary font-JetBrainsMono tracking-tighter">
+        Write together, <br /> stay private
+      </span>
+    </h1>
+    <div class="text-faqAnswer font-light text-base md:text-lg xl:text-xl pt-12 tracking-wide max-w-[99vw] text-left font-JetBrainsMono px-4">
+      Livnote lets you create and edit notes with others. <br class="hidden md:block" />  live, offline-first, and end to end encrypted.
+      <br class="hidden md:block" />  - without anything ever touching a cloud server. 
+    </div>
+    <div class="flex items-center justify-start gap-4 md:flex-row text-sm flex-wrap pt-12 px-4 relative">
+      <button
+        id="download-btn"
+        class="px-8 py-4 flex items-center justify-center gap-6 min-w-[200px]  border-livnotePrimary border-2 rounded-lg text-xl hover:bg-dark1 transition-all duration-300 text-livnotePrimary"
+        aria-label="Download for your platform"
+        type="button"
+      >
+        <Download size={44} />
+        <div class="flex flex-col items-start">
+          <span class="text-2xl">Download</span>
+          <span id="download-platform" class="text-base mt-2 font-light whitespace-nowrap"></span>
+        </div>
+      </button>
+
+      <div
+        id="download-dropdown"
+        class="hidden absolute top-full left-0 mt-2 w-64 border z-50 bg-dark1 border-livnotePrimary rounded-lg"
+        role="menu"
+      >
+        <div class="p-2">
+          <div class="text-sm px-3 py-2 border-b border-livnotePrimary my-1">
+            Choose your platform:
+          </div>
+          <button data-platform="mac" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Mac (Apple Silicon)</button>
+          <button data-platform="linux" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Debian)</button>
+          <button data-platform="fedora" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Fedora)</button>
+          <button data-platform="windows" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Windows</button>
+        </div>
+      </div>
+      <div id="download-backdrop" class="hidden fixed inset-0 z-40"></div>
+    </div>
+
+    <div class="flex justify-center items-center mt-12 border-[10px] border-calBorder rounded-xl">
+      <img
+        alt="dashboard of livnote"
+        src={livnote.src}
+        class=" z-10"
+      />
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var urls = {
+      mac: 'https://github.com/osvauld/osvauld/releases/download/alpha/osvauld_0.1.0_aarch64.dmg',
+      linux: 'https://github.com/osvauld/osvauld/releases/download/alpha/osvauld_0.1.0_amd64.deb',
+      fedora: 'https://github.com/osvauld/osvauld/releases/download/alpha/osvauld-0.1.0-1.x86_64.rpm',
+      windows: 'https://github.com/osvauld/osvauld/releases/download/alpha/osvauld_0.1.0_x64-setup.exe'
+    };
+    var names = { mac: 'Mac (Apple Silicon)', linux: 'Linux (Debian)', fedora: 'Linux (Fedora)', windows: 'Windows' };
+    function enhance(){
+      var btn = document.getElementById('download-btn');
+      var dropdown = document.getElementById('download-dropdown');
+      var platformEl = document.getElementById('download-platform');
+      var backdrop = document.getElementById('download-backdrop');
+      if(!btn||!dropdown||!platformEl||!backdrop) return;
+      var ua = navigator.userAgent.toLowerCase();
+      var platform = 'unknown';
+      if(ua.indexOf('mac')>-1) platform='mac';
+      else if(ua.indexOf('windows')>-1) platform='windows';
+      else if(ua.indexOf('linux')>-1) platform='linux';
+      platformEl.textContent = platform!=='unknown' ? ('for '+(names[platform]||'')) : '';
+      function startDownload(plat){
+        var u = urls[plat]; if(!u) return; var a=document.createElement('a'); a.href=u; a.download=u.split('/').pop(); document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      }
+      function openDropdown(){ dropdown.classList.remove('hidden'); backdrop.classList.remove('hidden'); }
+      function closeDropdown(){ dropdown.classList.add('hidden'); backdrop.classList.add('hidden'); }
+      btn.addEventListener('click', function(){ if(platform!=='unknown' && urls[platform]){ startDownload(platform);} else { openDropdown(); } });
+      backdrop.addEventListener('click', closeDropdown);
+      dropdown.addEventListener('click', function(e){ var target = e.target; if(!(target instanceof Element)) return; var t = target.closest('button[data-platform]'); if(!t) return; var sel=t.getAttribute('data-platform'); if(sel) startDownload(sel); closeDropdown(); });
+    }
+    if('requestIdleCallback' in window){ requestIdleCallback(enhance); } else { setTimeout(enhance, 0); }
+  })();
+</script>
+
