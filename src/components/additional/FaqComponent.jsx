@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Calender } from "../../assets/icons/Calender";
 import { DiscordIcon } from "../../assets/icons/DiscordIcon";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
