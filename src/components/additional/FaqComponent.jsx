@@ -1,7 +1,7 @@
 import { Calender } from "../../assets/icons/Calender";
 import { DiscordIcon } from "../../assets/icons/DiscordIcon";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
-import questionLeft from "../../assets/images/questionLeft.png";
+import questionLeft from "../../assets/images/questionLeft.webp";
 // import { questionRight } from "../../assets/images/questionRight.png";
 
 
