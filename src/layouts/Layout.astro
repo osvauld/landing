@@ -3,8 +3,6 @@ import { SEO } from "astro-seo";
 import osvauldThumbnail from "../assets/images/osvauldthumb.png";
 import livnoteThumbnail from "../assets/images/livnotethumb.png";
 
-
-
 import  Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro"
 
@@ -32,16 +30,13 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Critical Font Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Critical Font Subset for Above-the-Fold Content -->
-    <!-- Only load essential characters for hero section -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&text=Write%20together%20stay%20private%20Livnote%20lets%20you%20create%20and%20edit%20notes%20with%20others%20live%20offline%20first%20end%20to%20end%20encrypted%20without%20anything%20ever%20touching%20a%20cloud%20server%20Download%20for%20Mac%20Apple%20Silicon%20Linux%20Debian%20Fedora%20Windows%20Choose%20your%20platform%20Features%20Rich%20Text%20Editor%20Real%20time%20Collaboration%20Offline%20First%20Peer%20to%20Cryptographic%20Identity%20End%20Encrypted%20at%20Rest%20No%20Cloud%20Signups%20Lightweight%20Desktop%20App%20Absolutely%20Free%20Open%20Source%20We%20are%20open%20source%20Star%20us%20on%20GitHub&display=swap"
-      rel="stylesheet"
-    />
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap"
+    rel="stylesheet"
+  />
 
     <link rel="icon" href={isLivnote ? "/favicon-livnote.ico" : "/favicon.ico"} sizes="any">
     
@@ -65,25 +60,6 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
       }}
     />
     <meta name="generator" content={Astro.generator} />
-    
-    <!-- Font Loading Script -->
-    <script defer>
-      // Load remaining font weights after page load
-      function loadRemainingFonts() {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap';
-        link.media = 'all';
-        document.head.appendChild(link);
-      }
-      
-      // Load fonts after page load or when idle
-      if ('requestIdleCallback' in window) {
-        (window).requestIdleCallback(loadRemainingFonts);
-      } else {
-        setTimeout(loadRemainingFonts, 1000);
-      }
-    </script>
     
     <script type="application/ld+json" defer>
       {
@@ -233,6 +209,16 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
         overflow-x: hidden;
         scroll-behavior: smooth;
         box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: "Inter";
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Plus Jakarta Sans";
+        font-display: swap;
       }
 
       body {
