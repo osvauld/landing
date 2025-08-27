@@ -4,8 +4,8 @@ import osvauldThumbnail from "../assets/images/osvauldthumb.png";
 import livnoteThumbnail from "../assets/images/livnotethumb.png";
 
 
-import { Footer } from "../components/FooterV2.jsx";
 import  Navbar from "../components/Navbar.astro";
+const Footer = (await import ("../components/FooterV2.jsx")).Footer
 
 
 interface Props {
@@ -193,7 +193,7 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
   <div>
     <Navbar isLivnote={isLivnote}/>
     <slot />
-    <Footer client:load isLivnote={isLivnote} />
+    <Footer client:visible isLivnote={isLivnote} />
     <style is:global>
       @font-face {
         font-family: "Inter";
