@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { LIVNOTEDATA } from "../components/additional/data";
+import { livnotedata } from "../components/additional/Data";
 import LivnoteHero from "../components/LivnoteHero.astro";
 
 import ScrollUpButton from "../components/ScrollUpButton.astro";
@@ -13,6 +13,6 @@ import LivnotePhilosophy from "../components/LivnotePhilosophy.astro";
   <LivnoteHero />
   <LivnoteFeatures />
   <LivnotePhilosophy />
-  <FaqComponent data={LIVNOTEDATA} parent={"livnote"} />
+  <FaqComponent data={livnotedata} parent={"livnote"} />
   <ScrollUpButton parent={"livnote"} />
 </Layout>

@@ -1,4 +1,4 @@
-const DATA = [
+const data = [
   {
     question: "Is Osvauld free to use? What's the licensing model?",
     answer:
@@ -86,4 +86,4 @@ const LIVNOTEDATA = [
 ];
 
 
-export { DATA, LIVNOTEDATA };
+export { data, livnotedata };
