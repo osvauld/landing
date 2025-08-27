@@ -85,6 +85,5 @@ const LIVNOTEDATA = [
   },
 ];
 
-export default DATA;
 
 export { DATA, LIVNOTEDATA };
