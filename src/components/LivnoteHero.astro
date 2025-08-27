@@ -92,25 +92,24 @@ import { Download } from "../assets/icons/Download";
   </div>
 </section>
 
-<script>
+<script defer>
   (function () {
     const platformToUrl = {
       mac: 'https://github.com/osvauld/osvauld/releases/download/alpha/osvauld_0.1.0_aarch64.dmg',
       linux: 'https://github.com/osvauld/osvauld/releases/download/alpha/osvauld_0.1.0_amd64.deb',
       fedora: 'https://github.com/osvauld/osvauld/releases/download/alpha/osvauld-0.1.0-1.x86_64.rpm',
       windows: 'https://github.com/osvauld/osvauld/releases/download/alpha/osvauld_0.1.0_x64-setup.exe',
-    } as const;
+    };
 
     const platformToLabel = {
       mac: 'Mac (Apple Silicon)',
       linux: 'Linux (Debian)',
       fedora: 'Linux (Fedora)',
       windows: 'Windows',
-    } as const;
+    };
 
-    type SupportedPlatform = keyof typeof platformToUrl;
 
-    function detectPlatform(): SupportedPlatform | 'unknown' {
+    function detectPlatform(){
       const ua = navigator.userAgent.toLowerCase();
       if (ua.includes('mac')) return 'mac';
       if (ua.includes('windows')) return 'windows';
@@ -118,7 +117,7 @@ import { Download } from "../assets/icons/Download";
       return 'unknown';
     }
 
-    function startDownload(platform: SupportedPlatform) {
+    function startDownload(platform) {
       const url = platformToUrl[platform];
       if (!url) return;
       const a = document.createElement('a');
@@ -138,7 +137,7 @@ import { Download } from "../assets/icons/Download";
 
       const platform = detectPlatform();
       if (platform !== 'unknown') {
-        platformEl.textContent = `for ${platformToLabel[platform as SupportedPlatform]}`;
+        platformEl.textContent = `for ${platformToLabel[platform]}`;
       }
 
       function openDropdown() {
@@ -151,26 +150,26 @@ import { Download } from "../assets/icons/Download";
       }
 
       btn.addEventListener('click', () => {
-        if (platform !== 'unknown' && platformToUrl[platform as SupportedPlatform]) {
-          startDownload(platform as SupportedPlatform);
+        if (platform !== 'unknown' && platformToUrl[platform]) {
+          startDownload(platform);
         } else {
           openDropdown();
         }
       });
       backdrop.addEventListener('click', closeDropdown);
       dropdown.addEventListener('click', (e) => {
-        const target = e.target as Element | null;
+        const target = e.target;
         if (!target) return;
         const trigger = target.closest('button[data-platform]');
         if (!trigger) return;
-        const selected = trigger.getAttribute('data-platform') as SupportedPlatform | null;
+        const selected = trigger.getAttribute('data-platform');
         if (selected) startDownload(selected);
         closeDropdown();
       });
     }
 
     if ('requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(enhance);
+      (window).requestIdleCallback(enhance);
     } else {
       setTimeout(enhance, 0);
     }

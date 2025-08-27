@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { LivnoteData } from "../components/additional/Data";
-import { ScrollUpButton } from "../components/ScrollUpButton";
 import LivnoteHero from "../components/LivnoteHero.astro";
-import { FaqComponent } from "../components/additional/FaqComponent";
-import { LivnoteFeatures } from "../components/LivnoteFeatures";
-import { LivnotePhilosophy } from "../components/LivnotePhilosophy";
+
+const FaqComponent = (await import("../components/additional/FaqComponent")).FaqComponent;
+const LivnoteFeatures = (await import("../components/LivnoteFeatures")).LivnoteFeatures;
+const LivnotePhilosophy = (await import("../components/LivnotePhilosophy")).LivnotePhilosophy;
+const ScrollUpButton = (await import("../components/ScrollUpButton")).ScrollUpButton;
 ---
 
 <Layout title="Livnote" description="Livnote is a collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design." >
