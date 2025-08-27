@@ -1,6 +1,5 @@
 ---
 import livnote from "../assets/images/livnote.webp";
-import livnotethumb from "../assets/images/livnotethumb.png";
 import { Image } from "astro:assets";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
@@ -186,20 +185,4 @@ import { Download } from "../assets/icons/Download";
   })();
 </script>
 
-<script>
-  (function () {
-    const full = document.getElementById('hero-full-image') as HTMLImageElement | null;
-    const placeholder = document.getElementById('hero-placeholder-image');
-    if (!full || !placeholder) return;
-    if (full.complete) {
-      full.classList.remove('opacity-0');
-      placeholder.style.opacity = '0';
-      return;
-    }
-    full.addEventListener('load', () => {
-      full.classList.remove('opacity-0');
-      placeholder.style.opacity = '0';
-    }, { once: true });
-  })();
-</script>
 
