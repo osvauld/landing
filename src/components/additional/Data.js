@@ -52,7 +52,7 @@ const data = [
 ];
 
 
-const LIVNOTEDATA = [
+const livnotedata = [
   {
     question: "How does LivNote work without servers?",
     answer:
