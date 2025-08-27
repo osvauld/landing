@@ -1,4 +1,3 @@
-import React from "react";
 export const CloseIcon = () => (
   <svg
     width="18"

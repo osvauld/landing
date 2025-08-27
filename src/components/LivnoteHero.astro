@@ -1,5 +1,6 @@
 ---
 import livnote from "../assets/images/livnote.webp";
+import livnotethumb from "../assets/images/livnotethumb.png";
 import { Image } from "astro:assets";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
@@ -7,7 +8,7 @@ import { Download } from "../assets/icons/Download";
 ---
 
 <section
-  class="pt-10 lg:pt-16 px-2 flex flex-col justify-start items-center bg-livnoteBg overflow-x-hidden "
+  class="pt-10 lg:pt-16 px-2 pr-1 flex flex-col justify-start items-center bg-livnoteBg overflow-x-hidden "
   id="home"
 >
   <div
@@ -74,13 +75,22 @@ import { Download } from "../assets/icons/Download";
       <div id="download-backdrop" class="hidden fixed inset-0 z-40"></div>
     </div>
 
-    <div class="flex justify-center items-center mt-12 border-[10px] border-calBorder rounded-xl overflow-hidden">
+    <div class="flex justify-center items-center mt-12 border-[10px] border-calBorder rounded-xl overflow-hidden relative">
+      <!-- <img
+        id="hero-placeholder-image"
+        src={livnotethumb.src}
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 w-full h-full object-cover blur-xl scale-105 transition-opacity duration-500"
+        next opacity-0 transition-opacity duration-500
+      /> -->
       <Image
+        id="hero-full-image"
         src={livnote}
         alt="dashboard of livnote"
         width={1200}
         height={800}
-        class="z-10 w-full h-auto object-cover"
+        class="z-10 w-full h-auto object-cover "
         loading="eager"
         decoding="async"
         fetchpriority="high"
@@ -173,6 +183,23 @@ import { Download } from "../assets/icons/Download";
     } else {
       setTimeout(enhance, 0);
     }
+  })();
+</script>
+
+<script>
+  (function () {
+    const full = document.getElementById('hero-full-image') as HTMLImageElement | null;
+    const placeholder = document.getElementById('hero-placeholder-image');
+    if (!full || !placeholder) return;
+    if (full.complete) {
+      full.classList.remove('opacity-0');
+      placeholder.style.opacity = '0';
+      return;
+    }
+    full.addEventListener('load', () => {
+      full.classList.remove('opacity-0');
+      placeholder.style.opacity = '0';
+    }, { once: true });
   })();
 </script>
 

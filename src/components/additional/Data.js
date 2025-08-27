@@ -1,4 +1,4 @@
-const Data = [
+const DATA = [
   {
     question: "Is Osvauld free to use? What's the licensing model?",
     answer:
@@ -52,7 +52,7 @@ const Data = [
 ];
 
 
-const LivnoteData = [
+const LIVNOTEDATA = [
   {
     question: "How does LivNote work without servers?",
     answer:
@@ -85,6 +85,6 @@ const LivnoteData = [
   },
 ];
 
-export default Data;
+export default DATA;
 
-export { Data, LivnoteData };
+export { DATA, LIVNOTEDATA };

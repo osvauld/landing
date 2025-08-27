@@ -1,0 +1,39 @@
+---
+import { ScrollUp } from "../assets/icons/ScrollUp";
+
+interface Props {
+  parent?: string;
+}
+
+const { parent } = Astro.props as Props;
+---
+
+<button
+  id="scroll-up-btn"
+  class={`hidden w-12 h-12 fixed bottom-24 right-6 border rounded-lg cursor-pointer justify-center items-center transition z-[999] ${parent === "livnote" ? "bg-livnoteBg border-livnotePrimary hover:bg-livnotePrimary text-livnotePrimary hover:text-black hover:border-black" : "bg-dark4 border-blue1 hover:bg-blue1 "}`}
+  aria-label="Scroll to top"
+>
+  <ScrollUp color={parent === "livnote" ? "#8A86E5" : "#89B4FA"} />
+</button>
+
+<script>
+  const btn = document.getElementById('scroll-up-btn');
+  if (btn) {
+    const toggleVisible = () => {
+      const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrolled > 300) {
+        btn.classList.remove('hidden');
+        btn.classList.add('flex');
+      } else {
+        btn.classList.add('hidden');
+        btn.classList.remove('flex');
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisible, { passive: true });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>
+

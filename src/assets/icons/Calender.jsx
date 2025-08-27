@@ -1,4 +1,3 @@
-import React from "react";
 export const Calender = (props) => {
   return (
     <div className="bg-transparent flex justify-center items-center ">

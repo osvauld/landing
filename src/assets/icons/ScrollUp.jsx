@@ -1,4 +1,3 @@
-import React from "react";
 export const ScrollUp = (props) => {
   return (
     <svg
@@ -10,7 +9,7 @@ export const ScrollUp = (props) => {
     >
       <path
         d="M4.16732 12.5L10.0007 6.66667L15.834 12.5"
-        stroke={props.color}
+        stroke="currentColor"
         strokeWidth="1"
         strokeLinecap="round"
         strokeLinejoin="round"

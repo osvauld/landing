@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/Theme.css";
-import { Data } from "../components/additional/Data";
-import { FaqComponent } from "../components/additional/FaqComponent";
-import { ScrollUpButton } from "../components/ScrollUpButton";
+import { DATA } from "../components/additional/data";
+import FaqComponent from "../components/additional/FaqComponent.astro";
+import ScrollUpButton from "../components/ScrollUpButton.astro";
 ---
 
 <Layout title="FAQ's" description="Frequently Asked Questions about Osvauld">
-  <FaqComponent client:load data={Data} />
-  <ScrollUpButton client:load />
+  <FaqComponent data={DATA} />
+  <ScrollUpButton parent={"faq"} />
 </Layout>
