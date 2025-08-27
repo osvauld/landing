@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { Download } from "../assets/icons/Download";
+import FontPerformanceMonitor from "./FontPerformanceMonitor.jsx";
 ---
 
 <section
@@ -99,6 +100,9 @@ import { Download } from "../assets/icons/Download";
       />
     </div>
   </div>
+  
+  <!-- Font Performance Monitor (Development Only) -->
+  <FontPerformanceMonitor client:load />
 </section>
 
 <script defer>
