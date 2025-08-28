@@ -3,10 +3,10 @@ import { SEO } from "astro-seo";
 import osvauldThumbnail from "../assets/images/osvauldthumb.png";
 import livnoteThumbnail from "../assets/images/livnotethumb.png";
 
-import  Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro"
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
-
+import "../styles/fonts.css";
 
 interface Props {
   title: string;
@@ -29,38 +29,73 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%20.,:;!?()[]{}'%22-@#$%25&/"
-    rel="stylesheet"
-  />
 
-    <link rel="icon" href={isLivnote ? "/favicon-livnote.ico" : "/favicon.ico"} sizes="any">
-    
+    <link
+      rel="icon"
+      href={isLivnote ? "/favicon-livnote.ico" : "/favicon.ico"}
+      sizes="any"
+    />
+
     <!-- PNG favicons - deferred loading -->
-    <link rel="icon" type="image/png" sizes="16x16" href={isLivnote ? "/favicon-livnote-16x16.png" : "/favicon-16x16.png"}  rel="alternate icon" >
-    <link rel="icon" type="image/png" sizes="32x32" href={isLivnote ? "/favicon-livnote-32x32.png" : "/favicon-32x32.png"}  rel="alternate icon" >
-    
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href={isLivnote ? "/favicon-livnote-16x16.png" : "/favicon-16x16.png"}
+      rel="alternate icon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href={isLivnote ? "/favicon-livnote-32x32.png" : "/favicon-32x32.png"}
+      rel="alternate icon"
+    />
+
     <!-- Apple touch icon - important for mobile, keep immediate loading -->
-    <link rel="apple-touch-icon" href={isLivnote ? "/apple-touch-livnote-icon.png" : "/apple-touch-icon.png"}>
+    <link
+      rel="apple-touch-icon"
+      href={isLivnote
+        ? "/apple-touch-livnote-icon.png"
+        : "/apple-touch-icon.png"}
+    />
     <meta name="theme-color" content="#ffffff" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link
+      rel="preload"
+      href="/fonts/plus-jakarta-sans-500-subset.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/fonts/jetbrains-mono-subset.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/fonts/plus-jakarta-sans-regular-subset.woff2"
+      as="font"
+      type="font/woff2"
+    />
+
     <SEO
       title={title}
       description={description}
       openGraph={{
         basic: {
-          title: isLivnote ? "Livnote - Peer-to-peer Collaborative Document Editor" : "Osvauld - Rust Framework for Privacy-First P2P Applications",
+          title: isLivnote
+            ? "Livnote - Peer-to-peer Collaborative Document Editor"
+            : "Osvauld - Rust Framework for Privacy-First P2P Applications",
           type: "website",
           image: new URL(pageThumbnail.src, Astro.site).toString(),
         },
       }}
     />
     <meta name="generator" content={Astro.generator} />
-    
+
     <script type="application/ld+json" defer>
       {
         "@context": "https://schema.org",
@@ -199,7 +234,7 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
   </head>
 
   <div>
-    <Navbar isLivnote={isLivnote}/>
+    <Navbar isLivnote={isLivnote} />
     <slot />
     <Footer isLivnote={isLivnote} />
     <style is:global>
@@ -209,16 +244,6 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
         overflow-x: hidden;
         scroll-behavior: smooth;
         box-sizing: border-box;
-      }
-
-      @font-face {
-        font-family: "Inter";
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Plus Jakarta Sans";
-        font-display: swap;
       }
 
       body {
