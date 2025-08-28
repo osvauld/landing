@@ -34,15 +34,15 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
     <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap&text=%0A%20%25'()%2C-.0125%3F%40ABCDEFGHIJLMNOPQRSTUWYZabcdefghiklmnopqrstuvwxy%E2%80%94"
     rel="stylesheet"
   />
 
     <link rel="icon" href={isLivnote ? "/favicon-livnote.ico" : "/favicon.ico"} sizes="any">
     
     <!-- PNG favicons - deferred loading -->
-    <link rel="icon" type="image/png" sizes="16x16" href={isLivnote ? "/favicon-livnote-16x16.png" : "/favicon-16x16.png"} fetchpriority="low">
-    <link rel="icon" type="image/png" sizes="32x32" href={isLivnote ? "/favicon-livnote-32x32.png" : "/favicon-32x32.png"} fetchpriority="low">
+    <link rel="icon" type="image/png" sizes="16x16" href={isLivnote ? "/favicon-livnote-16x16.png" : "/favicon-16x16.png"}  rel="alternate icon" >
+    <link rel="icon" type="image/png" sizes="32x32" href={isLivnote ? "/favicon-livnote-32x32.png" : "/favicon-32x32.png"}  rel="alternate icon" >
     
     <!-- Apple touch icon - important for mobile, keep immediate loading -->
     <link rel="apple-touch-icon" href={isLivnote ? "/apple-touch-livnote-icon.png" : "/apple-touch-icon.png"}>
