@@ -8,9 +8,9 @@ const { isLivnote = false } = Astro.props;
 
 const navbarLinks = [
   {
-    label: "Livnote",
-    href: "/livnote",
-    ariaLabel: "Livnote",
+    label: isLivnote ? "Osvauld":"Livnote",
+    href: isLivnote ? "/":"/livnote",
+    ariaLabel: isLivnote ? "Osvauld":"Livnote",
   },
   {
     label: "FAQ",
