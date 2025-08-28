@@ -17,6 +17,7 @@ const mobileImage = await getImage({
 
 const desktopImagePath = "/assets/livnote.png";
 
+
 ---
 
 <section
@@ -58,7 +59,7 @@ const desktopImagePath = "/assets/livnote.png";
     <div class="flex items-center justify-start gap-4 md:flex-row text-sm flex-wrap pt-12 px-4 relative">
       <button
         id="download-btn"
-        class="px-8 py-4 flex items-center justify-center gap-6 min-w-[200px]  border-livnotePrimary border-2 rounded-lg text-xl hover:bg-dark1 transition-all duration-300 text-livnotePrimary"
+        class="px-8 py-4 flex items-center justify-center gap-6 min-w-[200px]  border-livnotePrimary border-2 rounded-lg hover:shadow-[4px_4px_0px_0px_#8A86E5] text-xl  transition-all duration-300 text-livnotePrimary"
         aria-label="Download for your platform"
         type="button"
       >
@@ -71,17 +72,17 @@ const desktopImagePath = "/assets/livnote.png";
 
       <div
         id="download-dropdown"
-        class="hidden absolute top-full left-0 mt-2 w-64 border z-50 bg-dark1 border-livnotePrimary rounded-lg"
+        class="hidden absolute top-full left-4 mt-2 w-60 border z-50 bg-livnoteBg border-livnotePrimary rounded-lg text-livnotePrimary"
         role="menu"
       >
         <div class="p-2">
-          <div class="text-sm px-3 py-2 border-b border-livnotePrimary my-1">
+          <div class="text-sm px-3 py-2 border-b border-livnotePrimary my-1 ">
             Choose your platform:
           </div>
-          <button data-platform="mac" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Mac (Apple Silicon)</button>
-          <button data-platform="linux" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Debian)</button>
-          <button data-platform="fedora" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Fedora)</button>
-          <button data-platform="windows" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Windows</button>
+          <button data-platform="mac" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Mac (Apple Silicon)</button>
+          <button data-platform="linux" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Debian)</button>
+          <button data-platform="fedora" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Fedora)</button>
+          <button data-platform="windows" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Windows</button>
         </div>
       </div>
       <div id="download-backdrop" class="hidden fixed inset-0 z-40"></div>
@@ -113,8 +114,12 @@ const desktopImagePath = "/assets/livnote.png";
   
 </section>
 
+
 <script defer>
   (function () {
+    // 1. A flag to track if a download is in a "cooldown" state.
+    let isDownloading = false;
+
     const platformToUrl = {
       mac: 'https://github.com/osvauld/osvauld/releases/download/alpha/osvauld_0.1.0_aarch64.dmg',
       linux: 'https://github.com/osvauld/osvauld/releases/download/alpha/osvauld_0.1.0_amd64.deb',
@@ -129,9 +134,14 @@ const desktopImagePath = "/assets/livnote.png";
       windows: 'Windows',
     };
 
-
     function detectPlatform(){
       const ua = navigator.userAgent.toLowerCase();
+
+      const isMobile = /android|iphone|ipad|mobile/.test(ua);
+      if (isMobile) {
+        return 'unsupported'; // Identifies mobile/tablet users
+      }
+
       if (ua.includes('mac')) return 'mac';
       if (ua.includes('windows')) return 'windows';
       if (ua.includes('linux')) return 'linux';
@@ -155,9 +165,13 @@ const desktopImagePath = "/assets/livnote.png";
       const platformEl = document.getElementById('download-platform');
       const backdrop = document.getElementById('download-backdrop');
       if (!btn || !dropdown || !platformEl || !backdrop) return;
+      
+      const downloadTextEl = btn.querySelector('.text-2xl');
+      const originalBtnText = downloadTextEl.textContent;
 
       const platform = detectPlatform();
-      if (platform !== 'unknown') {
+      const isDesktop = platform !== 'unknown' && platform !== 'unsupported';
+      if (isDesktop) {
         platformEl.textContent = `for ${platformToLabel[platform]}`;
       }
 
@@ -170,21 +184,43 @@ const desktopImagePath = "/assets/livnote.png";
         backdrop.classList.add('hidden');
       }
 
+      // 2. Create a handler that enforces the cooldown.
+      function handleDownload(platform) {
+        if (isDownloading) {
+          return; 
+        }
+
+        // A. Set the flag, disable the button, and provide user feedback.
+        isDownloading = true;
+        btn.disabled = true;
+        startDownload(platform);
+
+        // B. After 5 seconds, reset the flag and the button's appearance.
+        setTimeout(() => {
+          isDownloading = false;
+          btn.disabled = false;
+        }, 5000); // 5-second cooldown period
+      }
+
       btn.addEventListener('click', () => {
-        if (platform !== 'unknown' && platformToUrl[platform]) {
-          startDownload(platform);
+        if (isDesktop) {
+          // 3. Call the new cooldown handler.
+          handleDownload(platform);
         } else {
           openDropdown();
         }
       });
+
       backdrop.addEventListener('click', closeDropdown);
+      
       dropdown.addEventListener('click', (e) => {
-        const target = e.target;
-        if (!target) return;
-        const trigger = target.closest('button[data-platform]');
+        const trigger = e.target.closest('button[data-platform]');
         if (!trigger) return;
         const selected = trigger.getAttribute('data-platform');
-        if (selected) startDownload(selected);
+        if (selected) {
+          // 4. Call the new cooldown handler here too.
+          handleDownload(selected);
+        }
         closeDropdown();
       });
     }
@@ -196,5 +232,3 @@ const desktopImagePath = "/assets/livnote.png";
     }
   })();
 </script>
-
-
