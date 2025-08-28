@@ -53,7 +53,7 @@ const navbarLinks = [
       <div class="hidden lg:flex h-full gap-10 xl:mx-4 py-2 cursor-pointer">
         {navbarLinks.map(({ href, label, ariaLabel }) => (
           <a
-            class="text-white1 font-extralight font-Jakartha text-sm flex justify-center items-center hover:text-blue1 transition-colors"
+            class={`${isLivnote ? "text-faqAnswer" :"text-white1"} font-extralight font-Jakartha text-sm flex justify-center items-center hover:text-blue1 transition-colors`}
             href={href}
             rel="noopener noreferrer"
             aria-label={ariaLabel}
