@@ -1,5 +1,5 @@
 ---
-import { DiscordIcon } from "../assets/icons/DiscordIcon";
+import { Telegram } from "../assets/icons/Telegram";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { FooterOsvauld } from "../assets/logos/FooterOsvauld";
 
@@ -12,10 +12,6 @@ const { isLivnote = false } = Astro.props as Props;
 const heading = isLivnote
   ? "Notes that live with you."
   : "Protecting what matters the most.";
-const buttonText = isLivnote ? "Explore Livnote" : "Join Waitlist";
-const buttonLink = isLivnote
-  ? "https://github.com/osvauld/osvauld"
-  : "https://getwaitlist.com/waitlist/14960";
 ---
 
 <section id="page-footer" class={`w-full ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"} z-50`}>
@@ -23,17 +19,13 @@ const buttonLink = isLivnote
     <div class="flex h-full flex-col gap-32">
       <div class="flex flex-col gap-24">
         <div class="icons flex items-center flex-wrap gap-10 mx-auto">
-          <GithubIcon color={"black"} size={"45px"} />
-          <DiscordIcon color={"black"} width={"45px"} height={"45px"} />
+          <a href="https://github.com/osvauld/osvauld" target=”_blank”><GithubIcon color={"black"} size={"45px"} /></a>
+          <a href="https://t.me/+tjZLZK8JV8g0NTVl" target=”_blank”></a><Telegram color={"black"} size={"45px"} /></a>
         </div>
         <span class="mx-auto text-[54px] xl:text-[64px] tracking-[-2px] font-Jakartha font-semibold text-center">
           {heading}
         </span>
-        <div class="flex flex-col xs:flex-row justify-center items-center gap-4">
-          <button class={`px-6 py-3 ${isLivnote ? "bg-black text-livnotePrimary" : "text-blue1 bg-black"} rounded-lg text-xl font-semibold flex justify-center items-center gap-4 min-w-[270px]`}>
-            <a href={buttonLink}>{buttonText}</a>
-          </button>
-        </div>
+
         <div class="text-center flex flex-col gap-4">
           <div class="flex items-center gap-4">
             <a href="/terms" class="ml-auto tracking-tight" aria-label="Terms of Use">Terms of Use</a>

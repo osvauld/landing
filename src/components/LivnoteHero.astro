@@ -1,22 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import { getImage } from "astro:assets";
 
-import livnoteHeroSource from "../assets/images/livnote.png";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { BottomArrow } from "../assets/icons/BottomArrow";
 import { Download } from "../assets/icons/Download";
-
-
-const mobileImage = await getImage({
-  src: livnoteHeroSource,
-  width: 800,
-  format: "webp",
-  quality: 95,
-});
-
-const desktopImagePath = "/assets/livnote.png";
-
 
 ---
 
@@ -86,29 +72,6 @@ const desktopImagePath = "/assets/livnote.png";
         </div>
       </div>
       <div id="download-backdrop" class="hidden fixed inset-0 z-40"></div>
-    </div>
-
-    <div class="flex justify-center items-center mt-12 border-4 md:border-[10px] border-calBorder rounded-xl overflow-hidden relative aspect-[16/9]">
-      <picture>
-        <source
-          media="(min-width: 769px)"
-          srcset={desktopImagePath}
-        />
-      
-        <source srcset={mobileImage.src} />
-      
-        <img
-          id="hero-full-image"
-          src={mobileImage.src}
-          alt="Dashboard of the Livnote application"
-          width="1200"
-          height="800"
-          class="z-10 absolute w-full h-full top-0 left-0 object-cover"
-          loading="eager"
-          decoding="async"
-          fetchpriority="high"
-        />
-      </picture>
     </div>
   </div>
   

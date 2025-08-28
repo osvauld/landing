@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { livnotedata } from "../components/additional/Data";
 import LivnoteHero from "../components/LivnoteHero.astro";
-
+import LivnoteHeroImage from "../components/LivnoteHeroImage.astro";
 import ScrollUpButton from "../components/ScrollUpButton.astro";
 import FaqComponent from "../components/additional/FaqComponent.astro";
 import LivnoteFeatures from "../components/LivnoteFeatures.astro";
@@ -11,6 +11,7 @@ import LivnotePhilosophy from "../components/LivnotePhilosophy.astro";
 
 <Layout title="Livnote" description="Livnote is a collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design." >
   <LivnoteHero />
+  <LivnoteHeroImage/>
   <LivnoteFeatures />
   <LivnotePhilosophy />
   <FaqComponent data={livnotedata} parent={"livnote"} />

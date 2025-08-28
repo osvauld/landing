@@ -69,19 +69,19 @@ const livnotedata = [
       "Your documents are protected with end-to-end encryption both when sharing and when stored locally on your device. Even if someone intercepts the data, they can't read your documents without your encryption keys. No one except you and your chosen collaborators can access your content.",
   },
   {
-    question: "What happens if multiple people edit the same part of a document?",
-    answer:
-      "LivNote uses advanced conflict-free technology (Yjs CRDT) that automatically merges changes from multiple editors without creating conflicts. Everyone sees the same final result, and no one's work gets lost - even if you're editing the exact same sentence simultaneously.",
-  },
-  {
     question: "Do I need to create an account to use LivNote?",
     answer:
-      "No account needed! LivNote works immediately after installation. Your identity is managed locally on your device using cryptographic keys. You can start collaborating by simply sharing a cryptographic identification with others.",
+    "No account needed! LivNote works immediately after installation. Your identity is managed locally on your device using cryptographic keys. You can start collaborating by simply sharing a cryptographic identification with others.",
   },
   {
     question: "What file formats does LivNote support?",
     answer:
-      "LivNote is a Rich-Text Editor that supports markdown also for writing and formatting, giving you a clean, distraction-free writing experience. You can use all standard Markdown syntax for headers, lists, links, and formatting. The editor also supports rich text editing with a smooth, responsive interface powered by ProseMirror.",
+    "LivNote is a Rich-Text Editor that supports markdown also for writing and formatting, giving you a clean, distraction-free writing experience. You can use all standard Markdown syntax for headers, lists, links, and formatting. The editor also supports rich text editing with a smooth, responsive interface powered by ProseMirror.",
+  },
+  {
+    question: "What happens if multiple people edit the same part of a document?",
+    answer:
+      "LivNote uses advanced conflict-free technology (Yjs CRDT) that automatically merges changes from multiple editors without creating conflicts. Everyone sees the same final result, and no one's work gets lost - even if you're editing the exact same sentence simultaneously.",
   },
 ];
 
