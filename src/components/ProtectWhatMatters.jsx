@@ -73,7 +73,7 @@ export const ProtectWhatMatters = () => {
               <p className="pricing-content mb-4">
                 Your data is safeguarded with top-tier encryption, ensuring
                 everything stays secure and private. Imagine having a digital
-                vault that only you can open—we make sure your information
+                vault that only you can open-we make sure your information
                 remains protected and inaccessible to anyone else, including us.
               </p>
               <img
