@@ -1,5 +1,5 @@
 ---
-import conceptImage from "/src/assets/images/art.webp";
+import conceptImage from "/src/assets/images/art.png";
 import { Image } from "astro:assets";
 ---
 
@@ -8,6 +8,14 @@ import { Image } from "astro:assets";
     <Image
       alt="Concept art on digital sovereignty"
       src={conceptImage}
+
+      widths={[480, 800, 1200]}
+
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+
+      format="webp"
+      quality={40} 
+
       class="mx-auto"
       format="webp"
       loading="lazy"
