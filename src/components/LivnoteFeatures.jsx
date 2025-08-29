@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 
 const RichTextSvg = () => {
@@ -109,11 +108,7 @@ const FreeForeverSvg = () => {
 
 export const LivnoteFeatures = () => {
     return (
-        <motion.section
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.2, delay: 0.2 }}
+        <div
             className="w-full flex flex-col items-center mx-auto bg-livnoteBg px-4 pt-0 sm:pt-12 text-white "
         >
             <section className="py-20 px-5 max-w-6xl mx-auto  ">
@@ -124,7 +119,7 @@ export const LivnoteFeatures = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 bg-livnoteBg">
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <RichTextSvg/>
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Rich Text Editor</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Rich Text Editor</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono leading-relaxed relative z-10 ">
                             Write with style using our powerful editor that supports <span className="text-purple-300 font-medium">markdown syntax</span>, formatting, and seamless content creation.
                         </p>
@@ -133,7 +128,7 @@ export const LivnoteFeatures = () => {
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <CollaborationSvg/>
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Real-time Collaboration</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Real-time Collaboration</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Work together seamlessly with <span className="text-purple-300 font-medium">live editing</span> and instant commenting. See changes as they happen.
                         </p>
@@ -142,7 +137,7 @@ export const LivnoteFeatures = () => {
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <OfflineSvg/>
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Offline-First</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Offline-First</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Work anywhere, anytime. Your notes <span className="text-purple-300 font-medium">sync automatically</span> when you're back online.
                         </p>
@@ -151,7 +146,7 @@ export const LivnoteFeatures = () => {
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <PeerToPeerSvg/>
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Peer-to-Peer</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Peer-to-Peer</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Connect directly with collaborators. <span className="text-purple-300 font-medium">No central servers</span> means faster syncing and better privacy.
                         </p>
@@ -160,7 +155,7 @@ export const LivnoteFeatures = () => {
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <CryptographicIdentitySvg/>
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Cryptographic Identity</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Cryptographic Identity</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Secure identity management with <span className="text-purple-300 font-medium">cryptographic keys</span>. No passwords, no accounts.
                         </p>
@@ -169,7 +164,7 @@ export const LivnoteFeatures = () => {
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <EndToEndEncryptionSvg/>
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">End-to-End Encrypted</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">End-to-End Encrypted</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Military-grade encryption ensures only you and your collaborators can read your content. <span className="text-purple-300 font-medium">Zero-knowledge architecture</span>.
                         </p>
@@ -178,7 +173,7 @@ export const LivnoteFeatures = () => {
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <EncryptionRestSvg/>
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Encrypted at Rest</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Encrypted at Rest</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Your data is protected even when stored locally. <span className="text-purple-300 font-medium">Multi-layer encryption</span> keeps your notes safe.
                         </p>
@@ -187,7 +182,7 @@ export const LivnoteFeatures = () => {
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <NoCloudSvg/>
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">No Cloud Signups</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">No Cloud Signups</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Start using immediately. <span className="text-purple-300 font-medium">No registration required</span>, no email verification, no data collection.
                         </p>
@@ -196,7 +191,7 @@ export const LivnoteFeatures = () => {
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <LightWeightSvg/>
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Lightweight Desktop App</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Lightweight Desktop App</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             <span className="text-purple-300 font-medium">Extremely small binary</span> with native performance. Fast startup, minimal resource usage.
                         </p>
@@ -206,7 +201,7 @@ export const LivnoteFeatures = () => {
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <FreeForeverSvg />
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Absolutely Free</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Absolutely Free</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             No premium tiers, no hidden costs. <span className="text-purple-300 font-medium">100% free forever</span> with all features included.
                         </p>
@@ -215,13 +210,13 @@ export const LivnoteFeatures = () => {
 
                     <div className="feature-card-hover border border-white/10 rounded-2xl p-8  hover:border-white/20 hover:shadow-2xl relative overflow-hidden">
                         <OpenSourceSvg />
-                        <h3 className="text-xl font-semibold mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Open Source</h3>
+                        <h3 className="text-xl font-normal mb-3 mt-3 text-white relative z-10 font-JetBrainsMono">Open Source</h3>
                         <p className="text-gray-300 text-base font-JetBrainsMono  leading-relaxed relative z-10">
                             Complete transparency with <span className="text-purple-300 font-medium">open source code</span>. Audit, contribute, and trust in community-driven development.
                         </p>
                     </div>
                 </div>
             </section>
-        </motion.section>
+        </div>
     );
 };

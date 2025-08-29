@@ -1,0 +1,45 @@
+---
+import { Telegram } from "../assets/icons/Telegram";
+import { GithubIcon } from "../assets/icons/GithubIcon";
+import { FooterOsvauld } from "../assets/logos/FooterOsvauld";
+
+interface Props {
+  isLivnote?: boolean;
+}
+
+const { isLivnote = false } = Astro.props as Props;
+
+const heading = isLivnote
+  ? "Notes that live with you."
+  : "Protecting what matters the most.";
+---
+
+<section id="page-footer" class={`w-full ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"} z-50`}>
+  <footer class="relative mx-auto h-[56rem] px-[24px] pt-[32px]  max-w-[1312px]  min-h-[545px] lg:px-[60px] lg:pt-[60px]">
+    <div class="flex h-full flex-col gap-32">
+      <div class="flex flex-col gap-24">
+        <div class="icons flex items-center flex-wrap gap-10 mx-auto">
+          <a href="https://github.com/osvauld/osvauld" target=”_blank” aria-label="View our project on GitHub"><GithubIcon color={"black"} size={"45px"} /></a>
+          <a href="https://t.me/+tjZLZK8JV8g0NTVl" target=”_blank” aria-label="Join our community on Telegram"><Telegram color={"black"} size={"45px"} /></a>
+        </div>
+        <span class="mx-auto text-[54px] xl:text-[64px] tracking-[-2px] font-Jakartha font-semibold text-center">
+          {heading}
+        </span>
+
+        <div class="text-center flex flex-col gap-4">
+          <div class="flex items-center gap-4">
+            <a href="/terms" class="ml-auto tracking-tight" aria-label="Terms of Use">Terms of Use</a>
+            <a href="/privacy" class="mr-auto tracking-tight" aria-label="Privacy Policy">Privacy Policy</a>
+          </div>
+          <p class="font-medium">Osvauld Security Solutions Pvt Limited @ 2025</p>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-1/2 w-full -translate-x-1/2 px-[24px] lg:px-[60px]">
+        <div class="flex w-full justify-center">
+          <FooterOsvauld />
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+

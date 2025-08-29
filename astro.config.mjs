@@ -7,4 +7,5 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://osvauld.com",
   integrations: [react(), tailwind(), sitemap()],
+  image: { service: { entrypoint: "astro/assets/services/squoosh" } },
 });

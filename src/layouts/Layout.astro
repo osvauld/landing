@@ -3,9 +3,10 @@ import { SEO } from "astro-seo";
 import osvauldThumbnail from "../assets/images/osvauldthumb.png";
 import livnoteThumbnail from "../assets/images/livnotethumb.png";
 
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
-import { Footer } from "../components/FooterV2.jsx";
-import { Navbar } from "../components/Navbar.jsx";
+import "../styles/fonts.css";
 
 interface Props {
   title: string;
@@ -28,68 +29,78 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap"
-      rel="stylesheet"
+      rel="icon"
+      href={isLivnote ? "/favicon-livnote.ico" : "/favicon.ico"}
+      sizes="any"
     />
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-icon-180x180.png"
+
+    <!-- <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href={isLivnote ? "/favicon-livnote-16x16.png" : "/favicon-16x16.png"}
+      rel="alternate icon"
     />
     <link
       rel="icon"
       type="image/png"
-      sizes="192x192"
-      href="/android-icon-192x192.png"
+      sizes="32x32"
+      href={isLivnote ? "/favicon-livnote-32x32.png" : "/favicon-32x32.png"}
+      rel="alternate icon"
+    /> -->
+    <link
+      rel="apple-touch-icon"
+      href={isLivnote
+        ? "/apple-touch-livnote-icon.png"
+        : "/apple-touch-icon.png"}
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link
+      rel="preload"
+      href="/fonts/plus-jakarta-sans-500-subset.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/fonts/jetbrains-mono-regular-subset.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/fonts/plus-jakarta-sans-regular-subset.woff2"
+      as="font"
+      type="font/woff2"
+    />
+      <link
+      rel="preload"
+      href="/fonts/plus-jakarta-sans-200-subset.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    
+
     <SEO
       title={title}
       description={description}
       openGraph={{
         basic: {
-          title: isLivnote ? "Livnote - Peer-to-peer Collaborative Document Editor" : "Osvauld - Rust Framework for Privacy-First P2P Applications",
+          title: isLivnote
+            ? "Livnote - Peer-to-peer Collaborative Document Editor"
+            : "Osvauld - Rust Framework for Privacy-First P2P Applications",
           type: "website",
           image: new URL(pageThumbnail.src, Astro.site).toString(),
         },
       }}
     />
     <meta name="generator" content={Astro.generator} />
-    <script type="application/ld+json">
+
+    <script type="application/ld+json" defer>
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -114,6 +125,7 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
         "keywords": "peer-to-peer framework, Rust framework, privacy-first applications, offline-first, end-to-end encryption, CRDT, P2P networking, decentralized apps, open-source framework, MIT licensed, collaborative tools, secure messaging",
         "sameAs": [
           "https://github.com/osvauld",
+          "https://docs.osvauld.com",
           "https://in.linkedin.com/company/osvauld",
           "https://buymeacoffee.com/osvauld",
           "https://osvauld.com/#corporation"
@@ -227,19 +239,10 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
   </head>
 
   <div>
-    <Navbar client:load isLivnote={isLivnote}/>
+    <Navbar isLivnote={isLivnote} />
     <slot />
-    <Footer client:load isLivnote={isLivnote} />
+    <Footer isLivnote={isLivnote} />
     <style is:global>
-      @font-face {
-        font-family: "Inter";
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Plus Jakarta Sans";
-        font-display: swap;
-      }
       html {
         font-family: "Inter", "Plus Jakarta Sans";
         background-color: #010409;

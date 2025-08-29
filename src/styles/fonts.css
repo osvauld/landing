@@ -1,0 +1,92 @@
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-regular-subset.woff2') format('woff2'); 
+  }
+  
+@font-face {
+      font-display: swap; 
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      src: url('../fonts/inter-regular-subset.woff2') format('woff2'); 
+}
+  
+@font-face {
+      font-display: swap; 
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      src: url('../fonts/inter-600-subset.woff2') format('woff2'); 
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/jetbrains-mono-regular-subset.woff2') format('woff2'); 
+}
+@font-face {
+    font-display: swap;
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/jetbrains-mono-500-subset.woff2') format('woff2'); 
+  }
+
+
+
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/plus-jakarta-sans-200-subset.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/plus-jakarta-sans-regular-subset.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  
+  @font-face {
+    font-display: swap; 
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/plus-jakarta-sans-500-subset.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/plus-jakarta-sans-600-subset.woff2') format('woff2'); 
+  }
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/plus-jakarta-sans-700-subset.woff2') format('woff2'); 
+  }
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/plus-jakarta-sans-800-subset.woff2') format('woff2'); 
+  }

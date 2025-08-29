@@ -18,7 +18,7 @@ export const StoryComponent = () => {
         <div className="text-lg text-faqAnswer max-w-4xl mx-auto leading-relaxed">
             <div className="mb-12">
                 <p className="mb-6">
-                    Osvauld was founded on the principle that <span className="text-white font-medium">data privacy should be a fundamental right, not a luxury</span>. As experienced backend engineers, we recognized a critical gap in how organizations and individuals manage their most sensitive information. The catalyst came through industry conversations that revealed widespread frustration with existing credential management solutions—systems that were either too complex for practical deployment or too simplistic to meet enterprise security requirements.
+                    Osvauld was founded on the principle that <span className="text-white font-medium">data privacy should be a fundamental right, not a luxury</span>. As experienced backend engineers, we recognized a critical gap in how organizations and individuals manage their most sensitive information. The catalyst came through industry conversations that revealed widespread frustration with existing credential management solutions-systems that were either too complex for practical deployment or too simplistic to meet enterprise security requirements.
                 </p>
             </div>
             
@@ -51,7 +51,7 @@ export const StoryComponent = () => {
                     Today, Osvauld represents the next generation of privacy-first data management. We're building a comprehensive platform that enables secure data hosting and sharing, with user sovereignty as the cornerstone. Our roadmap includes expanding beyond credential management to support diverse applications and open-source integrations, all while maintaining our unwavering commitment to privacy and security.
                 </p>
                 <p className="mb-6">
-                    We're not merely iterating on existing password managers—we're establishing a new paradigm for personal data management where privacy isn't an afterthought but the architectural foundation. Our mission extends to creating an ecosystem where individuals regain control over their digital lives while maintaining the convenience and functionality they expect from modern applications.
+                    We're not merely iterating on existing password managers-we're establishing a new paradigm for personal data management where privacy isn't an afterthought but the architectural foundation. Our mission extends to creating an ecosystem where individuals regain control over their digital lives while maintaining the convenience and functionality they expect from modern applications.
                 </p>
             </div>
             

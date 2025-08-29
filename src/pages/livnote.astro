@@ -1,18 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import "../styles/Theme.css";
-import { LivnoteData } from "../components/additional/Data";
-import { ScrollUpButton } from "../components/ScrollUpButton";
-import { LivnoteHero } from "../components/LivnoteHero";
-import { FaqComponent } from "../components/additional/FaqComponent";
-import { LivnoteFeatures } from "../components/LivnoteFeatures";
-import { LivnotePhilosophy } from "../components/LivnotePhilosophy";
+import { livnotedata } from "../components/additional/Data";
+import LivnoteHero from "../components/LivnoteHero.astro";
+import LivnoteHeroImage from "../components/LivnoteHeroImage.astro";
+import ScrollUpButton from "../components/ScrollUpButton.astro";
+import FaqComponent from "../components/additional/FaqComponent.astro";
+import LivnoteFeatures from "../components/LivnoteFeatures.astro";
+import LivnotePhilosophy from "../components/LivnotePhilosophy.astro";
 ---
 
 <Layout title="Livnote" description="Livnote is a collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design." >
-  <LivnoteHero client:load />
-  <LivnoteFeatures client:load />
-  <LivnotePhilosophy client:load />
-  <FaqComponent client:load data={LivnoteData} parent={"livnote"} />
-  <ScrollUpButton client:load parent={"livnote"} />
+  <LivnoteHero />
+  <LivnoteHeroImage/>
+  <LivnoteFeatures />
+  <LivnotePhilosophy />
+  <FaqComponent data={livnotedata} parent={"livnote"} />
+  <ScrollUpButton parent={"livnote"} />
 </Layout>

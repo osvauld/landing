@@ -55,6 +55,9 @@ html {
   @apply text-white1 lg:text-base xl:text-xs text-base leading-6 mr-4 ml-4   2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium  xl:font-thin xl:tracking-wide hover:scale-110 transition duration-300 h-full pt-2 whitespace-nowrap;
 }
 
+.livnote-feature-card {
+  @apply border border-white/10 rounded-2xl p-8 hover:border-white/20 relative overflow-hidden transition-shadow duration-200 hover:shadow-[4px_4px_0px_0px_#8A86E5]
+}
 
 
 .pricing-content {
