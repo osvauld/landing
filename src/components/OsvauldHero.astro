@@ -3,7 +3,7 @@
 ---
 
 <section
-  class="pt-20 px-2 flex flex-col justify-start items-center bg-dark1 overflow-x-hidden min-h-screen"
+  class="pt-20 px-2 flex flex-col justify-start items-center bg-dark1 overflow-x-hidden min-h-screen md:min-h-[80vh] lg:min-h-[85vh]"
   id="home"
 >
   <div
@@ -16,10 +16,16 @@
       </h1>
     </div>
     
-      <img
-        src="/hero-osvauld-desktop.webp"
-        alt="Osvauld Desktop Interface"
-        class="w-auto h-auto object-contain opacity-80 flex justify-center items-center"
-        loading="eager"
-      />
+      <div class="relative inline-block">
+        <img
+          src="/hero-osvauld-desktop.webp"
+          alt="Osvauld Desktop Interface"
+          class="w-auto h-auto object-contain opacity-80 flex justify-center items-center"
+          loading="eager"
+        />
+        <div class="absolute top-0 left-0 w-1/4 sm:w-1/5 md:w-1/6 lg:w-1/8 h-full bg-gradient-to-r from-dark1 to-transparent pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-1/4 sm:w-1/5 md:w-1/6 lg:w-1/8 h-full bg-gradient-to-l from-dark1 to-transparent pointer-events-none"></div>
+        <div class="absolute top-0 left-0 w-full h-4 sm:h-5 md:h-6 bg-gradient-to-b from-dark1 to-transparent pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-full h-4 sm:h-5 md:h-6 bg-gradient-to-t from-dark1 to-transparent pointer-events-none"></div>
+      </div>
 </section>
