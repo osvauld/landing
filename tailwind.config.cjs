@@ -41,6 +41,7 @@ module.exports = {
         tabBg: "#292A36",
         livnoteBg: "#000",
         livnotePrimary: "#8A86E5",
+        customGray: "#B4B9BE",
       },
       fontFamily: {
         Inter: ["Inter", "Helvetica", "Arial", "sans-serif"],

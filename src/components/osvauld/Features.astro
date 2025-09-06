@@ -1,0 +1,116 @@
+---
+// Features.astro - Section showing features grid
+---
+
+<section
+  class="py-16 px-4 md:px-6 lg:px-8 flex flex-col justify-center items-center bg-dark1"
+  id="features"
+>
+  <div class="max-w-[1440px] w-full">
+    <h2 class="text-blue1 font-semibold font-HostGrotesk text-3xl md:text-4xl lg:text-5xl text-center mb-16">
+      Features
+    </h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div class="text-center">
+          <div class="mb-4 ">
+            <!-- P2P Icon -->
+            <div class="w-12 h-12 mx-auto bg-transparent text-white rounded-full flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.35714 32.9523V31.238H3.92857V32.9523C3.92857 39.5866 9.29429 44.9523 15.9286 44.9523H21.0714V41.5237H15.9286C11.1971 41.5237 7.35714 37.6837 7.35714 32.9523Z" fill="currentColor"/>
+                <path d="M38.2143 15.8094V17.5237H41.6429V15.8094C41.6429 9.17515 36.2771 3.80943 29.6429 3.80943H24.5V7.238H29.6429C34.3743 7.238 38.2143 11.078 38.2143 15.8094Z" fill="currentColor"/>
+                <path d="M15.9286 15.8094H5.64286C2.79714 15.8094 0.5 18.1066 0.5 20.9523V24.3809H3.92857V20.9523C3.92857 20.0094 4.7 19.238 5.64286 19.238H15.9286C16.8714 19.238 17.6429 20.0094 17.6429 20.9523V24.3809H21.0714V20.9523C21.0714 18.1066 18.7743 15.8094 15.9286 15.8094Z" fill="currentColor"/>
+                <path d="M10.7857 14.0951C14.5743 14.0951 17.6429 11.0266 17.6429 7.238C17.6429 3.44943 14.5743 0.380859 10.7857 0.380859C6.99714 0.380859 3.92857 3.44943 3.92857 7.238C3.92857 11.0266 6.99714 14.0951 10.7857 14.0951ZM10.7857 3.80943C12.6714 3.80943 14.2143 5.35229 14.2143 7.238C14.2143 9.12372 12.6714 10.6666 10.7857 10.6666C8.9 10.6666 7.35714 9.12372 7.35714 7.238C7.35714 5.35229 8.9 3.80943 10.7857 3.80943Z" fill="currentColor"/>
+                <path d="M43.3571 39.8094H33.0714C30.2257 39.8094 27.9286 42.1066 27.9286 44.9523V48.3809H31.3571V44.9523C31.3571 44.0094 32.1286 43.238 33.0714 43.238H43.3571C44.3 43.238 45.0714 44.0094 45.0714 44.9523V48.3809H48.5V44.9523C48.5 42.1066 46.2029 39.8094 43.3571 39.8094Z" fill="currentColor"/>
+                <path d="M31.3571 31.238C31.3571 35.0266 34.4257 38.0951 38.2143 38.0951C42.0029 38.0951 45.0714 35.0266 45.0714 31.238C45.0714 27.4494 42.0029 24.3809 38.2143 24.3809C34.4257 24.3809 31.3571 27.4494 31.3571 31.238ZM41.6429 31.238C41.6429 33.1237 40.1 34.6666 38.2143 34.6666C36.3286 34.6666 34.7857 33.1237 34.7857 31.238C34.7857 29.3523 36.3286 27.8094 38.2143 27.8094C40.1 27.8094 41.6429 29.3523 41.6429 31.238Z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+        <h3 class="text-white font-semibold text-lg mb-3 font-HostGrotesk">Peer-to-Peer by Nature</h3>
+        <p class="text-customGray text-sm leading-relaxed font-HostGrotesk">
+          Apps connect directly - no middlemen, no servers in the way.
+        </p>
+      </div>
+      
+        <div class="text-center">
+          <div class="mb-4">
+            <!-- Lock Icon -->
+            <div class="w-12 h-12 mx-auto  bg-transparent text-white  rounded-full flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.25 7.99512C14.3199 7.99518 16 9.67516 16 11.7451C16 15.3849 15.0451 18.9648 13.2354 22.0996L11.9346 21.3496C13.6145 18.4447 14.5 15.12 14.5 11.7451C14.5 10.5052 13.4899 9.49518 12.25 9.49512C11.01 9.49512 10 10.5051 10 11.7451C9.99999 13.275 9.7695 14.7847 9.30957 16.2246L7.87988 15.7695C8.28979 14.4797 8.5 13.1248 8.5 11.75C8.5 9.68 10.18 8 12.25 8V7.99512ZM12.999 11.75C12.999 15.3549 11.9246 18.8301 9.88965 21.79L8.6543 20.9404C10.5143 18.2304 11.499 15.05 11.499 11.75H12.999ZM18.9443 13.4004C18.7643 16.0152 18.1594 18.5649 17.1445 20.9697L15.7646 20.3848C16.7146 18.1298 17.2792 15.7449 17.4492 13.2949L18.9443 13.4004ZM8.7002 17.8047C8.27521 18.7546 7.74008 19.6649 7.12012 20.5049L5.91504 19.6152C6.46996 18.8603 6.94999 18.0453 7.33496 17.1904L8.7002 17.8047ZM12.249 5C15.969 5 18.999 8.03 18.999 11.75H17.499C17.499 8.855 15.144 6.5 12.249 6.5C9.35422 6.50023 6.99902 8.85514 6.99902 11.75C6.99902 14.1499 6.27971 16.455 4.9248 18.4199L3.68945 17.5654C4.87445 15.8504 5.49902 13.84 5.49902 11.75C5.49902 8.03014 8.52922 5.00023 12.249 5ZM12.249 2C17.624 2 21.999 6.375 21.999 11.75C21.999 13.205 21.8794 14.66 21.6494 16.085L20.1699 15.8447C20.3899 14.4998 20.499 13.1249 20.499 11.75C20.499 7.2 16.799 3.5 12.249 3.5C10.0442 3.50012 7.97395 4.35515 6.41406 5.91504L5.35449 4.85547C7.19438 3.01558 9.6442 2.00012 12.249 2ZM5.10449 7.625H5.09961C4.37466 8.87497 3.99512 10.3001 3.99512 11.75C3.99512 12.7999 3.81013 13.8249 3.4502 14.7998L2.04492 14.2803C2.34992 13.4703 2.5 12.62 2.5 11.75C2.5 10.04 2.94973 8.34998 3.80469 6.875L5.10449 7.625Z" fill="currentColor"/>
+                </svg>
+                
+            </div>
+          </div>
+        <h3 class="text-white font-semibold text-lg mb-3 font-HostGrotesk">Trusted Access</h3>
+        <p class="text-customGray text-sm leading-relaxed font-HostGrotesk">
+          Simple, secure access control powered by modern cryptographic tokens.
+        </p>
+      </div>
+      
+        <div class="text-center">
+          <div class="mb-4">
+            <!-- Lightning Icon -->
+            <div class="w-12 h-12 mx-auto  bg-transparent text-white  rounded-full flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.375 4H4.625L2 8.55V13H3V20H4.5V13H8.5V20H21V13H22V8.55L19.375 4ZM3.5 11.5V8.95L5.495 5.5H18.51L20.505 8.95V11.5H3.5ZM19.5 18.5H10V13H19.5V18.5Z" fill="currentColor"/>
+                </svg>
+                
+            </div>
+          </div>
+        <h3 class="text-white font-semibold text-lg mb-3 font-HostGrotesk">Offline-First</h3>
+        <p class="text-customGray text-sm leading-relaxed font-HostGrotesk">
+          Work without interruption. Everything syncs automatically when devices reconnect.
+        </p>
+      </div>
+      
+        <div class="text-center">
+          <div class="mb-4">
+            <!-- Key Icon -->
+            <div class="w-12 h-12 mx-auto  bg-transparent text-white  rounded-full flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.25 2C18.97 2 22 5.03 22 8.75C22 12.47 18.97 15.5 15.25 15.5C14.605 15.5 13.9648 15.4047 13.3398 15.2197L6.55957 22H2V17.4404L8.78027 10.6602C8.59527 10.0352 8.5 9.395 8.5 8.75C8.5 5.03 11.53 2 15.25 2ZM15.25 3.5C12.355 3.5 10 5.855 10 8.75C10 9.3699 10.1149 9.99482 10.3398 10.5947L10.5098 11.0498L3.5 18.0596V20.5H5.94043L7.44043 19L6.71973 18.2803L7.78027 17.2197L8.5 17.9404L9.94043 16.5L9.21973 15.7803L10.2803 14.7197L11 15.4404L12.9502 13.4902L13.4053 13.6602C14.0052 13.8851 14.6251 14 15.25 14C18.145 14 20.5 11.645 20.5 8.75C20.5 5.855 18.145 3.5 15.25 3.5ZM16.5 6C17.3284 6 18 6.67157 18 7.5C18 8.32843 17.3284 9 16.5 9C15.6716 9 15 8.32843 15 7.5C15 6.67157 15.6716 6 16.5 6Z" fill="currentColor"/>
+                </svg>
+                
+            </div>
+          </div>
+        <h3 class="text-white font-semibold text-lg mb-3 font-HostGrotesk">Self-soverign identity</h3>
+        <p class="text-customGray text-sm leading-relaxed font-HostGrotesk">
+          You own your identity - no one can take it away or lock you out.
+        </p>
+      </div>
+      
+        <div class="text-center">
+          <div class="mb-4">
+            <!-- Book Icon -->
+            <div class="w-12 h-12 mx-auto  bg-transparent text-white  rounded-full flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.4297 14.5C15.5745 14.5 17.4644 15.9498 18.0195 18.0195L19.0352 21.8047L17.585 22.1953L16.5703 18.4102C16.1903 16.9902 14.8997 16 13.4297 16H7.57031C6.10031 16 4.80969 16.9902 4.42969 18.4102L3.41504 22.1953L1.96484 21.8047L2.97949 18.0195C3.53461 15.9447 5.42043 14.5 7.57031 14.5H13.4297ZM20.0098 10.5146C20.6948 9.82971 21.8004 9.82967 22.4854 10.5146H22.4746C23.1596 11.1996 23.1596 12.3052 22.4746 12.9902L19.7402 15.7549L17.0049 12.9902C16.3199 12.3052 16.3199 11.1996 17.0049 10.5146C17.6898 9.8299 18.7945 9.83008 19.4795 10.5146C19.5895 10.6196 19.6701 10.7354 19.7451 10.8604C19.8201 10.7404 19.9048 10.6196 20.0098 10.5146ZM10.5 2C13.535 2 16 4.465 16 7.5C16 10.535 13.535 13 10.5 13C7.465 13 5 10.535 5 7.5C5 4.465 7.465 2 10.5 2ZM10.5 3.5C8.295 3.5 6.5 5.295 6.5 7.5C6.5 9.705 8.295 11.5 10.5 11.5C12.705 11.5 14.5 9.705 14.5 7.5C14.5 5.295 12.705 3.5 10.5 3.5Z" fill="currentColor"/>
+                </svg>
+                
+            </div>
+          </div>
+        <h3 class="text-white font-semibold text-lg mb-3 font-HostGrotesk">Open Source & MIT Licensed</h3>
+        <p class="text-customGray text-sm leading-relaxed font-HostGrotesk">
+          Transparent, community-driven, and free for everyone to use and build on.
+        </p>
+      </div>
+      
+        <div class="text-center">
+          <div class="mb-4">
+            <!-- Shield Icon -->
+            <div class="w-12 h-12 mx-auto  bg-transparent text-white  rounded-full flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.4248 14.08C18.9348 17.49 16.1298 20.115 12.7498 20.46V11H15.9998V9.5H12.7498V7.9C14.0398 7.565 14.9998 6.395 14.9998 5C14.9998 3.345 13.6548 2 11.9998 2C10.3448 2 8.99984 3.345 8.99984 5C8.99984 6.395 9.95984 7.565 11.2498 7.9V9.5H7.99984V11H11.2498V20.46C7.87484 20.115 5.06984 17.49 4.57484 14.08L3.08984 14.295C3.72484 18.69 7.54984 22 11.9948 22C16.4398 22 20.2698 18.69 20.8998 14.295L19.4148 14.08H19.4248ZM10.4998 5C10.4998 4.175 11.1748 3.5 11.9998 3.5C12.8248 3.5 13.4998 4.175 13.4998 5C13.4998 5.825 12.8248 6.5 11.9998 6.5C11.1748 6.5 10.4998 5.825 10.4998 5Z" fill="currentColor"/>
+                </svg>
+                
+            </div>
+          </div>
+        <h3 class="text-white font-semibold text-lg mb-3 font-HostGrotesk">Sovereign Node</h3>
+        <p class="text-customGray text-sm leading-relaxed font-HostGrotesk">
+          Run your own always-on node (even on a Raspberry Pi) and stay connected on your terms.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
