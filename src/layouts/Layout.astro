@@ -36,7 +36,7 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
       sizes="any"
     />
 
-    <!-- <link
+    <link
       rel="icon"
       type="image/png"
       sizes="16x16"
@@ -49,7 +49,7 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
       sizes="32x32"
       href={isLivnote ? "/favicon-livnote-32x32.png" : "/favicon-32x32.png"}
       rel="alternate icon"
-    /> -->
+    />
     <link
       rel="apple-touch-icon"
       href={isLivnote
@@ -59,44 +59,26 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
     <meta name="theme-color" content="#ffffff" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-
-    <link
-    rel="preload"
-    href="/fonts/host-grotesk-v5-latin-600.woff2"
-    as="font"
-    type="font/woff2"
-  />
-  <link
-  rel="preload"
-  href="/fonts/host-grotesk-v5-latin-regular.woff2"
-  as="font"
-  type="font/woff2"
-/>
     <link
       rel="preload"
-      href="/fonts/plus-jakarta-sans-500-subset.woff2"
+      href="/fonts/host-grotesk-v5-latin-600.woff2"
       as="font"
       type="font/woff2"
     />
     <link
       rel="preload"
-      href="/fonts/jetbrains-mono-regular-subset.woff2"
+      href="/fonts/host-grotesk-v5-latin-regular.woff2"
       as="font"
       type="font/woff2"
     />
-    <link
-      rel="preload"
-      href="/fonts/plus-jakarta-sans-regular-subset.woff2"
-      as="font"
-      type="font/woff2"
-    />
+    {isLivnote && (
       <link
-      rel="preload"
-      href="/fonts/plus-jakarta-sans-200-subset.woff2"
-      as="font"
-      type="font/woff2"
-    />
-    
+        rel="preload"
+        href="/fonts/jetbrains-mono-regular-subset.woff2"
+        as="font"
+        type="font/woff2"
+      />
+    )}
 
     <SEO
       title={title}
@@ -112,145 +94,144 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
       }}
     />
     <meta name="generator" content={Astro.generator} />
-    <theme-color content="#010409" />
+  </head><theme-color content="#010409"></theme-color>
 
-    <script type="application/ld+json" defer>
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://osvauld.com/#organization",
-        "url": "https://osvauld.com",
-        "name": "Osvauld",
-        "legalName": "OSVAULD SECURITY SOLUTIONS PRIVATE LIMITED",
-        "description": "Own Your Data, Leave No Footprint with Osvauld - a Rust framework for building peer-to-peer applications with privacy, security, and user control. Build collaborative tools, secure messaging, and privacy-first apps without servers or data collection.",
-        "slogan": "Own Your Data, Leave No Footprint",
-        "logo": "https://www.osvauld.com/assets/logo.png",
-        "address": {
-          "@type": "PostalAddress",
-          "name": "OSVAULD SECURITY SOLUTIONS (OPC) PRIVATE LIMITED",
-          "addressCountry": "India",
-          "addressLocality": "Idukki",
-          "addressRegion": "Kerala",
-          "streetAddress": "Puthumanakudiyil House, Painavu PO, Thannikandam",
-          "postalCode": "685602"
-        },
-        "email": "abe@osvauld.com",
-        "foundingDate": "2024-04-26",
-        "keywords": "peer-to-peer framework, Rust framework, privacy-first applications, offline-first, end-to-end encryption, CRDT, P2P networking, decentralized apps, open-source framework, MIT licensed, collaborative tools, secure messaging",
-        "sameAs": [
-          "https://github.com/osvauld",
-          "https://docs.osvauld.com",
-          "https://in.linkedin.com/company/osvauld",
-          "https://buymeacoffee.com/osvauld",
-          "https://osvauld.com/#corporation"
-        ],
-        "owns": [
-          {
-            "@context": "http://schema.org",
-            "@id": "https://osvauld.com/#framework",
-            "@type": "SoftwareApplication",
-            "name": "Osvauld Framework",
-            "applicationCategory": "DeveloperApplication",
-            "applicationSubCategory": "Software Development Framework",
-            "operatingSystem": "Windows, macOS, Linux, Android, iOS",
-            "description": "A Rust framework for building peer-to-peer applications with built-in privacy, security, and user control. Enables developers to create offline-first apps without servers or data collection.",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD",
-              "availability": "https://schema.org/InStock"
-            },
-            "softwareRequirements": "Rust programming language",
-            "storageRequirements": "Minimal local storage",
-            "featureList": "P2P Networking, End-to-End Encryption, CRDT Integration, Offline-First Architecture, QUIC Protocol, Self-Sovereign Identity, Cross-Platform Support, MIT Licensed, Open Source",
-            "license": "https://opensource.org/licenses/MIT",
-            "about": {
-              "description": "Osvauld Framework provides all the tools needed to build privacy-first, peer-to-peer applications in Rust, handling complex networking, encryption, and synchronization so developers can focus on their app's unique features."
-            },
-            "publisher": {
-              "@context": "http://schema.org/",
-              "@id": "https://osvauld.com/#corporation",
-              "@type": "Corporation",
-              "name": "Osvauld",
-              "url": "https://osvauld.com",
-              "logo": "https://www.osvauld.com/assets/logo.png"
-            }
+  <script type="application/ld+json" defer>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://osvauld.com/#organization",
+      "url": "https://osvauld.com",
+      "name": "Osvauld",
+      "legalName": "OSVAULD SECURITY SOLUTIONS PRIVATE LIMITED",
+      "description": "Own Your Data, Leave No Footprint with Osvauld - a Rust framework for building peer-to-peer applications with privacy, security, and user control. Build collaborative tools, secure messaging, and privacy-first apps without servers or data collection.",
+      "slogan": "Own Your Data, Leave No Footprint",
+      "logo": "https://www.osvauld.com/assets/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "name": "OSVAULD SECURITY SOLUTIONS (OPC) PRIVATE LIMITED",
+        "addressCountry": "India",
+        "addressLocality": "Idukki",
+        "addressRegion": "Kerala",
+        "streetAddress": "Puthumanakudiyil House, Painavu PO, Thannikandam",
+        "postalCode": "685602"
+      },
+      "email": "abe@osvauld.com",
+      "foundingDate": "2024-04-26",
+      "keywords": "peer-to-peer framework, Rust framework, privacy-first applications, offline-first, end-to-end encryption, CRDT, P2P networking, decentralized apps, open-source framework, MIT licensed, collaborative tools, secure messaging",
+      "sameAs": [
+        "https://github.com/osvauld",
+        "https://docs.osvauld.com",
+        "https://in.linkedin.com/company/osvauld",
+        "https://buymeacoffee.com/osvauld",
+        "https://osvauld.com/#corporation"
+      ],
+      "owns": [
+        {
+          "@context": "http://schema.org",
+          "@id": "https://osvauld.com/#framework",
+          "@type": "SoftwareApplication",
+          "name": "Osvauld Framework",
+          "applicationCategory": "DeveloperApplication",
+          "applicationSubCategory": "Software Development Framework",
+          "operatingSystem": "Windows, macOS, Linux, Android, iOS",
+          "description": "A Rust framework for building peer-to-peer applications with built-in privacy, security, and user control. Enables developers to create offline-first apps without servers or data collection.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
           },
-          {
-            "@context": "http://schema.org",
-            "@id": "https://osvauld.com/#livnote",
-            "@type": "SoftwareApplication",
-            "name": "LivNote",
-            "applicationCategory": "ProductivityApplication",
-            "applicationSubCategory": "Collaborative Document Editor",
-            "operatingSystem": "Windows, macOS, Linux, Android, iOS",
-            "description": "A collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design.",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD",
-              "availability": "https://schema.org/InStock"
-            },
-            "softwareRequirements": "Any modern operating system",
-            "storageRequirements": "Minimal local storage",
-            "featureList": "Real-Time Collaboration, End-to-End Encryption, Peer-to-Peer Connectivity, Offline-First Design, No Cloud Storage, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
-            "license": "https://opensource.org/licenses/MIT",
-            "about": {
-              "description": "LivNote demonstrates the power of Osvauld framework with real-time collaborative document editing that works entirely peer-to-peer without any servers or data collection."
-            },
-            "publisher": {
-              "@context": "http://schema.org/",
-              "@id": "https://osvauld.com/#corporation",
-              "@type": "Corporation",
-              "name": "Osvauld",
-              "url": "https://osvauld.com",
-              "logo": "https://www.osvauld.com/assets/logo.png"
-            }
+          "softwareRequirements": "Rust programming language",
+          "storageRequirements": "Minimal local storage",
+          "featureList": "P2P Networking, End-to-End Encryption, CRDT Integration, Offline-First Architecture, QUIC Protocol, Self-Sovereign Identity, Cross-Platform Support, MIT Licensed, Open Source",
+          "license": "https://opensource.org/licenses/MIT",
+          "about": {
+            "description": "Osvauld Framework provides all the tools needed to build privacy-first, peer-to-peer applications in Rust, handling complex networking, encryption, and synchronization so developers can focus on their app's unique features."
           },
-          {
-            "@context": "http://schema.org",
-            "@id": "https://osvauld.com/#passwordmanager",
-            "@type": "SoftwareApplication",
-            "name": "Osvauld Password Manager",
-            "applicationCategory": "UtilitiesApplication",
-            "applicationSubCategory": "Credential Management Software",
-            "operatingSystem": "Windows, macOS, Linux, Android, iOS",
-            "description": "A secure password manager built with Osvauld framework, featuring peer-to-peer synchronization and team sharing capabilities without relying on cloud services.",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD",
-              "availability": "https://schema.org/ComingSoon"
-            },
-            "softwareRequirements": "Any modern operating system",
-            "storageRequirements": "Minimal local storage",
-            "featureList": "End-to-End Encryption, Peer-to-Peer Sharing, Team Collaboration, Offline-First Design, No Cloud Storage, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
-            "license": "https://opensource.org/licenses/MIT",
-            "about": {
-              "description": "A password manager that showcases Osvauld framework's capabilities for secure credential management with team sharing, all without exposing data to third-party services."
-            },
-            "publisher": {
-              "@context": "http://schema.org/",
-              "@id": "https://osvauld.com/#corporation",
-              "@type": "Corporation",
-              "name": "Osvauld",
-              "url": "https://osvauld.com",
-              "logo": "https://www.osvauld.com/assets/logo.png"
-            }
+          "publisher": {
+            "@context": "http://schema.org/",
+            "@id": "https://osvauld.com/#corporation",
+            "@type": "Corporation",
+            "name": "Osvauld",
+            "url": "https://osvauld.com",
+            "logo": "https://www.osvauld.com/assets/logo.png"
           }
-        ],
-        "potentialAction": {
-          "@type": "DownloadAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://osvauld.com/download",
-            "description": "Download Osvauld framework and applications"
+        },
+        {
+          "@context": "http://schema.org",
+          "@id": "https://osvauld.com/#livnote",
+          "@type": "SoftwareApplication",
+          "name": "LivNote",
+          "applicationCategory": "ProductivityApplication",
+          "applicationSubCategory": "Collaborative Document Editor",
+          "operatingSystem": "Windows, macOS, Linux, Android, iOS",
+          "description": "A collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
           },
-          "description": "Get started with Osvauld framework for building privacy-first P2P applications"
+          "softwareRequirements": "Any modern operating system",
+          "storageRequirements": "Minimal local storage",
+          "featureList": "Real-Time Collaboration, End-to-End Encryption, Peer-to-Peer Connectivity, Offline-First Design, No Cloud Storage, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
+          "license": "https://opensource.org/licenses/MIT",
+          "about": {
+            "description": "LivNote demonstrates the power of Osvauld framework with real-time collaborative document editing that works entirely peer-to-peer without any servers or data collection."
+          },
+          "publisher": {
+            "@context": "http://schema.org/",
+            "@id": "https://osvauld.com/#corporation",
+            "@type": "Corporation",
+            "name": "Osvauld",
+            "url": "https://osvauld.com",
+            "logo": "https://www.osvauld.com/assets/logo.png"
+          }
+        },
+        {
+          "@context": "http://schema.org",
+          "@id": "https://osvauld.com/#passwordmanager",
+          "@type": "SoftwareApplication",
+          "name": "Osvauld Password Manager",
+          "applicationCategory": "UtilitiesApplication",
+          "applicationSubCategory": "Credential Management Software",
+          "operatingSystem": "Windows, macOS, Linux, Android, iOS",
+          "description": "A secure password manager built with Osvauld framework, featuring peer-to-peer synchronization and team sharing capabilities without relying on cloud services.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/ComingSoon"
+          },
+          "softwareRequirements": "Any modern operating system",
+          "storageRequirements": "Minimal local storage",
+          "featureList": "End-to-End Encryption, Peer-to-Peer Sharing, Team Collaboration, Offline-First Design, No Cloud Storage, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
+          "license": "https://opensource.org/licenses/MIT",
+          "about": {
+            "description": "A password manager that showcases Osvauld framework's capabilities for secure credential management with team sharing, all without exposing data to third-party services."
+          },
+          "publisher": {
+            "@context": "http://schema.org/",
+            "@id": "https://osvauld.com/#corporation",
+            "@type": "Corporation",
+            "name": "Osvauld",
+            "url": "https://osvauld.com",
+            "logo": "https://www.osvauld.com/assets/logo.png"
+          }
         }
+      ],
+      "potentialAction": {
+        "@type": "DownloadAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://osvauld.com/download",
+          "description": "Download Osvauld framework and applications"
+        },
+        "description": "Get started with Osvauld framework for building privacy-first P2P applications"
       }
-    </script>
-  </head>
+    }
+  </script>
 
   <div>
     <Navbar isLivnote={isLivnote} />

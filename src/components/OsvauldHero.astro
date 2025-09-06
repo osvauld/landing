@@ -3,29 +3,36 @@
 ---
 
 <section
-  class="pt-20 px-2 flex flex-col justify-start items-center bg-dark1 overflow-x-hidden min-h-screen md:min-h-[80vh] lg:min-h-[85vh]"
+  class="pt-36 px-1 md:pt-16 md:px-6 lg:pt-20 lg:px-8 flex flex-col justify-start items-center bg-dark1 overflow-x-hidden min-h-screen md:min-h-[80vh] lg:min-h-[85vh]"
   id="home"
 >
   <div
-    class="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden relative"
+    class="max-w-[1440px] flex justify-center items-center  w-full overflow-x-hidden overflow-y-hidden relative"
   >
       <h1
-        class="text-blue1 font-semibold font-HostGrotesk text-left text-5xl md:text-6xl lg:text-7xl xl:text-8xl py-10 px-4 max-w-4xl"
+        class="text-blue1 font-semibold font-HostGrotesk text-center mb-16 md:mb-0 text-4xl  sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl py-8 md:py-12 lg:py-16 px-4 md:px-6 lg:px-8 max-w-4xl"
       >
-        Personal Internet, <br /> Complete Control, <br/> Absolute Privacy
+        Personal Internet <br /> Complete Control <br/> Absolute Privacy
       </h1>
     </div>
     
-      <div class="relative inline-block">
-        <img
-          src="/hero-osvauld-desktop.webp"
-          alt="Osvauld Desktop Interface"
-          class="w-auto h-auto object-contain opacity-80 flex justify-center items-center"
-          loading="eager"
-        />
-        <div class="absolute top-0 left-0 w-1/4 sm:w-1/5 md:w-1/6 lg:w-1/8 h-full bg-gradient-to-r from-dark1 to-transparent pointer-events-none"></div>
-        <div class="absolute top-0 right-0 w-1/4 sm:w-1/5 md:w-1/6 lg:w-1/8 h-full bg-gradient-to-l from-dark1 to-transparent pointer-events-none"></div>
-        <div class="absolute top-0 left-0 w-full h-4 sm:h-5 md:h-6 bg-gradient-to-b from-dark1 to-transparent pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-full h-4 sm:h-5 md:h-6 bg-gradient-to-t from-dark1 to-transparent pointer-events-none"></div>
+      <div class="relative inline-block mt-8 md:mt-12 lg:mt-16 px-0 md:px-6 lg:px-8">
+        <picture>
+          <!-- Mobile and Tablet -->
+          <source media="(max-width: 1024px)" srcset="/hero-osvauld-mobile.webp">
+          <!-- Desktop -->
+          <source media="(min-width: 1025px)" srcset="/hero-osvauld-desktop.webp">
+          <!-- Fallback -->
+          <img
+            src="/hero-osvauld-mobile.webp"
+            alt="Osvauld Interface"
+            class="w-auto h-auto object-contain opacity-80 flex justify-center items-center"
+            loading="eager"
+          />
+        </picture>
+        <div class="absolute top-0 left-0 w-1/6 sm:w-1/5 md:w-1/6 lg:w-1/8 h-full bg-gradient-to-r from-dark1 to-transparent pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-1/6 sm:w-1/5 md:w-1/6 lg:w-1/8 h-full bg-gradient-to-l from-dark1 to-transparent pointer-events-none"></div>
+        <div class="absolute top-0 left-0 w-full h-2 sm:h-5 md:h-6 bg-gradient-to-b from-dark1 to-transparent pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-full h-2 sm:h-5 md:h-6 bg-gradient-to-t from-dark1 to-transparent pointer-events-none"></div>
       </div>
 </section>
