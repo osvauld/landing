@@ -79,7 +79,7 @@ const livnotedata = [
     "LivNote is a Rich-Text Editor that supports markdown also for writing and formatting, giving you a clean, distraction-free writing experience. You can use all standard Markdown syntax for headers, lists, links, and formatting. The editor also supports rich text editing with a smooth, responsive interface powered by ProseMirror.",
   },
   {
-    question: "What happens if multiple people edit the same part of a document?",
+    question: "What happens if multiple people edit the same text?",
     answer:
       "LivNote uses advanced conflict-free technology (Yjs CRDT) that automatically merges changes from multiple editors without creating conflicts. Everyone sees the same final result, and no one's work gets lost - even if you're editing the exact same sentence simultaneously.",
   },
