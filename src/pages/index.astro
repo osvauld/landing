@@ -1,21 +1,11 @@
 ---
 import "../styles/Theme.css";
 import Layout from "../layouts/Layout.astro";
-import { Hero } from "../components/Hero.jsx";
-import { OpenSourceV2 } from "../components/OpenSourceV2.jsx";
-import { ScrollUpButton } from "../components/ScrollUpButton";
-import { ProtectWhatMatters } from "../components/ProtectWhatMatters";
-import { DemoBanner } from "../components/DemoBanner";
-import { DemoButton } from "../components/DemoButton";
-import { AvailablePlatforms } from "../components/AvailablePlatforms";
+import OsvauldHero from "../components/OsvauldHero.astro";
+import ScrollUpButton from "../components/ScrollUpButton.astro";
 ---
 
 <Layout title="Osvauld">
-  <Hero client:load />
-  <ProtectWhatMatters client:visible />
-  <OpenSourceV2 client:visible />
-  <AvailablePlatforms client:visible />
-  <ScrollUpButton parent={"osvauld"}  />
-  <DemoBanner client:visible />
-  <DemoButton client:visible />
+  <OsvauldHero />
+  <ScrollUpButton parent={"osvauld"} />
 </Layout>

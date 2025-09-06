@@ -1,7 +1,7 @@
 ---
 import { Telegram } from "../assets/icons/Telegram";
 import { GithubIcon } from "../assets/icons/GithubIcon";
-import { FooterOsvauld } from "../assets/logos/FooterOsvauld";
+import { FooterOsvauld } from "../assets/logos/FooterOsvauld.jsx";
 
 interface Props {
   isLivnote?: boolean;
@@ -11,7 +11,7 @@ const { isLivnote = false } = Astro.props as Props;
 
 const heading = isLivnote
   ? "Notes that live with you."
-  : "Protecting what matters the most.";
+  : "Connect without compromise.";
 ---
 
 <section id="page-footer" class={`w-full ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"} z-50`}>

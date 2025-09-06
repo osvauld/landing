@@ -1,14 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { ScrollUpButton } from "../components/ScrollUpButton";
+import ScrollUpButton from "../components/ScrollUpButton.astro";
 import "../styles/Theme.css";
-import { UseOsvauld } from "../components/UseOsvauld";
-import { StoryComponent } from "../components/additional/StoryComponent";
+import StoryComponent from "../components/additional/StoryComponent.astro";
 ---
 
-<Layout title="story">
-  <!-- <Navbar client:load /> -->
-  <StoryComponent client:load />
-  <!-- <UseOsvauld client:load /> -->
-  <ScrollUpButton client:load />
+<Layout title="Our Story">
+  <StoryComponent />
+  <ScrollUpButton parent={"story"} />
 </Layout>

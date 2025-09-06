@@ -27,7 +27,7 @@ module.exports = {
         white2: "#F4F2F0",
         white3: "#E8EFF6",
         white4: "#A6B0BB",
-        blue1: "#89B4FA",
+        blue1: "#4A86FF",
         blue2: "#111926",
         faqAnswer: "#BFC0CC",
         faqBorder: "#2F303E",
