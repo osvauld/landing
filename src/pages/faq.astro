@@ -3,10 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/Theme.css";
 import { data } from "../components/additional/Data.js";
 import FaqComponent from "../components/additional/FaqComponent.astro";
-import ScrollUpButton from "../components/ScrollUpButton.astro";
 ---
 
 <Layout title="FAQ's" description="Frequently Asked Questions about Osvauld">
   <FaqComponent data={data} />
-  <ScrollUpButton parent={"faq"} />
 </Layout>
