@@ -16,7 +16,7 @@ module.exports = {
         customDarkBgTransparent: "rgb(31, 32, 35, 0.7)",
         customDarkBgTransparentDarker: "rgb(0,0,0,0.8)",
         customDarkBgTransparentLighter: "rgb(48, 49, 54, 0.7)",
-        dark1: "#010409",
+        dark1: "#010102",
         dark1Transparent: "#B3010409",
         dark2: "#0D1117",
         dark3: "#161B22",
@@ -46,6 +46,7 @@ module.exports = {
         Inter: ["Inter", "Helvetica", "Arial", "sans-serif"],
         Jakartha: ["Plus Jakarta Sans", "Arial", "sans-serif"],
         JetBrainsMono: ["JetBrains Mono", "monospace"],
+        HostGrotesk: ["Host Grotesk", "sans-serif","Helvetica", "Arial", ],
       },
       screens: {
         xs: "530px",
