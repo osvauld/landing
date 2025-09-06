@@ -43,35 +43,37 @@ import { Download } from "../../assets/icons/Download";
       <br class="hidden md:block" />  - without anything ever touching a cloud server. 
     </div>
     <div class="flex items-center justify-start gap-4 md:flex-row text-sm flex-wrap pt-12 mb-6 px-4 relative">
-      <button
-        id="download-btn"
-        class="px-8 py-4 flex items-center justify-center gap-6 min-w-[200px]  border-livnotePrimary border-2 rounded-lg hover:shadow-[4px_4px_0px_0px_#8A86E5] text-xl  transition-all duration-300 text-livnotePrimary"
-        aria-label="Download for your platform"
-        type="button"
-      >
-        <Download size={44} />
-        <div class="flex flex-col items-start">
-          <span class="text-2xl">Download</span>
-          <span id="download-platform" class="text-base mt-2 font-light whitespace-nowrap"></span>
-        </div>
-      </button>
-
-      <div
-        id="download-dropdown"
-        class="hidden absolute top-full left-4 mt-2 w-60 border z-50 bg-livnoteBg border-livnotePrimary rounded-lg text-livnotePrimary"
-        role="menu"
-      >
-        <div class="p-2">
-          <div class="text-sm px-3 py-2 border-b border-livnotePrimary my-1 ">
-            Choose your platform:
+      <div id="download-container" class="hidden lg:block">
+        <button
+          id="download-btn"
+          class="px-8 py-4 flex items-center justify-center gap-6 min-w-[200px]  border-livnotePrimary border-2 rounded-lg hover:shadow-[4px_4px_0px_0px_#8A86E5] text-xl  transition-all duration-300 text-livnotePrimary"
+          aria-label="Download for your platform"
+          type="button"
+        >
+          <Download size={44} />
+          <div class="flex flex-col items-start">
+            <span class="text-2xl">Download</span>
+            <span id="download-platform" class="text-base mt-2 font-light whitespace-nowrap"></span>
           </div>
-          <button data-platform="mac" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Mac (Apple Silicon)</button>
-          <button data-platform="linux" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Debian)</button>
-          <button data-platform="fedora" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Fedora)</button>
-          <button data-platform="windows" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Windows</button>
+        </button>
+
+        <div
+          id="download-dropdown"
+          class="hidden absolute top-full left-4 mt-2 w-60 border z-50 bg-livnoteBg border-livnotePrimary rounded-lg text-livnotePrimary"
+          role="menu"
+        >
+          <div class="p-2">
+            <div class="text-sm px-3 py-2 border-b border-livnotePrimary my-1 ">
+              Choose your platform:
+            </div>
+            <button data-platform="mac" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Mac (Apple Silicon)</button>
+            <button data-platform="linux" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Debian)</button>
+            <button data-platform="fedora" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Fedora)</button>
+            <button data-platform="windows" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Windows</button>
+          </div>
         </div>
+        <div id="download-backdrop" class="hidden fixed inset-0 z-40"></div>
       </div>
-      <div id="download-backdrop" class="hidden fixed inset-0 z-40"></div>
     </div>
   </div>
   
@@ -123,17 +125,28 @@ import { Download } from "../../assets/icons/Download";
     }
 
     function enhance() {
+      const downloadContainer = document.getElementById('download-container');
       const btn = document.getElementById('download-btn');
       const dropdown = document.getElementById('download-dropdown');
       const platformEl = document.getElementById('download-platform');
       const backdrop = document.getElementById('download-backdrop');
+      
+      // Hide download container on mobile/tablet devices
+      const platform = detectPlatform();
+      const isDesktop = platform !== 'unknown' && platform !== 'unsupported';
+      
+      if (!isDesktop) {
+        if (downloadContainer) {
+          downloadContainer.style.display = 'none';
+        }
+        return; // Exit early for non-desktop devices
+      }
+      
       if (!btn || !dropdown || !platformEl || !backdrop) return;
       
       const downloadTextEl = btn.querySelector('.text-2xl');
       const originalBtnText = downloadTextEl.textContent;
 
-      const platform = detectPlatform();
-      const isDesktop = platform !== 'unknown' && platform !== 'unsupported';
       if (isDesktop) {
         platformEl.textContent = `for ${platformToLabel[platform]}`;
       }
@@ -166,12 +179,8 @@ import { Download } from "../../assets/icons/Download";
       }
 
       btn.addEventListener('click', () => {
-        if (isDesktop) {
-          // 3. Call the new cooldown handler.
-          handleDownload(platform);
-        } else {
-          openDropdown();
-        }
+        // 3. Call the new cooldown handler.
+        handleDownload(platform);
       });
 
       backdrop.addEventListener('click', closeDropdown);

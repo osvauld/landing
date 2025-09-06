@@ -34,7 +34,7 @@ const navbarLinks = [
   <div class="w-full mx-auto px-4 flex items-center relative max-w-[1400px]">
     <div class="flex justify-start items-center grow basis-0">
       <a
-        href="/"
+        href={isLivnote ? "/livnote" : "/"}
         class="font-HostGrotesk font-semibold text-4xl pl-2 p-3 hover:opacity-80 transition-opacity"
       >
         {isLivnote ? (
@@ -92,7 +92,7 @@ const navbarLinks = [
   <!-- Mobile navbar - Pure CSS toggle with smooth animations -->
   <input type="checkbox" id="mobile-menu-toggle" class="hidden peer" />
   <div class={`${
-    isLivnote ? "bg-livnoteBg" : "bg-dark4"
+    isLivnote ? "bg-livnoteBg" : "bg-dark1"
   } mobile-menu flex flex-col mt-16 lg:hidden absolute top-4 left-0 z-50 w-full 
   items-center gap-10 pb-10 border-y border-solid border-customDarkBg3 pt-10 text-sm
    opacity-0 invisible peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:visible

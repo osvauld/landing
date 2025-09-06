@@ -1,20 +1,68 @@
+/* Responsive Typography Classes */
 .custom-block-title {
-  @apply text-white text-3xl font-bold tracking-normal;
+  @apply text-white font-bold tracking-normal;
+  @apply text-heading-mobile md:text-heading-tablet lg:text-heading-desktop xl:text-heading-xl;
 }
 .custom-block-big-title {
-  @apply text-white text-4xl xl:text-5xl font-bold tracking-normal;
+  @apply text-white font-bold tracking-normal;
+  @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
 }
 .custom-block-subtitle {
-  @apply text-xs text-customSecondary  tracking-wider font-bold uppercase;
+  @apply text-customSecondary tracking-wider font-bold uppercase;
+  @apply text-xs md:text-sm;
 }
 .custom-content-title {
-  @apply text-white text-lg font-bold tracking-normal;
+  @apply text-white font-bold tracking-normal;
+  @apply text-subheading-mobile md:text-subheading-tablet lg:text-subheading-desktop;
 }
 .custom-content-text-white {
-  @apply text-white text-base leading-relaxed;
+  @apply text-white leading-relaxed;
+  @apply text-body-mobile md:text-body-tablet lg:text-body-desktop;
 }
 .custom-content-text-gray {
-  @apply text-gray-400 text-base;
+  @apply text-gray-400;
+  @apply text-body-mobile md:text-body-tablet lg:text-body-desktop;
+}
+
+/* Hero Typography */
+.hero-title {
+  @apply font-semibold font-HostGrotesk text-center;
+  @apply text-hero-mobile sm:text-hero-tablet md:text-hero-desktop lg:text-hero-xl xl:text-hero-2xl;
+}
+
+/* Section Headings */
+.section-heading {
+  @apply font-semibold font-HostGrotesk;
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+}
+
+/* Feature Card Typography */
+.feature-title {
+  @apply text-white font-semibold font-HostGrotesk;
+  @apply text-lg md:text-xl lg:text-2xl;
+}
+
+.feature-description {
+  @apply text-customGray leading-relaxed font-HostGrotesk;
+  @apply text-base md:text-lg lg:text-xl;
+}
+
+/* Navigation Typography */
+.nav-brand {
+  @apply font-HostGrotesk font-semibold;
+  @apply text-2xl md:text-3xl lg:text-4xl;
+}
+
+.nav-link {
+  @apply font-HostGrotesk;
+  @apply text-sm md:text-base;
+}
+
+/* Footer Typography */
+.footer-heading {
+  @apply font-Jakartha font-semibold text-center;
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+  @apply tracking-[-2px];
 }
 
 /* Backgrounds */
