@@ -44,7 +44,7 @@
 
 .feature-description {
   @apply text-customGray leading-relaxed font-HostGrotesk;
-  @apply text-base md:text-lg lg:text-xl;
+  @apply text-xs md:text-lg lg:text-xl;
 }
 
 /* Navigation Typography */
