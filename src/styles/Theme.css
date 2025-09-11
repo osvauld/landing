@@ -13,7 +13,7 @@
 }
 .custom-content-title {
   @apply text-white font-bold tracking-normal;
-  @apply text-subheading-mobile md:text-subheading-tablet lg:text-subheading-desktop;
+  @apply text-xl md:text-subheading-tablet lg:text-subheading-desktop;
 }
 .custom-content-text-white {
   @apply text-white leading-relaxed;
@@ -21,7 +21,7 @@
 }
 .custom-content-text-gray {
   @apply text-gray-400;
-  @apply text-body-mobile md:text-body-tablet lg:text-body-desktop;
+  @apply text-base md:text-body-tablet lg:text-body-desktop;
 }
 
 /* Hero Typography */
@@ -33,7 +33,7 @@
 /* Section Headings */
 .section-heading {
   @apply font-semibold font-HostGrotesk;
-  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+  @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
 }
 
 /* Feature Card Typography */
