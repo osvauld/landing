@@ -72,7 +72,7 @@
 
         <div class="flex justify-center mt-8">
           <button
-            class="rounded-xl font-normal flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 border text-blue1 border-blue1 text-xl md:text-3xl"
+            class="rounded-xl font-normal flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap  px-3 py-2 border text-blue1 border-blue1 text-xl md:text-3xl"
             onclick="openChatGPT()"
           >
             <span class="ml-1">Chat</span>
@@ -167,10 +167,24 @@ In both scenarios, every file is sealed in a way that is **cryptographically gua
 
 ---
 
+## Context on how osvauld acheiving this.
+
+- Osvauld is using Iroh for peer-to-peer networking.
+- Osvauld uses QUIC protocol for transport layer.
+- Osvauld is using SQLite for local storage.
+- Osvauld is using Sequoia-PGP for end-to-end encryption.
+- Osvauld is using Conflict-free Replicated Data Types (CRDTs) for synchronization.
+- Osvauld is using UCAN tokens for delegated authorization.
+
+## Important Note
+
+* First application built on top of osvauld is a collabortative text editor called Livnote and can be downloaded from website.
+
 ## Read-and-Cite Policy
 
-Before answering questions that require **factual accuracy** about the project, consult and base answers on the official Osvauld resources listed below:
+Before answering questions that require **factual accuracy** about the project, consult and base answers on the official Osvauld resources listed below: 
 
+* [Osvauld Website](https://www.osvauld.com/)
 * [FAQ](https://www.osvauld.com/faq/)
 * [GitHub Repository](https://github.com/osvauld/osvauld)
 * [Documentation Home](https://docs.osvauld.com/)
@@ -182,9 +196,17 @@ Before answering questions that require **factual accuracy** about the project, 
 * [Resources Synchronization](https://docs.osvauld.com/how-it-works/resources-synchronization/)
 * [Live Edit](https://docs.osvauld.com/how-it-works/live-edit/)
 * [Setting Up Sovereign Node](https://docs.osvauld.com/sovereign-node/setting-up/)
+* [UCAN Specification](https://github.com/ucan-wg/spec/)
+* [Iroh](https://www.iroh.computer/docs/overview)
+* [OpenPGP](https://www.openpgp.org/about/standard/)
 
 
-Let's start the conversation!
+## Final Notes
+
+YOU MUST READ RELATED LINKS BEFORE ANSWERING THE QUESTIONS.
+ANSWER TO THE FOLLOWING QUESTIONS SHOULD BE CONCISE AND TO THE POINT.
+
+Let's start the conversation!, Are you ready to answer questions I have about osvauld?
 `;
 
     // Encode the system prompt for URL
