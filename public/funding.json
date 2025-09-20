@@ -6,7 +6,7 @@
         "name": "Osvauld Security Solutions Pvt Limited",
         "email": "abe@osvauld.com",
         "phone": "",
-        "description": "We're building the future of digital collaboration where privacy isn't a compromise. Osvauld Security Solutions develops open-source, peer-to-peer software that enables people to work together directly without surrendering control of their data to third parties. Our mission is to create tools that put users back in control of their digital lives through self-sovereign identity, end-to-end encryption, and offline-first architecture. Documentation available at docs.osvauld.com.",
+        "description": "We're building the future of internet where privacy isn't a compromise. Osvauld Security Solutions develops open-source, peer-to-peer software that enables people to work together directly without surrendering control of their data to third parties. Our mission is to create tools that put users back in control of their digital lives through self-sovereign identity, end-to-end encryption, and offline-first architecture.",
         "webpageUrl": {
             "url": "https://www.osvauld.com",
             "wellKnown": ""
@@ -14,9 +14,9 @@
     },
     "projects": [
         {
-            "guid": "osvauld-framework",
-            "name": "Osvauld Framework",
-            "description": "A Rust framework for building peer-to-peer applications with built-in privacy, security, and user control. Osvauld enables developers to create offline-first apps without servers or data collection. The framework handles complex networking, encryption, and synchronization using modern technologies like Iroh for P2P networking, QUIC protocol for transport, Sequoia-PGP for encryption, CRDTs for synchronization, and UCAN tokens for authorization. It's designed for trusted circles of users who want to collaborate directly without intermediaries.",
+            "guid": "osvauld",
+            "name": "Osvauld Suite of applications",
+            "description": "Osvauld tech will be used to build a category of apps that will have e2e p2p features by default. The suite enables developers to create offline-first apps without servers or data collection, using modern technologies like Iroh for P2P networking, QUIC protocol for transport, Sequoia-PGP for encryption, CRDTs for synchronization, and UCAN tokens for authorization. Users can run their own sovereign node (even on a Raspberry Pi) to stay connected on their terms. It's designed for trusted circles of users who want to collaborate directly without intermediaries.",
             "webpageUrl": {
                 "url": "https://www.osvauld.com",
                 "wellKnown": ""
@@ -25,19 +25,27 @@
                 "url": "https://github.com/osvauld/osvauld",
                 "wellKnown": ""
             },
+            "documentationUrl": {
+                "url": "https://www.docs.osvauld.com",
+                "wellKnown": ""
+            },
             "licenses": ["spdx:MIT"],
-            "tags": ["peer-to-peer", "privacy", "encryption", "rust", "framework", "offline-first", "self-sovereign-identity", "crdt", "quic", "developer-tools"]
+            "tags": ["peer-to-peer", "privacy", "encryption", "offline-first", "self-sovereign-identity", "sovereign-node", "crdt", "quic", "openpgp"]
         },
         {
             "guid": "livnote",
             "name": "Livnote",
-            "description": "A collaborative document editor built on the Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design. Livnote allows users to write together while staying private - no accounts needed, no servers storing your documents. It supports rich text editing with Markdown, works completely offline, and syncs automatically when devices reconnect. Your documents are protected with end-to-end encryption and stay under your complete control. The Livnote code resides within the main Osvauld repository.",
+            "description": "A collaborative document editor built using Osvauld tech, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design. Livnote allows users to write together while staying private - no accounts needed, no servers storing your documents. It supports rich text editing with Markdown, works completely offline, and syncs automatically when devices reconnect. Your documents are protected with end-to-end encryption and stay under your complete control. The Livnote code resides within the main Osvauld repository.",
             "webpageUrl": {
                 "url": "https://www.osvauld.com/livnote",
                 "wellKnown": ""
             },
             "repositoryUrl": {
                 "url": "https://github.com/osvauld/osvauld",
+                "wellKnown": ""
+            },
+            "documentationUrl": {
+                "url": "https://www.docs.osvauld.com",
                 "wellKnown": ""
             },
             "licenses": ["spdx:MIT"],
@@ -51,6 +59,12 @@
                 "type": "other",
                 "address": "abe@osvauld.com",
                 "description": "Please contact us via email to discuss funding opportunities, partnerships, or direct financial support for the project."
+            },
+            {
+                "guid": "github-sponsors",
+                "type": "github",
+                "address": "https://github.com/sponsors/osvauld",
+                "description": "Support Osvauld development through GitHub Sponsors. Choose from monthly or one-time contributions to help fund ongoing development of privacy-focused, peer-to-peer software."
             }
         ],
         "plans": [
@@ -58,11 +72,11 @@
                 "guid": "development-support",
                 "status": "active",
                 "name": "Development Support",
-                "description": "Support ongoing development of the Osvauld framework and applications. This helps cover developer time, infrastructure costs, and continued maintenance of the open-source projects.",
+                "description": "Support ongoing development of the Osvauld suite of applications. This helps cover developer time, infrastructure costs, and continued maintenance of the open-source projects.",
                 "amount": 0,
                 "currency": "USD",
                 "frequency": "monthly",
-                "channels": ["contact-email"]
+                "channels": ["contact-email", "github-sponsors"]
             },
             {
                 "guid": "one-time-donation",
@@ -72,7 +86,7 @@
                 "amount": 0,
                 "currency": "USD",
                 "frequency": "one-time",
-                "channels": ["contact-email"]
+                "channels": ["contact-email", "github-sponsors"]
             }
         ]
     }
