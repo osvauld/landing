@@ -24,7 +24,7 @@
             },
             "repositoryUrl": {
                 "url": "https://github.com/osvauld/osvauld",
-                "wellKnown": ""
+                "wellKnown": "https://www.osvauld.com/funding.json"
             },
             "documentationUrl": {
                 "url": "https://www.docs.osvauld.com",
@@ -43,7 +43,7 @@
             },
             "repositoryUrl": {
                 "url": "https://github.com/osvauld/osvauld",
-                "wellKnown": ""
+                "wellKnown": "https://www.osvauld.com/funding.json"
             },
             "documentationUrl": {
                 "url": "https://www.docs.osvauld.com",
@@ -104,6 +104,7 @@
                 "status": "active",
                 "name": "Hardware sponsorship",
                 "description": "Sponsor better laptops for the team",
+                "amount": 300000,
                 "currency": "INR",
                 "frequency": "one-time",
                 "channels": ["mybank", "github-sponsors"]
