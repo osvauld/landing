@@ -24,7 +24,7 @@
             },
             "repositoryUrl": {
                 "url": "https://github.com/osvauld/osvauld",
-                "wellKnown": "https://www.osvauld.com/funding.json"
+                "wellKnown": "https://github.com/osvauld/osvauld/.well-known/funding-manifest-urls"
             },
             "documentationUrl": {
                 "url": "https://www.docs.osvauld.com",
@@ -43,7 +43,7 @@
             },
             "repositoryUrl": {
                 "url": "https://github.com/osvauld/osvauld",
-                "wellKnown": "https://www.osvauld.com/funding.json"
+                "wellKnown": "https://github.com/osvauld/osvauld/.well-known/funding-manifest-urls"
             },
             "documentationUrl": {
                 "url": "https://www.docs.osvauld.com",
