@@ -63,7 +63,7 @@
             },
             {
                 "guid": "github-sponsors",
-                "type": "github",
+                "type": "payment-provider",
                 "address": "https://github.com/sponsors/osvauld",
                 "description": "Support Osvauld development through GitHub Sponsors. Choose from monthly or one-time contributions to help fund ongoing development of privacy-focused, peer-to-peer software."
             }
