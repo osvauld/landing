@@ -100,6 +100,16 @@
                 "channels": ["mybank", "github-sponsors"]
             },
             {
+                "guid": "ai-tools-sponsorship",
+                "status": "active",
+                "name": "AI tools sponsorship",
+                "description": "Sponsor subscriptions for Claude, Gemini, Chatgpt, Cursor and perplexity to help us build better and faster.",
+                "amount": 100,
+                "currency": "USD",
+                "frequency": "monthly",
+                "channels": ["mybank", "github-sponsors"]
+            },
+            {
                 "guid": "hardware-sponsorship",
                 "status": "active",
                 "name": "Hardware sponsorship",
