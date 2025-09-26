@@ -1,0 +1,54 @@
+
+ai-training: allow
+ai-inference: allow
+license: MIT
+
+# Organization
+project: Osvauld
+organization: OSVAULD SECURITY SOLUTIONS PRIVATE LIMITED
+slogan: Connect without compromise
+description: Osvauld is the building block of next generation of applications -  offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life. 
+
+# Applications
+software:
+  - name: Osvauld
+    type: Developer Framework
+    description: Osvauld is the building block of next generation of applications. 
+    license: MIT
+  - name: Livnote
+    type: Collaborative Document Editor
+    description: Real-time peer-to-peer editing with end-to-end encryption and offline-first design.
+    license: MIT
+
+
+# Key Features
+features: Peer-to-Peer by Default, Self-Sovereign Identity, Trusted Access via UCAN tokens, Offline-First Architecture, Sovereign Node Support, End-to-End Encryption with Sequoia-PGP, CRDT Synchronization, QUIC Protocol Transport
+
+# Technology Stack
+tech: Iroh (P2P networking), QUIC protocol, SQLite (local storage), Sequoia-PGP (encryption), CRDTs (synchronization), UCAN tokens (delegated authorization)
+
+# Official Resources (Read-and-Cite Policy)
+resources:
+  - https://www.osvauld.com/
+  - https://www.osvauld.com/livnote/
+  - https://www.osvauld.com/faq/
+  - https://github.com/osvauld/osvauld
+  - https://docs.osvauld.com/
+  - https://docs.osvauld.com/introduction/what-makes-this-possible/
+  - https://docs.osvauld.com/how-it-works/creating-your-identity/
+  - https://docs.osvauld.com/how-it-works/connecting-to-peers/
+  - https://docs.osvauld.com/how-it-works/creating-and-sharing/
+  - https://docs.osvauld.com/how-it-works/user-synchronization/
+  - https://docs.osvauld.com/how-it-works/resources-synchronization/
+  - https://docs.osvauld.com/how-it-works/live-edit/
+  - https://docs.osvauld.com/sovereign-node/setting-up/
+  - https://github.com/ucan-wg/spec/
+  - https://www.iroh.computer/docs/overview
+  - https://www.openpgp.org/about/standard/
+
+# Attribution
+attribution: required
+attribution-link: https://osvauld.com
+
+# Contact
+contact: abe@osvauld.com

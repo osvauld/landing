@@ -14,8 +14,8 @@ interface Props {
 }
 
 const {
-  title = "Osvauld - Privacy-First P2P Application Framework",
-  description = "Build peer-to-peer applications with Osvauld, a Rust framework for privacy-first, offline-capable apps. No servers, no data collection, complete user control. MIT licensed and open source.",
+  title = "Osvauld - The Building Block of Next Generation of Applications",
+  description = "Offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life. Designed for trusted circles of friends and colleagues who want private, reliable collaboration without depending on third-party services even for auth and sync.",
 } = Astro.props;
 
 const isLivnote = Astro.url.pathname.includes("/livnote");
@@ -32,30 +32,20 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
 
     <link
       rel="icon"
+      type="image/png"
+      href={isLivnote ? "/favicon-livnote-96x96.png" : "/favicon-96x96.png"}
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={isLivnote ? "/favicon-livnote.svg" : "/favicon.svg"}
+    />
+    <link
+      rel="shortcut icon"
       href={isLivnote ? "/favicon-livnote.ico" : "/favicon.ico"}
-      sizes="any"
     />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href={isLivnote ? "/favicon-livnote-16x16.png" : "/favicon-16x16.png"}
-      rel="alternate icon"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href={isLivnote ? "/favicon-livnote-32x32.png" : "/favicon-32x32.png"}
-      rel="alternate icon"
-    />
-    <link
-      rel="apple-touch-icon"
-      href={isLivnote
-        ? "/apple-touch-livnote-icon.png"
-        : "/apple-touch-icon.png"}
-    />
     <meta name="theme-color" content="#010102" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
@@ -71,14 +61,16 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
       as="font"
       type="font/woff2"
     />
-    {isLivnote && (
-      <link
-        rel="preload"
-        href="/fonts/jetbrains-mono-regular-subset.woff2"
-        as="font"
-        type="font/woff2"
-      />
-    )}
+    {
+      isLivnote && (
+        <link
+          rel="preload"
+          href="/fonts/jetbrains-mono-regular-subset.woff2"
+          as="font"
+          type="font/woff2"
+        />
+      )
+    }
 
     <SEO
       title={title}
@@ -87,7 +79,7 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
         basic: {
           title: isLivnote
             ? "Livnote - Peer-to-peer Collaborative Document Editor"
-            : "Osvauld - Rust Framework for Privacy-First P2P Applications",
+            : "Osvauld - The Building Block of Next Generation of Applications",
           type: "website",
           image: new URL(pageThumbnail.src, Astro.site).toString(),
         },
@@ -104,8 +96,8 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
       "url": "https://osvauld.com",
       "name": "Osvauld",
       "legalName": "OSVAULD SECURITY SOLUTIONS PRIVATE LIMITED",
-      "description": "Own Your Data, Leave No Footprint with Osvauld - a Rust framework for building peer-to-peer applications with privacy, security, and user control. Build collaborative tools, secure messaging, and privacy-first apps without servers or data collection.",
-      "slogan": "Own Your Data, Leave No Footprint",
+      "description": "Connect without compromise with Osvauld - the building block of next generation of applications - offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life.",
+      "slogan": "Connect without compromise",
       "logo": "https://www.osvauld.com/assets/logo.png",
       "address": {
         "@type": "PostalAddress",
@@ -118,7 +110,7 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
       },
       "email": "abe@osvauld.com",
       "foundingDate": "2024-04-26",
-      "keywords": "peer-to-peer framework, Rust framework, privacy-first applications, offline-first, end-to-end encryption, CRDT, P2P networking, decentralized apps, open-source framework, MIT licensed, collaborative tools, secure messaging",
+      "keywords": "peer-to-peer software suite, Rust framework, privacy-first applications, offline-first, end-to-end encryption, CRDT, P2P networking, decentralized apps, open-source software, MIT licensed, collaborative tools, secure messaging",
       "sameAs": [
         "https://github.com/osvauld",
         "https://docs.osvauld.com",
@@ -131,11 +123,11 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
           "@context": "http://schema.org",
           "@id": "https://osvauld.com/#framework",
           "@type": "SoftwareApplication",
-          "name": "Osvauld Framework",
+          "name": "Osvauld Suite",
           "applicationCategory": "DeveloperApplication",
           "applicationSubCategory": "Software Development Framework",
           "operatingSystem": "Windows, macOS, Linux, Android, iOS",
-          "description": "A Rust framework for building peer-to-peer applications with built-in privacy, security, and user control. Enables developers to create offline-first apps without servers or data collection.",
+          "description": "A software suite for building peer-to-peer applications with built-in privacy, security, and user control. Enables developers to create offline-first apps without servers or data collection.",
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -147,7 +139,7 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
           "featureList": "P2P Networking, End-to-End Encryption, CRDT Integration, Offline-First Architecture, QUIC Protocol, Self-Sovereign Identity, Cross-Platform Support, MIT Licensed, Open Source",
           "license": "https://opensource.org/licenses/MIT",
           "about": {
-            "description": "Osvauld Framework provides all the tools needed to build privacy-first, peer-to-peer applications in Rust, handling complex networking, encryption, and synchronization so developers can focus on their app's unique features."
+            "description": "Osvauld Suite provides all the tools needed to build privacy-first, peer-to-peer applications, handling complex networking, encryption, and synchronization so developers can focus on their app's unique features."
           },
           "publisher": {
             "@context": "http://schema.org/",
@@ -162,7 +154,7 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
           "@context": "http://schema.org",
           "@id": "https://osvauld.com/#livnote",
           "@type": "SoftwareApplication",
-          "name": "LivNote",
+          "name": "Livnote",
           "applicationCategory": "ProductivityApplication",
           "applicationSubCategory": "Collaborative Document Editor",
           "operatingSystem": "Windows, macOS, Linux, Android, iOS",
@@ -226,9 +218,9 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
         "target": {
           "@type": "EntryPoint",
           "urlTemplate": "https://osvauld.com/download",
-          "description": "Download Osvauld framework and applications"
+          "description": "Download Osvauld suite and applications"
         },
-        "description": "Get started with Osvauld framework for building privacy-first P2P applications"
+        "description": "Get started with Osvauld suite for building privacy-first P2P applications"
       }
     }
   </script>
