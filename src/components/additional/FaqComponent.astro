@@ -1,7 +1,7 @@
 ---
 import { Calender } from "../../assets/icons/Calender";
-import { DiscordIcon } from "../../assets/icons/DiscordIcon";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
+import { Telegram } from "../../assets/icons/Telegram";
 import questionLeft from "../../assets/images/questionLeft.webp";
 import { Image } from "astro:assets";
 
@@ -72,14 +72,14 @@ const { data = [], parent } = Astro.props as Props;
         <span class={`text-base font-extralight  ${parent === "livnote" ? "font-JetBrainsMono text-[#F1F7FE] opacity-70 " : "font-Jakartha"}`}>
           Contact us. We will be happy to help you! <br />
         </span>
-        <div class="flex justify-center gap-3 items-center text-sm mt-4 md:mt-0">
-          <button class={`rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold ${parent === "livnote" ? "bg-livnotePrimary text-black" : "bg-blue1 text-dark2"}`}>
+        <div class="flex justify-center gap-3 items-center text-sm font-normal mt-4 md:mt-0">
+          <button class={`rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap  ${parent === "livnote" ? "bg-livnotePrimary text-black" : "bg-blue1 text-dark2"}`}>
             <Calender color={"#0D1117"} />
             <a href="https://cal.com/abrahamgeorge/30min">Get a Demo</a>
           </button>
-          <button class={`rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap font-semibold ${parent === "livnote" ? "bg-livnotePrimary text-black" : "bg-blue1 text-dark2"}`}>
-            <DiscordIcon color={"#0D1117"} width={"20px"} height={"20px"} />
-            <a href="https://discord.com/invite/kV6gBeM6Fm">Chat with us</a>
+          <button class={`rounded-md px-5 py-2 gap-1 flex items-center flex-nowrap whitespace-nowrap ${parent === "livnote" ? "bg-livnotePrimary text-black" : "bg-blue1 text-dark2"}`}>
+            <Telegram color={"#0D1117"} size={"20px"} />
+            <a href="https://t.me/osvauld">Chat with us</a>
           </button>
         </div>
       </div>
