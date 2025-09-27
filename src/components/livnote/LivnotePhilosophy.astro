@@ -7,54 +7,28 @@ const mobileImagePath = "/assets/livnote-concept-art-mobile.webp";
   class="w-screen flex flex-col justify-start items-center mx-auto px-auto bg-livnoteBg px-4 pt-0 sm:pt-12 text-white"
 >
   <div class="w-full mx-auto">
-    <picture class="relative">
-      <source media="(min-width: 800px)" srcset={desktopImagePath} />
-
-      <source srcset={mobileImagePath} />
-
-      <img
-        src={mobileImagePath}
-        alt="Concept art on digital sovereignty"
-        width="1400"
-        height="800"
-        class="mx-auto"
-        loading="lazy"
-        decoding="async"
-        fetchpriority="auto"
-      />
-      <!-- Responsive shadows on all four sides -->
-      <!-- Left shadow -->
-      <div
-        class="absolute top-0 left-0 h-full
-            w-1/12 sm:w-1/8 md:w-1/6 lg:w-1/4
-            bg-gradient-to-r from-black to-transparent pointer-events-none"
-      >
-      </div>
-
-      <!-- Right shadow -->
-      <div
-        class="absolute top-0 right-0 h-full
-            w-1/12 sm:w-1/8 md:w-1/6 lg:w-1/4
-            bg-gradient-to-l from-black to-transparent pointer-events-none"
-      >
-      </div>
-
-      <!-- Top shadow -->
-      <div
-        class="absolute top-0 left-0 w-full
-            h-[4%] sm:h-[6%] md:h-[10%] lg:h-1/6
-            bg-gradient-to-b from-black to-transparent pointer-events-none"
-      >
-      </div>
-
-      <!-- Bottom shadow -->
-      <div
-        class="absolute bottom-0 left-0 w-full
-            h-[4%] sm:h-[6%] md:h-[10%] lg:h-1/6
-            bg-gradient-to-t from-black to-transparent pointer-events-none"
-      >
-      </div>
-    </picture>
+    <div class="relative">
+      <picture>
+        <source media="(min-width: 800px)" srcset={desktopImagePath} />
+        <source srcset={mobileImagePath} />
+        <img
+          src={mobileImagePath}
+          alt="Concept art on digital sovereignty"
+          width="1400"
+          height="800"
+          class="mx-auto"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="auto"
+        />
+      </picture>
+    
+      <!-- Shadows -->
+      <div class="absolute top-0 left-0 h-full w-1/6 bg-gradient-to-r from-black to-transparent pointer-events-none"></div>
+      <div class="absolute top-0 right-0 h-full w-1/6 bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
+      <div class="absolute top-0 left-0 w-full h-[10%] bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-full h-[10%] bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+    </div>
     <h2
     class="max-w-[1400px] mx-auto text-white font-JetBrainsMono  text-left text-2xl font-normal mt-28 mb-10"
   >

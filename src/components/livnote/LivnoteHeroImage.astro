@@ -1,19 +1,6 @@
 ---
-import { getImage } from "astro:assets";
 
-import livnoteHeroSource from "../../assets/images/livnote.png";
-
-
-const mobileImage = await getImage({
-  src: livnoteHeroSource,
-  width: 800,
-  format: "webp",
-  quality: 95,
-});
-
-const desktopImagePath = "/assets/livnote.webp";
-
-
+import livnoteHeroSource from "../../assets/images/livnote.webp";
 ---
 
 <section
@@ -23,18 +10,11 @@ const desktopImagePath = "/assets/livnote.webp";
   <div
     class="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden  pt-4 xll:px-12"
   >
-    <div class="flex justify-center items-center mt-12 border-4 md:border-[10px] border-calBorder rounded-xl overflow-hidden relative aspect-[16/9]">
-      <picture>
-        <source
-          media="(min-width: 769px)"
-          srcset={desktopImagePath}
-        />
-      
-        <source srcset={mobileImage.src} />
-      
+    <div class="flex justify-center items-center lg:mt-12  overflow-hidden relative aspect-[16/9]">
+
         <img
           id="hero-full-image"
-          src={mobileImage.src}
+          src={livnoteHeroSource.src}
           alt="Dashboard of the Livnote application"
           width="1200"
           height="800"
@@ -43,7 +23,6 @@ const desktopImagePath = "/assets/livnote.webp";
           decoding="async"
           fetchpriority="auto"
         />
-      </picture>
     </div>
   </div>
   
