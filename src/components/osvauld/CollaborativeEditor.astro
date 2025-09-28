@@ -2,6 +2,19 @@
 // CollaborativeEditor.astro - Section about collaborative text editor
 ---
 
+<style>
+  .heading-shadow {
+    text-shadow: 2px 2px 1px #000000;
+  }
+  
+  @media (min-width: 768px) {
+    .heading-shadow {
+      text-shadow: 6px 4px 3px #000000;
+    } 
+
+  }
+</style>
+
 
 <section
   class="py-16 lg:pt-32 pb-0 lg:pb-16 px-4 md:px-6 lg:px-8 flex flex-col justify-center items-center bg-dark1 relative overflow-hidden"
@@ -30,11 +43,11 @@
   </div>
 
   <div class="max-w-[1440px] w-full text-center relative z-10">
-    <h2 class="text-blue1 section-heading mb-3 md:mb-8" style="text-shadow: 6px 4px 3px #000000;">
+    <h2 class="text-blue1 section-heading mb-3 md:mb-8 heading-shadow">
       <span>Explore our collaborative text editor</span>
     </h2>
     
-    <p class="text-white  mb-3 md:mb-12 max-w-2xl mx-auto" style="text-shadow: 3px 2px 2px #000000;">
+    <p class="text-white lg:text-xl  mb-3 md:mb-12 max-w-2xl mx-auto" style="text-shadow: 3px 2px 2px #000000;">
       First of many tools for a personal internet.
     </p>
     
