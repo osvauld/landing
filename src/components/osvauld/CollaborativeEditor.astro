@@ -2,23 +2,57 @@
 // CollaborativeEditor.astro - Section about collaborative text editor
 ---
 
+<style>
+  .heading-shadow {
+    text-shadow: 2px 2px 1px #000000;
+  }
+  
+  @media (min-width: 768px) {
+    .heading-shadow {
+      text-shadow: 6px 4px 3px #000000;
+    } 
+
+  }
+</style>
+
 
 <section
   class="py-16 lg:pt-32 pb-0 lg:pb-16 px-4 md:px-6 lg:px-8 flex flex-col justify-center items-center bg-dark1 relative overflow-hidden"
   id="collaborative-editor"
 >
+  <!-- Background Image -->
+  <div class="absolute inset-0 w-full h-full max-w-[1440px] mx-auto">
+    <picture>
+      <!-- Mobile and Tablet -->
+      <source media="(max-width: 800px)" srcset="/cta-art-mobile.webp">
+      <!-- Desktop -->
+      <source media="(min-width: 801px)" srcset="/cta-art.webp">
+      <!-- Fallback -->
+      <img
+        src="/cta-art-mobile.webp"
+        alt="CTA Art Background"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </picture>
+    <!-- Gradient Overlays -->
+    <div class="absolute top-0 left-0 w-1/6 sm:w-1/5 md:w-1/6 lg:w-1/8 h-full bg-gradient-to-r from-dark1 to-transparent pointer-events-none"></div>
+    <div class="absolute top-0 right-0 w-1/6 sm:w-1/5 md:w-1/6 lg:w-1/8 h-full bg-gradient-to-l from-dark1 to-transparent pointer-events-none"></div>
+    <div class="absolute top-0 left-0 w-full h-2 sm:h-5 md:h-6 bg-gradient-to-b from-dark1 to-transparent pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-full h-2 sm:h-5 md:h-6 bg-gradient-to-t from-dark1 to-transparent pointer-events-none"></div>
+  </div>
 
   <div class="max-w-[1440px] w-full text-center relative z-10">
-    <h2 class="text-blue1 section-heading mb-3 md:mb-8">
+    <h2 class="text-blue1 section-heading mb-3 md:mb-8 heading-shadow">
       <span>Explore our collaborative text editor</span>
     </h2>
     
-    <p class="custom-content-text-gray  mb-3 md:mb-12 max-w-2xl mx-auto">
+    <p class="text-white lg:text-xl  mb-3 md:mb-12 max-w-2xl mx-auto" style="text-shadow: 3px 2px 2px #000000;">
       First of many tools for a personal internet.
     </p>
     
     <div class="mb-12 flex justify-center">
-      <a href="/livnote" class="text-blue1 flex items-center justify-center gap-2 group  px-6 py-3  hover:text-livnotePrimary transition-colors duration-200">
+      <a href="/livnote" class="rounded-xl font-normal flex justify-center items-center cursor-pointer bg-dark1/80 whitespace-nowrap  px-3 py-2 border text-blue1 border-blue1  text-md">
         Explore Livnote
         <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
