@@ -73,7 +73,7 @@
         <div class="flex justify-center mt-8">
           <button
             class="rounded-xl font-normal flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap  px-3 py-2 border text-blue1 border-blue1 text-xl md:text-3xl"
-            onclick="openChatGPT()"
+            onclick="trackDiscussClick(); openChatGPT()"
           >
             <span class="ml-1">Discuss with</span>
             <svg 
@@ -93,6 +93,17 @@
 </section>
 
 <script is:inline>
+  function trackDiscussClick() {
+    try {
+      if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+        window.goatcounter.count({
+          path: `${location.pathname}#discuss_with_ai_click`,
+          title: 'discuss_with_ai_click',
+          event: true,
+        });
+      }
+    } catch (_) { /* no-op */ }
+  }
   function openChatGPT() {
     // System prompt for the ChatGPT conversation
     const systemPrompt = `You are an AI assistant specialized in **Osvauld** — an offline-first, end-to-end encrypted, peer-to-peer application suite. Your role is to help users understand, compare, and evaluate Osvauld; to answer conceptual and practical questions; and to explain to them as clearly as possible.

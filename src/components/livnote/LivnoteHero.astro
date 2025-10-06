@@ -116,6 +116,18 @@ import { Download } from "../../assets/icons/Download";
     function startDownload(platform) {
       const url = platformToUrl[platform];
       if (!url) return;
+
+      // Track download event in GoatCounter (OS only)
+      try {
+        if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+          window.goatcounter.count({
+            path: `${location.pathname}#livnote_download_${platform}`,
+            title: 'livnote_download',
+            event: true,
+          });
+        }
+      } catch (_) { /* no-op */ }
+
       const a = document.createElement('a');
       a.href = url;
       a.download = url.split('/').pop() || '';
