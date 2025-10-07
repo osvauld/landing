@@ -117,9 +117,9 @@ import { Download } from "../../assets/icons/Download";
       const url = platformToUrl[platform];
       if (!url) return;
 
-      // Track download event in GoatCounter (OS only)
+      // Track download event in GoatCounter (OS only) - only in production
       try {
-        if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+        if (window.goatcounter && typeof window.goatcounter.count === 'function' && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
           window.goatcounter.count({
             path: `${location.pathname}#livnote_download_${platform}`,
             title: 'livnote_download',

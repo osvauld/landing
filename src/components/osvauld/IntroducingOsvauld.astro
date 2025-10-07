@@ -95,7 +95,7 @@
 <script is:inline>
   function trackDiscussClick() {
     try {
-      if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+      if (window.goatcounter && typeof window.goatcounter.count === 'function' && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
         window.goatcounter.count({
           path: `${location.pathname}#discuss_with_ai_click`,
           title: 'discuss_with_ai_click',
