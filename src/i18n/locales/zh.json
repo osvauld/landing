@@ -105,7 +105,8 @@
       "linux": "Linux (Debian)",
       "fedora": "Linux (Fedora)",
       "windows": "Windows"
-    }
+    },
+    "desktopOnly": "仅桌面版"
   },
   "livnoteFeatures": {
     "title": "功能",

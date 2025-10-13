@@ -71,6 +71,8 @@ export interface TranslationKeys {
       fedora: string;
       windows: string;
     };
+   
+    desktopOnly: string;
   };
   
   // Collaborative Editor

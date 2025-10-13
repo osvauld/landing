@@ -105,7 +105,8 @@
       "linux": "Linux (Debian)",
       "fedora": "Linux (Fedora)",
       "windows": "Windows"
-    }
+    },
+    "desktopOnly": "Bureau uniquement"
   },
   "livnoteFeatures": {
     "title": "Fonctionnalités",
