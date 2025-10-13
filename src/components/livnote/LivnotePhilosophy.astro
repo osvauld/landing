@@ -1,6 +1,13 @@
 ---
 const desktopImagePath = "/assets/livnote-concept-art.png";
 const mobileImagePath = "/assets/livnote-concept-art-mobile.webp";
+import type { TranslationKeys } from "../../i18n/ui";
+
+interface Props {
+  translations: TranslationKeys;
+}
+
+const { translations } = Astro.props;
 ---
 
 <section
@@ -32,25 +39,12 @@ const mobileImagePath = "/assets/livnote-concept-art-mobile.webp";
     <h2
     class="max-w-[1400px] mx-auto text-white font-JetBrainsMono  text-left text-2xl font-normal mt-28 mb-10"
   >
-    Why Livnote?
+    {translations.livnotePhilosophy.title}
   </h2>
   <p
     class="max-w-[1400px] mx-auto text-left text-base font-JetBrainsMono text-[#F1F7FE] opacity-70"
+    set:html={translations.livnotePhilosophy.description}
   >
-    We're building Livnote because we believe you shouldn't have to sacrifice
-    privacy to work together. <br /><br />
-    In a world where collaboration means uploading your documents to corporate servers,
-    we're creating an alternative where you can work directly with others while your
-    data stays where it belongs-on your devices. <br /><br />
-    Your notes remain encrypted and under your control. When you collaborate, you
-    connect directly with people you trust, not through some company's computers
-    that can see everything you write.<br /><br />
-    We don't store your account details. We don't have access to your collaborative
-    sessions. We don't even know what you're working on-and that's exactly how it
-    should be.<br /><br />
-    Livnote is our contribution to a movement of digital sovereignty, where people
-    work together freely without surrendering control of their shared creations.<br
-    /><br />
   </p>
   </div>
 

@@ -1,5 +1,12 @@
 ---
 // StructuralDependencies.astro - Section about structural dependencies of today's internet
+import type { TranslationKeys } from "../../i18n/ui";
+
+interface Props {
+  translations: TranslationKeys;
+}
+
+const { translations } = Astro.props;
 ---
 
 <section
@@ -9,13 +16,13 @@
   <div class="max-w-[1440px] w-full">
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="text-blue1 section-heading mb-12 md:mb-16">
-        Dependencies of the current ecosystem
+        {translations.structuralDependencies.title}
       </h2>
       
       <div class="space-y-8 text-white">
 
           <p class="custom-content-text-gray">
-            Your access and usage are tied to cloud providers who can lock you out at any time, while your digital identity depends on email, phone, or social logins that can also be revoked. Likewise, your data resides on their platforms, bound by shifting policies and legal requirements, leaving you with limited control and vulnerable to changes beyond your influence.
+            {translations.structuralDependencies.description}
           </p>
         
 

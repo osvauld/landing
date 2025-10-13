@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/Theme.css";
+import { getLocaleFromPath, getTranslations } from "../../i18n/utils";
+
+export async function getStaticPaths() {
+  return [
+    { params: { locale: "en" } },
+    { params: { locale: "de" } },
+    { params: { locale: "ru" } },
+    { params: { locale: "zh" } },
+    { params: { locale: "fr" } },
+    { params: { locale: "es" } },
+    { params: { locale: "ja" } },
+  ];
+}
+
+const locale = getLocaleFromPath(Astro.url.pathname);
+const translations = await getTranslations(locale);
+---
+
+<Layout title="Privacy Policy" locale={locale}>
+  <div class="max-w-4xl mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold mb-8">Privacy Policy</h1>
+    <div class="prose prose-lg">
+      <p>Privacy policy content will be translated and added here.</p>
+    </div>
+  </div>
+</Layout>

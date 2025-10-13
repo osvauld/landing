@@ -2,8 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/Theme.css";
 import StoryComponent from "../components/additional/StoryComponent.astro";
+import { getTranslations } from "../i18n/utils";
+
+const translations = await getTranslations("en");
 ---
 
-<Layout title="Our Story">
-  <StoryComponent />
+<Layout title={translations.meta.story.title} description={translations.meta.story.description} locale="en">
+  <StoryComponent translations={translations} />
 </Layout>

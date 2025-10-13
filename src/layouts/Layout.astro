@@ -7,25 +7,32 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
 import "../styles/fonts.css";
+import { getLocaleFromPath, getAvailableLocales, getLocalizedPath } from "../i18n/utils";
+import type { Locale } from "../i18n/ui";
 
 interface Props {
   title: string;
   description?: string;
+  locale?: Locale;
 }
 
 const {
   title = "Osvauld - The Building Block of Next Generation of Applications",
   description = "Offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life. Designed for trusted circles of friends and colleagues who want private, reliable collaboration without depending on third-party services even for auth and sync.",
+  locale = getLocaleFromPath(Astro.url.pathname),
 } = Astro.props;
 
 const isLivnote = Astro.url.pathname.includes("/livnote");
 
 // Choose the appropriate thumbnail based on the page
 const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
+
+// Get all available locales for hreflang
+const availableLocales = getAvailableLocales();
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -85,10 +92,98 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
         },
       }}
     />
+    
+    <!-- Hreflang alternate links -->
+    {availableLocales.map((altLocale) => (
+      <link 
+        rel="alternate" 
+        hreflang={altLocale} 
+        href={new URL(getLocalizedPath(Astro.url.pathname, altLocale), Astro.site).toString()} 
+      />
+    ))}
+    <link 
+      rel="alternate" 
+      hreflang="x-default" 
+      href={new URL(getLocalizedPath(Astro.url.pathname, 'en'), Astro.site).toString()} 
+    />
     <meta name="generator" content={Astro.generator} />
     {!import.meta.env.DEV && (
       <script data-goatcounter="https://osvauld.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     )}
+    
+    <!-- Analytics utility functions -->
+    <script>
+      // Type declarations for analytics
+      if (!window.analytics) {
+        window.analytics = {
+          trackEvent: function() {},
+          trackDownload: function() {},
+          trackInteraction: function() {},
+          trackLocaleChange: function() {}
+        };
+      }
+      if (!window.trackEvent) window.trackEvent = function() {};
+      if (!window.trackDownload) window.trackDownload = function() {};
+      if (!window.trackInteraction) window.trackInteraction = function() {};
+      if (!window.trackLocaleChange) window.trackLocaleChange = function() {};
+      
+      // Centralized analytics utility
+      window.analytics = {
+        trackEvent: function(eventName, properties = {}) {
+          if (import.meta.env.DEV) {
+            console.log(`[Analytics] Event "${eventName}" not tracked (development mode)`);
+            return;
+          }
+          
+          try {
+            if (!window.goatcounter || typeof window.goatcounter.count !== 'function') {
+              console.warn('[Analytics] GoatCounter not available');
+              return;
+            }
+            
+            const event = {
+              path: `${location.pathname}#${eventName}`,
+              title: eventName,
+              event: true,
+              ...properties
+            };
+            
+            window.goatcounter.count(event);
+            console.log(`[Analytics] Tracked event: ${eventName}`, event);
+          } catch (error) {
+            console.error(`[Analytics] Failed to track event "${eventName}":`, error);
+          }
+        },
+        
+        trackDownload: function(platform, product = 'osvauld') {
+          this.trackEvent(`${product}_download_${platform}`, {
+            platform,
+            product,
+            userAgent: navigator.userAgent
+          });
+        },
+        
+        trackInteraction: function(elementName, action = 'click') {
+          this.trackEvent(`${elementName}_${action}`, {
+            element: elementName,
+            action
+          });
+        },
+        
+        trackLocaleChange: function(fromLocale, toLocale) {
+          this.trackEvent('locale_change', {
+            from: fromLocale,
+            to: toLocale
+          });
+        }
+      };
+      
+      // Global convenience functions
+      window.trackEvent = window.analytics.trackEvent.bind(window.analytics);
+      window.trackDownload = window.analytics.trackDownload.bind(window.analytics);
+      window.trackInteraction = window.analytics.trackInteraction.bind(window.analytics);
+      window.trackLocaleChange = window.analytics.trackLocaleChange.bind(window.analytics);
+    </script>
   </head><theme-color content="#010409"></theme-color>
 
   <script type="application/ld+json" defer>
@@ -229,9 +324,9 @@ const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
   </script>
 
   <div>
-    <Navbar isLivnote={isLivnote} />
+    <Navbar isLivnote={isLivnote} locale={locale} />
     <slot />
-    <Footer isLivnote={isLivnote} />
+    <Footer isLivnote={isLivnote} locale={locale} />
     <style is:global>
       html {
         font-family: "Host Grotesk", "Inter", "Plus Jakarta Sans";

@@ -1,9 +1,16 @@
 ---
+import type { TranslationKeys } from "../../i18n/ui";
+
+export interface Props {
+  translations: TranslationKeys;
+}
 
 import { GithubIcon } from "../../assets/icons/GithubIcon";
 import { BottomArrow } from "../../assets/icons/BottomArrow";
 import { Download } from "../../assets/icons/Download";
+import { DownloadOptions } from "../../assets/icons/DownloadOptions";
 
+const { translations } = Astro.props;
 ---
 
 <section
@@ -11,7 +18,7 @@ import { Download } from "../../assets/icons/Download";
   id="home"
 >
   <div
-    class="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden  pt-24 xll:px-12"
+    class="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden   pt-24 xll:px-12"
   >
     <div class="text-livnotePrimary  text-xs sm:text-sm font-bold flex justify-start text-left px-4">
       <a
@@ -20,56 +27,69 @@ import { Download } from "../../assets/icons/Download";
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span class="whitespace-nowrap">We are open-source</span>
+        <span class="whitespace-nowrap">{translations.livnoteHero.openSource}</span>
         <span class="h-5 w-px bg-livnotePrimary mx-2"></span>
         <span class="flex text-white4 justify-center items-center whitespace-nowrap">
           <span class="mr-2 flex justify-center items-center">
             <GithubIcon color={"#A6B0BB"} size={18} />
           </span>
-          Star us on GitHub
+          {translations.livnoteHero.starOnGithub}
           <span class="transform -rotate-90 mt-1">
             <BottomArrow color={"#A6B0BB"} />
           </span>
         </span>
       </a>
     </div>
-    <h1 class=" text-white1 font-medium font-Jakartha text-left  text-5xl md:text-6xl lg:text-7xl xl:text-8xl  py-10 px-4">
-      <span class=" whitespace-normal lg:whitespace-nowrap text-livnotePrimary font-JetBrainsMono tracking-tighter">
-        Write together, <br /> stay private
-      </span>
-    </h1>
-    <div class="text-faqAnswer font-light text-base md:text-lg xl:text-xl pt-2 md:pt-12 tracking-wide max-w-[99vw] text-left font-JetBrainsMono px-4">
-      Livnote lets you create and edit notes with others. <br class="hidden md:block" />  live, offline-first, and end to end encrypted.
-      <br class="hidden md:block" />  - without anything ever touching a cloud server. 
-    </div>
-    <div class="flex items-center justify-start gap-4 md:flex-row text-sm flex-wrap pt-12 lg:mb-6 px-4 relative">
-      <div id="download-container" class="hidden lg:block">
-        <button
-          id="download-btn"
-          class="px-8 py-4 flex items-center justify-center gap-6 min-w-[200px]  border-livnotePrimary border-2 rounded-lg hover:shadow-[4px_4px_0px_0px_#8A86E5] text-xl  transition-all duration-300 text-livnotePrimary"
-          aria-label="Download for your platform"
-          type="button"
-        >
-          <Download size={44} />
-          <div class="flex flex-col items-start">
-            <span class="text-2xl">Download</span>
-            <span id="download-platform" class="text-base mt-2 font-light whitespace-nowrap"></span>
-          </div>
-        </button>
+    <!-- Desktop layout: heading and download button side by side -->
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between px-4 py-10">
+      <div class="flex-1">
+        <h1 class="text-white1 font-medium font-Jakartha text-left text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+          <span class="whitespace-normal lg:whitespace-nowrap text-livnotePrimary font-JetBrainsMono tracking-tighter" set:html={translations.livnoteHero.title}>
+          </span>
+        </h1>
+        <div class="text-faqAnswer font-light text-base md:text-lg xl:text-xl pt-2 md:pt-12 tracking-wide max-w-[99vw] text-left font-JetBrainsMono" set:html={translations.livnoteHero.description}>
+        </div>
+      </div>
+      
+      <!-- Download button container - positioned to the right on desktop -->
+      <div id="download-container" class="block lg:ml-8 mt-8 lg:mt-0 relative max-w-[260px] md:max-w-[300px] lg:max-w-[370px]">
+        <div class="flex items-center justify-between border-livnotePrimary border-2 rounded-lg overflow-hidden">
+          <button
+            id="download-btn"
+            class="px-8 py-4 flex items-center justify-center gap-6 text-xl transition-all duration-300 text-livnotePrimary"
+            aria-label="Download for your platform"
+            type="button"
+            data-desktop-only-text={translations.livnoteHero.desktopOnly}
+          >
+            <Download size={44} />
+            <div class="flex flex-col items-start">
+              <span class="text-2xl">{translations.livnoteHero.download}</span>
+              <span id="download-platform" class="text-base mt-2 font-light whitespace-nowrap"></span>
+            </div>
+          </button>
+          <button
+            id="dropdown-toggle"
+            class="hidden lg:flex px-4 py-4  text-livnotePrimary items-center justify-center"
+            aria-label="Show all download options"
+            type="button"
+          >
+            <DownloadOptions color="#8A86E5" />
+          </button>
+        </div>
 
         <div
           id="download-dropdown"
-          class="hidden absolute top-full left-4 mt-2 w-60 border z-50 bg-livnoteBg border-livnotePrimary rounded-lg text-livnotePrimary"
+          class="hidden absolute top-full right-0 mt-2 w-60 border z-50 bg-livnoteBg border-livnotePrimary rounded-lg text-livnotePrimary"
           role="menu"
         >
           <div class="p-2">
             <div class="text-sm px-3 py-2 border-b border-livnotePrimary my-1 ">
-              Choose your platform:
+              {translations.livnoteHero.choosePlatform}
             </div>
-            <button data-platform="mac" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Mac (Apple Silicon)</button>
-            <button data-platform="linux" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Debian)</button>
-            <button data-platform="fedora" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Linux (Fedora)</button>
-            <button data-platform="windows" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">Windows</button>
+            <button data-platform="mac" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">{translations.livnoteHero.platforms.mac}</button>
+            <button data-platform="linux" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">{translations.livnoteHero.platforms.linux}</button>
+            <button data-platform="fedora" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">{translations.livnoteHero.platforms.fedora}</button>
+            <button data-platform="windows" role="menuitem" class="w-full text-left px-3 py-2 flex items-center justify-between hover:bg-dark2 transition-all duration-300">{translations.livnoteHero.platforms.windows}</button>
           </div>
         </div>
         <div id="download-backdrop" class="hidden fixed inset-0 z-40"></div>
@@ -117,16 +137,10 @@ import { Download } from "../../assets/icons/Download";
       const url = platformToUrl[platform];
       if (!url) return;
 
-      // Track download event in GoatCounter (OS only) - only in production
-      try {
-        if (window.goatcounter && typeof window.goatcounter.count === 'function' && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
-          window.goatcounter.count({
-            path: `${location.pathname}#livnote_download_${platform}`,
-            title: 'livnote_download',
-            event: true,
-          });
-        }
-      } catch (_) { /* no-op */ }
+      // Track download event using centralized analytics
+      if (typeof window.trackDownload === 'function') {
+        window.trackDownload(platform, 'livnote');
+      }
 
       const a = document.createElement('a');
       a.href = url;
@@ -139,28 +153,32 @@ import { Download } from "../../assets/icons/Download";
     function enhance() {
       const downloadContainer = document.getElementById('download-container');
       const btn = document.getElementById('download-btn');
+      const dropdownToggle = document.getElementById('dropdown-toggle');
       const dropdown = document.getElementById('download-dropdown');
       const platformEl = document.getElementById('download-platform');
       const backdrop = document.getElementById('download-backdrop');
       
-      // Hide download container on mobile/tablet devices
       const platform = detectPlatform();
       const isDesktop = platform !== 'unknown' && platform !== 'unsupported';
       
-      if (!isDesktop) {
-        if (downloadContainer) {
-          downloadContainer.style.display = 'none';
-        }
-        return; // Exit early for non-desktop devices
-      }
-      
-      if (!btn || !dropdown || !platformEl || !backdrop) return;
+      if (!btn || !dropdownToggle || !dropdown || !platformEl || !backdrop) return;
       
       const downloadTextEl = btn.querySelector('.text-2xl');
       const originalBtnText = downloadTextEl.textContent;
 
       if (isDesktop) {
         platformEl.textContent = `for ${platformToLabel[platform]}`;
+      } else {
+        // Mobile/unsupported platform - show that download is available but not for this device
+        const desktopOnlyText = btn.getAttribute('data-desktop-only-text') || 'Desktop only';
+        platformEl.textContent = desktopOnlyText;
+        btn.disabled = true;
+        dropdownToggle.disabled = true;
+        const container = btn.closest('.flex');
+        if (container) {
+          container.classList.add( 'cursor-not-allowed');
+        }
+        btn.classList.remove('hover:shadow-[4px_4px_0px_0px_#8A86E5]');
       }
 
       function openDropdown() {
@@ -173,7 +191,7 @@ import { Download } from "../../assets/icons/Download";
       }
 
       // 2. Create a handler that enforces the cooldown.
-      function handleDownload(platform) {
+      function handleDownload(selectedPlatform) {
         if (isDownloading) {
           return; 
         }
@@ -181,18 +199,35 @@ import { Download } from "../../assets/icons/Download";
         // A. Set the flag, disable the button, and provide user feedback.
         isDownloading = true;
         btn.disabled = true;
-        startDownload(platform);
+        startDownload(selectedPlatform);
 
         // B. After 5 seconds, reset the flag and the button's appearance.
         setTimeout(() => {
           isDownloading = false;
-          btn.disabled = false;
+          if (isDesktop) {
+            btn.disabled = false;
+          }
         }, 5000); // 5-second cooldown period
       }
 
+      // Main download button - downloads detected platform
       btn.addEventListener('click', () => {
-        // 3. Call the new cooldown handler.
-        handleDownload(platform);
+        // Only allow downloads on desktop platforms
+        if (isDesktop) {
+          handleDownload(platform);
+        }
+      });
+
+      // Dropdown toggle button - shows all options
+      dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (isDesktop) {
+          if (dropdown.classList.contains('hidden')) {
+            openDropdown();
+          } else {
+            closeDropdown();
+          }
+        }
       });
 
       backdrop.addEventListener('click', closeDropdown);
@@ -201,8 +236,7 @@ import { Download } from "../../assets/icons/Download";
         const trigger = e.target.closest('button[data-platform]');
         if (!trigger) return;
         const selected = trigger.getAttribute('data-platform');
-        if (selected) {
-          // 4. Call the new cooldown handler here too.
+        if (selected && isDesktop) {
           handleDownload(selected);
         }
         closeDropdown();

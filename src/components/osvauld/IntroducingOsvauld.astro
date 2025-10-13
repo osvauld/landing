@@ -1,5 +1,12 @@
 ---
 // IntroducingOsvauld.astro - Section introducing Osvauld
+import type { TranslationKeys } from "../../i18n/ui";
+
+interface Props {
+  translations: TranslationKeys;
+}
+
+const { translations } = Astro.props;
 ---
 
 <section
@@ -9,64 +16,64 @@
   <div class="max-w-[1440px] w-full">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-blue1 section-heading mb-12 text-center">
-        How Osvauld Works: A Story of True Independence
+        {translations.introducingOsvauld.title}
       </h2>
       
       <div class="space-y-8 text-white text-center">
         <p class="custom-content-text-gray">
-          To understand how Osvauld helps you build a truly independent digital life, let's look at how trusted friends, Alice and Bob, collaborate.
+          {translations.introducingOsvauld.intro}
         </p>
         
         <div>
-          <h3 class="custom-content-title mb-4">The Foundation: Your Self-Made Identity</h3>
+          <h3 class="custom-content-title mb-4">{translations.introducingOsvauld.foundation.title}</h3>
           <p class="custom-content-text-gray">
-            Alice doesn't sign up for Osvauld with an email or phone number. Instead, right on her own device—be it a laptop or a phone—she creates her own unique digital identity. This identity belongs to her, and her alone, from the moment of its creation. It's cryptographically guaranteed to be hers, and since she created it, no company can ever take it away.
+            {translations.introducingOsvauld.foundation.description}
           </p>
         </div>
         
         <div>
-          <h3 class="custom-content-title mb-4">How Collaboration Works: Direct, Private, and Reliable</h3>
+          <h3 class="custom-content-title mb-4">{translations.introducingOsvauld.collaboration.title}</h3>
           <p class="custom-content-text-gray mb-4">
-            Osvauld is built for people who already know and trust each other, like friends and colleagues. It offers a private space for them to connect and share.
+            {translations.introducingOsvauld.collaboration.intro}
           </p>
           
           <div class="space-y-4 inline-block  mx-auto">
             <div>
-              <h4 class="text-white font-semibold mb-2 text-center text-lg md:text-xl">1. The Ideal Connection: Direct and Instant</h4>
+              <h4 class="text-white font-semibold mb-2 text-center text-lg md:text-xl">{translations.introducingOsvauld.collaboration.directConnection.title}</h4>
               <p class="custom-content-text-gray">
-                If Alice and Bob are both online, their devices connect directly to each other. When Alice shares a file, it goes straight from her device to Bob's—no middleman involved. This is the fastest, most private way to interact.
+                {translations.introducingOsvauld.collaboration.directConnection.description}
               </p>
             </div>
             
             <div>
-              <h4 class="text-white font-semibold mb-2 text-center text-lg md:text-xl">2. The Optional Hub: Your Personal Assistant</h4>
+              <h4 class="text-white font-semibold mb-2 text-center text-lg md:text-xl">{translations.introducingOsvauld.collaboration.optionalHub.title}</h4>
               <p class="custom-content-text-gray mb-3"> 
-                But what if Bob is offline when Alice sends a message or a document update? For enhanced reliability, Alice can choose to set up an Osvauld hub (a small, personal device) in her home.
+                {translations.introducingOsvauld.collaboration.optionalHub.description1}
               </p>
               <p class="custom-content-text-gray mb-3">
-                This hub acts as her trusted, always-on assistant. She can send her files to her own hub, which will then securely forward them to Bob the moment he comes online.
+                {translations.introducingOsvauld.collaboration.optionalHub.description2}
               </p>
               <p class="custom-content-text-gray">
-                This setup ensures their collaboration is never interrupted, and their shared projects are always in sync. It's an optional upgrade for convenience, not a requirement.
+                {translations.introducingOsvauld.collaboration.optionalHub.description3}
               </p>
             </div>
           </div>
           
           <p class="custom-content-text-gray mt-4">
-            In both scenarios, every file is sealed in a way that is cryptographically guaranteed to be opened only by the intended recipient.
+            {translations.introducingOsvauld.collaboration.encryption}
           </p>
         </div>
         
         <div>
-          <h3 class="custom-content-title mb-4">A New Level of Trust and Control</h3>
+          <h3 class="custom-content-title mb-4">{translations.introducingOsvauld.trustAndControl.title}</h3>
           <p class="custom-content-text-gray mb-4">
-            Because Osvauld is designed for trusted circles, it unlocks deeper ways to collaborate. Beyond just sending files back and forth, Alice can grant Bob specific permissions to access information directly on her primary device.
+            {translations.introducingOsvauld.trustAndControl.description1}
           </p>
           <p class="custom-content-text-gray mb-4">
-            For example, she could give Bob's device cryptographically-guaranteed access to view a specific project folder on her laptop for one afternoon. This is the digital equivalent of giving a trusted colleague the key to your office for a few hours—powerful, secure, and entirely under your control.
+            {translations.introducingOsvauld.trustAndControl.description2}
           </p>
           <p class="custom-content-text-gray">
-            This entire architecture—where you create your own identity and connect directly with your trusted network—is what makes you truly self-sufficient. Apps are designed to work offline because your data lives with you. You decide whether to connect directly or use a personal hub for convenience, ensuring you are never dependent on a third-party service again.
+            {translations.introducingOsvauld.trustAndControl.description3}
           </p>
         </div>
 
@@ -75,7 +82,7 @@
             class="rounded-xl font-normal flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap  px-3 py-2 border text-blue1 border-blue1 text-xl md:text-3xl"
             onclick="trackDiscussClick(); openChatGPT()"
           >
-            <span class="ml-1">Discuss with</span>
+            <span class="ml-1">{translations.introducingOsvauld.discussButton}</span>
             <svg 
               class="w-6 h-6 ml-2 md:w-10 md:h-10" 
               viewBox="0 0 24 24" 
@@ -94,15 +101,9 @@
 
 <script is:inline>
   function trackDiscussClick() {
-    try {
-      if (window.goatcounter && typeof window.goatcounter.count === 'function' && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
-        window.goatcounter.count({
-          path: `${location.pathname}#discuss_with_ai_click`,
-          title: 'discuss_with_ai_click',
-          event: true,
-        });
-      }
-    } catch (_) { /* no-op */ }
+    if (typeof window.trackInteraction === 'function') {
+      window.trackInteraction('discuss_with_ai', 'click');
+    }
   }
   function openChatGPT() {
     // System prompt for the ChatGPT conversation
