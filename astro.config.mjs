@@ -17,6 +17,8 @@ export default defineConfig({
     react(), 
     tailwind(), 
     sitemap({
+      changefreq: 'weekly',
+      priority: 0.7,
       i18n: {
         defaultLocale: "en",
         locales: {

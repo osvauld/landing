@@ -55,18 +55,27 @@ const availableLocales = getAvailableLocales();
 
     <meta name="theme-color" content="#010102" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).toString()} />
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="dns-prefetch" href="//gc.zgo.at" />
+    <link rel="preconnect" href="https://docs.osvauld.com" />
 
     <link
       rel="preload"
       href="/fonts/host-grotesk-v5-latin-600.woff2"
       as="font"
       type="font/woff2"
+      crossorigin
     />
     <link
       rel="preload"
       href="/fonts/host-grotesk-v5-latin-regular.woff2"
       as="font"
       type="font/woff2"
+      crossorigin
     />
     {
       isLivnote && (
@@ -75,6 +84,7 @@ const availableLocales = getAvailableLocales();
           href="/fonts/jetbrains-mono-regular-subset.woff2"
           as="font"
           type="font/woff2"
+          crossorigin
         />
       )
     }
@@ -89,7 +99,23 @@ const availableLocales = getAvailableLocales();
             : "Osvauld - The Building Block of Next Generation of Applications",
           type: "website",
           image: new URL(pageThumbnail.src, Astro.site).toString(),
+          url: new URL(Astro.url.pathname, Astro.site).toString(),
         },
+        optional: {
+          description: description,
+          siteName: "Osvauld",
+          locale: locale,
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "@osvauld",
+        title: title,
+        description: description,
+        image: new URL(pageThumbnail.src, Astro.site).toString(),
+        imageAlt: isLivnote 
+          ? "Livnote collaborative document editor with real-time synchronization"
+          : "Osvauld peer-to-peer application framework for privacy-first applications",
       }}
     />
     
@@ -218,7 +244,7 @@ const availableLocales = getAvailableLocales();
       ],
       "owns": [
         {
-          "@context": "http://schema.org",
+          "@context": "https://schema.org",
           "@id": "https://osvauld.com/#framework",
           "@type": "SoftwareApplication",
           "name": "Osvauld Suite",
@@ -240,7 +266,7 @@ const availableLocales = getAvailableLocales();
             "description": "Osvauld Suite provides all the tools needed to build privacy-first, peer-to-peer applications, handling complex networking, encryption, and synchronization so developers can focus on their app's unique features."
           },
           "publisher": {
-            "@context": "http://schema.org/",
+            "@context": "https://schema.org/",
             "@id": "https://osvauld.com/#corporation",
             "@type": "Corporation",
             "name": "Osvauld",
@@ -249,7 +275,7 @@ const availableLocales = getAvailableLocales();
           }
         },
         {
-          "@context": "http://schema.org",
+          "@context": "https://schema.org",
           "@id": "https://osvauld.com/#livnote",
           "@type": "SoftwareApplication",
           "name": "Livnote",
@@ -271,7 +297,7 @@ const availableLocales = getAvailableLocales();
             "description": "LivNote demonstrates the power of Osvauld framework with real-time collaborative document editing that works entirely peer-to-peer without any servers or data collection."
           },
           "publisher": {
-            "@context": "http://schema.org/",
+            "@context": "https://schema.org/",
             "@id": "https://osvauld.com/#corporation",
             "@type": "Corporation",
             "name": "Osvauld",
@@ -280,7 +306,7 @@ const availableLocales = getAvailableLocales();
           }
         },
         {
-          "@context": "http://schema.org",
+          "@context": "https://schema.org",
           "@id": "https://osvauld.com/#passwordmanager",
           "@type": "SoftwareApplication",
           "name": "Osvauld Password Manager",
@@ -302,7 +328,7 @@ const availableLocales = getAvailableLocales();
             "description": "A password manager that showcases Osvauld framework's capabilities for secure credential management with team sharing, all without exposing data to third-party services."
           },
           "publisher": {
-            "@context": "http://schema.org/",
+            "@context": "https://schema.org/",
             "@id": "https://osvauld.com/#corporation",
             "@type": "Corporation",
             "name": "Osvauld",
