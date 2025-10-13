@@ -1,0 +1,359 @@
+---
+import type { TranslationKeys } from "../../i18n/ui";
+
+interface Props {
+  translations: TranslationKeys;
+}
+
+const { translations } = Astro.props;
+---
+
+<style>
+  [data-custom-class="body"],
+  [data-custom-class="body"] * {
+    background: transparent !important;
+  }
+  [data-custom-class="title"],
+  [data-custom-class="title"] * {
+    font-family: Arial !important;
+    font-size: 26px !important;
+    color: #000000 !important;
+  }
+  [data-custom-class="subtitle"],
+  [data-custom-class="subtitle"] * {
+    font-family: Arial !important;
+    color: #595959 !important;
+    font-size: 14px !important;
+  }
+  [data-custom-class="heading_1"],
+  [data-custom-class="heading_1"] * {
+    font-family: Arial !important;
+    font-size: 19px !important;
+    color: #000000 !important;
+  }
+  [data-custom-class="heading_2"],
+  [data-custom-class="heading_2"] * {
+    font-family: Arial !important;
+    font-size: 17px !important;
+    color: #000000 !important;
+  }
+  [data-custom-class="body_text"],
+  [data-custom-class="body_text"] * {
+    color: #595959 !important;
+    font-size: 14px !important;
+    font-family: Arial !important;
+  }
+  [data-custom-class="link"],
+  [data-custom-class="link"] * {
+    color: #3030f1 !important;
+    font-size: 14px !important;
+    font-family: Arial !important;
+    word-break: break-word !important;
+  }
+</style>
+
+<div data-custom-class="body">
+  <div align="center" style="text-align: left;">
+    <div class="MsoNormal" data-custom-class="title" style="line-height: 1.5;">
+      <strong>{translations.terms.title}</strong>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+    <div class="MsoNormal" data-custom-class="subtitle" style="line-height: 1.5;">
+      <strong>{translations.terms.lastUpdated}</strong>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.1;"><br /></div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <strong
+        ><span data-custom-class="heading_1">{translations.terms.agreement.title}</span
+        ></strong>
+    </div>
+  </div>
+  <div align="center" style="line-height: 1;"><br /></div>
+  <div align="center" style="text-align: left;">
+    <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+      {translations.terms.agreement.description}
+    </div>
+    <div class="MsoNormal" style="line-height: 1;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+        {translations.terms.agreement.provision}
+    </div>
+     <div class="MsoNormal" style="line-height: 1;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+      {translations.terms.agreement.agreement}
+    </div>
+    <div class="MsoNormal" style="line-height: 1;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+      {translations.terms.agreement.contact}
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.tableOfContents.title}</strong>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#site_and_software" data-custom-class="link">{translations.terms.tableOfContents.siteAndSoftware}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#ip" data-custom-class="link">{translations.terms.tableOfContents.intellectualProperty}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#userreps" data-custom-class="link">{translations.terms.tableOfContents.userRepresentations}</a>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#prohibited" data-custom-class="link">{translations.terms.tableOfContents.prohibitedActivities}</a>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#software_license" data-custom-class="link">{translations.terms.tableOfContents.softwareLicense}</a>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#termination" data-custom-class="link">{translations.terms.tableOfContents.termAndTermination}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#modifications" data-custom-class="link">{translations.terms.tableOfContents.modifications}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#law" data-custom-class="link">{translations.terms.tableOfContents.governingLaw}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#disputes" data-custom-class="link">{translations.terms.tableOfContents.disputeResolution}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#corrections" data-custom-class="link">{translations.terms.tableOfContents.corrections}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#disclaimer" data-custom-class="link">{translations.terms.tableOfContents.disclaimer}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#liability" data-custom-class="link">{translations.terms.tableOfContents.limitationsOfLiability}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#indemnification" data-custom-class="link">{translations.terms.tableOfContents.indemnification}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#userdata" data-custom-class="link">{translations.terms.tableOfContents.userData}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#electronic" data-custom-class="link">{translations.terms.tableOfContents.electronicCommunications}</a>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#misc" data-custom-class="link">{translations.terms.tableOfContents.miscellaneous}</a>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;">
+      <a href="#contact" data-custom-class="link">{translations.terms.tableOfContents.contactUs}</a>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      id="site_and_software"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.siteAndSoftware.title}</strong>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+        {translations.terms.siteAndSoftware.description}
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      id="ip"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.intellectualProperty.title}</strong>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="heading_2"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.intellectualProperty.ourIntellectualProperty.title}</strong>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+       {translations.terms.intellectualProperty.ourIntellectualProperty.description}
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="heading_2"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.intellectualProperty.yourOwnership.title}</strong>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+       {translations.terms.intellectualProperty.yourOwnership.description}
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      id="userreps"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.userRepresentations.title}</strong>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+      {translations.terms.userRepresentations.description}
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      id="prohibited"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.prohibitedActivities.title}</strong>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+      {translations.terms.prohibitedActivities.description}
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      id="software_license"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.softwareLicense.title}</strong>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+      {translations.terms.softwareLicense.description}
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      id="termination"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.termAndTermination.title}</strong>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+      {translations.terms.termAndTermination.description}
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+      <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      id="disclaimer"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.disclaimer.title}</strong>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+      {translations.terms.disclaimer.description}
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      id="liability"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.limitationsOfLiability.title}</strong>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+     {translations.terms.limitationsOfLiability.description}
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+    <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      id="userdata"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.userData.title}</strong>
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+    {translations.terms.userData.description}
+    </div>
+    <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="heading_1"
+      id="contact"
+      style="line-height: 1.5;"
+    >
+      <strong>{translations.terms.contactUs.title}</strong>
+    </div>
+     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
+     <div
+      class="MsoNormal"
+      data-custom-class="body_text"
+      style="line-height: 1.5;"
+    >
+      {translations.terms.contactUs.description}
+    </div>
+  </div>
+</div>

@@ -2,16 +2,21 @@
 import { Telegram } from "../assets/icons/Telegram";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 import { FooterOsvauld } from "../assets/logos/FooterOsvauld.jsx";
+import { getTranslations, getLocalizedPath } from "../i18n/utils";
+import type { Locale } from "../i18n/ui";
 
 interface Props {
   isLivnote?: boolean;
+  locale?: Locale;
 }
 
-const { isLivnote = false } = Astro.props as Props;
+const { isLivnote = false, locale = "en" } = Astro.props as Props;
+
+const translations = await getTranslations(locale);
 
 const heading = isLivnote
-  ? "Notes that live with you."
-  : "Connect without compromise.";
+  ? translations.footer.heading.livnote
+  : translations.footer.heading.osvauld;
 ---
 
 <section id="page-footer" class={`w-full ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"} z-50`}>
@@ -28,10 +33,10 @@ const heading = isLivnote
 
         <div class="text-center flex flex-col gap-4">
           <div class="flex items-center gap-4">
-            <a href="/terms" class="ml-auto tracking-tight" aria-label="Terms of Use">Terms of Use</a>
-            <a href="/privacy" class="mr-auto tracking-tight" aria-label="Privacy Policy">Privacy Policy</a>
+            <a href={getLocalizedPath("/terms", locale)} class="ml-auto tracking-tight" aria-label="Terms of Use">{translations.footer.terms}</a>
+            <a href={getLocalizedPath("/privacy", locale)} class="mr-auto tracking-tight" aria-label="Privacy Policy">{translations.footer.privacy}</a>
           </div>
-          <p class="font-medium text-sm md:text-base">Osvauld Security Solutions Pvt Limited @ 2025</p>
+          <p class="font-medium text-sm md:text-base">{translations.footer.copyright}</p>
         </div>
       </div>
       <div class="absolute bottom-0 left-1/2 w-full -translate-x-1/2 px-[24px] lg:px-[60px]">

@@ -1,0 +1,170 @@
+---
+import type { TranslationKeys } from "../../i18n/ui";
+
+interface Props {
+  translations: TranslationKeys;
+}
+
+const { translations } = Astro.props;
+---
+
+<style>
+  [data-custom-class="body"],
+  [data-custom-class="body"] * {
+    background: transparent !important;
+  }
+  [data-custom-class="title"],
+  [data-custom-class="title"] * {
+    font-family: Arial !important;
+    font-size: 26px !important;
+    color: #000000 !important;
+  }
+  [data-custom-class="subtitle"],
+  [data-custom-class="subtitle"] * {
+    font-family: Arial !important;
+    color: #595959 !important;
+    font-size: 14px !important;
+  }
+  [data-custom-class="heading_1"],
+  [data-custom-class="heading_1"] * {
+    font-family: Arial !important;
+    font-size: 19px !important;
+    color: #000000 !important;
+  }
+  [data-custom-class="heading_2"],
+  [data-custom-class="heading_2"] * {
+    font-family: Arial !important;
+    font-size: 17px !important;
+    color: #000000 !important;
+  }
+  [data-custom-class="body_text"],
+  [data-custom-class="body_text"] * {
+    color: #595959 !important;
+    font-size: 14px !important;
+    font-family: Arial !important;
+  }
+  [data-custom-class="link"],
+  [data-custom-class="link"] * {
+    color: #3030f1 !important;
+    font-size: 14px !important;
+    font-family: Arial !important;
+    word-break: break-word !important;
+  }
+</style>
+
+<div data-custom-class="body">
+  <div>
+    <strong
+      ><span style="font-size: 26px;"
+        ><span data-custom-class="title"
+          >{translations.privacy.title}</span
+        ></span
+      ></strong
+    >
+  </div>
+  <div><br /></div>
+  <div>
+    <span style="color: rgb(127, 127, 127);"
+      ><strong
+        ><span style="font-size: 15px;"
+          ><span data-custom-class="subtitle"
+            >{translations.privacy.lastUpdated}</span
+          ></span
+        ></strong
+      ></span
+    >
+  </div>
+  <div><br /></div>
+  <div style="line-height: 1.5;">
+    <span data-custom-class="heading_1"><strong>{translations.privacy.introduction.title}</strong></span>
+  </div>
+   <div style="line-height: 1.5;"><br /></div>
+  <div style="line-height: 1.5;">
+    <span data-custom-class="body_text" set:html={translations.privacy.introduction.description}>
+    </span>
+  </div>
+  <div style="line-height: 1.5;"><br /></div>
+  <div style="line-height: 1.5;">
+     <span data-custom-class="heading_1"><strong>{translations.privacy.website.title}</strong></span>
+  </div>
+  <div style="line-height: 1.5;"><br /></div>
+  <div style="line-height: 1.5;">
+     <span data-custom-class="body_text" set:html={translations.privacy.website.description}>
+     </span>
+     <br /><br />
+     <span data-custom-class="heading_2"><strong>{translations.privacy.website.whatWeCollect.title}</strong></span>
+     <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.website.whatWeCollect.description}>
+     </span>
+     <br />
+      <span data-custom-class="heading_2"><strong>{translations.privacy.website.howWeUse.title}</strong></span>
+     <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.website.howWeUse.description}>
+     </span>
+     <br /><br />
+     <span data-custom-class="heading_2"><strong>{translations.privacy.website.noCookies.title}</strong></span>
+     <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.website.noCookies.description}>
+     </span>
+  </div>
+   <div style="line-height: 1.5;"><br /></div>
+  <div style="line-height: 1.5;">
+     <span data-custom-class="heading_1"><strong>{translations.privacy.software.title}</strong></span>
+  </div>
+   <div style="line-height: 1.5;"><br /></div>
+   <div style="line-height: 1.5;">
+    <span data-custom-class="body_text" set:html={translations.privacy.software.description}>
+    </span>
+    <br /><br />
+    <span data-custom-class="heading_2"><strong>{translations.privacy.software.zeroKnowledge.title}</strong></span>
+     <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.software.zeroKnowledge.description}>
+     </span>
+     <br />
+     <span data-custom-class="heading_2"><strong>{translations.privacy.software.yourResponsibility.title}</strong></span>
+     <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.software.yourResponsibility.description}>
+     </span>
+     <br /><br />
+     <span data-custom-class="heading_2"><strong>{translations.privacy.software.updates.title}</strong></span>
+     <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.software.updates.description}>
+     </span>
+   </div>
+   <div style="line-height: 1.5;"><br /></div>
+   <div style="line-height: 1.5;">
+     <span data-custom-class="heading_1"><strong>{translations.privacy.general.title}</strong></span>
+  </div>
+  <div style="line-height: 1.5;"><br /></div>
+  <div style="line-height: 1.5;">
+    <span data-custom-class="heading_2"><strong>{translations.privacy.general.shareInformation.title}</strong></span>
+    <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.general.shareInformation.description}>
+     </span>
+     <br />
+    <span data-custom-class="heading_2"><strong>{translations.privacy.general.howLong.title}</strong></span>
+    <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.general.howLong.description}>
+     </span>
+     <br /><br />
+     <span data-custom-class="heading_2"><strong>{translations.privacy.general.minors.title}</strong></span>
+    <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.general.minors.description}>
+     </span>
+      <br /><br />
+     <span data-custom-class="heading_2"><strong>{translations.privacy.general.privacyRights.title}</strong></span>
+    <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.general.privacyRights.description}>
+     </span>
+     <br />
+     <span data-custom-class="heading_2"><strong>{translations.privacy.general.updates.title}</strong></span>
+    <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.general.updates.description}>
+     </span>
+      <br /><br />
+      <span data-custom-class="heading_2"><strong>{translations.privacy.general.contact.title}</strong></span>
+    <br /><br />
+     <span data-custom-class="body_text" set:html={translations.privacy.general.contact.description}>
+     </span>
+  </div>
+</div>

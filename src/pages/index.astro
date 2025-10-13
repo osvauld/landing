@@ -8,14 +8,17 @@ import Features from "../components/osvauld/Features.astro";
 import CollaborativeEditor from "../components/osvauld/CollaborativeEditor.astro";
 import CommunitySection from "../components/osvauld/CommunitySection.astro";
 import Acknowledgement from "../components/osvauld/Acknowledgement.astro";
+import { getTranslations } from "../i18n/utils";
+
+const translations = await getTranslations("en");
 ---
 
-<Layout title="Osvauld">
-  <OsvauldHero />
-  <StructuralDependencies />
-  <IntroducingOsvauld />
-  <Features />
-  <CollaborativeEditor />
-  <CommunitySection />
-  <Acknowledgement />
+<Layout title={translations.meta.osvauld.title} description={translations.meta.osvauld.description} locale="en">
+  <OsvauldHero translations={translations} />
+  <StructuralDependencies translations={translations} />
+  <IntroducingOsvauld translations={translations} />
+  <Features translations={translations} />
+  <CollaborativeEditor translations={translations} />
+  <CommunitySection translations={translations} />
+  <Acknowledgement translations={translations} />
 </Layout>

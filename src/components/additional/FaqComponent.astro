@@ -2,6 +2,7 @@
 import { CloseIcon } from "../../assets/icons/CloseIcon";
 import questionLeft from "../../assets/images/questionLeft.webp";
 import { Image } from "astro:assets";
+import type { TranslationKeys } from "../../i18n/ui";
 
 interface FaqItem {
   question: string;
@@ -11,9 +12,10 @@ interface FaqItem {
 interface Props {
   data: FaqItem[];
   parent?: string;
+  translations?: TranslationKeys;
 }
 
-const { data = [], parent } = Astro.props as Props;
+const { data = [], parent, translations } = Astro.props as Props;
 ---
 
 <section
@@ -26,7 +28,7 @@ const { data = [], parent } = Astro.props as Props;
         <h1
           class={`z-10 md:absolute md:top-24 text-[36px] mb-6 mt-[4rem] md:text-[68px] font-medium w-full md:w-[350px] md:h-[246px] leading-[41px] md:leading-[81px]  gradient-text text-center md:text-left md:ml-[1.5rem] ${parent === "livnote" ? "font-JetBrainsMono tracking-[-0.1em] " : "font-Jakartha"}`}
         >
-          Frequently Asked Questions
+          {translations?.faq.title || "Frequently Asked Questions"}
         </h1>
 
         <Image
@@ -95,25 +97,16 @@ const { data = [], parent } = Astro.props as Props;
     {
       parent === "livnote" && (
         <div class="my-10 py-16 lg:py-36 flex flex-col justify-center items-center font-JetBrainsMono">
-          <h2 class="text-xl font-normal mb-4 text-livnotePrimary  relative z-10 ">
-            Built with{" "}
-            <span
-              class="inline-block align-middle"
-              aria-label="love"
-              title="love"
-            >
-              ❤️
-            </span>{" "}
-            on <span class="text-white">Osvauld</span>
+          <h2 class="text-xl font-normal mb-4 text-livnotePrimary  relative z-10 " set:html={translations?.faq.builtWithOsvauld || "Built with ❤️ on Osvauld"}>
           </h2>
           <p class="text-base  lg:text-lg text-center font-normal mb-4 text-white/60  relative z-10 ">
-            Building Block for the Next Generation of P2P Applications
+            {translations?.faq.buildingBlock || "Building Block for the Next Generation of P2P Applications"}
           </p>
           <a
             class="rounded-xl md:hidden font-normal flex justify-center items-center cursor-pointer bg-dark1 transition whitespace-nowrap hover:bg-blue2 px-3 py-2 text-xl border  text-livnotePrimary border-livnotePrimary"
             href="/"
           >
-            <span class="ml-1 ">Visit</span>
+            <span class="ml-1 ">{translations?.faq.visit || "Visit"}</span>
           </a>
       
         </div>

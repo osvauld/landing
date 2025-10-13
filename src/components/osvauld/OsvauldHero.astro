@@ -1,5 +1,12 @@
 ---
 // OsvauldHero.astro - Simplified hero component
+import type { TranslationKeys } from "../../i18n/ui";
+
+interface Props {
+  translations: TranslationKeys;
+}
+
+const { translations } = Astro.props;
 ---
 
 <section
@@ -11,8 +18,8 @@
   >
       <h1
         class="text-blue1 font-semibold font-HostGrotesk text-center mb-0 text-4xl  sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl pt-8 pb-0 md:py-12 lg:py-16 px-4 md:px-6 lg:px-8 max-w-4xl"
+        set:html={translations.osvauldHero.title}
       >
-        Personal Internet <br /> Complete Control <br/> Absolute Privacy
       </h1>
     </div>
     

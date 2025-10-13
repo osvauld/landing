@@ -3,8 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/Theme.css";
 import { data } from "../components/additional/Data.js";
 import FaqComponent from "../components/additional/FaqComponent.astro";
+import { getTranslations } from "../i18n/utils";
+
+const translations = await getTranslations("en");
 ---
 
-<Layout title="FAQ's" description="Frequently Asked Questions about Osvauld">
-  <FaqComponent data={data} />
+<Layout title={translations.meta.faq.title} description={translations.meta.faq.description} locale="en">
+  <FaqComponent data={translations.faq.osvauldData} parent={"osvauld"} translations={translations} />
 </Layout>

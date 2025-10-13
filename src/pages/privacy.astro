@@ -1,3 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PrivacyPolicy from "../components/additional/PrivacyPolicy.astro";
+import { getTranslations } from "../i18n/utils";
+
+const translations = await getTranslations("en");
+---
+
+<Layout title={translations.meta.privacy.title} description={translations.meta.privacy.description} locale="en">
+  <PrivacyPolicy translations={translations} />
+</Layout>
+
 <style>
   [data-custom-class="body"],
   [data-custom-class="body"] * {

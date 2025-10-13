@@ -1,5 +1,12 @@
 ---
 // Features.astro - Section showing features grid
+import type { TranslationKeys } from "../../i18n/ui";
+
+interface Props {
+  translations: TranslationKeys;
+}
+
+const { translations } = Astro.props;
 ---
 
 <section
@@ -8,7 +15,7 @@
 >
   <div class="max-w-[1440px] w-full">
     <h2 class="text-blue1 section-heading text-center mb-12">
-      Features
+      {translations.features.title}
     </h2>
     
     <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8 lg:gap-12">
@@ -26,9 +33,9 @@
               </svg>
             </div>
           </div>
-        <h3 class="feature-title text-xs  md:text-base mb-1 md:mb-3 min-h-16">Peer-to-Peer by Default</h3>
+        <h3 class="feature-title text-xs  md:text-base mb-1 md:mb-3 min-h-16">{translations.features.peerToPeer.title}</h3>
         <p class="custom-content-text-gray">
-          Apps connect directly - no middlemen, no servers in the way.
+          {translations.features.peerToPeer.description}
         </p>
       </div>
       
@@ -42,9 +49,9 @@
                 
             </div>
           </div>
-        <h3 class="feature-title text-xs md:text-base mb-1 md:mb-3 min-h-16">Trusted Access</h3>
+        <h3 class="feature-title text-xs md:text-base mb-1 md:mb-3 min-h-16">{translations.features.trustedAccess.title}</h3>
         <p class="custom-content-text-gray">
-          Simple, secure access control powered by modern cryptographic tokens.
+          {translations.features.trustedAccess.description}
         </p>
       </div>
       
@@ -58,9 +65,9 @@
                 
             </div>
           </div>
-        <h3 class="feature-title text-xs md:text-base mb-1 md:mb-3 min-h-16">Offline-First</h3>
+        <h3 class="feature-title text-xs md:text-base mb-1 md:mb-3 min-h-16">{translations.features.offlineFirst.title}</h3>
         <p class="custom-content-text-gray">
-          Work without interruption. Everything syncs automatically when devices reconnect.
+          {translations.features.offlineFirst.description}
         </p>
       </div>
       
@@ -74,9 +81,9 @@
                 
             </div>
           </div>
-        <h3 class="feature-title text-xs md:text-base mb-1 md:mb-3 min-h-16">Self-Sovereign Identity</h3>
+        <h3 class="feature-title text-xs md:text-base mb-1 md:mb-3 min-h-16">{translations.features.selfSovereign.title}</h3>
         <p class="custom-content-text-gray">
-          You own your identity - no one can take it away or lock you out.
+          {translations.features.selfSovereign.description}
         </p>
       </div>
       
@@ -90,9 +97,9 @@
                 
             </div>
           </div>
-        <h3 class="feature-title text-xs md:text-base mb-1 md:mb-3 min-h-16">Open Source & MIT Licensed</h3>
+        <h3 class="feature-title text-xs md:text-base mb-1 md:mb-3 min-h-16">{translations.features.openSource.title}</h3>
         <p class="custom-content-text-gray">
-          Transparent, community-driven, and free for everyone to use and build on.
+          {translations.features.openSource.description}
         </p>
       </div>
       
@@ -106,9 +113,9 @@
                 
             </div>
           </div>
-        <h3 class="feature-title text-xs md:text-base mb-1 md:mb-3 min-h-16">Sovereign Node</h3>
+        <h3 class="feature-title text-xs md:text-base mb-1 md:mb-3 min-h-16">{translations.features.sovereignNode.title}</h3>
         <p class="custom-content-text-gray">
-          Run your own always-on node (even on a Raspberry Pi) and stay connected on your terms.
+          {translations.features.sovereignNode.description}
         </p>
       </div>
     </div>

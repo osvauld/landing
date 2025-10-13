@@ -1,5 +1,12 @@
 ---
 // CollaborativeEditor.astro - Section about collaborative text editor
+import type { TranslationKeys } from "../../i18n/ui";
+
+interface Props {
+  translations: TranslationKeys;
+}
+
+const { translations } = Astro.props;
 ---
 
 <style>
@@ -44,16 +51,16 @@
 
   <div class="max-w-[1440px] w-full text-center relative z-10">
     <h2 class="text-blue1 section-heading mb-3 md:mb-8 heading-shadow">
-      <span>Explore collaborative text editor</span>
+      <span>{translations.collaborativeEditor.title}</span>
     </h2>
     
     <p class="text-white lg:text-xl  mb-3 md:mb-12 max-w-2xl mx-auto" style="text-shadow: 3px 2px 2px #000000;">
-      First of many tools for a personal internet.
+      {translations.collaborativeEditor.subtitle}
     </p>
     
     <div class="mb-12 flex justify-center">
       <a href="/livnote" class="rounded-xl font-normal flex justify-center items-center cursor-pointer bg-dark1/80 whitespace-nowrap  px-3 py-2 border text-blue1 border-blue1  text-md">
-        Explore Livnote
+        {translations.collaborativeEditor.exploreButton}
         <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
         </svg>
