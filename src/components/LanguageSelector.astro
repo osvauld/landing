@@ -63,6 +63,7 @@ const availableLocales = getAvailableLocales();
             }`}
             role="menuitem"
             aria-current={isCurrentLocale ? "page" : undefined}
+            onclick={!isCurrentLocale ? `if (typeof window.trackLocaleChange === 'function') { window.trackLocaleChange('${currentLocale}', '${locale}'); }` : undefined}
           >
             <div class="flex items-center justify-between">
               <span>{getLocaleEnglishName(locale)}</span>
@@ -90,9 +91,14 @@ const availableLocales = getAvailableLocales();
       button.setAttribute('aria-expanded', isOpen.toString());
       
       // Rotate arrow
-      const arrow = button.querySelector('svg:last-child');
+      const arrow = button.querySelector('svg:last-child') as HTMLElement;
       if (arrow) {
         arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+      
+      // Track language selector interaction
+      if (typeof window.trackInteraction === 'function') {
+        window.trackInteraction('language_selector', isOpen ? 'open' : 'close');
       }
     }
     
@@ -102,7 +108,7 @@ const availableLocales = getAvailableLocales();
       button.setAttribute('aria-expanded', 'false');
       
       // Reset arrow rotation
-      const arrow = button.querySelector('svg:last-child');
+      const arrow = button.querySelector('svg:last-child') as HTMLElement;
       if (arrow) {
         arrow.style.transform = 'rotate(0deg)';
       }

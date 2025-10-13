@@ -101,15 +101,9 @@ const { translations } = Astro.props;
 
 <script is:inline>
   function trackDiscussClick() {
-    try {
-      if (window.goatcounter && typeof window.goatcounter.count === 'function' && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
-        window.goatcounter.count({
-          path: `${location.pathname}#discuss_with_ai_click`,
-          title: 'discuss_with_ai_click',
-          event: true,
-        });
-      }
-    } catch (_) { /* no-op */ }
+    if (typeof window.trackInteraction === 'function') {
+      window.trackInteraction('discuss_with_ai', 'click');
+    }
   }
   function openChatGPT() {
     // System prompt for the ChatGPT conversation

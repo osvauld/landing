@@ -1,5 +1,5 @@
 ---
-import type { TranslationKeys } from "../../i18n/types";
+import type { TranslationKeys } from "../../i18n/ui";
 
 export interface Props {
   translations: TranslationKeys;
@@ -120,16 +120,10 @@ const { translations } = Astro.props;
       const url = platformToUrl[platform];
       if (!url) return;
 
-      // Track download event in GoatCounter (OS only) - only in production
-      try {
-        if (window.goatcounter && typeof window.goatcounter.count === 'function' && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
-          window.goatcounter.count({
-            path: `${location.pathname}#livnote_download_${platform}`,
-            title: 'livnote_download',
-            event: true,
-          });
-        }
-      } catch (_) { /* no-op */ }
+      // Track download event using centralized analytics
+      if (typeof window.trackDownload === 'function') {
+        window.trackDownload(platform, 'livnote');
+      }
 
       const a = document.createElement('a');
       a.href = url;

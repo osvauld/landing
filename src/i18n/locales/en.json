@@ -257,8 +257,8 @@
         "description": "We use the minimal server log data solely for our own internal purposes: to understand which countries our visitors are from and to count the total number of software downloads. This helps us ensure our website is functioning correctly. We do not use this data to track individual users or for advertising."
       },
       "noCookies": {
-        "title": "No Cookies or Third-Party Analytics",
-        "description": "We respect your privacy. Our website <strong>does not</strong> use cookies for tracking or advertising. We <strong>do not</strong> use any third-party analytics services (like Google Analytics). All usage statistics are generated from our own server logs."
+        "title": "Privacy-Focused Analytics",
+        "description": "We respect your privacy. Our website <strong>does not</strong> use cookies for tracking or advertising. We use GoatCounter, a privacy-focused analytics service that does not use cookies or track individual users. GoatCounter provides anonymous usage statistics to help us understand website performance and usage patterns. All data is processed anonymously and we cannot identify individual visitors."
       }
     },
     "software": {

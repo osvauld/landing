@@ -110,6 +110,80 @@ const availableLocales = getAvailableLocales();
     {!import.meta.env.DEV && (
       <script data-goatcounter="https://osvauld.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     )}
+    
+    <!-- Analytics utility functions -->
+    <script>
+      // Type declarations for analytics
+      if (!window.analytics) {
+        window.analytics = {
+          trackEvent: function() {},
+          trackDownload: function() {},
+          trackInteraction: function() {},
+          trackLocaleChange: function() {}
+        };
+      }
+      if (!window.trackEvent) window.trackEvent = function() {};
+      if (!window.trackDownload) window.trackDownload = function() {};
+      if (!window.trackInteraction) window.trackInteraction = function() {};
+      if (!window.trackLocaleChange) window.trackLocaleChange = function() {};
+      
+      // Centralized analytics utility
+      window.analytics = {
+        trackEvent: function(eventName, properties = {}) {
+          if (import.meta.env.DEV) {
+            console.log(`[Analytics] Event "${eventName}" not tracked (development mode)`);
+            return;
+          }
+          
+          try {
+            if (!window.goatcounter || typeof window.goatcounter.count !== 'function') {
+              console.warn('[Analytics] GoatCounter not available');
+              return;
+            }
+            
+            const event = {
+              path: `${location.pathname}#${eventName}`,
+              title: eventName,
+              event: true,
+              ...properties
+            };
+            
+            window.goatcounter.count(event);
+            console.log(`[Analytics] Tracked event: ${eventName}`, event);
+          } catch (error) {
+            console.error(`[Analytics] Failed to track event "${eventName}":`, error);
+          }
+        },
+        
+        trackDownload: function(platform, product = 'osvauld') {
+          this.trackEvent(`${product}_download_${platform}`, {
+            platform,
+            product,
+            userAgent: navigator.userAgent
+          });
+        },
+        
+        trackInteraction: function(elementName, action = 'click') {
+          this.trackEvent(`${elementName}_${action}`, {
+            element: elementName,
+            action
+          });
+        },
+        
+        trackLocaleChange: function(fromLocale, toLocale) {
+          this.trackEvent('locale_change', {
+            from: fromLocale,
+            to: toLocale
+          });
+        }
+      };
+      
+      // Global convenience functions
+      window.trackEvent = window.analytics.trackEvent.bind(window.analytics);
+      window.trackDownload = window.analytics.trackDownload.bind(window.analytics);
+      window.trackInteraction = window.analytics.trackInteraction.bind(window.analytics);
+      window.trackLocaleChange = window.analytics.trackLocaleChange.bind(window.analytics);
+    </script>
   </head><theme-color content="#010409"></theme-color>
 
   <script type="application/ld+json" defer>

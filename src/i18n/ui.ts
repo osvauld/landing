@@ -61,6 +61,16 @@ export interface TranslationKeys {
     title: string;
     subtitle: string;
     description: string;
+    openSource: string;
+    starOnGithub: string;
+    download: string;
+    choosePlatform: string;
+    platforms: {
+      mac: string;
+      linux: string;
+      fedora: string;
+      windows: string;
+    };
   };
   
   // Collaborative Editor
@@ -70,6 +80,38 @@ export interface TranslationKeys {
     exploreButton: string;
   };
   
+  // Introducing Osvauld
+  introducingOsvauld: {
+    title: string;
+    intro: string;
+    foundation: {
+      title: string;
+      description: string;
+    };
+    collaboration: {
+      title: string;
+      intro: string;
+      directConnection: {
+        title: string;
+        description: string;
+      };
+      optionalHub: {
+        title: string;
+        description1: string;
+        description2: string;
+        description3: string;
+      };
+      encryption: string;
+    };
+    trustAndControl: {
+      title: string;
+      description1: string;
+      description2: string;
+      description3: string;
+    };
+    discussButton: string;
+  };
+  
   // Meta tags
   meta: {
     osvauld: {
@@ -77,6 +119,10 @@ export interface TranslationKeys {
       description: string;
     };
     livnote: {
+      title: string;
+      description: string;
+    };
+    privacy: {
       title: string;
       description: string;
     };
