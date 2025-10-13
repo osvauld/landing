@@ -48,58 +48,56 @@
     }
   },
   "structuralDependencies": {
-    "title": "当今互联网的结构性依赖",
-    "description": "现代互联网依赖集中式服务：身份验证服务器、数据云存储、同步第三方提供商。这些依赖创造了故障和监控的单点，削弱了我们的数字自主权。"
+    "title": "当前生态系统的依赖性",
+    "description": "您的访问和使用与云提供商绑定，他们可以随时锁定您，而您的数字身份依赖于电子邮件、电话或社交登录，这些也可能被撤销。同样，您的数据驻留在他们的平台上，受到不断变化的政策和法律要求的约束，使您的控制有限，并且容易受到超出您影响力的变化的影响。"
   },
   "introducingOsvauld": {
-    "title": "介绍 Osvauld",
-    "intro": "Osvauld 是一个用于构建点对点应用程序的框架，优先考虑隐私、安全性和用户控制。",
+    "title": "Osvauld 的工作原理：真正独立的故事",
+    "intro": "为了理解 Osvauld 如何帮助您构建真正独立的数字生活，让我们看看受信任的朋友 Alice 和 Bob 如何协作。",
     "foundation": {
-      "title": "坚实基础",
-      "description": "构建在成熟的技术之上，如 CRDT（无冲突复制数据类型）、端到端加密和现代点对点网络协议。"
+      "title": "基础：您自制的身份",
+      "description": "Alice 不会使用电子邮件或电话号码注册 Osvauld。相反，直接在她自己的设备上——无论是笔记本电脑还是手机——她创建了自己独特的数字身份。这个身份从创建之时起就属于她，而且只属于她。它在加密学上保证是她的，而且由于她创建了它，没有任何公司可以将它拿走。"
     },
     "collaboration": {
-      "title": "真正的协作",
-      "intro": "Osvauld 使开发者能够创建：",
+      "title": "协作的工作方式：直接、私密和可靠",
+      "intro": "Osvauld 是为已经相互认识和信任的人设计的，比如朋友和同事。它为他们提供了一个私密的空间来连接和分享。",
       "directConnection": {
-        "title": "直接连接",
-        "description": "设备直接相互连接，不通过中央服务器。"
+        "title": "1. 理想的连接：直接且即时",
+        "description": "如果 Alice 和 Bob 都在线，他们的设备会直接相互连接。当 Alice 共享文件时，它直接从她的设备传到 Bob 的设备——没有中间人参与。这是最快、最私密的互动方式。"
       },
       "optionalHub": {
-        "title": "可选中心",
-        "description1": "可选中心可用于高级功能，如",
-        "description2": "NAT 穿透和高级同步。",
-        "description3": "但所有关键数据保持加密并在您的控制之下。"
+        "title": "2. 可选中心：您的个人助理",
+        "description1": "但是，如果 Alice 发送消息或文档更新时 Bob 处于离线状态怎么办？为了增强可靠性，Alice 可以选择在家中设置一个 Osvauld 中心（一个小型个人设备）。",
+        "description2": "这个中心充当她值得信赖的、始终在线的助理。她可以将文件发送到自己的中心，然后中心会在 Bob 上线时安全地将它们转发给他。",
+        "description3": "这种设置确保他们的协作永不中断，他们的共享项目始终保持同步。这是为了方便而进行的可选升级，而不是必需的。"
       },
-      "encryption": "所有数据都经过端到端加密，因此只有授权用户才能访问。"
+      "encryption": "在这两种情况下，每个文件都以加密方式密封，保证只能由预期的接收者打开。"
     },
     "trustAndControl": {
-      "title": "信任与控制",
-      "description1": "使用 Osvauld，您完全控制自己的数据。",
-      "description2": "没有第三方可以访问您的信息或监控它。",
-      "description3": "您决定谁可以访问以及如何使用您的数据。"
+      "title": "新的信任和控制级别",
+      "description1": "由于 Osvauld 是为受信任的圈子设计的，它解锁了更深层次的协作方式。除了简单地来回发送文件之外，Alice 可以授予 Bob 特定权限，以直接访问她主设备上的信息。",
+      "description2": "例如，她可以给 Bob 的设备加密保证的访问权限，以便在一个下午查看她笔记本电脑上的特定项目文件夹。这相当于给一个值得信赖的同事几个小时的办公室钥匙——强大、安全且完全在您的控制之下。",
+      "description3": "整个架构——您创建自己的身份并直接与您信任的网络连接——是使您真正自给自足的原因。应用程序设计为离线工作，因为您的数据与您同在。您决定是直接连接还是使用个人中心以获得便利，确保您永远不再依赖第三方服务。"
     },
-    "discussButton": "与我们讨论"
+    "discussButton": "讨论"
   },
   "collaborativeEditor": {
-    "title": "Livnote：协作文本编辑器",
-    "subtitle": "通过 Livnote 体验 Osvauld 的力量 - 一个具有实时协作的点对点文档编辑器。",
+    "title": "探索协作文本编辑器",
+    "subtitle": "个人互联网的众多工具中的第一个。",
     "exploreButton": "探索 Livnote"
   },
   "communitySection": {
-    "title": "加入我们的社区",
-    "description": "成为不断增长的开发者和用户社区的一部分，致力于去中心化应用程序的未来。",
-    "joinButton": "立即加入"
+    "title": "在文档中阅读更多内容<br />&<br />在 Telegram 上找到 Osvauld 社区"
   },
   "acknowledgement": {
     "title": "致谢",
     "description": "该项目得到了 Zerodha's FLOSS fund 和 KSUM Innovation Grant 的支持。"
   },
   "livnoteHero": {
-    "title": "一起写作，<br />保持私密",
-    "description": "Livnote 让您与他人创建和编辑笔记。<br class=\"hidden md:block\" /> 实时、离线优先和端到端加密。<br class=\"hidden md:block\" /> - 永远不触及云服务器。",
     "openSource": "我们是开源的",
     "starOnGithub": "在 GitHub 上给我们星标",
+    "title": "一起写作，<br />保持私密",
+    "description": "Livnote 让您与他人创建和编辑笔记。<br class=\"hidden md:block\" /> 实时、离线优先和端到端加密。<br class=\"hidden md:block\" /> - 永远不触及云服务器。",
     "download": "下载",
     "choosePlatform": "选择您的平台：",
     "platforms": {

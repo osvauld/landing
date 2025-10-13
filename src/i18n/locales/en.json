@@ -97,7 +97,7 @@
     "openSource": "We are open-source",
     "starOnGithub": "Star us on GitHub",
     "title": "Write together,<br />stay private",
-    "description": "Livnote lets you create and edit notes with others.<br class=\"hidden md:block\" />live, offline-first, and end to end encrypted.<br class=\"hidden md:block\" />- without anything ever touching a cloud server.",
+    "description": "Livnote lets you create and edit notes with others.<br class=\"hidden md:block\" /> live, offline-first, and end-to-end encrypted.<br class=\"hidden md:block\" />- without anything ever touching a cloud server.",
     "download": "Download",
     "choosePlatform": "Choose your platform:",
     "platforms": {
@@ -160,7 +160,7 @@
   },
   "livnotePhilosophy": {
     "title": "Why Livnote?",
-    "description": "We're building Livnote because we believe you shouldn't have to sacrifice privacy to work together.<br /><br />In a world where collaboration means uploading your documents to corporate servers, we're creating an alternative where you can work directly with others while your data stays where it belongs-on your devices.<br /><br />Your notes remain encrypted and under your control. When you collaborate, you connect directly with people you trust, not through some company's computers that can see everything you write.<br /><br />We don't store your account details. We don't have access to your collaborative sessions. We don't even know what you're working on-and that's exactly how it should be.<br /><br />Livnote is our contribution to a movement of digital sovereignty, where people work together freely without surrendering control of their shared creations.<br /><br />"
+    "description": "We're building Livnote because we believe you shouldn't have to sacrifice privacy to work together.<br /><br />In a world where collaboration means uploading your documents to corporate servers, we're creating an alternative where you can work directly with others while your data stays where it belongs—on your devices.<br /><br />Your notes remain encrypted and under your control. When you collaborate, you connect directly with people you trust, not through some company's computers that can see everything you write.<br /><br />We don't store your account details. We don't have access to your collaborative sessions. We don't even know what you're working on—and that's exactly how it should be.<br /><br />Livnote is our contribution to a movement of digital sovereignty, where people work together freely without surrendering control of their shared creations.<br /><br />"
   },
   "meta": {
     "osvauld": {

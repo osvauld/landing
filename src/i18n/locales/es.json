@@ -48,58 +48,56 @@
     }
   },
   "structuralDependencies": {
-    "title": "Dependencias estructurales del Internet moderno",
-    "description": "El Internet moderno depende de servicios centralizados: servidores de autenticación, almacenamiento en la nube de datos, proveedores de sincronización de terceros. Estas dependencias crean puntos únicos de falla y vigilancia, comprometiendo nuestra autonomía digital."
+    "title": "Dependencias del ecosistema actual",
+    "description": "Tu acceso y uso están vinculados a proveedores de la nube que pueden bloquearte en cualquier momento, mientras que tu identidad digital depende de correo electrónico, teléfono o inicios de sesión sociales que también pueden ser revocados. Del mismo modo, tus datos residen en sus plataformas, sujetos a políticas cambiantes y requisitos legales, dejándote con control limitado y vulnerable a cambios fuera de tu influencia."
   },
   "introducingOsvauld": {
-    "title": "Presentando Osvauld",
-    "intro": "Osvauld es un framework para construir aplicaciones peer-to-peer que priorizan la privacidad, seguridad y control del usuario.",
+    "title": "Cómo funciona Osvauld: Una historia de verdadera independencia",
+    "intro": "Para entender cómo Osvauld te ayuda a construir una vida digital verdaderamente independiente, veamos cómo colaboran los amigos de confianza, Alice y Bob.",
     "foundation": {
-      "title": "Fundación sólida",
-      "description": "Construido sobre tecnologías probadas como CRDTs (Conflict-free Replicated Data Types), cifrado de extremo a extremo y protocolos de red peer-to-peer modernos."
+      "title": "La base: Tu identidad hecha por ti mismo",
+      "description": "Alice no se registra en Osvauld con un correo electrónico o número de teléfono. En cambio, directamente en su propio dispositivo—ya sea una computadora portátil o un teléfono—crea su propia identidad digital única. Esta identidad le pertenece a ella, y solo a ella, desde el momento de su creación. Está criptográficamente garantizado que es suya, y dado que la creó, ninguna empresa puede quitársela nunca."
     },
     "collaboration": {
-      "title": "Colaboración real",
-      "intro": "Osvauld permite a los desarrolladores crear:",
+      "title": "Cómo funciona la colaboración: Directa, privada y confiable",
+      "intro": "Osvauld está diseñado para personas que ya se conocen y confían entre sí, como amigos y colegas. Ofrece un espacio privado para que se conecten y compartan.",
       "directConnection": {
-        "title": "Conexión directa",
-        "description": "Los dispositivos se conectan directamente entre sí, sin pasar por un servidor central."
+        "title": "1. La conexión ideal: Directa e instantánea",
+        "description": "Si Alice y Bob están ambos en línea, sus dispositivos se conectan directamente entre sí. Cuando Alice comparte un archivo, va directamente desde su dispositivo al de Bob—sin intermediarios. Esta es la forma más rápida y privada de interactuar."
       },
       "optionalHub": {
-        "title": "Hub opcional",
-        "description1": "Un hub opcional puede usarse para características avanzadas como",
-        "description2": "travesía NAT y sincronización avanzada.",
-        "description3": "Pero todos los datos críticos permanecen cifrados y bajo tu control."
+        "title": "2. El hub opcional: Tu asistente personal",
+        "description1": "Pero, ¿qué pasa si Bob está desconectado cuando Alice envía un mensaje o una actualización de documento? Para mayor confiabilidad, Alice puede optar por configurar un hub de Osvauld (un dispositivo personal pequeño) en su hogar.",
+        "description2": "Este hub actúa como su asistente de confianza, siempre activo. Puede enviar sus archivos a su propio hub, que luego los reenviará de forma segura a Bob en el momento en que se conecte.",
+        "description3": "Esta configuración garantiza que su colaboración nunca se interrumpa y que sus proyectos compartidos estén siempre sincronizados. Es una mejora opcional para mayor comodidad, no un requisito."
       },
-      "encryption": "Todos los datos están cifrados de extremo a extremo, por lo que solo los usuarios autorizados pueden acceder."
+      "encryption": "En ambos escenarios, cada archivo está sellado de una manera que está criptográficamente garantizado que solo pueda ser abierto por el destinatario previsto."
     },
     "trustAndControl": {
-      "title": "Confianza y control",
-      "description1": "Con Osvauld, tienes control total sobre tus datos.",
-      "description2": "Ningún tercero puede acceder a tu información o monitorearla.",
-      "description3": "Tú decides quién puede acceder y cómo se usan tus datos."
+      "title": "Un nuevo nivel de confianza y control",
+      "description1": "Debido a que Osvauld está diseñado para círculos de confianza, desbloquea formas más profundas de colaborar. Más allá de solo enviar archivos de un lado a otro, Alice puede otorgar a Bob permisos específicos para acceder a información directamente en su dispositivo principal.",
+      "description2": "Por ejemplo, podría darle al dispositivo de Bob acceso criptográficamente garantizado para ver una carpeta de proyecto específica en su computadora portátil durante una tarde. Esto es el equivalente digital de darle a un colega de confianza la llave de tu oficina por unas horas—poderoso, seguro y completamente bajo tu control.",
+      "description3": "Esta arquitectura completa—donde creas tu propia identidad y te conectas directamente con tu red de confianza—es lo que te hace verdaderamente autosuficiente. Las aplicaciones están diseñadas para funcionar sin conexión porque tus datos viven contigo. Tú decides si conectarte directamente o usar un hub personal para mayor comodidad, asegurando que nunca más dependas de un servicio de terceros."
     },
-    "discussButton": "Discutir con nosotros"
+    "discussButton": "Discutir con"
   },
   "collaborativeEditor": {
-    "title": "Livnote: Editor de texto colaborativo",
-    "subtitle": "Experimenta el poder de Osvauld con Livnote - un editor de documentos peer-to-peer con colaboración en tiempo real.",
+    "title": "Explorar editor de texto colaborativo",
+    "subtitle": "Primera de muchas herramientas para un internet personal.",
     "exploreButton": "Explorar Livnote"
   },
   "communitySection": {
-    "title": "Únete a nuestra comunidad",
-    "description": "Sé parte de una comunidad creciente de desarrolladores y usuarios dedicados al futuro de las aplicaciones descentralizadas.",
-    "joinButton": "Únete ahora"
+    "title": "Lee más en la Documentación<br />&<br />Encuentra la comunidad Osvauld en Telegram"
   },
   "acknowledgement": {
     "title": "Reconocimientos",
     "description": "Este proyecto ha recibido apoyo de Zerodha's FLOSS fund y de KSUM Innovation Grant."
   },
   "livnoteHero": {
-    "title": "Escribe juntos,<br />mantente privado",
-    "description": "Livnote te permite crear y editar notas con otros.<br class=\"hidden md:block\" /> En tiempo real, offline-first y cifrado de extremo a extremo.<br class=\"hidden md:block\" /> - sin tocar nunca un servidor en la nube.",
     "openSource": "Somos código abierto",
     "starOnGithub": "Danos una estrella en GitHub",
+    "title": "Escribe juntos,<br />mantente privado",
+    "description": "Livnote te permite crear y editar notas con otros.<br class=\"hidden md:block\" /> en tiempo real, offline-first y cifrado de extremo a extremo.<br class=\"hidden md:block\" /> - sin tocar nunca un servidor en la nube.",
     "download": "Descargar",
     "choosePlatform": "Elige tu plataforma:",
     "platforms": {
