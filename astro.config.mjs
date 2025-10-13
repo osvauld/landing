@@ -8,7 +8,7 @@ export default defineConfig({
   site: "https://osvauld.com",
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "de", "ru", "zh", "fr", "es", "ja"],
+    locales: ["en", "de", "ru", "zh", "fr", "es", "ja", "ml", "hi", "kn", "ta", "te", "mr", "ur", "ar", "ko"],
     routing: {
       prefixDefaultLocale: false,
     },
@@ -29,6 +29,15 @@ export default defineConfig({
           fr: "fr",
           es: "es",
           ja: "ja",
+          ml: "ml",
+          hi: "hi",
+          kn: "kn",
+          ta: "ta",
+          te: "te",
+          mr: "mr",
+          ur: "ur",
+          ar: "ar",
+          ko: "ko",
         },
       },
     })
