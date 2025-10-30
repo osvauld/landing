@@ -23,6 +23,7 @@ const {
 } = Astro.props;
 
 const isLivnote = Astro.url.pathname.includes("/livnote");
+const isSthalam = Astro.url.pathname.includes("/sthalam");
 
 // Choose the appropriate thumbnail based on the page
 const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
@@ -350,9 +351,9 @@ const availableLocales = getAvailableLocales();
   </script>
 
   <div>
-    <Navbar isLivnote={isLivnote} locale={locale} />
+    <Navbar isLivnote={isLivnote} isSthalam={isSthalam} locale={locale} />
     <slot />
-    <Footer isLivnote={isLivnote} locale={locale} />
+    <Footer isLivnote={isLivnote} isSthalam={isSthalam} locale={locale} />
     <style is:global>
       html {
         font-family: "Host Grotesk", "Inter", "Plus Jakarta Sans";

@@ -187,6 +187,10 @@
     "story": {
       "title": "आमची कथा",
       "description": "Osvauld मागील प्रवास आणि गोपनीयता-प्रथम अॅप्लिकेशन्स तयार करण्याच्या आमच्या मिशनबद्दल जाणून घ्या"
+    },
+    "sthalam": {
+      "title": "Sthalam - Sovereign Publishing Platform",
+      "description": "Sthalam is a sovereign publishing platform built with Osvauld framework. Create websites, blogs, and newsletters with complete control—your content, your node, your rules."
     }
   },
   "faq": {
@@ -417,5 +421,57 @@
     "loading": "Loading...",
     "error": "Error",
     "retry": "Retry"
+  },
+  "sthalamHero": {
+    "openSource": "MIT Licensed • Open Source",
+    "title": "Your place<br />on the internet",
+    "description": "Sthalam lets you publish websites, blogs, and newsletters<br class=\"hidden md:block\" /> with complete sovereignty—built on the Osvauld framework.<br class=\"hidden md:block\" /> Your content, your node, your rules."
+  },
+  "sthalamFeatures": {
+    "title": "Features",
+    "sovereignPublishing": {
+      "title": "Sovereign Publishing",
+      "description": "Publish content on your terms. Run your node on a <span class=\"text-purple-300 font-medium\">Raspberry Pi</span> or old phone—your infrastructure, your control."
+    },
+    "websites": {
+      "title": "Interactive Websites",
+      "description": "Build <span class=\"text-purple-300 font-medium\">multi-page websites</span> with visual builders, custom styling, and interactive elements—all sovereign."
+    },
+    "blogsNewsletters": {
+      "title": "Blogs & Newsletters",
+      "description": "Publish <span class=\"text-purple-300 font-medium\">micro-blogs</span> and newsletters directly to your viewers without platforms or restrictions."
+    },
+    "formsSubmissions": {
+      "title": "Forms & Surveys",
+      "description": "Collect feedback with <span class=\"text-purple-300 font-medium\">privacy-preserving forms</span>—only you see the submissions, nobody else."
+    },
+    "comments": {
+      "title": "Comment Threads",
+      "description": "Enable <span class=\"text-purple-300 font-medium\">real-time discussions</span> on your content with CRDT-powered comment threads."
+    },
+    "ucanAuth": {
+      "title": "UCAN Authorization",
+      "description": "Control access with <span class=\"text-purple-300 font-medium\">cryptographic tokens</span>—share content with specific capabilities and permissions."
+    },
+    "noIntermediaries": {
+      "title": "Direct Distribution",
+      "description": "Content flows <span class=\"text-purple-300 font-medium\">directly from your node</span> to viewers—no platforms, no algorithms, no middlemen."
+    },
+    "dataPrivacy": {
+      "title": "Your Data, Your Control",
+      "description": "All data exists only between you and your viewers. <span class=\"text-purple-300 font-medium\">Nobody else</span> has access—not even us."
+    },
+    "builtOnOsvauld": {
+      "title": "Built on Osvauld",
+      "description": "Powered by the <span class=\"text-purple-300 font-medium\">Osvauld framework</span>—peer-to-peer, end-to-end encrypted, offline-first architecture."
+    }
+  },
+  "sthalamPhilosophy": {
+    "title": "Why Sthalam?",
+    "description": "We're building Sthalam because we believe you shouldn't need permission to publish.<br /><br />In a world where publishing means uploading to corporate platforms that can deplatform you, censor your content, or change the rules overnight, we're creating an alternative.<br /><br />Sthalam (Malayalam: സ്ഥലം, meaning 'place') gives you your own place on the internet—one that nobody can take away.<br /><br />Your blogs, your surveys, your viewers' comments—all exist only between you and them. We don't store your content. We don't have access to your publishing node. We don't even know what you're publishing—and that's exactly how it should be.<br /><br />Built on the Osvauld framework, Sthalam is part of a movement toward digital sovereignty, where people create and share freely without surrendering control.<br /><br />This is proof-of-concept software. The architecture works, the cryptography is sound, but many features are still being refined. We're showing what's possible when you own your publishing infrastructure."
+  },
+  "sthalamAcknowledgement": {
+    "title": "Acknowledgements",
+    "description": "This project has received support from Zerodha's FLOSS fund and KSUM Innovation Grant."
   }
 }

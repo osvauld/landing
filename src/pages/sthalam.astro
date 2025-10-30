@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SthalamHero from "../components/sthalam/SthalamHero.astro";
+import SthalamHeroImage from "../components/sthalam/SthalamHeroImage.astro";
+import SthalamFeatures from "../components/sthalam/SthalamFeatures.astro";
+import SthalamPhilosophy from "../components/sthalam/SthalamPhilosophy.astro";
+import SthalamAcknowledgement from "../components/sthalam/SthalamAcknowledgement.astro";
+import { getTranslations } from "../i18n/utils";
+
+const translations = await getTranslations("en");
+---
+
+<Layout title={translations.meta.sthalam.title} description={translations.meta.sthalam.description} locale="en">
+  <SthalamHero translations={translations} />
+  <SthalamHeroImage/>
+  <SthalamFeatures translations={translations} />
+  <SthalamPhilosophy translations={translations} />
+  <SthalamAcknowledgement translations={translations} />
+</Layout>

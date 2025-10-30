@@ -41,6 +41,7 @@ module.exports = {
         tabBg: "#292A36",
         livnoteBg: "#000",
         livnotePrimary: "#8A86E5",
+        sthalamPrimary: "#cba6f7",
         customGray: "#B4B9BE",
       },
       fontFamily: {

@@ -7,19 +7,22 @@ import type { Locale } from "../i18n/ui";
 
 interface Props {
   isLivnote?: boolean;
+  isSthalam?: boolean;
   locale?: Locale;
 }
 
-const { isLivnote = false, locale = "en" } = Astro.props as Props;
+const { isLivnote = false, isSthalam = false, locale = "en" } = Astro.props as Props;
 
 const translations = await getTranslations(locale);
 
-const heading = isLivnote
+const heading = isSthalam
+  ? translations.footer.heading.sthalam
+  : isLivnote
   ? translations.footer.heading.livnote
   : translations.footer.heading.osvauld;
 ---
 
-<section id="page-footer" class={`w-full ${isLivnote ? "bg-livnotePrimary" : "bg-blue1"} z-50`}>
+<section id="page-footer" class={`w-full ${isSthalam ? "bg-sthalamPrimary" : isLivnote ? "bg-livnotePrimary" : "bg-blue1"} z-50`}>
   <footer class="relative mx-auto h-[42rem]  md:h-[56rem] px-[24px] pt-[32px]  max-w-[1312px]  min-h-[545px] lg:px-[60px] lg:pt-[60px]">
     <div class="flex h-full flex-col gap-32">
       <div class="flex flex-col gap-24">
