@@ -1,0 +1,26 @@
+---
+import sthalamHeroSource from "../../assets/images/sthalam-upload.png";
+---
+
+<section
+  class="px-2 pr-1 flex flex-col justify-start items-center bg-dark1 overflow-x-hidden"
+  id="hero-image"
+>
+  <div
+    class="max-w-[1440px] w-full overflow-x-hidden overflow-y-hidden pt-4 xll:px-12"
+  >
+    <div class="flex justify-center items-center lg:mt-12 overflow-hidden relative" style="aspect-ratio: 1900/954;">
+      <img
+        id="hero-full-image"
+        src={sthalamHeroSource.src}
+        alt="Sthalam sovereign publishing platform interface showing website builder and form creation"
+        width="1900"
+        height="954"
+        class="z-10 absolute w-full h-full top-0 left-0 object-cover"
+        loading="eager"
+        decoding="async"
+        fetchpriority="auto"
+      />
+    </div>
+  </div>
+</section>

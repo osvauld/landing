@@ -138,7 +138,7 @@ export interface TranslationKeys {
   };
 }
 
-export type Locale = 'en' | 'de' | 'ru' | 'zh' | 'fr' | 'es' | 'ja';
+export type Locale = 'en' | 'de' | 'ru' | 'zh' | 'fr' | 'es' | 'ja' | 'ml' | 'hi' | 'kn' | 'ta' | 'te' | 'mr' | 'ur' | 'ar' | 'ko';
 
 export interface Translations {
   [key: string]: TranslationKeys;

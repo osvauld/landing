@@ -1,164 +1,163 @@
 {
   "nav": {
     "github": "GitHub",
-    "documentation": "Documentation",
-    "faq": "FAQ",
-    "story": "Our story",
-    "visitOsvauld": "Visit Osvauld",
-    "tryLivnote": "Try Livnote",
-    "trySthalam": "Explore Sthalam"
+    "documentation": "문서",
+    "faq": "자주 묻는 질문",
+    "story": "우리의 이야기",
+    "visitOsvauld": "Osvauld 방문",
+    "tryLivnote": "Livnote 사용해보기"
   },
   "footer": {
     "heading": {
-      "osvauld": "Connect without compromise.",
-      "livnote": "Notes that live with you.",
+      "osvauld": "타협 없이 연결하세요.",
+      "livnote": "당신과 함께하는 노트.",
       "sthalam": "Your place on the internet."
     },
-    "terms": "Terms of Use",
-    "privacy": "Privacy Policy",
+    "terms": "이용 약관",
+    "privacy": "개인정보 보호정책",
     "copyright": "Osvauld Security Solutions Pvt Limited @ 2025"
   },
   "osvauldHero": {
-    "title": "Personal Internet<br />Complete Control<br />Absolute Privacy",
-    "subtitle": "Offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life. Designed for trusted circles of friends and colleagues who want private, reliable collaboration without depending on third-party services even for auth and sync."
+    "title": "개인 인터넷<br />완전한 제어<br />절대적인 프라이버시",
+    "subtitle": "오프라인 우선, 종단 간 암호화, 피어 투 피어 애플리케이션으로 진정한 독립적인 디지털 삶을 구축할 수 있습니다. 인증과 동기화를 위해 제3자 서비스에 의존하지 않고도 사적이고 신뢰할 수 있는 협업을 원하는 친구와 동료들의 신뢰할 수 있는 서클을 위해 설계되었습니다."
   },
   "features": {
-    "title": "Features",
+    "title": "기능",
     "peerToPeer": {
-      "title": "Peer-to-Peer by Default",
-      "description": "Apps connect directly - no middlemen, no servers in the way."
+      "title": "기본적으로 피어 투 피어",
+      "description": "앱이 직접 연결됩니다 - 중간자 없음, 서버 없음."
     },
     "trustedAccess": {
-      "title": "Trusted Access",
-      "description": "Simple, secure access control powered by modern cryptographic tokens."
+      "title": "신뢰할 수 있는 액세스",
+      "description": "현대적인 암호화 토큰으로 구동되는 간단하고 안전한 액세스 제어."
     },
     "offlineFirst": {
-      "title": "Offline-First",
-      "description": "Work without interruption. Everything syncs automatically when devices reconnect."
+      "title": "오프라인 우선",
+      "description": "중단 없이 작업하세요. 디바이스가 다시 연결되면 모든 것이 자동으로 동기화됩니다."
     },
     "selfSovereign": {
-      "title": "Self-Sovereign Identity",
-      "description": "You own your identity - no one can take it away or lock you out."
+      "title": "자기 주권 신원",
+      "description": "당신의 신원은 당신의 것입니다 - 아무도 가져가거나 당신을 차단할 수 없습니다."
     },
     "openSource": {
-      "title": "Open Source & MIT Licensed",
-      "description": "Transparent, community-driven, and free for everyone to use and build on."
+      "title": "오픈 소스 및 MIT 라이선스",
+      "description": "투명하고 커뮤니티 주도적이며 모든 사람이 사용하고 구축할 수 있는 무료입니다."
     },
     "sovereignNode": {
-      "title": "Sovereign Node",
-      "description": "Run your own always-on node (even on a Raspberry Pi) and stay connected on your terms."
+      "title": "주권 노드",
+      "description": "자신만의 항상 켜진 노드를 실행하세요 (Raspberry Pi에서도) 그리고 자신의 조건으로 연결을 유지하세요."
     }
   },
   "structuralDependencies": {
-    "title": "Dependencies of the current ecosystem",
-    "description": "Your access and usage are tied to cloud providers who can lock you out at any time, while your digital identity depends on email, phone, or social logins that can also be revoked. Likewise, your data resides on their platforms, bound by shifting policies and legal requirements, leaving you with limited control and vulnerable to changes beyond your influence."
+    "title": "현재 생태계의 의존성",
+    "description": "귀하의 접근과 사용은 언제든지 귀하를 차단할 수 있는 클라우드 제공업체에 묶여 있으며, 귀하의 디지털 신원은 마찬가지로 취소될 수 있는 이메일, 전화 또는 소셜 로그인에 의존합니다. 마찬가지로, 귀하의 데이터는 그들의 플랫폼에 상주하며, 변화하는 정책과 법적 요구사항에 묶여 있어 제한된 통제를 남기고 귀하의 영향력 범위를 넘어선 변화에 취약하게 만듭니다."
   },
   "introducingOsvauld": {
-    "title": "How Osvauld Works: A Story of True Independence",
-    "intro": "To understand how Osvauld helps you build a truly independent digital life, let's look at how trusted friends, Alice and Bob, collaborate.",
+    "title": "Osvauld 작동 방식: 진정한 독립의 이야기",
+    "intro": "Osvauld가 어떻게 진정으로 독립적인 디지털 생활을 구축하는 데 도움이 되는지 이해하기 위해, 신뢰할 수 있는 친구들인 Alice와 Bob이 어떻게 협력하는지 살펴보겠습니다.",
     "foundation": {
-      "title": "The Foundation: Your Self-Made Identity",
-      "description": "Alice doesn't sign up for Osvauld with an email or phone number. Instead, right on her own device—be it a laptop or a phone—she creates her own unique digital identity. This identity belongs to her, and her alone, from the moment of its creation. It's cryptographically guaranteed to be hers, and since she created it, no company can ever take it away."
+      "title": "기초: 스스로 만든 신원",
+      "description": "Alice는 이메일이나 전화번호로 Osvauld에 가입하지 않습니다. 대신, 자신의 기기에서 직접—노트북이든 휴대폰이든—고유한 디지털 신원을 만듭니다. 이 신원은 생성된 순간부터 그녀의 것이며 그녀만의 것입니다. 암호학적으로 그녀의 것임이 보장되며, 그녀가 만들었기 때문에 어떤 회사도 그것을 빼앗을 수 없습니다."
     },
     "collaboration": {
-      "title": "How Collaboration Works: Direct, Private, and Reliable",
-      "intro": "Osvauld is built for people who already know and trust each other, like friends and colleagues. It offers a private space for them to connect and share.",
+      "title": "협력 작동 방식: 직접적, 비공개, 신뢰할 수 있음",
+      "intro": "Osvauld는 이미 서로를 알고 신뢰하는 사람들, 즉 친구와 동료들을 위해 구축되었습니다. 연결하고 공유할 수 있는 비공개 공간을 제공합니다.",
       "directConnection": {
-        "title": "1. The Ideal Connection: Direct and Instant",
-        "description": "If Alice and Bob are both online, their devices connect directly to each other. When Alice shares a file, it goes straight from her device to Bob's—no middleman involved. This is the fastest, most private way to interact."
+        "title": "1. 이상적인 연결: 직접적이고 즉시",
+        "description": "Alice와 Bob이 모두 온라인 상태라면, 그들의 기기는 서로 직접 연결됩니다. Alice가 파일을 공유하면, 중간 매개자 없이 그녀의 기기에서 Bob의 기기로 바로 전송됩니다. 이것이 가장 빠르고 가장 비공개적인 상호작용 방법입니다."
       },
       "optionalHub": {
-        "title": "2. The Optional Hub: Your Personal Assistant",
-        "description1": "But what if Bob is offline when Alice sends a message or a document update? For enhanced reliability, Alice can choose to set up an Osvauld hub (a small, personal device) in her home.",
-        "description2": "This hub acts as her trusted, always-on assistant. She can send her files to her own hub, which will then securely forward them to Bob the moment he comes online.",
-        "description3": "This setup ensures their collaboration is never interrupted, and their shared projects are always in sync. It's an optional upgrade for convenience, not a requirement."
+        "title": "2. 선택적 허브: 개인 어시스턴트",
+        "description1": "하지만 Alice가 메시지나 문서 업데이트를 보낼 때 Bob이 오프라인 상태라면 어떨까요? 향상된 신뢰성을 위해 Alice는 집에 Osvauld 허브(작은 개인 기기)를 설치하는 것을 선택할 수 있습니다.",
+        "description2": "이 허브는 그녀의 신뢰할 수 있는 항상 켜진 어시스턴트 역할을 합니다. 그녀는 파일을 자신의 허브로 보낼 수 있으며, 허브는 Bob이 온라인 상태가 되는 순간 안전하게 그에게 전달합니다.",
+        "description3": "이 설정은 그들의 협력이 결코 중단되지 않고, 공유 프로젝트가 항상 동기화되도록 보장합니다. 편의를 위한 선택적 업그레이드이며 필수 요구사항은 아닙니다."
       },
-      "encryption": "In both scenarios, every file is sealed in a way that is cryptographically guaranteed to be opened only by the intended recipient."
+      "encryption": "두 시나리오 모두에서, 모든 파일은 암호학적으로 의도된 수신자만이 열 수 있도록 보장되는 방식으로 봉인됩니다."
     },
     "trustAndControl": {
-      "title": "A New Level of Trust and Control",
-      "description1": "Because Osvauld is designed for trusted circles, it unlocks deeper ways to collaborate. Beyond just sending files back and forth, Alice can grant Bob specific permissions to access information directly on her primary device.",
-      "description2": "For example, she could give Bob's device cryptographically-guaranteed access to view a specific project folder on her laptop for one afternoon. This is the digital equivalent of giving a trusted colleague the key to your office for a few hours—powerful, secure, and entirely under your control.",
-      "description3": "This entire architecture—where you create your own identity and connect directly with your trusted network—is what makes you truly self-sufficient. Apps are designed to work offline because your data lives with you. You decide whether to connect directly or use a personal hub for convenience, ensuring you are never dependent on a third-party service again."
+      "title": "신뢰와 통제의 새로운 수준",
+      "description1": "Osvauld가 신뢰할 수 있는 서클을 위해 설계되었기 때문에, 더 깊은 협력 방법을 제공합니다. 단순히 파일을 주고받는 것을 넘어서, Alice는 Bob에게 기본 기기에서 정보에 직접 접근할 수 있는 특정 권한을 부여할 수 있습니다.",
+      "description2": "예를 들어, 그녀는 Bob의 기기에 오후 동안 노트북의 특정 프로젝트 폴더를 볼 수 있는 암호학적으로 보장된 접근을 제공할 수 있습니다. 이것은 신뢰할 수 있는 동료에게 몇 시간 동안 사무실 열쇠를 주는 것의 디지털 등가물입니다—강력하고 안전하며 완전히 귀하의 통제 하에 있습니다.",
+      "description3": "이 전체 아키텍처—자신의 신원을 만들고 신뢰할 수 있는 네트워크와 직접 연결하는—가 바로 귀하를 진정으로 자급자족하게 만드는 것입니다. 앱은 귀하의 데이터가 귀하와 함께 있기 때문에 오프라인에서 작동하도록 설계되었습니다. 직접 연결할지 편의를 위해 개인 허브를 사용할지 결정하며, 다시는 제3자 서비스에 의존하지 않도록 합니다."
     },
-    "discussButton": "Discuss with"
+    "discussButton": "토론하기"
   },
   "collaborativeEditor": {
-    "title": "Explore collaborative text editor",
-    "subtitle": "First of many tools for a personal internet.",
-    "exploreButton": "Explore Livnote"
+    "title": "협업 텍스트 에디터 탐색",
+    "subtitle": "개인 인터넷을 위한 많은 도구 중 첫 번째.",
+    "exploreButton": "Livnote 탐색"
   },
   "communitySection": {
-    "title": "Read more in Documentation<br />&<br />Find Osvauld community on Telegram"
+    "title": "문서에서 더 읽기<br />&<br />Telegram에서 Osvauld 커뮤니티 찾기"
   },
   "acknowledgement": {
-    "title": "Acknowledgements",
-    "description": "This project has received support from Zerodha's FLOSS fund and KSUM Innovation Grant."
+    "title": "감사의 말",
+    "description": "이 프로젝트는 Zerodha의 FLOSS 펀드와 KSUM 혁신 그랜트로부터 지원을 받았습니다."
   },
   "livnoteHero": {
-    "openSource": "We are open-source",
-    "starOnGithub": "Star us on GitHub",
-    "title": "Write together,<br />stay private",
-    "description": "Livnote lets you create and edit notes with others.<br class=\"hidden md:block\" /> live, offline-first, and end-to-end encrypted.<br class=\"hidden md:block\" />- without anything ever touching a cloud server.",
-    "download": "Download",
-    "choosePlatform": "Choose your platform:",
+    "openSource": "우리는 오픈소스입니다",
+    "starOnGithub": "GitHub에서 스타해주세요",
+    "title": "함께 쓰고,<br />비공개로 유지하세요",
+    "description": "Livnote는 다른 사람들과 노트를 만들고 편집할 수 있게 해줍니다.<br class=\"hidden md:block\" /> 실시간, 오프라인 우선, 그리고 종단간 암호화.<br class=\"hidden md:block\" />- 클라우드 서버에 전혀 접촉하지 않고.",
+    "download": "다운로드",
+    "choosePlatform": "플랫폼을 선택하세요:",
     "platforms": {
       "mac": "Mac (Apple Silicon)",
       "linux": "Linux (Debian)",
       "fedora": "Linux (Fedora)",
       "windows": "Windows"
     },
-    "desktopOnly": "Desktop only"
+    "desktopOnly": "데스크톱 전용"
   },
   "livnoteFeatures": {
-    "title": "Features",
+    "title": "기능",
     "effortlessWriting": {
-      "title": "Effortless Writing Experience",
-      "description": "A clean, powerful <span class=\"text-purple-300 font-medium\">rich-text editor</span> built for focus. Format effortlessly and stay in flow while writing."
+      "title": "수월한 작성 경험",
+      "description": "집중을 위해 구축된 깔끔하고 강력한 <span class=\"text-purple-300 font-medium\">리치 텍스트 에디터</span>. 작성 중 쉽게 포맷하고 흐름을 유지하세요."
     },
     "realTimeCollaboration": {
-      "title": "Real-Time Collaboration",
-      "description": "Collaborate instantly with <span class=\"text-purple-300 font-medium\">live edits</span> and comments - powered by next-gen <span class=\"text-purple-300 font-medium\">CRDT technology</span> for seamless sync."
+      "title": "실시간 협업",
+      "description": "<span class=\"text-purple-300 font-medium\">라이브 편집</span>과 댓글로 즉시 협업하세요 - 원활한 동기화를 위한 차세대 <span class=\"text-purple-300 font-medium\">CRDT 기술</span>로 구동됩니다."
     },
     "markdownSupport": {
-      "title": "Full Markdown Support",
-      "description": "Write in <span class=\"text-purple-300 font-medium\">Markdown</span> with <span class=\"text-purple-300 font-medium\">instant preview</span> and edit saved AI responses without losing formatting."
+      "title": "전체 Markdown 지원",
+      "description": "<span class=\"text-purple-300 font-medium\">즉시 미리보기</span>와 함께 <span class=\"text-purple-300 font-medium\">Markdown</span>으로 작성하고 포맷팅을 잃지 않고 저장된 AI 응답을 편집하세요."
     },
     "powerfulSearch": {
-      "title": "Powerful Search",
-      "description": "Search encrypted notes with <span class=\"text-purple-300 font-medium\">rich previews</span>, or search within notes using <span class=\"text-purple-300 font-medium\">VS Code–style find and replace</span> — both fully encrypted and lightning fast."
+      "title": "강력한 검색",
+      "description": "<span class=\"text-purple-300 font-medium\">풍부한 미리보기</span>로 암호화된 노트를 검색하거나 <span class=\"text-purple-300 font-medium\">VS Code 스타일 찾기 및 바꾸기</span>를 사용하여 노트 내에서 검색하세요 — 둘 다 완전히 암호화되고 번개처럼 빠릅니다."
     },
     "mathSupport": {
-      "title": "Advanced Math Support",
-      "description": "Write complex equations effortlessly with full <span class=\"text-purple-300 font-medium\">LaTeX</span> and <span class=\"text-purple-300 font-medium\">KaTeX</span> support. Edit, preview, and format math expressions in real time — just like regular text."
+      "title": "고급 수학 지원",
+      "description": "전체 <span class=\"text-purple-300 font-medium\">LaTeX</span> 및 <span class=\"text-purple-300 font-medium\">KaTeX</span> 지원으로 복잡한 방정식을 쉽게 작성하세요. 실시간으로 수학 표현식을 편집, 미리보기 및 포맷하세요 — 일반 텍스트와 같습니다."
     },
     "productivityShortcuts": {
-      "title": "Productivity Shortcuts",
-      "description": "Access <span class=\"text-purple-300 font-medium\">floating and slash menus</span>, <span class=\"text-purple-300 font-medium\">markdown shortcuts</span>, tables, images, and code blocks - everything for faster creation."
+      "title": "생산성 단축키",
+      "description": "<span class=\"text-purple-300 font-medium\">플로팅 및 슬래시 메뉴</span>, <span class=\"text-purple-300 font-medium\">markdown 단축키</span>, 테이블, 이미지 및 코드 블록에 액세스하세요 — 더 빠른 생성을 위한 모든 것."
     },
     "offlineFirst": {
-      "title": "Offline-First Architecture",
-      "description": "Keep working even when <span class=\"text-purple-300 font-medium\">offline</span>. Your notes <span class=\"text-purple-300 font-medium\">sync automatically</span> the moment you reconnect."
+      "title": "오프라인 우선 아키텍처",
+      "description": "<span class=\"text-purple-300 font-medium\">오프라인</span>일 때도 계속 작업하세요. 다시 연결하는 순간 노트가 <span class=\"text-purple-300 font-medium\">자동으로 동기화</span>됩니다."
     },
     "peerToPeerSync": {
-      "title": "Peer-to-Peer Sync",
-      "description": "Connect directly with collaborators - <span class=\"text-purple-300 font-medium\">no central servers</span>, no middlemen. Just speed and privacy."
+      "title": "피어 투 피어 동기화",
+      "description": "협업자와 직접 연결하세요 — <span class=\"text-purple-300 font-medium\">중앙 서버 없음</span>, 중간자 없음. 단지 속도와 프라이버시입니다."
     },
     "endToEndEncryption": {
-      "title": "End-to-End Encryption",
-      "description": "Enjoy true privacy with <span class=\"text-purple-300 font-medium\">zero-knowledge</span>, <span class=\"text-purple-300 font-medium\">military-grade encryption</span>. Only you and your collaborators can read your data."
+      "title": "종단간 암호화",
+      "description": "<span class=\"text-purple-300 font-medium\">제로 지식</span>, <span class=\"text-purple-300 font-medium\">군사급 암호화</span>로 진정한 프라이버시를 즐기세요. 오직 당신과 협업자만이 데이터를 읽을 수 있습니다."
     },
     "noCloud": {
-      "title": "No Cloud",
-      "description": "<span class=\"text-purple-300 font-medium\">Start instantly</span> - no signups, no emails, no data collection. Your data stays entirely with you."
+      "title": "클라우드 없음",
+      "description": "<span class=\"text-purple-300 font-medium\">즉시 시작</span> — 가입 없음, 이메일 없음, 데이터 수집 없음. 데이터는 완전히 당신과 함께 있습니다."
     },
     "lightweightNative": {
-      "title": "Lightweight Native App",
-      "description": "Experience <span class=\"text-purple-300 font-medium\">native performance</span> in a minimal, <span class=\"text-purple-300 font-medium\">ultra-fast desktop app</span>. Small footprint, instant launch."
+      "title": "경량 네이티브 앱",
+      "description": "최소한의 <span class=\"text-purple-300 font-medium\">초고속 데스크톱 앱</span>에서 <span class=\"text-purple-300 font-medium\">네이티브 성능</span>을 경험하세요. 작은 공간, 즉시 실행."
     },
     "foreverFree": {
-      "title": "Forever Free",
-      "description": "<span class=\"text-purple-300 font-medium\">No paywalls</span> or feature limits. Every feature, <span class=\"text-purple-300 font-medium\">free for everyone, forever</span>."
+      "title": "영원히 무료",
+      "description": "<span class=\"text-purple-300 font-medium\">페이월 없음</span> 또는 기능 제한 없음. 모든 기능, <span class=\"text-purple-300 font-medium\">모든 사람에게 영원히 무료</span>."
     }
   },
   "livnotePhilosophy": {
@@ -167,81 +166,81 @@
   },
   "meta": {
     "osvauld": {
-      "title": "Osvauld - The Building Block of Next Generation of Applications",
-      "description": "Offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life. Designed for trusted circles of friends and colleagues who want private, reliable collaboration without depending on third-party services even for auth and sync."
+      "title": "Osvauld - 차세대 애플리케이션의 빌딩 블록",
+      "description": "오프라인 우선, 종단 간 암호화, 피어 투 피어 애플리케이션으로 진정한 독립적인 디지털 삶을 구축할 수 있습니다."
     },
     "livnote": {
-      "title": "Livnote - Peer-to-peer Collaborative Document Editor",
-      "description": "Livnote is a collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design."
+      "title": "Livnote - 피어 투 피어 협업 문서 편집기",
+      "description": "Livnote는 Osvauld 프레임워크로 구축된 협업 문서 편집기로, 종단 간 암호화와 오프라인 우선 디자인을 갖춘 실시간 피어 투 피어 편집을 제공합니다."
     },
     "sthalam": {
       "title": "Sthalam - Sovereign Publishing Platform",
       "description": "Sthalam is a sovereign publishing platform built with Osvauld framework. Create websites, blogs, and newsletters with complete control—your content, your node, your rules."
     },
     "faq": {
-      "title": "FAQ's",
-      "description": "Frequently Asked Questions about Osvauld"
+      "title": "자주 묻는 질문",
+      "description": "Osvauld에 대한 자주 묻는 질문"
     },
     "privacy": {
-      "title": "Privacy Policy",
-      "description": "Privacy Policy for Osvauld Security Solutions"
+      "title": "개인정보 보호정책",
+      "description": "Osvauld Security Solutions의 개인정보 보호정책"
     },
     "terms": {
-      "title": "Terms of Use",
-      "description": "Terms of Use for Osvauld Security Solutions"
+      "title": "이용 약관",
+      "description": "Osvauld Security Solutions의 이용 약관"
     },
     "story": {
-      "title": "Our Story",
-      "description": "Learn about the journey behind Osvauld and our mission to build privacy-first applications"
+      "title": "우리의 이야기",
+      "description": "Osvauld 뒤의 여정과 프라이버시 우선 애플리케이션 구축을 위한 우리의 미션에 대해 알아보세요"
     }
   },
   "faq": {
-    "title": "Frequently Asked Questions",
-    "builtWithOsvauld": "Built with <span class=\"inline-block align-middle\" aria-label=\"love\" title=\"love\">❤️</span> on <span class=\"text-white\">Osvauld</span>",
-    "buildingBlock": "Building Block for the Next Generation of P2P Applications",
-    "visit": "Visit",
+    "title": "자주 묻는 질문",
+    "builtWithOsvauld": "<span class=\"text-white\">Osvauld</span>에서 <span class=\"inline-block align-middle\" aria-label=\"love\" title=\"love\">❤️</span>와 함께 구축",
+    "buildingBlock": "차세대 P2P 애플리케이션을 위한 빌딩 블록",
+    "visit": "방문",
     "osvauldData": [
       {
-        "question": "What is Osvauld?",
-        "answer": "Osvauld is a framework for building peer-to-peer applications that prioritize privacy, security, and user control. It provides the building blocks needed to create offline-first, end-to-end encrypted applications that work without relying on centralized servers."
+        "question": "Osvauld란 무엇인가요?",
+        "answer": "Osvauld는 프라이버시, 보안, 사용자 제어를 우선시하는 피어 투 피어 애플리케이션을 구축하기 위한 프레임워크입니다. 중앙화된 서버에 의존하지 않고 작동하는 오프라인 우선, 종단 간 암호화 애플리케이션을 생성하는 데 필요한 빌딩 블록을 제공합니다."
       },
       {
-        "question": "How does peer-to-peer networking work?",
-        "answer": "Peer-to-peer networking allows devices to connect directly to each other without going through a central server. In Osvauld, this means your data travels directly between trusted devices, ensuring privacy and reducing dependency on external services."
+        "question": "피어 투 피어 네트워킹은 어떻게 작동하나요?",
+        "answer": "피어 투 피어 네트워킹은 중앙 서버를 거치지 않고 디바이스가 서로 직접 연결될 수 있게 합니다. Osvauld에서는 이는 귀하의 데이터가 신뢰할 수 있는 디바이스 간에 직접 전송된다는 의미로, 프라이버시를 보장하고 외부 서비스에 대한 의존성을 줄입니다."
       },
       {
-        "question": "Is Osvauld open source?",
-        "answer": "Yes, Osvauld is completely open source and licensed under the MIT License. This means you can use, modify, and distribute the software freely, and you can inspect the source code to verify its security and privacy claims."
+        "question": "Osvauld는 오픈 소스인가요?",
+        "answer": "네, Osvauld는 완전히 오픈 소스이며 MIT 라이선스 하에 라이선스가 부여됩니다. 이는 소프트웨어를 자유롭게 사용, 수정, 배포할 수 있으며 보안 및 프라이버시 주장을 검증하기 위해 소스 코드를 검사할 수 있다는 의미입니다."
       },
       {
-        "question": "What applications can I build with Osvauld?",
-        "answer": "You can build a wide variety of applications including collaborative document editors, secure messaging apps, file sharing tools, and any application that benefits from peer-to-peer connectivity and end-to-end encryption."
+        "question": "Osvauld로 어떤 애플리케이션을 구축할 수 있나요?",
+        "answer": "협업 문서 편집기, 보안 메시징 앱, 파일 공유 도구, 피어 투 피어 연결성과 종단 간 암호화의 이점을 누리는 모든 애플리케이션을 포함하여 다양한 애플리케이션을 구축할 수 있습니다."
       },
       {
-        "question": "How do I get started with Osvauld?",
-        "answer": "Visit our documentation at docs.osvauld.com to learn about the framework, check out our GitHub repository for examples, and join our community for support and collaboration."
+        "question": "Osvauld로 어떻게 시작하나요?",
+        "answer": "프레임워크에 대해 알아보려면 docs.osvauld.com에서 문서를 방문하고, 예제를 위해 GitHub 저장소를 확인하고, 지원과 협업을 위해 커뮤니티에 참여하세요."
       }
     ],
     "livnoteData": [
       {
-        "question": "What is Livnote?",
-        "answer": "Livnote is a collaborative document editor built with the Osvauld framework. It allows multiple people to edit documents together in real-time, with all data staying encrypted and under your control."
+        "question": "Livnote란 무엇인가요?",
+        "answer": "Livnote는 Osvauld 프레임워크로 구축된 협업 문서 편집기입니다. 모든 데이터가 암호화되어 귀하의 제어 하에 유지되는 동안 여러 사람이 실시간으로 함께 문서를 편집할 수 있게 합니다."
       },
       {
-        "question": "How does real-time collaboration work?",
-        "answer": "Livnote uses Conflict-free Replicated Data Types (CRDTs) to enable seamless real-time collaboration. Changes are synchronized directly between devices without going through any servers, ensuring your data never leaves your control."
+        "question": "실시간 협업은 어떻게 작동하나요?",
+        "answer": "Livnote는 원활한 실시간 협업을 가능하게 하기 위해 충돌 없는 복제 데이터 타입(CRDT)을 사용합니다. 변경사항은 서버를 거치지 않고 디바이스 간에 직접 동기화되어 귀하의 데이터가 귀하의 제어를 벗어나지 않도록 보장합니다."
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, Livnote uses end-to-end encryption for all documents. Only you and the people you explicitly share documents with can read the content. We cannot access your data, even if we wanted to."
+        "question": "내 데이터가 안전한가요?",
+        "answer": "네, Livnote는 모든 문서에 대해 종단 간 암호화를 사용합니다. 귀하와 귀하가 명시적으로 문서를 공유하는 사람들만 내용을 읽을 수 있습니다. 우리가 원한다고 해도 귀하의 데이터에 접근할 수 없습니다."
       },
       {
-        "question": "Can I use Livnote offline?",
-        "answer": "Absolutely! Livnote is designed to work offline-first. You can create and edit documents without an internet connection, and changes will sync automatically when you reconnect."
+        "question": "Livnote를 오프라인에서 사용할 수 있나요?",
+        "answer": "물론입니다! Livnote는 오프라인 우선으로 작동하도록 설계되었습니다. 인터넷 연결 없이 문서를 생성하고 편집할 수 있으며, 다시 연결하면 변경사항이 자동으로 동기화됩니다."
       },
       {
-        "question": "How do I share documents with others?",
-        "answer": "You can share documents by sending an invitation link or by connecting directly with other Livnote users. The sharing process uses peer-to-peer connections, so no data goes through our servers."
+        "question": "다른 사람들과 문서를 어떻게 공유하나요?",
+        "answer": "초대 링크를 보내거나 다른 Livnote 사용자와 직접 연결하여 문서를 공유할 수 있습니다. 공유 프로세스는 피어 투 피어 연결을 사용하므로 데이터가 우리 서버를 통해 전송되지 않습니다."
       }
     ]
   },

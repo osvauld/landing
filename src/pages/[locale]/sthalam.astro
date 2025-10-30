@@ -1,7 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import "../../styles/Theme.css";
-import StoryComponent from "../../components/additional/StoryComponent.astro";
+import SthalamHero from "../../components/sthalam/SthalamHero.astro";
+import SthalamHeroImage from "../../components/sthalam/SthalamHeroImage.astro";
+import SthalamFeatures from "../../components/sthalam/SthalamFeatures.astro";
+import SthalamPhilosophy from "../../components/sthalam/SthalamPhilosophy.astro";
+import SthalamAcknowledgement from "../../components/sthalam/SthalamAcknowledgement.astro";
 import { getLocaleFromPath, getTranslations } from "../../i18n/utils";
 
 export async function getStaticPaths() {
@@ -29,6 +32,10 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 const translations = await getTranslations(locale);
 ---
 
-<Layout title={translations.meta.story.title} description={translations.meta.story.description} locale={locale}>
-  <StoryComponent translations={translations} />
+<Layout title={translations.meta.sthalam.title} description={translations.meta.sthalam.description} locale={locale}>
+  <SthalamHero translations={translations} />
+  <SthalamHeroImage/>
+  <SthalamFeatures translations={translations} />
+  <SthalamPhilosophy translations={translations} />
+  <SthalamAcknowledgement translations={translations} />
 </Layout>

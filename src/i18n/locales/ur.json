@@ -1,164 +1,163 @@
 {
   "nav": {
     "github": "GitHub",
-    "documentation": "Documentation",
-    "faq": "FAQ",
-    "story": "Our story",
-    "visitOsvauld": "Visit Osvauld",
-    "tryLivnote": "Try Livnote",
-    "trySthalam": "Explore Sthalam"
+    "documentation": "دستاویزات",
+    "faq": "اکثر پوچھے جانے والے سوالات",
+    "story": "ہماری کہانی",
+    "visitOsvauld": "Osvauld دیکھیں",
+    "tryLivnote": "Livnote آزمائیں"
   },
   "footer": {
     "heading": {
-      "osvauld": "Connect without compromise.",
-      "livnote": "Notes that live with you.",
+      "osvauld": "بغیر سمجھوتے کے جڑیں۔",
+      "livnote": "نوٹس جو آپ کے ساتھ رہتے ہیں۔",
       "sthalam": "Your place on the internet."
     },
-    "terms": "Terms of Use",
-    "privacy": "Privacy Policy",
+    "terms": "استعمال کی شرائط",
+    "privacy": "پرائیویسی پالیسی",
     "copyright": "Osvauld Security Solutions Pvt Limited @ 2025"
   },
   "osvauldHero": {
-    "title": "Personal Internet<br />Complete Control<br />Absolute Privacy",
-    "subtitle": "Offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life. Designed for trusted circles of friends and colleagues who want private, reliable collaboration without depending on third-party services even for auth and sync."
+    "title": "ذاتی انٹرنیٹ<br />مکمل کنٹرول<br />مطلق رازداری",
+    "subtitle": "آف لائن-فرسٹ، اینڈ-ٹو-اینڈ انکرپٹڈ، پیر-ٹو-پیر ایپلیکیشنز جو آپ کو واقعی آزاد ڈیجیٹل زندگی بنانے کی اجازت دیتی ہیں۔ دوستوں اور ساتھیوں کے قابل اعتماد حلقوں کے لیے ڈیزائن کیا گیا جو نجی، قابل اعتماد تعاون چاہتے ہیں بغیر تیسرے فریق کی خدمات پر انحصار کیے، یہاں تک کہ آتھ اور سنک کے لیے بھی۔"
   },
   "features": {
-    "title": "Features",
+    "title": "خصوصیات",
     "peerToPeer": {
-      "title": "Peer-to-Peer by Default",
-      "description": "Apps connect directly - no middlemen, no servers in the way."
+      "title": "ڈیفالٹ کے طور پر پیر-ٹو-پیر",
+      "description": "ایپس براہ راست جڑتے ہیں - کوئی درمیانی نہیں، راستے میں کوئی سرور نہیں۔"
     },
     "trustedAccess": {
-      "title": "Trusted Access",
-      "description": "Simple, secure access control powered by modern cryptographic tokens."
+      "title": "قابل اعتماد رسائی",
+      "description": "جدید کریپٹوگرافک ٹوکنز کے ذریعے چلنے والا سادہ، محفوظ رسائی کنٹرول۔"
     },
     "offlineFirst": {
-      "title": "Offline-First",
-      "description": "Work without interruption. Everything syncs automatically when devices reconnect."
+      "title": "آف لائن-فرسٹ",
+      "description": "بغیر رکاوٹ کے کام کریں۔ جب ڈیوائسز دوبارہ جڑتے ہیں تو سب کچھ خودکار طور پر سنک ہو جاتا ہے۔"
     },
     "selfSovereign": {
-      "title": "Self-Sovereign Identity",
-      "description": "You own your identity - no one can take it away or lock you out."
+      "title": "خود مختار شناخت",
+      "description": "آپ کی شناخت آپ کی ہے - کوئی اسے لے نہیں سکتا یا آپ کو لاک نہیں کر سکتا۔"
     },
     "openSource": {
-      "title": "Open Source & MIT Licensed",
-      "description": "Transparent, community-driven, and free for everyone to use and build on."
+      "title": "اوپن سورس اور MIT لائسنس",
+      "description": "شفاف، کمیونٹی چلانے والا، اور سب کے لیے استعمال اور تعمیر کے لیے مفت۔"
     },
     "sovereignNode": {
-      "title": "Sovereign Node",
-      "description": "Run your own always-on node (even on a Raspberry Pi) and stay connected on your terms."
+      "title": "خود مختار نوڈ",
+      "description": "اپنا ہمیشہ آن نوڈ چلائیں (Raspberry Pi پر بھی) اور اپنی شرائط پر جڑے رہیں۔"
     }
   },
   "structuralDependencies": {
-    "title": "Dependencies of the current ecosystem",
-    "description": "Your access and usage are tied to cloud providers who can lock you out at any time, while your digital identity depends on email, phone, or social logins that can also be revoked. Likewise, your data resides on their platforms, bound by shifting policies and legal requirements, leaving you with limited control and vulnerable to changes beyond your influence."
+    "title": "موجودہ ماحولیاتی نظام کی انحصاریت",
+    "description": "آپ کی رسائی اور استعمال کلاؤڈ فراہم کنندگان سے منسلک ہے جو کسی بھی وقت آپ کو لاک کر سکتے ہیں، جبکہ آپ کی ڈیجیٹل شناخت ای میل، فون، یا سوشل لاگ ان پر منحصر ہے جنہیں منسوخ بھی کیا جا سکتا ہے۔ اسی طرح، آپ کا ڈیٹا ان کے پلیٹ فارمز پر رہتا ہے، بدلتے ہوئے پالیسیوں اور قانونی تقاضوں سے بندھا ہوا ہے، جو آپ کو محدود کنٹرول کے ساتھ چھوڑ دیتا ہے اور آپ کے اثر سے باہر تبدیلیوں کے لیے کمزور بنا دیتا ہے۔"
   },
   "introducingOsvauld": {
-    "title": "How Osvauld Works: A Story of True Independence",
-    "intro": "To understand how Osvauld helps you build a truly independent digital life, let's look at how trusted friends, Alice and Bob, collaborate.",
+    "title": "Osvauld کیسے کام کرتا ہے: حقیقی آزادی کی کہانی",
+    "intro": "یہ سمجھنے کے لیے کہ Osvauld آپ کو حقیقی طور پر آزاد ڈیجیٹل زندگی بنانے میں کیسے مدد کرتا ہے، آئیے دیکھتے ہیں کہ قابل اعتماد دوست، Alice اور Bob، کیسے تعاون کرتے ہیں۔",
     "foundation": {
-      "title": "The Foundation: Your Self-Made Identity",
-      "description": "Alice doesn't sign up for Osvauld with an email or phone number. Instead, right on her own device—be it a laptop or a phone—she creates her own unique digital identity. This identity belongs to her, and her alone, from the moment of its creation. It's cryptographically guaranteed to be hers, and since she created it, no company can ever take it away."
+      "title": "بنیاد: آپ کی خود ساختہ شناخت",
+      "description": "Alice Osvauld کے لیے ای میل یا فون نمبر کے ساتھ سائن اپ نہیں کرتی۔ اس کے بجائے، اپنے ہی ڈیوائس پر—چاہے وہ لیپ ٹاپ ہو یا فون—وہ اپنی منفرد ڈیجیٹل شناخت بناتی ہے۔ یہ شناخت اس کی ہے، اور صرف اس کی، اس کی تخلیق کے لمحے سے۔ یہ cryptographically اس کی ہونے کی ضمانت ہے، اور چونکہ اس نے اسے بنایا ہے، کوئی کمپنی اسے کبھی نہیں لے سکتی۔"
     },
     "collaboration": {
-      "title": "How Collaboration Works: Direct, Private, and Reliable",
-      "intro": "Osvauld is built for people who already know and trust each other, like friends and colleagues. It offers a private space for them to connect and share.",
+      "title": "تعاون کیسے کام کرتا ہے: براہ راست، نجی، اور قابل اعتماد",
+      "intro": "Osvauld ان لوگوں کے لیے بنایا گیا ہے جو پہلے سے ہی ایک دوسرے کو جانتے اور بھروسہ کرتے ہیں، جیسے دوست اور ساتھی۔ یہ انہیں جڑنے اور شیئر کرنے کے لیے ایک نجی جگہ فراہم کرتا ہے۔",
       "directConnection": {
-        "title": "1. The Ideal Connection: Direct and Instant",
-        "description": "If Alice and Bob are both online, their devices connect directly to each other. When Alice shares a file, it goes straight from her device to Bob's—no middleman involved. This is the fastest, most private way to interact."
+        "title": "1. مثالی کنکشن: براہ راست اور فوری",
+        "description": "اگر Alice اور Bob دونوں آن لائن ہیں، تو ان کے ڈیوائسز ایک دوسرے سے براہ راست جڑتے ہیں۔ جب Alice کوئی فائل شیئر کرتی ہے، تو یہ اس کے ڈیوائس سے Bob کے ڈیوائس میں سیدھے چلی جاتی ہے—کوئی درمیانی شخص شامل نہیں۔ یہ بات چیت کرنے کا سب سے تیز، سب سے نجی طریقہ ہے۔"
       },
       "optionalHub": {
-        "title": "2. The Optional Hub: Your Personal Assistant",
-        "description1": "But what if Bob is offline when Alice sends a message or a document update? For enhanced reliability, Alice can choose to set up an Osvauld hub (a small, personal device) in her home.",
-        "description2": "This hub acts as her trusted, always-on assistant. She can send her files to her own hub, which will then securely forward them to Bob the moment he comes online.",
-        "description3": "This setup ensures their collaboration is never interrupted, and their shared projects are always in sync. It's an optional upgrade for convenience, not a requirement."
+        "title": "2. اختیاری ہب: آپ کا ذاتی معاون",
+        "description1": "لیکن کیا ہوگا اگر Alice کوئی پیغام یا دستاویز اپڈیٹ بھیجے تو Bob آف لائن ہو؟ بہتر اعتماد کے لیے، Alice اپنے گھر میں Osvauld ہب (ایک چھوٹا، ذاتی ڈیوائس) سیٹ اپ کرنے کا انتخاب کر سکتی ہے۔",
+        "description2": "یہ ہب اس کے قابل اعتماد، ہمیشہ آن معاون کے طور پر کام کرتا ہے۔ وہ اپنی فائلیں اپنے ہب پر بھیج سکتی ہے، جو پھر انہیں محفوظ طریقے سے Bob کو اس لمحے فارورڈ کرے گا جب وہ آن لائن آئے۔",
+        "description3": "یہ سیٹ اپ یقینی بناتا ہے کہ ان کا تعاون کبھی رکے نہیں، اور ان کے مشترکہ پروجیکٹس ہمیشہ ہم آہنگ رہیں۔ یہ سہولت کے لیے ایک اختیاری اپ گریڈ ہے، ضرورت نہیں۔"
       },
-      "encryption": "In both scenarios, every file is sealed in a way that is cryptographically guaranteed to be opened only by the intended recipient."
+      "encryption": "دونوں منظرناموں میں، ہر فائل اس طرح مہر بند ہے کہ یہ cryptographically صرف مطلوبہ وصول کنندہ کے ذریعے کھولی جا سکے۔"
     },
     "trustAndControl": {
-      "title": "A New Level of Trust and Control",
-      "description1": "Because Osvauld is designed for trusted circles, it unlocks deeper ways to collaborate. Beyond just sending files back and forth, Alice can grant Bob specific permissions to access information directly on her primary device.",
-      "description2": "For example, she could give Bob's device cryptographically-guaranteed access to view a specific project folder on her laptop for one afternoon. This is the digital equivalent of giving a trusted colleague the key to your office for a few hours—powerful, secure, and entirely under your control.",
-      "description3": "This entire architecture—where you create your own identity and connect directly with your trusted network—is what makes you truly self-sufficient. Apps are designed to work offline because your data lives with you. You decide whether to connect directly or use a personal hub for convenience, ensuring you are never dependent on a third-party service again."
+      "title": "اعتماد اور کنٹرول کی نئی سطح",
+      "description1": "کیونکہ Osvauld قابل اعتماد حلقوں کے لیے ڈیزائن کیا گیا ہے، یہ تعاون کے گہرے طریقے کھولتا ہے۔ صرف فائلیں آگے پیچھے بھیجنے سے آگے، Alice Bob کو اس کے بنیادی ڈیوائس پر معلومات تک براہ راست رسائی کے لیے مخصوص اجازتیں دے سکتی ہے۔",
+      "description2": "مثال کے طور پر، وہ Bob کے ڈیوائس کو ایک دوپہر کے لیے اس کے لیپ ٹاپ پر مخصوص پروجیکٹ فولڈر دیکھنے کے لیے cryptographically-guaranteed رسائی دے سکتی ہے۔ یہ کچھ گھنٹوں کے لیے اپنے دفتر کی چابی قابل اعتماد ساتھی کو دینے کا ڈیجیٹل مساوی ہے—طاقتور، محفوظ، اور مکمل طور پر آپ کے کنٹرول میں۔",
+      "description3": "یہ پورا فن تعمیر—جہاں آپ اپنی شناخت بناتے ہیں اور اپنے قابل اعتماد نیٹ ورک سے براہ راست جڑتے ہیں—یہی آپ کو حقیقی طور پر خود کفیل بناتا ہے۔ ایپس آف لائن کام کرنے کے لیے ڈیزائن کی گئی ہیں کیونکہ آپ کا ڈیٹا آپ کے ساتھ رہتا ہے۔ آپ فیصلہ کرتے ہیں کہ براہ راست جڑیں یا سہولت کے لیے ذاتی ہب استعمال کریں، یقینی بناتے ہوئے کہ آپ پھر کبھی تیسرے فریق کی خدمت پر انحصار نہیں کریں گے۔"
     },
-    "discussButton": "Discuss with"
+    "discussButton": "کے ساتھ بحث کریں"
   },
   "collaborativeEditor": {
-    "title": "Explore collaborative text editor",
-    "subtitle": "First of many tools for a personal internet.",
-    "exploreButton": "Explore Livnote"
+    "title": "تعاون پسند ٹیکسٹ ایڈیٹر دریافت کریں",
+    "subtitle": "ذاتی انٹرنیٹ کے لیے بہت سے ٹولز میں سے پہلا۔",
+    "exploreButton": "Livnote دریافت کریں"
   },
   "communitySection": {
-    "title": "Read more in Documentation<br />&<br />Find Osvauld community on Telegram"
+    "title": "دستاویزات میں مزید پڑھیں<br />&<br />Telegram پر Osvauld کمیونٹی تلاش کریں"
   },
   "acknowledgement": {
-    "title": "Acknowledgements",
-    "description": "This project has received support from Zerodha's FLOSS fund and KSUM Innovation Grant."
+    "title": "شکریہ",
+    "description": "اس پروجیکٹ کو Zerodha کے FLOSS فنڈ اور KSUM انوویشن گرانٹ سے مدد ملی ہے۔"
   },
   "livnoteHero": {
-    "openSource": "We are open-source",
-    "starOnGithub": "Star us on GitHub",
-    "title": "Write together,<br />stay private",
-    "description": "Livnote lets you create and edit notes with others.<br class=\"hidden md:block\" /> live, offline-first, and end-to-end encrypted.<br class=\"hidden md:block\" />- without anything ever touching a cloud server.",
-    "download": "Download",
-    "choosePlatform": "Choose your platform:",
+    "openSource": "ہم اوپن سورس ہیں",
+    "starOnGithub": "GitHub پر ہمیں اسٹار کریں",
+    "title": "مل کر لکھیں،<br />پرائیویٹ رہیں",
+    "description": "Livnote آپ کو دوسروں کے ساتھ نوٹس بنانے اور ترمیم کرنے کی اجازت دیتا ہے۔<br class=\"hidden md:block\" /> لائیو، آف لائن-فرسٹ، اور اینڈ-ٹو-اینڈ انکرپٹڈ۔<br class=\"hidden md:block\" />- کلاؤڈ سرور کو کبھی کچھ بھی چھوئے بغیر۔",
+    "download": "ڈاؤن لوڈ کریں",
+    "choosePlatform": "اپنا پلیٹ فارم منتخب کریں:",
     "platforms": {
       "mac": "Mac (Apple Silicon)",
       "linux": "Linux (Debian)",
       "fedora": "Linux (Fedora)",
       "windows": "Windows"
     },
-    "desktopOnly": "Desktop only"
+    "desktopOnly": "صرف ڈیسک ٹاپ"
   },
   "livnoteFeatures": {
-    "title": "Features",
+    "title": "خصوصیات",
     "effortlessWriting": {
-      "title": "Effortless Writing Experience",
-      "description": "A clean, powerful <span class=\"text-purple-300 font-medium\">rich-text editor</span> built for focus. Format effortlessly and stay in flow while writing."
+      "title": "آسان تحریری تجربہ",
+      "description": "فوکس کے لیے بنایا گیا ایک صاف، طاقتور <span class=\"text-purple-300 font-medium\">رچ ٹیکسٹ ایڈیٹر</span>۔ لکھتے وقت آسانی سے فارمیٹ کریں اور بہاؤ میں رہیں۔"
     },
     "realTimeCollaboration": {
-      "title": "Real-Time Collaboration",
-      "description": "Collaborate instantly with <span class=\"text-purple-300 font-medium\">live edits</span> and comments - powered by next-gen <span class=\"text-purple-300 font-medium\">CRDT technology</span> for seamless sync."
+      "title": "ریئل ٹائم تعاون",
+      "description": "<span class=\"text-purple-300 font-medium\">لائیو ایڈٹس</span> اور تبصروں کے ساتھ فوری طور پر تعاون کریں — بے رکاوٹ سنک کے لیے نکسٹ جن <span class=\"text-purple-300 font-medium\">CRDT ٹیکنالوجی</span> سے طاقت حاصل۔"
     },
     "markdownSupport": {
-      "title": "Full Markdown Support",
-      "description": "Write in <span class=\"text-purple-300 font-medium\">Markdown</span> with <span class=\"text-purple-300 font-medium\">instant preview</span> and edit saved AI responses without losing formatting."
+      "title": "مکمل Markdown سپورٹ",
+      "description": "<span class=\"text-purple-300 font-medium\">فوری پیش منظر</span> کے ساتھ <span class=\"text-purple-300 font-medium\">Markdown</span> میں لکھیں اور فارمیٹنگ کھوئے بغیر محفوظ AI جوابات میں ترمیم کریں۔"
     },
     "powerfulSearch": {
-      "title": "Powerful Search",
-      "description": "Search encrypted notes with <span class=\"text-purple-300 font-medium\">rich previews</span>, or search within notes using <span class=\"text-purple-300 font-medium\">VS Code–style find and replace</span> — both fully encrypted and lightning fast."
+      "title": "طاقتور تلاش",
+      "description": "<span class=\"text-purple-300 font-medium\">رچ پیش مناظر</span> کے ساتھ انکرپٹڈ نوٹس تلاش کریں، یا <span class=\"text-purple-300 font-medium\">VS Code سٹائل تلاش اور تبدیل</span> استعمال کرکے نوٹس کے اندر تلاش کریں — دونوں مکمل طور پر انکرپٹڈ اور بجلی کی طرح تیز۔"
     },
     "mathSupport": {
-      "title": "Advanced Math Support",
-      "description": "Write complex equations effortlessly with full <span class=\"text-purple-300 font-medium\">LaTeX</span> and <span class=\"text-purple-300 font-medium\">KaTeX</span> support. Edit, preview, and format math expressions in real time — just like regular text."
+      "title": "اعلیٰ ریاضی سپورٹ",
+      "description": "مکمل <span class=\"text-purple-300 font-medium\">LaTeX</span> اور <span class=\"text-purple-300 font-medium\">KaTeX</span> سپورٹ کے ساتھ پیچیدہ مساوات آسانی سے لکھیں۔ ریئل ٹائم میں ریاضی کے اظہار میں ترمیم کریں، پیش منظر دیکھیں اور فارمیٹ کریں — بالکل عام متن کی طرح۔"
     },
     "productivityShortcuts": {
-      "title": "Productivity Shortcuts",
-      "description": "Access <span class=\"text-purple-300 font-medium\">floating and slash menus</span>, <span class=\"text-purple-300 font-medium\">markdown shortcuts</span>, tables, images, and code blocks - everything for faster creation."
+      "title": "پروڈکٹیویٹی شارٹ کٹس",
+      "description": "<span class=\"text-purple-300 font-medium\">فلوٹنگ اور سلیش مینوز</span>، <span class=\"text-purple-300 font-medium\">markdown شارٹ کٹس</span>، ٹیبلز، امیجز اور کوڈ بلاکس تک رسائی حاصل کریں — تیز تخلیق کے لیے سب کچھ۔"
     },
     "offlineFirst": {
-      "title": "Offline-First Architecture",
-      "description": "Keep working even when <span class=\"text-purple-300 font-medium\">offline</span>. Your notes <span class=\"text-purple-300 font-medium\">sync automatically</span> the moment you reconnect."
+      "title": "آف لائن فرسٹ آرکیٹیکچر",
+      "description": "<span class=\"text-purple-300 font-medium\">آف لائن</span> ہونے پر بھی کام کرتے رہیں۔ جب آپ دوبارہ کنیکٹ ہوتے ہیں تو آپ کے نوٹس <span class=\"text-purple-300 font-medium\">خودکار طور پر سنک</span> ہو جاتے ہیں۔"
     },
     "peerToPeerSync": {
-      "title": "Peer-to-Peer Sync",
-      "description": "Connect directly with collaborators - <span class=\"text-purple-300 font-medium\">no central servers</span>, no middlemen. Just speed and privacy."
+      "title": "پیر ٹو پیر سنک",
+      "description": "تعاون کرنے والوں کے ساتھ براہ راست کنیکٹ کریں — <span class=\"text-purple-300 font-medium\">کوئی مرکزی سرور نہیں</span>، کوئی درمیانی نہیں۔ صرف رفتار اور پرائیویسی۔"
     },
     "endToEndEncryption": {
-      "title": "End-to-End Encryption",
-      "description": "Enjoy true privacy with <span class=\"text-purple-300 font-medium\">zero-knowledge</span>, <span class=\"text-purple-300 font-medium\">military-grade encryption</span>. Only you and your collaborators can read your data."
+      "title": "اینڈ ٹو اینڈ انکرپشن",
+      "description": "<span class=\"text-purple-300 font-medium\">زیرو نالج</span>، <span class=\"text-purple-300 font-medium\">فوجی درجے کی انکرپشن</span> کے ساتھ حقیقی پرائیویسی سے لطف اٹھائیں۔ صرف آپ اور آپ کے تعاون کرنے والے آپ کا ڈیٹا پڑھ سکتے ہیں۔"
     },
     "noCloud": {
-      "title": "No Cloud",
-      "description": "<span class=\"text-purple-300 font-medium\">Start instantly</span> - no signups, no emails, no data collection. Your data stays entirely with you."
+      "title": "کوئی کلاؤڈ نہیں",
+      "description": "<span class=\"text-purple-300 font-medium\">فوری طور پر شروع کریں</span> — کوئی سائن اپ نہیں، کوئی ای میلز نہیں، کوئی ڈیٹا جمع نہیں۔ آپ کا ڈیٹا مکمل طور پر آپ کے ساتھ رہتا ہے۔"
     },
     "lightweightNative": {
-      "title": "Lightweight Native App",
-      "description": "Experience <span class=\"text-purple-300 font-medium\">native performance</span> in a minimal, <span class=\"text-purple-300 font-medium\">ultra-fast desktop app</span>. Small footprint, instant launch."
+      "title": "ہلکا نیٹیو ایپ",
+      "description": "کم سے کم، <span class=\"text-purple-300 font-medium\">الٹرا فاسٹ ڈیسک ٹاپ ایپ</span> میں <span class=\"text-purple-300 font-medium\">نیٹیو کارکردگی</span> کا تجربہ کریں۔ چھوٹا فٹ پرنٹ، فوری لانچ۔"
     },
     "foreverFree": {
-      "title": "Forever Free",
-      "description": "<span class=\"text-purple-300 font-medium\">No paywalls</span> or feature limits. Every feature, <span class=\"text-purple-300 font-medium\">free for everyone, forever</span>."
+      "title": "ہمیشہ کے لیے مفت",
+      "description": "<span class=\"text-purple-300 font-medium\">کوئی پے والز نہیں</span> یا خصوصیت کی حدود نہیں۔ ہر خصوصیت، <span class=\"text-purple-300 font-medium\">سب کے لیے ہمیشہ کے لیے مفت</span>۔"
     }
   },
   "livnotePhilosophy": {
@@ -167,81 +166,81 @@
   },
   "meta": {
     "osvauld": {
-      "title": "Osvauld - The Building Block of Next Generation of Applications",
-      "description": "Offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life. Designed for trusted circles of friends and colleagues who want private, reliable collaboration without depending on third-party services even for auth and sync."
+      "title": "Osvauld - اگلی نسل کے ایپلیکیشنز کا بلڈنگ بلاک",
+      "description": "آف لائن-فرسٹ، اینڈ-ٹو-اینڈ انکرپٹڈ، پیر-ٹو-پیر ایپلیکیشنز جو آپ کو واقعی آزاد ڈیجیٹل زندگی بنانے کی اجازت دیتی ہیں۔"
     },
     "livnote": {
-      "title": "Livnote - Peer-to-peer Collaborative Document Editor",
-      "description": "Livnote is a collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design."
+      "title": "Livnote - پیر-ٹو-پیر تعاونی دستاویز ایڈیٹر",
+      "description": "Livnote Osvauld فریم ورک کے ساتھ بنایا گیا ایک تعاونی دستاویز ایڈیٹر ہے، جس میں اینڈ-ٹو-اینڈ انکرپشن اور آف لائن-فرسٹ ڈیزائن کے ساتھ رئیل ٹائم پیر-ٹو-پیر ایڈیٹنگ کی خصوصیات ہیں۔"
     },
     "sthalam": {
       "title": "Sthalam - Sovereign Publishing Platform",
       "description": "Sthalam is a sovereign publishing platform built with Osvauld framework. Create websites, blogs, and newsletters with complete control—your content, your node, your rules."
     },
     "faq": {
-      "title": "FAQ's",
-      "description": "Frequently Asked Questions about Osvauld"
+      "title": "اکثر پوچھے جانے والے سوالات",
+      "description": "Osvauld کے بارے میں اکثر پوچھے جانے والے سوالات"
     },
     "privacy": {
-      "title": "Privacy Policy",
-      "description": "Privacy Policy for Osvauld Security Solutions"
+      "title": "پرائیویسی پالیسی",
+      "description": "Osvauld Security Solutions کی پرائیویسی پالیسی"
     },
     "terms": {
-      "title": "Terms of Use",
-      "description": "Terms of Use for Osvauld Security Solutions"
+      "title": "استعمال کی شرائط",
+      "description": "Osvauld Security Solutions کی استعمال کی شرائط"
     },
     "story": {
-      "title": "Our Story",
-      "description": "Learn about the journey behind Osvauld and our mission to build privacy-first applications"
+      "title": "ہماری کہانی",
+      "description": "Osvauld کے پیچھے کے سفر اور پرائیویسی-فرسٹ ایپلیکیشنز بنانے کے ہمارے مشن کے بارے میں جانیں"
     }
   },
   "faq": {
-    "title": "Frequently Asked Questions",
-    "builtWithOsvauld": "Built with <span class=\"inline-block align-middle\" aria-label=\"love\" title=\"love\">❤️</span> on <span class=\"text-white\">Osvauld</span>",
-    "buildingBlock": "Building Block for the Next Generation of P2P Applications",
-    "visit": "Visit",
+    "title": "اکثر پوچھے جانے والے سوالات",
+    "builtWithOsvauld": "<span class=\"text-white\">Osvauld</span> پر <span class=\"inline-block align-middle\" aria-label=\"love\" title=\"love\">❤️</span> کے ساتھ بنایا گیا",
+    "buildingBlock": "اگلی نسل کے P2P ایپلیکیشنز کے لیے بلڈنگ بلاک",
+    "visit": "دیکھیں",
     "osvauldData": [
       {
-        "question": "What is Osvauld?",
-        "answer": "Osvauld is a framework for building peer-to-peer applications that prioritize privacy, security, and user control. It provides the building blocks needed to create offline-first, end-to-end encrypted applications that work without relying on centralized servers."
+        "question": "Osvauld کیا ہے؟",
+        "answer": "Osvauld ایک فریم ورک ہے جو پرائیویسی، سیکیورٹی اور یوزر کنٹرول کو ترجیح دینے والے پیر-ٹو-پیر ایپلیکیشنز بنانے کے لیے ہے۔ یہ آف لائن-فرسٹ، اینڈ-ٹو-اینڈ انکرپٹڈ ایپلیکیشنز بنانے کے لیے ضروری بلڈنگ بلاکس فراہم کرتا ہے جو مرکزی سرورز پر انحصار کیے بغیر کام کرتے ہیں۔"
       },
       {
-        "question": "How does peer-to-peer networking work?",
-        "answer": "Peer-to-peer networking allows devices to connect directly to each other without going through a central server. In Osvauld, this means your data travels directly between trusted devices, ensuring privacy and reducing dependency on external services."
+        "question": "پیر-ٹو-پیر نیٹ ورکنگ کیسے کام کرتی ہے؟",
+        "answer": "پیر-ٹو-پیر نیٹ ورکنگ ڈیوائسز کو مرکزی سرور سے گزرے بغیر براہ راست ایک دوسرے سے جڑنے کی اجازت دیتی ہے۔ Osvauld میں، اس کا مطلب ہے کہ آپ کا ڈیٹا قابل اعتماد ڈیوائسز کے درمیان براہ راست سفر کرتا ہے، پرائیویسی کو یقینی بناتا ہے اور بیرونی خدمات پر انحصار کو کم کرتا ہے۔"
       },
       {
-        "question": "Is Osvauld open source?",
-        "answer": "Yes, Osvauld is completely open source and licensed under the MIT License. This means you can use, modify, and distribute the software freely, and you can inspect the source code to verify its security and privacy claims."
+        "question": "کیا Osvauld اوپن سورس ہے؟",
+        "answer": "جی ہاں، Osvauld مکمل طور پر اوپن سورس ہے اور MIT لائسنس کے تحت لائسنس یافتہ ہے۔ اس کا مطلب ہے کہ آپ سافٹ ویئر کو آزادانہ طور پر استعمال، ترمیم اور تقسیم کر سکتے ہیں، اور آپ اس کی سیکیورٹی اور پرائیویسی کے دعووں کی تصدیق کے لیے سورس کوڈ کا معائنہ کر سکتے ہیں۔"
       },
       {
-        "question": "What applications can I build with Osvauld?",
-        "answer": "You can build a wide variety of applications including collaborative document editors, secure messaging apps, file sharing tools, and any application that benefits from peer-to-peer connectivity and end-to-end encryption."
+        "question": "میں Osvauld کے ساتھ کون سے ایپلیکیشنز بنا سکتا ہوں؟",
+        "answer": "آپ تعاونی دستاویز ایڈیٹرز، محفوظ میسجنگ ایپس، فائل شیئرنگ ٹولز، اور کوئی بھی ایپلیکیشن شامل کرتے ہوئے مختلف قسم کے ایپلیکیشنز بنا سکتے ہیں جو پیر-ٹو-پیر کنیکٹیویٹی اور اینڈ-ٹو-اینڈ انکرپشن سے فائدہ اٹھاتے ہیں۔"
       },
       {
-        "question": "How do I get started with Osvauld?",
-        "answer": "Visit our documentation at docs.osvauld.com to learn about the framework, check out our GitHub repository for examples, and join our community for support and collaboration."
+        "question": "میں Osvauld کے ساتھ کیسے شروع کروں؟",
+        "answer": "فریم ورک کے بارے میں جاننے کے لیے docs.osvauld.com پر ہمارے دستاویزات دیکھیں، مثالیں کے لیے ہمارے GitHub ریپوزٹری کو چیک کریں، اور سپورٹ اور تعاون کے لیے ہماری کمیونٹی میں شامل ہوں۔"
       }
     ],
     "livnoteData": [
       {
-        "question": "What is Livnote?",
-        "answer": "Livnote is a collaborative document editor built with the Osvauld framework. It allows multiple people to edit documents together in real-time, with all data staying encrypted and under your control."
+        "question": "Livnote کیا ہے؟",
+        "answer": "Livnote Osvauld فریم ورک کے ساتھ بنایا گیا ایک تعاونی دستاویز ایڈیٹر ہے۔ یہ متعدد لوگوں کو رئیل ٹائم میں مل کر دستاویزات میں ترمیم کرنے کی اجازت دیتا ہے، تمام ڈیٹا انکرپٹ رہتا ہے اور آپ کے کنٹرول میں رہتا ہے۔"
       },
       {
-        "question": "How does real-time collaboration work?",
-        "answer": "Livnote uses Conflict-free Replicated Data Types (CRDTs) to enable seamless real-time collaboration. Changes are synchronized directly between devices without going through any servers, ensuring your data never leaves your control."
+        "question": "رئیل ٹائم تعاون کیسے کام کرتا ہے؟",
+        "answer": "Livnote بے رکاوٹ رئیل ٹائم تعاون کو ممکن بنانے کے لیے Conflict-free Replicated Data Types (CRDTs) استعمال کرتا ہے۔ تبدیلیاں کسی بھی سرور سے گزرے بغیر ڈیوائسز کے درمیان براہ راست ہم وقت ساز ہوتی ہیں، یہ یقینی بناتا ہے کہ آپ کا ڈیٹا کبھی بھی آپ کے کنٹرول سے باہر نہیں جاتا۔"
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Yes, Livnote uses end-to-end encryption for all documents. Only you and the people you explicitly share documents with can read the content. We cannot access your data, even if we wanted to."
+        "question": "کیا میرا ڈیٹا محفوظ ہے؟",
+        "answer": "جی ہاں، Livnote تمام دستاویزات کے لیے اینڈ-ٹو-اینڈ انکرپشن استعمال کرتا ہے۔ صرف آپ اور جن لوگوں کے ساتھ آپ واضح طور پر دستاویزات شیئر کرتے ہیں وہی مواد پڑھ سکتے ہیں۔ ہم آپ کے ڈیٹا تک رسائی حاصل نہیں کر سکتے، چاہے ہم چاہیں۔"
       },
       {
-        "question": "Can I use Livnote offline?",
-        "answer": "Absolutely! Livnote is designed to work offline-first. You can create and edit documents without an internet connection, and changes will sync automatically when you reconnect."
+        "question": "کیا میں Livnote کو آف لائن استعمال کر سکتا ہوں؟",
+        "answer": "بالکل! Livnote آف لائن-فرسٹ کام کرنے کے لیے ڈیزائن کیا گیا ہے۔ آپ انٹرنیٹ کنکشن کے بغیر دستاویزات بنا اور ترمیم کر سکتے ہیں، اور جب آپ دوبارہ کنکٹ کریں گے تو تبدیلیاں خودکار طور پر ہم وقت ساز ہو جائیں گی۔"
       },
       {
-        "question": "How do I share documents with others?",
-        "answer": "You can share documents by sending an invitation link or by connecting directly with other Livnote users. The sharing process uses peer-to-peer connections, so no data goes through our servers."
+        "question": "میں دوسروں کے ساتھ دستاویزات کیسے شیئر کروں؟",
+        "answer": "آپ دعوت کا لنک بھیج کر یا دوسرے Livnote صارفین کے ساتھ براہ راست جڑ کر دستاویزات شیئر کر سکتے ہیں۔ شیئرنگ کا عمل پیر-ٹو-پیر کنکشنز استعمال کرتا ہے، اس لیے کوئی بھی ڈیٹا ہمارے سرورز سے نہیں گزرتا۔"
       }
     ]
   },

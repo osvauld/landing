@@ -5,12 +5,14 @@
     "faq": "よくある質問",
     "story": "私たちのストーリー",
     "visitOsvauld": "Osvauldを訪問",
-    "tryLivnote": "Livnoteを試す"
+    "tryLivnote": "Livnoteを試す",
+    "trySthalam": "Sthalamを試す"
   },
   "footer": {
     "heading": {
       "osvauld": "妥協のない接続。",
-      "livnote": "あなたと共に生きるノート。"
+      "livnote": "あなたと共に生きるノート。",
+      "sthalam": "インターネット上のあなたの場所。"
     },
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
@@ -171,6 +173,10 @@
     "livnote": {
       "title": "Livnote - ピアツーピアコラボレーティブドキュメントエディター",
       "description": "Livnoteは、Osvauldフレームワークで構築されたコラボレーティブドキュメントエディターで、エンドツーエンド暗号化とオフラインファーストデザインを備えたリアルタイムピアツーピア編集を提供します。"
+    },
+    "sthalam": {
+      "title": "Sthalam - 主権パブリッシングプラットフォーム",
+      "description": "Sthalamは、Osvauldフレームワークで構築された主権パブリッシングプラットフォームです。完全なコントロールでウェブサイト、ブログ、ニュースレターを作成—あなたのコンテンツ、あなたのノード、あなたのルール。"
     },
     "faq": {
       "title": "よくある質問",
@@ -410,6 +416,58 @@
     }
   },
   "livnoteAcknowledgement": {
+    "title": "謝辞",
+    "description": "このプロジェクトは Zerodha's FLOSS fund と KSUM Innovation Grant の支援を受けています。"
+  },
+  "sthalamHero": {
+    "openSource": "MITライセンス • オープンソース",
+    "title": "インターネット上の<br />あなたの場所",
+    "description": "Sthalamは、ウェブサイト、ブログ、ニュースレターを<br class=\"hidden md:block\" />完全な主権で公開できます—Osvauldフレームワーク上に構築。<br class=\"hidden md:block\" />あなたのコンテンツ、あなたのノード、あなたのルール。"
+  },
+  "sthalamFeatures": {
+    "title": "機能",
+    "sovereignPublishing": {
+      "title": "主権パブリッシング",
+      "description": "あなたの条件でコンテンツを公開。<span class=\"text-purple-300 font-medium\">Raspberry Pi</span>や古い電話でノードを実行—あなたのインフラストラクチャ、あなたのコントロール。"
+    },
+    "websites": {
+      "title": "インタラクティブウェブサイト",
+      "description": "ビジュアルビルダー、カスタムスタイリング、インタラクティブ要素で<span class=\"text-purple-300 font-medium\">複数ページのウェブサイト</span>を構築—すべて主権。"
+    },
+    "blogsNewsletters": {
+      "title": "ブログとニュースレター",
+      "description": "プラットフォームや制限なしに、<span class=\"text-purple-300 font-medium\">マイクロブログ</span>やニュースレターを視聴者に直接公開。"
+    },
+    "formsSubmissions": {
+      "title": "フォームとアンケート",
+      "description": "<span class=\"text-purple-300 font-medium\">プライバシー保護フォーム</span>でフィードバックを収集—提出を見るのはあなただけ、他の誰も見ることはできません。"
+    },
+    "comments": {
+      "title": "コメントスレッド",
+      "description": "CRDT駆動のコメントスレッドであなたのコンテンツに<span class=\"text-purple-300 font-medium\">リアルタイムディスカッション</span>を有効化。"
+    },
+    "ucanAuth": {
+      "title": "UCAN認証",
+      "description": "<span class=\"text-purple-300 font-medium\">暗号化トークン</span>でアクセスを制御—特定の機能と権限でコンテンツを共有。"
+    },
+    "noIntermediaries": {
+      "title": "直接配信",
+      "description": "コンテンツは<span class=\"text-purple-300 font-medium\">あなたのノードから直接</span>視聴者へ流れる—プラットフォームなし、アルゴリズムなし、仲介者なし。"
+    },
+    "dataPrivacy": {
+      "title": "あなたのデータ、あなたのコントロール",
+      "description": "すべてのデータはあなたと視聴者の間にのみ存在します。<span class=\"text-purple-300 font-medium\">他の誰も</span>アクセスできません—私たちでさえも。"
+    },
+    "builtOnOsvauld": {
+      "title": "Osvauld上に構築",
+      "description": "<span class=\"text-purple-300 font-medium\">Osvauldフレームワーク</span>によって駆動—ピアツーピア、エンドツーエンド暗号化、オフラインファーストアーキテクチャ。"
+    }
+  },
+  "sthalamPhilosophy": {
+    "title": "なぜSthalamなのか？",
+    "description": "私たちは、公開するのに許可が必要ないと信じているため、Sthalamを構築しています。<br /><br />公開が、あなたをプラットフォームから外し、コンテンツを検閲し、または一晩でルールを変更できる企業プラットフォームにアップロードすることを意味する世界で、私たちは代替案を作成しています。<br /><br />Sthalam（マラヤーラム語：സ്ഥലം、「場所」を意味する）は、インターネット上にあなた自身の場所を提供します—誰も奪うことができない場所。<br /><br />あなたのブログ、アンケート、視聴者のコメント—すべてはあなたと彼らの間にのみ存在します。私たちはあなたのコンテンツを保存しません。あなたのパブリッシングノードにアクセスできません。あなたが何を公開しているかさえ知りません—そしてそれはまさにそうあるべきです。<br /><br />Osvauldフレームワーク上に構築されたSthalamは、人々がコントロールを放棄することなく自由に作成し共有するデジタル主権への動きの一部です。<br /><br />これは概念実証ソフトウェアです。アーキテクチャは機能し、暗号化は健全ですが、多くの機能はまだ改良中です。パブリッシングインフラストラクチャを所有するときに何が可能かを示しています。"
+  },
+  "sthalamAcknowledgement": {
     "title": "謝辞",
     "description": "このプロジェクトは Zerodha's FLOSS fund と KSUM Innovation Grant の支援を受けています。"
   },

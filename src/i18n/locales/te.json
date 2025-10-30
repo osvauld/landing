@@ -1,0 +1,478 @@
+{
+  "nav": {
+    "github": "GitHub",
+    "documentation": "పత్రాలు",
+    "faq": "తరచుగా అడిగే ప్రశ్నలు",
+    "story": "మా కథ",
+    "visitOsvauld": "Osvauld ని సందర్శించండి",
+    "tryLivnote": "Livnote ని ప్రయత్నించండి"
+  },
+  "footer": {
+    "heading": {
+      "osvauld": "రాజీలేకుండా కనెక్ట్ అవండి.",
+      "livnote": "మీతో జీవించే నోట్స్.",
+      "sthalam": "Your place on the internet."
+    },
+    "terms": "వాడక నిబంధనలు",
+    "privacy": "గోప్యతా విధానం",
+    "copyright": "Osvauld Security Solutions Pvt Limited @ 2025"
+  },
+  "osvauldHero": {
+    "title": "వ్యక్తిగత ఇంటర్నెట్<br />పూర్తి నియంత్రణ<br />సంపూర్ణ గోప్యత",
+    "subtitle": "ఆఫ్‌లైన్-ఫస్ట్, ఎండ్-టు-ఎండ్ ఎన్‌క్రిప్ట్ చేయబడిన, పీర్-టు-పీర్ అనువర్తనాలు మీరు నిజంగా స్వతంత్రమైన డిజిటల్ జీవితాన్ని నిర్మించడానికి అనుమతిస్తాయి. ప్రైవేట్, నమ్మకమైన సహకారాన్ని కోరుకునే స్నేహితులు మరియు సహోద్యోగుల యొక్క నమ్మకమైన వృత్తాల కోసం రూపొందించబడింది, ఓత్, సింక్ కోసం కూడా మూడవ పక్ష సేవలపై ఆధారపడకుండా."
+  },
+  "features": {
+    "title": "లక్షణాలు",
+    "peerToPeer": {
+      "title": "డిఫాల్ట్‌గా పీర్-టు-పీర్",
+      "description": "అనువర్తనాలు నేరుగా కనెక్ట్ అవుతాయి - మధ్యవర్తులు లేరు, మార్గంలో సర్వర్లు లేవు."
+    },
+    "trustedAccess": {
+      "title": "నమ్మకమైన యాక్సెస్",
+      "description": "ఆధునిక క్రిప్టోగ్రాఫిక్ టోకెన్ల ద్వారా నడిచే సరళమైన, సురక్షితమైన యాక్సెస్ కంట్రోల్."
+    },
+    "offlineFirst": {
+      "title": "ఆఫ్‌లైన్-ఫస్ట్",
+      "description": "అంతరాయం లేకుండా పని చేయండి. పరికరాలు తిరిగి కనెక్ట్ అయినప్పుడు ప్రతిదీ స్వయంచాలకంగా సమకాలీకరించబడుతుంది."
+    },
+    "selfSovereign": {
+      "title": "స్వీయ-సార్వభౌమ గుర్తింపు",
+      "description": "మీ గుర్తింపు మీదే - ఎవరూ దాన్ని తీసుకెళ్లలేరు లేదా మిమ్మల్ని లాక్ చేయలేరు."
+    },
+    "openSource": {
+      "title": "ఓపెన్ సోర్స్ & MIT లైసెన్స్",
+      "description": "పారదర్శకమైన, కమ్యూనిటీ-నడిచే, మరియు అందరికీ ఉపయోగించడానికి మరియు నిర్మించడానికి ఉచితం."
+    },
+    "sovereignNode": {
+      "title": "సార్వభౌమ నోడ్",
+      "description": "మీ స్వంత ఎల్లప్పుడూ-ఆన్ నోడ్‌ను అమలు చేయండి (Raspberry Pi లో కూడా) మరియు మీ నిబంధనల ప్రకారం కనెక్ట్‌డ్‌గా ఉండండి."
+    }
+  },
+  "structuralDependencies": {
+    "title": "ప్రస్తుత పర్యావరణ వ్యవస్థ యొక్క ఆధారపడటం",
+    "description": "మీ యాక్సెస్ మరియు వినియోగం ఎప్పుడైనా మిమ్మల్ని లాక్ చేయగల క్లౌడ్ ప్రొవైడర్లకు కట్టుబడి ఉంటుంది, అదే సమయంలో మీ డిజిటల్ గుర్తింపు ఇమెయిల్, ఫోన్ లేదా సోషల్ లాగిన్లపై ఆధారపడి ఉంటుంది, వాటిని రద్దు చేయవచ్చు. అదే విధంగా, మీ డేటా వారి ప్లాట్‌ఫారమ్లలో నివసిస్తుంది, మారుతున్న విధానాలు మరియు చట్టపరమైన అవసరాలతో కట్టుబడి ఉంటుంది, మిమ్మల్ని పరిమిత నియంత్రణతో వదిలేసి, మీ ప్రభావానికి మించిన మార్పులకు దెబ్బతినేలా చేస్తుంది."
+  },
+  "introducingOsvauld": {
+    "title": "Osvauld ఎలా పనిచేస్తుంది: నిజమైన స్వాతంత్ర్యం యొక్క కథ",
+    "intro": "Osvauld మీకు నిజమైన స్వతంత్ర డిజిటల్ జీవితాన్ని నిర్మించడంలో ఎలా సహాయపడుతుందో అర్థం చేసుకోవడానికి, విశ్వసనీయ స్నేహితులు Alice మరియు Bob ఎలా సహకరిస్తారో చూద్దాం.",
+    "foundation": {
+      "title": "అసలు: మీ స్వీయ-తయారు గుర్తింపు",
+      "description": "Alice ఇమెయిల్ లేదా ఫోన్ నంబర్ తో Osvauld కోసం సైన్ అప్ చేయదు. బదులుగా, తన స్వంత పరికరంలో—అది ల్యాప్‌టాప్ అయినా ఫోన్ అయినా—తన స్వంత ప్రత్యేక డిజిటల్ గుర్తింపును సృష్టిస్తుంది. ఈ గుర్తింపు దాని సృష్టి క్షణం నుండి ఆమెది, మరియు ఆమెది మాత్రమే. ఇది క్రిప్టోగ్రాఫికల్‌గా ఆమెది అని హామీ ఇవ్వబడుతుంది, మరియు ఆమె దీన్ని సృష్టించినందున, ఏ కంపెనీ కూడా దీన్ని తీసివేయలేదు."
+    },
+    "collaboration": {
+      "title": "సహకారం ఎలా పనిచేస్తుంది: ప్రత్యక్ష, ప్రైవేట్, మరియు నమ్మకమైనది",
+      "intro": "Osvauld ఇప్పటికే ఒకరినొకరు తెలుసుకుని విశ్వసించే వ్యక్తుల కోసం నిర్మించబడింది, స్నేహితులు మరియు సహోద్యోగుల వంటివారు. వారు కనెక్ట్ అవ్వడానికి మరియు భాగస్వామ్యం చేయడానికి ప్రైవేట్ స్థలాన్ని అందిస్తుంది.",
+      "directConnection": {
+        "title": "1. ఆదర్శ కనెక్షన్: ప్రత్యక్ష మరియు తక్షణ",
+        "description": "Alice మరియు Bob ఇద్దరూ ఆన్‌లైన్‌లో ఉంటే, వారి పరికరాలు ఒకరికొకరు ప్రత్యక్షంగా కనెక్ట్ అవుతాయి. Alice ఒక ఫైల్‌ను భాగస్వామ్యం చేసినప్పుడు, అది ఆమె పరికరం నుండి Bob పరికరానికి నేరుగా వెళుతుంది—మధ్యవర్తి లేకుండా. ఇది సంకర్షణ చేయడానికి వేగవంతమైన, అత్యంత ప్రైవేట్ మార్గం."
+      },
+      "optionalHub": {
+        "title": "2. ఐచ్ఛిక హబ్: మీ వ్యక్తిగత సహాయకుడు",
+        "description1": "కానీ Alice సందేశం లేదా పత్రం నవీకరణను పంపినప్పుడు Bob ఆఫ్‌లైన్‌లో ఉంటే? మెరుగైన నమ్మకానికి, Alice తన ఇంట్లో Osvauld హబ్ (చిన్న, వ్యక్తిగత పరికరం) సెట్ అప్ చేయడాన్ని ఎంచుకోవచ్చు.",
+        "description2": "ఈ హబ్ ఆమె విశ్వసనీయ, ఎల్లప్పుడూ ఆన్‌లో ఉండే సహాయకుడిగా పనిచేస్తుంది. ఆమె తన ఫైల్‌లను తన స్వంత హబ్‌కు పంపవచ్చు, అది అతను ఆన్‌లైన్‌లోకి వచ్చిన క్షణంలో వాటిని సురక్షితంగా Bobకు ఫార్వర్డ్ చేస్తుంది.",
+        "description3": "ఈ సెటప్ వారి సహకారం ఎప్పుడూ అంతరాయం కలగకుండా ఉండేలా చేస్తుంది, మరియు వారి భాగస్వామ్య ప్రాజెక్ట్‌లు ఎల్లప్పుడూ సమకాలీనంగా ఉంటాయి. ఇది సౌకర్యం కోసం ఐచ్ఛిక అప్‌గ్రేడ్, అవసరం కాదు."
+      },
+      "encryption": "రెండు దృశ్యాలలో, ప్రతి ఫైల్‌ను క్రిప్టోగ్రాఫికల్‌గా హామీ ఇవ్వబడిన విధంగా ముద్రించబడుతుంది, దీనిని ఉద్దేశించిన గ్రహీత మాత్రమే తెరవగలడు."
+    },
+    "trustAndControl": {
+      "title": "విశ్వాసం మరియు నియంత్రణ యొక్క కొత్త స్థాయి",
+      "description1": "Osvauld విశ్వసనీయ వృత్తాల కోసం రూపొందించబడినందున, ఇది లోతైన సహకార మార్గాలను అన్‌లాక్ చేస్తుంది. ఫైల్‌లను ముందుకు వెనుకకు పంపడం మాత్రమే కాకుండా, Alice తన ప్రాథమిక పరికరంలో సమాచారానికి ప్రత్యక్షంగా యాక్సెస్ పొందడానికి Bobకు నిర్దిష్ట అనుమతులను ఇవ్వగలదు.",
+      "description2": "ఉదాహరణకు, ఆమె ఒక మధ్యాహ్నం పాటు తన ల్యాప్‌టాప్‌లో నిర్దిష్ట ప్రాజెక్ట్ ఫోల్డర్‌ను చూడడానికి Bob పరికరానికి క్రిప్టోగ్రాఫికల్‌గా హామీ ఇవ్వబడిన యాక్సెస్‌ను ఇవ్వగలదు. ఇది కొన్ని గంటలపాటు మీ ఆఫీస్ కీని విశ్వసనీయ సహోద్యోగికి ఇవ్వడం యొక్క డిజిటల్ సమానమైనది—శక్తివంతమైనది, సురక్షితమైనది, మరియు పూర్తిగా మీ నియంత్రణలో.",
+      "description3": "ఈ మొత్తం ఆర్కిటెక్చర్—మీరు మీ స్వంత గుర్తింపును సృష్టించి మీ విశ్వసనీయ నెట్‌వర్క్‌తో ప్రత్యక్షంగా కనెక్ట్ అవ్వడం—మిమ్మల్ని నిజంగా స్వయం సమృద్ధిగా చేస్తుంది. మీ డేటా మీతో నివసిస్తుంది కాబట్టి ఆప్‌లు ఆఫ్‌లైన్‌లో పనిచేయడానికి రూపొందించబడ్డాయి. మీరు ప్రత్యక్షంగా కనెక్ట్ అవ్వాలా లేదా సౌకర్యం కోసం వ్యక్తిగత హబ్‌ను ఉపయోగించాలా అని నిర్ణయించుకుంటారు, మీరు ఎప్పుడూ మూడవ పక్ష సేవపై ఆధారపడకుండా ఉండేలా చూసుకుంటారు."
+    },
+    "discussButton": "తో చర్చించండి"
+  },
+  "collaborativeEditor": {
+    "title": "సహకార టెక్స్ట్ ఎడిటర్‌ను అన్వేషించండి",
+    "subtitle": "వ్యక్తిగత ఇంటర్నెట్ కోసం అనేక సాధనాలలో మొదటిది.",
+    "exploreButton": "Livnote ను అన్వేషించండి"
+  },
+  "communitySection": {
+    "title": "డాక్యుమెంటేషన్‌లో మరింత చదవండి<br />&<br />Telegram లో Osvauld కమ్యూనిటీని కనుగొనండి"
+  },
+  "acknowledgement": {
+    "title": "కృతజ్ఞతలు",
+    "description": "ఈ ప్రాజెక్ట్ Zerodha యొక్క FLOSS ఫండ్ మరియు KSUM ఇన్నోవేషన్ గ్రాంట్ నుండి మద్దతు పొందింది."
+  },
+  "livnoteHero": {
+    "openSource": "మేము ఓపెన్-సోర్స్",
+    "starOnGithub": "GitHub లో మమ్మల్ని స్టార్ చేయండి",
+    "title": "కలిసి రాయండి,<br />ప్రైవేట్‌గా ఉండండి",
+    "description": "Livnote మీరు ఇతరులతో నోట్‌లను సృష్టించడానికి మరియు సవరించడానికి అనుమతిస్తుంది.<br class=\"hidden md:block\" /> లైవ్, ఆఫ్‌లైన్-ఫస్ట్, మరియు ఎండ్-టు-ఎండ్ ఎన్‌క్రిప్టెడ్.<br class=\"hidden md:block\" />- క్లౌడ్ సర్వర్‌ను ఎప్పుడూ తాకకుండా.",
+    "download": "డౌన్‌లోడ్",
+    "choosePlatform": "మీ ప్లాట్‌ఫారమ్‌ను ఎంచుకోండి:",
+    "platforms": {
+      "mac": "Mac (Apple Silicon)",
+      "linux": "Linux (Debian)",
+      "fedora": "Linux (Fedora)",
+      "windows": "Windows"
+    },
+    "desktopOnly": "డెస్క్‌టాప్ మాత్రమే"
+  },
+  "livnoteFeatures": {
+    "title": "ఫీచర్‌లు",
+    "effortlessWriting": {
+      "title": "సులభమైన రచన అనుభవం",
+      "description": "ఫోకస్ కోసం నిర్మించబడిన శుభ్రమైన, శక్తివంతమైన <span class=\"text-purple-300 font-medium\">రిచ్-టెక్స్ట్ ఎడిటర్</span>. రాసేటప్పుడు సులభంగా ఫార్మాట్ చేయండి మరియు ప్రవాహంలో ఉండండి."
+    },
+    "realTimeCollaboration": {
+      "title": "రియల్-టైమ్ కలిసి పనిచేయడం",
+      "description": "<span class=\"text-purple-300 font-medium\">లైవ్ ఎడిట్‌లు</span> మరియు కామెంట్‌లతో తక్షణం కలిసి పనిచేయండి - సీమ్‌లెస్ సింక్ కోసం నెక్స్ట్-జెన్ <span class=\"text-purple-300 font-medium\">CRDT టెక్నాలజీ</span> ద్వారా శక్తివంతం."
+    },
+    "markdownSupport": {
+      "title": "పూర్తి Markdown మద్దతు",
+      "description": "<span class=\"text-purple-300 font-medium\">తక్షణ ప్రివ్యూ</span>తో <span class=\"text-purple-300 font-medium\">Markdown</span>లో రాయండి మరియు ఫార్మాట్‌టింగ్ కోల్పోకుండా సేవ్ చేసిన AI ప్రతిస్పందనలను సవరించండి."
+    },
+    "powerfulSearch": {
+      "title": "శక్తివంతమైన శోధన",
+      "description": "<span class=\"text-purple-300 font-medium\">రిచ్ ప్రివ్యూలు</span>తో ఎన్‌క్రిప్టెడ్ నోట్‌లను శోధించండి, లేదా <span class=\"text-purple-300 font-medium\">VS Code–స్టైల్ ఫైండ్ అండ్ రిప్లేస్</span> ఉపయోగించి నోట్‌లలో శోధించండి — రెండూ పూర్తిగా ఎన్‌క్రిప్టెడ్ మరియు మెరుపు వేగం."
+    },
+    "mathSupport": {
+      "title": "అడ్వాన్స్‌డ్ మ్యాథ్ మద్దతు",
+      "description": "పూర్తి <span class=\"text-purple-300 font-medium\">LaTeX</span> మరియు <span class=\"text-purple-300 font-medium\">KaTeX</span> మద్దతుతో సంక్లిష్ట సమీకరణాలను సులభంగా రాయండి. రియల్ టైమ్‌లో గణిత వ్యక్తీకరణలను సవరించండి, ప్రివ్యూ చేయండి మరియు ఫార్మాట్ చేయండి — సాధారణ టెక్స్ట్ లాగే."
+    },
+    "productivityShortcuts": {
+      "title": "ప్రొడక్టివిటీ షార్ట్‌కట్‌లు",
+      "description": "<span class=\"text-purple-300 font-medium\">ఫ్లోటింగ్ మరియు స్లాష్ మెన్యూలు</span>, <span class=\"text-purple-300 font-medium\">markdown షార్ట్‌కట్‌లు</span>, టేబుల్‌లు, ఇమేజ్‌లు మరియు కోడ్ బ్లాక్‌లకు యాక్సెస్ చేయండి - వేగవంతమైన సృష్టి కోసం ప్రతిదీ."
+    },
+    "offlineFirst": {
+      "title": "ఆఫ్‌లైన్-ఫస్ట్ ఆర్కిటెక్చర్",
+      "description": "<span class=\"text-purple-300 font-medium\">ఆఫ్‌లైన్</span> ఉన్నప్పుడు కూడా పనిచేస్తూనే ఉండండి. మీరు తిరిగి కనెక్ట్ అయిన క్షణంలో మీ నోట్‌లు <span class=\"text-purple-300 font-medium\">స్వయంచాలకంగా సింక్</span> అవుతాయి."
+    },
+    "peerToPeerSync": {
+      "title": "పీర్-టు-పీర్ సింక్",
+      "description": "కలిసి పనిచేసేవారితో నేరుగా కనెక్ట్ అవండి — <span class=\"text-purple-300 font-medium\">సెంట్రల్ సర్వర్‌లు లేవు</span>, మధ్యవర్తులు లేరు. వేగం మరియు గోప్యత మాత్రమే."
+    },
+    "endToEndEncryption": {
+      "title": "ఎండ్-టు-ఎండ్ ఎన్‌క్రిప్షన్",
+      "description": "<span class=\"text-purple-300 font-medium\">జీరో-నాలెడ్జ్</span>, <span class=\"text-purple-300 font-medium\">మిలిటరీ-గ్రేడ్ ఎన్‌క్రిప్షన్</span>తో నిజమైన గోప్యతను అనుభవించండి. మీరు మరియు మీ కలిసి పనిచేసేవారు మాత్రమే మీ డేటాను చదవగలరు."
+    },
+    "noCloud": {
+      "title": "క్లౌడ్ లేదు",
+      "description": "<span class=\"text-purple-300 font-medium\">తక్షణం ప్రారంభించండి</span> — సైన్‌అప్‌లు లేవు, ఇమెయిల్‌లు లేవు, డేటా సేకరణ లేదు. మీ డేటా పూర్తిగా మీతో ఉంటుంది."
+    },
+    "lightweightNative": {
+      "title": "లైట్‌వెయిట్ నేటివ్ యాప్",
+      "description": "మినిమల్, <span class=\"text-purple-300 font-medium\">అల్ట్రా-ఫాస్ట్ డెస్క్‌టాప్ యాప్</span>లో <span class=\"text-purple-300 font-medium\">నేటివ్ పెర్ఫార్మెన్స్</span>ను అనుభవించండి. చిన్న ఫుట్‌ప్రింట్, తక్షణ లాంచ్."
+    },
+    "foreverFree": {
+      "title": "ఎప్పటికీ ఉచితం",
+      "description": "<span class=\"text-purple-300 font-medium\">పేవాల్‌లు లేవు</span> లేదా ఫీచర్ పరిమితులు లేవు. ప్రతి ఫీచర్, <span class=\"text-purple-300 font-medium\">అందరికీ ఎప్పటికీ ఉచితం</span>."
+    }
+  },
+  "livnotePhilosophy": {
+    "title": "Why Livnote?",
+    "description": "We're building Livnote because we believe you shouldn't have to sacrifice privacy to work together.<br /><br />In a world where collaboration means uploading your documents to corporate servers, we're creating an alternative where you can work directly with others while your data stays where it belongs—on your devices.<br /><br />Your notes remain encrypted and under your control. When you collaborate, you connect directly with people you trust, not through some company's computers that can see everything you write.<br /><br />We don't store your account details. We don't have access to your collaborative sessions. We don't even know what you're working on—and that's exactly how it should be.<br /><br />Livnote is our contribution to a movement of digital sovereignty, where people work together freely without surrendering control of their shared creations.<br /><br />"
+  },
+  "meta": {
+    "osvauld": {
+      "title": "Osvauld - తదుపరి తరం అనువర్తనాల యొక్క నిర్మాణ బ్లాక్",
+      "description": "ఆఫ్‌లైన్-ఫస్ట్, ఎండ్-టు-ఎండ్ ఎన్‌క్రిప్ట్ చేయబడిన, పీర్-టు-పీర్ అనువర్తనాలు మీరు నిజంగా స్వతంత్రమైన డిజిటల్ జీవితాన్ని నిర్మించడానికి అనుమతిస్తాయి."
+    },
+    "livnote": {
+      "title": "Livnote - పీర్-టు-పీర్ సహకార పత్ర సంపాదకుడు",
+      "description": "Livnote అనేది Osvauld ఫ్రేమ్‌వర్క్‌తో నిర్మించబడిన సహకార పత్ర సంపాదకుడు, ఎండ్-టు-ఎండ్ ఎన్‌క్రిప్షన్ మరియు ఆఫ్‌లైన్-ఫస్ట్ డిజైన్‌తో రియల్-టైమ్ పీర్-టు-పీర్ ఎడిటింగ్ లక్షణాలను కలిగి ఉంటుంది."
+    },
+    "sthalam": {
+      "title": "Sthalam - Sovereign Publishing Platform",
+      "description": "Sthalam is a sovereign publishing platform built with Osvauld framework. Create websites, blogs, and newsletters with complete control—your content, your node, your rules."
+    },
+    "faq": {
+      "title": "తరచుగా అడిగే ప్రశ్నలు",
+      "description": "Osvauld గురించి తరచుగా అడిగే ప్రశ్నలు"
+    },
+    "privacy": {
+      "title": "గోప్యతా విధానం",
+      "description": "Osvauld Security Solutions యొక్క గోప్యతా విధానం"
+    },
+    "terms": {
+      "title": "వాడక నిబంధనలు",
+      "description": "Osvauld Security Solutions యొక్క వాడక నిబంధనలు"
+    },
+    "story": {
+      "title": "మా కథ",
+      "description": "Osvauld వెనుక ఉన్న ప్రయాణం మరియు గోప్యత-మొదటి అనువర్తనాలను నిర్మించడానికి మా మిషన్ గురించి తెలుసుకోండి"
+    }
+  },
+  "faq": {
+    "title": "తరచుగా అడిగే ప్రశ్నలు",
+    "builtWithOsvauld": "<span class=\"text-white\">Osvauld</span> లో <span class=\"inline-block align-middle\" aria-label=\"love\" title=\"love\">❤️</span> తో నిర్మించబడింది",
+    "buildingBlock": "తదుపరి తరం P2P అనువర్తనాల కోసం నిర్మాణ బ్లాక్",
+    "visit": "సందర్శించండి",
+    "osvauldData": [
+      {
+        "question": "Osvauld అంటే ఏమిటి?",
+        "answer": "గోప్యత, భద్రత మరియు వినియోగదారు నియంత్రణను ప్రాధాన్యతనిచ్చే పీర్-టు-పీర్ అనువర్తనాలను నిర్మించడానికి Osvauld ఒక ఫ్రేమ్‌వర్క్. కేంద్రీకృత సర్వర్‌లపై ఆధారపడకుండా పనిచేసే ఆఫ్‌లైన్-ఫస్ట్, ఎండ్-టు-ఎండ్ ఎన్‌క్రిప్ట్ చేయబడిన అనువర్తనాలను సృష్టించడానికి అవసరమైన నిర్మాణ బ్లాక్‌లను ఇది అందిస్తుంది."
+      },
+      {
+        "question": "పీర్-టు-పీర్ నెట్‌వర్కింగ్ ఎలా పనిచేస్తుంది?",
+        "answer": "పీర్-టు-పీర్ నెట్‌వర్కింగ్ పరికరాలను కేంద్ర సర్వర్ గుండా వెళ్లకుండా ఒకదానితో ఒకటి నేరుగా కనెక్ట్ అవడానికి అనుమతిస్తుంది. Osvauld లో, దీని అర్థం మీ డేటా నమ్మకమైన పరికరాల మధ్య నేరుగా ప్రయాణిస్తుంది, గోప్యతను నిర్ధారిస్తుంది మరియు బాహ్య సేవలపై ఆధారపడటాన్ని తగ్గిస్తుంది."
+      },
+      {
+        "question": "Osvauld ఓపెన్ సోర్స్ కాదా?",
+        "answer": "అవును, Osvauld పూర్తిగా ఓపెన్ సోర్స్ మరియు MIT లైసెన్స్ కింద లైసెన్స్ పొందింది. దీని అర్థం మీరు సాఫ్ట్‌వేర్‌ను స్వేచ్ఛగా ఉపయోగించవచ్చు, సవరించవచ్చు మరియు పంపిణీ చేయవచ్చు, మరియు దాని భద్రత మరియు గోప్యతా వాదనలను ధృవీకరించడానికి సోర్స్ కోడ్‌ను పరిశీలించవచ్చు."
+      },
+      {
+        "question": "Osvauld తో నేను ఏమి అనువర్తనాలను నిర్మించగలను?",
+        "answer": "మీరు సహకార పత్ర సంపాదకులు, సురక్షిత సందేశ అనువర్తనాలు, ఫైల్ షేరింగ్ సాధనాలు మరియు పీర్-టు-పీర్ కనెక్టివిటీ మరియు ఎండ్-టు-ఎండ్ ఎన్‌క్రిప్షన్ నుండి ప్రయోజనం పొందే ఏదైనా అనువర్తనం వంటి వివిధ రకాల అనువర్తనాలను నిర్మించగలరు."
+      },
+      {
+        "question": "Osvauld తో నేను ఎలా ప్రారంభించగలను?",
+        "answer": "ఫ్రేమ్‌వర్క్ గురించి తెలుసుకోవడానికి docs.osvauld.com వద్ద మా పత్రాలను సందర్శించండి, ఉదాహరణల కోసం మా GitHub రిపోజిటరీని చూడండి, మరియు మద్దతు మరియు సహకారం కోసం మా కమ్యూనిటీలో చేరండి."
+      }
+    ],
+    "livnoteData": [
+      {
+        "question": "Livnote అంటే ఏమిటి?",
+        "answer": "Livnote Osvauld ఫ్రేమ్‌వర్క్‌తో నిర్మించబడిన సహకార పత్ర సంపాదకుడు. అన్ని డేటా ఎన్‌క్రిప్ట్ చేయబడి మీ నియంత్రణలో ఉండగా, అనేక మంది వ్యక్తులు రియల్-టైమ్‌లో కలిసి పత్రాలను సవరించడానికి ఇది అనుమతిస్తుంది."
+      },
+      {
+        "question": "రియల్-టైమ్ సహకారం ఎలా పనిచేస్తుంది?",
+        "answer": "నిర్విఘ్న రియల్-టైమ్ సహకారాన్ని ప్రారంభించడానికి Livnote Conflict-free Replicated Data Types (CRDTs) ఉపయోగిస్తుంది. ఏ సర్వర్‌ల గుండా వెళ్లకుండా మార్పులు పరికరాల మధ్య నేరుగా సమకాలీకరించబడతాయి, మీ డేటా మీ నియంత్రణను ఎప్పుడూ విడిచిపెట్టదని నిర్ధారిస్తుంది."
+      },
+      {
+        "question": "నా డేటా సురక్షితమా?",
+        "answer": "అవును, Livnote అన్ని పత్రాలకు ఎండ్-టు-ఎండ్ ఎన్‌క్రిప్షన్‌ను ఉపయోగిస్తుంది. మీరు మరియు మీరు స్పష్టంగా పత్రాలను పంచుకునే వ్యక్తులు మాత్రమే కంటెంట్‌ను చదవగలరు. మేము కోరుకున్నా మీ డేటాను యాక్సెస్ చేయలేము."
+      },
+      {
+        "question": "నేను Livnote ని ఆఫ్‌లైన్‌లో ఉపయోగించగలనా?",
+        "answer": "ఖచ్చితంగా! Livnote ఆఫ్‌లైన్-ఫస్ట్ పనిచేయడానికి రూపొందించబడింది. ఇంటర్నెట్ కనెక్షన్ లేకుండా మీరు పత్రాలను సృష్టించవచ్చు మరియు సవరించవచ్చు, మరియు మీరు తిరిగి కనెక్ట్ అయినప్పుడు మార్పులు స్వయంచాలకంగా సమకాలీకరించబడతాయి."
+      },
+      {
+        "question": "ఇతరులతో పత్రాలను ఎలా పంచుకోవాలి?",
+        "answer": "ఆహ్వాన లింక్‌ను పంపడం ద్వారా లేదా ఇతర Livnote వినియోగదారులతో నేరుగా కనెక్ట్ అవడం ద్వారా మీరు పత్రాలను పంచుకోవచ్చు. షేరింగ్ ప్రక్రియ పీర్-టు-పీర్ కనెక్షన్‌లను ఉపయోగిస్తుంది, కాబట్టి మా సర్వర్‌ల గుండా డేటా వెళ్లదు."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "PRIVACY POLICY",
+    "lastUpdated": "Last updated August 29, 2025",
+    "introduction": {
+      "title": "Introduction",
+      "description": "This privacy notice for <strong>osvauld security solutions private limited</strong> (\"<strong>we</strong>,\" \"<strong>us</strong>,\" or \"<strong>our</strong>\") describes how and why we might process your information, reflecting our strong commitment to privacy and our open-source roots.<br /><br />This policy is divided into two parts:<br /><ol><li><strong>Our Website (`osvauld.com`)</strong>: This section applies to users of our website.</li><li><strong>Our Software (The Osvauld Application)</strong>: This section applies to users of our decentralized, on-premise desktop software.</li></ol><br /><strong>Questions or concerns?</strong> Reading this privacy notice will help you understand your privacy rights. If you do not agree with our policies, please do not use our website or software. If you have any questions, please contact us at <strong>osvauld@gmail.com</strong>."
+    },
+    "website": {
+      "title": "Part 1: Privacy Policy for Our Website (osvauld.com)",
+      "description": "This section describes the very limited information we process when you visit our website at `https://osvauld.com` or contact us directly.",
+      "whatWeCollect": {
+        "title": "What Information Do We Collect?",
+        "description": "<ul><li><strong>Server Log Information</strong>: When you visit our website, our web server may automatically log standard technical information. This includes your IP address (which can indicate your approximate geographical location), the pages you visited on our site, and the date and time of your visit. We also count the number of times the software is downloaded. This information is not used to identify you personally.</li><li><strong>Information You Voluntarily Provide</strong>: We collect personal information that you voluntarily provide to us when you contact us via email, such as your name and email address.</li></ul>"
+      },
+      "howWeUse": {
+        "title": "How Do We Use Your Website Information?",
+        "description": "We use the minimal server log data solely for our own internal purposes: to understand which countries our visitors are from and to count the total number of software downloads. This helps us ensure our website is functioning correctly. We do not use this data to track individual users or for advertising."
+      },
+      "noCookies": {
+        "title": "Privacy-Focused Analytics",
+        "description": "We respect your privacy. Our website <strong>does not</strong> use cookies for tracking or advertising. We use GoatCounter, a privacy-focused analytics service that does not use cookies or track individual users. GoatCounter provides anonymous usage statistics to help us understand website performance and usage patterns. All data is processed anonymously and we cannot identify individual visitors."
+      }
+    },
+    "software": {
+      "title": "Part 2: Privacy Policy for the Osvauld Software",
+      "description": "This section applies to your use of our downloadable desktop software application (the \"Software\").",
+      "zeroKnowledge": {
+        "title": "Zero-Knowledge and No Data Collection Guarantee",
+        "description": "<ul><li>The Software is designed to be <strong>zero-knowledge</strong>. This means we, the creators of Osvauld, have <strong>no ability to access, view, or decrypt</strong> the credentials, secrets, or any other data you store within the Software (\"User Data\").</li><li>Your User Data is stored locally on your device or on infrastructure you control. It is <strong>never</strong> sent to our servers.</li><li>The Software <strong>does not collect or transmit any personal information, telemetry, or usage analytics</strong> back to us. We do not know who you are, how you use the software, or what you store in it.</li></ul>"
+      },
+      "yourResponsibility": {
+        "title": "Your Data, Your Responsibility",
+        "description": "Since we do not have access to your User Data, we <strong>cannot</strong> help you recover a forgotten master password or restore lost data. You are solely responsible for the security and backup of your own data."
+      },
+      "updates": {
+        "title": "Updates to the Software",
+        "description": "The Software may periodically check for new versions, which may involve a connection to our servers. This process does not transmit any personal information."
+      }
+    },
+    "general": {
+      "title": "General Provisions (Applies to both Site and Software)",
+      "shareInformation": {
+        "title": "Do We Share Information?",
+        "description": "<ul><li>We <strong>do not</strong> sell, rent, or share any personal information collected from our Website with any third party for any reason.</li><li>As we collect <strong>no personal information</strong> from the <strong>Software</strong>, there is nothing for us to share.</li></ul>"
+      },
+      "howLong": {
+        "title": "How Long Do We Keep Your Information?",
+        "description": "We only keep the personal information collected from your <strong>Website</strong> visit (e.g., from an email inquiry) for as long as necessary to fulfill the purposes outlined in this notice, unless a longer period is required by law. Server logs are anonymized and may be kept for analytical purposes."
+      },
+      "minors": {
+        "title": "Do We Collect Information from Minors?",
+        "description": "We do not knowingly solicit data from or market to children under 18 years of age through our Site or Software."
+      },
+      "privacyRights": {
+        "title": "What Are Your Privacy Rights?",
+        "description": "<ul><li>Regarding our <strong>Website</strong>, you may have rights under applicable law to request access to, or deletion of, the personal information we have collected from you (e.g., your email from an inquiry). To make such a request, please contact us.</li><li>Regarding the <strong>Software</strong>, since we hold none of your personal User Data, these rights are exercised by you directly. You can review, update, or delete your data at any time from within your own installation of the Software.</li></ul>"
+      },
+      "updates": {
+        "title": "Do We Make Updates to This Notice?",
+        "description": "Yes, we will update this notice as necessary to stay compliant with relevant laws. The updated version will be indicated by a revised date."
+      },
+      "contact": {
+        "title": "How Can You Contact Us?",
+        "description": "If you have questions or comments about this notice, you may email us at <strong>osvauld@gmail.com</strong> or contact us by post at:<br /><br /><strong>osvauld security solutions private limited</strong><br />Cheruthoni<br />Idukki, Kerala 685602<br />India"
+      }
+    }
+  },
+  "terms": {
+    "title": "TERMS OF USE",
+    "lastUpdated": "Last updated August 29, 2025",
+    "agreement": {
+      "title": "AGREEMENT TO OUR LEGAL TERMS",
+      "description": "We are <strong>osvauld security solutions private limited</strong>, doing business as <strong>osvauld</strong> (\"<strong>Company</strong>,\" \"<strong>we</strong>,\" \"<strong>us</strong>,\" \"<strong>our</strong>\"), a company registered in India at Cheruthoni, Idukki, Kerala 685602.",
+      "provision": "We provide the website at <a href=\"https://osvauld.com\" target=\"_blank\" data-custom-class=\"link\">https://osvauld.com</a> (the \"<strong>Site</strong>\"), and from the Site, you may download our on-premise, peer-to-peer desktop software applications (the \"<strong>Software</strong>\"). These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity (\"<strong>you</strong>\"), and <strong>osvauld security solutions private limited</strong>, concerning your access to and use of the Site as well as your download, installation, and use of the Software.",
+      "agreement": "You agree that by accessing the Site, or by downloading, installing, or using the Software, you have read, understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND THE SOFTWARE AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>",
+      "contact": "You can contact us by email at <strong>osvauld@gmail.com</strong>."
+    },
+    "tableOfContents": {
+      "title": "TABLE OF CONTENTS",
+      "siteAndSoftware": "1. THE SITE AND SOFTWARE",
+      "intellectualProperty": "2. INTELLECTUAL PROPERTY RIGHTS",
+      "userRepresentations": "3. USER REPRESENTATIONS",
+      "prohibitedActivities": "4. PROHIBITED ACTIVITIES",
+      "softwareLicense": "5. SOFTWARE LICENSE (MIT)",
+      "termAndTermination": "6. TERM AND TERMINATION",
+      "modifications": "7. MODIFICATIONS AND INTERRUPTIONS",
+      "governingLaw": "8. GOVERNING LAW",
+      "disputeResolution": "9. DISPUTE RESOLUTION",
+      "corrections": "10. CORRECTIONS",
+      "disclaimer": "11. DISCLAIMER",
+      "limitationsOfLiability": "12. LIMITATIONS OF LIABILITY",
+      "indemnification": "13. INDEMNIFICATION",
+      "userData": "14. USER DATA",
+      "electronicCommunications": "15. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES",
+      "miscellaneous": "16. MISCELLANEOUS",
+      "contactUs": "17. CONTACT US"
+    },
+    "siteAndSoftware": {
+      "title": "1. THE SITE AND SOFTWARE",
+      "description": "The information provided on the Site is not intended for distribution to or use by any person or entity in any jurisdiction where such distribution or use would be contrary to law. The Software is a tool for you to install on your own infrastructure. You, the user, are solely responsible for compliance with local laws, if and to the extent local laws are applicable, regarding your installation and use of the Software."
+    },
+    "intellectualProperty": {
+      "title": "2. INTELLECTUAL PROPERTY RIGHTS",
+      "ourIntellectualProperty": {
+        "title": "Our Intellectual Property",
+        "description": "We are the owner or the licensee of all intellectual property rights in our Site and Software, including all source code, databases, functionality, website designs, text, and graphics (the \"Content\"), as well as the trademarks, service marks, and logos contained therein (the \"Marks\"). The Software itself is licensed to you under the MIT License as described in Section 5."
+      },
+      "yourOwnership": {
+        "title": "Your Ownership of Your Data",
+        "description": "Crucially, you retain full and exclusive ownership of all credentials, secrets, information, and any other data you store or manage using the Software (\"User Data\"). Our zero-knowledge architecture ensures we have no access to, control over, or knowledge of your User Data. You grant us no license or rights to your User Data whatsoever."
+      }
+    },
+    "userRepresentations": {
+      "title": "3. USER REPRESENTATIONS",
+      "description": "By using the Site or the Software, you represent and warrant that: (1) you have the legal capacity and you agree to comply with these Legal Terms; (2) you are not a minor in the jurisdiction in which you reside; (3) you will not access the Site or use the Software through automated or non-human means, whether through a bot, script or otherwise; (4) you will not use the Software for any illegal or unauthorized purpose; and (5) your use of the Site and the Software will not violate any applicable law or regulation."
+    },
+    "prohibitedActivities": {
+      "title": "4. PROHIBITED ACTIVITIES",
+      "description": "You may not access or use the Site or the Software for any purpose other than that for which we make them available. As a user, you agree not to:<ul><li>Systematically retrieve data or other content from the Site to create or compile a collection, compilation, database, or directory without written permission from us.</li><li>Circumvent, disable, or otherwise interfere with security-related features of the Software.</li><li>Use any information obtained from the Site or Software in order to harass, abuse, or harm another person.</li><li>Use the Software in a manner inconsistent with any applicable laws or regulations.</li><li>Decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the Software, except as permitted by the MIT License.</li><li>Use the Software for any part of an effort to compete with us or for any revenue-generating endeavor or commercial enterprise.</li></ul>"
+    },
+    "softwareLicense": {
+      "title": "5. SOFTWARE LICENSE (MIT)",
+      "description": "The Software is an open-source project licensed under the MIT License. A copy of the MIT License is included with the Software distribution. By downloading, using, modifying, or distributing the Software, you agree to be bound by the terms and conditions of the MIT License."
+    },
+    "termAndTermination": {
+      "title": "6. TERM AND TERMINATION",
+      "description": "These Legal Terms shall remain in full force and effect while you use the Site or the Software. WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR LIABILITY, DENY ACCESS TO AND USE OF THE SITE AND SOFTWARE (INCLUDING BLOCKING CERTAIN IP ADDRESSES), TO ANY PERSON FOR ANY REASON, INCLUDING FOR BREACH OF ANY REPRESENTATION, WARRANTY, OR COVENANT CONTAINED IN THESE LEGAL TERMS."
+    },
+    "disclaimer": {
+      "title": "11. DISCLAIMER",
+      "description": "THE SITE AND SOFTWARE ARE PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE SITE AND THE SOFTWARE WILL BE AT YOUR SOLE RISK. IN ADDITION TO THE DISCLAIMERS OF WARRANTY PROVIDED IN THE MIT LICENSE FOR THE SOFTWARE, to the fullest extent permitted by law, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SITE and your use thereof.<br /><br /><strong>On-Premise Responsibility:</strong> Osvauld is on-premise first software. You are solely responsible for the secure and proper setup of the software on your own infrastructure. We are not liable for any risks, security breaches, or data loss that results from an unsafe or improper on-premise setup.<br /><br /><strong>Early Stage Software:</strong> Osvauld is still in its early days; hiccups may happen and not everything will be perfect. We cannot be held accountable for unintentional errors or bugs in the software."
+    },
+    "limitationsOfLiability": {
+      "title": "12. LIMITATIONS OF LIABILITY",
+      "description": "IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST REVENUE, LOSS OF DATA, OR OTHER DAMAGES ARISING FROM YOUR USE OF THE SITE OR THE SOFTWARE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.<br /><br />Given that we have no access to your infrastructure or your data, our liability is strictly limited. You agree that we have no liability whatsoever for any loss, damage, or inconvenience caused by your inability to access or use the Software or for any loss or corruption of your User Data."
+    },
+    "userData": {
+      "title": "14. USER DATA",
+      "description": "You are solely responsible for all data that you create, manage, or transmit using the Software. We do not maintain, transmit, back up, or store any of your User Data for any purpose. We perform regular routine backups of our Site's data, but not your personal data managed via the Software. <strong>YOU AGREE THAT WE SHALL HAVE NO LIABILITY TO YOU FOR ANY LOSS OR CORRUPTION OF ANY SUCH DATA, AND YOU HEREBY WAIVE ANY RIGHT OF ACTION AGAINST US ARISING FROM ANY SUCH LOSS OR CORRUPTION OF SUCH DATA.</strong>"
+    },
+    "contactUs": {
+      "title": "17. CONTACT US",
+      "description": "In order to resolve a complaint or to receive further information, please contact us at:<br /><br /><strong>osvauld security solutions private limited</strong><br />Cheruthoni<br />Idukki, Kerala 685602<br />India<br /><strong>osvauld@gmail.com</strong>"
+    }
+  },
+  "story": {
+    "title": "Our Story",
+    "description": "Learn about the journey behind Osvauld and our mission to build privacy-first applications",
+    "introduction": "Osvauld was born from a simple observation: the internet we use today is fundamentally broken. Every day, we entrust our most sensitive data to corporations that profit from our information, while we have little to no control over how it's used or shared.",
+    "founding": {
+      "title": "The Founding",
+      "description": "Founded in 2024 by a team of privacy advocates and security experts, Osvauld emerged from the frustration of watching our digital lives become increasingly dependent on centralized services. We saw the need for a fundamental shift towards user-controlled, peer-to-peer applications that prioritize privacy and security."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "We envision a future where people can collaborate, communicate, and create without compromising their privacy or autonomy. A world where your data stays yours, where you choose who can access your information, and where powerful applications work seamlessly without relying on corporate servers."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Our mission is to provide the building blocks for the next generation of applications. We're creating tools that enable developers to build privacy-first, peer-to-peer applications that put users in control of their data and digital lives."
+    },
+    "future": {
+      "title": "Looking Forward",
+      "description": "As we continue to develop Osvauld, we're committed to maintaining our core principles: transparency, privacy, and user control. We're building not just software, but a movement towards a more decentralized, user-centric internet."
+    },
+    "joinUs": {
+      "title": "Join Our Journey",
+      "description": "We're always looking for passionate individuals who share our vision. Whether you're a developer, designer, or simply someone who cares about digital privacy, there's a place for you in the Osvauld community."
+    }
+  },
+  "livnoteAcknowledgement": {
+    "title": "Acknowledgements",
+    "description": "This project has received support from Zerodha's FLOSS fund and KSUM Innovation Grant."
+  },
+  "sthalamHero": {
+    "openSource": "MIT Licensed • Open Source",
+    "title": "Your place<br />on the internet",
+    "description": "Sthalam lets you publish websites, blogs, and newsletters<br class=\"hidden md:block\" /> with complete sovereignty—built on the Osvauld framework.<br class=\"hidden md:block\" /> Your content, your node, your rules."
+  },
+  "sthalamFeatures": {
+    "title": "Features",
+    "sovereignPublishing": {
+      "title": "Sovereign Publishing",
+      "description": "Publish content on your terms. Run your node on a <span class=\"text-purple-300 font-medium\">Raspberry Pi</span> or old phone—your infrastructure, your control."
+    },
+    "websites": {
+      "title": "Interactive Websites",
+      "description": "Build <span class=\"text-purple-300 font-medium\">multi-page websites</span> with visual builders, custom styling, and interactive elements—all sovereign."
+    },
+    "blogsNewsletters": {
+      "title": "Blogs & Newsletters",
+      "description": "Publish <span class=\"text-purple-300 font-medium\">micro-blogs</span> and newsletters directly to your viewers without platforms or restrictions."
+    },
+    "formsSubmissions": {
+      "title": "Forms & Surveys",
+      "description": "Collect feedback with <span class=\"text-purple-300 font-medium\">privacy-preserving forms</span>—only you see the submissions, nobody else."
+    },
+    "comments": {
+      "title": "Comment Threads",
+      "description": "Enable <span class=\"text-purple-300 font-medium\">real-time discussions</span> on your content with CRDT-powered comment threads."
+    },
+    "ucanAuth": {
+      "title": "UCAN Authorization",
+      "description": "Control access with <span class=\"text-purple-300 font-medium\">cryptographic tokens</span>—share content with specific capabilities and permissions."
+    },
+    "noIntermediaries": {
+      "title": "Direct Distribution",
+      "description": "Content flows <span class=\"text-purple-300 font-medium\">directly from your node</span> to viewers—no platforms, no algorithms, no middlemen."
+    },
+    "dataPrivacy": {
+      "title": "Your Data, Your Control",
+      "description": "All data exists only between you and your viewers. <span class=\"text-purple-300 font-medium\">Nobody else</span> has access—not even us."
+    },
+    "builtOnOsvauld": {
+      "title": "Built on Osvauld",
+      "description": "Powered by the <span class=\"text-purple-300 font-medium\">Osvauld framework</span>—peer-to-peer, end-to-end encrypted, offline-first architecture."
+    }
+  },
+  "sthalamPhilosophy": {
+    "title": "Why Sthalam?",
+    "description": "We're building Sthalam because we believe you shouldn't need permission to publish.<br /><br />In a world where publishing means uploading to corporate platforms that can deplatform you, censor your content, or change the rules overnight, we're creating an alternative.<br /><br />Sthalam (Malayalam: സ്ഥലം, meaning 'place') gives you your own place on the internet—one that nobody can take away.<br /><br />Your blogs, your surveys, your viewers' comments—all exist only between you and them. We don't store your content. We don't have access to your publishing node. We don't even know what you're publishing—and that's exactly how it should be.<br /><br />Built on the Osvauld framework, Sthalam is part of a movement toward digital sovereignty, where people create and share freely without surrendering control.<br /><br />This is proof-of-concept software. The architecture works, the cryptography is sound, but many features are still being refined. We're showing what's possible when you own your publishing infrastructure."
+  },
+  "sthalamAcknowledgement": {
+    "title": "Acknowledgements",
+    "description": "This project has received support from Zerodha's FLOSS fund and KSUM Innovation Grant."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry"
+  }
+}

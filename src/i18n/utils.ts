@@ -5,7 +5,7 @@ export function getLocaleFromPath(pathname: string): Locale {
   const segments = pathname.split('/').filter(Boolean);
   const firstSegment = segments[0];
   
-  const supportedLocales: Locale[] = ['en', 'de', 'ru', 'zh', 'fr', 'es', 'ja'];
+  const supportedLocales: Locale[] = ['en', 'de', 'ru', 'zh', 'fr', 'es', 'ja', 'ko', 'ar', 'hi', 'ml', 'kn', 'ta', 'te', 'mr', 'ur'];
   
   if (supportedLocales.includes(firstSegment as Locale)) {
     return firstSegment as Locale;
@@ -30,7 +30,7 @@ export async function getTranslations(locale: Locale): Promise<TranslationKeys> 
 export function getLocalizedPath(pathname: string, locale: Locale): string {
   // Remove existing locale prefix if present
   const segments = pathname.split('/').filter(Boolean);
-  const supportedLocales: Locale[] = ['en', 'de', 'ru', 'zh', 'fr', 'es', 'ja'];
+  const supportedLocales: Locale[] = ['en', 'de', 'ru', 'zh', 'fr', 'es', 'ja', 'ko', 'ar', 'hi', 'ml', 'kn', 'ta', 'te', 'mr', 'ur'];
   
   if (supportedLocales.includes(segments[0] as Locale)) {
     segments.shift();
@@ -46,7 +46,7 @@ export function getLocalizedPath(pathname: string, locale: Locale): string {
 
 // Helper function to get all available locales
 export function getAvailableLocales(): Locale[] {
-  return ['en', 'de', 'ru', 'zh', 'fr', 'es', 'ja'];
+  return ['en', 'de', 'ru', 'zh', 'fr', 'es', 'ja', 'ko', 'ar', 'hi', 'ml', 'kn', 'ta', 'te', 'mr', 'ur'];
 }
 
 // Helper function to get locale display name
@@ -59,6 +59,15 @@ export function getLocaleDisplayName(locale: Locale): string {
     fr: 'Français',
     es: 'Español',
     ja: '日本語',
+    ml: 'മലയാളം',
+    hi: 'हिन्दी',
+    kn: 'ಕನ್ನಡ',
+    ta: 'தமிழ்',
+    te: 'తెలుగు',
+    mr: 'मराठी',
+    ur: 'اردو',
+    ar: 'العربية',
+    ko: '한국어',
   };
   
   return displayNames[locale];
@@ -74,6 +83,15 @@ export function getLocaleNativeName(locale: Locale): string {
     fr: 'Français',
     es: 'Español',
     ja: '日本語',
+    ml: 'മലയാളം',
+    hi: 'हिन्दी',
+    kn: 'ಕನ್ನಡ',
+    ta: 'தமிழ்',
+    te: 'తెలుగు',
+    mr: 'मराठी',
+    ur: 'اردو',
+    ar: 'العربية',
+    ko: '한국어',
   };
   
   return nativeNames[locale];
@@ -89,6 +107,15 @@ export function getLocaleEnglishName(locale: Locale): string {
     fr: 'French',
     es: 'Spanish',
     ja: 'Japanese',
+    ml: 'Malayalam',
+    hi: 'Hindi',
+    kn: 'Kannada',
+    ta: 'Tamil',
+    te: 'Telugu',
+    mr: 'Marathi',
+    ur: 'Urdu',
+    ar: 'Arabic',
+    ko: 'Korean',
   };
   
   return englishNames[locale];

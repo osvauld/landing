@@ -5,12 +5,14 @@
     "faq": "常见问题",
     "story": "我们的故事",
     "visitOsvauld": "访问 Osvauld",
-    "tryLivnote": "试用 Livnote"
+    "tryLivnote": "试用 Livnote",
+    "trySthalam": "试用 Sthalam"
   },
   "footer": {
     "heading": {
       "osvauld": "无妥协连接。",
-      "livnote": "与你共生的笔记。"
+      "livnote": "与你共生的笔记。",
+      "sthalam": "互联网上的你的地方。"
     },
     "terms": "使用条款",
     "privacy": "隐私政策",
@@ -171,6 +173,10 @@
     "livnote": {
       "title": "Livnote - 点对点协作文档编辑器",
       "description": "Livnote 是一个使用 Osvauld 框架构建的协作文档编辑器，具有实时点对点编辑、端到端加密和离线优先设计。"
+    },
+    "sthalam": {
+      "title": "Sthalam - 主权发布平台",
+      "description": "Sthalam 是一个使用 Osvauld 框架构建的主权发布平台。以完全控制创建网站、博客和新闻通讯—你的内容、你的节点、你的规则。"
     },
     "faq": {
       "title": "常见问题",
@@ -410,6 +416,58 @@
     }
   },
   "livnoteAcknowledgement": {
+    "title": "致谢",
+    "description": "该项目得到了 Zerodha's FLOSS fund 和 KSUM Innovation Grant 的支持。"
+  },
+  "sthalamHero": {
+    "openSource": "MIT 许可证 • 开源",
+    "title": "互联网上<br />你的地方",
+    "description": "Sthalam 让你发布网站、博客和新闻通讯<br class=\"hidden md:block\" />以完全主权—基于 Osvauld 框架构建。<br class=\"hidden md:block\" />你的内容、你的节点、你的规则。"
+  },
+  "sthalamFeatures": {
+    "title": "功能",
+    "sovereignPublishing": {
+      "title": "主权发布",
+      "description": "按你的条件发布内容。在<span class=\"text-purple-300 font-medium\">树莓派</span>或旧手机上运行节点—你的基础设施、你的控制。"
+    },
+    "websites": {
+      "title": "交互式网站",
+      "description": "使用可视化构建器、自定义样式和交互元素构建<span class=\"text-purple-300 font-medium\">多页网站</span>—全部主权。"
+    },
+    "blogsNewsletters": {
+      "title": "博客和新闻通讯",
+      "description": "直接向观众发布<span class=\"text-purple-300 font-medium\">微博客</span>和新闻通讯，无需平台或限制。"
+    },
+    "formsSubmissions": {
+      "title": "表单和调查",
+      "description": "使用<span class=\"text-purple-300 font-medium\">隐私保护表单</span>收集反馈—只有你能看到提交内容，其他人看不到。"
+    },
+    "comments": {
+      "title": "评论线程",
+      "description": "使用 CRDT 驱动的评论线程在内容上启用<span class=\"text-purple-300 font-medium\">实时讨论</span>。"
+    },
+    "ucanAuth": {
+      "title": "UCAN 授权",
+      "description": "使用<span class=\"text-purple-300 font-medium\">加密令牌</span>控制访问—以特定能力和权限共享内容。"
+    },
+    "noIntermediaries": {
+      "title": "直接分发",
+      "description": "内容<span class=\"text-purple-300 font-medium\">直接从你的节点</span>流向观众—无平台、无算法、无中间商。"
+    },
+    "dataPrivacy": {
+      "title": "你的数据、你的控制",
+      "description": "所有数据仅存在于你和观众之间。<span class=\"text-purple-300 font-medium\">其他人</span>都无法访问—甚至我们也不行。"
+    },
+    "builtOnOsvauld": {
+      "title": "基于 Osvauld 构建",
+      "description": "由<span class=\"text-purple-300 font-medium\">Osvauld 框架</span>驱动—点对点、端到端加密、离线优先架构。"
+    }
+  },
+  "sthalamPhilosophy": {
+    "title": "为什么选择 Sthalam？",
+    "description": "我们构建 Sthalam 是因为我们相信你不应该需要许可才能发布。<br /><br />在一个发布意味着上传到可以将你移除、审查你的内容或一夜之间改变规则的企业平台的世界里，我们正在创建一个替代方案。<br /><br />Sthalam（马拉雅拉姆语：സ്ഥലം，意思是"地方"）给你在互联网上属于自己的地方—一个没有人可以夺走的地方。<br /><br />你的博客、你的调查、你的观众的评论—所有这些都只存在于你和他们之间。我们不存储你的内容。我们无法访问你的发布节点。我们甚至不知道你在发布什么—这正是应该的方式。<br /><br />基于 Osvauld 框架构建，Sthalam 是数字主权运动的一部分，人们可以自由创建和共享而不放弃控制。<br /><br />这是概念验证软件。架构有效、加密可靠，但许多功能仍在完善中。我们展示的是当你拥有发布基础设施时可能实现的目标。"
+  },
+  "sthalamAcknowledgement": {
     "title": "致谢",
     "description": "该项目得到了 Zerodha's FLOSS fund 和 KSUM Innovation Grant 的支持。"
   },

@@ -5,12 +5,14 @@
     "faq": "FAQ",
     "story": "Notre histoire",
     "visitOsvauld": "Visiter Osvauld",
-    "tryLivnote": "Essayer Livnote"
+    "tryLivnote": "Essayer Livnote",
+    "trySthalam": "Essayer Sthalam"
   },
   "footer": {
     "heading": {
       "osvauld": "Connectez-vous sans compromis.",
-      "livnote": "Des notes qui vivent avec vous."
+      "livnote": "Des notes qui vivent avec vous.",
+      "sthalam": "Votre place sur internet."
     },
     "terms": "Conditions d'utilisation",
     "privacy": "Politique de confidentialité",
@@ -171,6 +173,10 @@
     "livnote": {
       "title": "Livnote - Éditeur de documents collaboratif pair-à-pair",
       "description": "Livnote est un éditeur de documents collaboratif construit avec le framework Osvauld, offrant une édition pair-à-pair en temps réel avec chiffrement de bout en bout et conception hors ligne prioritaire."
+    },
+    "sthalam": {
+      "title": "Sthalam - Plateforme de Publication Souveraine",
+      "description": "Sthalam est une plateforme de publication souveraine construite avec le framework Osvauld. Créez des sites web, des blogs et des newsletters avec un contrôle total—votre contenu, votre nœud, vos règles."
     },
     "faq": {
       "title": "Questions fréquemment posées",
@@ -410,6 +416,58 @@
     }
   },
   "livnoteAcknowledgement": {
+    "title": "Remerciements",
+    "description": "Ce projet a reçu le soutien de Zerodha's FLOSS fund et de KSUM Innovation Grant."
+  },
+  "sthalamHero": {
+    "openSource": "Licence MIT • Open Source",
+    "title": "Votre place<br />sur internet",
+    "description": "Sthalam vous permet de publier des sites web, des blogs et des newsletters<br class=\"hidden md:block\" /> avec une souveraineté totale—construit sur le framework Osvauld.<br class=\"hidden md:block\" /> Votre contenu, votre nœud, vos règles."
+  },
+  "sthalamFeatures": {
+    "title": "Fonctionnalités",
+    "sovereignPublishing": {
+      "title": "Publication Souveraine",
+      "description": "Publiez du contenu selon vos conditions. Exécutez votre nœud sur un <span class=\"text-purple-300 font-medium\">Raspberry Pi</span> ou vieux téléphone—votre infrastructure, votre contrôle."
+    },
+    "websites": {
+      "title": "Sites Web Interactifs",
+      "description": "Construisez des <span class=\"text-purple-300 font-medium\">sites web multi-pages</span> avec des constructeurs visuels, des styles personnalisés et des éléments interactifs—tout souverain."
+    },
+    "blogsNewsletters": {
+      "title": "Blogs et Newsletters",
+      "description": "Publiez des <span class=\"text-purple-300 font-medium\">micro-blogs</span> et newsletters directement à vos spectateurs sans plateformes ni restrictions."
+    },
+    "formsSubmissions": {
+      "title": "Formulaires et Enquêtes",
+      "description": "Collectez des commentaires avec des <span class=\"text-purple-300 font-medium\">formulaires préservant la confidentialité</span>—seul vous voyez les soumissions, personne d'autre."
+    },
+    "comments": {
+      "title": "Fils de Commentaires",
+      "description": "Activez des <span class=\"text-purple-300 font-medium\">discussions en temps réel</span> sur votre contenu avec des fils de commentaires alimentés par CRDT."
+    },
+    "ucanAuth": {
+      "title": "Autorisation UCAN",
+      "description": "Contrôlez l'accès avec des <span class=\"text-purple-300 font-medium\">jetons cryptographiques</span>—partagez du contenu avec des capacités et permissions spécifiques."
+    },
+    "noIntermediaries": {
+      "title": "Distribution Directe",
+      "description": "Le contenu circule <span class=\"text-purple-300 font-medium\">directement depuis votre nœud</span> vers les spectateurs—pas de plateformes, pas d'algorithmes, pas d'intermédiaires."
+    },
+    "dataPrivacy": {
+      "title": "Vos Données, Votre Contrôle",
+      "description": "Toutes les données existent uniquement entre vous et vos spectateurs. <span class=\"text-purple-300 font-medium\">Personne d'autre</span> n'y a accès—même pas nous."
+    },
+    "builtOnOsvauld": {
+      "title": "Construit sur Osvauld",
+      "description": "Alimenté par le <span class=\"text-purple-300 font-medium\">framework Osvauld</span>—pair-à-pair, chiffré de bout en bout, architecture hors ligne prioritaire."
+    }
+  },
+  "sthalamPhilosophy": {
+    "title": "Pourquoi Sthalam ?",
+    "description": "Nous construisons Sthalam parce que nous croyons que vous ne devriez pas avoir besoin de permission pour publier.<br /><br />Dans un monde où publier signifie télécharger sur des plateformes d'entreprise qui peuvent vous déplacer, censurer votre contenu ou changer les règles du jour au lendemain, nous créons une alternative.<br /><br />Sthalam (Malayalam: സ്ഥലം, signifiant 'place') vous donne votre propre place sur internet—une que personne ne peut vous enlever.<br /><br />Vos blogs, vos enquêtes, les commentaires de vos spectateurs—tout existe uniquement entre vous et eux. Nous ne stockons pas votre contenu. Nous n'avons pas accès à votre nœud de publication. Nous ne savons même pas ce que vous publiez—et c'est exactement comme ça que ça devrait être.<br /><br />Construit sur le framework Osvauld, Sthalam fait partie d'un mouvement vers la souveraineté numérique, où les gens créent et partagent librement sans abandonner le contrôle.<br /><br />Ceci est un logiciel de preuve de concept. L'architecture fonctionne, la cryptographie est solide, mais de nombreuses fonctionnalités sont encore en cours de raffinement. Nous montrons ce qui est possible lorsque vous possédez votre infrastructure de publication."
+  },
+  "sthalamAcknowledgement": {
     "title": "Remerciements",
     "description": "Ce projet a reçu le soutien de Zerodha's FLOSS fund et de KSUM Innovation Grant."
   },
