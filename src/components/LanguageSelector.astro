@@ -6,10 +6,9 @@ interface Props {
   currentLocale: Locale;
   currentPath: string;
   isLivnote?: boolean;
-  isSthalam?: boolean;
 }
 
-const { currentLocale, currentPath, isLivnote = false, isSthalam = false } = Astro.props;
+const { currentLocale, currentPath, isLivnote = false } = Astro.props;
 
 const availableLocales = getAvailableLocales();
 ---
@@ -18,9 +17,7 @@ const availableLocales = getAvailableLocales();
   <button
     id="language-selector"
     class={`flex items-center gap-2 px-3 py-2 rounded-xl  border transition-colors ${
-      isSthalam
-        ? "text-sthalamPrimary border-sthalamPrimary hover:bg-dark1/20"
-        : isLivnote
+      isLivnote
         ? "text-livnotePrimary border-livnotePrimary hover:bg-livnoteBg/20"
         : "text-white1 border-gray-600 hover:bg-gray-800"
     }`}
@@ -40,9 +37,7 @@ const availableLocales = getAvailableLocales();
   <div
     id="language-dropdown"
     class={`hidden absolute top-full right-0 mt-2 w-48 border rounded-lg shadow-lg z-50 overflow-y-auto ${
-      isSthalam
-        ? "bg-dark1 border-sthalamPrimary"
-        : isLivnote
+      isLivnote
         ? "bg-livnoteBg border-livnotePrimary"
         : "bg-dark1 border-gray-600"
     }`}
@@ -59,14 +54,10 @@ const availableLocales = getAvailableLocales();
             href={localizedPath}
             class={`block px-4 py-2 text-sm transition-colors ${
               isCurrentLocale
-                ? isSthalam
-                  ? "bg-sthalamPrimary text-dark1 font-medium"
-                  : isLivnote
+                ? isLivnote
                   ? "bg-livnotePrimary text-white font-medium"
                   : "bg-blue1 text-white font-medium"
-                : isSthalam
-                  ? "text-gray-300 hover:bg-dark1/20 hover:text-white"
-                  : isLivnote
+                : isLivnote
                   ? "text-gray-300 hover:bg-livnoteBg/20 hover:text-white"
                   : "text-gray-300 hover:bg-gray-800 hover:text-white"
             }`}
