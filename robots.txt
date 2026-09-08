@@ -5,7 +5,4 @@ Allow: /
 Disallow: /*?*sort=
 Disallow: /*?*filter=
 
-# Allow important query parameters (if any)
-Allow: /*?locale=*
-
 Sitemap: https://osvauld.com/sitemap-index.xml
