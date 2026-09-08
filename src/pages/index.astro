@@ -1,24 +1,246 @@
 ---
 import "../styles/Theme.css";
 import Layout from "../layouts/Layout.astro";
-import OsvauldHero from "../components/osvauld/OsvauldHero.astro";
-import StructuralDependencies from "../components/osvauld/StructuralDependencies.astro";
-import IntroducingOsvauld from "../components/osvauld/IntroducingOsvauld.astro";
-import Features from "../components/osvauld/Features.astro";
-import CollaborativeEditor from "../components/osvauld/CollaborativeEditor.astro";
-import CommunitySection from "../components/osvauld/CommunitySection.astro";
-import Acknowledgement from "../components/osvauld/Acknowledgement.astro";
-import { getTranslations } from "../i18n/utils";
 
-const translations = await getTranslations("en");
+const title = "Osvauld — Xnet, the extended internet";
+const description = "Xnet is a private, sovereign, programmable extension of the internet: shared software without REST APIs, traditional authentication, or dependence on a domain.";
 ---
 
-<Layout title={translations.meta.osvauld.title} description={translations.meta.osvauld.description} locale="en">
-  <OsvauldHero translations={translations} />
-  <StructuralDependencies translations={translations} />
-  <IntroducingOsvauld translations={translations} />
-  <Features translations={translations} />
-  <CollaborativeEditor translations={translations} />
-  <CommunitySection translations={translations} />
-  <Acknowledgement translations={translations} />
+<Layout title={title} description={description} locale="en" bare>
+  <main class="os-page">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="wordmark" href="/" aria-label="Osvauld home"><span>O</span> OSVAULD</a>
+      <div class="nav__links">
+        <a href="#xnet">Xnet</a>
+        <a href="https://docs.osvauld.com">Docs</a>
+        <a href="https://github.com/osvauld" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+
+    <section class="hero shell">
+      <div class="hero__copy">
+        <p class="eyebrow"><span></span> XNET / PRIVATE · SOVEREIGN · PROGRAMMABLE</p>
+        <h1>THE<br /><em>EXTENDED</em><br />INTERNET.</h1>
+        <div class="hero__bottom">
+          <p>Chat, threads, documents, and tools that belong to the people using them.</p>
+          <a class="round-link" href="#xnet" aria-label="Explore Xnet">↓</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement shell" id="xnet">
+      <p class="section-index">INTRODUCING XNET</p>
+      <h2>The internet,<br />extended beyond<br /><i>websites.</i></h2>
+      <div class="statement__copy">
+        <p class="lead">Xnet is the private, sovereign network where Osvauld workspaces live. It is not a website and does not belong to a domain.</p>
+        <p>A workspace is addressed by cryptographic identity and served by its own node. Software works directly with synchronized shared state, while signed permits replace the traditional authentication server.</p>
+      </div>
+    </section>
+
+    <section class="principles shell" id="system">
+      <article class="principle principle--identity">
+        <div>
+          <h3>Permission is<br />cryptographic proof.</h3>
+          <p>Signed capability permits say who may access, write, synchronize, or delegate each part of a workspace. They can be verified offline—without asking an authentication server.</p>
+        </div>
+      </article>
+      <article class="principle principle--data">
+        <div>
+          <h3>Shared data is the<br />native environment.</h3>
+          <p>Local state remains useful offline. Changes synchronize through the workspace’s sovereign node and merge safely when participants reconnect.</p>
+        </div>
+      </article>
+      <article class="principle principle--logic">
+        <div>
+          <h3>Ask for the app,<br />not the infrastructure.</h3>
+          <p>AI can write a small Lua app on demand directly over the group’s shared data. With identity, permissions, storage, synchronization, and UI already provided, it only needs to create the behavior you asked for.</p>
+        </div>
+      </article>
+      <article class="principle principle--agents">
+        <div>
+          <h3>AI uses the system,<br />not just the screen.</h3>
+          <p>Agents can work with shared structures, call Lua functions, and change application logic directly instead of pretending to be a person clicking pixels.</p>
+        </div>
+      </article>
+      <article class="principle principle--node">
+        <div>
+          <h3>Authority, under<br />your control.</h3>
+          <p>Each workspace has a sovereign node that serves its data and enforces its signed permits. It can be a Raspberry Pi, phone, laptop, or server—with no static IP, domain, or cloud platform required.</p>
+        </div>
+      </article>
+      <article class="principle principle--ship">
+        <div>
+          <h3>Maintain your own<br />software.</h3>
+          <p>The group owns and evolves its Lua source instead of renting a fixed application. Changes synchronize to participants and hot reload without a traditional server release pipeline.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="manifesto shell">
+      <p class="section-index">THE SHIFT</p>
+      <p class="manifesto__line muted">No domain to buy.</p>
+      <p class="manifesto__line muted">No cloud stack to deploy.</p>
+      <p class="manifesto__line">Write the behavior.</p>
+      <p class="manifesto__line acid">Sync the software.</p>
+    </section>
+
+    <section class="runtime shell">
+      <div class="runtime__intro">
+        <p class="section-index">ONE SHARED SUBSTRATE</p>
+        <h2>JSON-like data.<br />Lua logic.<br />That’s the app.</h2>
+        <p>If you can write JavaScript, the model is familiar. Open a shared document and read it as ordinary nested tables. Explicit writes synchronize; identity and signed permissions are already part of the environment.</p>
+        <a href="https://docs.osvauld.com" class="text-link">Read the architecture <span>↗</span></a>
+      </div>
+
+      <div class="code-window" aria-label="Example Osvauld Lua application">
+        <div class="code-window__top"><span>main.lua</span><span>shared / tasks</span></div>
+        <pre><code><i>local</i> chat = doc:<b>open</b>(<s>"chat"</s>)
+
+<i>local function</i> <b>send</b>(text)
+  chat:<b>insert</b>(&#123; <s>"messages"</s> &#125;, doc.map(&#123;
+    id = uuid(), text = text
+  &#125;)) <span class="comment">-- synchronized</span>
+<i>end</i>
+
+<i>return function</i>()
+  <i>local</i> rows = &#123;&#125;
+  <i>for</i> i = <u>1</u>, #chat.messages <i>do</i>
+    rows[#rows + <u>1</u>] = message_view(chat.messages[i])
+  <i>end</i>
+  <i>return</i> ui.col(&#123; rows, composer(send) &#125;)
+<i>end</i></code></pre>
+        <div class="code-window__flow">
+          <span>LUA APP</span><i>→</i><span>UI TREE</span><i>→</i><span>LAYOUT</span><i>→</i><span>VECTOR PIXELS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="layers shell">
+      <p class="section-index">THE SYSTEM</p>
+      <div class="layers__grid">
+        <div class="layer-title"><h3>APPLICATION</h3><p>Lua logic that travels with the workspace</p></div>
+        <div class="layer-title"><h3>APP RUNTIME</h3><p>Runs sandboxed Lua apps and turns their UI descriptions into interactive software</p></div>
+        <div class="layer-title"><h3>SHARED STATE</h3><p>Local-first documents served by a sovereign node and merged between participants</p></div>
+        <div class="layer-title"><h3>IDENTITY + PERMITS</h3><p>Your keys, encrypted storage, and offline-verifiable access under your control</p></div>
+      </div>
+    </section>
+
+    <section class="support shell" aria-labelledby="support-title">
+      <p class="section-index">SUPPORTED BY</p>
+      <h2 id="support-title">Backed by people who<br />believe in open systems.</h2>
+      <p>Osvauld has received grant support from</p>
+      <div class="support__names">
+        <span>FOSS United</span>
+        <span>Zerodha</span>
+        <span>Kerala Startup Mission <small>KSUM</small></span>
+      </div>
+    </section>
+
+    <footer class="footer shell">
+      <p class="footer__kicker">SOFTWARE THAT BELONGS TO ITS PEOPLE.</p>
+      <h2>OSVAULD</h2>
+      <div class="footer__bottom">
+        <span>WITH ❤️ FROM 🇮🇳</span>
+        <div><a href="https://github.com/osvauld">GITHUB ↗</a><a href="https://docs.osvauld.com">DOCUMENTATION ↗</a></div>
+        <span>© {new Date().getFullYear()} OSVAULD</span>
+      </div>
+    </footer>
+  </main>
 </Layout>
+
+<style is:global>
+  :root { --ink: #eef2e8; --muted: #9da39a; --line: rgba(238,242,232,.16); --acid: #baff57; --blue: #61baff; --black: #080a08; }
+  * { box-sizing: border-box; }
+  html { background: var(--black); scroll-behavior: smooth; }
+  body { margin: 0; background: var(--black); color: var(--ink); }
+  .os-page { font-family: "Host Grotesk", Arial, sans-serif; overflow: hidden; }
+  .os-page a { color: inherit; text-decoration: none; }
+  .shell { width: min(100% - 3rem, 1440px); margin-inline: auto; }
+  .section-index, .eyebrow, .nav, .card-number, .footer__bottom { font-family: "JetBrains Mono", monospace; letter-spacing: .09em; text-transform: uppercase; font-size: .67rem; }
+  .section-index { color: var(--acid); margin: 0; }
+  .nav { height: 5.4rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
+  .wordmark { font-weight: 600; font-family: "Host Grotesk", sans-serif; font-size: .9rem; letter-spacing: .05em; }
+  .wordmark span { display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; margin-right: .5rem; border: 1px solid var(--ink); border-radius: 50%; }
+  .nav__edition { color: var(--muted); }
+  .nav__links { justify-self: end; display: flex; gap: 2rem; }
+  .nav__links a:hover, .text-link:hover { color: var(--acid); }
+  .hero { min-height: calc(100vh - 5.4rem); border-bottom: 1px solid var(--line); }
+  .hero__copy { min-height: calc(100vh - 5.4rem); padding: clamp(4rem, 9vh, 7rem) 0 2rem; display: flex; flex-direction: column; }
+  .eyebrow { margin: 0 0 clamp(3rem, 8vh, 6rem); color: var(--muted); }
+  .eyebrow span { display: inline-block; width: 1.8rem; height: 1px; margin: 0 .6rem .2rem 0; background: var(--acid); }
+  .hero h1 { margin: 0; font-size: clamp(4.2rem, 10.6vw, 10.8rem); font-weight: 600; letter-spacing: -.075em; line-height: .78; }
+  .hero h1 em { color: var(--acid); font-style: normal; }
+  .hero__bottom { margin-top: auto; display: flex; align-items: end; justify-content: space-between; }
+  .hero__bottom p { max-width: 26rem; margin: 4rem 0 0; font-size: clamp(1.1rem, 1.5vw, 1.5rem); line-height: 1.3; }
+  .round-link { width: 3.4rem; height: 3.4rem; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; transition: .2s; }
+  .round-link:hover { color: var(--black); background: var(--acid); transform: translateY(3px); }
+  .statement { padding: 9rem 0 10rem; border-bottom: 1px solid var(--line); }
+  .statement h2 { max-width: 1120px; margin: 4rem 0 7rem; font-size: clamp(3rem, 7vw, 7.8rem); line-height: .93; letter-spacing: -.055em; font-weight: 500; }
+  .statement h2 i { color: var(--acid); font-style: normal; }
+  .statement__copy { margin-left: 50%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .statement__copy p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.6; }
+  .statement__copy .lead { color: var(--ink); font-size: 1.35rem; line-height: 1.35; }
+  .principles { display: grid; grid-template-columns: 1fr 1fr; }
+  .principle { min-height: 22rem; padding: 3rem 2rem; display: flex; align-items: flex-end; border-bottom: 1px solid var(--line); }
+  .principle:nth-child(odd) { border-right: 1px solid var(--line); padding-left: 0; }
+  .principle:nth-child(even) { padding-right: 0; }
+  .card-number { color: var(--muted); }
+  .principle h3 { margin: 0 0 1.4rem; font-size: clamp(1.8rem, 3vw, 3.5rem); letter-spacing: -.04em; line-height: 1; font-weight: 500; }
+  .principle p:last-child { color: var(--muted); line-height: 1.55; max-width: 30rem; }
+  .symbol { position: relative; inset: auto; align-self: flex-end; flex: 0 0 auto; width: min(16rem, 70%); height: 16rem; margin: 1rem 0 2rem; }
+  .symbol--identity span { position: absolute; border: 1px solid rgba(186,255,87,.5); border-radius: 50%; }
+  .symbol--identity span:nth-child(1) { inset: 0; }.symbol--identity span:nth-child(2) { inset: 25%; }.symbol--identity span:nth-child(3) { inset: 48%; background: var(--acid); box-shadow: 0 0 25px var(--acid); }
+  .symbol--data { border: 1px solid var(--line); transform: rotate(45deg) scale(.7); }
+  .symbol--data span { position: absolute; border: 1px solid rgba(97,186,255,.6); inset: 14%; }.symbol--data span:nth-child(2) { inset: 28%; }.symbol--data span:nth-child(3) { inset: 44%; background: var(--blue); }
+  .symbol--logic { display: flex; align-items: center; justify-content: center; color: var(--acid); font: 500 6rem "JetBrains Mono"; }
+  .symbol--logic span { color: var(--muted); }
+  .symbol--agents { width: 22rem; display: flex; align-items: center; gap: .7rem; color: var(--muted); font: .7rem "JetBrains Mono"; }
+  .symbol--agents i { width: 4rem; height: 1px; background: linear-gradient(90deg, var(--line), var(--acid), var(--line)); }
+  .symbol--agents b:nth-of-type(2) { color: var(--acid); border: 1px solid var(--acid); border-radius: 50%; padding: 1.2rem .9rem; }
+  .symbol--node { display: grid; place-items: center; border: 1px solid rgba(186,255,87,.35); border-radius: 50%; }
+  .symbol--node::before, .symbol--node::after { content: ""; position: absolute; border: 1px solid var(--line); border-radius: 50%; }.symbol--node::before { inset: 18%; }.symbol--node::after { inset: 38%; background: var(--acid); box-shadow: 0 0 30px rgba(186,255,87,.5); }
+  .symbol--node span { position: absolute; top: -1rem; font: .6rem "JetBrains Mono"; color: var(--acid); }
+  .symbol--ship { width: 24rem; display: flex; align-items: center; justify-content: space-between; font: .65rem "JetBrains Mono"; color: var(--muted); }
+  .symbol--ship span { border: 1px solid var(--line); padding: .8rem; }.symbol--ship i { color: var(--acid); font-style: normal; }.symbol--ship b { color: var(--ink); font-weight: 400; }
+  .manifesto { padding: 10rem 0; border-bottom: 1px solid var(--line); }
+  .manifesto .section-index { margin-bottom: 5rem; }
+  .manifesto__line { margin: 0; font-size: clamp(3rem, 7.6vw, 8.5rem); letter-spacing: -.065em; line-height: .95; }
+  .manifesto__line.muted { color: #363a35; }.manifesto__line.acid { color: var(--acid); }
+  .runtime { display: grid; grid-template-columns: .78fr 1.22fr; gap: 8vw; padding: 10rem 0; border-bottom: 1px solid var(--line); }
+  .runtime__intro h2 { margin: 3rem 0 2rem; font-size: clamp(3rem, 5vw, 6rem); line-height: .92; letter-spacing: -.055em; font-weight: 500; }
+  .runtime__intro > p:not(.section-index) { color: var(--muted); font-size: 1.1rem; line-height: 1.6; max-width: 30rem; }
+  .text-link { display: inline-block; margin-top: 2rem; border-bottom: 1px solid var(--ink); padding-bottom: .3rem; font-family: "JetBrains Mono"; font-size: .75rem; text-transform: uppercase; }
+  .text-link span { color: var(--acid); }
+  .code-window { align-self: center; border: 1px solid var(--line); background: #0d100d; box-shadow: 18px 18px 0 #111711; }
+  .code-window__top { padding: 1rem 1.2rem; display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); color: var(--muted); font: .67rem "JetBrains Mono"; text-transform: uppercase; }
+  .code-window pre { margin: 0; padding: clamp(1.5rem, 4vw, 3.5rem); overflow-x: auto; color: #d8ddd3; font: .85rem/1.8 "JetBrains Mono"; }
+  .code-window code i { color: #a599ff; font-style: normal; }.code-window code b { color: var(--acid); font-weight: 400; }.code-window code s { color: #e5c07b; text-decoration: none; }.code-window code u { color: var(--blue); text-decoration: none; }.code-window code .comment { color: #596158; }
+  .code-window__flow { border-top: 1px solid var(--line); padding: 1rem; display: flex; justify-content: center; gap: 1rem; color: var(--muted); font: .6rem "JetBrains Mono"; }.code-window__flow i { color: var(--acid); font-style: normal; }
+  .layers { padding: 9rem 0; border-bottom: 1px solid var(--line); }
+  .layers__grid { margin-top: 4rem; border-top: 1px solid var(--line); }
+  .layer-title { display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 2.2rem 0; border-bottom: 1px solid var(--line); }
+  .layer-title h3 { margin: 0; font-size: clamp(1.5rem, 3vw, 3rem); font-weight: 500; }.layer-title p { color: var(--muted); max-width: 27rem; line-height: 1.5; }
+  .support { padding: 9rem 0; border-top: 1px solid var(--line); }
+  .support h2 { margin: 3rem 0 5rem; max-width: 60rem; font-size: clamp(3rem, 6vw, 7rem); line-height: .94; letter-spacing: -.055em; font-weight: 500; }
+  .support > p:not(.section-index) { color: var(--muted); }
+  .support__names { margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .support__names span { padding: 2rem 1rem; font-size: clamp(1.2rem, 2vw, 2rem); }.support__names span:first-child { padding-left: 0; }.support__names span + span { border-left: 1px solid var(--line); }.support__names small { display: block; margin-top: .35rem; color: var(--acid); font: .6rem "JetBrains Mono"; }
+  .footer { padding: 7rem 0 2rem; border-top: 1px solid var(--line); }
+  .footer__kicker { color: var(--acid); font: .75rem "JetBrains Mono"; }
+  .footer h2 { margin: 4rem 0 5rem; font-size: clamp(5rem, 19vw, 18rem); text-align: center; line-height: .75; letter-spacing: -.085em; font-weight: 600; }
+  .footer__bottom { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; color: var(--muted); }.footer__bottom div { display: flex; gap: 2rem; }.footer__bottom span:last-child { text-align: right; }
+  @media (max-width: 850px) {
+    .shell { width: min(100% - 2rem, 1440px); }.nav__links { gap: 1rem; }.nav__links a:first-child { display: none; }
+    .hero__copy { min-height: 42rem; padding-right: 0; }.hero h1 { font-size: clamp(3.5rem, 14vw, 7rem); }
+    .statement { padding: 7rem 0; }.statement__copy { margin-left: 15%; grid-template-columns: 1fr; gap: 2rem; }
+    .principles { grid-template-columns: 1fr; }.principle { min-height: 20rem; padding: 3rem 0 !important; border-right: 0 !important; }
+    .runtime { grid-template-columns: 1fr; gap: 5rem; }.support__names { grid-template-columns: 1fr; }.support__names span { padding: 1.5rem 0; }.support__names span + span { border-left: 0; border-top: 1px solid var(--line); }.layer-title { grid-template-columns: 1fr; }.layer-title p { grid-column: 1; }.footer__bottom { grid-template-columns: 1fr; }.footer__bottom span:last-child { text-align: left; }
+  }
+  @media (max-width: 520px) {
+    .nav { height: 4.5rem; }.wordmark { font-size: .75rem; }.wordmark span { width: 1.5rem; height: 1.5rem; }.nav__links { font-size: .55rem; }
+    .hero { min-height: auto; }.hero__copy { min-height: 35rem; padding-top: 4rem; }.eyebrow { margin-bottom: 3rem; }.hero__bottom p { max-width: 17rem; }
+    .statement h2 { margin-bottom: 4rem; }.statement__copy { margin-left: 0; }.manifesto, .runtime, .layers { padding: 6rem 0; }
+    .symbol { opacity: .65; }.symbol--agents { width: 19rem; }.code-window { box-shadow: 8px 8px 0 #111711; }.code-window__flow { gap: .45rem; font-size: .48rem; }
+    .layer-title { padding: 1.5rem 0; }.footer { padding-top: 5rem; }.footer h2 { margin: 4rem 0; }.footer__bottom div { flex-direction: column; gap: .8rem; }
+  }
+</style>

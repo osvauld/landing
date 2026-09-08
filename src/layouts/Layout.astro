@@ -14,12 +14,14 @@ interface Props {
   title: string;
   description?: string;
   locale?: Locale;
+  bare?: boolean;
 }
 
 const {
   title = "Osvauld - The Building Block of Next Generation of Applications",
   description = "Offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life. Designed for trusted circles of friends and colleagues who want private, reliable collaboration without depending on third-party services even for auth and sync.",
   locale = getLocaleFromPath(Astro.url.pathname),
+  bare = false,
 } = Astro.props;
 
 const isLivnote = Astro.url.pathname.includes("/livnote");
@@ -84,9 +86,7 @@ const availableLocales = getAvailableLocales();
       description={description}
       openGraph={{
         basic: {
-          title: isLivnote
-            ? "Livnote - Peer-to-peer Collaborative Document Editor"
-            : "Osvauld - The Building Block of Next Generation of Applications",
+          title,
           type: "website",
           image: new URL(pageThumbnail.src, Astro.site).toString(),
         },
@@ -324,9 +324,9 @@ const availableLocales = getAvailableLocales();
   </script>
 
   <div>
-    <Navbar isLivnote={isLivnote} locale={locale} />
+    {!bare && <Navbar isLivnote={isLivnote} locale={locale} />}
     <slot />
-    <Footer isLivnote={isLivnote} locale={locale} />
+    {!bare && <Footer isLivnote={isLivnote} locale={locale} />}
     <style is:global>
       html {
         font-family: "Host Grotesk", "Inter", "Plus Jakarta Sans";
