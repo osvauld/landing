@@ -1,3 +1,8 @@
 User-agent: *
+Allow: /
 
-Sitemap: https://osvauld.com/sitemap.xml
+# Block query parameters that don't affect content
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+Sitemap: https://osvauld.com/sitemap-index.xml
