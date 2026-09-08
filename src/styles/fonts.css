@@ -1,101 +1,23 @@
-
-/* host-grotesk-600 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Host Grotesk';
-  font-style: normal;
-  font-weight: 600;
-  src: url('/fonts/host-grotesk-v5-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* host-grotesk-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Host Grotesk';
+  font-display: swap;
+  font-family: "Host Grotesk";
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/host-grotesk-v5-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/host-grotesk-v5-latin-regular.woff2") format("woff2");
 }
-
-@font-face {
-  font-display: swap; 
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/inter-regular-subset.woff2') format('woff2'); 
-}
-  
-@font-face {
-  font-display: swap; 
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  src: url('/fonts/inter-600-subset.woff2') format('woff2'); 
-}
-
 
 @font-face {
   font-display: swap;
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/jetbrains-mono-regular-subset.woff2') format('woff2'); 
-}
-@font-face {
-  font-display: swap;
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  src: url('/fonts/jetbrains-mono-500-subset.woff2') format('woff2'); 
-}
-
-
-
-
-@font-face {
-  font-display: swap; 
-  font-family: 'Plus Jakarta Sans';
-  font-style: normal;
-  font-weight: 200;
-  src: url('/fonts/plus-jakarta-sans-200-subset.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-@font-face {
-  font-display: swap; 
-  font-family: 'Plus Jakarta Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/plus-jakarta-sans-regular-subset.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-@font-face {
-  font-display: swap; 
-  font-family: 'Plus Jakarta Sans';
-  font-style: normal;
-  font-weight: 500;
-  src: url('/fonts/plus-jakarta-sans-500-subset.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-@font-face {
-  font-display: swap; 
-  font-family: 'Plus Jakarta Sans';
+  font-family: "Host Grotesk";
   font-style: normal;
   font-weight: 600;
-  src: url('/fonts/plus-jakarta-sans-600-subset.woff2') format('woff2'); 
+  src: url("/fonts/host-grotesk-v5-latin-600.woff2") format("woff2");
 }
 
 @font-face {
-  font-display: swap; 
-  font-family: 'Plus Jakarta Sans';
+  font-display: swap;
+  font-family: "JetBrains Mono";
   font-style: normal;
-  font-weight: 700;
-  src: url('/fonts/plus-jakarta-sans-700-subset.woff2') format('woff2'); 
-}
-
-@font-face {
-  font-display: swap; 
-  font-family: 'Plus Jakarta Sans';
-  font-style: normal;
-  font-weight: 800;
-  src: url('/fonts/plus-jakarta-sans-800-subset.woff2') format('woff2'); 
+  font-weight: 400;
+  src: url("/fonts/jetbrains-mono-regular-subset.woff2") format("woff2");
 }

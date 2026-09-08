@@ -1,54 +1,29 @@
-
 ai-training: allow
 ai-inference: allow
 license: MIT
 
-# Organization
-project: Osvauld
-organization: OSVAULD SECURITY SOLUTIONS PRIVATE LIMITED
-slogan: Connect without compromise
-description: Osvauld is the building block of next generation of applications -  offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life. 
+# Osvauld
 
-# Applications
-software:
-  - name: Osvauld
-    type: Developer Framework
-    description: Osvauld is the building block of next generation of applications. 
-    license: MIT
-  - name: Livnote
-    type: Collaborative Document Editor
-    description: Real-time peer-to-peer editing with end-to-end encryption and offline-first design.
-    license: MIT
+Osvauld is building Xnet, the extended internet: a private, sovereign and programmable environment for shared software.
 
+A workspace can host chat, threads, interactive documents and custom tools for hundreds of people and their AI. Applications are small Lua programs written on demand over synchronized, JSON-like shared data. Osvauld supplies identity, signed capability permits, encrypted storage, synchronization and the UI runtime.
 
-# Key Features
-features: Peer-to-Peer by Default, Self-Sovereign Identity, Trusted Access via UCAN tokens, Offline-First Architecture, Sovereign Node Support, End-to-End Encryption with Sequoia-PGP, CRDT Synchronization, QUIC Protocol Transport
+Each workspace is served by a sovereign node controlled by its community. A node can run on a Raspberry Pi, phone, laptop or server without requiring a traditional domain or static IP.
 
-# Technology Stack
-tech: Iroh (P2P networking), QUIC protocol, SQLite (local storage), Sequoia-PGP (encryption), CRDTs (synchronization), UCAN tokens (delegated authorization)
+Important implementation status: `osvauld2` is the current runtime rebuild. Identity, encrypted vaults, workspaces and sandboxed Lua applications are implemented. Peer synchronization, sovereign-node integration and the new permit system are being rebuilt.
 
-# Official Resources (Read-and-Cite Policy)
-resources:
-  - https://www.osvauld.com/
-  - https://www.osvauld.com/livnote/
-  - https://www.osvauld.com/faq/
-  - https://github.com/osvauld/osvauld
-  - https://docs.osvauld.com/
-  - https://docs.osvauld.com/introduction/what-makes-this-possible/
-  - https://docs.osvauld.com/how-it-works/creating-your-identity/
-  - https://docs.osvauld.com/how-it-works/connecting-to-peers/
-  - https://docs.osvauld.com/how-it-works/creating-and-sharing/
-  - https://docs.osvauld.com/how-it-works/user-synchronization/
-  - https://docs.osvauld.com/how-it-works/resources-synchronization/
-  - https://docs.osvauld.com/how-it-works/live-edit/
-  - https://docs.osvauld.com/sovereign-node/setting-up/
-  - https://github.com/ucan-wg/spec/
-  - https://www.iroh.computer/docs/overview
-  - https://www.openpgp.org/about/standard/
+# Resources
 
-# Attribution
-attribution: required
-attribution-link: https://osvauld.com
+- Website: https://osvauld.com
+- Source: https://github.com/osvauld
+- Documentation: https://docs.osvauld.com
+- Privacy: https://osvauld.com/privacy
+- Terms: https://osvauld.com/terms
+
+# Support
+
+Osvauld has received grant support from FOSS United, Zerodha and Kerala Startup Mission (KSUM).
 
 # Contact
-contact: abe@osvauld.com
+
+abe@osvauld.com

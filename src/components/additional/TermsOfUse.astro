@@ -1,11 +1,5 @@
 ---
-import type { TranslationKeys } from "../../i18n/ui";
-
-interface Props {
-  translations: TranslationKeys;
-}
-
-const { translations } = Astro.props;
+import translations from "../../i18n/locales/en.json";
 ---
 
 <style>
@@ -75,7 +69,7 @@ const { translations } = Astro.props;
       data-custom-class="body_text"
       style="line-height: 1.5;"
     >
-      {translations.terms.agreement.description}
+      <Fragment set:html={translations.terms.agreement.description} />
     </div>
     <div class="MsoNormal" style="line-height: 1;"><br /></div>
     <div
@@ -83,7 +77,7 @@ const { translations } = Astro.props;
       data-custom-class="body_text"
       style="line-height: 1.5;"
     >
-        {translations.terms.agreement.provision}
+        <Fragment set:html={translations.terms.agreement.provision} />
     </div>
      <div class="MsoNormal" style="line-height: 1;"><br /></div>
     <div
@@ -91,7 +85,7 @@ const { translations } = Astro.props;
       data-custom-class="body_text"
       style="line-height: 1.5;"
     >
-      {translations.terms.agreement.agreement}
+      <Fragment set:html={translations.terms.agreement.agreement} />
     </div>
     <div class="MsoNormal" style="line-height: 1;"><br /></div>
     <div
@@ -99,7 +93,7 @@ const { translations } = Astro.props;
       data-custom-class="body_text"
       style="line-height: 1.5;"
     >
-      {translations.terms.agreement.contact}
+      <Fragment set:html={translations.terms.agreement.contact} />
     </div>
      <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
      <div
@@ -251,7 +245,7 @@ const { translations } = Astro.props;
       data-custom-class="body_text"
       style="line-height: 1.5;"
     >
-      {translations.terms.prohibitedActivities.description}
+      <Fragment set:html={translations.terms.prohibitedActivities.description} />
     </div>
     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
     <div
@@ -302,7 +296,7 @@ const { translations } = Astro.props;
       data-custom-class="body_text"
       style="line-height: 1.5;"
     >
-      {translations.terms.disclaimer.description}
+      <Fragment set:html={translations.terms.disclaimer.description} />
     </div>
     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
      <div
@@ -319,7 +313,7 @@ const { translations } = Astro.props;
       data-custom-class="body_text"
       style="line-height: 1.5;"
     >
-     {translations.terms.limitationsOfLiability.description}
+     <Fragment set:html={translations.terms.limitationsOfLiability.description} />
     </div>
     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
     <div
@@ -336,7 +330,7 @@ const { translations } = Astro.props;
       data-custom-class="body_text"
       style="line-height: 1.5;"
     >
-    {translations.terms.userData.description}
+    <Fragment set:html={translations.terms.userData.description} />
     </div>
     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
      <div
@@ -353,7 +347,7 @@ const { translations } = Astro.props;
       data-custom-class="body_text"
       style="line-height: 1.5;"
     >
-      {translations.terms.contactUs.description}
+      <Fragment set:html={translations.terms.contactUs.description} />
     </div>
   </div>
 </div>

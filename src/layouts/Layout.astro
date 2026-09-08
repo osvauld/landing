@@ -1,368 +1,77 @@
 ---
-import { SEO } from "astro-seo";
-import osvauldThumbnail from "../assets/images/osvauldthumb.png";
-import livnoteThumbnail from "../assets/images/livnotethumb.png";
-
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-
 import "../styles/fonts.css";
-import { getLocaleFromPath, getAvailableLocales, getLocalizedPath } from "../i18n/utils";
-import type { Locale } from "../i18n/ui";
 
 interface Props {
   title: string;
   description?: string;
-  locale?: Locale;
+  locale?: string;
   bare?: boolean;
 }
 
 const {
-  title = "Osvauld - The Building Block of Next Generation of Applications",
-  description = "Offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life. Designed for trusted circles of friends and colleagues who want private, reliable collaboration without depending on third-party services even for auth and sync.",
-  locale = getLocaleFromPath(Astro.url.pathname),
+  title,
+  description = "Osvauld is building Xnet: private, sovereign shared software for people and their AI.",
+  locale = "en",
   bare = false,
 } = Astro.props;
 
-const isLivnote = Astro.url.pathname.includes("/livnote");
-
-// Choose the appropriate thumbnail based on the page
-const pageThumbnail = isLivnote ? livnoteThumbnail : osvauldThumbnail;
-
-// Get all available locales for hreflang
-const availableLocales = getAvailableLocales();
+const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
 <html lang={locale}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      rel="icon"
-      type="image/png"
-      href={isLivnote ? "/favicon-livnote-96x96.png" : "/favicon-96x96.png"}
-      sizes="96x96"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href={isLivnote ? "/favicon-livnote.svg" : "/favicon.svg"}
-    />
-    <link
-      rel="shortcut icon"
-      href={isLivnote ? "/favicon-livnote.ico" : "/favicon.ico"}
-    />
-
-    <meta name="theme-color" content="#010102" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080a08" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Osvauld" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <link
-      rel="preload"
-      href="/fonts/host-grotesk-v5-latin-600.woff2"
-      as="font"
-      type="font/woff2"
-    />
-    <link
-      rel="preload"
-      href="/fonts/host-grotesk-v5-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-    />
-    {
-      isLivnote && (
-        <link
-          rel="preload"
-          href="/fonts/jetbrains-mono-regular-subset.woff2"
-          as="font"
-          type="font/woff2"
-        />
-      )
-    }
-
-    <SEO
-      title={title}
-      description={description}
-      openGraph={{
-        basic: {
-          title,
-          type: "website",
-          image: new URL(pageThumbnail.src, Astro.site).toString(),
-        },
-      }}
-    />
-    
-    <!-- Hreflang alternate links -->
-    {availableLocales.map((altLocale) => (
-      <link 
-        rel="alternate" 
-        hreflang={altLocale} 
-        href={new URL(getLocalizedPath(Astro.url.pathname, altLocale), Astro.site).toString()} 
-      />
-    ))}
-    <link 
-      rel="alternate" 
-      hreflang="x-default" 
-      href={new URL(getLocalizedPath(Astro.url.pathname, 'en'), Astro.site).toString()} 
-    />
-    <meta name="generator" content={Astro.generator} />
-    {!import.meta.env.DEV && (
-      <script data-goatcounter="https://osvauld.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <link rel="preload" href="/fonts/host-grotesk-v5-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/host-grotesk-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <title>{title}</title>
+    {!import.meta.env.DEV && <script data-goatcounter="https://osvauld.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>}
+  </head>
+  <body>
+    {!bare && (
+      <header class="legal-nav">
+        <a href="/"><span>O</span> OSVAULD</a>
+        <a href="/">Back to Xnet</a>
+      </header>
     )}
-    
-    <!-- Analytics utility functions -->
-    <script>
-      // Type declarations for analytics
-      if (!window.analytics) {
-        window.analytics = {
-          trackEvent: function() {},
-          trackDownload: function() {},
-          trackInteraction: function() {},
-          trackLocaleChange: function() {}
-        };
-      }
-      if (!window.trackEvent) window.trackEvent = function() {};
-      if (!window.trackDownload) window.trackDownload = function() {};
-      if (!window.trackInteraction) window.trackInteraction = function() {};
-      if (!window.trackLocaleChange) window.trackLocaleChange = function() {};
-      
-      // Centralized analytics utility
-      window.analytics = {
-        trackEvent: function(eventName, properties = {}) {
-          if (import.meta.env.DEV) {
-            console.log(`[Analytics] Event "${eventName}" not tracked (development mode)`);
-            return;
-          }
-          
-          try {
-            if (!window.goatcounter || typeof window.goatcounter.count !== 'function') {
-              console.warn('[Analytics] GoatCounter not available');
-              return;
-            }
-            
-            const event = {
-              path: `${location.pathname}#${eventName}`,
-              title: eventName,
-              event: true,
-              ...properties
-            };
-            
-            window.goatcounter.count(event);
-            console.log(`[Analytics] Tracked event: ${eventName}`, event);
-          } catch (error) {
-            console.error(`[Analytics] Failed to track event "${eventName}":`, error);
-          }
-        },
-        
-        trackDownload: function(platform, product = 'osvauld') {
-          this.trackEvent(`${product}_download_${platform}`, {
-            platform,
-            product,
-            userAgent: navigator.userAgent
-          });
-        },
-        
-        trackInteraction: function(elementName, action = 'click') {
-          this.trackEvent(`${elementName}_${action}`, {
-            element: elementName,
-            action
-          });
-        },
-        
-        trackLocaleChange: function(fromLocale, toLocale) {
-          this.trackEvent('locale_change', {
-            from: fromLocale,
-            to: toLocale
-          });
-        }
-      };
-      
-      // Global convenience functions
-      window.trackEvent = window.analytics.trackEvent.bind(window.analytics);
-      window.trackDownload = window.analytics.trackDownload.bind(window.analytics);
-      window.trackInteraction = window.analytics.trackInteraction.bind(window.analytics);
-      window.trackLocaleChange = window.analytics.trackLocaleChange.bind(window.analytics);
-    </script>
-  </head><theme-color content="#010409"></theme-color>
-
-  <script type="application/ld+json" defer>
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://osvauld.com/#organization",
-      "url": "https://osvauld.com",
-      "name": "Osvauld",
-      "legalName": "OSVAULD SECURITY SOLUTIONS PRIVATE LIMITED",
-      "description": "Connect without compromise with Osvauld - the building block of next generation of applications - offline-first, end-to-end encrypted, peer-to-peer applications that lets you build a truly independent digital life.",
-      "slogan": "Connect without compromise",
-      "logo": "https://www.osvauld.com/assets/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "name": "OSVAULD SECURITY SOLUTIONS (OPC) PRIVATE LIMITED",
-        "addressCountry": "India",
-        "addressLocality": "Idukki",
-        "addressRegion": "Kerala",
-        "streetAddress": "Puthumanakudiyil House, Painavu PO, Thannikandam",
-        "postalCode": "685602"
-      },
-      "email": "abe@osvauld.com",
-      "foundingDate": "2024-04-26",
-      "keywords": "peer-to-peer software suite, Rust framework, privacy-first applications, offline-first, end-to-end encryption, CRDT, P2P networking, decentralized apps, open-source software, MIT licensed, collaborative tools, secure messaging",
-      "sameAs": [
-        "https://github.com/osvauld",
-        "https://docs.osvauld.com",
-        "https://in.linkedin.com/company/osvauld",
-        "https://buymeacoffee.com/osvauld",
-        "https://osvauld.com/#corporation"
-      ],
-      "owns": [
-        {
-          "@context": "http://schema.org",
-          "@id": "https://osvauld.com/#framework",
-          "@type": "SoftwareApplication",
-          "name": "Osvauld Suite",
-          "applicationCategory": "DeveloperApplication",
-          "applicationSubCategory": "Software Development Framework",
-          "operatingSystem": "Windows, macOS, Linux, Android, iOS",
-          "description": "A software suite for building peer-to-peer applications with built-in privacy, security, and user control. Enables developers to create offline-first apps without servers or data collection.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          },
-          "softwareRequirements": "Rust programming language",
-          "storageRequirements": "Minimal local storage",
-          "featureList": "P2P Networking, End-to-End Encryption, CRDT Integration, Offline-First Architecture, QUIC Protocol, Self-Sovereign Identity, Cross-Platform Support, MIT Licensed, Open Source",
-          "license": "https://opensource.org/licenses/MIT",
-          "about": {
-            "description": "Osvauld Suite provides all the tools needed to build privacy-first, peer-to-peer applications, handling complex networking, encryption, and synchronization so developers can focus on their app's unique features."
-          },
-          "publisher": {
-            "@context": "http://schema.org/",
-            "@id": "https://osvauld.com/#corporation",
-            "@type": "Corporation",
-            "name": "Osvauld",
-            "url": "https://osvauld.com",
-            "logo": "https://www.osvauld.com/assets/logo.png"
-          }
-        },
-        {
-          "@context": "http://schema.org",
-          "@id": "https://osvauld.com/#livnote",
-          "@type": "SoftwareApplication",
-          "name": "Livnote",
-          "applicationCategory": "ProductivityApplication",
-          "applicationSubCategory": "Collaborative Document Editor",
-          "operatingSystem": "Windows, macOS, Linux, Android, iOS",
-          "description": "A collaborative document editor built with Osvauld framework, featuring real-time peer-to-peer editing with end-to-end encryption and offline-first design.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          },
-          "softwareRequirements": "Any modern operating system",
-          "storageRequirements": "Minimal local storage",
-          "featureList": "Real-Time Collaboration, End-to-End Encryption, Peer-to-Peer Connectivity, Offline-First Design, No Cloud Storage, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
-          "license": "https://opensource.org/licenses/MIT",
-          "about": {
-            "description": "LivNote demonstrates the power of Osvauld framework with real-time collaborative document editing that works entirely peer-to-peer without any servers or data collection."
-          },
-          "publisher": {
-            "@context": "http://schema.org/",
-            "@id": "https://osvauld.com/#corporation",
-            "@type": "Corporation",
-            "name": "Osvauld",
-            "url": "https://osvauld.com",
-            "logo": "https://www.osvauld.com/assets/logo.png"
-          }
-        },
-        {
-          "@context": "http://schema.org",
-          "@id": "https://osvauld.com/#passwordmanager",
-          "@type": "SoftwareApplication",
-          "name": "Osvauld Password Manager",
-          "applicationCategory": "UtilitiesApplication",
-          "applicationSubCategory": "Credential Management Software",
-          "operatingSystem": "Windows, macOS, Linux, Android, iOS",
-          "description": "A secure password manager built with Osvauld framework, featuring peer-to-peer synchronization and team sharing capabilities without relying on cloud services.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/ComingSoon"
-          },
-          "softwareRequirements": "Any modern operating system",
-          "storageRequirements": "Minimal local storage",
-          "featureList": "End-to-End Encryption, Peer-to-Peer Sharing, Team Collaboration, Offline-First Design, No Cloud Storage, Direct Device Synchronization, Open Source, MIT Licensed, Cross-Platform",
-          "license": "https://opensource.org/licenses/MIT",
-          "about": {
-            "description": "A password manager that showcases Osvauld framework's capabilities for secure credential management with team sharing, all without exposing data to third-party services."
-          },
-          "publisher": {
-            "@context": "http://schema.org/",
-            "@id": "https://osvauld.com/#corporation",
-            "@type": "Corporation",
-            "name": "Osvauld",
-            "url": "https://osvauld.com",
-            "logo": "https://www.osvauld.com/assets/logo.png"
-          }
-        }
-      ],
-      "potentialAction": {
-        "@type": "DownloadAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://osvauld.com/download",
-          "description": "Download Osvauld suite and applications"
-        },
-        "description": "Get started with Osvauld suite for building privacy-first P2P applications"
-      }
-    }
-  </script>
-
-  <div>
-    {!bare && <Navbar isLivnote={isLivnote} locale={locale} />}
     <slot />
-    {!bare && <Footer isLivnote={isLivnote} locale={locale} />}
-    <style is:global>
-      html {
-        font-family: "Host Grotesk", "Inter", "Plus Jakarta Sans";
-        background-color: #010409;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-        box-sizing: border-box;
-      }
-
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-
-      html::-webkit-scrollbar {
-        width: 4px;
-        height: 130px;
-      }
-
-      html::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-      html::-webkit-scrollbar-thumb {
-        background-color: #2f303e;
-        border-radius: 4px;
-      }
-
-      .active.html::-webkit-scrollbar-thumb {
-        background-color: #2f303e; /* color of the thumb */
-      }
-
-      html::-webkit-scrollbar-thumb:hover {
-        background-color: #2f303e; /* color of the thumb on hover */
-      }
-    </style>
-  </div>
+    {!bare && (
+      <footer class="legal-footer">
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <span>WITH ❤️ FROM 🇮🇳</span>
+      </footer>
+    )}
+  </body>
 </html>
+
+<style is:global>
+  * { box-sizing: border-box; }
+  html { background: #080a08; }
+  body { margin: 0; min-height: 100vh; font-family: "Host Grotesk", Arial, sans-serif; }
+  .legal-nav, .legal-footer { width: min(100% - 3rem, 1100px); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; font: .7rem "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  .legal-nav { height: 5rem; color: #eef2e8; border-bottom: 1px solid rgba(238,242,232,.16); }
+  .legal-nav a, .legal-footer a { color: inherit; text-decoration: none; }
+  .legal-nav a:first-child { font-family: "Host Grotesk", sans-serif; font-weight: 600; }
+  .legal-nav a:first-child span { display: inline-grid; place-items: center; width: 1.7rem; height: 1.7rem; margin-right: .5rem; border: 1px solid currentColor; border-radius: 50%; }
+  .legal-footer { gap: 2rem; padding: 2rem 0; color: #9da39a; }
+  .legal-footer span { margin-left: auto; }
+  @media (max-width: 520px) { .legal-nav, .legal-footer { width: calc(100% - 2rem); }.legal-footer { flex-wrap: wrap; }.legal-footer span { width: 100%; margin: 0; } }
+</style>
