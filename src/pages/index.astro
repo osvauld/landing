@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const title = "Osvauld — Xnet, the extended internet";
-const description = "Xnet is a private, sovereign, programmable extension of the internet: shared software without REST APIs, traditional authentication, or dependence on a domain.";
+const title = "Osvauld — The protocol for AI-programmable workspaces";
+const description = "Osvauld is a protocol for workspaces: sets of collaborative apps that AI can create and modify for a group.";
 ---
 
 <Layout title={title} description={description} locale="en" bare>
@@ -10,7 +10,7 @@ const description = "Xnet is a private, sovereign, programmable extension of the
     <nav class="nav shell" aria-label="Main navigation">
       <a class="wordmark" href="/" aria-label="Osvauld home"><span>O</span> OSVAULD</a>
       <div class="nav__links">
-        <a href="#xnet">Xnet</a>
+        <a href="#protocol">Protocol</a>
         <a href="https://docs.osvauld.com">Docs</a>
         <a href="https://github.com/osvauld" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
@@ -18,21 +18,21 @@ const description = "Xnet is a private, sovereign, programmable extension of the
 
     <section class="hero shell">
       <div class="hero__copy">
-        <p class="eyebrow"><span></span> XNET / PRIVATE · SOVEREIGN · PROGRAMMABLE</p>
-        <h1>THE<br /><em>EXTENDED</em><br />INTERNET.</h1>
+        <p class="eyebrow"><span></span> OSVAULD / COLLABORATIVE · PROGRAMMABLE · SOVEREIGN</p>
+        <h1>WORKSPACES<br /><em>YOUR AI CAN</em><br />PROGRAM.</h1>
         <div class="hero__bottom">
-          <p>Chat, threads, documents, and tools that belong to the people using them.</p>
-          <a class="round-link" href="#xnet" aria-label="Explore Xnet">↓</a>
+          <p>Build private, programmable workspaces where people and AI share data, tools, and authority.</p>
+          <a class="round-link" href="#protocol" aria-label="Explore the Osvauld protocol">↓</a>
         </div>
       </div>
     </section>
 
-    <section class="statement shell" id="xnet">
-      <p class="section-index">INTRODUCING XNET</p>
-      <h2>The internet,<br />extended beyond<br /><i>websites.</i></h2>
+    <section class="statement shell" id="protocol">
+      <p class="section-index">WHAT IS A WORKSPACE?</p>
+      <h2>A set of apps<br />a group uses<br /><i>together.</i></h2>
       <div class="statement__copy">
-        <p class="lead">Xnet is the private, sovereign network where Osvauld workspaces live. It is not a website and does not belong to a domain.</p>
-        <p>A workspace is addressed by cryptographic identity and served by its own node. Software works directly with synchronized shared state, while signed permits replace the traditional authentication server.</p>
+        <p class="lead">A workspace brings a group and its apps into one collaborative environment. Members use the same software over synchronized data.</p>
+        <p>Osvauld is the protocol underneath. It provides identity, permissions, synchronization, and an app runtime—so your AI can create and modify apps directly inside the workspace.</p>
       </div>
     </section>
 
@@ -40,7 +40,7 @@ const description = "Xnet is a private, sovereign, programmable extension of the
       <article class="principle principle--identity">
         <div>
           <h3>Permission is<br />cryptographic proof.</h3>
-          <p>Signed capability permits say who may access, write, synchronize, or delegate each part of a workspace. They can be verified offline—without asking an authentication server.</p>
+          <p>Permits work like UCAN-style tokens: signed capability grants that say exactly what an identity can do—access, write, synchronize, or delegate. Authorization is based on capabilities and can be verified offline.</p>
         </div>
       </article>
       <article class="principle principle--data">
@@ -51,20 +51,20 @@ const description = "Xnet is a private, sovereign, programmable extension of the
       </article>
       <article class="principle principle--logic">
         <div>
-          <h3>Ask for the app,<br />not the infrastructure.</h3>
-          <p>AI can write a small Lua app on demand directly over the group’s shared data. With identity, permissions, storage, synchronization, and UI already provided, it only needs to create the behavior you asked for.</p>
+          <h3>Ask for the workflow,<br />get a collaborative app.</h3>
+          <p>AI can write a small Lua app directly inside the workspace. Identity, permissions, storage, synchronization, and UI are already provided—the new app begins as part of the group’s environment.</p>
         </div>
       </article>
       <article class="principle principle--agents">
         <div>
-          <h3>AI uses the system,<br />not just the screen.</h3>
-          <p>Agents can work with shared structures, call Lua functions, and change application logic directly instead of pretending to be a person clicking pixels.</p>
+          <h3>AI can program<br />the workspace.</h3>
+          <p>Agents can call Lua functions, perform actions, change application logic, and create new apps directly instead of pretending to be a person clicking pixels.</p>
         </div>
       </article>
       <article class="principle principle--node">
         <div>
           <h3>Authority, under<br />your control.</h3>
-          <p>Each workspace has a sovereign node that serves its data and enforces its signed permits. It can be a Raspberry Pi, phone, laptop, or server—with no static IP, domain, or cloud platform required.</p>
+          <p>Each workspace has a sovereign node that keeps the group reachable and coordinates synchronization. It can be a Raspberry Pi, phone, laptop, or server—with no static IP, domain, or cloud platform required.</p>
         </div>
       </article>
       <article class="principle principle--ship">
@@ -77,17 +77,17 @@ const description = "Xnet is a private, sovereign, programmable extension of the
 
     <section class="manifesto shell">
       <p class="section-index">THE SHIFT</p>
-      <p class="manifesto__line muted">No domain to buy.</p>
+      <p class="manifesto__line muted">No app stack to stitch.</p>
       <p class="manifesto__line muted">No cloud stack to deploy.</p>
-      <p class="manifesto__line">Write the behavior.</p>
-      <p class="manifesto__line acid">Sync the software.</p>
+      <p class="manifesto__line">Describe the workflow.</p>
+      <p class="manifesto__line acid">Run the app.</p>
     </section>
 
     <section class="runtime shell">
       <div class="runtime__intro">
         <p class="section-index">ONE SHARED SUBSTRATE</p>
-        <h2>JSON-like data.<br />Lua logic.<br />That’s the app.</h2>
-        <p>If you can write JavaScript, the model is familiar. Open a shared document and read it as ordinary nested tables. Explicit writes synchronize; identity and signed permissions are already part of the environment.</p>
+        <h2>Shared data.<br />Lua logic.<br />That’s the app.</h2>
+        <p>Your AI gets a programmable Lua layer where it can call functions, perform actions, modify code, and create new apps. Those apps run inside the workspace and work directly with its synchronized data.</p>
         <a href="https://docs.osvauld.com" class="text-link">Read the architecture <span>↗</span></a>
       </div>
 
@@ -117,9 +117,9 @@ const description = "Xnet is a private, sovereign, programmable extension of the
     <section class="layers shell">
       <p class="section-index">THE SYSTEM</p>
       <div class="layers__grid">
-        <div class="layer-title"><h3>APPLICATION</h3><p>Lua logic that travels with the workspace</p></div>
-        <div class="layer-title"><h3>APP RUNTIME</h3><p>Runs sandboxed Lua apps and turns their UI descriptions into interactive software</p></div>
-        <div class="layer-title"><h3>SHARED STATE</h3><p>Local-first documents served by a sovereign node and merged between participants</p></div>
+        <div class="layer-title"><h3>WORKSPACE APPS</h3><p>Collaborative Lua apps created and changed around the group’s workflows</p></div>
+        <div class="layer-title"><h3>APP RUNTIME</h3><p>Runs sandboxed apps and turns their UI descriptions into interactive software</p></div>
+        <div class="layer-title"><h3>SHARED STATE</h3><p>Workspace data synchronized between members of the group</p></div>
         <div class="layer-title"><h3>IDENTITY + PERMITS</h3><p>Your keys, encrypted storage, and offline-verifiable access under your control</p></div>
       </div>
     </section>
@@ -136,7 +136,7 @@ const description = "Xnet is a private, sovereign, programmable extension of the
     </section>
 
     <footer class="footer shell">
-      <p class="footer__kicker">SOFTWARE THAT BELONGS TO ITS PEOPLE.</p>
+      <p class="footer__kicker">THE PROTOCOL FOR AI-PROGRAMMABLE WORKSPACES.</p>
       <h2>OSVAULD</h2>
       <div class="footer__bottom">
         <span>WITH ❤️ FROM 🇮🇳</span>
