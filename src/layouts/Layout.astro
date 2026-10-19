@@ -42,7 +42,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <link rel="preload" href="/fonts/host-grotesk-v5-latin-600.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/host-grotesk-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
     <title>{title}</title>
-    {!import.meta.env.DEV && <script data-goatcounter="https://osvauld.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>}
   </head>
   <body>
     {!bare && (
