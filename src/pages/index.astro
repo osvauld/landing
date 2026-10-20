@@ -1,142 +1,161 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Code } from "astro:components";
+import code from "../data/code.json";
 
-const title = "Osvauld — The protocol for AI-programmable workspaces";
-const description = "Osvauld is a protocol for workspaces: sets of collaborative apps that AI can create and modify for a group.";
+const groups = [
+  { name: "Platform", note: "Sync, agents and the shell itself.", clips: [
+    ["sync_two_users", "Two users, one chat", "Two identities, two nodes, one synchronized doc."],
+    ["agent_builds", "An agent builds an app", "Lua written and edited live over the bridge."],
+    ["asset_editor", "Asset editor", "Files in the workspace, edited in place."],
+    ["kanban", "Kanban", ""],
+    ["dashboard", "Dashboard", ""],
+    ["workspace_custom", "Customizable workspace", ""],
+    ["hero", "Shell", ""],
+  ]},
+  { name: "Physics", note: "A 2D engine the apps drive from Lua.", clips: [
+    ["gravity_lab", "Gravity lab", "Gravity wells, forces, a wrecking ball."],
+    ["physics_playground", "Playground", "Billiards, pegs and pockets."],
+    ["marble_gates", "Marble gates", ""],
+    ["tilt_maze", "Tilt maze", ""],
+    ["hockey", "Hockey", ""],
+    ["tank", "Tank", ""],
+    ["linkage", "Linkage", ""],
+    ["orbit", "Orbit", ""],
+  ]},
+  { name: "Vectors and data", note: "Interactive drawing, no webview.", clips: [
+    ["voronoi", "Voronoi", ""],
+    ["node_graph", "Node graph", ""],
+    ["world", "World", ""],
+    ["model_viewer", "Model viewer", ""],
+    ["mesh_math", "Mesh math", ""],
+    ["math_mela", "Math mela", ""],
+    ["bharat_compass", "Compass", ""],
+    ["pie", "Pie chart", ""],
+    ["line_chart", "Line chart", ""],
+    ["camera", "Camera", ""],
+    ["khoj", "Khoj", ""],
+  ]},
+];
+
+
+const title = "Osvauld — An experimental runtime for apps your AI can write";
+const description = "Osvauld is an experiment: Lua apps over synchronized documents, rendered natively, written and edited live by people and AI. Everything here is recorded from the real shell.";
+
+const wall = ["gravity_lab", "agent_builds", "voronoi", "sync_two_users", "physics_playground", "node_graph"];
+
+const features = [
+  { id: "apps", clip: "kanban", tag: "01 / APPS", h: "An app is a Lua file.",
+    p: "The runtime turns a description of the interface into layout and vector pixels, every frame. The board you see is a few hundred lines of Lua. The cards live in a shared document, so it survives restarts and syncs between people with no extra code." },
+  { id: "workspace", clip: "workspace_custom", tag: "02 / WORKSPACES", h: "The workspace itself is configurable.",
+    p: "The home screen is a Lua file in your encrypted store, not fixed chrome. Change the theme in the built-in editor, or let an agent edit the layout over the bridge. A broken edit is refused and the workspace keeps running; Reset restores the original." },
+  { id: "sync", clip: "sync_two_users", tag: "03 / SYNC", h: "Two people, one document.",
+    p: "Persistence and collaboration come with the document, not with the app. This chat is a model file that opens a document and calls insert. Each person has their own identity and node, and the edits merge on reconnect." },
+  { id: "agent", clip: "agent_builds", tag: "04 / AGENTS", h: "An agent writes and edits the app while it runs.",
+    p: "Agents drive the shell over a local bridge: read a source file, send exact edits, and the running app reloads. The agent changes code, not pixels." },
+  { id: "files", clip: "asset_editor", tag: "05 / FILES", h: "Assets are edited in place.",
+    p: "Workspace files open in apps that were themselves written in Lua, inside the same shell." },
+  { id: "physics", clip: "gravity_lab", tag: "06 / PHYSICS", h: "A 2D physics engine, driven from Lua.",
+    p: "Gravity, wells, forces, joints and a grabbing hand are properties in the app description. This took a Rust engine change plus a Lua surface; the scene itself is one app." },
+  { id: "vectors", clip: "voronoi", tag: "07 / VECTORS", h: "Interactive vector graphics and data.",
+    p: "Diagrams, node graphs, charts and meshes are drawn natively and respond to the pointer: dragging, hovering, selecting ranges." },
+  { id: "headless", clip: "physics_playground", tag: "08 / DETERMINISM", h: "Recorded by script, frame for frame.",
+    p: "The shell runs windowless on a virtual clock that only moves when asked, so layout and time-dependent behaviour are exact. Every clip here was produced by a script, not a screen recorder." },
+];
+
 ---
 
 <Layout title={title} description={description} locale="en" bare>
   <main class="os-page">
     <nav class="nav shell" aria-label="Main navigation">
-      <a class="wordmark" href="/" aria-label="Osvauld home"><span>O</span> OSVAULD</a>
+      <a class="wordmark" href="/" aria-label="Osvauld home"><img src="/brand/osvauld-mark-small.svg" alt="" width="28" height="28" /> OSVAULD</a>
       <div class="nav__links">
-        <a href="#protocol">Protocol</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#lab">All demos</a>
         <a href="https://docs.osvauld.com">Docs</a>
         <a href="https://github.com/osvauld" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
     </nav>
 
-    <section class="hero shell">
-      <div class="hero__copy">
-        <p class="eyebrow"><span></span> OSVAULD / COLLABORATIVE · PROGRAMMABLE · SOVEREIGN</p>
-        <h1>WORKSPACES<br /><em>YOUR AI CAN</em><br />PROGRAM.</h1>
-        <div class="hero__bottom">
-          <p>Build private, programmable workspaces where people and AI share data, tools, and authority.</p>
-          <a class="round-link" href="#protocol" aria-label="Explore the Osvauld protocol">↓</a>
-        </div>
+    <section class="top shell">
+      <p class="eyebrow"><span></span> EXPERIMENTAL / EVERYTHING BELOW IS A REAL RECORDING</p>
+      <h1>Apps your AI can <em>write</em>,<br />running live.</h1>
+      <p class="top__lead">Osvauld is an experiment in a different kind of software platform: small Lua apps over synchronized documents, rendered natively, written and changed by people and agents while they run. This is what it can do so far.</p>
+      <div class="wall">
+        {wall.map((id) => (
+          <video src={`/clips/${id}.mp4`} poster={`/clips/${id}.jpg`} muted loop playsinline preload="metadata" data-autoplay></video>
+        ))}
       </div>
     </section>
 
-    <section class="statement shell" id="protocol">
-      <p class="section-index">WHAT IS A WORKSPACE?</p>
-      <h2>A set of apps<br />a group uses<br /><i>together.</i></h2>
-      <div class="statement__copy">
-        <p class="lead">A workspace brings a group and its apps into one collaborative environment. Members use the same software over synchronized data.</p>
-        <p>Osvauld is the protocol underneath. It provides identity, permissions, synchronization, and an app runtime—so your AI can create and modify apps directly inside the workspace.</p>
-      </div>
+    <section class="caps shell" id="capabilities">
+      {features.map((f, i) => (
+        <article class={`cap ${i % 2 ? "cap--flip" : ""}`} id={f.id}>
+          <div class="cap__text">
+            <p class="section-index">{f.tag}</p>
+            <h2>{f.h}</h2>
+            <p>{f.p}</p>
+          </div>
+          <div class="cap__view" data-view="clip">
+            <div class="cap__tabs" role="tablist">
+              <button type="button" role="tab" aria-selected="true" data-tab="clip">Recording</button>
+              <button type="button" role="tab" aria-selected="false" data-tab="code" disabled={!code[f.clip]}>Code</button>
+              
+            </div>
+            <button class="cap__clip tile-open" type="button" data-clip={f.clip} data-label={f.h} data-blurb="">
+              <video src={`/clips/${f.clip}.mp4`} poster={`/clips/${f.clip}.jpg`} muted loop playsinline preload="none" data-autoplay></video>
+            </button>
+            {code[f.clip] && (
+              <div class="cap__code">
+                <div class="files" role="tablist">
+                  {code[f.clip].map((file, n) => (<button type="button" role="tab" aria-selected={n === 0} data-file={n}>{file.name}<small>{file.code.split("\n").length} lines</small></button>))}
+                </div>
+                {code[f.clip].map((file, n) => (<div class="src" data-src={n} hidden={n !== 0}><Code code={file.code} lang={file.lang} theme="tokyo-night" /></div>))}
+              </div>
+            )}
+          </div>
+        </article>
+      ))}
     </section>
 
-    <section class="principles shell" id="system">
-      <article class="principle principle--identity">
-        <div>
-          <h3>Permission is<br />cryptographic proof.</h3>
-          <p>Permits work like UCAN-style tokens: signed capability grants that say exactly what an identity can do—access, write, synchronize, or delegate. Authorization is based on capabilities and can be verified offline.</p>
+    <section class="lab shell" id="lab">
+      <p class="section-index">ALL RECORDINGS</p>
+      <h2>Everything<br />we have recorded.</h2>
+      <p class="lab__lead">Click any clip to enlarge it.</p>
+      {groups.map((g) => (
+        <div class="lab__group">
+          <div class="lab__head"><h3>{g.name}</h3><p>{g.note}</p></div>
+          <div class="lab__grid">
+            {g.clips.map(([id, label, blurb]) => (
+              <button class="tile" type="button" data-clip={id} data-label={label} data-blurb={blurb}>
+                <video src={`/clips/${id}.mp4`} poster={`/clips/${id}.jpg`} muted loop playsinline preload="none"></video>
+                <span>{label}</span>
+              </button>
+            ))}
+          </div>
         </div>
-      </article>
-      <article class="principle principle--data">
-        <div>
-          <h3>Shared data is the<br />native environment.</h3>
-          <p>Local state remains useful offline. Changes synchronize through the workspace’s sovereign node and merge safely when participants reconnect.</p>
-        </div>
-      </article>
-      <article class="principle principle--logic">
-        <div>
-          <h3>Ask for the workflow,<br />get a collaborative app.</h3>
-          <p>AI can write a small Lua app directly inside the workspace. Identity, permissions, storage, synchronization, and UI are already provided—the new app begins as part of the group’s environment.</p>
-        </div>
-      </article>
-      <article class="principle principle--agents">
-        <div>
-          <h3>AI can program<br />the workspace.</h3>
-          <p>Agents can call Lua functions, perform actions, change application logic, and create new apps directly instead of pretending to be a person clicking pixels.</p>
-        </div>
-      </article>
-      <article class="principle principle--node">
-        <div>
-          <h3>Authority, under<br />your control.</h3>
-          <p>Each workspace has a sovereign node that keeps the group reachable and coordinates synchronization. It can be a Raspberry Pi, phone, laptop, or server—with no static IP, domain, or cloud platform required.</p>
-        </div>
-      </article>
-      <article class="principle principle--ship">
-        <div>
-          <h3>Maintain your own<br />software.</h3>
-          <p>The group owns and evolves its Lua source instead of renting a fixed application. Changes synchronize to participants and hot reload without a traditional server release pipeline.</p>
-        </div>
-      </article>
+      ))}
+      <dialog class="lightbox" id="lightbox">
+        <form method="dialog"><button class="lightbox__close" aria-label="Close">✕</button></form>
+        <video id="lightbox-video" muted loop playsinline controls></video>
+        <p><b id="lightbox-label"></b> <span id="lightbox-blurb"></span></p>
+      </dialog>
     </section>
 
-    <section class="manifesto shell">
-      <p class="section-index">THE SHIFT</p>
-      <p class="manifesto__line muted">No app stack to stitch.</p>
-      <p class="manifesto__line muted">No cloud stack to deploy.</p>
-      <p class="manifesto__line">Describe the workflow.</p>
-      <p class="manifesto__line acid">Run the app.</p>
+    <section class="status shell">
+      <p class="section-index">STATUS</p>
+      <h2>Experimental.<br />Not for sale, not yet a product.</h2>
+      <p>Nothing here is a mock-up, and nothing is packaged for download yet. The source is on GitHub; the docs describe the architecture. Tinline, from the same team, ships first.</p>
+      <a href="https://docs.osvauld.com" class="text-link">Read the architecture <span>↗</span></a>
     </section>
 
-    <section class="runtime shell">
-      <div class="runtime__intro">
-        <p class="section-index">ONE SHARED SUBSTRATE</p>
-        <h2>Shared data.<br />Lua logic.<br />That’s the app.</h2>
-        <p>Your AI gets a programmable Lua layer where it can call functions, perform actions, modify code, and create new apps. Those apps run inside the workspace and work directly with its synchronized data.</p>
-        <a href="https://docs.osvauld.com" class="text-link">Read the architecture <span>↗</span></a>
-      </div>
-
-      <div class="code-window" aria-label="Example Osvauld Lua application">
-        <div class="code-window__top"><span>main.lua</span><span>shared / tasks</span></div>
-        <pre><code><i>local</i> chat = doc:<b>open</b>(<s>"chat"</s>)
-
-<i>local function</i> <b>send</b>(text)
-  chat:<b>insert</b>(&#123; <s>"messages"</s> &#125;, doc.map(&#123;
-    id = uuid(), text = text
-  &#125;)) <span class="comment">-- synchronized</span>
-<i>end</i>
-
-<i>return function</i>()
-  <i>local</i> rows = &#123;&#125;
-  <i>for</i> i = <u>1</u>, #chat.messages <i>do</i>
-    rows[#rows + <u>1</u>] = message_view(chat.messages[i])
-  <i>end</i>
-  <i>return</i> ui.col(&#123; rows, composer(send) &#125;)
-<i>end</i></code></pre>
-        <div class="code-window__flow">
-          <span>LUA APP</span><i>→</i><span>UI TREE</span><i>→</i><span>LAYOUT</span><i>→</i><span>VECTOR PIXELS</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="layers shell">
-      <p class="section-index">THE SYSTEM</p>
-      <div class="layers__grid">
-        <div class="layer-title"><h3>WORKSPACE APPS</h3><p>Collaborative Lua apps created and changed around the group’s workflows</p></div>
-        <div class="layer-title"><h3>APP RUNTIME</h3><p>Runs sandboxed apps and turns their UI descriptions into interactive software</p></div>
-        <div class="layer-title"><h3>SHARED STATE</h3><p>Workspace data synchronized between members of the group</p></div>
-        <div class="layer-title"><h3>IDENTITY + PERMITS</h3><p>Your keys, encrypted storage, and offline-verifiable access under your control</p></div>
-      </div>
-    </section>
-
-    <section class="support shell" aria-labelledby="support-title">
-      <p class="section-index">SUPPORTED BY</p>
-      <h2 id="support-title">Backed by people who<br />believe in open systems.</h2>
-      <p>Osvauld has received grant support from</p>
-      <div class="support__names">
-        <span>FOSS United</span>
-        <span>Zerodha</span>
-        <span>Kerala Startup Mission <small>KSUM</small></span>
-      </div>
+    <section class="support shell" aria-label="Grants received from">
+      <p class="section-index">GRANTS RECEIVED FROM</p>
+      <div class="support__names"><span>FOSS United</span><span>Zerodha</span><span>KSUM</span></div>
     </section>
 
     <footer class="footer shell">
-      <p class="footer__kicker">THE PROTOCOL FOR AI-PROGRAMMABLE WORKSPACES.</p>
+      <p class="footer__kicker">AN EXPERIMENT IN AI-PROGRAMMABLE WORKSPACES.</p>
       <h2>OSVAULD</h2>
       <div class="footer__bottom">
         <span>WITH ❤️ FROM 🇮🇳</span>
@@ -148,7 +167,7 @@ const description = "Osvauld is a protocol for workspaces: sets of collaborative
 </Layout>
 
 <style is:global>
-  :root { --ink: #eef2e8; --muted: #9da39a; --line: rgba(238,242,232,.16); --acid: #baff57; --blue: #61baff; --black: #080a08; }
+  :root { --ink: #edf2ff; --muted: #9baac4; --line: #34415a; --acid: #83adff; --blue: #83adff; --black: #10141d; --panel: #1a2130; --hover: #232e42; }
   * { box-sizing: border-box; }
   html { background: var(--black); scroll-behavior: smooth; }
   body { margin: 0; background: var(--black); color: var(--ink); }
@@ -159,87 +178,155 @@ const description = "Osvauld is a protocol for workspaces: sets of collaborative
   .section-index { color: var(--acid); margin: 0; }
   .nav { height: 5.4rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
   .wordmark { font-weight: 600; font-family: "Host Grotesk", sans-serif; font-size: .9rem; letter-spacing: .05em; }
-  .wordmark span { display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; margin-right: .5rem; border: 1px solid var(--ink); border-radius: 50%; }
+  .wordmark { display: inline-flex; align-items: center; }
+  .wordmark img { width: 1.8rem; height: 1.8rem; margin-right: .6rem; }
   .nav__edition { color: var(--muted); }
   .nav__links { justify-self: end; display: flex; gap: 2rem; }
   .nav__links a:hover, .text-link:hover { color: var(--acid); }
-  .hero { min-height: calc(100vh - 5.4rem); border-bottom: 1px solid var(--line); }
-  .hero__copy { min-height: calc(100vh - 5.4rem); padding: clamp(4rem, 9vh, 7rem) 0 2rem; display: flex; flex-direction: column; }
   .eyebrow { margin: 0 0 clamp(3rem, 8vh, 6rem); color: var(--muted); }
   .eyebrow span { display: inline-block; width: 1.8rem; height: 1px; margin: 0 .6rem .2rem 0; background: var(--acid); }
-  .hero h1 { margin: 0; font-size: clamp(4.2rem, 10.6vw, 10.8rem); font-weight: 600; letter-spacing: -.075em; line-height: .78; }
-  .hero h1 em { color: var(--acid); font-style: normal; }
-  .hero__bottom { margin-top: auto; display: flex; align-items: end; justify-content: space-between; }
-  .hero__bottom p { max-width: 26rem; margin: 4rem 0 0; font-size: clamp(1.1rem, 1.5vw, 1.5rem); line-height: 1.3; }
   .round-link { width: 3.4rem; height: 3.4rem; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; transition: .2s; }
   .round-link:hover { color: var(--black); background: var(--acid); transform: translateY(3px); }
-  .statement { padding: 9rem 0 10rem; border-bottom: 1px solid var(--line); }
-  .statement h2 { max-width: 1120px; margin: 4rem 0 7rem; font-size: clamp(3rem, 7vw, 7.8rem); line-height: .93; letter-spacing: -.055em; font-weight: 500; }
-  .statement h2 i { color: var(--acid); font-style: normal; }
-  .statement__copy { margin-left: 50%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-  .statement__copy p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.6; }
-  .statement__copy .lead { color: var(--ink); font-size: 1.35rem; line-height: 1.35; }
-  .principles { display: grid; grid-template-columns: 1fr 1fr; }
-  .principle { min-height: 22rem; padding: 3rem 2rem; display: flex; align-items: flex-end; border-bottom: 1px solid var(--line); }
-  .principle:nth-child(odd) { border-right: 1px solid var(--line); padding-left: 0; }
-  .principle:nth-child(even) { padding-right: 0; }
-  .card-number { color: var(--muted); }
-  .principle h3 { margin: 0 0 1.4rem; font-size: clamp(1.8rem, 3vw, 3.5rem); letter-spacing: -.04em; line-height: 1; font-weight: 500; }
-  .principle p:last-child { color: var(--muted); line-height: 1.55; max-width: 30rem; }
-  .symbol { position: relative; inset: auto; align-self: flex-end; flex: 0 0 auto; width: min(16rem, 70%); height: 16rem; margin: 1rem 0 2rem; }
-  .symbol--identity span { position: absolute; border: 1px solid rgba(186,255,87,.5); border-radius: 50%; }
-  .symbol--identity span:nth-child(1) { inset: 0; }.symbol--identity span:nth-child(2) { inset: 25%; }.symbol--identity span:nth-child(3) { inset: 48%; background: var(--acid); box-shadow: 0 0 25px var(--acid); }
-  .symbol--data { border: 1px solid var(--line); transform: rotate(45deg) scale(.7); }
-  .symbol--data span { position: absolute; border: 1px solid rgba(97,186,255,.6); inset: 14%; }.symbol--data span:nth-child(2) { inset: 28%; }.symbol--data span:nth-child(3) { inset: 44%; background: var(--blue); }
-  .symbol--logic { display: flex; align-items: center; justify-content: center; color: var(--acid); font: 500 6rem "JetBrains Mono"; }
-  .symbol--logic span { color: var(--muted); }
-  .symbol--agents { width: 22rem; display: flex; align-items: center; gap: .7rem; color: var(--muted); font: .7rem "JetBrains Mono"; }
-  .symbol--agents i { width: 4rem; height: 1px; background: linear-gradient(90deg, var(--line), var(--acid), var(--line)); }
-  .symbol--agents b:nth-of-type(2) { color: var(--acid); border: 1px solid var(--acid); border-radius: 50%; padding: 1.2rem .9rem; }
-  .symbol--node { display: grid; place-items: center; border: 1px solid rgba(186,255,87,.35); border-radius: 50%; }
-  .symbol--node::before, .symbol--node::after { content: ""; position: absolute; border: 1px solid var(--line); border-radius: 50%; }.symbol--node::before { inset: 18%; }.symbol--node::after { inset: 38%; background: var(--acid); box-shadow: 0 0 30px rgba(186,255,87,.5); }
-  .symbol--node span { position: absolute; top: -1rem; font: .6rem "JetBrains Mono"; color: var(--acid); }
-  .symbol--ship { width: 24rem; display: flex; align-items: center; justify-content: space-between; font: .65rem "JetBrains Mono"; color: var(--muted); }
-  .symbol--ship span { border: 1px solid var(--line); padding: .8rem; }.symbol--ship i { color: var(--acid); font-style: normal; }.symbol--ship b { color: var(--ink); font-weight: 400; }
-  .manifesto { padding: 10rem 0; border-bottom: 1px solid var(--line); }
-  .manifesto .section-index { margin-bottom: 5rem; }
-  .manifesto__line { margin: 0; font-size: clamp(3rem, 7.6vw, 8.5rem); letter-spacing: -.065em; line-height: .95; }
-  .manifesto__line.muted { color: #363a35; }.manifesto__line.acid { color: var(--acid); }
-  .runtime { display: grid; grid-template-columns: .78fr 1.22fr; gap: 8vw; padding: 10rem 0; border-bottom: 1px solid var(--line); }
-  .runtime__intro h2 { margin: 3rem 0 2rem; font-size: clamp(3rem, 5vw, 6rem); line-height: .92; letter-spacing: -.055em; font-weight: 500; }
-  .runtime__intro > p:not(.section-index) { color: var(--muted); font-size: 1.1rem; line-height: 1.6; max-width: 30rem; }
   .text-link { display: inline-block; margin-top: 2rem; border-bottom: 1px solid var(--ink); padding-bottom: .3rem; font-family: "JetBrains Mono"; font-size: .75rem; text-transform: uppercase; }
   .text-link span { color: var(--acid); }
-  .code-window { align-self: center; border: 1px solid var(--line); background: #0d100d; box-shadow: 18px 18px 0 #111711; }
-  .code-window__top { padding: 1rem 1.2rem; display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); color: var(--muted); font: .67rem "JetBrains Mono"; text-transform: uppercase; }
-  .code-window pre { margin: 0; padding: clamp(1.5rem, 4vw, 3.5rem); overflow-x: auto; color: #d8ddd3; font: .85rem/1.8 "JetBrains Mono"; }
-  .code-window code i { color: #a599ff; font-style: normal; }.code-window code b { color: var(--acid); font-weight: 400; }.code-window code s { color: #e5c07b; text-decoration: none; }.code-window code u { color: var(--blue); text-decoration: none; }.code-window code .comment { color: #596158; }
-  .code-window__flow { border-top: 1px solid var(--line); padding: 1rem; display: flex; justify-content: center; gap: 1rem; color: var(--muted); font: .6rem "JetBrains Mono"; }.code-window__flow i { color: var(--acid); font-style: normal; }
-  .layers { padding: 9rem 0; border-bottom: 1px solid var(--line); }
-  .layers__grid { margin-top: 4rem; border-top: 1px solid var(--line); }
-  .layer-title { display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 2.2rem 0; border-bottom: 1px solid var(--line); }
-  .layer-title h3 { margin: 0; font-size: clamp(1.5rem, 3vw, 3rem); font-weight: 500; }.layer-title p { color: var(--muted); max-width: 27rem; line-height: 1.5; }
-  .support { padding: 9rem 0; border-top: 1px solid var(--line); }
-  .support h2 { margin: 3rem 0 5rem; max-width: 60rem; font-size: clamp(3rem, 6vw, 7rem); line-height: .94; letter-spacing: -.055em; font-weight: 500; }
-  .support > p:not(.section-index) { color: var(--muted); }
-  .support__names { margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .support__names span { padding: 2rem 1rem; font-size: clamp(1.2rem, 2vw, 2rem); }.support__names span:first-child { padding-left: 0; }.support__names span + span { border-left: 1px solid var(--line); }.support__names small { display: block; margin-top: .35rem; color: var(--acid); font: .6rem "JetBrains Mono"; }
+  .lab { padding: 9rem 0; border-bottom: 1px solid var(--line); }
+  .lab h2 { margin: 3rem 0 2rem; font-size: clamp(3rem, 6vw, 7rem); line-height: .94; letter-spacing: -.055em; font-weight: 500; }
+  .lab__lead { max-width: 38rem; color: var(--muted); font-size: 1.1rem; line-height: 1.6; margin: 0 0 4rem; }
+  .lab__group { margin-top: 3.5rem; }
+  .lab__head { display: flex; gap: 1.5rem; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
+  .lab__head h3 { margin: 0; font-size: 1.6rem; font-weight: 500; letter-spacing: -.03em; }
+  .lab__head p { margin: 0; color: var(--muted); font: .7rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+  .lab__grid { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 1rem; }
+  .tile { padding: 0; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: zoom-in; text-align: left; font: inherit; transition: .2s; }
+  .tile:hover, .tile:focus-visible { border-color: var(--acid); transform: translateY(-3px); outline: none; }
+  .tile video { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--panel); }
+  .tile span { display: block; padding: .6rem .7rem; font: .62rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+  .lightbox { width: min(92vw, 1100px); padding: 0; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+  .lightbox::backdrop { background: rgba(10,13,20,.88); }
+  .lightbox video { display: block; width: 100%; max-height: 78vh; background: #000; }
+  .lightbox p { margin: 0; padding: 1rem 1.2rem; color: var(--muted); }
+  .lightbox p b { color: var(--ink); font-weight: 500; margin-right: .6rem; }
+  .lightbox form { position: absolute; top: .6rem; right: .6rem; }
+  .lightbox__close { width: 2.2rem; height: 2.2rem; border: 1px solid var(--line); background: rgba(16,20,29,.85); color: var(--ink); cursor: pointer; border-radius: 50%; }
+  .lightbox__close:hover { background: var(--acid); color: var(--black); }
   .footer { padding: 7rem 0 2rem; border-top: 1px solid var(--line); }
   .footer__kicker { color: var(--acid); font: .75rem "JetBrains Mono"; }
   .footer h2 { margin: 4rem 0 5rem; font-size: clamp(5rem, 19vw, 18rem); text-align: center; line-height: .75; letter-spacing: -.085em; font-weight: 600; }
   .footer__bottom { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; color: var(--muted); }.footer__bottom div { display: flex; gap: 2rem; }.footer__bottom span:last-child { text-align: right; }
   @media (max-width: 850px) {
     .shell { width: min(100% - 2rem, 1440px); }.nav__links { gap: 1rem; }.nav__links a:first-child { display: none; }
-    .hero__copy { min-height: 42rem; padding-right: 0; }.hero h1 { font-size: clamp(3.5rem, 14vw, 7rem); }
-    .statement { padding: 7rem 0; }.statement__copy { margin-left: 15%; grid-template-columns: 1fr; gap: 2rem; }
-    .principles { grid-template-columns: 1fr; }.principle { min-height: 20rem; padding: 3rem 0 !important; border-right: 0 !important; }
-    .runtime { grid-template-columns: 1fr; gap: 5rem; }.support__names { grid-template-columns: 1fr; }.support__names span { padding: 1.5rem 0; }.support__names span + span { border-left: 0; border-top: 1px solid var(--line); }.layer-title { grid-template-columns: 1fr; }.layer-title p { grid-column: 1; }.footer__bottom { grid-template-columns: 1fr; }.footer__bottom span:last-child { text-align: left; }
   }
   @media (max-width: 520px) {
-    .nav { height: 4.5rem; }.wordmark { font-size: .75rem; }.wordmark span { width: 1.5rem; height: 1.5rem; }.nav__links { font-size: .55rem; }
-    .hero { min-height: auto; }.hero__copy { min-height: 35rem; padding-top: 4rem; }.eyebrow { margin-bottom: 3rem; }.hero__bottom p { max-width: 17rem; }
-    .statement h2 { margin-bottom: 4rem; }.statement__copy { margin-left: 0; }.manifesto, .runtime, .layers { padding: 6rem 0; }
-    .symbol { opacity: .65; }.symbol--agents { width: 19rem; }.code-window { box-shadow: 8px 8px 0 #111711; }.code-window__flow { gap: .45rem; font-size: .48rem; }
-    .layer-title { padding: 1.5rem 0; }.footer { padding-top: 5rem; }.footer h2 { margin: 4rem 0; }.footer__bottom div { flex-direction: column; gap: .8rem; }
+    .nav { height: 4.5rem; }.wordmark { font-size: .75rem; }.wordmark img { width: 1.5rem; height: 1.5rem; }.nav__links { font-size: .55rem; }
   }
+  .top { padding: clamp(3.5rem, 8vh, 6rem) 0 5rem; border-bottom: 1px solid var(--line); }
+  .top .eyebrow { margin: 0 0 3rem; }
+  .top h1 { margin: 0; font-size: clamp(2.8rem, 7.4vw, 8rem); font-weight: 600; letter-spacing: -.06em; line-height: .92; }
+  .top h1 em { color: var(--acid); font-style: normal; }
+  .top__lead { max-width: 44rem; margin: 2.5rem 0 3.5rem; color: var(--muted); font-size: clamp(1.05rem, 1.5vw, 1.35rem); line-height: 1.5; }
+  .wall { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+  .wall video { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--panel); border: 1px solid var(--line); }
+  .caps { padding: 2rem 0; }
+  .cap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 5vw; align-items: center; padding: 5rem 0; border-bottom: 1px solid var(--line); }
+  .cap--flip { grid-template-columns: 1.2fr .8fr; }
+  .cap--flip .cap__text { order: 2; }
+  .cap h2 { margin: 1.5rem 0; font-size: clamp(2rem, 3.6vw, 4rem); line-height: 1; letter-spacing: -.045em; font-weight: 500; }
+  .cap__text > p:last-child { margin: 0; color: var(--muted); font-size: 1.05rem; line-height: 1.6; max-width: 30rem; }
+  .cap__view { min-width: 0; }
+  .cap__tabs { display: flex; align-items: center; gap: .4rem; margin-bottom: .7rem; font: .62rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+  .cap__tabs button { padding: .45rem .9rem; border: 1px solid var(--line); background: transparent; color: var(--muted); font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; border-radius: 999px; }
+  .cap__tabs button[aria-selected="true"] { background: var(--acid); border-color: var(--acid); color: var(--black); }
+  .cap__tabs button:disabled { opacity: .35; cursor: default; }
+  .cap__tabs span { margin-left: auto; color: #6b7a96; text-transform: none; }
+  .cap__code { display: none; border: 1px solid var(--line); background: #151b28; box-shadow: 14px 14px 0 #0b0e15; }
+  .files { display: flex; overflow-x: auto; border-bottom: 1px solid var(--line); background: var(--panel); }
+  .files button { flex: none; padding: .7rem 1rem; border: 0; border-right: 1px solid var(--line); background: transparent; color: var(--muted); font: .68rem "JetBrains Mono", monospace; cursor: pointer; }
+  .files button small { margin-left: .6rem; color: #6b7a96; }
+  .files button[aria-selected="true"] { color: var(--ink); background: #151b28; box-shadow: inset 0 -2px var(--acid); }
+  .src { max-height: 36rem; overflow: auto; }
+  .src pre { margin: 0; padding: 1.3rem 1.5rem; background: transparent !important; font: .76rem/1.65 "JetBrains Mono", monospace; tab-size: 2; }
+  .src pre code { font: inherit; }
+  .cap__view[data-view="code"] .cap__code { display: block; }
+  .cap__view[data-view="code"] .cap__clip { display: none; }
+  .cap__clip { display: block; width: 100%; padding: 0; border: 1px solid var(--line); background: var(--panel); cursor: zoom-in; box-shadow: 14px 14px 0 #0b0e15; transition: .2s; }
+  .cap__clip:hover { border-color: var(--acid); }
+  .cap__clip video { display: block; width: 100%; height: auto; }
+  .support { padding: 2.5rem 0; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
+  .support__names { display: flex; flex-wrap: wrap; gap: .6rem 2.2rem; color: var(--muted); font-size: 1.05rem; }
+  .status { padding: 8rem 0; border-top: 1px solid var(--line); }
+  .status h2 { margin: 2.5rem 0 2rem; font-size: clamp(2.4rem, 5vw, 5.5rem); line-height: .97; letter-spacing: -.05em; font-weight: 500; }
+  .status > p:not(.section-index) { color: var(--muted); max-width: 36rem; font-size: 1.1rem; line-height: 1.6; }
+  .text-link { display: inline-block; margin-top: 2rem; border-bottom: 1px solid var(--ink); padding-bottom: .3rem; font-family: "JetBrains Mono"; font-size: .75rem; text-transform: uppercase; }
+  .text-link span { color: var(--acid); }
+  .text-link:hover { color: var(--acid); }
+  @media (max-width: 850px) {
+    .wall { grid-template-columns: repeat(2, 1fr); }
+    .cap, .cap--flip { grid-template-columns: 1fr; gap: 2rem; padding: 3.5rem 0; }
+    .cap--flip .cap__text { order: 0; }
+      }
 </style>
+
+<script>
+  const box = document.getElementById("lightbox") as HTMLDialogElement;
+  const big = document.getElementById("lightbox-video") as HTMLVideoElement;
+  const play = (v: HTMLVideoElement) => v.play().catch(() => {});
+  document.querySelectorAll<HTMLButtonElement>(".tile").forEach((t) => {
+    const v = t.querySelector("video")!;
+    t.addEventListener("mouseenter", () => play(v));
+    t.addEventListener("mouseleave", () => v.pause());
+    t.addEventListener("focus", () => play(v));
+    t.addEventListener("blur", () => v.pause());
+    t.addEventListener("click", () => {
+      big.src = `/clips/${t.dataset.clip}.mp4`;
+      document.getElementById("lightbox-label")!.textContent = t.dataset.label ?? "";
+      document.getElementById("lightbox-blurb")!.textContent = t.dataset.blurb ?? "";
+      box.showModal();
+      play(big);
+    });
+  });
+  box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
+  box.addEventListener("close", () => { big.pause(); big.removeAttribute("src"); });
+</script>
+
+<script>
+  const box = document.getElementById("lightbox") as HTMLDialogElement;
+  const big = document.getElementById("lightbox-video") as HTMLVideoElement;
+  const play = (v: HTMLVideoElement) => v.play().catch(() => {});
+  document.querySelectorAll<HTMLButtonElement>(".tile, .tile-open").forEach((t) => {
+    const v = t.querySelector("video")!;
+    if (!t.classList.contains("tile-open")) {
+      t.addEventListener("mouseenter", () => play(v));
+      t.addEventListener("mouseleave", () => v.pause());
+      t.addEventListener("focus", () => play(v));
+      t.addEventListener("blur", () => v.pause());
+    }
+    t.addEventListener("click", () => {
+      big.src = `/clips/${t.dataset.clip}.mp4`;
+      document.getElementById("lightbox-label")!.textContent = t.dataset.label ?? "";
+      document.getElementById("lightbox-blurb")!.textContent = t.dataset.blurb ?? "";
+      box.showModal();
+      play(big);
+    });
+  });
+  box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
+  box.addEventListener("close", () => { big.pause(); big.removeAttribute("src"); });
+  document.querySelectorAll<HTMLElement>(".cap__view").forEach((view) => {
+    view.querySelectorAll<HTMLButtonElement>("[data-tab]").forEach((b) => b.addEventListener("click", () => {
+      view.dataset.view = b.dataset.tab;
+      view.querySelectorAll<HTMLButtonElement>("[data-tab]").forEach((o) => o.setAttribute("aria-selected", String(o === b)));
+      const v = view.querySelector("video");
+      if (v && b.dataset.tab === "code") v.pause();
+    }));
+  });
+  document.querySelectorAll<HTMLElement>(".cap__code").forEach((c) => {
+    c.querySelectorAll<HTMLButtonElement>("[data-file]").forEach((b) => b.addEventListener("click", () => {
+      c.querySelectorAll<HTMLButtonElement>("[data-file]").forEach((o) => o.setAttribute("aria-selected", String(o === b)));
+      c.querySelectorAll<HTMLElement>("[data-src]").forEach((e) => { e.hidden = e.dataset.src !== b.dataset.file; });
+    }));
+  });
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    const v = e.target as HTMLVideoElement;
+    if (e.isIntersecting) play(v); else v.pause();
+  }), { threshold: 0.35 });
+  document.querySelectorAll<HTMLVideoElement>("video[data-autoplay]").forEach((v) => io.observe(v));
+</script>

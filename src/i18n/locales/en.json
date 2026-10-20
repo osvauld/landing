@@ -1,7 +1,7 @@
 {
   "privacy": {
     "title": "PRIVACY POLICY",
-    "lastUpdated": "Last updated August 29, 2025",
+    "lastUpdated": "Last updated October 8, 2026",
     "introduction": {
       "title": "Introduction",
       "description": "This privacy notice for <strong>osvauld security solutions private limited</strong> (\"<strong>we</strong>,\" \"<strong>us</strong>,\" or \"<strong>our</strong>\") describes how and why we might process your information, reflecting our strong commitment to privacy and our open-source roots.<br /><br />This policy is divided into two parts:<br /><ol><li><strong>Our Website (`osvauld.com`)</strong>: This section applies to users of our website.</li><li><strong>Our Software (The Osvauld Application)</strong>: This section applies to users of our decentralized, on-premise desktop software.</li></ol><br /><strong>Questions or concerns?</strong> Reading this privacy notice will help you understand your privacy rights. If you do not agree with our policies, please do not use our website or software. If you have any questions, please contact us at <strong>osvauld@gmail.com</strong>."
@@ -11,15 +11,15 @@
       "description": "This section describes the very limited information we process when you visit our website at `https://osvauld.com` or contact us directly.",
       "whatWeCollect": {
         "title": "What Information Do We Collect?",
-        "description": "<ul><li><strong>Server Log Information</strong>: When you visit our website, our web server may automatically log standard technical information. This includes your IP address (which can indicate your approximate geographical location), the pages you visited on our site, and the date and time of your visit. We also count the number of times the software is downloaded. This information is not used to identify you personally.</li><li><strong>Information You Voluntarily Provide</strong>: We collect personal information that you voluntarily provide to us when you contact us via email, such as your name and email address.</li></ul>"
+        "description": "<ul><li><strong>Server Log Information</strong>: When you visit our website, our web server may automatically log standard technical information. This includes your IP address (which can indicate your approximate geographical location), the pages you visited on our site, and the date and time of your visit. Hosting-provider logs are separate from website analytics; our site does not include analytics or download-counting scripts.</li><li><strong>Information You Voluntarily Provide</strong>: We collect personal information that you voluntarily provide to us when you contact us via email, such as your name and email address.</li></ul>"
       },
       "howWeUse": {
         "title": "How Do We Use Your Website Information?",
-        "description": "We use the minimal server log data solely for our own internal purposes: to understand which countries our visitors are from and to count the total number of software downloads. This helps us ensure our website is functioning correctly. We do not use this data to track individual users or for advertising."
+        "description": "Our website does not run usage analytics. Our hosting provider may process technical logs to deliver the site, maintain security, and diagnose operational issues. We do not use website analytics to track individual users or for advertising."
       },
       "noCookies": {
-        "title": "Privacy-Focused Analytics",
-        "description": "We respect your privacy. Our website <strong>does not</strong> use cookies for tracking or advertising. We use GoatCounter, a privacy-focused analytics service that does not use cookies or track individual users. GoatCounter provides anonymous usage statistics to help us understand website performance and usage patterns. All data is processed anonymously and we cannot identify individual visitors."
+        "title": "No Analytics or Tracking Cookies",
+        "description": "Our website <strong>does not</strong> include analytics scripts or use cookies for tracking or advertising. Standard hosting-provider technical logs may still be processed as described above."
       }
     },
     "software": {
@@ -46,7 +46,7 @@
       },
       "howLong": {
         "title": "How Long Do We Keep Your Information?",
-        "description": "We only keep the personal information collected from your <strong>Website</strong> visit (e.g., from an email inquiry) for as long as necessary to fulfill the purposes outlined in this notice, unless a longer period is required by law. Server logs are anonymized and may be kept for analytical purposes."
+        "description": "We only keep the personal information collected from your <strong>Website</strong> visit (e.g., from an email inquiry) for as long as necessary to fulfill the purposes outlined in this notice, unless a longer period is required by law. Technical log retention depends on our hosting provider; removing website analytics does not disable hosting-provider logs."
       },
       "minors": {
         "title": "Do We Collect Information from Minors?",
