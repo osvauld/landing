@@ -72,6 +72,7 @@ const features = [
       <div class="nav__links">
         <a href="#capabilities">Capabilities</a>
         <a href="#lab">All demos</a>
+        <a href="#projects">Projects</a>
         <a href="https://docs.osvauld.com">Docs</a>
         <a href="https://github.com/osvauld" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
@@ -144,9 +145,16 @@ const features = [
 
     <section class="status shell">
       <p class="section-index">STATUS</p>
-      <h2>Experimental.<br />Not for sale, not yet a product.</h2>
-      <p>Nothing here is a mock-up, and nothing is packaged for download yet. The source is on GitHub; the docs describe the architecture. Tinline, from the same team, ships first.</p>
+      <h2>Experimental.<br />Built for collaborative apps.</h2>
+      <p>Nothing here is a mock-up. Collaborative apps, graphics and workflows are a few lines of Lua over a shared document. The source is on GitHub; the docs describe the architecture. <a href="https://tinline.osvauld.com" target="_blank" rel="noreferrer">Tinline</a>, a sovereign messenger from the same team, ships first.</p>
       <a href="https://docs.osvauld.com" class="text-link">Read the architecture <span>↗</span></a>
+    </section>
+
+    <section class="projects shell" id="projects">
+      <p class="section-index">FROM THE SAME TEAM</p>
+      <h2>Tinline</h2>
+      <p>A sovereign messenger: you own your identity, your messages and the infrastructure they travel on.</p>
+      <a href="https://tinline.osvauld.com" target="_blank" rel="noreferrer" class="text-link">Visit tinline.osvauld.com <span>↗</span></a>
     </section>
 
     <section class="support shell" aria-label="Grants received from">
@@ -159,7 +167,7 @@ const features = [
       <h2>OSVAULD</h2>
       <div class="footer__bottom">
         <span>WITH ❤️ FROM 🇮🇳</span>
-        <div><a href="https://github.com/osvauld">GITHUB ↗</a><a href="https://docs.osvauld.com">DOCUMENTATION ↗</a><a href="/terms">TERMS</a><a href="/privacy">PRIVACY</a></div>
+        <div><a href="https://github.com/osvauld">GITHUB ↗</a><a href="https://docs.osvauld.com">DOCUMENTATION ↗</a><a href="https://tinline.osvauld.com" target="_blank" rel="noreferrer">TINLINE ↗</a><a href="/terms">TERMS</a><a href="/privacy">PRIVACY</a></div>
         <span>© {new Date().getFullYear()} OSVAULD</span>
       </div>
     </footer>
@@ -253,6 +261,9 @@ const features = [
   .cap__clip video { display: block; width: 100%; height: auto; }
   .support { padding: 2.5rem 0; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
   .support__names { display: flex; flex-wrap: wrap; gap: .6rem 2.2rem; color: var(--muted); font-size: 1.05rem; }
+  .projects { padding: 6rem 0; border-top: 1px solid var(--line); }
+  .projects h2 { margin: 2rem 0 1.5rem; font-size: clamp(2rem, 4vw, 4rem); line-height: .97; letter-spacing: -.05em; font-weight: 500; }
+  .projects > p:not(.section-index) { color: var(--muted); max-width: 36rem; font-size: 1.1rem; line-height: 1.6; }
   .status { padding: 8rem 0; border-top: 1px solid var(--line); }
   .status h2 { margin: 2.5rem 0 2rem; font-size: clamp(2.4rem, 5vw, 5.5rem); line-height: .97; letter-spacing: -.05em; font-weight: 500; }
   .status > p:not(.section-index) { color: var(--muted); max-width: 36rem; font-size: 1.1rem; line-height: 1.6; }
