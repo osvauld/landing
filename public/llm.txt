@@ -4,19 +4,31 @@ license: MIT
 
 # Osvauld
 
-Osvauld is building Xnet, the extended internet: a private, sovereign and programmable environment for shared software.
+Osvauld is an experimental runtime that makes it easy to develop collaborative apps, graphics and workflows, including ones your AI writes for you. Apps are small Lua programs over synchronized documents, rendered natively and written or changed by people and agents while they run. Collaboration, persistence and identity come with the platform, so an app is just its own logic.
 
-A workspace can host chat, threads, interactive documents and custom tools for hundreds of people and their AI. Applications are small Lua programs written on demand over synchronized, JSON-like shared data. Osvauld supplies identity, signed capability permits, encrypted storage, synchronization and the UI runtime.
+Status: experimental. Every demo on the website is a real recording from the shell, produced by script rather than a screen recorder. The source is on GitHub and the documentation describes the architecture.
 
-Each workspace is served by a sovereign node controlled by its community. A node can run on a Raspberry Pi, phone, laptop or server without requiring a traditional domain or static IP.
+# What it can do so far
 
-Important implementation status: `osvauld2` is the current runtime rebuild. Identity, encrypted vaults, workspaces and sandboxed Lua applications are implemented. Peer synchronization, sovereign-node integration and the new permit system are being rebuilt.
+- Apps: an app is a Lua file. The runtime turns a description of the interface into layout and vector pixels every frame. Documents persist and sync with no extra code in the app.
+- Workspaces: the home screen is a Lua file in your encrypted store, so the workspace itself is configurable. A broken edit is refused and the workspace keeps running; Reset restores the original.
+- Sync: persistence and collaboration come with the document, not the app. Each person has their own identity and node, and edits merge on reconnect.
+- Agents: agents drive the shell over a local bridge. They read a source file and send exact edits, and the running app reloads. The agent changes code, not pixels.
+- Files: workspace assets are edited in place, in apps written in Lua inside the same shell.
+- Physics: a 2D physics engine (gravity, wells, forces, joints, a grabbing hand) driven from Lua.
+- Vectors and data: diagrams, node graphs, charts and meshes drawn natively that respond to the pointer, with no webview.
+- Determinism: the shell runs windowless on a virtual clock that only moves when asked, so layout and time-dependent behaviour are exact and recordings are reproducible frame for frame.
+
+# Related projects
+
+- Tinline (https://tinline.osvauld.com): a sovereign messenger from the same team. It ships before Osvauld.
 
 # Resources
 
 - Website: https://osvauld.com
 - Source: https://github.com/osvauld
 - Documentation: https://docs.osvauld.com
+- Tinline: https://tinline.osvauld.com
 - Privacy: https://osvauld.com/privacy
 - Terms: https://osvauld.com/terms
 
