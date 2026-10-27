@@ -1,0 +1,11 @@
+// Static site served by Cloudflare Workers static assets.
+// Headers live in public/_headers.
+{
+  "name": "osvauld-landing",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
