@@ -4,7 +4,6 @@ dist/
 # generated types
 .astro/
 
-package-lock.json
 yarn.lock
 
 # dependencies
@@ -22,3 +21,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# wrangler local state
+.wrangler/

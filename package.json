@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "cf:build": "npm run build"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.1.6",
