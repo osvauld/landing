@@ -5,7 +5,7 @@
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./dist",
-    "html_handling": "auto-trailing-slash",
+    "html_handling": "drop-trailing-slash",
     "not_found_handling": "404-page"
   },
   // Branch builds run `wrangler preview`, which needs this block; previews
